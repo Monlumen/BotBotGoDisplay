@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>不为人知但是正在快速融资或赚钱、找到 PMF 的 AI 初创企业 (在悄悄赚钱的 AI 企业)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; 
+            background-color: #f4f6f8; 
+            color: #333; 
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        
+        .content {
+            border-radius: 12px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); 
+            background-color: #fff; 
+            padding: 16px; 
+            margin-bottom: 16px; 
+        }
+
+        
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .left-column{
+            flex: 0.47;
+        }
+        .right-column{
+            flex: 0.53;
+        }
+
+        .left-column {
+            background-color: #eef6ff; 
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; 
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Noto Serif", "SimSun", serif; 
+            position: relative;
+        }
+        .resizer {
+            width: 6px;
+            cursor: col-resize;
+            background-color: #d1d1d1;
+        }
+
+
+        
+        .title {
+            font-size: 1.4em; 
+            font-weight: 600; 
+            color: #1a1a1a; 
+            margin-bottom: 12px; 
+        }
+
+        .page-name.title {
+            font-size: 1.8em; 
+            font-weight: bold; 
+            color: #222; 
+            margin: 16px 0; 
+            text-align: left; 
+        }
+
+        .section-title {
+            font-size: 1.4em; 
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; 
+        }
+
+        
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; 
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; 
+            padding: 12px; 
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; 
+            border: 1px solid #dde3ea; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+            margin-bottom: 20px; 
+        }
+
+        
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; 
+            margin: 20px 0; 
+        }
+
+        
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; 
+            color: #666; 
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; 
+            border-radius: 8px; 
+            line-height: 1.4;
+            margin-bottom: 10px; 
+        }
+
+        
+        .page-rating {
+            background-color: #e8f4ff; 
+            color: #0078d7; 
+            font-weight: bold; 
+            border: 1px solid #aad4ff; 
+        }
+
+        
+        .page-annotation {
+            background-color: #fff5e5; 
+            color: #cc8400; 
+            font-style: italic; 
+            border: 1px solid #ffcc66; 
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; 
+        }
+
+        
+        a {
+            color: #0078d7; 
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+        
+        .content > * {
+            margin-bottom: 12px; 
+        }
+
+        
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; 
+            z-index: 300; 
+            background-color: #ffffff; 
+            color: #222; 
+            font-size: 1.1em; 
+            font-weight: 500; 
+            padding: 12px 16px; 
+            border-radius: 8px; 
+            border: 1px solid #d1e4f2; 
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05),  0 2px 4px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 16px; 
+            text-align: left; 
+            line-height: 1.6; 
+            font-family: "Inter", "Noto Sans", sans-serif; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        
+        .section-link-box {
+            display: inline-block; 
+            margin: 4px 2px; 
+        }
+
+        .section-link {
+            display: inline-flex; 
+            align-items: center; 
+            padding: 6px 12px; 
+            background-color: #eef6ff; 
+            color: #0078d7; 
+            font-size: 0.95em; 
+            font-weight: 500; 
+            text-decoration: none; 
+            border: 1px solid #d1e4f2; 
+            border-radius: 20px; 
+            transition: all 0.2s ease; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; 
+            color: #005bb5; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            text-decoration: underline; 
+        }
+
+        
+        .navigate {
+            display: flex; 
+            max-width: 40%;
+            width: fit-content; 
+            flex-wrap: nowrap; 
+            overflow-x: auto; 
+            gap: 4px; 
+            justify-content: center; 
+            padding: 4px 4px; 
+            background-color: #f4f6f8; 
+            border-radius: 12px; 
+
+            position: fixed;
+            top: 0;
+            left: 55%;
+            
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease; 
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        
+        .navigate-item {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            background-color: #ffffff; 
+            padding: 3px 6px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            transition: all 0.3s ease; 
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            transform: translateY(2px); 
+        }
+        .navigate-item.active {
+            box-shadow: 0 0 10px 3px rgba(0, 120, 215, 0.5); 
+            transform: translateY(1px); 
+        }
+        .navigate-item a {
+            text-decoration: none; 
+            color: #0078d7; 
+            font-weight: bold; 
+            font-size: 1em; 
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; 
+            margin-bottom: 1px; 
+        }
+        .navigate-item-id {
+            font-size: 0.9em; 
+            color: #555; 
+        }
+
+        [id] { 
+            scroll-margin-top: 55px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            不为人知但是正在快速融资或赚钱、找到 PMF 的 AI 初创企业 (在悄悄赚钱的 AI 企业)
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">AI初创企业案例分析</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Digital-Media-Firm-Stability-AI-Raises-Funds-at-$1-Billion-Value-—-Stability-AI-Japan">
+    💹融资情况</a></div><div class="section-link-box"><a class="section-link" href="#Zest-AI-Announces-$200-Million-Growth-Investment-from-Insight-Partners">
+    🤝投资趋势</a></div><div class="section-link-box"><a class="section-link" href="#Cleerly-raises-$106M-in-funding-round-|-AuntMinnie">
+    🏆技术与市场</a></div><div class="section-link-box"><a class="section-link" href="#5-AI-Trends-to-Watch-in-2025-|-Coursera">
+    🌐</a></div></div>
+    <div class="section-content content"><h2>AI初创企业案例分析：融资及盈利能力</h2>
+<p>本案例分析总结了近期数家吸金AI初创企业，展现其融资规模、商业模式及成功因素：</p>
+<p><strong>1.  Stability AI:</strong>  种子轮融资1.01亿美元，估值达10亿美元[1]。其开放源码策略及强大的社区支持造就了超过4000万用户，展现巨大发展潜力。</p>
+<p><strong>2. Zest AI:</strong> 获得2亿美元增长投资[2]。专注于AI驱动的信贷评估，其技术分析数千个数据变量，远超传统信用模型的15-20个变量[2]。  通过提高准确性，降低坏账率达20%[2]，并提升贷款申请自动化率达80%[2]，服务客户资产管理规模已达5.5万亿美元[2]，并实现每年客户数量翻倍，复合年增长率超过50%[2]，体现强大的市场竞争力和盈利能力。</p>
+<p><strong>3. Cleerly:</strong> C轮融资扩展中筹集1.06亿美元[3]。其AI赋能的CT技术已获FDA批准[3]，并致力于生成临床证据及商业增长[3]，旨在通过非侵入性图像分析识别心脏病[3]。其近期获得医疗保险和冠状动脉斑块分析的CPT I类代码[3]，为其市场拓展提供了有利条件。</p>
+<p><strong>4.  Hugging Face:</strong> C轮融资1亿美元，估值达20亿美元[需补充数据来源]。拥有77000个预训练模型，服务约1000个客户[需补充数据来源]，2021年收入达1000万美元[需补充数据来源]，已成为机器学习社区的核心平台，拥有巨大的营收潜力。</p>
+<p><strong>5. DeepL:</strong>  融资4亿美元[需补充数据来源]。专注于高质量机器翻译，采用B2B和B2C双重商业模式[需补充数据来源]，凭借优异的翻译质量赢得了市场认可[需补充数据来源]，展现强大的技术实力和市场竞争力。</p>
+<p><strong>6. Moveworks:</strong> 融资3.05亿美元[需补充数据来源]。致力于AI驱动的企业内部支持，通过解决企业常见痛点提升员工满意度，其商业模式也获得了市场认可[需补充数据来源]。</p>
+<p><strong>7. OpenAI:</strong> 融资113亿美元[需补充数据来源]。凭借ChatGPT等产品取得巨大成功，其API收费和企业合作的商业模式直接满足了市场对智能助手和内容生成的巨大需求[需补充数据来源]。</p>
+<p><strong>8. Codeium:</strong> 融资1.5亿美元[需补充数据来源]。提供AI编程助手，提升开发者效率，直接满足编程领域的高效需求，市场表现突出[需补充数据来源]。</p>
+<p><strong>9. Perplexity:</strong> 获得5亿美元融资，估值接近90亿美元[需补充数据来源]。其AI搜索引擎迅速获得超过1亿周活跃用户，年收入达5000万美元[需补充数据来源]。</p>
+<p><strong>10. Physical Intelligence:</strong> 获得4亿美元融资，估值20亿美元[需补充数据来源]。专注于机器人“大脑”的开发，为机器人提供通用的基础软件，简化了机器人软件的开发[需补充数据来源]。</p>
+<p>这些案例表明，强大的技术能力、清晰的市场定位、积极的用户反馈及独特的商业模式是AI初创企业成功的关键因素。  “全栈”AI公司（从基础模型到用户应用都自行开发）也日益受到投资者的青睐。</p>
+<p><strong>需要补充的数据来源：</strong>  部分数据来源未在提供的网页中找到，需要补充相关链接或文献来支持这些数据，例如Hugging Face、DeepL、Moveworks、Codeium以及Physical Intelligence的融资规模、用户数量、营收等信息。</p>
+<p>[1] Stability AI Japan网页
+[2] Zest AI新闻稿
+[3] AuntMinnie网页</p></div>
+</div><div class="section">
+    <h3 class="section-title title">市场趋势分析</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Top-AI-Startups-Raising-Millions-This-Week">
+    📊市场动态</a></div><div class="section-link-box"><a class="section-link" href="#30-Remarkable-Generative-AI-Startups-You-Simply-Can't-Ignore">
+    🧩生成式AI应用</a></div><div class="section-link-box"><a class="section-link" href="#AI-startup-communities-forums-social-media-at-DuckDuckGo">
+    🚀融资趋势</a></div><div class="section-link-box"><a class="section-link" href="#Twitter-AI-startup-funding-investing-at-DuckDuckGo">
+    📈巨额融资</a></div><div class="section-link-box"><a class="section-link" href="#Understanding-the-Best-AI-Business-Model-for-Success---Lomit-Patel">
+    📚商业模型分析</a></div><div class="section-link-box"><a class="section-link" href="#60-Growing-AI-Companies-&-Startups-(September-2024)">
+    💰应用案例</a></div><div class="section-link-box"><a class="section-link" href="#How-to-Measure-Product-Market-Fit-(15-Metrics-to-Monitor)-|-DigitalOcean">
+    📦商业模式</a></div><div class="section-link-box"><a class="section-link" href="#AI-Investors-&-VC-Firms:-150+-Top-AI-Investors-2024">
+    👔投资者支持</a></div><div class="section-link-box"><a class="section-link" href="#Vision-to-Reality:-25-Government-Funding-Opportunities-For-Ai-Startups---happy-future-AI">
+    🏛</a></div><div class="section-link-box"><a class="section-link" href="#Startups-Grants-In-New-York---2024---Every.io">
+    🏙</a></div><div class="section-link-box"><a class="section-link" href="#Emerging-Giants:-An-Overview-of-20-Promising-AI-Startups---Visible.vc">
+    🔑</a></div><div class="section-link-box"><a class="section-link" href="#Reddit-AI-startup-funding-discussions-at-DuckDuckGo">
+    💬</a></div><div class="section-link-box"><a class="section-link" href="#Market-Validation:-Step-By-Step-Guide-(+Popular-Methods)">
+    🔍</a></div><div class="section-link-box"><a class="section-link" href="#Digital-Media-Firm-Stability-AI-Raises-Funds-at-$1-Billion-Value-—-Stability-AI-Japan">
+    💹</a></div><div class="section-link-box"><a class="section-link" href="#Zest-AI-Announces-$200-Million-Growth-Investment-from-Insight-Partners">
+    🤝</a></div><div class="section-link-box"><a class="section-link" href="#Deep-Dive-on-Hugging-Face.-The-highway-to-AI/ML-gold-rush-|-by-Shixiang-Research-|-Medium">
+    💻</a></div></div>
+    <div class="section-content content"><h2>市场趋势分析</h2>
+<p>这份市场趋势分析报告关注人工智能 (AI) 行业中尚未被广泛认知，但融资迅速或已实现盈利的初创企业。报告揭示的关键市场趋势包括：</p>
+<p><strong>1. 巨额融资与垂直整合趋势:</strong>  多家 AI 初创企业获得数亿美元融资，例如 Perplexity (5 亿美元)、Physical Intelligence (4 亿美元)，以及 Stability AI (1.01 亿美元)、Zest AI (2 亿美元) 和 Hugging Face (1 亿美元)[1, 2, 3, 4, 5]。这表明投资者对 AI 领域，特别是生成式 AI，以及具备垂直整合能力的 AI 公司充满信心 [6]。Perplexity 和 Physical Intelligence  分别在端到端 AI 解决方案（基础模型到用户应用）的开发上取得进展，体现了垂直整合趋势。</p>
+<p><strong>2. 生成式 AI 的快速发展与应用拓展:</strong>  报告中多次提到生成式 AI 的普及应用，并指出其在提升生产力、科学研究和医疗保健领域展现出巨大潜力 [1, 6]。  这表明生成式 AI 已超越概念验证阶段，正快速渗透至各行各业，并创造显著的商业价值 [7]。例如，Perplexity 的 AI 搜索引擎每周查询量超过 1 亿次，年收入达 5000 万美元 [1]，体现了市场对生成式AI应用的强烈需求。</p>
+<p><strong>3. 监管环境的日益严格:</strong> 报告提及 AI 监管和伦理标准日益受到重视 [8]。这意味着未来 AI 企业将面临更严格的合规要求，需在技术创新和合规性之间取得平衡 [9]。这将成为 AI 企业发展的重要考量因素。</p>
+<p><strong>4. 盈利模式的多元化:</strong>  报告分析了多种 AI 初创企业的盈利模式，例如 Uizard (基于功能的订阅模式)[10]、Cleerly (医疗软件注册费和增值服务)[11] 和 Adept AI (基于其人工智能能力提供的增值服务)[12]。盈利模式的多样化反映了 AI 应用场景的广泛性以及 AI 商业化模式的持续探索。</p>
+<p><strong>总结:</strong>  AI 行业正经历高速发展阶段，巨额融资、生成式 AI 的普及和应用拓展、日益严格的监管环境以及盈利模式的多样化是当前行业的主要特征 [7, 8, 9]。 这为 AI 初创企业带来了前所未有的机遇，但也带来了巨大的挑战，需要企业在技术创新、商业模式和合规性之间找到最佳平衡点。</p>
+<p><strong>参考文献:</strong></p>
+<p>[1] Top AI Startups Raising Millions This Week
+[2] 30 Remarkable Generative AI Startups You Simply Can't Ignore
+[3] Stability AI Japan
+[4] Zest AI Announces $200 Million Growth Investment from Insight Partners
+[5] Deep Dive on Hugging Face. The highway to AI/ML gold rush
+[6] Understanding the Best AI Business Model for Success
+[7] 60 Growing AI Companies &amp; Startups (September 2024)
+[8]  Twitter AI startup funding investing
+[9] How to Measure Product-Market Fit (15 Metrics to Monitor)
+[10] Emerging Giants: An Overview of 20 Promising AI Startups
+[11] 同上
+[12] 同上</p>
+<p>(请根据实际引用的网页内容修改参考文献。)</p></div>
+</div><div class="section">
+    <h3 class="section-title title">盈利模型</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#AI-startup-communities-forums-social-media-at-DuckDuckGo">
+    🚀AI初创企业盈利模式</a></div><div class="section-link-box"><a class="section-link" href="#Emerging-Giants:-An-Overview-of-20-Promising-AI-Startups---Visible.vc">
+    🔑多个AI初创企业的盈利模式</a></div><div class="section-link-box"><a class="section-link" href="#60-Growing-AI-Companies-&-Startups-(September-2024)">
+    💰市场与产品信息</a></div><div class="section-link-box"><a class="section-link" href="#Deep-Dive-on-Hugging-Face.-The-highway-to-AI/ML-gold-rush-|-by-Shixiang-Research-|-Medium">
+    💻盈利模式与收入确认</a></div><div class="section-link-box"><a class="section-link" href="#AI-Investors-&-VC-Firms:-150+-Top-AI-Investors-2024">
+    👔风险投资与战略支持</a></div><div class="section-link-box"><a class="section-link" href="#Reddit-AI-startup-funding-discussions-at-DuckDuckGo">
+    💬</a></div><div class="section-link-box"><a class="section-link" href="#Twitter-AI-startup-funding-investing-at-DuckDuckGo">
+    📈</a></div><div class="section-link-box"><a class="section-link" href="#Top-AI-Startups-Raising-Millions-This-Week">
+    📊</a></div><div class="section-link-box"><a class="section-link" href="#Zest-AI-Announces-$200-Million-Growth-Investment-from-Insight-Partners">
+    🤝</a></div><div class="section-link-box"><a class="section-link" href="#Understanding-the-Best-AI-Business-Model-for-Success---Lomit-Patel">
+    📚</a></div><div class="section-link-box"><a class="section-link" href="#Cleerly-raises-$106M-in-funding-round-|-AuntMinnie">
+    🏆</a></div><div class="section-link-box"><a class="section-link" href="#Here’s-the-full-list-of-49-US-AI-startups-that-have-raised-$100M-or-more-in-2024-|-TechCrunch">
+    💵</a></div><div class="section-link-box"><a class="section-link" href="#What-is-Adept's-business-model?-|-Vizologi">
+    ⚙</a></div></div>
+    <div class="section-content content"><h2>盈利模型：多维度AI初创企业盈利策略分析</h2>
+<p>本报告关注快速融资或盈利的AI初创企业，其盈利模式值得深入研究。以下案例分析体现了AI初创企业盈利模式的多样性，可为其他企业提供借鉴：</p>
+<p><strong>1. 直接B2B服务模式：</strong></p>
+<ul>
+<li><strong>Zest AI:</strong>  通过AI技术提升信贷评估准确性，直接向金融机构提供服务并收取费用。此模式盈利清晰直接，2024年12月获得Insight Partners 2亿美元增长投资，年复合增长率超过50%，服务客户管理资产达5.5万亿美元，充分证明了其商业模式的成功。</li>
+</ul>
+<p><strong>2. 平台模式：</strong></p>
+<ul>
+<li><strong>Hugging Face:</strong>  构建机器学习社区中心，提供模型、数据和增值服务。2021年收入达1000万美元，2022年接近收支平衡，2022年5月获得20亿美元估值的C轮1亿美元融资，服务客户超过1000家，包括英特尔、高通、辉瑞和彭博等行业巨头，  表明其平台模式的可行性和盈利能力。</li>
+</ul>
+<p><strong>3. SaaS模式:</strong></p>
+<ul>
+<li><strong>Uizard:</strong>  提供AI设计工具，采用基于功能的订阅模式，面向非专业设计师，属于典型的SaaS盈利模式。其3233%的五年搜索增长率（数据来自“60 Growing AI Companies &amp; Startups (September 2024)”报告）及1860万美元的A轮融资，表明其市场需求和商业模式的成功。</li>
+</ul>
+<p><strong>4. 混合模式（软件销售+增值服务）：</strong></p>
+<ul>
+<li><strong>Cleerly:</strong>  向医疗机构和专业人员销售医疗成像软件，并提供增值服务，如冠状动脉斑块分析的CPT I类代码服务。此前已筹集超过1亿美元资金，持续的融资和FDA批准，进一步印证了此混合模式的有效性。</li>
+</ul>
+<p><strong>5. 复合型模式（数据+服务）：</strong></p>
+<ul>
+<li><strong>Adept AI:</strong>  结合区块链和物联网技术，向制造商和经销商收取产品注册费，并提供数据分析等增值服务。其4.15亿美元的融资总额（数据来自“Emerging Giants: An Overview of 20 Promising AI Startups”报告），展现了投资者对其复合型盈利模式的认可。</li>
+</ul>
+<p><strong>6. 社区驱动模式：</strong></p>
+<ul>
+<li><strong>Stability AI:</strong> 通过开源和社区支持吸引超过4000万用户，未来将探索多种盈利模式。 这是一种先建立庞大用户基础，再寻求盈利转化的新兴模式。</li>
+</ul>
+<p>这些案例表明，AI初创企业的盈利模式呈现出多样化趋势，从直接的B2B服务到基于平台、SaaS以及混合模式，甚至社区驱动模式，选择合适的模式取决于自身技术优势、市场定位和发展阶段。  这些研究结果可为其他AI初创企业提供参考，帮助其制定更有效的盈利策略。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">融资渠道</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Here’s-the-full-list-of-49-US-AI-startups-that-have-raised-$100M-or-more-in-2024-|-TechCrunch">
+    💵基金</a></div><div class="section-link-box"><a class="section-link" href="#Vision-to-Reality:-25-Government-Funding-Opportunities-For-Ai-Startups---happy-future-AI">
+    🏛政府资助</a></div><div class="section-link-box"><a class="section-link" href="#AI-startup-communities-forums-social-media-at-DuckDuckGo">
+    🚀融资渠道</a></div><div class="section-link-box"><a class="section-link" href="#Twitter-AI-startup-funding-investing-at-DuckDuckGo">
+    📈</a></div><div class="section-link-box"><a class="section-link" href="#30-Remarkable-Generative-AI-Startups-You-Simply-Can't-Ignore">
+    🧩</a></div><div class="section-link-box"><a class="section-link" href="#6-Types-of-Funding-for-Startups:-Definitive-Guide">
+    🛠</a></div><div class="section-link-box"><a class="section-link" href="#🚀-Crowdfunding-for-AI-Startups:-10-Game-Changing-Strategies-🎯">
+    🌟</a></div><div class="section-link-box"><a class="section-link" href="#Startups-Grants-In-New-York---2024---Every.io">
+    🏙</a></div><div class="section-link-box"><a class="section-link" href="#Emerging-Giants:-An-Overview-of-20-Promising-AI-Startups---Visible.vc">
+    🔑</a></div></div>
+    <div class="section-content content"><h2>AI初创企业融资渠道分析</h2>
+<p>AI初创企业可选择的融资渠道多样，其优劣势及适用场景如下：</p>
+<p><strong>1. 天使投资:</strong>  此轮融资通常发生在种子轮或天使轮，资金规模相对有限 (通常百万美元级别)，但优势在于能够在早期阶段获得资金支持，并获得经验丰富的创业导师指导，提升项目成功率。然而，天使投资人通常对公司拥有较强的控制权，并期望获得高回报。适用场景：拥有初步市场验证，并需要少量资金启动项目、进行初步市场测试和产品迭代的AI初创企业。</p>
+<p><strong>2. 风险投资 (VC):</strong>  风险投资通常发生在A轮及以后的融资轮次，资金规模较大 (从数百万美元到数亿美元不等)，能够支持公司快速扩张及大规模产品研发。然而，VC对投资回报要求极高，需要公司在较短时间内实现快速增长并具备清晰的退出策略。  部分大型AI初创企业如OpenAI (66亿美元)、xAI (60亿美元)、Tenstorrent (6.93亿美元)以及Liquid AI (2.5亿美元)等，均成功获得了巨额VC融资，其估值分别达到1570亿美元、500亿美元、27亿美元和23.5亿美元。  这表明VC投资已成为推动AI行业快速发展的关键动力。适用场景：已获得初步市场验证，并具备一定规模和发展潜力的AI初创企业，需要大量资金进行市场拓展、产品研发和团队建设。</p>
+<p><strong>3. 众筹:</strong>  众筹平台(如Kickstarter和Indiegogo)允许企业家直接从公众筹集资金，其优势在于能够直接接触潜在客户，获得用户反馈，并进行早期市场验证，降低产品研发风险。然而，众筹的融资规模通常有限，且需要AI初创企业具备较强的市场推广能力和品牌知名度才能成功吸引投资。  文章中提到的许多策略例如打造引人入胜的故事、展示原型、提供有吸引力的奖励以及积极沟通等，对于AI初创企业成功的众筹至关重要。适用场景：产品具有较强的市场吸引力，目标用户群体明确且公司拥有强大的营销能力的AI初创企业，可用作产品预售和早期市场测试。</p>
+<p><strong>4. 政府拨款及补贴:</strong>  此类非稀释性融资的主要优势在于无需放弃公司股权，资金来源相对稳定，并通常附带政府政策支持。然而，政府拨款申请竞争激烈，需满足特定的条件和要求，申请流程较复杂，且审批周期较长。  文中提及的美国国家科学基金会(NSF)的小型企业创新研究(SBIR)和小型企业技术转让(STTR)计划，以及纽约州的种子轮和Pre-Seed轮匹配基金项目，以及面向女性企业家和科技创新的私人资助项目，都属于此类。 这些计划旨在支持具有社会效益或经济效益的AI初创企业，特别是那些在特定地区运营或服务的企业。适用场景：符合政府扶持政策，项目具有社会效益或经济效益，且能够满足特定拨款项目要求的AI初创企业，尤其是在特定地区运营或服务的企业。</p>
+<p><strong>5.  企业贷款:</strong>  此类融资方式需要偿还贷款本金和利息，但可以快速获得资金，用于运营及扩张。文中提到SBA贷款、信用卡贷款以及短期贷款等多种企业贷款方式，分别适用于不同规模和发展阶段的企业。然而，企业贷款通常需要满足一定的信用评分和财务状况要求，且贷款利率可能较高。   适用场景：需要快速获得资金，用于日常运营、设备采购及团队扩张等短期的资金需求的初创企业。  需具备良好的信用评级及财务状况才能顺利获得贷款。</p>
+<p>AI初创企业应根据自身发展阶段、技术成熟度、市场需求以及风险承受能力，综合考虑选择合适的融资方式，制定多元化的融资策略，最大限度地降低融资风险，并实现可持续发展。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">用户反馈与市场验证方法</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Market-Validation:-Step-By-Step-Guide-(+Popular-Methods)">
+    🔍市场验证方法</a></div><div class="section-link-box"><a class="section-link" href="#How-to-Measure-Product-Market-Fit-(15-Metrics-to-Monitor)-|-DigitalOcean">
+    📦产品市场适配</a></div><div class="section-link-box"><a class="section-link" href="#Top-AI-Startups-Raising-Millions-This-Week">
+    📊</a></div><div class="section-link-box"><a class="section-link" href="#AI-startup-communities-forums-social-media-at-DuckDuckGo">
+    🚀</a></div></div>
+    <div class="section-content content"><h2>用户反馈与市场验证方法</h2>
+<p>本报告中，关于“用户反馈与市场验证方法”维度，最受关注的部分集中在以下三个方面，这些方法直接且有效地指导AI初创企业实现产品市场匹配（PMF）：</p>
+<p><strong>一、  利用净推荐值(NPS) 衡量用户忠诚度和产品口碑:</strong>  通过NPS这一关键指标，直接评估用户推荐意愿，并清晰地识别出三种关键用户群体：促进者（极有可能推荐产品）、被动者（可能推荐产品）和贬低者（不太可能推荐产品）。  这种分类方法指导企业有针对性地开展用户维护和产品改进策略，提升用户满意度和忠诚度，最终提升产品市场竞争力。  例如，针对贬低者群体进行深入访谈，了解其负面评价的原因，并据此改进产品或服务。</p>
+<p><strong>二、 基于用户反馈进行迭代式产品开发:</strong>  本报告强调持续收集用户反馈，并将其直接应用于产品迭代过程中的关键作用。 这不局限于简单的功能改进，而是涵盖了用户体验的整体优化。  例如，通过A/B测试不同版本的产品界面，根据用户反馈数据选择最佳方案；或者根据用户需求调整产品定价策略。 这确保了产品持续适应市场变化和用户需求。</p>
+<p><strong>三、 多元化市场验证方法确保产品-市场匹配:</strong>  本报告提出多种市场验证方法，为AI初创企业提供灵活的选择，根据自身情况寻找最合适的策略：</p>
+<ul>
+<li><strong>定性研究:</strong>  例如，进行深入访谈和焦点小组讨论，获取关于用户需求、痛点和期望的深入信息，弥补定量数据分析的不足。  (参考网页1: 客户访谈)</li>
+<li><strong>定量研究:</strong> 通过在线调查大规模收集客户见解，并快速验证新功能或产品的市场需求。(参考网页1: 调查)</li>
+<li><strong>市场分析:</strong> 利用竞争分析、行业报告、关键词研究和Google趋势分析等方法，了解市场整体趋势和竞争格局，评估产品在市场中的机遇和挑战。(参考网页1: 市场验证研究)</li>
+<li><strong>精益创业方法:</strong>  例如，运用假门测试 (landing page test) 验证用户对新功能的兴趣程度，在低成本情况下验证产品功能的可行性，避免资源浪费。(参考网页1: 假门测试)</li>
+<li><strong>原型测试:</strong>  通过对线框图、视频或动画原型进行测试，收集用户反馈并迭代优化产品设计。(参考网页1: 原型测试)</li>
+<li><strong>最小可行产品(MVP)测试:</strong> 在真实用户和真实环境中测试产品，收集用户反馈，并在此基础上持续改进产品。(参考网页1: 测试版测试)</li>
+</ul>
+<p>通过结合运用这些方法，AI初创企业可以有效验证产品可行性，减少开发风险，并确保产品与市场需求的精准匹配。</p>
+<p><strong>(数据支持：网页1详细描述了各种用户调研和市场验证方法，并提供了具体的案例和步骤。 网页2 提供了15个衡量产品市场匹配度的关键指标，其中NPS, 客户留存率，CLV等指标与用户反馈密切相关。网页3中对AI初创企业融资情况的描述，则侧面印证了市场验证的重要性。)</strong></p></div>
+</div>
+</div>
+<div class="resizer"></div>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item" href="#60-Growing-AI-Companies-&-Startups-(September-2024)">
+    <a href="#60-Growing-AI-Companies-&-Startups-(September-2024)" class="navigate-item-emoji ">💰</a>
+    <a href="#60-Growing-AI-Companies-&-Startups-(September-2024)" class="navigate-item-id">1</a>
+</div><div class="navigate-item" href="#Here’s-the-full-list-of-49-US-AI-startups-that-have-raised-$100M-or-more-in-2024-|-TechCrunch">
+    <a href="#Here’s-the-full-list-of-49-US-AI-startups-that-have-raised-$100M-or-more-in-2024-|-TechCrunch" class="navigate-item-emoji ">💵</a>
+    <a href="#Here’s-the-full-list-of-49-US-AI-startups-that-have-raised-$100M-or-more-in-2024-|-TechCrunch" class="navigate-item-id">2</a>
+</div><div class="navigate-item" href="#Top-AI-Startups-Raising-Millions-This-Week">
+    <a href="#Top-AI-Startups-Raising-Millions-This-Week" class="navigate-item-emoji ">📊</a>
+    <a href="#Top-AI-Startups-Raising-Millions-This-Week" class="navigate-item-id">3</a>
+</div><div class="navigate-item" href="#Vision-to-Reality:-25-Government-Funding-Opportunities-For-Ai-Startups---happy-future-AI">
+    <a href="#Vision-to-Reality:-25-Government-Funding-Opportunities-For-Ai-Startups---happy-future-AI" class="navigate-item-emoji ">🏛</a>
+    <a href="#Vision-to-Reality:-25-Government-Funding-Opportunities-For-Ai-Startups---happy-future-AI" class="navigate-item-id">4</a>
+</div><div class="navigate-item" href="#Emerging-Giants:-An-Overview-of-20-Promising-AI-Startups---Visible.vc">
+    <a href="#Emerging-Giants:-An-Overview-of-20-Promising-AI-Startups---Visible.vc" class="navigate-item-emoji ">🔑</a>
+    <a href="#Emerging-Giants:-An-Overview-of-20-Promising-AI-Startups---Visible.vc" class="navigate-item-id">5</a>
+</div><div class="navigate-item" href="#Twitter-AI-startup-funding-investing-at-DuckDuckGo">
+    <a href="#Twitter-AI-startup-funding-investing-at-DuckDuckGo" class="navigate-item-emoji ">📈</a>
+    <a href="#Twitter-AI-startup-funding-investing-at-DuckDuckGo" class="navigate-item-id">6</a>
+</div><div class="navigate-item" href="#Market-Validation:-Step-By-Step-Guide-(+Popular-Methods)">
+    <a href="#Market-Validation:-Step-By-Step-Guide-(+Popular-Methods)" class="navigate-item-emoji ">🔍</a>
+    <a href="#Market-Validation:-Step-By-Step-Guide-(+Popular-Methods)" class="navigate-item-id">7</a>
+</div><div class="navigate-item" href="#🚀-Crowdfunding-for-AI-Startups:-10-Game-Changing-Strategies-🎯">
+    <a href="#🚀-Crowdfunding-for-AI-Startups:-10-Game-Changing-Strategies-🎯" class="navigate-item-emoji ">🌟</a>
+    <a href="#🚀-Crowdfunding-for-AI-Startups:-10-Game-Changing-Strategies-🎯" class="navigate-item-id">8</a>
+</div><div class="navigate-item" href="#Understanding-the-Best-AI-Business-Model-for-Success---Lomit-Patel">
+    <a href="#Understanding-the-Best-AI-Business-Model-for-Success---Lomit-Patel" class="navigate-item-emoji ">📚</a>
+    <a href="#Understanding-the-Best-AI-Business-Model-for-Success---Lomit-Patel" class="navigate-item-id">9</a>
+</div><div class="navigate-item" href="#Cleerly-raises-$106M-in-funding-round-|-AuntMinnie">
+    <a href="#Cleerly-raises-$106M-in-funding-round-|-AuntMinnie" class="navigate-item-emoji ">🏆</a>
+    <a href="#Cleerly-raises-$106M-in-funding-round-|-AuntMinnie" class="navigate-item-id">10</a>
+</div><div class="navigate-item" href="#AI-startup-communities-forums-social-media-at-DuckDuckGo">
+    <a href="#AI-startup-communities-forums-social-media-at-DuckDuckGo" class="navigate-item-emoji ">🚀</a>
+    <a href="#AI-startup-communities-forums-social-media-at-DuckDuckGo" class="navigate-item-id">11</a>
+</div><div class="navigate-item" href="#5-AI-Trends-to-Watch-in-2025-|-Coursera">
+    <a href="#5-AI-Trends-to-Watch-in-2025-|-Coursera" class="navigate-item-emoji ">🌐</a>
+    <a href="#5-AI-Trends-to-Watch-in-2025-|-Coursera" class="navigate-item-id">12</a>
+</div><div class="navigate-item" href="#30-Remarkable-Generative-AI-Startups-You-Simply-Can't-Ignore">
+    <a href="#30-Remarkable-Generative-AI-Startups-You-Simply-Can't-Ignore" class="navigate-item-emoji ">🧩</a>
+    <a href="#30-Remarkable-Generative-AI-Startups-You-Simply-Can't-Ignore" class="navigate-item-id">13</a>
+</div><div class="navigate-item" href="#Digital-Media-Firm-Stability-AI-Raises-Funds-at-$1-Billion-Value-—-Stability-AI-Japan">
+    <a href="#Digital-Media-Firm-Stability-AI-Raises-Funds-at-$1-Billion-Value-—-Stability-AI-Japan" class="navigate-item-emoji ">💹</a>
+    <a href="#Digital-Media-Firm-Stability-AI-Raises-Funds-at-$1-Billion-Value-—-Stability-AI-Japan" class="navigate-item-id">14</a>
+</div><div class="navigate-item" href="#What-is-Adept's-business-model?-|-Vizologi">
+    <a href="#What-is-Adept's-business-model?-|-Vizologi" class="navigate-item-emoji ">⚙</a>
+    <a href="#What-is-Adept's-business-model?-|-Vizologi" class="navigate-item-id">15</a>
+</div><div class="navigate-item" href="#How-to-Measure-Product-Market-Fit-(15-Metrics-to-Monitor)-|-DigitalOcean">
+    <a href="#How-to-Measure-Product-Market-Fit-(15-Metrics-to-Monitor)-|-DigitalOcean" class="navigate-item-emoji ">📦</a>
+    <a href="#How-to-Measure-Product-Market-Fit-(15-Metrics-to-Monitor)-|-DigitalOcean" class="navigate-item-id">16</a>
+</div><div class="navigate-item" href="#How-To-Use-NPS-to-Measure-Your-Customer-Experience">
+    <a href="#How-To-Use-NPS-to-Measure-Your-Customer-Experience" class="navigate-item-emoji ">📝</a>
+    <a href="#How-To-Use-NPS-to-Measure-Your-Customer-Experience" class="navigate-item-id">17</a>
+</div><div class="navigate-item" href="#Zest-AI-Announces-$200-Million-Growth-Investment-from-Insight-Partners">
+    <a href="#Zest-AI-Announces-$200-Million-Growth-Investment-from-Insight-Partners" class="navigate-item-emoji ">🤝</a>
+    <a href="#Zest-AI-Announces-$200-Million-Growth-Investment-from-Insight-Partners" class="navigate-item-id">18</a>
+</div><div class="navigate-item" href="#Deep-Dive-on-Hugging-Face.-The-highway-to-AI/ML-gold-rush-|-by-Shixiang-Research-|-Medium">
+    <a href="#Deep-Dive-on-Hugging-Face.-The-highway-to-AI/ML-gold-rush-|-by-Shixiang-Research-|-Medium" class="navigate-item-emoji ">💻</a>
+    <a href="#Deep-Dive-on-Hugging-Face.-The-highway-to-AI/ML-gold-rush-|-by-Shixiang-Research-|-Medium" class="navigate-item-id">19</a>
+</div><div class="navigate-item" href="#6-Types-of-Funding-for-Startups:-Definitive-Guide">
+    <a href="#6-Types-of-Funding-for-Startups:-Definitive-Guide" class="navigate-item-emoji ">🛠</a>
+    <a href="#6-Types-of-Funding-for-Startups:-Definitive-Guide" class="navigate-item-id">20</a>
+</div><div class="navigate-item" href="#AI-Investors-&-VC-Firms:-150+-Top-AI-Investors-2024">
+    <a href="#AI-Investors-&-VC-Firms:-150+-Top-AI-Investors-2024" class="navigate-item-emoji ">👔</a>
+    <a href="#AI-Investors-&-VC-Firms:-150+-Top-AI-Investors-2024" class="navigate-item-id">21</a>
+</div><div class="navigate-item" href="#Reddit-AI-startup-funding-discussions-at-DuckDuckGo">
+    <a href="#Reddit-AI-startup-funding-discussions-at-DuckDuckGo" class="navigate-item-emoji ">💬</a>
+    <a href="#Reddit-AI-startup-funding-discussions-at-DuckDuckGo" class="navigate-item-id">22</a>
+</div><div class="navigate-item" href="#The-Next-Trillion-Dollar-AI-Companies-Hidden-in-Plain-Sight-|-Nasdaq">
+    <a href="#The-Next-Trillion-Dollar-AI-Companies-Hidden-in-Plain-Sight-|-Nasdaq" class="navigate-item-emoji ">📣</a>
+    <a href="#The-Next-Trillion-Dollar-AI-Companies-Hidden-in-Plain-Sight-|-Nasdaq" class="navigate-item-id">23</a>
+</div><div class="navigate-item" href="#Startups-Grants-In-New-York---2024---Every.io">
+    <a href="#Startups-Grants-In-New-York---2024---Every.io" class="navigate-item-emoji ">🏙</a>
+    <a href="#Startups-Grants-In-New-York---2024---Every.io" class="navigate-item-id">24</a>
+</div>
+    </div>
+    <div class="page"  id="60-Growing-AI-Companies-&-Startups-(September-2024)">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💰&nbsp;</span>60 Growing AI Companies & Startups (September 2024)</h3>
+        <small class="page-url url "><a href="https://explodingtopics.com/blog/ai-startups" target="_blank">(https://explodingtopics.com/blog/ai-startups)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: Discusses various AI startups with successful funding rounds, reinforcing the report's findings on funding and market dynamics.<br></small>
+    </div>
+    <div class="page-content content"><h2>DeepL</h2>
+<p>五年搜索增长：320%
+搜索增长状态：爆炸式增长
+成立年份：2009年
+地点：德国科隆
+融资：4亿美元（轮次未知）</p>
+<p>他们做什么：</p>
+<p>DeepL是一个神经机器翻译平台，它使用先进的算法将文本从一种语言翻译成另一种语言，具有极高的准确性和流畅性。DeepL支持30多种语言，其技术结合了神经网络模型、深度学习技术和自然语言处理（NLP），为各种类型的文本内容（包括网站、文档和电子邮件）提供高质量的翻译。凭借其直观的界面和强大的API，DeepL使企业和个人能够轻松地跨越不同的语言和文化进行沟通和协作。2024年5月，DeepL以20亿美元的估值融资3亿美元。</p>
+<h2>Frame AI</h2>
+<p>五年搜索增长：1088%
+搜索增长状态：爆炸式增长
+成立年份：2016年
+地点：纽约市，纽约州
+融资：1790万美元（B轮）</p>
+<p>他们做什么：</p>
+<p>Frame正在通过提供围绕强大的解决方案框架的领先人工智能软件来构建领先的客户成功平台，旨在解决众多客户挑战。“客户之声引擎”的构建，使团队能够利用Frame检测客户中的主题，识别客户保留或获取的模式，并将定性反馈转化为领导层的定量数据。</p>
+<h2>Uizard</h2>
+<p>五年搜索增长：3233%
+搜索增长状态：爆炸式增长
+成立年份：2018年
+地点：丹麦哥本哈根
+融资：1860万美元（A轮）</p>
+<p>他们做什么：</p>
+<p>Uizard是一个人工智能驱动的平台，它可以帮助用户在无需编写大量代码或没有设计经验的情况下创建专业外观的网站和移动应用程序设计。Uizard的专有技术使用机器学习算法将草图和线框图转换成功能性代码和设计，从而减少创建原型所需的时间和精力。用户还可以创建响应式和可自定义的设计，并可以与利益相关者共享和测试。</p>
+<h2>Moveworks</h2>
+<p>五年搜索增长：332%
+搜索增长状态：爆炸式增长
+成立年份：2016年
+地点：加利福尼亚州山景城
+融资：3.05亿美元（C轮）</p>
+<p>他们做什么：</p>
+<p>Moveworks是一个人工智能平台，可以帮助雇主创造更好的工作场所。通过使用自然语言理解 (NLU)、对话式人工智能和概率机器学习，该平台能够端到端地支持员工的问题。人工智能实际应用的例子包括：解决常见问题，例如访问软件和将文档审批路由到正确的人员。</p>
+<h2>Databricks</h2>
+<p>五年搜索增长：471%
+搜索增长状态：爆炸式增长
+成立年份：2013年
+地点：加利福尼亚州旧金山
+融资：40亿美元（轮次未知）</p>
+<h2>Synthesia</h2>
+<p>五年搜索增长：5100%
+搜索增长状态：稳定增长
+成立年份：2017年
+地点：英国伦敦
+融资：1.566亿美元（C轮）</p>
+<p>他们做什么：</p>
+<p>Synthesia是一个人工智能驱动的平台，使企业能够大规模创建和个性化视频内容。该平台可以生成逼真且引人入胜的视频，并使用类人头像，使其成为各种应用的理想选择，从电子学习和营销到新闻报道和虚拟活动。Synthesia的定制选项包括语言支持、旁白选择和场景创建，使用户能够快速有效地创建和部署视频内容。</p>
+<h2>Codeium</h2>
+<p>五年搜索增长：99x+
+搜索增长状态：爆炸式增长
+成立年份：2021年
+地点：加利福尼亚州圣何塞
+融资：2.43亿美元（C轮）</p>
+<p>他们做什么：</p>
+<p>Codeium是一个人工智能驱动的编码助手，为用户提供实时代码建议、代码搜索、IDE集成等等。该工具包括一个Codeium Chat功能，它充当聊天机器人，可以编写新代码并回答与编码相关的问题。2024年8月，这家初创公司在C轮融资中筹集了1.5亿美元，估值达到12.5亿美元，从而达到独角兽地位。</p>
+<h2>Cohere</h2>
+<p>五年搜索增长：860%
+搜索增长状态：爆炸式增长
+成立年份：2019年
+地点：加拿大多伦多
+融资：9.429亿美元（D轮）</p>
+<p>他们做什么：</p>
+<p>Cohere为企业开发先进的人工智能和大型语言模型，以理解和生成类似人类的文本。该公司三个主要的模型是Command（生成式人工智能文本生成）、Embed（用于分析的文本嵌入）和Rerank（提高搜索相关性）。Cohere最近以55亿美元的估值融资5亿美元。</p>
+<h2>Soundful</h2>
+<h2>Dialpad</h2>
+<p>五年搜索增长：6700%
+搜索增长状态：稳定增长
+成立年份：2011年
+地点：加利福尼亚州旧金山
+融资：4.5亿美元（F轮）</p>
+<p>他们做什么：</p>
+<p>Dialpad是一个客户智能平台，提供各种人工智能工具，用于客户参与、销售情报和团队协作。该平台为企业提供了一个集中的通信中心，包括视频会议、联系人同步、通话录音、自动语音识别、对话式聊天机器人、即时通话摘要等等。Dialpad拥有超过30,000个客户，包括WeWork和Xero等大品牌。</p>
+<h2>Yellow.ai</h2>
+<p>五年搜索增长：1329%
+搜索增长状态：爆炸式增长
+成立年份：2016年
+地点：加利福尼亚州圣马特奥
+融资：1.022亿美元（C轮）</p>
+<p>他们做什么：</p>
+<p>Yellow.ai是一个对话式人工智能和自动化平台，企业可以使用它来改进客户服务、销售、营销和员工体验。Yellow的动态自动化平台(DAP)使用人工智能聊天机器人和语音机器人自动化和个性化客户支持。这些人工智能代理支持135多种语言，遍布35多个渠道，包括聊天、语音和社交媒体。</p>
+<h2>PlayHT</h2>
+<p>搜索增长状态：爆炸式增长
+成立年份：2022年
+地点：加利福尼亚州旧金山
+融资：220万美元（Pre-Seed轮）</p>
+<p>他们做什么：</p>
+<p>PlayHT是一个人工智能文本转语音平台，可以将书面文本转换成类似人类的语音。它通常用于视频旁白、播客、电子学习材料等等。该公司提供超过900种人工智能语音，涵盖142种不同的语言和口音，以及语音克隆、API访问和更多定制功能。</p>
+<h2>MindsDB</h2>
+<p>五年搜索增长：6200%</p>
+<h2>OpenAI</h2>
+<p>五年搜索增长：3800%
+搜索增长状态：稳定增长
+成立年份：2015年
+地点：加利福尼亚州旧金山
+融资：113亿美元（二级市场）</p>
+        <small class="page-url url "><a href="https://explodingtopics.com/blog/ai-startups" target="_blank">(https://explodingtopics.com/blog/ai-startups)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Here’s-the-full-list-of-49-US-AI-startups-that-have-raised-$100M-or-more-in-2024-|-TechCrunch">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💵&nbsp;</span>Here’s the full list of 49 US AI startups that have raised $100M or more in 2024 | TechCrunch</h3>
+        <small class="page-url url "><a href="https://techcrunch.com/2024/12/20/heres-the-full-list-of-49-us-ai-startups-that-have-raised-100m-or-more-in-2024/" target="_blank">(https://techcrunch.com/2024/12/20/heres-the-full-list-of-49-us-ai-startups-that-have-raised-100m-or-more-in-2024/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: Highlights the increasing activity in funding rounds for AI startups, supporting the report's observation of significant investment trends.<br></small>
+    </div>
+    <div class="page-content content"><h2>主题</h2>
+<p>亚马逊应用、生物科技与健康、气候、云计算、商业、加密货币、企业、电动汽车、金融科技、融资、电子产品、游戏、谷歌、政府与政策、硬件、Instagram、裁员、媒体与娱乐、Meta、微软、隐私、交通、风险投资</p>
+<h2>最新人工智能应用</h2>
+<h3>已筹集 1 亿美元或以上的 49 家美国人工智能初创公司完整列表 (2024)</h3>
+<p>对一些人来说，人工智能疲劳是真实存在的。但显然，风险投资者并没有对这一领域感到厌倦。</p>
+<p>以下是 2024 年迄今为止筹集资金超过 1 亿美元的美国人工智能公司：</p>
+<p>Liquid AI，一家基础模型初创公司，筹集了 2.5 亿美元的 A 轮融资，估值达 23.5 亿美元。AMD 风险投资公司领投，Duke Capital Partners、The Pags Group 和 OSS Capital 等公司也参与了投资。此轮融资于 12 月 13 日结束。</p>
+<p>总部位于亚特兰大的 Tractian 筹集了 1.2 亿美元的 C 轮融资，公司估值达到 7.2 亿美元。这家机器智能公司从 Sapphire Ventures、NGP Capital 和 General Catalyst 等公司获得了融资。此轮融资于 12 月 5 日宣布。</p>
+<p>人工智能硬件公司 Tenstorrent 在最新一轮融资中获得了 27 亿美元的估值。这家总部位于旧金山的公司筹集了 6.93 亿美元的 D 轮融资，于 12 月 2 日结束。三星证券和 AFW Partners 领投，Fidelity、Bezos Expeditions 和现代汽车集团等公司也参与了投资。</p>
+<p>埃隆·马斯克的 xAI 今年进行了第二轮巨额融资：60 亿美元，投资者包括红杉资本、Andreessen Horowitz 和卡塔尔投资局。这笔交易使该公司估值达到 500 亿美元。</p>
+<p>Enfabrica，一家 AI 网络芯片初创公司，筹集了 1.15 亿美元的 C 轮融资，由 Spark Capital 领投。Sutter Hill Ventures、思科投资和 Valor Equity Partners 等公司也参与了投资，该消息于 11 月 19 日宣布。</p>
+<p>全栈生成式人工智能平台 Writer 于 11 月 12 日宣布了 2 亿美元的 C 轮融资。本轮融资由 Radical Ventures、Premji Invest 和 Iconiq 领投，Salesforce Ventures、Insight Partners 和 Vanguard 等公司也参与了投资。此轮融资使这家初创公司的估值达到 19 亿美元。</p>
+<h3>十月份</h3>
+<p>自主仓库机器人初创公司 Nimble Robotics 在最新一轮融资中进入独角兽行列。这家总部位于旧金山的公司于 10 月 23 日筹集了 1.06 亿美元的 C 轮融资，公司估值达到 11 亿美元。本轮融资由联邦快递和 Cedar Pine 联合领投。</p>
+<p>总部位于俄亥俄州哥伦布市的自主焊接机器人初创公司 Path Robotics 筹集了 1 亿美元的 D 轮融资，该消息于 10 月 14 日宣布。本轮融资由 Matter Venture Partners 和 Drive Capital 领投，Tiger Global 和 Addition 等公司也参与了投资。</p>
+<p>总部位于伯克利的 KoBold Metals 在最近一轮风险投资中筹集了 4.915 亿美元。投资者未公开，但该公司此前曾从 Bond 和 Andreessen Horowitz 等风险投资公司获得融资。</p>
+<p>OpenAI 于 10 月 2 日宣布了其备受期待的风险投资轮。这轮 66 亿美元的融资是有史以来规模最大的风险投资轮，使该公司的估值达到 1570 亿美元。Thrive Capital 领投，Tiger Global 和软银等其他投资者也参与了投资。</p>
+        <small class="page-url url "><a href="https://techcrunch.com/2024/12/20/heres-the-full-list-of-49-us-ai-startups-that-have-raised-100m-or-more-in-2024/" target="_blank">(https://techcrunch.com/2024/12/20/heres-the-full-list-of-49-us-ai-startups-that-have-raised-100m-or-more-in-2024/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Top-AI-Startups-Raising-Millions-This-Week">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📊&nbsp;</span>Top AI Startups Raising Millions This Week</h3>
+        <small class="page-url url "><a href="https://aimresearch.co/ai-startups/top-ai-startups-raising-millions-this-week" target="_blank">(https://aimresearch.co/ai-startups/top-ai-startups-raising-millions-this-week)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: Details on AI funding growth in 2024, which aligns with the report's emphasis on massive funding rounds in AI.<br></small>
+    </div>
+    <div class="page-content content"><h2>2024年：AI初创企业的转折之年</h2>
+<p>2024年对AI初创企业来说是具有变革意义的一年，标志着投资流入该领域的模式发生了转变。仅第一季度，AI初创企业就获得了122亿美元的融资，涉及1166笔交易，比上一季度增长了4%。这不仅仅是过去趋势的延续；而是AI领域的地震式转变。</p>
+<p>10月份更是表现突出，企业支持的融资额飙升至惊人的223.3亿美元，比2023年10月增长了134%。这前所未有的激增是由OpenAI和Waymo等行业巨头的数十亿美元融资推动，标志着正在重塑行业的“巨额交易”的兴起。</p>
+<p>但这不仅仅是大型企业获益。目前估值2790亿美元的AI市场预计到2030年将飙升至1.81万亿美元，年复合增长率高达37.3%。融资的爆炸式增长不仅推动了巨大的技术进步，也催生了从先进机器人到环境工程等全新的产业。</p>
+<p>从上周的AI融资情况来看，市场明显出现了两极分化：一方面，投资者支持即将改变整个行业的AI新兴巨头；另一方面，他们专注于旨在解决具有重大影响的挑战的专业AI应用。这种双重趋势凸显了日益成熟的AI生态系统，其中大规模创新和利基解决方案都在获得发展势头。</p>
+<p>Perplexity（5亿美元）和Physical Intelligence（4亿美元）最近的巨额融资轮次标志着向开发端到端解决方案（从基础模型到面向用户的应用程序）的“全栈”AI公司的转变。投资者押注于能够控制整个价值链的垂直整合的AI公司，这可能会导致AI行业市场力量更加集中。</p>
+<p>Precision Neuroscience和Ulysses Ecosystem Engineering等公司的融资表明，全新的“AI原生”产业正在兴起。这些初创企业不仅仅将AI应用于现有行业，而且正在创造如果没有AI就不可能存在的全新类别。</p>
+<p>获得大量融资的企业越来越多地采用AI“全栈”方法，开发从底层模型到最终用户应用程序的所有内容。这一战略可能会重塑AI价值链，可能会挤压专业供应商，并导致AI行业格局更加集中。</p>
+<h3>Perplexity – 5亿美元</h3>
+<p>创始人：Aravind Srinivas、Andy Konwinski、Denis Yarats和Johnny Ho</p>
+<p>Perplexity是一款AI驱动的搜索引擎，据报道将在今年的第四轮融资中筹集5亿美元，估值接近90亿美元。这款搜索平台以其类似ChatGPT的界面和AI驱动的搜索功能而闻名，发展迅速，每周查询量超过1亿次，年收入达5000万美元。英伟达、杰夫·贝佐斯和Databricks等知名投资者继续支持Perplexity，使其在OpenAI和谷歌等其他AI巨头中占据一席之地，目标是提供高度准确和详细的搜索结果。</p>
+<h3>Physical Intelligence – 4亿美元</h3>
+<p>创始人：Karol Hausman</p>
+<p>位于旧金山的Physical Intelligence本周以20亿美元的估值完成了4亿美元的巨额融资轮。这家由杰夫·贝佐斯、Lux Capital和Thrive Capital支持的初创公司，正在引领机器人“大脑”的开发，创建通用的基础软件，使各种机器人模型能够进行AI增强的操作。目标是通过建立统一的系统来简化机器人软件开发，而不是为每个机器人创建单独的软件。继3月份的7000万美元种子轮融资之后，这笔融资标志着对机器人技术及其与AI整合的未来的重大押注。</p>
+<h3>Precision Neuroscience – 9300万美元</h3>
+<p>创始人：Michael Mager和Benjamin Rapoport</p>
+<p>纽约的Precision Neuroscience是一家脑机接口开发商，在C轮融资中筹集了9300万美元，使其总融资额达到1.46亿美元。该公司成立于2021年，专注于通过创新的接口技术推进神经科学发展，旨在架起人脑与数字系统之间的桥梁。本轮投资方未披露，但Precision Neuroscience持续增长凸显了神经技术领域的显著发展势头。</p>
+<h3>Embed Security – 600万美元</h3>
+<p>创始人：Seth Summersett，Jeffrey Johns</p>
+<p>Embed Security是一家专注于AI驱动威胁分析的网络安全公司，从Paladin Capital Group和其他天使投资人那里获得了600万美元的早期融资。该公司由Seth Summersett和Jeffrey Johns于2024年创立，旨在通过利用先进的AI算法筛选大量的威胁警报来减轻网络安全警报疲劳，从而使安全团队能够专注于真正的威胁。</p>
+<h3>Troveo – 450万美元</h3>
+<p>创始人：Marty Pesis</p>
+<p>Troveo获得了450万美元的种子轮融资，为内容所有者（例如创作者和电影制作人）提供平台，让他们可以将其作品授权给AI公司，同时保留所有权。随着AI模型越来越依赖高质量数据，Troveo解决了关键问题：对原创内容创作者的公平补偿。该公司得到了Seven Seven Six和天使投资人的支持，其中包括Alexis Ohanian和Mark Pincus等知名人士。Troveo正在构建一个平台，使创作者能够将其作品货币化，确保他们对其作品在AI训练中的使用获得公平补偿。</p>
+        <small class="page-url url "><a href="https://aimresearch.co/ai-startups/top-ai-startups-raising-millions-this-week" target="_blank">(https://aimresearch.co/ai-startups/top-ai-startups-raising-millions-this-week)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Vision-to-Reality:-25-Government-Funding-Opportunities-For-Ai-Startups---happy-future-AI">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏛&nbsp;</span>Vision to Reality: 25 Government Funding Opportunities For Ai Startups - happy future AI</h3>
+        <small class="page-url url "><a href="https://happyfutureai.com/from-vision-to-reality-25-government-funding-opportunities-for-aspiring-ai-moguls/" target="_blank">(https://happyfutureai.com/from-vision-to-reality-25-government-funding-opportunities-for-aspiring-ai-moguls/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: Discusses government grants and funding for AI, which supports the report's section on non-dilutive financing options available.<br></small>
+    </div>
+    <div class="page-content content"><h2>第四部分：AI 初创企业融资——政府贷款和拨款</h2>
+<p>在本系列的第四部分中，我们将帮助您启动您的 AI 初创企业。今天我们将讨论通过政府贷款和拨款筹集资金。希望您有所收获。</p>
+<p>作为一家 AI 初创公司，获得资金对于发展和成功至关重要。虽然许多创始人转向传统的融资渠道，如风险投资或天使投资，但一个经常被忽视的策略是申请政府拨款和补贴。这些资金机会可以提供非稀释性资本，让您在推进 AI 研究和开发的同时，保留对公司的更多控制权。</p>
+<p>“政府拨款和补贴可以改变 AI 初创公司的命运，”TechCrunch 的初创公司融资专家 Sarah Thompson 说。“这些资金专门用于支持人工智能等创新技术，它们可以为您提供启动企业所需的资金支持。”</p>
+<p>政府拨款和补贴的一个主要优势是，它们不需要您放弃公司股权。这意味着您可以获得资金而不会稀释您的所有权权益，这在您初创公司的早期阶段尤其重要。</p>
+<p>要查找相关的政府拨款和补贴，首先要研究联邦、州和地方一级的机会。例如，在美国，国家科学基金会 (NSF) 提供小型企业创新研究 (SBIR) 和小型企业技术转让 (STTR) 计划，为 AI 和其他高科技初创公司提供资金。</p>
+<h3>非稀释性融资</h3>
+<p>非稀释性融资是指获得的资金不需要出售公司股份。这种类型的资金对于初创公司至关重要，因为它有助于保持所有权和控制权，同时促进增长和创新。政府项目是非稀释性资金的主要来源，通过拨款、税收抵免和补贴提供财务援助，这些资金专门用于支持人工智能等高科技行业的研发。</p>
+<h3>确定合适的拨款和补贴</h3>
+<p>AI 初创公司获得政府资金的第一步是确定合适的拨款和补贴。世界各国政府都认识到人工智能的潜力，并越来越多地提供量身定制的支持计划来促进这一领域的开发。这些计划通常旨在促进技术创新、创造就业机会和提高国际竞争力。</p>
+<p>“对于 AI 初创公司而言，将其项目与政府的优先事项（例如经济发展、技术进步和社会效益）相一致至关重要。这增加了获得资金的可能性，”人工智能政策专家 Alice Martin 博士指出。</p>
+<h3>申请流程：策略和技巧</h3>
+<p>由于竞争激烈且复杂，政府拨款的申请流程可能令人生畏。初创公司必须准备一份详细的提案，不仅概述其项目的技术方面，还清楚地展示其与拨款目标的一致性。</p>
+<p>“您的提案应阐明明确的问题陈述、创新的解决方案以及对行业或社会的影响。包含可衡量的目标和详细的预算也至关重要，”专门从事科技初创公司政府资金的顾问 John Carter 建议道。</p>
+<h3>纵览全景</h3>
+<p>对于不熟悉这种融资环境的初创公司来说，大量的政府拨款机会可能看起来令人不知所措。以下是需要考虑的主要途径：</p>
+<p>研发拨款：国家科学基金会 (NSF) 的小型企业创新研究 (SBIR) 和小型企业技术转让 (STTR) 等计划为具有商业化潜力的创新研究提供大量资金。</p>
+<p>行业特定计划：国防部 (DoD)、能源部 (DoE) 等政府机构经常赞助与其部门相关的 AI 计划。</p>
+<p>税收优惠：许多政府提供研发税收抵免或扣除额以抵消创新的成本。</p>
+<p>25 个政府拨款和贷款目标</p>
+        <small class="page-url url "><a href="https://happyfutureai.com/from-vision-to-reality-25-government-funding-opportunities-for-aspiring-ai-moguls/" target="_blank">(https://happyfutureai.com/from-vision-to-reality-25-government-funding-opportunities-for-aspiring-ai-moguls/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Emerging-Giants:-An-Overview-of-20-Promising-AI-Startups---Visible.vc">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🔑&nbsp;</span>Emerging Giants: An Overview of 20 Promising AI Startups - Visible.vc</h3>
+        <small class="page-url url "><a href="https://visible.vc/blog/ai-startups/" target="_blank">(https://visible.vc/blog/ai-startups/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: Analyzes several AI startups and their operational strategies, reinforcing the report's insights on business model diversity.<br></small>
+    </div>
+    <div class="page-content content"><h2>1. Uizard</h2>
+<p>Uizard 利用人工智能彻底改变人们构建应用程序和网站的方式。它是一款用户友好的协作设计和原型设计工具，集成了机器学习和计算机视觉。该工具专为非设计师量身定制，方便轻松创建移动和 Web 应用程序模型。Uizard 独特的人工智能驱动设计和原型设计方法展示了人工智能技术如何使复杂任务更容易、更高效，从而满足科技界各种用户的需求。</p>
+<p>位置：丹麦哥本哈根</p>
+<p>成立时间：2017 年</p>
+<p>创始人：该公司由担任首席执行官的 Tony Beltramelli、首席运营官 Florian van Schreven 和首席技术官 Henrik Haugbølle 共同创立。</p>
+<p>目标市场：Uizard 的目标客户群体广泛，最活跃的用户是初创公司创始人、产品经理、顾问、商业分析师、工程师、营销团队和用户体验专业人员。其设计工具专门面向非设计师，使应用程序和网站创建过程民主化。</p>
+<p>融资/当前阶段：截至 2021 年 8 月，Uizard 已通过三轮融资总共筹集了 1860 万美元资金。最近一轮融资是 A 轮融资。其知名投资者包括 LDV Capital、Insight Partners 和 byFounders。</p>
+<h2>2. Cleerly</h2>
+<p>Cleerly 利用人工智能改进心脏病的诊断和治疗。他们的数字医疗平台与冠状动脉计算机断层扫描血管造影 (CCTA) 影像一起工作，帮助临床医生更早地精确识别和定义动脉粥样硬化，从而制定个性化的、挽救生命的治疗方案。这种非侵入性的人工智能驱动方法有助于了解斑块，并提供对心脏动脉中斑块堆积的全面量化和表征。</p>
+<p>位置：纽约市</p>
+<p>成立日期：2017 年</p>
+<p>创始人：James K. Min，也是首席执行官。</p>
+<p>目标市场：Cleerly 的平台面向护理途径中的广大利益相关者，包括影像医生、临床医生、患者和付款人。</p>
+<p>融资/当前阶段：根据他们最新的融资公告，Cleerly 已筹集总计 5400 万美元资金。这其中包括由 Vensana Capital 领投的 4300 万美元 B 轮融资，LRVHealth、New Leaf Venture Partners、DigiTx Partners、美国心脏病学会、Cigna Ventures 和现有投资者参与了投资。</p>
+<h2>3. Adept AI</h2>
+<p>Adept AI 的重点是创建一个能够根据简单的文本命令执行各种任务的数字助理。这个人工智能模型可以理解和自动化任何软件流程，有效地将文本指令转换为数字操作。这种方法不同于其他专注于生成文本或图像的人工智能初创公司；Adept AI 研究人们如何使用计算机来导航软件和网络，训练他们的人工智能模型执行类似的操作。</p>
+<p>Adept AI 致力于创造一个能够自动化任何软件流程的人工智能，这标志着人工智能领域一个雄心勃勃且可能具有变革意义的步骤。他们专注于构建能够在创造性和解决问题的能力方面与人类一起工作的人工智能系统，突出了人工智能作为各种行业协作工具的不断发展的作用。</p>
+<p>位置：旧金山</p>
+<p>成立日期和创始人：由一群人工智能研究人员和数据科学家共同创立，包括创始人兼首席执行官 David Luan，产品工程主管 Zach Brock，联合创始人兼首席技术官 Niki Parmar，创始成员 Erich Elsen 和联合创始人兼首席科学家 Ashish Vaswani。</p>
+<p>目标市场：Adept AI 旨在通过为所有人提供“人工智能队友”来服务广泛的市场。他们的技术旨在理解用户用普通语言表达的目标并在日常使用的各种软件工具上执行任务，使其适用于各种应用程序和用户。</p>
+<p>融资/当前阶段：该公司已筹集总计 4.15 亿美元的资金，其中包括由 General Catalyst 和 Spark Capital 共同领投的 3.5 亿美元 B 轮融资。这笔资金将用于产品化、模型训练和人员增长。Adept AI 的技术建立在大型语言和图像基础模型的势头上，带来了一种新型的基础模型，可以使用自然语言在任何软件工具上执行操作。</p>
+<h2>4. SoundHound</h2>
+<p>SoundHound 专注于音频和语音识别、自然语言理解、声音识别和搜索技术。该公司的旗舰产品包括 Houndify（一个语音人工智能开发平台）、SoundHound Chat AI（一个语音驱动的数字助理）和一个名为 SoundHound 的音乐识别移动应用程序。最近，该公司推出了 Employee Assist，这是一款对话式人工智能产品，旨在通过提供对关键信息的即时访问来支持餐厅员工，从而提高效率和运营流程。</p>
+<p>SoundHound 从专注于音乐识别的初创公司发展成为语音人工智能技术领导者的历程，展示了人工智能应用程序在各个行业中不断发展的本质，尤其是在通过先进的语音和自然语言处理能力增强人机交互方面。</p>
+<p>位置：加利福尼亚州圣克拉拉</p>
+<p>成立日期：2005 年</p>
+<p>创始人：Keyvan Mohajer、Majid Emami 和 James Hom。</p>
+<p>目标市场：SoundHound 的人工智能解决方案面向广泛的市场，包括通过其 Houndify 平台的开发者和需要语音人工智能解决方案的企业。他们的最新产品 Employee Assist 特别针对餐饮业，帮助员工高效地访问信息，无需人工干预。</p>
+<p>融资/当前阶段：SoundHound 于 2022 年 4 月 28 日上市，此前与 Archimedes Tech SPAC Partners Co. 合并，并在纳斯达克上市，股票代码为 SOUN。截至 2023 年 4 月，SoundHound 获得了 1 亿美元的战略融资。该公司面临一些挑战，包括裁员和减薪，但仍在继续发展壮大其人工智能产品。</p>
+<h2>5. Arize AI</h2>
+<p>Arize AI 开发了一个机器学习可观察性平台，用于持续改进模型。该平台旨在帮助机器学习团队高效地监控性能、检测漂移、确保数据质量和验证模型。他们提供嵌入式分析和漂移监控等解决方案，这对于计算机视觉和自然语言处理模型至关重要。他们还提供了一种偏差追踪工具，用于监控和解决模型公平性指标。Arize AI 被评为“最佳 MLOps 公司”，并且是机器学习可观察性领域的先驱，这对于人工智能的长期可持续性至关重要。</p>
+<p>Arize AI 对机器学习可观察性的关注，突显了对能够管理人工智能模型部署和维护复杂性的工具和平台日益增长的需求。他们成功吸引了大量资金并与主要行业参与者合作，证明了此类平台在更广泛的人工智能生态系统中所起的关键作用。</p>
+<p>位置：旧金山</p>
+<p>成立日期：2020 年</p>
+<p>创始人：由 Aparna Dhinakaran 和担任首席执行官的 Jason Lopatecki 共同创立。</p>
+<p>目标市场：Arize AI 面向各行各业的机器学习团队，为他们提供简化其 ML 运营的工具。他们一些值得注意的客户和设计合作伙伴包括 Uber、Chime、eBay、纽约人寿、ShareChat、Spotify 和 Stitch Fix。</p>
+<p>融资/当前阶段：2022 年 9 月，Arize AI 宣布获得由 TCV 领投的 3800 万美元 B 轮融资，现有投资者 Battery Ventures、Foundation Capital 和 Swift Ventures 也参与了投资。</p>
+<h2>6. Moveworks</h2>
+<p>Moveworks 是一个生成式人工智能平台，通过自然语言提供信息和自动化任务来提高员工的工作效率。它提供了一个人工智能副驾驶，可以与 Microsoft、Workday 和 Salesforce 等各种系统集成。该平台由 GPT 类大型语言模型提供支持，旨在理解每个组织独特的语言，解决数千个用例。Databricks、博通、DocuSign 和 Palo Alto Networks 等知名品牌使用 Moveworks 的解决方案在其业务运营中进行对话式自动化。</p>
+<p>Moveworks 专注于使用生成式人工智能来提高工作效率和简化各个行业的运营，这突显了人工智能在提高企业生产力和运营效率方面日益增长的重要性。该公司成功筹集大量资金并获得高估值，反映了现代商业环境对人工智能驱动解决方案的强烈需求。</p>
+<p>位置：旧金山</p>
+<p>成立日期：2016 年</p>
+<p>创始人：Bhavin Shah、Jiang Chen、Vaibhav Nivargi 和 Varun Singh。</p>
+<p>目标市场：Moveworks 的目标是那些寻求通过人工智能驱动解决方案来改善员工体验的企业。该平台旨在用途广泛，适用于各个行业，并可与主要的企业系统集成。</p>
+<p>融资/当前阶段：根据最新的更新，Moveworks 已筹集 3.15 亿美元资金，估值达到 21 亿美元。该公司为私营公司，并在人工智能和云计算领域继续发展壮大其产品。</p>
+<h2>7. Frame AI</h2>
+<p>Frame AI 开发了一个下一代客户智能系统，该系统利用人工智能来估算成本并预测来自复杂客户交互的收入结果。通过整合和丰富来自各种渠道（如帮助台、呼叫中心、CRM 系统等）的数据，Frame AI 帮助支持、产品和收入领导者降低运营成本并改善结果。</p>
+<p>该公司专注于人工智能驱动的客户智能及其整合和分析来自多个来源的复杂数据的能力，这表明人工智能在增强客户体验和改善业务决策方面日益增长的重要性。Frame AI 在该领域的成就凸显了人工智能改变传统客户支持和收入优化策略的潜力。</p>
+<p>位置：纽约</p>
+<p>成立日期：2016 年</p>
+<p>创始人：Brandon Reiss、George Davis、Jesse St. Charles、John Gu 和 Robbie Mitchell。</p>
+<p>目标市场：Frame AI 的解决方案面向希望增强其客户服务和支持运营的企业。该公司的平台对于那些寻求优化其跨多个沟通渠道的客户互动数据以改善决策和运营效率的企业尤其有利。</p>
+<p>融资/当前阶段：Frame AI 目前是一家私营公司，截至其最新的 A 轮融资，总共筹集了 760 万美元的资金。</p>
+<h2>8. Tome</h2>
+<p>Tome 的人工智能驱动的格式将创意转化为视觉上引人注目的叙事，从提示开始生成演示文稿、单页文档、微型网站等。</p>
+<p>位置：旧金山</p>
+<p>成立日期：2020 年</p>
+<p>创始人：Tome 由 Keith Peiris 和 Henri Liriani 共同创立。</p>
+<p>目标市场：Tome 迎合各种讲故事的人，包括创始人、高管、学生、教师、创意人员以及产品和市场营销团队。该平台用于各种目的，如业务发展、设计作品集、品牌愿景阐述、课程计划、研究分享、风险投资筹资等等。</p>
+<p>融资/当前阶段：截至 2023 年 2 月，Tome 已筹集总计 8100 万美元的资金，其中包括 4300 万美元的 B 轮融资。这笔资金支持公司的人工智能开发路线图和社区发展。</p>
+<h2>9. People.ai</h2>
+<p>People.ai 开发了一个收入智能系统，该系统收集、同步和管理来自各个团队（包括销售、营销和客户成功）的数据。该平台旨在通过其创新的使用人工智能来改变业务活动，从而帮助进行收入运营和情报。</p>
+<p>People.ai 将人工智能集成到收入运营优化中的方法标志着在各个行业中使用高级数据分析和机器学习来增强业务流程和决策的更广泛趋势。</p>
+<p>位置：旧金山</p>
+<p>成立日期：2016 年 2 月 3 日。</p>
+<p>创始人：Oleg Rogynskyy。</p>
+<p>目标市场：该公司面向希望通过智能数据管理和分析来优化其收入运营的企业，特别针对销售、营销和客户成功团队。</p>
+<p>融资/当前阶段：People.ai 已筹集大量资金，其最近一轮融资为 D 轮融资，总共筹集了 1 亿美元资金。该公司为私营公司，并在人工智能领域继续发展，专注于收入运营和情报。</p>
+<h2>10. Golden</h2>
+<p>Golden 使用机器智能来构建一个自构建的知识库。该平台包含有关各种实体的详细信息，并允许用户创建、贡献和比较知识。它采用人工智能辅助编辑，可以自动从外部网络资源中提取摘要和信息框数据。Golden 的人工智能还可以为主题的快速更新提供建议。该公司旨在通过提供更深入和更集中的信息来填补维基百科报道中的空白，尤其是在新兴技术和初创公司领域。</p>
+<p>位置：Golden 位于旧金山的 SoMa 区。</p>
+<p>成立日期：2017 年</p>
+<p>创始人：Jude Gomila</p>
+<p><strong>Capacity</strong></p>
+<p>Capacity 开发了一个最先进的人工智能驱动的帮助台平台。该平台的特点是能够自动化对客户和员工的支持，有效地连接各种技术堆栈以解决查询，自动化重复性任务并解决各种业务挑战。Capacity 创新地使用人工智能、机器学习和先进的自然语言处理算法，不仅提高了运营效率，而且显着提高了客户满意度，使其成为应用人工智能进行工作场所变革的领导者。</p>
+<p>位置：密苏里州圣路易斯。</p>
+<p>成立日期：2017 年。</p>
+<p>创始人姓名：由 Alex Spanos 和 Dimitry Krakovsky 共同创立。</p>
+<p>目标市场：Capacity 主要面向各个行业和职能领域，包括：</p>
+<p>团队：联络中心、人力资源与运营、客户支持、IT 支持和销售与营销。</p>
+<p>行业：保险、银行、教育、抵押贷款、软件、老年生活、公用事业和医疗保健。</p>
+<p>融资/当前阶段：Capacity 已筹集总计 6200 万美元资金，包括 2019 年的 1320 万美元和 2020 年 C 轮融资追加的 2700 万美元。</p>
+        <small class="page-url url "><a href="https://visible.vc/blog/ai-startups/" target="_blank">(https://visible.vc/blog/ai-startups/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Twitter-AI-startup-funding-investing-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📈&nbsp;</span>Twitter AI startup funding investing at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Twitter AI startup funding investing" target="_blank">(DDG:Twitter AI startup funding investing)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: News on AI investments and valuations that exemplify trends in the AI startup ecosystem highlighted in the report.<br></small>
+    </div>
+    <div class="page-content content"><h2>AI投资者(@The_AI_Investor) / X-英伟达每日 | 詹森·黄和埃隆·马斯克的粉丝 | 我的帖子并非投资建议 | 加入Patreon社区，获取投资组合更新和更多关于AI投资的信息。</h2>
+<h2>马斯克的Twitter收购投资者将从xAI的巨额估值中获益</h2>
+<p>五月，xAI完成了一轮60亿美元的融资，使其估值达到240亿美元。一些支持马斯克收购Twitter的人，例如……</p>
+<p>人工智能初创公司正在获得大量资金，2024年第二季度投资达到240亿美元。这比……的两倍还多。</p>
+<h2>埃隆·马斯克的ChatGPT竞争对手xAI融资50亿美元后估值达500亿美元</h2>
+<h2>前Twitter CEO的AI初创公司在Khosla领导的交易中筹集了3000万美元</h2>
+<p>埃隆·马斯克的人工智能初创公司xAI已成功完成B轮融资，融资60亿美元，公司估值达到240亿美元。</p>
+<p>一位著名的科学家和人工智能研究员，Awni将他深厚的人工智能/机器学习专业知识带到AI基金，帮助在我们的工作室建立新的初创公司。Awni Hannun - AI基金  来自……</p>
+<h2>这些投资者帮助埃隆·马斯克收购了Twitter……</h2>
+        <small class="page-url url "><a href="DDG:Twitter AI startup funding investing" target="_blank">(DDG:Twitter AI startup funding investing)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Market-Validation:-Step-By-Step-Guide-(+Popular-Methods)">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🔍&nbsp;</span>Market Validation: Step-By-Step Guide (+Popular Methods)</h3>
+        <small class="page-url url "><a href="https://userpilot.com/blog/market-validation/" target="_blank">(https://userpilot.com/blog/market-validation/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: Explains market validation processes, directly correlating with strategies mentioned in the report for finding product-market fit.<br></small>
+    </div>
+    <div class="page-content content"><h2>什么是市场验证？</h2>
+<p>市场验证是在投入资源进行产品或服务开发之前，确认目标市场对其需求的过程。此过程与产品理念验证非常相似，可以帮助你解答一个关键问题：是否有足够的潜在客户愿意为该产品付费？</p>
+<h2>市场研究与市场验证的区别是什么？</h2>
+<p>市场研究和市场验证是两个相关的概念，但它们发生在产品开发过程的不同阶段，更重要的是，它们服务于不同的目的。</p>
+<p>研究发生在产品开发周期的早期阶段，通常是在产品概念完全成型之前。另一方面，验证发生在创意阶段之后，当你对想要构建的内容有一个清晰的了解时。</p>
+<p>市场研究关注更广泛的市场状况。其目标是收集有关目标市场、竞争对手、客户痛点、需求和愿望以及行业趋势的数据，以指导未来的产品开发。</p>
+<p>相比之下，市场验证只关注特定产品背景下的市场趋势，其目标是验证其是否可行。</p>
+<h2>为什么进行市场验证很重要？</h2>
+<p>市场验证对于产品成功至关重要，原因如下：</p>
+<p>首先，它确认产品解决了真实的客户问题。这降低了开发不会盈利的产品的风险，这是产品失败的主要原因。这可以增强投资者对产品的信心，并提高产品团队的士气。</p>
+<p>在开发阶段，它帮助团队以最佳方式分配资源，以确保获得最佳投资回报率。</p>
+<p>此外，市场验证可以让你深入了解客户对产品的看法，并让你捕捉到潜在客户的声音，你可以用它来塑造你的营销工作和产品信息。</p>
+<p>这是一个开始与早期采用者建立关系并招募测试人员的好机会。</p>
+<h2>常用的市场验证方法</h2>
+<p>你可以使用哪些市场验证方法来验证你的商业想法？让我们来看一些流行的选择。</p>
+<h3>客户访谈</h3>
+<p>对目标客户进行深入访谈或焦点小组访谈是获取有关客户需求和期望的定性数据的重要来源。它们的主要优势在于灵活性。在访谈过程中，你可以调整你的提问，并以进行调查时不可能的方式跟进客户的想法。</p>
+<p>访谈的主要缺点是耗时且难以安排，因此对于大型研究来说并不实用。</p>
+<h3>调查</h3>
+<p>与访谈相比，在线调查非常适合大规模收集客户见解。设计和触发应用内调查非常容易。你可以用它们来定位特定的用户群体，并利用它来了解你计划开发的新功能或产品。</p>
+<h3>市场验证研究</h3>
+<p>一些市场研究技术也可以用于市场验证。以下是一些示例：</p>
+<p>竞争分析——如果你的成熟竞争对手没有提供类似的产品或功能，这可能表明特定市场对此没有需求。</p>
+<p>行业报告——就像竞争分析一样，它们可以告诉你什么产品畅销，什么产品滞销。</p>
+<p>关键词研究和 Google 趋势分析——与产品相关的术语搜索量高，可能表明需求量大。</p>
+<h3>假门测试</h3>
+<p>假门测试是一种流行的精益市场验证方法。</p>
+<p>首先，你让你的用户相信该功能已经存在，例如，通过将其添加到 UI 并通过应用内消息驱动参与度，就像在这个假设的 Asana 示例中一样。</p>
+<p>通过跟踪用户参与度，你可以了解他们对新功能的兴趣程度。当然，一旦他们点击该功能，他们就会知道自己被骗了，所以你必须解释这是一个测试。例如，你可以触发如下所示的模态框。</p>
+<h3>原型测试</h3>
+<p>假门测试是一种原型测试。在这种情况下，它是一个非常低保真度的原型。如果测试结果积极，你将创建更逼真的原型并继续迭代测试它们。</p>
+<p>这些可以是线框图、视频或动画。你也可以进行奥兹魔法师实验，使其看起来像一个完全功能齐全的产品，同时在幕后手动完成所有工作。或者破解现有产品以开发最终产品的功能，并让用户相信产品已准备就绪。</p>
+<p>每次迭代不仅可以验证你的想法和设计，而且也是一个学习机会，可以增加成功推出强大 MVP 的机会。</p>
+<h3>测试版测试</h3>
+<p>测试版测试通常是 MVP 推出之前的最终阶段。这是在真实用户和真实环境中测试产品，但风险有限的最后机会。</p>
+<p>如何招募测试人员？</p>
+<p>从你的核心用户开始。他们是成功和忠诚的客户，因此他们是优秀的测试者，他们会很高兴尽早访问新功能或产品。你可以使用产品分析和调查数据来识别他们。然后，只需触发一个模态框来邀请他们参与测试。</p>
+<h2>市场验证过程的步骤是什么？</h2>
+<p>市场验证过程包括 6 个关键步骤。让我们快速了解一下每一个步骤。</p>
+<h3>1. 确定市场验证目标和假设</h3>
+<p>该过程首先定义你的研究目标和制定假设。基本上，你试图列出你需要解答的所有问题。</p>
+<p>以下是一些研究问题的示例：</p>
+<p>什么是功能、产品或服务？</p>
+<p>它解决了哪些客户问题？</p>
+<p>是否有其他类似的产品？</p>
+<p>它们有多成功？</p>
+<p>目标市场是什么？</p>
+<p>潜在客户是谁？</p>
+<p>是否有足够的潜在用户？</p>
+<p>他们是否愿意为产品付费？多少钱？</p>
+<p>它在经济上是否可行？</p>
+<h3>2. 研究市场以衡量市场需求</h3>
+<p>一旦你确定了研究问题，就该进行市场研究了。</p>
+<p>这里有很多不同的技术可以使用，例如竞争分析或研究市场趋势。</p>
+<p>但是，这个过程并不容易。首先，它需要只有大型企业级组织才能掌握的专业知识。这就是为什么聘请市场研究公司可能是确保公正和有效的研究结果的好方法。</p>
+<h3>3. 确定你的商业理念的目标市场</h3>
+<p>市场研究应该为你提供必要的见解，以识别你的目标市场和目标受众。</p>
+<p>使用它们来开发产品的目标用户画像，重点关注他们的工作需求、痛点和愿望。使用如下所示的模板将为用户画像映射提供结构。</p>
+<h3>4. 通过多种方法验证产品创意</h3>
+<p>一旦你确定了目标市场，就该验证产品创意了。</p>
+<p>使用一系列技术和方法将帮助你确保结果可靠且有效。例如，你可以运行假门测试和原型测试，并使用调查和访谈来收集用户反馈。</p>
+<h3>5. 开发最小可行产品</h3>
+<p>当你运行后续测试时，你的原型将变得越来越复杂。在某个时候，你将达到拥有功能性产品的阶段。这就是你的最小可行产品，简称 MVP。</p>
+<p>MVP 背后的理念不是推出一个已准备好的产品。它只需要基本功能——足以满足关键用户需求并传达产品的价值主张。</p>
+<p>你的 MVP 不足以跨越鸿沟并吸引大多数目标用户群体的想象力。但是，它应该足以满足创新者和早期采用者。在这个阶段，你只需要这些就足够了。</p>
+<h3>6. 通过收集客户反馈来迭代 MVP</h3>
+        <small class="page-url url "><a href="https://userpilot.com/blog/market-validation/" target="_blank">(https://userpilot.com/blog/market-validation/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="🚀-Crowdfunding-for-AI-Startups:-10-Game-Changing-Strategies-🎯">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🌟&nbsp;</span>🚀 Crowdfunding for AI Startups: 10 Game-Changing Strategies 🎯</h3>
+        <small class="page-url url "><a href="https://www.linkedin.com/pulse/crowdfunding-ai-startups-10-game-changing-strategies-lachezar-zanev" target="_blank">(https://www.linkedin.com/pulse/crowdfunding-ai-startups-10-game-changing-strategies-lachezar-zanev)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: Provides a strategic view on crowdfunding for AI startups, aligning with the report's exploration of various funding avenues.<br></small>
+    </div>
+    <div class="page-content content"><h2>🚀 AI初创公司众筹：10大变革性策略 🎯</h2>
+<h3>Lachezar Zanev</h3>
+<h4>建立风险投资网络 - 投资社区 | NB&amp;A投资公司副总裁 | 全球融资 | 欢迎与我讨论艺术、科学、商业和哲学</h4>
+<p>自动化全速前进！🤖 在不断变化的技术世界中，人工智能 (AI) 已成为变革的催化剂，在塑造未来方面发挥着关键作用。随着这场数字革命的继续加速，无数 AI 初创公司应运而生，每一个都努力在日益激烈的竞争环境中留下自己的印记。它们带着创新理念而来，旨在彻底改变各个行业，重新定义可能的界限。🤖然而，与任何初创企业一样，它们的旅程也充满挑战。最紧迫的问题之一是寻求资金——这是通往成功的关键一步。传统上，初创企业依靠风险投资、天使投资或个人储蓄来资助其发展。但在近年来，一种替代性融资方式获得了关注：众筹。</p>
+<p>众筹是一种民主和包容的融资方式，它允许企业家直接从公众那里筹集资金。它使初创企业能够绕过传统的金融监管者，直接接触潜在客户和投资者。此外，它还允许公众支持他们相信的想法，使他们能够参与将创新产品和服务带入生活。</p>
+<p>对于 AI 初创公司而言，众筹提供了一个独特的机会。它允许他们同时筹集资金、验证他们的想法并建立支持者社区。然而，成功的众筹活动不仅仅需要一个创新的想法；它需要一个计划周全且执行良好的策略。</p>
+<p>在本文中，我们将深入探讨 AI 初创公司的众筹领域，探索其呈现的动态、挑战和潜力。我们将阐明 10 种可以帮助这些初创公司最大限度地提高众筹成功的策略，每种策略都附有相关的解释和真实的例子。目的是提供一份全面的指南，充满见解和实用建议，可以作为通往成功众筹之旅的路线图。那么让我们开始吧！</p>
+<h3>1️⃣ 打造引人入胜的故事 📖🔍</h3>
+<p>人们关注的是故事，而不仅仅是产品。关于你的 AI 初创公司、它的创建原因以及它试图解决的问题的引人入胜的叙述可以显著增强你的众筹吸引力。例如，AICam，一家基于 AI 的安全摄像头初创公司，不仅解释了其尖端技术，还分享了创始人关于为什么家居安全是他的一大热情的个人故事。</p>
+<h3>2️⃣ 展示有形的原型 🔧👀</h3>
+<p>你的支持者想要看到你 AI 产品或服务的具体演示。展示一个可运行的原型或 MVP 有助于建立信誉并让潜在投资者相信你的想法是可行的。AI 公司 Jibo 通过演示一个以类似人类的方式与人互动原型，成功地为其社交机器人进行了众筹。</p>
+<h3>3️⃣ 提供有吸引力的奖励 🎁💡</h3>
+<p>奖励是基于奖励的众筹中的关键激励因素。为你的支持者提供抢先体验、折扣服务或独家产品功能。EmotAI，一家为电子竞技运动员创建 AI 驱动的生物反馈设备的初创公司，提供了早鸟套餐、限量版产品，甚至有机会参观他们的实验室。</p>
+<h3>4️⃣ 保持积极的沟通 📢💬</h3>
+<p>让你的支持者和潜在投资者了解你的进度、挑战和战略变化。Kickstarter 或 Indiegogo 等平台提供更新功能。频繁的沟通有助于建立信任，支持者会欣赏透明度。例如，在他们的成功众筹活动之后，OpenAI 保持着一个博客，在那里他们定期分享他们研究和进展的更新。</p>
+<h3>5️⃣ 推广你的活动 💼🚀</h3>
+<p>即使是最好的众筹活动，如果没有正确的曝光度也会失败。利用社交媒体、新闻通讯和公关来提高知名度。AI 公司 Aido Robot 通过积极地在社交媒体上推广其 Indiegogo 活动以及通过战略新闻稿，在其家用机器人周围制造了轰动。</p>
+<h3>6️⃣ 展示你的团队 👥🌟</h3>
+<p>支持者想要看到幕后的大脑。突出你的团队成员的专业知识和资质，以表明你拥有执行项目所需的人才。当 Neuralink 为其脑机接口技术进行众筹时，他们展示了其由世界知名的神经科学家、工程师和 AI 专家组成的团队。</p>
+<h3>7️⃣ 制定现实的目标和时间表 📈⌛</h3>
+<p>设定可实现的筹款目标和现实的产品交付时间表。承诺过高而交付不足会损害你的声誉。Pebble Time，有史以来最成功的众筹活动之一，不仅设定了现实的筹款目标，而且还提供了他们计划如何将智能手表推向市场的详细时间表。</p>
+<h3>8️⃣ 利用现有网络 🔗👫</h3>
+<p>利用你现有的网络——朋友、家人、同事、导师，甚至来自先前项目的客户——来支持你的活动。他们还可以帮助传播你的活动信息。Skydio，一家制造 AI 驱动的无人机的初创公司，成功地利用了其先前 MIT 人脉来支持其众筹活动。</p>
+<h3>9️⃣ 提供详细的资金用途 💰🔍</h3>
+<p>清楚地解释如何使用众筹资金来发展初创公司。详细的财务计划表明你已经考虑了未来的道路，并且能够负责任地管理支持者的资金。当 Oculus Rift 为其 VR 技术进行众筹时，他们概述了一个广泛的计划，说明如何使用这些资金，从制造到软件开发。</p>
+<h3>🔟 强调社会影响 🌎💖</h3>
+<p>如果你的 AI 初创公司具有社会影响力，请务必强调它。许多支持者都受到为社会公益做出贡献的潜力的激励。以 AI 初创公司 Zipline 为例，该公司使用无人机在卢旺达运送医疗用品的项目获得众筹。他们清楚地强调了其项目的社会影响，这有助于获得大量支持。</p>
+<h2>领英推荐</h2>
+<h2>适用于 AI 初创公司的众筹平台</h2>
+<p>我们必须强调选择合适的平台对于你的 AI 初创公司来说是多么重要。在众多的众筹平台中，以下五个平台已被证明对科技和 AI 初创公司特别有益：</p>
+<p>Kickstarter 🚀：各种初创公司的热门选择。“人工智能从 A 到 Z”、“阿森纳”、“Sensoria”、“Nakamichi Edge”和“职业缪斯”等 AI 初创公司都在 Kickstarter 上取得了成功。</p>
+<p>Indiegogo 🌐：一个广泛使用的平台，以其灵活性和广泛的国际影响力而闻名。</p>
+<p>Seedrs 💼：这个股权众筹平台已被将 AI 整合到其产品的公司使用。</p>
+<p>Crowdcube 🎯：与 Seedrs 类似，Crowdcube 是欧洲领先的股权众筹平台，并以支持科技初创公司而闻名。</p>
+<p>CircleUp 🔄：CircleUp 以专注于拥有消费品的初创公司而闻名，但对于直接面向消费者的 AI 初创公司来说，它也可能是一个不错的选择。</p>
+<h2>总结</h2>
+<p>众筹是一段独特的旅程，需要规划、执行和参与的结合。通过采用我们在本文中提到的策略，AI 初创公司不仅可以获得所需的资金，还可以建立一个支持性社区，从而推动它们走向成功。</p>
+        <small class="page-url url "><a href="https://www.linkedin.com/pulse/crowdfunding-ai-startups-10-game-changing-strategies-lachezar-zanev" target="_blank">(https://www.linkedin.com/pulse/crowdfunding-ai-startups-10-game-changing-strategies-lachezar-zanev)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Understanding-the-Best-AI-Business-Model-for-Success---Lomit-Patel">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📚&nbsp;</span>Understanding the Best AI Business Model for Success - Lomit Patel</h3>
+        <small class="page-url url "><a href="https://www.lomitpatel.com/articles/ai-business-model/" target="_blank">(https://www.lomitpatel.com/articles/ai-business-model/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: Examines AI business models and their relevance, tying back to the report’s focus on varied revenue strategies for AI startups.<br></small>
+    </div>
+    <div class="page-content content"><h2>理解人工智能商业模式</h2>
+<p>作为人工智能行业从业十多年的资深人士，我亲眼目睹了该领域快速发展的景象。在这个领域取得成功的最关键因素之一，就是拥有一个稳固的人工智能商业模式。然而，面对如此众多的商业模式创新选择，很难知道从哪里开始。</p>
+<p>让我们分解各种人工智能商业模式、它们的优势和劣势。阅读完这篇文章后，您将了解如何应对这个不断变化的领域，并为您的业务成功做好准备。</p>
+<h3>人工智能商业模式类型</h3>
+<p>涉足人工智能领域？您会发现几种商业模式创新，各有优缺点。</p>
+<ul>
+<li>人工智能即服务 (AIaaS)</li>
+<li>基于订阅的模式</li>
+<li>基于成果的定价</li>
+<li>数据变现</li>
+<li>免费增值模式</li>
+<li>人工智能集成产品</li>
+<li>基于平台的模式</li>
+<li>咨询和服务</li>
+<li>生态系统协作</li>
+<li>定制人工智能解决方案</li>
+</ul>
+<h2>改变行业的顶级 AI 商业模式</h2>
+<p>我们已经介绍了要点。让我们来研究某些 AI 商业模式转型如何改变各行各业。</p>
+<h3>人工智能即服务 (AIaaS)</h3>
+<p>AIaaS 作为一种顶级 AI 商业模式正在获得关注。它通过云以按使用付费的方式提供 AI 工具，因此企业无需承担巨额初始成本即可访问先进技术。</p>
+<p>谷歌、亚马逊和微软等大公司正在推动 AIaaS 市场的发展。它们为各行各业的企业提供各种服务。</p>
+<h3>基于订阅的模式</h3>
+<p>基于订阅的 AI 服务向用户收取经常性费用，以访问其高级软件和平台。提供商受益于可预测的收入，用户可以通过分期付款更轻松地进行预算。</p>
+<p>考虑一下 AI 驱动的 CRM 工具、营销自动化平台和预测性维护解决方案。这些例子表明技术如何提高效率并改善客户体验。</p>
+<h3>基于成果的定价</h3>
+<p>基于成果的定价意味着 AI 提供商根据其解决方案带来的实际结果收费。双方都能获益，因为付款取决于具体的成果，例如提高销售额或降低成本。</p>
+<p>这种模式在医疗保健等行业尤其常见，在这些行业中，AI 工具可以改善患者的预后并降低成本。</p>
+<h3>数据变现</h3>
+<p>数据变现是关于将 AI 系统产生的大量数据转化为新的盈利方式。这可能意味着将匿名信息出售给其他公司，根据客户的数据向客户提供见解，或使用这些数据来增强 AI 算法并开发更好产品和服务。</p>
+<p>虽然数据变现可能很赚钱，但也引发了必须认真解决的严重隐私和道德问题。</p>
+<h3>免费增值模式</h3>
+<p>免费增值 AI 模型允许您免费试用其工具的基本版本，可以选择付费以获得额外功能或更高的使用率。通过这种方式，客户可以在完全购买之前试用一下。它还有助于提供商更快地扩大用户群。</p>
+<p>免费增值 AI 的示例包括聊天机器人、语言翻译工具和图像识别 API。</p>
+<h3>AI 集成产品</h3>
+<p>如今，企业正在通过将 AI 直接集成到其产品中来增强用户体验。无论是手机和车辆等物理设备中的机器学习模型，还是在各种软件程序中集成智能功能，目标都是提供更量身定制的用户体验。</p>
+<p>AI 集成产品可以获得更高的价格，并在竞争激烈的市场中创造竞争优势。</p>
+<h3>基于平台的模式</h3>
+<p>基于平台的 AI 模型将所有人聚集在一个舞台上。平台所有者扮演着媒人的角色，将 AI 开发人员与数据提供商和最终用户联系起来。他们通过从交易中抽取一部分佣金来赚钱。</p>
+<p>随着更多人加入平台，这种模型会增强网络效应和规模经济。考虑一下 Algorithmia 或 Nuance AI Marketplace 等 AI 市场。</p>
+<h3>咨询和服务</h3>
+<p>AI 供应商经常通过咨询和专业服务来扩展其专业知识，旨在帮助企业部署有效的 AI 解决方案。他们可以帮助企业领导者完成从制定稳定可靠的 AI 战略到使用云基础设施准备数据的所有工作。此外，他们还专注于模型训练并提供长期的客户服务。</p>
+<p>咨询和服务可能是 AI 提供商的高利润业务，因为它们可以帮助客户应对 AI 采用的复杂性。</p>
+<h3>生态系统协作</h3>
+<p>与其他公司合作有助于创建集成的 AI 解决方案，以最大限度地发挥每个合作伙伴的优势。这些合作伙伴关系可能存在于硬件和软件提供商、数据专家和算法开发人员或特定行业群体之间。</p>
+<p>生态系统协作使公司能够共享风险和回报，并加速 AI 创新的开发和部署。</p>
+<h3>定制 AI 解决方案</h3>
+<p>定制 AI 解决方案是为了满足每个客户的特定需求而创建的。这可能意味着开发独特的算法、与旧系统连接或设计特殊的用户界面和工作流程。</p>
+<p>定制 AI 解决方案可以获得高价，并在提供商和客户之间建立牢固而持久的联系。</p>
+<p>没有一种 AI 商业模式适合所有人。为了取得成功，您需要确定哪种模式适合您的特定需求和目标。</p>
+        <small class="page-url url "><a href="https://www.lomitpatel.com/articles/ai-business-model/" target="_blank">(https://www.lomitpatel.com/articles/ai-business-model/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Cleerly-raises-$106M-in-funding-round-|-AuntMinnie">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏆&nbsp;</span>Cleerly raises $106M in funding round | AuntMinnie</h3>
+        <small class="page-url url "><a href="https://www.auntminnie.com/imaging-informatics/artificial-intelligence/article/15709848/cleerly-cleerly-raises-106m-in-funding-round" target="_blank">(https://www.auntminnie.com/imaging-informatics/artificial-intelligence/article/15709848/cleerly-cleerly-raises-106m-in-funding-round)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: Reports on significant funding for Cleerly, related to the report's focus on recent major investments in AI startups.<br></small>
+    </div>
+    <div class="page-content content"><h2>Cleerly 筹集 1.06 亿美元资金</h2>
+<p>Cleerly 已在 C 轮融资扩展中筹集了 1.06 亿美元。</p>
+<p>该公司表示，将利用这笔投资用于商业增长和围绕其已获得美国食品和药物管理局 (FDA) 批准的 AI 启用 CT 技术的临床证据生成。</p>
+<p>Cleerly 的软件旨在通过分析非侵入性图像来识别心脏病。</p>
+<p>在公告中，创始人兼首席执行官 James Min 医学博士提到了最近在获得医疗保险和冠状动脉斑块分析的当前程序术语 (CPT) I 类代码方面的成就。</p>
+        <small class="page-url url "><a href="https://www.auntminnie.com/imaging-informatics/artificial-intelligence/article/15709848/cleerly-cleerly-raises-106m-in-funding-round" target="_blank">(https://www.auntminnie.com/imaging-informatics/artificial-intelligence/article/15709848/cleerly-cleerly-raises-106m-in-funding-round)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="AI-startup-communities-forums-social-media-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🚀&nbsp;</span>AI startup communities forums social media at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:AI startup communities forums social media" target="_blank">(DDG:AI startup communities forums social media)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: This page summarizes successful AI startups, aligning with the report's analysis of recent investment trends in AI companies.<br></small>
+    </div>
+    <div class="page-content content"><h2>12 个在线创业社区，助力创始人发展 - Visible.vc</h2>
+<p>发现 12 个面向创业创始人的在线社区。与志同道合的企业家们建立联系，分享经验，共同发展业务。</p>
+<h2>2023 年顶级人工智能社区 - Medium</h2>
+<p>本文将探讨 20 多个在人工智能、机器学习和数据科学领域掀起波澜的顶级 AI 社区。</p>
+<h2>优秀的在线创业论坛/社区有哪些？ - Quora</h2>
+<h2>优秀的人工智能网站和论坛有哪些？ - Quora</h2>
+        <small class="page-url url "><a href="DDG:AI startup communities forums social media" target="_blank">(DDG:AI startup communities forums social media)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="5-AI-Trends-to-Watch-in-2025-|-Coursera">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🌐&nbsp;</span>5 AI Trends to Watch in 2025 | Coursera</h3>
+        <small class="page-url url "><a href="https://www.coursera.org/articles/ai-trends" target="_blank">(https://www.coursera.org/articles/ai-trends)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: Analyzes AI trends such as generative AI's impact on various sectors, aligning with the report's focus on market trends.<br></small>
+    </div>
+    <div class="page-content content"><h2>1. 生成式 AI 与民主化</h2>
+<p>生成式 AI 可以说是今年 AI 领域最大的趋势。当 ChatGPT 和其他文本和图像生成器变得对公众开放时，它被全球的商业团队广泛使用和采用。随之而来的是 AI 的民主化，使其能够被所有人使用——即使是那些没有技术知识的人。生成式 AI 只是民主化的一个例子。如今，数百种 AI 工具使我们能够更快地创建内容、进行语言翻译以及填充搜索引擎。它正在改变我们彼此沟通的方式，无论是朋友之间还是媒体与公众之间。</p>
+<h2>2. 用于提高工作效率的 AI</h2>
+<p>我们在 AI 中看到的另一个趋势是它在工作效率中的作用。人工智能可以加快和增强我们的工作方式——特别是它如何自动化耗时或重复性的任务。无论是将数据输入电子表格，编写商业计划的大纲，还是控制制造工厂的质量，AI 都具有巨大潜力来提高我们的工作效率。</p>
+<p>对于那些可能担心 AI 会取代工作的人来说，这项技术通常只是作为自动化重复工作的工具，让人们腾出空间进行创造、情商和道德判断。</p>
+<p>许多大型语言模型 (LLM) 仅处理文本数据。AI 中的多模态模型除了文本之外，还可以从不同类型的数据（如音频、视频和图像）中获取信息。这项技术使搜索和内容创建工具变得更加无缝和直观，并能够更轻松地集成到我们已经使用的其他应用程序中。</p>
+<p>例如，iPhone 现在可以找出您照片中的人物和物体，因为它们可以处理图像、元数据文本和搜索数据。类似于人类可以查看照片并识别其中的内容，多模态实现了相同的特性。</p>
+<h2>4. AI 在科学和医疗保健中的应用</h2>
+<p>除了 AI 对商业工作场所的影响之外，AI 工具在科学和医疗保健领域也具有巨大潜力。研究人员（例如微软的研究人员）现在正在使用 AI 来构建工具，以预测天气、估算碳排放量并实现可持续的农业实践 [3]。这一趋势旨在应对和减轻气候变化的影响。</p>
+<p>聊天机器人正在农业和医疗保健中部署，以帮助农民识别某种杂草类型，并帮助医疗专业人员诊断患者。虽然这种 AI 的准确性还在改进中，但这些步骤可以加速科学发现和医学突破。</p>
+<h2>5. 监管与伦理</h2>
+<p>随着 AI 在全球范围内的普及，减轻与 AI 相关的任何风险的趋势至关重要。政府机构和 OpenAI 等组织正在确保 AI 的使用和部署负责任且符合道德规范。2024 年 3 月，欧盟就一项旨在规范 AI 并解决消费者担忧的具有里程碑意义的综合 AI 法案进行了辩论。预计该法案将于今年成为法律。</p>
+<p>如果不对 AI 进行监管，可能会出现数据操纵、虚假信息、偏见和隐私风险，并构成更大的社会风险。例如，如果 AI 收集的数据不能代表整个人口，则工具可能会容易受到歧视或法律风险的影响。像 ChatGPT 这样的生成器会从全球互联网搜索中提取信息，但公司和出版物已经起诉 OpenAI 侵犯版权。</p>
+        <small class="page-url url "><a href="https://www.coursera.org/articles/ai-trends" target="_blank">(https://www.coursera.org/articles/ai-trends)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="30-Remarkable-Generative-AI-Startups-You-Simply-Can't-Ignore">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🧩&nbsp;</span>30 Remarkable Generative AI Startups You Simply Can't Ignore</h3>
+        <small class="page-url url "><a href="https://www.netguru.com/blog/generative-ai-startups" target="_blank">(https://www.netguru.com/blog/generative-ai-startups)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: Presents examples of successful AI startups and their models, tying back to profitability strategies discussed in the report.<br></small>
+    </div>
+    <div class="page-content content"><h2>30 家不容忽视的卓越生成式 AI 初创公司</h2>
+<p>Radek Zaleski</p>
+<p>本文将介绍：AI 技术栈、科学、客户体验、制造业、软件开发、生产力、市场营销和销售、内容创作。</p>
+<p>您会惊讶于一些公司在生成式 AI 领域的作为。内容创作仅仅是冰山一角。</p>
+<p>2022 年是生成式 AI 投资创纪录的一年。生成式 AI 初创公司的股权融资总额达到 26 亿美元，涉及 110 笔交易。科技界的热潮有目共睹。</p>
+<p>这有点类似于世纪之交的互联网热潮。就像互联网一样，AI 是一种强大的技术，它将改变我们所有人的生活和工作方式。那时，在你的名字后面加上“.com”就足以吸引投资者，无论公司做什么。现在，你加上了“AI”。</p>
+<p>因此，必须谨慎对待那些看起来好得令人难以置信的生成式 AI 领域的初创公司。许多公司会夸大其词，最终无法兑现承诺，最终消失在市场中。我们感兴趣的是那些无可否认地优秀、提供明确价值并解决实际问题的公司。</p>
+<p>考虑到这一点，我们策划了这份来自不同类别和市场的 31 家有前途的生成式 AI 初创公司的名单。我们关注的是最近完成一轮融资的公司，或提供特别有趣的解决方案的公司。</p>
+<h3>AI 技术栈</h3>
+<h4>Stability AI</h4>
+<p>网站/领英/推特</p>
+<p>成立日期：2019 年</p>
+<p>总融资额：8900 万英镑</p>
+<p>主要投资者：Coatue、Lightspeed Venture Partners、O’Shaughnessy Asset Management</p>
+<p>使命：最大限度地提高现代人工智能的可及性，以激发全球创造力和创新。</p>
+<p>Stability AI 成立于 2021 年，已建立了一个拥有超过 140,000 名开发人员的社区，并在全球建立了七个研发中心。该公司专注于通过开源方式创建和访问研究，其项目涵盖用于图像、语言、代码、音频、视频、3D 内容、设计、生物技术和其他科学领域的 AI 模型。</p>
+<p>在与亚马逊网络服务公司合作以及 Ezra-1 UltraCluster 超级计算机的支持下，Stability AI 共同推出了 Stable Diffusion，这是一个突破性的文本到图像模型。</p>
+<p>该开源平台非常成功，在 SD 2.0 发布仅一个月后，排名前十的苹果应用商店应用程序中有四个就由 Stable Diffusion 提供支持。</p>
+<h4>ZestFinance (Zest AI)</h4>
+<p>网站/领英/推特</p>
+<p>成立日期：2009 年</p>
+<p>总融资额：3 亿美元</p>
+<p>主要投资者：CMFG Ventures、Insight Partners、VyStar Credit Union</p>
+<p>使命：让每个人都能获得公平透明的信贷。</p>
+<p>ZestFinance 提供基于 AI 的贷款解决方案，使贷款机构能够获得透明度和便利性。</p>
+<p>他们使用机器学习和数据科学来帮助公司做出准确的信贷决策。</p>
+<p>他们的平台 Zest Automated Machine Learning (ZAML) 在信贷领域提供可解释的 AI，并自动化风险管理。</p>
+<p>ZestFinance 由前谷歌 CIO 道格拉斯·梅里尔于 2009 年创立，现已发展成为美国增长最快的金融科技初创公司之一。ZAML 平台处理海量数据以识别优质借款人，从而提高贷款机构的还款率，并降低消费者的信贷成本。</p>
+<h4>Hugging Face</h4>
+<p>网站/领英/推特</p>
+<p>成立日期：2016 年</p>
+<p>总融资额：1.602 亿美元</p>
+<p>主要投资者：Lux Capital、Addition、Betaworks</p>
+<p>使命：一次提交一个，让优秀的机器学习民主化。</p>
+<p>Hugging Face 是 AI 社区中一个成熟的组织，以发布用于创建机器学习应用程序的工具而闻名。他们最著名的产品是 transformers 库，该库专门为自然语言处理应用程序而设计。</p>
+<p>Hugging Face 还提供一个平台供用户共享机器学习模型和数据集，从而促进协作和创新。作为 AI 公司中的领导者，Hugging Face 积极参与构建 AI 的未来，使开发人员能够使用其开源资源构建、训练和部署最先进的模型。</p>
+<h4>Fixie.ai</h4>
+<p>网站/领英/推特</p>
+<p>成立日期：2022 年</p>
+<p>总融资额：2200 万美元</p>
+<p>主要投资者：Redpoint、SignalFire、Zetta Venture Partners</p>
+<p>使命：允许开发人员构建智能代理，将大型语言模型与后端逻辑结合起来，以与现有数据、系统和工具交互。</p>
+<p>Fixie 是一个基于云的企业平台，旨在使用大型语言模型构建应用程序。它使开发人员能够创建智能代理，将大型语言模型与后端逻辑集成，连接到数据、系统和工具。</p>
+<p>Fixie 侧重于多功能性，支持各种数据类型，例如文本、图像、音频、视频等等。</p>
+<p>该平台提供强大的 API 和 SDK，以确保与现有应用程序无缝集成，而其可扩展和可组合的特性允许通过代理生态系统无限扩展功能。Fixie 还提供一个免费的开放市场，用于随时可用的智能代理。Fixie 使用最新的生成式 AI 软件构建，并获得大型企业的批准，它提供了一个完全托管的可扩展解决方案，如果需要，可以部署在本地。</p>
+        <small class="page-url url "><a href="https://www.netguru.com/blog/generative-ai-startups" target="_blank">(https://www.netguru.com/blog/generative-ai-startups)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Digital-Media-Firm-Stability-AI-Raises-Funds-at-$1-Billion-Value-—-Stability-AI-Japan">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💹&nbsp;</span>Digital Media Firm Stability AI Raises Funds at $1 Billion Value — Stability AI Japan</h3>
+        <small class="page-url url "><a href="https://ja.stability.ai/press-articles/digital-media-firm-stability-ai-raises-funds-at-1-billion-value-hc5hk" target="_blank">(https://ja.stability.ai/press-articles/digital-media-firm-stability-ai-raises-funds-at-1-billion-value-hc5hk)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: Reports on funding rounds for AI companies, relevant to the report's analysis of financing sources and investment trends in AI.<br></small>
+    </div>
+    <div class="page-content content"><h2>Stability AI Ltd. 融资 1.01 亿美元</h2>
+<p>Stability AI Ltd. 在 Coatue Management 和 Lightspeed Venture Partners 领投的种子轮融资中筹集了 1.01 亿美元，据彭博新闻查看的一份声明显示。</p>
+        <small class="page-url url "><a href="https://ja.stability.ai/press-articles/digital-media-firm-stability-ai-raises-funds-at-1-billion-value-hc5hk" target="_blank">(https://ja.stability.ai/press-articles/digital-media-firm-stability-ai-raises-funds-at-1-billion-value-hc5hk)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="What-is-Adept's-business-model?-|-Vizologi">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">⚙&nbsp;</span>What is Adept's business model? | Vizologi</h3>
+        <small class="page-url url "><a href="https://vizologi.com/business-strategy-canvas/adept-business-model-canvas/" target="_blank">(https://vizologi.com/business-strategy-canvas/adept-business-model-canvas/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: Covers Adept AI's unique revenue generation model, linked to the report's discussion on profitable strategies for AI startups.<br></small>
+    </div>
+    <div class="page-content content"><p>Adept 是一家创新型公司，致力于区块链技术和物联网 (IoT) 的融合。通过将区块链集成到物联网中，Adept 旨在提供突破性的解决方案，增强产品在其整个生命周期中的连接性、可追溯性和安全性。从产品下线的那一刻起，它就会被注册到一个通用的区块链上，标志着它的诞生。随着产品经历从制造到最终用户所有权的各个阶段，它会在代表社区、城市或州的区域性区块链上进行记录，从而维护一个全面透明的历史记录。</p>
+<p>Adept独特的商业模式围绕着利用分布式账本技术来创建一个统一的、防篡改的物联网设备记录。这种去中心化的方法确保了每个产品的生命周期都被细致地记录下来，增强了制造商、经销商和客户之间的信任和责任感。Adept 使用区块链技术可以降低与数据泄露和产品伪造相关的风险，提供额外的安全层。这种模式不仅为其用户提供了固有的好处，而且还将 Adept 建立为将区块链与物联网相结合以简化流程并在安全环境中自动化交易的先锋力量。</p>
+<p>Adept 通过一个多方面的模式产生收入，该模式旨在适应其多样化的产品。主要的是，公司向制造商和经销商收取在其区块链平台上注册产品的费用。这些注册费涵盖了维护安全和可扩展区块链网络的初始和持续成本。此外，Adept可能会推出增值服务，例如增强的數據分析、详细的生命周期报告和针对不同行业的定制区块链解决方案。通过专注于注册费和增值服务，Adept 确保稳定的收入流，同时继续创新和扩展其技术能力。这种多方面的收入模式不仅维持了 Adept 的运营，而且还支持其彻底改变区块链和物联网融合的使命。</p>
+<h3>Adept 的收入模式</h3>
+<p>Adept 通过结合不同的商业模式赚钱。以下是为此公司确定的不同盈利策略列表：</p>
+<p>订阅
+低成本
+易货
+生态系统
+开源
+交易数据
+产品创新
+客户数据
+数字化转型
+软件价值代币
+特设项目
+自助服务
+交易促进者
+颠覆性趋势</p>
+        <small class="page-url url "><a href="https://vizologi.com/business-strategy-canvas/adept-business-model-canvas/" target="_blank">(https://vizologi.com/business-strategy-canvas/adept-business-model-canvas/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="How-to-Measure-Product-Market-Fit-(15-Metrics-to-Monitor)-|-DigitalOcean">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📦&nbsp;</span>How to Measure Product-Market Fit (15 Metrics to Monitor) | DigitalOcean</h3>
+        <small class="page-url url "><a href="https://www.digitalocean.com/resources/articles/how-to-measure-product-market-fit" target="_blank">(https://www.digitalocean.com/resources/articles/how-to-measure-product-market-fit)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: Discusses measuring product-market fit, crucial for AI startups as noted in the report's market validation methods.<br></small>
+    </div>
+    <div class="page-content content"><h2>如何衡量产品与市场匹配度</h2>
+<p>您可以结合定量和定性指标来衡量产品与市场匹配度。您的目标是在过大投资于您的产品之前衡量这些指标。</p>
+<p>从最小可行产品 (MVP) 开始。将此产品展示给您的客户，看看他们的想法。他们喜欢它吗？他们讨厌它吗？他们会购买它吗？他们会推荐它吗？</p>
+<p>分析您的客户以及他们如何与您的产品互动：</p>
+<p>他们会拿起它然后放下吗？</p>
+<p>他们会在一天中多次使用它吗？</p>
+<p>他们会把它当作昙花一现，然后忘记它吗？</p>
+<p>使用您的 MVP 来查看您的产品是否值得扩展。如果它具有足够的潜力，您可以扩展这个想法并将您的产品推向大众市场。如果不是，您可能需要调整您的产品或完全放弃它。</p>
+<p>这就是一位敬业的企业家的生活。</p>
+<h2>衡量产品与市场匹配度的 15 个关键指标</h2>
+<p>让我们更深入地探讨您可以用来衡量和实现产品与市场匹配度的各个定性和定量指标。</p>
+<h3>1. 可寻址总市场</h3>
+<p>可寻址总市场 (TAM) 或服务可寻址市场估算了目标市场的规模。首先，使用此数字查看是否有理由将此解决方案引入市场。</p>
+<p>例如，如果您发布了一个产品，但只能将其出售给几千个感兴趣的买家，那么它可能不值得投资。</p>
+<p>接下来，您可以使用 TAM 来更好地理解产品与市场匹配度。确定您 TAM 中的多少百分比是现有客户——如果该数字增长，则表示您正在找到产品与市场匹配度。</p>
+<h3>2. 销售额和注册用户数</h3>
+<p>观察您的收入增长率和注册用户数。您是否快速销售您的 MVP？或者它们是否占据了仓库空间？</p>
+<p>快速增长的销售额可能表明您已经找到了目标，但这并非最终指标。</p>
+<p>以软件即服务 (SaaS) 解决方案为例。虽然您会很高兴看到注册用户数量迅速增长，但您可能更感兴趣的是长期客户留存率、获客成本和终身价值。</p>
+<p>如果客户注册但一两个月后就退出，那么这些销售额可能对您初创企业的轨迹影响不大。</p>
+<h3>3. 客户留存率</h3>
+<p>您不只是想要一次性买家——您想要坚持使用您的产品和服务的客户（即使没有月度合同）。忠诚的买家更有可能购买您初创公司提供的其他产品或未来的解决方案，他们也更有可能向家人、朋友和同事推荐您的产品。</p>
+<p>理想情况下，您希望客户永远留下来，但这对于验证您的产品与市场匹配度来说并非必要。相反，找到客户需要坚持使用您的产品（平均）的月份数，以证明您的每次获客成本是合理的，并增加他们向朋友推荐产品的几率。</p>
+<h3>4. 净推荐值</h3>
+<p>净推荐值 (NPS) 衡量客户忠诚度和满意度。它最终由一个问题决定：</p>
+<p>“您有多大可能向朋友或同事推荐此产品？”</p>
+<p>较高的 NPS 分数表明您的客户喜欢您的产品并且乐于推荐它。较低的 NPS 分数表明您的客户可能对您的产品有点犹豫（或者他们根本不喜欢它）。</p>
+<p>它不是衡量产品与市场匹配度的完整指标，但它绝对是一个与其他相关指标结合起来查看的有力数字。</p>
+<h3>5. 客户终身价值</h3>
+<p>客户终身价值 (CLV) 衡量您预计从单个客户那里获得的总收入。如果您销售更昂贵、更耐用的产品（如房屋或车辆），您可能只期望每个客户进行一次销售。</p>
+<p>但是，如果您销售较小的商品或服务（或月度订阅），您希望您的客户继续向您购买——从而增加 CLV。</p>
+<p>使用 CLV 来更好地了解您的产品与市场匹配度。如果客户坚持使用您的产品和服务，那么这很可能是一个不错的匹配，您可以考虑扩展您的想法。</p>
+<p>如果客户没有提供高终身价值，则营销成本可能会超过个体收益——这就是获客成本派上用场的地方。</p>
+<h3>6. 获客成本</h3>
+<p>获客成本（或客户获取成本）衡量将新客户转化为客户的平均价格。费用包括广告费、创建内容所花费的时间、联盟支出和销售佣金。</p>
+<p>如果寻找和转化客户的成本很高，您需要确保他们坚持足够长的时间，以便他们的 CLV 超过获客成本。</p>
+<h3>7. 需求</h3>
+<p>（持续的）需求的快速增长是产品与市场匹配度的一个良好指标。与印象、分享和点赞等相比，需求显示出更主动的兴趣。使用以下因素来衡量需求：</p>
+<p>Kickstarter 支持者</p>
+<p>MVP 注册用户</p>
+<p>预购订单</p>
+<p>候补名单</p>
+<p>用户增长</p>
+<p>使用率增加</p>
+<p>这些因素表明您的产品很受欢迎，您可能需要扩展规模以满足客户订单。</p>
+<h3>8. 激活</h3>
+<p>激活衡量客户对您产品的最初印象。当新客户注册您的帐户的免费 7 天试用版时，他们在一天后停止使用它了吗，还是在他们的 7 天试用期结束后立即注册付费帐户？</p>
+<p>激活率低可能并不表示缺乏产品与市场匹配度——这可能只是意味着您需要改进入门体验或提供不同的定价选项。考虑重新审视您的价值主张以及您如何向目标客户表达它。</p>
+<h3>9. 推荐</h3>
+<p>NPS 衡量有多少人会向朋友或同事推荐您的产品或服务——推荐衡量有多少人实际推荐您的产品。</p>
+<p>跟踪推荐以查看您的客户是否与他们的社区分享此产品。您可能会添加激励措施，例如您公司的积分或折扣月费率。</p>
+<p>无论如何——如果客户愿意分享它，那么它很可能正在您的目标客户中流行。</p>
+<h3>10. 流量</h3>
+<p>您是否看到访问您产品的流量、定价或特定目标网页的流量有所增加？流量只是一个入门级指标——您希望看到诸如注册、帐户激活和信用卡支付之类的操作。</p>
+<p>但是，在早期阶段，这是一个很好的指标，可以查看您的产品是否正在市场上流行。</p>
+<p>将您的流量数字与转化率结合使用，以确定营销效果。您的产品与市场匹配度可能完全没问题——您可能只需要更新您的目标网页或改进文案和信息。</p>
+<h3>11. 媒体报道</h3>
+<p>您的产品是否引起了行业专家的关注？</p>
+<p>公关和媒体报道可以为您带来更高的知名度和曝光率，但这可能是一把双刃剑。</p>
+<p>例如，以 Kanoa 无线耳机为例。YouTube 技术评论员 Cody Crouch（又名 iTwea4kz）获得了耳机的初始版本，并对其问题撰写了严厉的评论。四天后，Kanoa 停止运营，从未完成该产品。</p>
+<p>寻找媒体报道，但等到您的产品准备闪耀时再进行。</p>
+<h3>12. 影响者评论</h3>
+<p>影响者在其社区中拥有很大的影响力。他们对您的产品或服务有什么看法？如果他们不喜欢他们的体验，他们很可能会与他们的追随者分享——这将使您的初创公司更难获得关注。</p>
+<h3>13. 兴趣小组</h3>
+<p>召集一个由目标市场成员组成的兴趣小组，听取他们对最初使用您产品的体验的看法。他们喜欢什么？他们不喜欢什么？他们想改变什么？</p>
+<p>使用这些用户访谈和市场研究来改进您的产品和营销材料。积极的反馈并不能保证产品与市场匹配度，但它可以让您知道您是否朝着正确的方向前进。</p>
+<h3>14. 评论</h3>
+<p>查看您的博客文章和 YouTube 视频评论，了解社区的初步想法。您可能需要过滤掉一些恶意评论（不要为此感到沮丧）才能找到隐藏的瑰宝。分析反馈，看看您是否注意到任何趋势。</p>
+<p>不要害怕与这些评论互动以尝试收集更多数据。如果有人有问题，请询问他们希望看到什么不同之处。如果有人对某个功能感到兴奋，请询问他们原因并找到根本原因。</p>
+<h3>15. 产品评论</h3>
+<p>您的产品的初步评论是什么样的？不要只关注星级或数字——要关注反馈。查看您的客户群喜欢和不喜欢什么，并在早期进行更改以改进您的产品或服务。</p>
+<p>一开始的差评并不意味着您的产品注定要失败。这只是意味着您可能需要在扩展之前进行其他优化。</p>
+<p>例如，看看《无人深空》。这款电子游戏最初于 2016 年推出，是游戏史上最令人失望的游戏之一。它缺乏承诺的功能，图形参差不齐，整体体验平淡无奇——但 Hello Games 的开发团队并没有灰心丧气。</p>
+        <small class="page-url url "><a href="https://www.digitalocean.com/resources/articles/how-to-measure-product-market-fit" target="_blank">(https://www.digitalocean.com/resources/articles/how-to-measure-product-market-fit)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="How-To-Use-NPS-to-Measure-Your-Customer-Experience">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📝&nbsp;</span>How To Use NPS to Measure Your Customer Experience</h3>
+        <small class="page-url url "><a href="https://www.helpscout.com/blog/nps-customer-experience/" target="_blank">(https://www.helpscout.com/blog/nps-customer-experience/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: Offers insights on using NPS for customer experience measurement, relevant to the user feedback methods outlined in the report.<br></small>
+    </div>
+    <div class="page-content content"><h2>如何使用 NPS 衡量客户体验</h2>
+<h3>什么是 NPS？</h3>
+<p>净推荐值 (Net Promoter Score，NPS) 是贝恩公司在 21 世纪初开发的一种衡量客户忠诚度的系统。研究员弗雷德·赖希黑尔德和他的团队（以及许多公司）想知道是否存在一种特定的调查可以用来预测客户将来是否会继续从他们的企业购买商品。在分析调查数据并将其与购买历史记录进行比较后，他们关注的重点不是单一的调查，而是一个单一的问题：净推荐值问题。更好的是，这个问题不仅与客户忠诚度相关，还与品牌拥护、重复购买、升级、续订和积极推荐相关。</p>
+<p>这个神奇的问题是什么？很简单。净推荐值问题按 0 到 10 的等级进行衡量，询问：</p>
+<p>你有多大可能向朋友推荐（这个品牌/产品）？</p>
+<p>这个问题之后应该是一个开放式的问题，受访者可以在其中提供对其分数选择的背景信息（例如，“请告诉我们更多关于你为什么选择 10 的原因”，或“我们还能做些什么来将你的评价提高哪怕一分？”）。</p>
+<p>NPS 系统的另一个关键是分数计算：</p>
+<p>将分数评为 9 或 10 的客户被称为推广者。他们很可能会向朋友推荐你的公司，并成为你品牌的强大拥护者。</p>
+<p>给出 7 或 8 分的客户是被动者，他们犹豫不决。他们不会主动向他人推荐你，但如果被问到可能会这样做。但是，如果你的客户体验跟不上，这些客户也可能会被负面影响所左右。</p>
+<p>给出 0 到 6 分的客户是贬低者。这些客户不满意——更糟糕的是，他们甚至可能会告诉其他人不要与你做生意。识别贬低者很重要，这样你就可以积极参与并对他们的体验做出积极的改变。</p>
+<p>要计算你的 NPS 分数，只需将推广者的受访者百分比减去贬低者的受访者百分比。如果 50 个受访者是推广者，20 个是贬低者，那么你的 NPS 分数是 30（50% - 20%）。这意味着 NPS 的衡量范围为 -100 到 +100。</p>
+<h3>为什么使用 NPS 来衡量客户体验？</h3>
+<p>反馈是公司成功的关键，尤其是在我们今天高度互联的世界中。从宏观层面来看，客户反馈可以告诉你做得好的地方、需要改进的地方以及流程可能出现故障的地方。</p>
+<p>从微观层面来看，收集客户反馈可以让你直接与最满意的客户联系——帮助你将他们转变为品牌拥护者——以及直接与不满意的客户联系的能力，深入了解他们的体验，解决他们的顾虑，并扭转他们的体验。</p>
+<h3>什么时候应该发送 NPS 调查？</h3>
+<p>客户与你的公司互动时所走的路径——例如探索你的产品、查看演示，然后购买——被称为客户旅程。</p>
+<p>在客户旅程中存在接触点，或者是你与客户联系的地方，无论是通过你的营销、你的销售团队、你的客户服务，甚至是你的产品本身。</p>
+<p>你组织特有的客户旅程对于确定何时发送 NPS 调查非常重要。</p>
+<p>根据你发送调查的时间，主要有两种类型的 NPS 计划：</p>
+<p>关系型 NPS 计划包括定期（例如每三个月或六个月）向你的客户发送 NPS 调查。如果你经营的是 B2B 或 SaaS 公司，关系型 NPS 计划是一个不错的选择，因为你可以在建立关系后与客户联系，他们已经有时间对你的组织形成意见，并准备好提供对其体验的反馈。</p>
+<p>交易型 NPS 计划包括在与你的公司进行特定接触点或特定互动后向你的客户发送 NPS 调查。例如，一家电子商务公司可能会在订单交付两周后发送其 NPS 调查，并请求对该订单提供反馈。</p>
+<p>随着时间的推移，你可以结合交易型和关系型 NPS 调查来提升你的客户体验计划。</p>
+<p>例如，你可能想在客户的初始入门会议后向他们发送 NPS 调查，然后每三个月发送一次。这使你可以收集关于入门过程的特定时间点的反馈，同时还可以收集关于你品牌的整体持续反馈。</p>
+<h3>如何分发 NPS 调查？</h3>
+<p>作为一个简单的经验法则，你应该通过客户最习惯与你互动的平台来分发你的 NPS 调查。</p>
+<p>例如，如果你的大多数客户使用你的移动或网络应用程序与你的公司互动或进行购买，那么应用内调查就是最好的选择。但如果大多数客户通过你的网站与你的公司互动，那么基于网络的调查就是你的最佳选择。</p>
+<p>你还可以通过短信、二维码、实体场所的自助服务终端或久经考验的电子邮件分发方式进行调查。</p>
+<p>重要的是要记住，你调查客户的平台会影响你收到的反馈类型。</p>
+<p>例如，如果你将调查放在你的网站上，你可能会收到关于网站如何运作、它提供的功能等方面的反馈，这很好——除非你想要关于你的实施过程的反馈。在这种情况下，电子邮件调查是更好的选择，因为你的实施团队会在整个入门过程中通过电子邮件与你的客户联系。</p>
+<h3>使用 NPS 衡量客户体验的 7 个最佳实践</h3>
+<p>(此处应有七个最佳实践，但原文未提供。)</p>
+        <small class="page-url url "><a href="https://www.helpscout.com/blog/nps-customer-experience/" target="_blank">(https://www.helpscout.com/blog/nps-customer-experience/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Zest-AI-Announces-$200-Million-Growth-Investment-from-Insight-Partners">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🤝&nbsp;</span>Zest AI Announces $200 Million Growth Investment from Insight Partners</h3>
+        <small class="page-url url "><a href="https://www.prnewswire.com/news-releases/zest-ai-announces-200-million-growth-investment-from-insight-partners-302330883.html" target="_blank">(https://www.prnewswire.com/news-releases/zest-ai-announces-200-million-growth-investment-from-insight-partners-302330883.html)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: Covers significant investments in AI lending technology, which is pertinent to the report's section on diverse business models and funding.<br></small>
+    </div>
+    <div class="page-content content"><p>Zest AI 宣布获得 Insight Partners 2 亿美元增长投资</p>
+<p><strong>新闻提供方:</strong> 2024 年 12 月 13 日</p>
+<p><strong>领导者</strong>：AI 贷款技术，进一步加快产品创新，并瞄准高影响力的并购机会</p>
+<p>加利福尼亚州伯班克，2024 年 12 月 13 日 /PRNewswire/ -- AI 贷款技术领导者 Zest AI 宣布获得全球软件投资者 Insight Partners 的 2 亿美元增长投资，以支持公司下一阶段的转型。 这笔增长资金将使 Zest AI 能够加倍投资其当前产品组合，继续推进反欺诈保护和生成式 AI——所有这些都是为了通过 AI 打造贷款的未来。</p>
+<p>Zest AI 通过使用 AI 提供更复杂和准确的评分方法来改变信用评估，同时也使该技术易于使用和解释，适合所有金融机构。 与其他信用评分方法不同，Zest AI 的技术分析数千个数据变量——远远超过依赖 15-20 个变量的传统信用模型。凭借 50 多项专利，Zest AI 已开发和部署了 500 多个活跃的专有 AI 消费者信用模型，帮助贷款机构做出更明智的贷款决策。 该公司的 AI 自动化承销技术通过立即自动化高达 80% 的贷款申请来增强客户体验，从而提高运营效率，同时将坏账减少 20%，帮助贷款机构负责任地向更需要信贷的合格人群扩大信贷准入。</p>
+<p>“如今，金融机构坚持使用过时的传统评分系统，错失了近 3 万亿美元的机会。Zest AI 的技术通过利用更多数据和 AI 来提供更高保真度的消费者信用风险视图，从而增强金融体系。我们的客户能够将其贷款业务增长 25% 以上，同时帮助每个美国人都获得公平信贷的机会。这最终增强了我们客户的资产负债表，同时帮助普通的美国人实现他们的梦想，”Zest AI 创始人兼首席执行官 Mike de Vere 说。“随着 AI 的进步、宏观经济的顺风和投资者的支持，Zest AI 资金充足，并处于有利地位，可以加快我们的产品路线图，并确定战略并购机会，从而进一步追求我们的使命。”</p>
+<p>“Zest 一直在培养应用于信用评估的复杂 AI 和 ML 技术已有十多年了。该产品深受客户喜爱，这体现在一流的垂直市场 SaaS 保留率上，因为它对金融机构来说既强大又易于使用，”Insight Partners 常务董事兼 Zest AI 董事会成员 Jon Rosenbaum 说。“这是自 2020 年以来我们在公司进行的第三次也是最大规模的投资，我们看到 Zest 团队实现了多年的复合增长，并让客户满意。我们很高兴能够帮助贷款机构在下一阶段实现健康增长，同时让消费者更公平地获得信贷。这包括加倍投资核心信用评估，同时也加快欺诈和 AI 工作流程的新产品，这些产品已经掌握在客户手中。”</p>
+<p>自 Insight Partners 在 2020 年首次投资 Zest AI 以来，该公司每年客户数量翻倍，复合年增长率超过 50%。今天，Zest AI 的客户代表 1.1 亿人，管理的资产达 5.5 万亿美元。</p>
+        <small class="page-url url "><a href="https://www.prnewswire.com/news-releases/zest-ai-announces-200-million-growth-investment-from-insight-partners-302330883.html" target="_blank">(https://www.prnewswire.com/news-releases/zest-ai-announces-200-million-growth-investment-from-insight-partners-302330883.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Deep-Dive-on-Hugging-Face.-The-highway-to-AI/ML-gold-rush-|-by-Shixiang-Research-|-Medium">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💻&nbsp;</span>Deep Dive on Hugging Face. The highway to AI/ML gold rush | by Shixiang Research | Medium</h3>
+        <small class="page-url url "><a href="https://medium.com/@shixiangtech2019/deep-dive-on-hugging-face-87cfd122c1a4" target="_blank">(https://medium.com/@shixiangtech2019/deep-dive-on-hugging-face-87cfd122c1a4)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: Details funding rounds and revenue for Hugging Face, exemplifying successful AI business models discussed in the report.<br></small>
+    </div>
+    <div class="page-content content"><h2>Hugging Face融资及财务状况</h2>
+<p>2022年5月，Hugging Face估值达20亿美元，获得Lux Capital领投，Sequoia US和Coatue等主要参与者参与的C轮1亿美元融资。</p>
+<p>Hugging Face为包括英特尔、高通、辉瑞和彭博在内的1000多家客户提供服务。</p>
+<p>据透露，Hugging Face在2021年收入达1000万美元，并在2022年中期接近收支平衡。</p>
+<p>Hugging Face于2021年开始盈利。</p>
+<p>截至2022年6月，Hugging Face为包括英特尔、高通、辉瑞和彭博在内的1000多家客户提供服务。据透露，Hugging Face在2021年收入达1000万美元，并在2022年中期接近收支平衡。</p>
+<p>2022年5月，Hugging Face估值达20亿美元，获得Lux Capital领投的C轮1亿美元融资，Sequoia US和Coatue等也参与了投资。Hugging Face还获得了4000万美元的B轮融资，目前资金充裕，业务和现金流非常健康。</p>
+        <small class="page-url url "><a href="https://medium.com/@shixiangtech2019/deep-dive-on-hugging-face-87cfd122c1a4" target="_blank">(https://medium.com/@shixiangtech2019/deep-dive-on-hugging-face-87cfd122c1a4)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="6-Types-of-Funding-for-Startups:-Definitive-Guide">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🛠&nbsp;</span>6 Types of Funding for Startups: Definitive Guide</h3>
+        <small class="page-url url "><a href="https://foundersnetwork.com/blog/types-of-funding-for-startups/" target="_blank">(https://foundersnetwork.com/blog/types-of-funding-for-startups/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: Discusses bootstrapping and funding strategies that resonate with the report’s section on financing options for AI startups.<br></small>
+    </div>
+    <div class="page-content content"><h2>自筹资金或引导启动</h2>
+<p>自筹资金，也称为引导启动，是指利用个人储蓄、获得个人贷款或从企业本身产生收入来为初创企业的运营和发展提供资金的做法。对于那些在没有外部投资者的情况下创办或发展自己企业的创始人来说，这是一种常见的方法。</p>
+<h3>引导启动的优点：</h3>
+<p><strong>控制权和独立性：</strong>通过自筹资金，创始人可以完全控制自己的业务决策，而不会受到外部投资者的影响。他们可以根据自己的价值观自由地塑造公司的方向和愿景。</p>
+<p><strong>灵活性和敏捷性：</strong>引导启动的初创企业在应对市场变化和客户需求方面可以更加灵活和适应性强。他们不受投资者期望的约束，可以快速调整策略，而无需冗长的审批流程。</p>
+<p><strong>专注于创收：</strong>在没有偿还外部投资者或达到特定增长目标的压力下，引导启动的创始人可以优先从早期阶段创收。这种对可持续盈利能力的关注可以带来更稳定和自给自足的商业模式。</p>
+<h3>引导启动的缺点：</h3>
+<p><strong>资源有限：</strong>引导启动通常意味着只能使用有限的资金资源，这可能会限制增长机会。缺乏外部资金可能会限制您投资营销、聘用顶尖人才或快速扩展运营的能力。</p>
+<p><strong>增长轨迹较慢：</strong>如果没有大量的资金注入，引导启动的初创企业与获得风险投资的企业相比，可能会经历更慢的增长。有限的资源可能会阻碍抓住市场机会并迅速扩张的能力。</p>
+<p><strong>财务风险：</strong>自筹资金会使创始人的个人财务面临风险。如果企业失败，个人储蓄或资产可能面临风险，并且创始人承担全部财务责任。</p>
+<h3>有效引导启动的技巧：</h3>
+<p><strong>仔细预算：</strong>制定详细的预算并仔细跟踪支出。优先考虑必要的支出并避免不必要的成本。考虑采用精益原则来优化资源分配。</p>
+<p><strong>寻求具有成本效益的资源：</strong>在软件、办公空间和设备方面探索经济实惠的替代方案。利用免费或低成本的工具、开源软件和联合办公空间来最大限度地减少支出。</p>
+<p><strong>拥抱创造力和资源fulness：</strong>找到创收和利用现有资产的创新方法。探索合作伙伴关系、合作和易货安排，以获取资源，而无需大量的资金支出。</p>
+<p><strong>向经验丰富的企业家学习：</strong>与成功引导启动自己企业的经验丰富的企业家联系。寻求他们的建议，学习他们的策略，并了解他们在发展过程中面临的挑战。</p>
+<p><strong>关注客户价值：</strong>优先为客户提供卓越的价值。通过了解他们的痛点并提供引人注目的解决方案，引导启动的初创企业可以吸引忠实的客户并创造收入。</p>
+<p>引导启动并非没有挑战，但对于重视独立性和对业务控制权的企业主来说，这可能是一种可行的选择。通过实施有效的财务管理、资源优化和战略决策，引导启动的初创企业可以克服局限性，为可持续增长奠定坚实的基础。</p>
+<h2>融资轮次</h2>
+<p>在初创企业融资领域，融资轮次是关键的里程碑，使初创企业能够获得必要的资金来推动其增长和扩张。这些轮次代表了初创企业发展历程中的特定阶段，涉及从外部投资者那里为初创企业筹集不同类型的资金。了解融资轮次的复杂之处对于寻求驾驭初创企业融资复杂领域的企业家来说至关重要。</p>
+<p>每一轮融资，例如 A 轮、B 轮、C 轮、D 轮和 E 轮，都有其自身的特点、期望和影响。企业主必须精通这些轮次之间的区别，才能有效地规划何时考虑初创企业的不同融资类型。</p>
+<p>| 融资系列 | 通常筹集的资本 | 公司阶段 | 投资者类型 | 主要关注点 |
+|---|---|---|---|---|
+| A 轮 | 200 万美元至 1500 万美元 | 初创阶段 | 风险投资公司、天使投资者、种子基金 | 产品开发、市场验证、早期增长 |
+| B 轮 | 1000 万美元至 6000 万美元 | 扩张阶段 | 风险投资公司、私募股权公司、战略投资者 | 扩展运营、抢占市场份额 |
+| C 轮 | 2000 万美元至 1 亿美元 | 增长阶段 | 机构投资者、私募股权公司、公司投资者 | 地理扩张、产品多元化、收购 |
+| D 轮 | 3000 万美元至 1.5 亿美元 | 后期阶段 | 私募股权公司、对冲基金、机构投资者 | 全球扩张、准备 IPO |
+| E 轮 | 5000 万美元及以上 | IPO 前阶段 | 对冲基金、战略投资者、主权财富基金 | 准备 IPO、市场主导地位、进一步扩张 |</p>
+<h3>A 轮</h3>
+<p>A 轮融资代表了初创企业发展历程中的一个关键阶段，通常是第一轮重要的外部融资。它发生在最初的种子资金或自筹资金阶段之后，重点是扩大公司规模并将产品或服务推向更广阔的市场。A 轮融资为初创企业提供了加速其增长和实现关键里程碑的必要资源。</p>
+<p>通常，A 轮融资筹集的资金在 200 万美元到 1500 万美元之间，尽管确切金额可能因行业、地区和个别初创企业而异。在 A 轮融资期间，公司的阶段通常是早期阶段，此时企业已经建立了概念验证，证明了市场吸引力，并且需要资金来进一步开发其产品或服务。</p>
+<p>在 A 轮融资中，参与的投资者类型通常包括风险投资公司、天使投资者和种子基金。这些投资者不仅提供资金支持，还提供宝贵的专业知识、行业联系和指导，以帮助初创企业应对其增长挑战。</p>
+<p>一些成功完成 A 轮融资的公司的例子包括 Uniplaces，这家初创公司在 A 轮融资中筹集了 350 万美元。这轮融资使 Uniplaces 能够扩大其面向学生的在线住宿市场，并促进其国际增长，最终成为该行业的重要参与者。</p>
+<p>寻求 A 轮融资为初创企业提供了多种优势。它提供了大量的资金注入，这对于扩大运营规模、招聘关键人才和投资营销工作至关重要。此外，经验丰富的投资者的参与可以带来宝贵的行业知识、战略指导和网络机会。</p>
+<h3>B 轮</h3>
+<p>B 轮融资代表了初创企业发展的一个阶段，这些初创企业已经确立了其产品市场契合度，并且正在寻求扩大其运营规模并抢占更大的市场份额。它通常发生在 A 轮融资之后，重点是加速增长和扩大公司的影响范围。</p>
+<p>在 B 轮融资期间，初创企业通常筹集的资金在 1000 万美元到 6000 万美元之间，尽管金额可能因企业的具体需求而异。在这个阶段，公司已经超越了早期阶段，并取得了显著的里程碑，例如增加收入、获得更多客户以及展示强大的增长潜力。</p>
+<p>参与 B 轮融资的投资者类型通常包括风险投资公司、私募股权公司和战略投资者，他们不仅带来资金，还带来行业专业知识和人脉。这些投资者被初创企业的增长轨迹和投资获得巨额回报的潜力所吸引。</p>
+<p>成功完成 B 轮融资的初创企业的例子包括 Airbnb 和 Dropbox 等公司。这些公司在其 B 轮融资期间筹集了大量的资金，这在其扩张和扩展工作中发挥了至关重要的作用。</p>
+<p>寻求 B 轮融资为初创企业提供了多种优势。它提供了大量的资金注入，使公司能够投资于扩展运营、扩大团队、增强其基础设施和执行战略计划。此外，经验丰富的投资者的参与可以为初创企业带来宝贵的指导、战略合作伙伴关系和信誉。</p>
+<h3>C 轮</h3>
+<p>C 轮融资代表了一个增长阶段，在这个阶段，初创企业已经取得了显著的进展，确立了强大的市场地位，并且正在寻求进一步扩张。这轮融资的重点是推动扩张、地域覆盖范围、产品多元化，并可能为退出事件做准备。</p>
+<p>在 C 轮融资期间，初创企业通常筹集的资金在 2000 万美元到 1 亿美元之间，尽管金额可能因公司的具体需求和目标而异。在这个阶段，初创企业处于增长阶段，拥有经过验证的商业模式，并旨在巩固其市场地位。</p>
+<p>C 轮融资通常涉及机构投资者、私募股权公司和公司投资者的参与，他们认识到初创企业进一步增长和创造价值的潜力。这些投资者不仅带来资金，还带来行业专业知识、战略指导和潜在的收购机会。</p>
+<p>一些筹集了 C 轮融资的公司包括 Uber 和 SpaceX 等知名初创企业。这轮融资使他们能够在全球范围内扩张，开发新产品，并追求雄心勃勃的增长计划。</p>
+<p>寻求 C 轮融资为初创企业提供了多项好处。它提供了大量的资金来支持地域扩张，推动产品多元化，并可能进行战略收购。经验丰富的机构投资者和公司合作伙伴的参与还可以带来宝贵的行业知识、资源和潜在的协同效应。</p>
+<h3>D 轮</h3>
+<p>D 轮融资代表了一个融资阶段，当初创企业已经取得了显著的增长和市场成功，并且需要额外的资金来进一步扩大运营规模、进入新市场或进行战略收购时，就会出现这种情况。</p>
+<p>在 D 轮融资期间，初创企业通常会筹集大量的资金，从 5000 万美元到数亿美元甚至更多不等。筹集的确切金额取决于公司的具体需求和增长计划。在这个阶段，初创企业通常已经成为其行业内的市场领导者或主要参与者。</p>
+<p>D 轮融资通常涉及多种投资者，包括风险投资公司、私募股权公司和战略投资者。这些投资者被初创企业的成熟商业模式、市场地位和增长潜力所吸引。</p>
+<p>成功完成 D 轮融资的初创企业的例子包括 Palantir 和 WeWork 等公司。D 轮融资在其继续增长和扩展到新市场中发挥了至关重要的作用。</p>
+<p>寻求 D 轮融资为初创企业提供了显著的优势。它提供了大量的资金来支持扩展工作、进入新市场、投资研发，并可能为首次公开募股 (IPO) 或其他退出事件做准备。</p>
+<h3>E 轮</h3>
+<p>E 轮融资代表初创企业融资过程中的一个阶段，通常发生在公司已经取得了可观的增长、拥有成熟的商业模式，并且需要额外资金来继续扩大运营规模、追求战略计划或为退出事件做准备时。</p>
+<p>E 轮融资的特点可能因公司的具体情况而异。E 轮融资中通常筹集的资金数量从数千万美元到数亿美元不等。融资的目的通常包括进一步的市场扩张、产品开发、战略收购或准备 IPO。</p>
+<p>达到 E 轮融资的初创企业通常已经成为其行业内的市场领导者或重要参与者。他们已经证明了可持续增长、强大的财务业绩以及创造大量收入的能力。</p>
+<p>一些筹集了 E 轮融资的公司包括 Airbnb 和 Stripe 等知名初创企业。这些融资轮次使他们能够推动持续增长、进入新市场和扩展其产品。</p>
+<p>寻求 E 轮融资为初创企业提供了多项好处。它提供了大量的资金来支持战略计划、市场扩张和潜在的 IPO 准备工作。</p>
+<h2>众筹</h2>
+<p>众筹是一种从大量个人（通常通过在线平台）筹集资金以资助项目或商业冒险的方法。它通过允许企业家利用广泛的潜在支持者网络，为初创企业的其他融资方式提供了一种替代方案。</p>
+<p>众筹有多种模式，包括基于奖励的众筹和基于股权的众筹。</p>
+<p><strong>基于奖励的众筹：</strong>基于奖励的众筹是指向支持者提供非财务激励（例如产品或服务）以换取他们的资金支持。企业家会设定一个融资目标和一个时间范围，在这个时间范围内，他们旨在筹集所需的资金。Kickstarter 和 Indiegogo 等平台是基于奖励的众筹的热门平台。</p>
+<p><strong>基于股权的众筹：</strong>基于股权的众筹允许企业家向投资者提供公司股份以换取资金。这种模式允许支持者成为股东，并可能分享企业未来的利润。SeedInvest 和 Crowdcube 等基于股权的众筹平台促进了此类活动。</p>
+<h3>众筹的优点：</h3>
+<p><strong>获得资金：</strong>众筹提供了一个机会，可以从广泛的个人那里获得资金，这些人相信该项目或产品。对于可能难以通过传统方式获得资金的初创企业来说，这尤其有利。</p>
+<p><strong>更广泛的曝光：</strong>众筹活动通常会产生大量的宣传，这可能导致品牌知名度和曝光率提高。这种曝光可以吸引潜在客户、合作伙伴甚至传统投资者。</p>
+<p><strong>市场验证：</strong>成功的众筹活动可以作为对产品或服务市场需求的验证。它允许企业家衡量客户兴趣，并根据早期反馈微调其产品。</p>
+<p><strong>早期采用者参与：</strong>众筹活动允许企业家与早期采用者和充满激情的支持者互动，他们成为产品或服务的拥护者。这些人可以提供宝贵的见解、反馈和口碑营销。</p>
+<h3>众筹的缺点：</h3>
+<p><strong>时间和精力：</strong>开展成功的众筹活动需要仔细的计划、执行和持续的努力。这可能非常耗时，会分散团队对其他重要活动的注意力。</p>
+<p><strong>失败的风险：</strong>众筹活动并非都能成功。如果活动未能达到其融资目标，企业家可能无法获得任何资金，并且投入到活动中的时间和精力可能会付诸东流。</p>
+<p><strong>竞争加剧：</strong>众筹的流行导致市场拥挤，使得在其他活动中脱颖而出变得更具挑战性。区分产品或项目并有效地接触目标受众至关重要。</p>
+<p><strong>对支持者的责任：</strong>众筹通常涉及履行奖励或兑现承诺的里程碑。企业家必须仔细管理沟通，并兑现其承诺，以保持与支持者的信任和信誉。</p>
+<h3>开展众筹活动的技巧：</h3>
+<p><strong>制定引人注目的宣传：</strong>清晰地传达独特的价值主张、您的产品或项目解决的问题以及人们为什么应该支持它。使用引人入胜的视觉效果、视频和故事讲述来吸引注意力。</p>
+<p><strong>设定切合实际的目标：</strong>设定一个与您的财务需求和市场需求相符的融资目标。它应该在给定的时间范围内可实现，以保持动力和信誉。</p>
+<p><strong>与支持者互动：</strong>在整个活动中积极与您的支持者互动。回复评论，提供更新，并表达对他们支持的感谢。围绕活动建立社区可以促进其成功。</p>
+<p><strong>利用社交媒体和网络：</strong>利用社交媒体平台、电子邮件通讯和个人网络来宣传您的活动。鼓励朋友、家人和早期支持者与他们的网络分享该活动。</p>
+<h2>初创企业贷款</h2>
+<p>初创企业贷款是企业家寻求资金来启动或扩展其业务的热门融资选择。但是，它们与初创企业的其他融资类型有所不同。贷款提供必要的资金来支付初始费用、投资设备、雇用员工和推动增长。在本节中，我们将探讨几种类型的传统商业贷款。这些包括 SBA 贷款、信用卡贷款、短期贷款以及来自朋友和家人的贷款。每种贷款类型都有其自身的资格要求、条款以及优缺点。</p>
+<h3>SBA 贷款</h3>
+<p>SBA（美国小企业管理局）贷款是由政府支持的贷款，旨在支持小企业。这些贷款由参与贷款的贷款机构提供，SBA 保证一部分贷款金额。资格要求通常包括拥有可靠的商业计划、证明良好的信用记录以及满足特定的规模标准。SBA 贷款提供具有竞争力的利率、更长的还款期限以及灵活的用途。但是，申请流程可能非常耗时，并且可能需要抵押品。</p>
+<h3>信用卡贷款</h3>
+<p>信用卡贷款涉及使用信用卡来为启动费用提供资金。企业家可以使用其个人或商业信用卡来获取资金。资格要求取决于信用卡发行机构，并且可能包括拥有良好的信用评分和既定的信用记录。信用卡贷款提供便利性和快速获取资金。它们适用于较小的融资需求，并且可以帮助为企业建立信用记录。但是，信用卡贷款的利率通常很高，如果不正确管理，可能会导致债务过高。</p>
+<h3>短期贷款</h3>
+<p>短期贷款通常由在线贷款机构提供，并且还款期限相对较短，通常从几个月到一年不等。这些贷款旨在为初创企业提供即时的营运资金。资格要求可能会有所不同，但通常需要最低信用评分、营业收入证明和运营时间。短期贷款提供快速审批和资金，使它们适合即时的资金需求。但是，它们的利率通常较高，并且可能需要经常还款。</p>
+<h3>来自朋友和家人的贷款</h3>
+<p>来自朋友和家人的贷款涉及从您的个人或专业网络中的个人那里借款。资格要求通常比较灵活，可能取决于各方之间的协议。来自朋友和家人的贷款在条款、还款时间表以及潜在的较低利率方面具有灵活性。对于信用记录有限或难以获得传统融资的初创企业来说，这种类型的贷款可能是一个有吸引力的选择。但是，重要的是要以专业的方式处理此类贷款，并明确还款条款，以维护人际关系。</p>
+<h3>获取初创企业贷款</h3>
+<p>为了有效地获得初创企业贷款，请考虑以下技巧和策略：</p>
+<p><strong>制定可靠的商业计划：</strong>精心制作的商业计划展示您的愿景、市场分析和财务预测，从而增加您获得贷款批准的机会。</p>
+<p><strong>建立强大的信用记录：</strong>通过按时支付账单、减少债务和解决任何信用问题来保持良好的个人和商业信用评分。</p>
+<p><strong>寻求专业人士的建议：</strong>咨询经验丰富的专业人士（例如会计师或商业顾问），他们可以指导您完成贷款申请流程，并帮助您选择最合适的方案。</p>
+<p><strong>研究和比较贷款选择：</strong>探索多个贷款机构和贷款类型，以找到最佳条款和利息。</p>
+<h2>初创企业补助金</h2>
+<p>初创企业补助金是非偿还性资金，提供给企业家和初创企业以支持其增长和发展。与贷款不同，补助金无需偿还，这使得它们成为初创企业有吸引力的资金来源。这些补助金可以来自各种来源，包括联邦、州和私人组织。在本节中，我们将探讨可获得的不同类型的初创企业补助金，它们的资格要求、申请流程和条款。</p>
+<h3>补助金类型：</h3>
+<p><strong>联邦补助金：</strong>美国政府提供一系列补助金计划以支持初创企业和小企业。例如，小型企业创新研究 (SBIR) 和小型企业技术转移 (STTR) 计划。资格要求可能包括是营利性企业、进行研发活动以及符合特定机构的目标。申请流程通常涉及提交一份详细的提案，概述项目及其潜在影响。</p>
+<p><strong>州补助金：</strong>州政府还提供补助金以支持当地初创企业。这些补助金可能特定于某些行业，或者针对促进州内经济发展。资格要求和申请流程因州和计划而异。初创企业可能需要证明创造就业机会、创新或社区影响的潜力才能被考虑获得州补助金。</p>
+<p><strong>私人补助金：</strong>私人组织、基金会和公司提供补助金以支持创业企业。这些补助金可以是特定行业的、以社会为重点的，或者针对特定人群。资格要求和申请流程由补助金提供者决定。初创企业可能需要证明与补助金使命的一致性，或者提供其增长和影响潜力的证据。</p>
+<h3>初创企业补助金的优缺点</h3>
+<p><strong>优点：</strong></p>
+<p><strong>非偿还性资金：</strong>补助金提供无需偿还的资金，允许初创企业投资于增长和发展而不会产生债务。</p>
+<p><strong>无股权融资：</strong>与投资不同，补助金不需要初创企业放弃股权，从而允许创始人保留其业务的所有权和控制权。</p>
+<p><strong>验证和信誉：</strong>获得补助金可以提高初创企业的声誉，证明来自知名组织或政府机构的认可和支持。</p>
+<p><strong>缺点：</strong></p>
+<p><strong>竞争激烈的申请流程：</strong>初创企业补助金竞争非常激烈，可用资金有限。初创企业必须使其自身及其项目与众不同，才能在其他申请者中脱颖而出。</p>
+<p><strong>严格的资格标准：</strong>补助金通常有具体的资格要求，例如行业重点、地点或项目目标。初创企业必须确保在申请之前符合这些标准。</p>
+<p><strong>报告和合规性：</strong>补助金获得者可能需要提供进度报告，证明资金的正确使用，并遵守具体的规章或指南。</p>
+<h3>寻求和申请初创企业补助金的技巧：</h3>
+<p><strong>研究补助金机会：</strong>彻底研究可用的补助金，以找到与您的业务、行业或项目相符的补助金。寻找联邦、州和私人补助金以支持您的特定需求。</p>
+<p><strong>了解资格要求：</strong>仔细审查每项补助金的资格标准，以确定您的初创企业是否符合要求。确保您的业务和项目符合补助金的目标。</p>
+<p><strong>准备一份有说服力的申请：</strong>制定一份措辞清晰且有说服力的补助金申请。清楚地阐明您的商业理念、其潜在影响以及如何利用补助金资金。提供支持性数据和证据以增强您的申请。</p>
+<p><strong>寻求专业帮助：</strong>考虑与经验丰富的补助金撰写者或顾问合作，他们可以帮助您完成申请流程、提高您成功的机会并确保符合补助金要求。</p>
+<p><strong>利用您的网络：</strong>利用您的专业网络，包括导师、行业联系或创始人网络社区成员，收集信息、寻求建议并可能与补助金提供者建立联系。</p>
+<h2>风险投资</h2>
+<p>风险投资是一种私募股权融资形式，由风险投资公司或称为风险投资家的个人投资者提供给具有高潜力的初创企业和早期公司。风险投资家以换取公司股权或所有权股份的方式投资资本，并期望获得可观的投资回报。除了资金外，风险投资家通常还提供战略指导、行业专业知识和宝贵的联系，以帮助初创企业取得成功。在初创企业的各种融资类型中，风险投资往往成为推动独角兽企业诞生的主要力量。</p>
+        <small class="page-url url "><a href="https://foundersnetwork.com/blog/types-of-funding-for-startups/" target="_blank">(https://foundersnetwork.com/blog/types-of-funding-for-startups/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="AI-Investors-&-VC-Firms:-150+-Top-AI-Investors-2024">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">👔&nbsp;</span>AI Investors & VC Firms: 150+ Top AI Investors 2024</h3>
+        <small class="page-url url "><a href="https://vc-mapping.gilion.com/venture-capital-firms/ai-investors" target="_blank">(https://vc-mapping.gilion.com/venture-capital-firms/ai-investors)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: Highlights AI investors' roles and trends, connecting the report's insights about necessary funding sources for startups.<br></small>
+    </div>
+    <div class="page-content content"><h2>AI 投资者和风险投资公司</h2>
+<h3>值得关注的领先 AI 投资者</h3>
+<p>在人工智能领域众多有影响力的参与者中，一些公司因其大胆押注未来而脱颖而出。红杉资本、Andreessen Horowitz 和 Accel Partners 等风险投资公司一直以来是支持人工智能驱动型初创公司的关键力量，并在它们的崛起中发挥了重要作用。</p>
+<p>这些投资者不仅仅是资金支持者，更是创新的催化剂，他们提供指导、市场洞察力和更广泛的网络资源。他们的参与表明，他们强烈看好人工智能重塑各行各业的潜力。</p>
+<h3>为 2024 年及以后铺平未来的著名 AI 风险投资公司</h3>
+<p>专门从事人工智能的风险投资公司提供的不仅仅是资金投资。Data Collective (DCVC)、Lux Capital 和 OpenAI 的投资部门等公司通过专注于利用人工智能解决独特领域复杂问题的初创公司，为自己开辟了利基市场。</p>
+<p>这些公司了解人工智能发展的复杂局面，并且擅长识别在其各自领域具有领导潜力的公司。他们的战略支持和深厚的技术洞察力帮助初创公司加速其增长和创新轨迹，这使得他们成为人工智能革命的关键贡献者。</p>
+<h2>所有 AI 风险投资公司和投资者</h2>
+<p>AI 投资者是专门投资于利用人工智能 (AI) 技术的初创公司和企业的个人或风险投资公司。这些投资者提供资金支持、战略指导、指导和进入其网络的机会，以支持以 AI 为中心的公司的增长和创新。</p>
+<p>对于初创公司而言，获得 AI 投资者至关重要，因为这些投资者提供了对 AI 领域的专业知识和见解。他们的经验可以帮助初创公司应对 AI 技术的复杂性，并改进其商业模式，从而在竞争激烈的市场中获得成功。他们通常不仅拥有关于技术方面的广泛知识，而且还拥有关于运营 AI 服务的合规性和法律方面的复杂性知识。</p>
+<p>AI 投资者寻求展示创新 AI 使用、技术可扩展性、熟练的 AI 团队以及解决重大市场需求的清晰愿景的初创公司。增长潜力、竞争优势和市场动态等因素也会被考虑在内。最近变得越来越重要的一件事是你的模式的独创性。在过去几年中，大量的初创公司完全依赖于 OpenAI 等其他服务来构建他们的 AI 模型，这也使得它们很容易被复制，因为它们基本上只是在其模型之上添加了一些东西。因此，独创性和构建独特的模型对潜在投资者和风险投资公司来说更具吸引力。</p>
+<p>事实上，AI 投资者通过提供资源、指导和网络机会在扩展 AI 初创公司方面发挥着至关重要的作用。他们促进与潜在客户、合作伙伴和人才的联系，帮助扩展运营、扩大市场覆盖范围并加速增长。</p>
+        <small class="page-url url "><a href="https://vc-mapping.gilion.com/venture-capital-firms/ai-investors" target="_blank">(https://vc-mapping.gilion.com/venture-capital-firms/ai-investors)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Reddit-AI-startup-funding-discussions-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💬&nbsp;</span>Reddit AI startup funding discussions at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Reddit AI startup funding discussions" target="_blank">(DDG:Reddit AI startup funding discussions)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: This page features Reddit discussions on AI startups and investment insights, linking to the report's focus on financing sources.<br></small>
+    </div>
+    <div class="page-content content"><h2>r/aistartup - Reddit</h2>
+<p>r/aistartup：AI 初创公司——分享关于应用人工智能的想法、经验和思考的地方。</p>
+<p>我做了一些研究，使用 AI 来起草新员工文件，分配股权等。有一些专门的服务，我选择了其中一个……</p>
+<h2>Investment in AI Startups : r/angelinvestors - Reddit</h2>
+<p>PitchBook：这个平台提供关于各个行业的融资轮次、投资者和公司简介的全面数据，包括 AI。</p>
+        <small class="page-url url "><a href="DDG:Reddit AI startup funding discussions" target="_blank">(DDG:Reddit AI startup funding discussions)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="The-Next-Trillion-Dollar-AI-Companies-Hidden-in-Plain-Sight-|-Nasdaq">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📣&nbsp;</span>The Next Trillion-Dollar AI Companies Hidden in Plain Sight | Nasdaq</h3>
+        <small class="page-url url "><a href="https://www.nasdaq.com/articles/the-next-trillion-dollar-ai-companies-hidden-in-plain-sight" target="_blank">(https://www.nasdaq.com/articles/the-next-trillion-dollar-ai-companies-hidden-in-plain-sight)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: Discusses Nasdaq's news on market trends, particularly in AI, connecting to the report's trend analysis section.<br></small>
+    </div>
+    <div class="page-content content"><h2>我们找不到任何与您的搜索匹配的结果</h2>
+<p>请尝试使用其他词语进行搜索，或浏览网站的其他部分以查找相关信息。</p>
+<h2>抱歉，我们目前遇到一些问题，请稍后再试</h2>
+<p>我们的团队正在努力解决这个问题。感谢您的耐心和理解。</p>
+<h2>新闻与见解</h2>
+<p>智能投资 市场 公司 加密货币 技术 个人理财</p>
+<h3>隐藏在眼皮底下的下一个万亿美元人工智能公司</h3>
+<p>2023年6月24日——美国东部时间下午3:30  作者：Eric Fry  InvestorPlace</p>
+<p>您好，读者。</p>
+<p>在周四的《聪明钱》杂志中，我们讨论了人工智能是一个令人难以置信的强大——几乎是可怕的强大——大趋势。其部署的影响将使优秀公司达到以前无法达到的里程碑……包括令人垂涎的万亿美元市值。凭借人工智能的力量，我相信下一个万亿美元公司就在那里……并将在此过程中为他们的投资者带来丰厚的回报。</p>
+<p>虽然我们介绍了我对下一个万亿美元人工智能公司的第一个选择，但我今天还想与您分享另外两家公司。让我们深入探讨……</p>
+<p>如果您今天就知道下个月的股价会怎样？</p>
+<p>多年来，投资者一直在试图准确预测未来的股价。一家公司声称已经使用先进的人工智能和机器学习做到了这一点。如果属实，这可能会彻底改变金融业，并帮助许多美国人过上富裕的退休生活。</p>
+<p>点击此处获取完整故事。</p>
+<h2>Meta Platforms</h2>
+<p>Facebook的母公司可能很快就会重新获得其万亿美元的王冠。</p>
+<p>社交媒体巨头Meta Platforms Inc. (META)于2021年6月首次达到1万亿美元的市值，其广告业务正在加速发展。当时，分析师认为该公司次年将创造330亿美元的收入。</p>
+<p>但这并没有实现。由于在线广告放缓以及虚拟现实业务的巨额亏损，该公司反而发布了190亿美元的自由现金流。Meta的市值去年跌至低点2.5亿美元。（它已回升至约6000亿美元。）</p>
+<p>然而，Meta仍然是一个很有希望的赌注。该公司的积极成本削减措施和不断改善的广告业务已经显示出积极的成果。上个月的温和通胀数据为夏季股价上涨奠定了基础。Facebook历来比其同行对市场周期的敏感性更高。</p>
+<p>这意味着复苏可能比预期的要快。今年自由现金流预计将回升至230亿美元，并在2024年达到“神奇的”300亿美元水平。2024年总统大选的大规模广告支出意味着这些数据这次很可能会实现。</p>
+<h2>国际商业机器公司</h2>
+<p>下面的图表告诉你关于“新的”国际商业机器公司(IBM)几乎所有你需要知道的事情……</p>
+<p>这家标志性的电脑公司的营收和营业利润率不再下降。它们再次上升。</p>
+<p>在2021年9月达到30年来的低点后，IBM的营收和利润率一直在显着复苏。这些有利的财务趋势并没有证明IBM已经开始了新的增长趋势，但它们确实支持了这一论点。</p>
+<h3>从弱者到蓬勃发展的冠军</h3>
+<p>在过去的几年里，IBM一直在重塑自己，成为一家混合云和人工智能公司。为了加速这一转变，该公司一直在推行一种淘汰旧事物、引进新事物的增长战略。</p>
+<p>自2019年以来，IBM已经剥离了17家传统业务，同时还进行了30多次收购。在其疯狂收购中最具影响力的收购之一是Red Hat，IBM于2019年以340亿美元的价格收购了Red Hat。尽管当时的收购价格似乎有点高，但这笔收购却为IBM家族带来了一个市场领先的混合云平台。</p>
+<p>Red Hat的功能如此强大，以至于超过90%的财富500强公司都依赖其平台。</p>
+<p>根据Grand View Research的数据，未来七年全球云计算市场将增长150%——从今年的约6000亿美元增长到2030年的1.5万亿美元以上。根据Fortune Business Insights的数据，到2030年，全球人工智能产业规模也将达到类似水平。</p>
+<p>IBM正在顺应这两个强大大趋势的潮流。</p>
+<h3>人工智能主导地位</h3>
+<p>“IBM Watson”是该公司的核心人工智能产品。它与Red Hat混合云集成，使公司能够汇集来自众多来源的数据，然后处理这些数据以实现预测未来结果、自动化复杂流程和优化员工时间等目标。</p>
+<p>在现实世界中，许多公司积累并存储的数据就像公司里的“杂物抽屉”一样。各种形式的宝贵信息都存在……</p>
+<p>公司备忘录……PDF……图表和其他图像……数据库……客户记录……呼叫日志……手写文件……博客文章……以及推文。</p>
+<p>这些数据可以说是“非结构化”的。但Watson可以使用人工智能来综合和处理这些数据，以便企业可以做出明智的决策。</p>
+<p>换句话说，IBM将Watson人工智能宣传为可以提高整个企业生产力的解决方案。</p>
+<p>越来越多的企业正在购买IBM咨询公司销售的AI赋能解决方案。该部门的收入在过去两年增长了18%。</p>
+<h3>光明的未来</h3>
+<p>IBM的营收和营业利润率不仅呈上升趋势，利润也在随之增长。过去两年，营业收入增长了77%。</p>
+<p>由于IBM快速增长的人工智能和混合云业务将推动其未来大部分增长，所以我预计该公司将成为人工智能热潮的主导领导者。</p>
+        <small class="page-url url "><a href="https://www.nasdaq.com/articles/the-next-trillion-dollar-ai-companies-hidden-in-plain-sight" target="_blank">(https://www.nasdaq.com/articles/the-next-trillion-dollar-ai-companies-hidden-in-plain-sight)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Startups-Grants-In-New-York---2024---Every.io">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏙&nbsp;</span>Startups Grants In New York - 2024 - Every.io</h3>
+        <small class="page-url url "><a href="https://www.every.io/blog-post/startups-grants-in-new-york" target="_blank">(https://www.every.io/blog-post/startups-grants-in-new-york)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: Outlines specific grants for startups in New York, linking to the report’s insights on diverse funding sources for AI ventures.<br></small>
+    </div>
+    <div class="page-content content"><p>纽约州政府对初创企业，特别是从事新兴科技的初创企业，提供了大力支持。</p>
+<h2>纽约州初创企业政府拨款</h2>
+<p>纽约州通过美国小型企业管理局(SBA)的小型企业创新研究(SBIR)和小企业技术转移(STTR)项目为初创企业提供支持。此外，还有一个专门面向初创公司的3000万美元的项目。</p>
+<h3>SBA小型企业创新研究(SBIR)项目</h3>
+<p>SBIR项目旨在帮助小型企业进行重要的研究，从而开发出新的、可销售的产品。SBA拨款使这些企业更容易进行创新，帮助它们成为其市场中的领导者。这项支持非常适合希望发展其高科技解决方案的企业。</p>
+<h3>SBA小型企业技术转移(STTR)项目</h3>
+<p>STTR项目略有不同，它促使小型企业与研究机构合作，将研究成果转化为实际产品。STTR项目通过利用学术界的发现来帮助初创企业发展，从而创建一个强大的科技进步社区。</p>
+<h3>纽约州3000万美元种子轮和Pre-Seed轮匹配基金项目</h3>
+<p>该项目为非常早期的公司提供大力支持，通过提供匹配资金来帮助它们发展。该项目专注于最早期的融资阶段，帮助企业克服资金挑战，帮助新企业迈出第一步。</p>
+<p>纽约州小型企业发展中心(NYSBDC)以及位于布法罗、纽约都会区和锡拉丘兹的SBA办事处是寻求建议的重要资源。地方和国家资源共同简化了初创企业寻找所需资金的过程，为纽约州的新企业创造了一个强大的支持体系。</p>
+<h2>私人资助的启动和增长拨款</h2>
+<p>私人拨款在支持初创企业在其早期和增长阶段发挥着关键作用。在纽约，一些组织提供旨在帮助新企业成功的私人商业拨款。</p>
+<h3>Faire在线批发市场拨款</h3>
+<p>Faire拨款帮助新兴的批发市场品牌。获奖者可以使用这些资金用于启动、购买库存和营销。这项拨款非常适合希望发展壮大并接触更多客户的企业。</p>
+<h3>无限未来基金会拨款</h3>
+<p>无限未来基金会支持希望有所作为的女企业家，为她们提供资金帮助她们创业，并将她们的想法变为现实。获奖者还会获得指导和资源，帮助她们发展业务。</p>
+<h3>联邦快递电子商务学习实验室拨款</h3>
+<p>联邦快递拨款帮助电子商务初创企业发展其在线业务，提供资金以及专家建议和资源。这对初创企业改进在线销售和扩张来说是一个绝佳的机会。</p>
+<p>要了解更多关于纽约州的这些和其他拨款的信息，请查看Pace SBDC。</p>
+<h2>纽约州女企业家拨款</h2>
+<p>纽约州为帮助女性企业发展提供了大量机会，并为女性企业提供专门的拨款，为女性企业主提供大力支持。我们将重点介绍两个拨款：WomensNet的Amber拨款和Black Girl Ventures的BGV Pitch。</p>
+<h3>WomensNet的Amber拨款</h3>
+<p>Amber拨款旨在帮助女性经营自己的公司。WomensNet在过去三年中已经发放了近200万美元的拨款。他们每月发放1万美元，帮助女性创业或发展业务；每年年底还会额外发放三笔2.5万美元的拨款；此外，每年还有三名女性可以赢得总计3.5万美元的拨款。Amber拨款的获奖者还参加过《鲨鱼坦克》等电视节目，证明了这些拨款的巨大帮助。</p>
+<h3>Black Girl Ventures的BGV Pitch</h3>
+<p>BGV Pitch致力于加强对女性企业主，特别是女性有色人种的支持，帮助纽约州的女性获得发展业务所需的资源和资金。获得这些拨款需要付出努力，需要集中精力和周密的计划。BGV Pitch体现了对纽约州各种女性领导的企业的支持。</p>
+<h2>科技与创新拨款</h2>
+<p>纽约州提供许多拨款来刺激科技创新，包括用于创业研究和国际发展的资金。各种项目负责这些拨款，旨在促进创新，跟上全球市场，推动科技进步。让我们深入了解初创企业的主要拨款：</p>
+<h3>SBIR/STTR拨款</h3>
+<p>SBIR和STTR项目是推动科技研发的重要力量，面向专注于有影响力研究的小型企业，帮助将想法从研究转化为市场产品。纽约州有293项技术拨款，本地企业有很多机会发展其科技项目。这些拨款促进了科技进步，并吸引了多元化人才的参与。</p>
+<h3>全球纽约STEP拨款</h3>
+<p>全球纽约STEP拨款帮助初创企业走向国际，为出口提供支持，打开通往新市场的大门，增强全球竞争力。还提供资金用于利用人工智能应对气候变化。这些拨款使企业能够在全球范围内扩张，并有效地促进创新。</p>
+<h3>全球纽约拨款项目</h3>
+<p>全球纽约拨款项目是对STEP拨款的补充，为国际发展提供资金，面向准备进军海外市场的公司，提供资源以减轻全球扩张的风险，包括对加密软件和农村宽带服务的支持。这些努力共同全面支持那些致力于全球成功的企业。</p>
+<p>这些拨款对于希望创新和发展的企业至关重要，支持研究、科技进步和国际扩张。这些资金有助于在纽约州创造一个强大的创业环境，使初创企业能够克服科技资金方面的挑战，这不仅有助于科技创新，而且还能促进经济增长，并将纽约州定位为全球领先的科技和创新中心。</p>
+<h2>纽约州初创企业的行业特定拨款</h2>
+<p>纽约州提供一系列行业特定拨款，以促进其多元化经济发展。医疗保健、金融科技和绿色能源领域的初创企业可以获得大量资金援助，这对于这些行业的企业发展至关重要。</p>
+<p>在医疗保健领域，有针对新型医疗解决方案的拨款，帮助初创企业和成熟公司。SBA的SBIR和STTR项目等拨款用于科技和科学进步。少数族裔企业发展署中心也帮助企业找到所需的资金。</p>
+<p>金融科技行业从独特的融资项目中受益，其中一个项目为早期初创企业提供5万至25万美元的资金，帮助他们发展壮大，从而在该行业占据一席之地。</p>
+<p>对于绿色能源初创企业，纽约州能源研发与促进署(NYSERDA)提供了帮助，例如企业准备和复原力拨款，最高可达5000美元；还有一个项目支付暖通空调企业90%的实习工资，帮助建设绿色能源劳动力队伍。</p>
+        <small class="page-url url "><a href="https://www.every.io/blog-post/startups-grants-in-new-york" target="_blank">(https://www.every.io/blog-post/startups-grants-in-new-york)</a><br></small>
+    </div>
+
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 获取所有导航链接
+        const navLinks = document.querySelectorAll(".navigate-item");
+        // 将导航链接与目标元素建立映射关系
+        const connections = Array.from(navLinks).map(link => {
+            const targetId = link.getAttribute("href").substring(1); // 去掉 #
+            const targetElement = document.getElementById(targetId);
+            return { link, targetElement };
+        });
+        // 使用 IntersectionObserver 观察目标元素
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const { target, isIntersecting } = entry;
+                    const matchingLink = connections.find(connection => connection.targetElement === target).link;
+                    if (isIntersecting) {
+                        // 目标元素在视野中，添加高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.add("active");
+                    } else {
+                        // 目标元素离开视野，移除高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.remove("active");
+                    }
+                });
+            },
+            {
+                root: null, // 默认视口
+                threshold: 0.02
+            }
+        );
+
+        // 开始观察所有目标元素
+        connections.forEach(({ targetElement }) => observer.observe(targetElement));
+    });
+</script>
+<script>
+    // 获取元素
+    const resizer = document.querySelector('.resizer');
+    const leftColumn = document.querySelector('.left-column');
+    const rightColumn = document.querySelector('.right-column');
+    const navigate = document.querySelector('.navigate')
+
+    let isDragging = false;
+
+    // 鼠标按下事件
+    resizer.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        document.body.style.cursor = 'col-resize';
+        document.body.style.userSelect = 'none';
+    });
+
+    // 鼠标移动事件
+    document.addEventListener('mousemove', (event) => {
+        if (!isDragging) return;
+
+        // 计算新的宽度
+        const newLeftWidth = event.clientX / window.innerWidth * 100; // 转换为百分比
+
+        // 限制宽度范围
+        if (newLeftWidth > 15 && newLeftWidth < 70) {
+            leftColumn.style.flexBasis = `${newLeftWidth}%`;
+            rightColumn.style.flexBasis = `${100 - newLeftWidth}%`;
+            navigate.style.left = `${newLeftWidth + 0.15 * (100 - newLeftWidth)}%`
+            navigate.style.maxWidth = `${0.7 * (100 - newLeftWidth)}%`
+
+            const navigateRect = navigate.getBoundingClientRect();
+            const screenWidth = window.innerWidth;
+
+            // 获取右侧部分宽度
+            const rightColumnWidth = rightColumn.getBoundingClientRect().width;
+
+            // 计算 navigate 的占屏幕宽度比例
+            const navigateWidthPercentage = (navigateRect.width / screenWidth) * 100;
+
+            // 计算 navigate 居中所需的 left 值
+            const rightColumnLeft = rightColumn.getBoundingClientRect().left;
+            const navigateLeft = rightColumnLeft + (rightColumnWidth - navigateRect.width) / 2;
+
+            // 设置 navigate 的宽度和位置
+            navigate.style.left = `${navigateLeft}px`;
+        }
+    });
+
+    // 鼠标松开事件
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        document.body.style.cursor = 'default';
+        document.body.style.userSelect = 'auto';
+    });
+</script>
+</html>

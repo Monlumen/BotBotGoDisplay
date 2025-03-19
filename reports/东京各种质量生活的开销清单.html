@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>在东京的各种质量生活的开销清单(所谓开销清单就是在各种事项上花费多少)?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; 
+            background-color: #f4f6f8; 
+            color: #333; 
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        
+        .content {
+            border-radius: 12px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); 
+            background-color: #fff; 
+            padding: 16px; 
+            margin-bottom: 16px; 
+        }
+
+        
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .left-column{
+            flex: 0.47;
+        }
+        .right-column{
+            flex: 0.53;
+        }
+
+        .left-column {
+            background-color: #eef6ff; 
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; 
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Noto Serif", "SimSun", serif; 
+            position: relative;
+        }
+        .resizer {
+            width: 6px;
+            cursor: col-resize;
+            background-color: #d1d1d1;
+        }
+
+
+        
+        .title {
+            font-size: 1.4em; 
+            font-weight: 600; 
+            color: #1a1a1a; 
+            margin-bottom: 12px; 
+        }
+
+        .page-name.title {
+            font-size: 1.8em; 
+            font-weight: bold; 
+            color: #222; 
+            margin: 16px 0; 
+            text-align: left; 
+        }
+
+        .section-title {
+            font-size: 1.4em; 
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; 
+        }
+
+        
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; 
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; 
+            padding: 12px; 
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; 
+            border: 1px solid #dde3ea; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+            margin-bottom: 20px; 
+        }
+
+        
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; 
+            margin: 20px 0; 
+        }
+
+        
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; 
+            color: #666; 
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; 
+            border-radius: 8px; 
+            line-height: 1.4;
+            margin-bottom: 10px; 
+        }
+
+        
+        .page-rating {
+            background-color: #e8f4ff; 
+            color: #0078d7; 
+            font-weight: bold; 
+            border: 1px solid #aad4ff; 
+        }
+
+        
+        .page-annotation {
+            background-color: #fff5e5; 
+            color: #cc8400; 
+            font-style: italic; 
+            border: 1px solid #ffcc66; 
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; 
+        }
+
+        
+        a {
+            color: #0078d7; 
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+        
+        .content > * {
+            margin-bottom: 12px; 
+        }
+
+        
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; 
+            z-index: 300; 
+            background-color: #ffffff; 
+            color: #222; 
+            font-size: 1.1em; 
+            font-weight: 500; 
+            padding: 12px 16px; 
+            border-radius: 8px; 
+            border: 1px solid #d1e4f2; 
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05),  0 2px 4px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 16px; 
+            text-align: left; 
+            line-height: 1.6; 
+            font-family: "Inter", "Noto Sans", sans-serif; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        
+        .section-link-box {
+            display: inline-block; 
+            margin: 4px 2px; 
+        }
+
+        .section-link {
+            display: inline-flex; 
+            align-items: center; 
+            padding: 6px 12px; 
+            background-color: #eef6ff; 
+            color: #0078d7; 
+            font-size: 0.95em; 
+            font-weight: 500; 
+            text-decoration: none; 
+            border: 1px solid #d1e4f2; 
+            border-radius: 20px; 
+            transition: all 0.2s ease; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; 
+            color: #005bb5; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            text-decoration: underline; 
+        }
+
+        
+        .navigate {
+            display: flex; 
+            max-width: 40%;
+            width: fit-content; 
+            flex-wrap: nowrap; 
+            overflow-x: auto; 
+            gap: 4px; 
+            justify-content: center; 
+            padding: 4px 4px; 
+            background-color: #f4f6f8; 
+            border-radius: 12px; 
+
+            position: fixed;
+            top: 0;
+            left: 55%;
+            
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease; 
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        
+        .navigate-item {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            background-color: #ffffff; 
+            padding: 3px 6px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            transition: all 0.3s ease; 
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            transform: translateY(2px); 
+        }
+        .navigate-item.active {
+            box-shadow: 0 0 10px 3px rgba(0, 120, 215, 0.5); 
+            transform: translateY(1px); 
+        }
+        .navigate-item a {
+            text-decoration: none; 
+            color: #0078d7; 
+            font-weight: bold; 
+            font-size: 1em; 
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; 
+            margin-bottom: 1px; 
+        }
+        .navigate-item-id {
+            font-size: 0.9em; 
+            color: #555; 
+        }
+
+        [id] { 
+            scroll-margin-top: 55px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            在东京的各种质量生活的开销清单(所谓开销清单就是在各种事项上花费多少)?
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">住宿费用分析</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Prices-and-living-costs-in-Japan">
+    🏠租金水平</a></div><div class="section-link-box"><a class="section-link" href="#What-is-the-average-rent-in-Tokyo?---Blog">
+    公寓类型</a></div><div class="section-link-box"><a class="section-link" href="#Short-Term-Rental-vs-Long-Term-Rental-vs-Serviced-Apartment:-What’s-the-Difference-in-Tokyo?---Apts.jp-Tokyo-Life-Blog">
+    🔑短租与长期租赁</a></div></div>
+    <div class="section-content content"><h2>东京住宿费用分析：</h2>
+<p><strong>1. 地区差异及租金水平:</strong> 东京市中心六区（港区、涩谷区、新宿区、文京区、千代田区和中央区）的租金显著高于全市平均水平。根据数据，在这些中心区域，不同户型公寓的月租金（不含水电费等公用事业费用）如下：1R公寓平均71,583日元（约合652美元）；1K公寓平均81,217日元（约合739美元）；1LDK公寓平均120,974日元（约合1101美元）；2LDK公寓平均181,996日元（约合1657美元）；3LDK公寓平均266,352日元（约合2425美元）；4LDK及以上户型平均456,886日元（约合4159美元）。  东京市中心以外地区，租金水平则明显降低。全国范围内，一居室公寓(20-40平方米)平均月租金在5万到7万日元之间。</p>
+<p><strong>2. 租赁类型与费用:</strong>  东京的租赁方式主要分为长期租赁（一年或以上）和短期租赁（一周到十二个月）。数据显示，在东京，带家具的短期租赁公寓月租金比相同面积的无家具长期租赁公寓高出约20%。  长期租赁合同通常至少为两年，且公寓通常不含家具及水电费等公用事业费用，租客需自行承担。此外，长期租赁的入住成本也较高，平均需支付5.5到7个月的租金作为入住费用。</p>
+<p><strong>3.  其他因素:</strong>  选择公寓时，还需考虑宠物饲养政策。大多数公寓不允许养宠物，但可以找到允许养宠物的公寓，通常需要支付额外的宠物押金（至少一个月租金）。  此外，大多数长期租赁公寓不包含家具（除非租赁清单另有说明），租客需要自行购买或租赁家具电器，并承担水电气网络等费用，这需要在预算中额外考虑。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">餐饮开销研究</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Crunching-Numbers:-The-Average-Meal-Cost-in-Japan-in-2023-|-by-zenDine-|-Medium">
+    🍣便利店餐饮</a></div><div class="section-link-box"><a class="section-link" href="#Tokyo-Convenience-Store-Food-Prices-2024-»-Just-Gone-Wandering">
+    🍱便当与三明治</a></div><div class="section-link-box"><a class="section-link" href="#Junior-high-school-tuition-fees-in-Tokyo-at-DuckDuckGo">
+    📚</a></div></div>
+    <div class="section-content content"><h2>东京餐饮开销研究：</h2>
+<p>本报告旨在帮助用户了解东京餐饮费用的实际情况，并提供有效的预算规划建议。以下数据基于2023-2024年公开信息及多方报告，价格以日元（¥）计，并考虑汇率波动可能对预算造成的影响。</p>
+<p><strong>一、餐厅用餐：</strong></p>
+<ul>
+<li><strong>平均每餐费用:</strong>  根据zenDine的报告，日本（包括东京）平均每日餐饮费用约为3670日元（约合人民币230元）。此费用涵盖各种就餐选择，从便利店到高档餐厅不等。  实际费用则取决于餐厅类型和菜品选择，范围极广：快餐店午餐约¥800-¥1000，普通餐厅午餐¥1000-¥2000，晚餐则通常更高，¥2000-¥3000甚至更高，高档寿司店每餐费用可超过¥10000。</li>
+<li><strong>午餐费用 (参考):</strong> ¥1000 - ¥2000 (普通餐厅)。  快餐选择（拉面、寿喜烧等）可能低至¥400-¥1000。</li>
+<li><strong>家常定食 (参考):</strong> ¥1000左右，但价格会因餐厅和菜品而异。</li>
+</ul>
+<p><strong>二、便利店用餐:</strong></p>
+<p>便利店提供经济实惠的用餐选择，显著降低餐饮开销：</p>
+<ul>
+<li><strong>平均每餐费用:</strong>  ¥400 - ¥600。  Just Gone Wandering的报告显示，便利店三明治价格约¥289-¥484，饭团¥149-¥181，拉面¥546-¥646，便当¥659。</li>
+<li><strong>三明治:</strong>  ¥289-¥484 (金枪鱼鸡蛋三明治到猪排三明治不等)。</li>
+<li><strong>便当:</strong>  ¥659起。</li>
+<li><strong>米饭团 (Onigiri):</strong>  ¥149 - ¥181 (金枪鱼蛋黄酱到辣味油鱼子不等)。</li>
+<li><strong>熟食 (参考):</strong> 根据Just Gone Wandering对东京便利店价格的调查报告，冷冻食品（汉堡扒咖喱饭等）价格通常在¥397-¥570左右。</li>
+<li><strong>饮料：</strong> 软饮料¥100-¥150, 酒精饮料¥500-¥800（视种类和场所而定）。</li>
+</ul>
+<p><strong>三、就餐途径建议：</strong></p>
+<p>为了有效控制餐饮预算，建议：</p>
+<ul>
+<li><strong>充分利用便利店:</strong> 便捷、物美价廉，适合快餐及简易餐食。</li>
+<li><strong>选择经济型餐厅:</strong> 例如拉面店（¥600-¥1200）、回转寿司店（比传统寿司店更经济实惠）、居酒屋（每道菜¥300-¥600）、家庭餐厅（促销活动时价格更低）。</li>
+<li><strong>避开就餐高峰期:</strong> 部分餐厅可能会在非高峰时段提供折扣。</li>
+<li><strong>善用超市促销:</strong> 超市在关门前会对即食餐点进行打折。</li>
+</ul>
+<p>总而言之，东京的餐饮费用存在极大的差异，合理的规划和选择可以有效控制开支，避免预算超支。  以上信息仅供参考，实际价格受多种因素影响，建议用户在出行前进行更详细的调查。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">交通费用解析</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Cheap-Tickets-&-IC-Cards-|-The-Official-Tokyo-Travel-Guide,-GO-TOKYO">
+    交通费用</a></div><div class="section-link-box"><a class="section-link" href="#How-the-Tokyo-Metro-Handles-Rush-Hour-to-Operate-On-Time---Rail---Metro-Magazine">
+    </a></div><div class="section-link-box"><a class="section-link" href="#University-tuition-fees-in-Tokyo-at-DuckDuckGo">
+    🎓</a></div></div>
+    <div class="section-content content"><h2>东京公共交通费用解析：</h2>
+<p>本节分析东京公共交通的成本效益，以帮助用户选择最经济的出行方案。东京公共交通系统发达，包括地铁、巴士、JR线等，运营公司不同，票价也各有差异。</p>
+<p><strong>单程票价：</strong>  根据距离和运营商不同，单程票价波动较大，一般在180至330日元之间。</p>
+<p><strong>IC卡 (Suica/PASMO)：</strong>  使用Suica或PASMO卡可简化支付流程，并享有部分优惠。Suica卡售价1000日元起 (包含500日元押金及500日元可用金额)，可用于首都圈及日本其他地区众多铁路和巴士线路，部分商店也可使用。Welcome Suica卡面向短期外国游客，无需押金，有效期28天，售价同样为1000日元起。PASMO卡也类似，需支付500日元押金。使用手机移动Suica或PASMO应用程序，也能实现便捷支付及充值。</p>
+<p><strong>一日券及多日券：</strong>  为方便游客，东京提供多种一日券及多日券，例如：</p>
+<ul>
+<li><strong>东京一日券 (Tokyo Free Kippu):</strong>  1600日元 (成人)/800日元 (儿童)，适用范围涵盖东京23区内的JR线、东京地铁、都营地铁、都营巴士、都电荒川线和日暮里-舍人线。</li>
+<li><strong>都营一日券 (Toei Marugoto Kippu):</strong> 700日元 (成人)/350日元 (儿童)，适用都营地铁、都营巴士、都电荒川线和日暮里-舍人线。</li>
+<li><strong>东京地铁和都营地铁共通一日券:</strong> 900日元 (成人)/450日元 (儿童)，适用所有东京地铁和都营地铁线路。</li>
+<li><strong>东京地铁24/48/72小时券:</strong>  分别为800/1200/1500日元(成人)，400/600/750日元(儿童)，仅限东京地铁线路。</li>
+</ul>
+<p><strong>月票:</strong> 东京地铁月票价格为17670日元，适合长期居住或频繁使用地铁的乘客。</p>
+<p><strong>成本效益建议:</strong>  选择何种票务取决于个人行程及预算。  如每天乘坐次数少且停留时间短，单程票可能更经济；如每天乘坐次数多或停留时间长，则一日券、多日券或月票更划算。  建议用户根据自身情况，结合以上票价信息及适用范围，选择最经济的方案。  东京地铁每日运送800万人次，高峰期最小发车间隔仅为1分50秒，体现了其运营效率，但选择合适的票务依然能有效控制交通支出。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">娱乐活动费用明细</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Ultimate-Guide-to-Amusement-Parks-in-Tokyo-|-Japan-Switch">
+    游乐园</a></div><div class="section-link-box"><a class="section-link" href="#Tokyo-cinema-ticket-prices-and-entertainment-options-at-DuckDuckGo">
+    电影票价</a></div><div class="section-link-box"><a class="section-link" href="#Crunching-Numbers:-The-Average-Meal-Cost-in-Japan-in-2023-|-by-zenDine-|-Medium">
+    🍣餐饮费用</a></div><div class="section-link-box"><a class="section-link" href="#Tokyo-entertainment-activities-diversity-amusement-parks-cinemas-at-DuckDuckGo">
+    娱乐活动</a></div><div class="section-link-box"><a class="section-link" href="#University-tuition-fees-in-Tokyo-at-DuckDuckGo">
+    🎓</a></div><div class="section-link-box"><a class="section-link" href="#Junior-high-school-tuition-fees-in-Tokyo-at-DuckDuckGo">
+    📚</a></div><div class="section-link-box"><a class="section-link" href="#Elementary-school-tuition-fees-in-Tokyo-at-DuckDuckGo">
+    🏫</a></div><div class="section-link-box"><a class="section-link" href="#Language-training-costs-in-Tokyo-at-DuckDuckGo">
+    🗣</a></div><div class="section-link-box"><a class="section-link" href="#Art-training-costs-in-Tokyo-at-DuckDuckGo">
+    🎨</a></div><div class="section-link-box"><a class="section-link" href="#Tokyo-Convenience-Store-Food-Prices-2024-»-Just-Gone-Wandering">
+    🍱</a></div><div class="section-link-box"><a class="section-link" href="#Cheap-Tickets-&-IC-Cards-|-The-Official-Tokyo-Travel-Guide,-GO-TOKYO">
+    </a></div></div>
+    <div class="section-content content"><h2>娱乐活动费用明细</h2>
+<p>东京的娱乐活动费用差异显著，以下列举部分类型及价格区间，具体费用以官方网站信息为准，并可能因促销活动、日期和项目选择而异：</p>
+<p><strong>一、主题乐园:</strong></p>
+<ul>
+<li>
+<p><strong>东京迪士尼乐园及东京迪士尼海洋:</strong> 成人一日票8,500日元，儿童一日票5,000日元。<sup>[1]</sup>  两座乐园位于同一度假区，可考虑多日游玩。<sup>[1]</sup>  乐园内设有针对不同年龄段的游乐设施及表演，例如针对儿童的米奇见面会、魅惑的提基小屋（史迪奇尤克里里表演）、飞象、小熊维尼历险记等；面向成人及家庭的加勒比海盗、鬼屋等。<sup>[1]</sup></p>
+</li>
+<li>
+<p><strong>乐高探索中心东京:</strong>  门票价格与其他大型主题乐园相当，但景点数量相对较少，部分人可能认为略贵。<sup>[1]</sup></p>
+</li>
+<li>
+<p><strong>其他主题乐园:</strong>  例如Joypolis和东京巨蛋城等，价格因乐园及游乐项目而异，部分乐园可能免费入园，但需另付游乐项目费用。</p>
+</li>
+</ul>
+<p><strong>二、电影院:</strong></p>
+<ul>
+<li>
+<p><strong>东宝电影院 (Toho Cinemas):</strong> 普通票价1,800日元，大学生票价1,500日元；每月1日为优惠日，票价1,300日元。<sup>[2]</sup></p>
+</li>
+<li>
+<p><strong>其他影院 (例如Cinema IKSPIARI):</strong> 学生及儿童票价1,000日元，老年票价1,300日元。<sup>[2]</sup>  具体价格根据影院、影片及放映时间而异。</p>
+</li>
+</ul>
+<p><strong>三、其他娱乐活动:</strong>  东京拥有众多博物馆、景点及表演场所，费用因场所而异，建议提前查询。 例如，Zepp DiverCity等综合娱乐中心，以及TeamLab Planets等沉浸式体验馆。<sup>[3]</sup></p>
+<p><strong>注释:</strong></p>
+<p>[1] Ultimate Guide to Amusement Parks in Tokyo | Japan Switch
+[2] Tokyo cinema ticket prices and entertainment options at DuckDuckGo
+[3] Tokyo entertainment activities diversity amusement parks cinemas at DuckDuckGo</p></div>
+</div><div class="section">
+    <h3 class="section-title title">购物费用概览</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Price-List-Of-Japan-Clothes-Prices-2024-New-Updated">
+    衣物价格</a></div><div class="section-link-box"><a class="section-link" href="#University-tuition-fees-in-Tokyo-at-DuckDuckGo">
+    🎓学费</a></div><div class="section-link-box"><a class="section-link" href="#Elementary-school-tuition-fees-in-Tokyo-at-DuckDuckGo">
+    🏫教育费用</a></div><div class="section-link-box"><a class="section-link" href="#Tokyo-Convenience-Store-Food-Prices-2024-»-Just-Gone-Wandering">
+    🍱食品价格</a></div><div class="section-link-box"><a class="section-link" href="#Junior-high-school-tuition-fees-in-Tokyo-at-DuckDuckGo">
+    📚学费</a></div><div class="section-link-box"><a class="section-link" href="#Crunching-Numbers:-The-Average-Meal-Cost-in-Japan-in-2023-|-by-zenDine-|-Medium">
+    🍣餐饮费用</a></div><div class="section-link-box"><a class="section-link" href="#Tokyo-health-insurance-coverage-details-at-DuckDuckGo">
+    医保覆盖</a></div><div class="section-link-box"><a class="section-link" href="#What-is-the-average-rent-in-Tokyo?---Blog">
+    房租价格</a></div><div class="section-link-box"><a class="section-link" href="#The-Cost-of-Living-in-Japan:-Updated-2023-|-MailMate">
+    🛒家居用品花费</a></div><div class="section-link-box"><a class="section-link" href="#Art-training-costs-in-Tokyo-at-DuckDuckGo">
+    🎨</a></div><div class="section-link-box"><a class="section-link" href="#Tokyo-medical-costs-at-DuckDuckGo">
+    🏥</a></div><div class="section-link-box"><a class="section-link" href="#Short-Term-Rental-vs-Long-Term-Rental-vs-Serviced-Apartment:-What’s-the-Difference-in-Tokyo?---Apts.jp-Tokyo-Life-Blog">
+    🔑</a></div><div class="section-link-box"><a class="section-link" href="#Language-training-costs-in-Tokyo-at-DuckDuckGo">
+    🗣</a></div><div class="section-link-box"><a class="section-link" href="#Tokyo-doctor-consultation-fee-at-DuckDuckGo">
+    </a></div><div class="section-link-box"><a class="section-link" href="#Tokyo-doctor-specialist-fees-at-DuckDuckGo">
+    </a></div><div class="section-link-box"><a class="section-link" href="#Tokyo-health-insurance-costs-and-coverage-at-DuckDuckGo">
+    </a></div><div class="section-link-box"><a class="section-link" href="#Prices-and-living-costs-in-Japan">
+    🏠</a></div><div class="section-link-box"><a class="section-link" href="#Best-home-and-lifestyle-stores-in-Tokyo-|-Time-Out-Tokyo">
+    🛍</a></div></div>
+    <div class="section-content content"><h2>购物费用概览：东京生活成本细则</h2>
+<p><strong>服装:</strong>  东京服装价格差异巨大，取决于品牌、材质和购买地点。</p>
+<ul>
+<li>
+<p><strong>基础款 (T恤、牛仔裤、休闲裤等):</strong>  价格区间¥1,000至¥15,000不等。  廉价品牌T恤低至¥1,000，而知名品牌牛仔裤可能超过¥10,000。普通休闲裙的价格范围也落在¥3,000至¥15,000之间。</p>
+</li>
+<li>
+<p><strong>中档服装 (衬衫、裤子、裙子等):</strong> 价格范围在¥5,000至¥20,000。  例如，一件中等价位的衬衫可能在¥5,000到¥15,000之间，而高质量的裤子或裙子则可以达到¥15,000到¥20,000。</p>
+</li>
+<li>
+<p><strong>高端服装 (设计师品牌):</strong>  价格从¥15,000起，可以远高于¥50,000。设计师品牌衬衫和女衬衫的价格可能在¥15,000到¥50,000甚至更高；设计师款裤装和裙装的价格则在¥20,000到¥80,000，甚至更高价位；高端礼服或和服的价格则可能高达¥200,000以上。</p>
+</li>
+</ul>
+<p><strong>传统服装:</strong></p>
+<ul>
+<li><strong>和服:</strong> ¥10,000至¥100,000或以上，取决于面料、工艺和款式。</li>
+<li><strong>浴衣:</strong> ¥5,000至¥30,000，取决于面料和设计。</li>
+<li><strong>传统配饰 (木屐、腰带等):</strong> ¥1,000至¥20,000，取决于质量和工艺。</li>
+</ul>
+<p><strong>日用品:</strong></p>
+<ul>
+<li><strong>家具及家居用品:</strong>  平均每月支出约为¥12,390 (2023年数据，可能因个人消费习惯而异)。  这仅为平均值，实际支出可能因选择的商品和品牌而有很大差异。  大型家具的购置成本则会显著提高整体支出。</li>
+</ul>
+<p><strong>食品:</strong>  便利店和超市购物可以有效控制食品成本。</p>
+<ul>
+<li>
+<p><strong>便利店食品:</strong> 三明治价格在¥289 (金枪鱼蛋三明治) 到¥484 (猪排三明治)之间；饭团价格在¥149 (金枪鱼蛋黄酱饭团) 到¥570 (汉堡扒咖喱饭)之间；拉面价格在¥546到¥646之间；便当价格通常在¥659左右；水果价格差异较大，例如香蕉约¥322一根，小包装葡萄约¥259；牛奶价格为¥177（500毫升）或¥257（1升）。  瓶装饮料，例如咖啡和可乐，价格通常在¥100到¥200之间。</p>
+</li>
+<li>
+<p><strong>超市食品:</strong>  价格通常低于便利店，而且在关门前会有促销活动。</p>
+</li>
+</ul>
+<p><strong>折扣信息:</strong></p>
+<ul>
+<li>
+<p><strong>服装:</strong>  夏季折扣（六月底至七月中旬）通常提供30%到50%的折扣；新年首次促销（Hatsu-uri）也提供显著折扣。</p>
+</li>
+<li>
+<p><strong>日用品:</strong>  AEON MALL等大型购物中心和家居用品商店经常会有季节性促销和折扣活动。</p>
+</li>
+</ul>
+<p><strong>整体预算:</strong>  具体的购物预算取决于个人生活方式和购物偏好，但以上数据提供了在东京购物的参考价格区间。  建议在购物前查阅当地商店的促销信息，以获得更优惠的价格。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">杂费情况调查</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Tokyo-average-gym-membership-cost-at-DuckDuckGo">
+    🏋健身房费用</a></div><div class="section-link-box"><a class="section-link" href="#Tokyo-medical-costs-at-DuckDuckGo">
+    🏥医疗费用</a></div><div class="section-link-box"><a class="section-link" href="#Tokyo-average-haircut-cost-at-DuckDuckGo">
+    ✂理发价格</a></div><div class="section-link-box"><a class="section-link" href="#Tokyo-doctor-consultation-fee-at-DuckDuckGo">
+    </a></div></div>
+    <div class="section-content content"><h2>杂费情况调查：理发、健身及医疗费用细则</h2>
+<p>根据用户对话记录，对东京理发、健身及医疗费用的调查结果如下：</p>
+<p><strong>一、 理发费用：</strong>  价格区间跨度较大，取决于服务项目和理发店类型。</p>
+<ul>
+<li><strong>经济型理发店:</strong>  男士基本剪发费用通常在1000至2000日元之间 (仅限剪发，不含洗发等)，例如QB House等连锁店。某些地区，例如奈良，价格可能更低。</li>
+<li><strong>中高端理发店:</strong>  标准男士理发费用在3000至6000日元不等，尤其在东京外国人聚集区，平均价格约为4189日元。</li>
+<li><strong>高端理发店及附加服务:</strong>  包含染发、造型或头部SPA等服务的费用则显著提高，基本理发费用在6500至15000日元之间，附加服务费用约需额外10000日元。  在东京，一次包含染发或其他护理的理发，费用可能高达20000日元。</li>
+</ul>
+<p><strong>二、 健身费用：</strong>  健身房会员费差别较大，受健身房类型及会员计划影响。</p>
+<ul>
+<li><strong>商业区健身房月卡：</strong> 价格约为9678日元。</li>
+<li><strong>私人健身房月费：</strong> 从约7500日元到近20000日元不等。</li>
+<li><strong>综合性康乐体育俱乐部：</strong>  单次访问费用通常在2000至3000日元。  月费会员计划通常在7000至11000日元之间，并可能包含仅限白天的计划、家庭计划或课程等不同选择。</li>
+</ul>
+<p><strong>三、 医疗费用：</strong>  费用受医生类型、就诊类型（初诊或复诊）及保险覆盖情况影响。</p>
+<ul>
+<li><strong>普通科医生咨询费：</strong> 从15400日元起。</li>
+<li><strong>专科医生咨询费：</strong> 从16000日元起。</li>
+<li><strong>初诊费用：</strong>  在一般诊所，初诊费用通常在3000至5000日元之间，部分国际诊所首次问诊费为2820日元（包含保险并支付30%自付费用后为850日元）。  日本健康保险体系下，建议携带5000至10000日元以备不时之需。</li>
+<li><strong>医疗保险报销:</strong>  日本患者需支付医疗费用的30%。  如果费用较高，可以报销高达80-90% (低收入者比例更高)，个人公共医疗保险平均费用约占工资的5%。</li>
+</ul>
+<p>这些信息能够帮助用户更有效地规划在东京的生活预算。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">教育费用总结</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#University-tuition-fees-in-Tokyo-at-DuckDuckGo">
+    🎓大学学费</a></div><div class="section-link-box"><a class="section-link" href="#Junior-high-school-tuition-fees-in-Tokyo-at-DuckDuckGo">
+    📚中学学费</a></div><div class="section-link-box"><a class="section-link" href="#Language-training-costs-in-Tokyo-at-DuckDuckGo">
+    🗣</a></div><div class="section-link-box"><a class="section-link" href="#Elementary-school-tuition-fees-in-Tokyo-at-DuckDuckGo">
+    🏫</a></div></div>
+    <div class="section-content content"><h2>教育费用总结：</h2>
+<p>东京教育机构的学费信息，数据来自多个来源，可能因学校、专业和年份而异：</p>
+<p><strong>高等教育:</strong></p>
+<ul>
+<li><strong>大学（本科）：</strong>  根据学校不同，学费每年在约82万日元至93万日元之间波动。例如，2019年东京大学本科生的学费约为5000美元 (约67万日元，按当时汇率计算)。  2025年，东京大学计划将学费提高20%。  部分院校研究生院学费约为82万至90万日元。  理学院及工学院的具体费用包括考试费3.5万日元，入学费24万日元，学费138万日元。</li>
+</ul>
+<p><strong>中等教育:</strong></p>
+<ul>
+<li>
+<p><strong>高中：</strong>  公立高中和私立高中的学费差异显著。  根据2024-2025学年数据，私立高中学费高达2,370,000日元，而公立高中的费用则显著低于此数。</p>
+</li>
+<li>
+<p><strong>初中：</strong>  同样，公立初中（约538,799日元/年）与私立初中（约1,436,353日元/年）学费相差近三倍。  2025-2026学年，私立初中还可能收取15万日元的建设费。</p>
+</li>
+</ul>
+<p><strong>义务教育:</strong></p>
+<ul>
+<li><strong>小学：</strong>  公立小学的年均学费约为352,566日元，私立小学学费则高得多，约为1,666,949日元，是公立学校的近五倍。  根据另一些数据，2024-2025学年私立小学学费高达2,350,000日元。</li>
+</ul>
+<p><strong>其他教育:</strong></p>
+<ul>
+<li><strong>语言培训:</strong>  日语课程费用差异很大。短期课程（10周）学费约为17.7万至18.5万日元不等，另有入学费、材料费及设施费；而一年制的语言学校学费约为1,120,000日元（约合8,000美元）；每周课程的费用约为200美元，外加138美元的注册费。</li>
+</ul>
+<p><strong>总结:</strong>  东京的教育费用差异极大，取决于学校类型（公立或私立）、教育阶段和具体课程。  对于计划在东京接受教育的家庭和个人，务必提前了解不同机构的具体收费标准，并做好充分的预算准备。  大学和中学的学费通常是最大的开支，而语言培训的费用也是留学生需要重点考虑的因素。</p></div>
+</div>
+</div>
+<div class="resizer"></div>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item" href="#University-tuition-fees-in-Tokyo-at-DuckDuckGo">
+    <a href="#University-tuition-fees-in-Tokyo-at-DuckDuckGo" class="navigate-item-emoji ">🎓</a>
+    <a href="#University-tuition-fees-in-Tokyo-at-DuckDuckGo" class="navigate-item-id">1</a>
+</div><div class="navigate-item" href="#Junior-high-school-tuition-fees-in-Tokyo-at-DuckDuckGo">
+    <a href="#Junior-high-school-tuition-fees-in-Tokyo-at-DuckDuckGo" class="navigate-item-emoji ">📚</a>
+    <a href="#Junior-high-school-tuition-fees-in-Tokyo-at-DuckDuckGo" class="navigate-item-id">2</a>
+</div><div class="navigate-item" href="#Tokyo-Convenience-Store-Food-Prices-2024-»-Just-Gone-Wandering">
+    <a href="#Tokyo-Convenience-Store-Food-Prices-2024-»-Just-Gone-Wandering" class="navigate-item-emoji ">🍱</a>
+    <a href="#Tokyo-Convenience-Store-Food-Prices-2024-»-Just-Gone-Wandering" class="navigate-item-id">3</a>
+</div><div class="navigate-item" href="#Tokyo-medical-costs-at-DuckDuckGo">
+    <a href="#Tokyo-medical-costs-at-DuckDuckGo" class="navigate-item-emoji ">🏥</a>
+    <a href="#Tokyo-medical-costs-at-DuckDuckGo" class="navigate-item-id">4</a>
+</div><div class="navigate-item" href="#Prices-and-living-costs-in-Japan">
+    <a href="#Prices-and-living-costs-in-Japan" class="navigate-item-emoji ">🏠</a>
+    <a href="#Prices-and-living-costs-in-Japan" class="navigate-item-id">5</a>
+</div><div class="navigate-item" href="#Short-Term-Rental-vs-Long-Term-Rental-vs-Serviced-Apartment:-What’s-the-Difference-in-Tokyo?---Apts.jp-Tokyo-Life-Blog">
+    <a href="#Short-Term-Rental-vs-Long-Term-Rental-vs-Serviced-Apartment:-What’s-the-Difference-in-Tokyo?---Apts.jp-Tokyo-Life-Blog" class="navigate-item-emoji ">🔑</a>
+    <a href="#Short-Term-Rental-vs-Long-Term-Rental-vs-Serviced-Apartment:-What’s-the-Difference-in-Tokyo?---Apts.jp-Tokyo-Life-Blog" class="navigate-item-id">6</a>
+</div><div class="navigate-item" href="#Elementary-school-tuition-fees-in-Tokyo-at-DuckDuckGo">
+    <a href="#Elementary-school-tuition-fees-in-Tokyo-at-DuckDuckGo" class="navigate-item-emoji ">🏫</a>
+    <a href="#Elementary-school-tuition-fees-in-Tokyo-at-DuckDuckGo" class="navigate-item-id">7</a>
+</div><div class="navigate-item" href="#Language-training-costs-in-Tokyo-at-DuckDuckGo">
+    <a href="#Language-training-costs-in-Tokyo-at-DuckDuckGo" class="navigate-item-emoji ">🗣</a>
+    <a href="#Language-training-costs-in-Tokyo-at-DuckDuckGo" class="navigate-item-id">8</a>
+</div><div class="navigate-item" href="#Crunching-Numbers:-The-Average-Meal-Cost-in-Japan-in-2023-|-by-zenDine-|-Medium">
+    <a href="#Crunching-Numbers:-The-Average-Meal-Cost-in-Japan-in-2023-|-by-zenDine-|-Medium" class="navigate-item-emoji ">🍣</a>
+    <a href="#Crunching-Numbers:-The-Average-Meal-Cost-in-Japan-in-2023-|-by-zenDine-|-Medium" class="navigate-item-id">9</a>
+</div><div class="navigate-item" href="#Art-training-costs-in-Tokyo-at-DuckDuckGo">
+    <a href="#Art-training-costs-in-Tokyo-at-DuckDuckGo" class="navigate-item-emoji ">🎨</a>
+    <a href="#Art-training-costs-in-Tokyo-at-DuckDuckGo" class="navigate-item-id">10</a>
+</div><div class="navigate-item" href="#The-Cost-of-Living-in-Japan:-Updated-2023-|-MailMate">
+    <a href="#The-Cost-of-Living-in-Japan:-Updated-2023-|-MailMate" class="navigate-item-emoji ">🛒</a>
+    <a href="#The-Cost-of-Living-in-Japan:-Updated-2023-|-MailMate" class="navigate-item-id">11</a>
+</div><div class="navigate-item" href="#Best-home-and-lifestyle-stores-in-Tokyo-|-Time-Out-Tokyo">
+    <a href="#Best-home-and-lifestyle-stores-in-Tokyo-|-Time-Out-Tokyo" class="navigate-item-emoji ">🛍</a>
+    <a href="#Best-home-and-lifestyle-stores-in-Tokyo-|-Time-Out-Tokyo" class="navigate-item-id">12</a>
+</div><div class="navigate-item" href="#Tokyo-average-gym-membership-cost-at-DuckDuckGo">
+    <a href="#Tokyo-average-gym-membership-cost-at-DuckDuckGo" class="navigate-item-emoji ">🏋</a>
+    <a href="#Tokyo-average-gym-membership-cost-at-DuckDuckGo" class="navigate-item-id">13</a>
+</div><div class="navigate-item" href="#Tokyo-average-haircut-cost-at-DuckDuckGo">
+    <a href="#Tokyo-average-haircut-cost-at-DuckDuckGo" class="navigate-item-emoji ">✂</a>
+    <a href="#Tokyo-average-haircut-cost-at-DuckDuckGo" class="navigate-item-id">14</a>
+</div><div class="navigate-item" href="#Tokyo-doctor-consultation-fee-at-DuckDuckGo">
+    <a href="#Tokyo-doctor-consultation-fee-at-DuckDuckGo" class="navigate-item-emoji hidden"></a>
+    <a href="#Tokyo-doctor-consultation-fee-at-DuckDuckGo" class="navigate-item-id">15</a>
+</div><div class="navigate-item" href="#Tokyo-haircut-price-range-recommendations-at-DuckDuckGo">
+    <a href="#Tokyo-haircut-price-range-recommendations-at-DuckDuckGo" class="navigate-item-emoji hidden"></a>
+    <a href="#Tokyo-haircut-price-range-recommendations-at-DuckDuckGo" class="navigate-item-id">16</a>
+</div><div class="navigate-item" href="#Tokyo-gym-types-membership-fees-at-DuckDuckGo">
+    <a href="#Tokyo-gym-types-membership-fees-at-DuckDuckGo" class="navigate-item-emoji hidden"></a>
+    <a href="#Tokyo-gym-types-membership-fees-at-DuckDuckGo" class="navigate-item-id">17</a>
+</div><div class="navigate-item" href="#Tokyo-doctor-specialist-fees-at-DuckDuckGo">
+    <a href="#Tokyo-doctor-specialist-fees-at-DuckDuckGo" class="navigate-item-emoji hidden"></a>
+    <a href="#Tokyo-doctor-specialist-fees-at-DuckDuckGo" class="navigate-item-id">18</a>
+</div><div class="navigate-item" href="#Tokyo-health-insurance-costs-and-coverage-at-DuckDuckGo">
+    <a href="#Tokyo-health-insurance-costs-and-coverage-at-DuckDuckGo" class="navigate-item-emoji hidden"></a>
+    <a href="#Tokyo-health-insurance-costs-and-coverage-at-DuckDuckGo" class="navigate-item-id">19</a>
+</div><div class="navigate-item" href="#Tokyo-health-insurance-coverage-details-at-DuckDuckGo">
+    <a href="#Tokyo-health-insurance-coverage-details-at-DuckDuckGo" class="navigate-item-emoji hidden"></a>
+    <a href="#Tokyo-health-insurance-coverage-details-at-DuckDuckGo" class="navigate-item-id">20</a>
+</div><div class="navigate-item" href="#What-is-the-average-rent-in-Tokyo?---Blog">
+    <a href="#What-is-the-average-rent-in-Tokyo?---Blog" class="navigate-item-emoji hidden"></a>
+    <a href="#What-is-the-average-rent-in-Tokyo?---Blog" class="navigate-item-id">21</a>
+</div><div class="navigate-item" href="#Price-List-Of-Japan-Clothes-Prices-2024-New-Updated">
+    <a href="#Price-List-Of-Japan-Clothes-Prices-2024-New-Updated" class="navigate-item-emoji hidden"></a>
+    <a href="#Price-List-Of-Japan-Clothes-Prices-2024-New-Updated" class="navigate-item-id">22</a>
+</div><div class="navigate-item" href="#Ultimate-Guide-to-Amusement-Parks-in-Tokyo-|-Japan-Switch">
+    <a href="#Ultimate-Guide-to-Amusement-Parks-in-Tokyo-|-Japan-Switch" class="navigate-item-emoji hidden"></a>
+    <a href="#Ultimate-Guide-to-Amusement-Parks-in-Tokyo-|-Japan-Switch" class="navigate-item-id">23</a>
+</div><div class="navigate-item" href="#Tokyo-cinema-ticket-prices-and-entertainment-options-at-DuckDuckGo">
+    <a href="#Tokyo-cinema-ticket-prices-and-entertainment-options-at-DuckDuckGo" class="navigate-item-emoji hidden"></a>
+    <a href="#Tokyo-cinema-ticket-prices-and-entertainment-options-at-DuckDuckGo" class="navigate-item-id">24</a>
+</div><div class="navigate-item" href="#Tokyo-entertainment-activities-diversity-amusement-parks-cinemas-at-DuckDuckGo">
+    <a href="#Tokyo-entertainment-activities-diversity-amusement-parks-cinemas-at-DuckDuckGo" class="navigate-item-emoji hidden"></a>
+    <a href="#Tokyo-entertainment-activities-diversity-amusement-parks-cinemas-at-DuckDuckGo" class="navigate-item-id">25</a>
+</div><div class="navigate-item" href="#Cheap-Tickets-&-IC-Cards-|-The-Official-Tokyo-Travel-Guide,-GO-TOKYO">
+    <a href="#Cheap-Tickets-&-IC-Cards-|-The-Official-Tokyo-Travel-Guide,-GO-TOKYO" class="navigate-item-emoji hidden"></a>
+    <a href="#Cheap-Tickets-&-IC-Cards-|-The-Official-Tokyo-Travel-Guide,-GO-TOKYO" class="navigate-item-id">26</a>
+</div><div class="navigate-item" href="#How-the-Tokyo-Metro-Handles-Rush-Hour-to-Operate-On-Time---Rail---Metro-Magazine">
+    <a href="#How-the-Tokyo-Metro-Handles-Rush-Hour-to-Operate-On-Time---Rail---Metro-Magazine" class="navigate-item-emoji hidden"></a>
+    <a href="#How-the-Tokyo-Metro-Handles-Rush-Hour-to-Operate-On-Time---Rail---Metro-Magazine" class="navigate-item-id">27</a>
+</div><div class="navigate-item" href="#Tokyo-Metro-All-line-Pass-|-Passes-|-Tokyo-Metro-Line">
+    <a href="#Tokyo-Metro-All-line-Pass-|-Passes-|-Tokyo-Metro-Line" class="navigate-item-emoji hidden"></a>
+    <a href="#Tokyo-Metro-All-line-Pass-|-Passes-|-Tokyo-Metro-Line" class="navigate-item-id">28</a>
+</div>
+    </div>
+    <div class="page"  id="University-tuition-fees-in-Tokyo-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🎓&nbsp;</span>University tuition fees in Tokyo at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:University tuition fees in Tokyo" target="_blank">(DDG:University tuition fees in Tokyo)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 该页面详述了不同教育机构的学费，对东京的教育费用提供了参考。<br></small>
+    </div>
+    <div class="page-content content"><h2>学费</h2>
+<p><strong>研究生院：</strong>约82万日元，约90万日元</p>
+<p><strong>大学（本科）：</strong>约82万日元，约93万日元</p>
+<p><strong>考试费、入学费、学费：</strong></p>
+<p><strong>理学院及工学院：</strong>3.5万日元，24万日元，138万日元</p>
+<p><strong>建筑学院：</strong></p>
+<p>大学为学生提供全面的支持，包括奖学金和学费减免。更多信息，请访问以下页面。</p>
+<h2>东京大学学费</h2>
+<p>东京大学计划在2025年提高学费20%。</p>
+<p>例如，排名靠前的东京大学（东大）本科生的学费每年约为5000美元。（2019年数据）大多数日本……</p>
+        <small class="page-url url "><a href="DDG:University tuition fees in Tokyo" target="_blank">(DDG:University tuition fees in Tokyo)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Junior-high-school-tuition-fees-in-Tokyo-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📚&nbsp;</span>Junior high school tuition fees in Tokyo at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Junior high school tuition fees in Tokyo" target="_blank">(DDG:Junior high school tuition fees in Tokyo)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 提供了东京各年级的学费，对教育开支趋势进行了探讨。<br></small>
+    </div>
+    <div class="page-content content"><h2>2024-2025学年学费</h2>
+<ul>
+<li>学费（年度）<ul>
+<li>学期1</li>
+<li>学期2</li>
+</ul>
+</li>
+<li>学前班-幼儿园：850,000 日元，650,000 日元</li>
+<li>1-5年级：850,000 日元</li>
+</ul>
+<h2>公立学校和私立学校的年度学习费用差异</h2>
+<ul>
+<li>初中：538,799日元，1,436,353日元，2.7倍</li>
+<li>高中：…</li>
+</ul>
+<h2>2025-2026学年学费</h2>
+<ul>
+<li>6-9年级<ul>
+<li>建设费：150,000日元</li>
+<li>学费：3,050,000日元</li>
+</ul>
+</li>
+<li>10-11年级<ul>
+<li>建设费：150,000日元</li>
+</ul>
+</li>
+</ul>
+<h2>2024-2025学年学费</h2>
+<ul>
+<li>学费<ul>
+<li>小学（1-5年级）：2,350,000日元</li>
+<li>初中（6-8年级）：2,370,000日元</li>
+<li>高中（9-12年级）：2,370,000日元</li>
+</ul>
+</li>
+</ul>
+        <small class="page-url url "><a href="DDG:Junior high school tuition fees in Tokyo" target="_blank">(DDG:Junior high school tuition fees in Tokyo)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Tokyo-Convenience-Store-Food-Prices-2024-»-Just-Gone-Wandering">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🍱&nbsp;</span>Tokyo Convenience Store Food Prices 2024 » Just Gone Wandering</h3>
+        <small class="page-url url "><a href="https://justgonewandering.com/tokyo-convenience-store-food-prices/" target="_blank">(https://justgonewandering.com/tokyo-convenience-store-food-prices/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 详细列举了东京的食品价格以及饮食习惯，有助于理解日常开支。<br></small>
+    </div>
+    <div class="page-content content"><h2>三明治，货架稳定</h2>
+<p>这些位于糕点货架上，而不是冰箱区。我其实不太喜欢这种三明治，但是如果你要出去观光几个小时，不想担心你的金枪鱼三明治坏掉，那么这可能是一个不错的选择。</p>
+<ul>
+<li>金枪鱼鸡蛋三明治：¥289 / $1.95 美元</li>
+<li>火腿鸡蛋三明治：¥376 / $2.53 美元</li>
+<li>火腿、鸡蛋和奶酪三明治：¥333 / $2.24 美元</li>
+<li>猪排三明治：¥484 / $3.27 美元</li>
+<li>火腿、鸡蛋和奶酪早餐三明治：</li>
+</ul>
+<h2>饭团</h2>
+<p>饭团是当地人和游客的主食，是用少量馅料做成的米饭球。我最喜欢辣味三文鱼的！</p>
+<ul>
+<li>金枪鱼蛋黄酱饭团：¥149 / $1 美元</li>
+<li>辛辣油鱼子饭团：¥181 / $1.22 美元</li>
+<li>芝士焗饭，冷冻：¥397 / $2.67 美元</li>
+<li>汉堡扒咖喱饭配芝士酱：¥570 / $3.84 美元</li>
+</ul>
+<h2>面条</h2>
+<p>推荐：罗森浓厚拉面汤。它的味道与一兰拉面非常相似，价格大约只有一半（份量也只有一半）。</p>
+<ul>
+<li>河粉：¥546 / $3.68 美元</li>
+<li>浓厚拉面汤：¥646 / $4.35 美元</li>
+<li>蔬菜天妇罗荞麦面：¥497 / $3.35 美元</li>
+</ul>
+<h2>便当盒</h2>
+<p>我不太吃这些，因为我不喜欢冷鸡肉等等，但他们有很多选择。通常你会得到米饭、肉、一些鸡蛋和另一个配菜。</p>
+<ul>
+<li>姜汁烤猪肉便当：¥659 / $4.44 美元</li>
+<li>汉堡扒便当：¥659 / $4.44 美元</li>
+</ul>
+<h2>水果</h2>
+<ul>
+<li>香蕉：¥322 / $2.17 美元 (一根)</li>
+<li>葡萄：¥259 / $1.75 美元 (小包装)</li>
+<li>柚子汁饮料杯：¥346 / $2.33 美元</li>
+<li>芒果饮料杯：¥443 / $2.92 美元</li>
+<li>冷冻混合浆果：¥289 / $1.95 美元 (超小包装)</li>
+</ul>
+<h2>牛奶</h2>
+<ul>
+<li>全脂牛奶：¥177 / $1.20 美元 (500毫升) 或 ¥257 / $1.74 美元 (1升)</li>
+</ul>
+<h2>酒类</h2>
+<ul>
+<li>麒麟啤酒：¥292 / $1.97 美元 (500毫升)</li>
+<li>三得利啤酒：¥286 / $1.93 美元 (500毫升)</li>
+<li>朝日干啤酒：¥301 / $2.03 美元 (500毫升)</li>
+<li>感兴趣了解更多清酒？加入丰洲的清酒品鉴活动吧！</li>
+</ul>
+<h2>瓶装咖啡（冷）</h2>
+<ul>
+<li>纸盒装“牛奶咖啡”：¥135 / $0.91 美元 (500毫升) 或 ¥206 / $1.39 美元 (1升)</li>
+</ul>
+<h2>瓶装咖啡（热）</h2>
+<ul>
+<li>Craft Boss牛奶咖啡：¥149 / $1 美元 (440毫升)（比自动售货机的大）</li>
+<li>Georgia咖啡拿铁：¥138 / $0.93 美元 (440毫升)</li>
+</ul>
+<h2>其他饮料</h2>
+<ul>
+<li>可口可乐：¥172 / $1.16 美元 (500毫升)</li>
+</ul>
+        <small class="page-url url "><a href="https://justgonewandering.com/tokyo-convenience-store-food-prices/" target="_blank">(https://justgonewandering.com/tokyo-convenience-store-food-prices/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Tokyo-medical-costs-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏥&nbsp;</span>Tokyo medical costs at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Tokyo medical costs" target="_blank">(DDG:Tokyo medical costs)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 提供了东京医疗费用的详细信息，对留学生的医疗预算有帮助。<br></small>
+    </div>
+    <div class="page-content content"><h2>就医平均费用</h2>
+<p>医生问诊平均费用：JHI建议携带5000-10000日元。</p>
+<p>一人公共医疗保险平均费用：约占工资的5%。</p>
+<h2>收费和付款——东京医疗外科诊所</h2>
+<p>普通科医生咨询费：从15400日元起</p>
+<p>专科医生咨询费：从16000日元起</p>
+<p>如果您有日本健康保险，第一次在诊所就诊应准备5000至10000日元，……</p>
+<h2>日本医疗费用</h2>
+<p>在日本，患者需支付医疗费用的30%。如果需要支付更高的费用，他们可以报销高达80-90%。</p>
+<h2>高龄人士医疗保险</h2>
+<p>由……覆盖的高龄人士……</p>
+        <small class="page-url url "><a href="DDG:Tokyo medical costs" target="_blank">(DDG:Tokyo medical costs)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Prices-and-living-costs-in-Japan">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏠&nbsp;</span>Prices and living costs in Japan</h3>
+        <small class="page-url url "><a href="https://www.japan-guide.com/e/e2202.html" target="_blank">(https://www.japan-guide.com/e/e2202.html)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 提供东京租房成本分析，与生活费用相关，帮助了解整体经济情况。<br></small>
+    </div>
+    <div class="page-content content"><h2>东京房租</h2>
+<p>东京市中心的一些土地是世界上最昂贵的，这使得东京获得了昂贵城市的声誉。然而，租金从大约10平方米的小型廉价公寓到黄金地段价格昂贵的豪华公寓，差异很大。在东京市中心以外，特别是郊区、周边县以及日本其他地区和城市，住房成本明显较低。</p>
+<p>全国范围内，一居室公寓（20-40平方米）的平均月租金（不含水电费）在5万到7万日元之间。东京市中心和附近热门街区的类似大小公寓租金通常从10万日元左右起价。</p>
+<p>另一方面，外国人住宅是一种廉价且相对省事的选择，适合那些想住在城市里并且不想租传统公寓的人。</p>
+        <small class="page-url url "><a href="https://www.japan-guide.com/e/e2202.html" target="_blank">(https://www.japan-guide.com/e/e2202.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Short-Term-Rental-vs-Long-Term-Rental-vs-Serviced-Apartment:-What’s-the-Difference-in-Tokyo?---Apts.jp-Tokyo-Life-Blog">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🔑&nbsp;</span>Short-Term Rental vs Long-Term Rental vs Serviced Apartment: What’s the Difference in Tokyo? - Apts.jp Tokyo Life Blog</h3>
+        <small class="page-url url "><a href="https://apts.jp/tokyo-life/short-term-rental-vs-long-term-rental-vs-serviced-apartment-whats-the-difference-in-tokyo/" target="_blank">(https://apts.jp/tokyo-life/short-term-rental-vs-long-term-rental-vs-serviced-apartment-whats-the-difference-in-tokyo/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 该页面关于东京租赁市场的详情补充了住宿费用的分析。<br></small>
+    </div>
+    <div class="page-content content"><p>198.45 日元/英镑  20.34 港元/日元  韩元</p>
+<p>在日本，公寓申请流程、月租费用和寻找公寓的方法完全取决于您是寻找长期租赁（一年或以上）、短期租赁（一周到12个月）还是服务式公寓。这篇文章将带您了解这三种租赁选择以及相关的费用和其他区别。</p>
+<h3>东京的长期租赁公寓</h3>
+<p>大多数日本公寓或房间的设计都是为了长期租赁。房主不会提供家具，因为人们会自带之前的物品，或者如果他们刚开始装修，他们会想要购买自己的东西来布置房屋。</p>
+<p>此外，在日本，人们喜欢减少任何潜在的冲突点。例如，沙发上的撕裂是租客的粗心大意还是正常的磨损？通过提供无家具的公寓，所有潜在的冲突点都减少了。</p>
+<p>水电费通常不包含在租金中。通常不允许养宠物。</p>
+<p>长期公寓的租赁合同通常至少为两年。</p>
+<p><strong>优点</strong></p>
+<ul>
+<li>长期公寓为希望在东京居住数年的人们提供稳定性。</li>
+<li>无家具公寓允许您根据自己的风格布置租赁房屋。</li>
+<li>长期合同的成本最低。</li>
+<li>您能够与邻居和更广泛的社区建立真正的关系。</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>长期合同和协议。</li>
+<li>您必须提供自己的家具，如果您只计划待几年，这可能很昂贵——日本家具和电器的转售价值通常非常低。</li>
+</ul>
+<h3>东京的短期租赁公寓</h3>
+<p>如果您只计划在日本待几个月，短期居住空间可能更合适。短期公寓通常用于度假或搬家过渡的人们。这些租赁公寓通常带家具。您通常可以只租用您计划居住的时间。</p>
+<p>在短期租赁公寓中，您负责保持公寓清洁并像对待自己的家一样照顾它。这些租赁公寓拥有配备齐全的厨房。因此，您可以避免在您在东京的几周/几个月里每晚都出去吃饭的麻烦。平均而言，您为带家具的短期公寓支付的费用会高于相同大小的长期无家具公寓。</p>
+<p>在东京，带家具的短期公寓租赁的月租金比无家具的长期公寓租赁每月多付20%。</p>
+<p><strong>优点</strong></p>
+<ul>
+<li>地址可用于注册居住卡。</li>
+<li>配备齐全且舒适。</li>
+<li>短期租赁协议，从几周到几个月不等。</li>
+<li>它允许您在自己的空间内放松身心，准备自己的食物等等。</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>不包含服务。</li>
+<li>比长期租赁略贵。</li>
+</ul>
+<h3>东京的服务式公寓</h3>
+<p>您可以将服务式公寓想象成酒店房间，只是更自由和私密。酒店提供房间，而服务式公寓则提供一个家。这些短期租赁公寓提供带家具和设备齐全的房屋。您拥有日常生活所需的一切，从舒适的床铺到轻松的沙发、可用的办公桌，甚至餐具。</p>
+<p>它们可能设有单间套房或最多两间卧室。它们配有基本的厨房、餐厅和起居空间。您可能拥有健身区等现场设施。这些公寓可以短期租赁，甚至可以按夜租赁。</p>
+<p>许多公寓提供每周清洁服务和洗衣服务（如果您需要）。有些可能提供客房服务。通常有一个前台，如果您对公寓有任何需求或疑虑，您可以前往那里。</p>
+<p>这种类型的公寓通常由大型公司或企业的员工使用。如果您要参加东京的重要会议，您可能希望拥有一个可以随时入住的住所。您可以放下行李，为会议做准备，并在几天后离开。它们比没有这些额外服务的短期租赁公寓更贵。</p>
+<p>对于东京的服务式公寓，预计每月费用大约是标准长期公寓租赁费用的两倍。</p>
+        <small class="page-url url "><a href="https://apts.jp/tokyo-life/short-term-rental-vs-long-term-rental-vs-serviced-apartment-whats-the-difference-in-tokyo/" target="_blank">(https://apts.jp/tokyo-life/short-term-rental-vs-long-term-rental-vs-serviced-apartment-whats-the-difference-in-tokyo/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Elementary-school-tuition-fees-in-Tokyo-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏫&nbsp;</span>Elementary school tuition fees in Tokyo at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Elementary school tuition fees in Tokyo" target="_blank">(DDG:Elementary school tuition fees in Tokyo)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 包含了东京公立学校的费用调查数据，与教育费用分析相关。<br></small>
+    </div>
+    <div class="page-content content"><h2>日本公立小学教育费用</h2>
+<p>根据文部科学省（MEXT）的儿童教育支出调查，全国公立小学的平均费用为35.3万日元，所以这个数字看起来比较合理。</p>
+<h2>东京各年级学校费用（2024年学费）</h2>
+<h3>公立学校和私立学校的年度学习费用差异</h3>
+<ul>
+<li>小学：公立 ¥352,566，私立 ¥1,666,949，私立费用是公立的4.7倍；</li>
+<li>初中：……</li>
+</ul>
+<h2>2024-2025学年学校费用</h2>
+<ul>
+<li><strong>学费</strong><ul>
+<li>小学（1-5年级）：¥2,350,000</li>
+<li>初中（6-8年级）：¥2,370,000</li>
+<li>高中（9-12年级）：¥2,370,000</li>
+</ul>
+</li>
+</ul>
+        <small class="page-url url "><a href="DDG:Elementary school tuition fees in Tokyo" target="_blank">(DDG:Elementary school tuition fees in Tokyo)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Language-training-costs-in-Tokyo-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🗣&nbsp;</span>Language training costs in Tokyo at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Language training costs in Tokyo" target="_blank">(DDG:Language training costs in Tokyo)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 讨论了日本语言学校的学费，对教育开支提供了补充信息。<br></small>
+    </div>
+    <div class="page-content content"><h2>学费信息</h2>
+<p>标准课程：每周约200美元，另加138美元的注册费。每周您将可以使用20个日语...</p>
+<p>其他日语课程每学期费用可能在12,000美元到17,000美元之间，而KCP课程费用为7,000美元或更少——大约是其他课程的一半！学术...</p>
+<p>根据我所就读的GenkiJACS学校2024年的价格表，一年学费为1,120,000日元（约8,000美元）。这...</p>
+<p>短期课程（一期/10周）
+入学费：20,000，20,000
+学费：185,000，177,000
+材料费：11,000，11,000
+设施费：25,000，20,000</p>
+        <small class="page-url url "><a href="DDG:Language training costs in Tokyo" target="_blank">(DDG:Language training costs in Tokyo)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Crunching-Numbers:-The-Average-Meal-Cost-in-Japan-in-2023-|-by-zenDine-|-Medium">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🍣&nbsp;</span>Crunching Numbers: The Average Meal Cost in Japan in 2023 | by zenDine | Medium</h3>
+        <small class="page-url url "><a href="https://zendine.medium.com/crunching-numbers-the-average-meal-cost-in-japan-in-2023-6a775e39ed42" target="_blank">(https://zendine.medium.com/crunching-numbers-the-average-meal-cost-in-japan-in-2023-6a775e39ed42)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 讨论了日本的生活成本，包含饮食开支，为留学生提供预算建议。<br></small>
+    </div>
+    <div class="page-content content"><h2>日本餐饮费用指南</h2>
+<p>你想去日本旅游，却不知道那里的饭菜价格是多少吗？在日本吃饭的平均价格差异很大，从便利店的400日元到高档寿司店的10000多日元不等。本文将带您了解日本的餐饮环境，并帮助您有效地规划餐饮预算。别让缺乏知识让您的钱包吃紧——深入了解我们全面的细分内容。</p>
+<h3>主要内容</h3>
+<ul>
+<li>日本的平均餐费差异很大，从便利店的400日元到高档寿司店的10000多日元不等。</li>
+<li>在日本用餐的预算技巧包括：探索便利店餐食，尝试拉面，选择回转寿司店，光顾居酒屋，以及利用超市促销活动。</li>
+<li>日本每日平均餐饮费用约为3670日元。在便利店和超市用餐可以显著降低开支。</li>
+</ul>
+<h2>2023年日本餐饮费用概述</h2>
+<h3>日本餐饮预算技巧</h3>
+<p>在日本外出就餐，只要掌握一些技巧，就能轻松控制预算。</p>
+<ul>
+<li><strong>探索便利店餐食:</strong> 这些餐食通常售价在400到600日元之间，提供了一种经济实惠且美味的快速用餐选择。</li>
+<li><strong>拉面之旅:</strong> 每碗拉面的价格通常在600到1200日元之间，这是享受日本料理的一种经济实惠的方式。</li>
+<li><strong>选择回转寿司店:</strong> 在这里，您可以控制数量，从而控制成本——这比传统的寿司店便宜得多，传统寿司店每人收费从2000到10000日元不等。</li>
+<li><strong>光顾居酒屋:</strong> 每道菜和每杯酒的费用大约在300到600日元之间。不仅仅是零食，这是一个合理的选择！</li>
+<li><strong>需要时选择快餐:</strong> 日本快餐如寿喜烧和定食，每餐价格在400到1000日元之间。</li>
+<li><strong>尝试西式快餐连锁店:</strong> 味道差别不大，但比家乡便宜得多！餐费通常不到1000日元。</li>
+<li><strong>寻找提供优惠的家庭餐厅:</strong> 这些餐厅通常会有促销活动，每人餐费在1000日元左右甚至更低。</li>
+<li><strong>尽可能避免用餐高峰时间:</strong> 在非高峰时段用餐，某些地方可能会给予您折扣。</li>
+<li><strong>在当天较晚的时候利用超市促销:</strong> 许多超市在晚上关门前会对即食餐点进行打折——这是经济实惠的晚餐好方法！</li>
+</ul>
+<h3>日本每日平均餐饮费用</h3>
+<p>日本每日平均餐饮费用是外国游客需要考虑的一个重要因素。在日本吃饭平均每天花费约3670日元。这个费用会根据您选择就餐的地点和食物类型而波动。</p>
+<p>请记住，在便利店和超市用餐可以帮助您显著降低每日餐饮费用。牛奶、奶酪和啤酒等基本商品的价格在日本比在美国明显便宜，便利店的餐食通常售价在400到600日元之间。因此，聪明地用餐会在您的日本每日餐饮预算中产生巨大的差异。</p>
+<p>令人印象深刻的是，只需大约400到600日元，您就可以享用一顿完整美味的餐点。搭配饭团或三明治和一杯咖啡，就完美了！对于胃口较大的顾客，您可以选择更丰盛的菜肴，如便当盒和方便面。而且，您不仅省钱，还能品尝当地美食，这才是旅行的意义所在！</p>
+<h3>拉面价格</h3>
+<p>拉面是日本的一道热门菜肴，其价格取决于类型和配料。以下是快速概述：</p>
+<p>此外，请记住，拉面的价格因地而异，高端餐厅的价格通常更高，而快餐店或隐蔽的当地商店的价格则更便宜。这种广泛的价格范围使您能够在日本逗留期间找到符合您预算的拉面。如果您计划前往东京或名古屋，我们有一些指南，当地人会在其中推荐这两个城市的拉面馆。</p>
+<h3>寿司价格：休闲到高端的选择</h3>
+<p>寿司是日本必尝的美味佳肴，其价格从休闲到高端的选择差异很大。无论您是在回转寿司店用餐，还是在高档寿司店享用厨师精选的菜肴，总有一个选择适合您的预算。</p>
+<p>请注意，价格可能会因餐厅和时间而异。建议事先查看菜单价格。福冈有一些当地人推荐给游客的有趣的寿司餐厅。</p>
+<h3>和牛牛肉和铁板烧的成本</h3>
+<p>如果您想在日本享受高端餐饮体验，和牛牛肉和铁板烧是理想的选择。这两者每人通常在2000到4000日元之间。</p>
+<p>这些餐点价格较高，因为和牛牛肉以其品质、口感和雪花状纹理而闻名。同样，铁板烧是一种使用铁板的日本烹饪方式，提供独特的娱乐性餐饮体验。虽然这些餐点可能价格更高，但它们保证了日本料理的独特风味，物有所值。看看神户的一些当地人推荐给游客的牛排馆。</p>
+<h3>居酒屋的价格</h3>
+<p>居酒屋是日本流行的用餐场所。它们提供各种菜肴和饮料，价格取决于您的选择。为了让您了解价格，以下是居酒屋的食品和饮料价格的一般范围：</p>
+<p>探索这些用餐选择可以提供独特的餐饮体验，并允许经济实惠的选择。请记住，价格差异很大，因此在决定在居酒屋吃饭时，务必考虑成本。关注平均餐费可以帮助预算有限的游客有效地管理他们在日本的餐饮费用。居酒屋提供各种各样的餐点选择，让您能够灵活地匹配您的喜好和预算。这个了解和比较成本的过程可以指导您在访问日本期间做出明智的餐饮决策。</p>
+<h3>日本和西式快餐价格</h3>
+<p>日本和西式快餐店都是日本餐饮业的主流，为忙碌的人们提供快捷、美味且经济实惠的餐点。以下是这些快餐平均成本的细分。</p>
+<p>这些平均值表明，日本的快餐是一种经济实惠且方便的用餐选择，尤其适合预算紧张或时间有限的游客。</p>
+<h3>日本快餐一览</h3>
+<p>日本快餐提供各种经济实惠的选择，包括寿喜烧和定食，每餐价格在400到1000日元之间。</p>
+<h3>寿喜烧和定食</h3>
+<p>在日本想快速且经济实惠地用餐，可以尝试寿喜烧或定食。寿喜烧是一道流行的日本快餐，由薄切牛肉配上米饭，通常用酱油和洋葱调味。</p>
+<p>您只需400到1000日元就能享用一碗美味的寿喜烧。另一方面，定食提供套餐，通常包括主菜（如烤鱼或炸鸡）、米饭、味增汤、泡菜，有时还有沙拉或甜点。</p>
+<h3>在日本吃一顿饭要多少钱？</h3>
+<p><strong>问：</strong>饮料的平均价格是多少？</p>
+<p><strong>答：</strong>饮料的平均价格因种类而异。便利店的软饮料通常在100到150日元之间。酒吧和餐馆的酒精饮料价格可能从500到800日元不等，具体取决于饮料类型和场所。</p>
+<p><strong>问：</strong>日本便利店的日本食品平均价格是多少？</p>
+<p><strong>答：</strong>日本便利店提供各种价廉物美的食品。您可以购买饭团、三明治和便当盒，价格在100到500日元之间。乌冬面或拉面等热菜的价格也低于500日元。</p>
+        <small class="page-url url "><a href="https://zendine.medium.com/crunching-numbers-the-average-meal-cost-in-japan-in-2023-6a775e39ed42" target="_blank">(https://zendine.medium.com/crunching-numbers-the-average-meal-cost-in-japan-in-2023-6a775e39ed42)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Art-training-costs-in-Tokyo-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🎨&nbsp;</span>Art training costs in Tokyo at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Art training costs in Tokyo" target="_blank">(DDG:Art training costs in Tokyo)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 提到东京艺术大学的学费，反映了艺术教育的开支。<br></small>
+    </div>
+    <div class="page-content content"><h2>日本画专业学费</h2>
+<ul>
+<li>日本画专业本科生需额外支付¥175,000（即古美术研究旅行¥90,000和……</li>
+</ul>
+<h3>其他费用</h3>
+<ul>
+<li>申请费：0～20,000日元</li>
+<li>入学费：200,000日元</li>
+<li>年学费：860,000日元</li>
+<li>其他费用：330,000日元</li>
+<li>……</li>
+</ul>
+<h3>各专业学费</h3>
+<ul>
+<li>绘画系<ul>
+<li>日本画专业：48,000日元</li>
+<li>油画专业：38,000日元</li>
+<li>图形艺术专业：38,000日元</li>
+</ul>
+</li>
+<li>雕塑系：63,000日元</li>
+</ul>
+        <small class="page-url url "><a href="DDG:Art training costs in Tokyo" target="_blank">(DDG:Art training costs in Tokyo)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="The-Cost-of-Living-in-Japan:-Updated-2023-|-MailMate">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🛒&nbsp;</span>The Cost of Living in Japan: Updated 2023 | MailMate</h3>
+        <small class="page-url url "><a href="https://mailmate.jp/blog/cost-of-living-japan" target="_blank">(https://mailmate.jp/blog/cost-of-living-japan)</a><br></small>
+        <small class="page-rating rating ">评分: 6.0<br></small>
+        <small class="page-annotation annotation ">注释: 概述东京生活中日用品的消费，为日常开销预算提供信息。<br></small>
+    </div>
+    <div class="page-content content"><h3>家具及家庭用品</h3>
+<p>日常用品等</p>
+<p>月度支出：¥12,390
+同比名义增长：2.4%
+同比实际增长：-1.3%</p>
+        <small class="page-url url "><a href="https://mailmate.jp/blog/cost-of-living-japan" target="_blank">(https://mailmate.jp/blog/cost-of-living-japan)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Best-home-and-lifestyle-stores-in-Tokyo-|-Time-Out-Tokyo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🛍&nbsp;</span>Best home and lifestyle stores in Tokyo | Time Out Tokyo</h3>
+        <small class="page-url url "><a href="https://www.timeout.com/tokyo/shopping/tokyos-best-home-and-lifestyle-stores" target="_blank">(https://www.timeout.com/tokyo/shopping/tokyos-best-home-and-lifestyle-stores)</a><br></small>
+        <small class="page-rating rating ">评分: 6.0<br></small>
+        <small class="page-annotation annotation ">注释: 分析了东京的购物成本，为用户的消费预期提供了参考。<br></small>
+    </div>
+    <div class="page-content content"><h2>东京12家最佳家居生活用品店</h2>
+<p>总有提升家居环境的空间。这些顶级商店提供种类繁多的家具、家居装饰、厨具等等。现在绝对是让您的生活空间焕然一新的好时机。让您的家更美丽、更舒适、更温馨比以往任何时候都更加重要，让您在家里的所有时间都尽可能轻松和平静。</p>
+<p>这些东京的家居生活用品店提供各种各样的产品，满足每个人的需求，无论您是喜欢时尚、美容、家居用品、设计还是烹饪。警告：您可能并没有特别寻找什么，但浏览完这些一站式商店后，您很有可能会找到一些东西。以下是一些我们最喜欢的商店。</p>
+<p>推荐：在东京购买日本食品和调味品的最佳商店</p>
+<h3>Cibone</h3>
+<p><strong>购物 | 表参道</strong></p>
+<p>Cibone 最近搬到了表参道的 Gyre 大厦，从青山之前的店铺搬迁至此。该店经营种类丰富的精选生活用品，从时尚、家具和艺术到珠宝、手表和美容产品。新的空间仍然是经典的 Cibone 风格，提供许多著名的国内外品牌。</p>
+<p>对于厨房，您会发现许多日常工具，包括 Balmuda 电热水壶和饭吉由美子设计的瓷器。还有高品质的家居装饰，如独特的灯具甚至一些艺术品。有无数的枕头和毛毯，商店装饰精美，让您在四处走动时获得一些灵感。关注其网站，因为 Cibone 宽敞的商店经常举办活动、展览和快闪店。</p>
+<h3>D&amp;Department Tokyo</h3>
+<p><strong>购物 | 世田谷</strong></p>
+<p>这家位于世田谷的家居用品和生活用品店提供多种 20 世纪中期现代主义风格的家具、餐具、时尚，甚至翻新的商品。商店里的商品来自日本各地——每件商品都贴有标签，详细说明其产地和首次生产日期。我们特别喜欢用库存面料制成的各种小包和手提包。还有用相同的回收面料包裹的珠宝盒和鞋盒——它们非常时尚，您不会想把它们藏在橱柜里。</p>
+<h3>Farmer&#x27;s Table</h3>
+<p><strong>购物 | 生活方式 | 恵比寿</strong></p>
+<p>这家位于恵比寿一栋不起眼建筑的四楼的宽敞商店，摆放着从时尚、 Chemex 咖啡设备和门垫到精美珠宝、古董玻璃器皿和其他小饰品等各种商品。服装包括简单的 T 恤和帽衫等衣橱主打产品，甚至还有一系列鞋子。该店经常展出日本设计师的作品，并举办研讨会，包括缝纫展览，您可以在那里定制烹饪围裙等物品。查看 Instagram 和网站以了解日程安排。</p>
+<h3>Casica</h3>
+<p><strong>购物 | 生活方式 | 新木场</strong></p>
+<p>这家新木场的商店位于一座被绿色灌木覆盖的大型仓库建筑内，设有一个连接商店咖啡馆和餐厅的通风露台。</p>
+<p>在里面，您会发现许多家居用品，它们要么是古董，要么是古董风格的，具有雅致、磨损的外观。如果您有绿色的拇指，可以购买花盆和植物，或者购买一些青森 Hiba 木屑，您可以将其用作房子的天然“香水”。还有餐具，包括精美制作的陶瓷、玻璃器皿和木制餐具。后屋摆放着古董家具和装饰性餐具，包括花瓶、杯子和碟子。甚至还有一个小型画廊空间，用于当地设计师和艺术家的展览——查看网站了解详情。</p>
+<h3>Kinto</h3>
+<p><strong>购物 | 生活方式 | 中目黑</strong></p>
+<p>日本品牌 Kinto 现在在洛杉矶拥有一家商店，但其东京旗舰店位于中目黑一条僻静的街道上，销售一系列时尚的餐具、杯子和咖啡设备。商店甚至还销售自己独特的咖啡混合物，该混合物来自东京两国地区的 Single O 咖啡烘焙商。</p>
+<p>Kinto 最受欢迎的是其旅行杯和杯子，它们采用简洁、柔和的颜色和简单的设计——它们是很棒、经济实惠的礼物和纪念品。在恵比寿的姐妹店，您甚至可以将您的杯子个性化，加上您的姓名首字母。还有日本制造的陶瓷、轻便的玻璃杯以及时尚的花盆和花瓶。商店还举办插花课程和咖啡研讨会。</p>
+<h3>Markus</h3>
+<p><strong>购物 | 吉祥寺</strong></p>
+<p>Markus 位于热闹的仲见世通购物街附近，这里收藏了来自日本各地的精美日本工艺品。店主亲自挑选店内的所有商品，并周游全国各地拜访工匠，了解他们的独特产品。您会看到商品按地区和工匠进行分类，每个商品都附有简短说明。我们最喜欢的包括来自香川的精美手工扇子、来自静冈县的茶叶以及来自冲绳的精美陶器和厨具。</p>
+<h3>Akomeya in La Kagu</h3>
+<p><strong>购物 | 专业食品和饮料 | 神乐坂</strong></p>
+<p>神乐坂时尚的 La Kagu “仓库”内设有 Akomeya 旗舰店，为顾客提供日本一些最美味、最美丽的商品——尤其是厨房用品。</p>
+<p>最重要的是，Akomeya 是一家米类专卖店，因此它提供几乎令人难以置信的各种谷物，可以按重量购买。不吃碳水化合物？那就跳到包装食品区，那里提供从糖果、味噌酱和调味料到美味的蜜饯和汤料的所有东西。商店的前面还展示了精选的陶瓷和日本厨具，所有这些都标有工匠和产地的简短说明。对于家庭厨师和美食家来说，这里就是天堂，他们可以在 Akomeya Kitchen 享用健康的一餐，或从 Chaya 柜台买一杯现泡茶外带。</p>
+<h3>Sippo</h3>
+<p><strong>购物 | 吉祥寺</strong></p>
+<p>Sippo 看起来像一家直销店，其种类繁多的价格合理的商品将让讨价还价的人感到高兴。选择可能看起来很随意，但所有商品均为日本制造或具有日本美学特色。有家居用品、时尚、珠宝、配饰、美食和古董家具。在入口处附近可以找到一些最划算的商品，那里的货架上摆满了价格低至 100 日元的二手餐具、餐具和陶器。此外，不要忽视展示架和桌子——它们很可能也在出售。您很容易花一整天的时间来浏览，因此店内咖啡馆供应健康美味的定食（套餐）、甜点和咖啡，这真是太好了。</p>
+<h3>Yanaka Matsunoya</h3>
+<p><strong>购物 | 日暮里</strong></p>
+<p>这家位于 Yanaka 的家居生活用品店提供各种您从未想过需要的精美日本商品。如果您路过，几乎不会错过这家商店——店面摆满了各种形状、大小和颜色的手工编织篮子。</p>
+<p>自 1945 年以来，Matsunoya 一直是日常用品的供应商，销售的产品从扫帚、簸箕、厨具、餐具和家居用品到皮具和珠宝。这家一站式家居商店销售由天然材料制成的产品，能够经受相当大的磨损。我们推荐复古锌制米箱或竹制菜篮，这会让购物体验更添几分热带风情。</p>
+<h3>Cinq</h3>
+<p><strong>购物 | 生活方式 | 吉祥寺</strong></p>
+<p>如果您想要设计精良的家居用品，那就直奔这家 zakka 生活用品店吧。Cinq 销售各种餐具和厨房用具，以及时尚服装，如袜子和针织衫。它甚至拥有自己的商品品牌，包括金属咖啡和茶罐、布围裙和雨伞。该店从欧洲和日本各地采购商品，非常适合寻找室内设计灵感。</p>
+<h3>Today&#x27;s Special Jiyugaoka</h3>
+<p><strong>购物 | 自由之丘</strong></p>
+<p>Today&#x27;s Special 是东京流行生活品牌 Cibone 的创意之作。它主要是一家食品供应商，但它还销售各种各样的家居用品、服装、珠宝和保健产品。此外，还有一些小型植物和其他家居装饰品。三楼的咖啡馆 Today&#x27;s Table 为饥饿的顾客提供季节性菜肴。在涩谷站前的涩谷 Hikarie 内还有一家分店，以及一家全新的新宿店。</p>
+<h3>Hands</h3>
+<p><strong>购物 | 涩谷</strong></p>
+<p>从文具到马桶盖，这是东京最大的家居用品店，里面摆满了各种家居小摆设。给自己一些时间来浏览商店的九个不同楼层，其中七个楼层进一步分为三个分层——换句话说，您技术上将会有 25 个楼层可以浏览。</p>
+<p>您会发现任何您能想到的东西，从旅行装备、美容产品和家居用品到 DIY 工具包、工艺品，甚至科学用品。商店还定期举办研讨会，您可以在那里尝试制作皮具和珠宝。七楼有一家咖啡馆，如果您需要从购物中休息一下，可以去那里。</p>
+<h2>寻找其他东西？</h2>
+        <small class="page-url url "><a href="https://www.timeout.com/tokyo/shopping/tokyos-best-home-and-lifestyle-stores" target="_blank">(https://www.timeout.com/tokyo/shopping/tokyos-best-home-and-lifestyle-stores)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Tokyo-average-gym-membership-cost-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏋&nbsp;</span>Tokyo average gym membership cost at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Tokyo average gym membership cost" target="_blank">(DDG:Tokyo average gym membership cost)</a><br></small>
+        <small class="page-rating rating ">评分: 5.5<br></small>
+        <small class="page-annotation annotation ">注释: 健身房费用分析，跟生活成本相关，可辅助了解预算。<br></small>
+    </div>
+    <div class="page-content content"><h2>东京健身房价格指南</h2>
+<p>东京的健身房非常昂贵，有些地方每月甚至要收取超过8000日元，同时还奇怪地限制时间……</p>
+<h2>日本健身房：在东京健身指南</h2>
+<p>东京有很多康乐体育俱乐部。价格不等，但每次访问通常需要2000-3000日元。</p>
+<p>东京商业区健身房月卡价格为9678日元。</p>
+<h2>东京健身房费用是多少？</h2>
+<p>私人健身房的月费从约7500日元到近20000日元不等。</p>
+<h2>日本健身：日本健身房全面指南</h2>
+<p>价格因地点而异，但您可以每月支付7700-11000日元成为会员。您也可以获得下午……</p>
+<p>通常情况下，您每月需要支付7000到10000日元。会员计划可能包括仅限白天的计划、家庭计划、课程……</p>
+        <small class="page-url url "><a href="DDG:Tokyo average gym membership cost" target="_blank">(DDG:Tokyo average gym membership cost)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Tokyo-average-haircut-cost-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">✂&nbsp;</span>Tokyo average haircut cost at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Tokyo average haircut cost" target="_blank">(DDG:Tokyo average haircut cost)</a><br></small>
+        <small class="page-rating rating ">评分: 5.0<br></small>
+        <small class="page-annotation annotation ">注释: 探讨了东京的理发费用，虽然与教育费用不直接相关，但与生活成本有关。<br></small>
+    </div>
+    <div class="page-content content"><h2>日本理发店的价格</h2>
+<p>对于某些人来说，3000日元很多。发帖者，许多连锁理发店，例如QB，男士基本理发只要1500日元。</p>
+<h2>日本理发店的理发价格是多少？</h2>
+<p>在日本地方城市，价格在5000到6000日元左右的理发店通常很受欢迎，因为品牌成功。</p>
+<p>男士普通理发价格在1000到2000日元之间（仅限剪发，不含洗发等）。有一次在奈良，我遇到一家理发店……</p>
+<h2>东京外国人区男士标准理发的价格</h2>
+<p>东京外国人区男士标准理发的价格为4189日元。此平均价格基于7个价格点。目前……</p>
+<p>基本理发费用在6500到15000日元之间，如果想要染发、造型或头部SPA等额外服务，则大约需要额外10000日元。一些理发店……</p>
+<p>在东京理发花费了3500日元，但如果需要染发或其他护理，则大约需要20000日元。</p>
+        <small class="page-url url "><a href="DDG:Tokyo average haircut cost" target="_blank">(DDG:Tokyo average haircut cost)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Tokyo-doctor-consultation-fee-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Tokyo doctor consultation fee at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Tokyo doctor consultation fee" target="_blank">(DDG:Tokyo doctor consultation fee)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>日本诊所首次问诊费用</h2>
+<p>因此，您当地日本诊所最常见的首次问诊费用通常在 3000 日元到 5000 日元之间，后续复诊……</p>
+<h2>东京站国际诊所——医疗咨询费</h2>
+<p>首次问诊费为 2820 日元，如果包含保险并支付 30% 的自付费用，则为 850 日元。首次咨询费基本上……</p>
+<h2>医生问诊平均费用及公共医疗保险</h2>
+<p>JHI 建议携带 5000 日元到 10000 日元。个人公共医疗保险平均费用：约占您工资的 5%。</p>
+        <small class="page-url url "><a href="DDG:Tokyo doctor consultation fee" target="_blank">(DDG:Tokyo doctor consultation fee)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Tokyo-haircut-price-range-recommendations-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Tokyo haircut price range recommendations at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Tokyo haircut price range recommendations" target="_blank">(DDG:Tokyo haircut price range recommendations)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>日本理发价格</h2>
+<p>你在日本理发花了多少钱？我花了3300日元……对一些人来说，3000日元很多。网友们可以在几家连锁理发店以1500日元的价格享受基本理发服务。QB很受欢迎，而且做得相当不错。</p>
+<h2>日本美发沙龙理发价格</h2>
+<p>东京美发沙龙（高端沙龙）东京顶级美发沙龙的价格在7000日元到8000日元之间。位于……</p>
+<p>理发4000日元。使用发蜡等造型1500日元。只吹干头发1100日元。几乎要7000日元或更多。所以如果你去……</p>
+<p>在东京理发花了3500日元。但如果你想要染发或其他护理，大约要20000日元左右。</p>
+        <small class="page-url url "><a href="DDG:Tokyo haircut price range recommendations" target="_blank">(DDG:Tokyo haircut price range recommendations)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Tokyo-gym-types-membership-fees-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Tokyo gym types membership fees at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Tokyo gym types membership fees" target="_blank">(DDG:Tokyo gym types membership fees)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>东京健身房价格指南</h2>
+<p>东京的健身房非常昂贵，有些地方每月收费甚至高达8000日元，同时还奇怪地限制时间……</p>
+<h2>日本健身房：在东京健身指南</h2>
+<p>价格因地点而异，但您可以每月支付7700-11000日元成为会员。您也可以获得下午……</p>
+<p>家庭会员每月计划价格范围为每人7700日元到11000日元。您还可以获得下午会员资格……</p>
+        <small class="page-url url "><a href="DDG:Tokyo gym types membership fees" target="_blank">(DDG:Tokyo gym types membership fees)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Tokyo-doctor-specialist-fees-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Tokyo doctor specialist fees at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Tokyo doctor specialist fees" target="_blank">(DDG:Tokyo doctor specialist fees)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>收费标准</h2>
+<ul>
+<li>普通科医生咨询费：15,400 日元起</li>
+<li>专科医生咨询费：16,000 日元起</li>
+</ul>
+        <small class="page-url url "><a href="DDG:Tokyo doctor specialist fees" target="_blank">(DDG:Tokyo doctor specialist fees)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Tokyo-health-insurance-costs-and-coverage-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Tokyo health insurance costs and coverage at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Tokyo health insurance costs and coverage" target="_blank">(DDG:Tokyo health insurance costs and coverage)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>日本医疗保险</h2>
+<p>日本的医疗保险大约覆盖70%的医疗费用，但在日本留学的学生将不得不自付约30%的医疗费用……</p>
+<h3>日本的医疗保健：日本医疗体系指南</h3>
+<ul>
+<li>普通门诊的平均费用：JHI 建议准备 5000-10000 日元。</li>
+<li>每人公共医疗保险的平均费用：约占工资的 5%。</li>
+</ul>
+        <small class="page-url url "><a href="DDG:Tokyo health insurance costs and coverage" target="_blank">(DDG:Tokyo health insurance costs and coverage)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Tokyo-health-insurance-coverage-details-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Tokyo health insurance coverage details at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Tokyo health insurance coverage details" target="_blank">(DDG:Tokyo health insurance coverage details)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>日本医疗保险</h2>
+<ul>
+<li>凡在日本居住三个月或以上者均强制参加医疗保险，包括日本公民和外国公民。</li>
+<li>低收入者医疗费用可报销高达90%，其他人则为标准的70%。</li>
+<li>保险覆盖范围：医生咨询、牙科咨询和治疗、医学检查、医疗治疗、药物、手术、住院。</li>
+</ul>
+        <small class="page-url url "><a href="DDG:Tokyo health insurance coverage details" target="_blank">(DDG:Tokyo health insurance coverage details)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="What-is-the-average-rent-in-Tokyo?---Blog">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>What is the average rent in Tokyo? - Blog</h3>
+        <small class="page-url url "><a href="https://resources.realestate.co.jp/rent/what-is-the-average-rent-in-tokyo-2020-ranking-by-ward-and-layout/" target="_blank">(https://resources.realestate.co.jp/rent/what-is-the-average-rent-in-tokyo-2020-ranking-by-ward-and-layout/)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>日本公寓租金</h2>
+<p>1R：¥71,583（$652美元）
+1K：¥81,217（$739美元）
+1LDK：¥120,974（$1,101美元）
+2LDK：¥181,996（$1,657美元）
+3LDK：¥266,352（$2,425美元）
+4LDK：¥456,886（$4,159美元）</p>
+<p>中心六区的平均租金明显高于整个23个区。中心六区包括：港区、涩谷区、新宿区、文京区、千代田区和中央区。</p>
+<p>日本的长期出租公寓不含家具，除非租赁清单另有说明，否则不包括冰箱和洗衣机。除非说明中注明，否则水、煤气、电费等<strong>公用事业费</strong>也不包含在月租金中，因此务必为这些经常性支出做好预算。大多数人还希望<strong>安装家庭WiFi网络连接</strong>，这是另一项需要考虑的成本。</p>
+<p>日本公寓的<strong>入住成本</strong>也远高于大多数国家，平均为5.5到7个月的租金。更多信息，请参见：在日本租房的入住成本是什么？</p>
+<p>日本的大多数公寓不允许养宠物，但您可以在日本房地产网站以及实体租赁机构找到<strong>允许养宠物的公寓</strong>，只需将其作为搜索条件即可。房东和业主通常允许租户养一只小型猫或狗，并要求额外支付至少一个月的押金作为宠物押金。</p>
+<p>4LDK及以上户型的月平均租金：¥456,886</p>
+        <small class="page-url url "><a href="https://resources.realestate.co.jp/rent/what-is-the-average-rent-in-tokyo-2020-ranking-by-ward-and-layout/" target="_blank">(https://resources.realestate.co.jp/rent/what-is-the-average-rent-in-tokyo-2020-ranking-by-ward-and-layout/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Price-List-Of-Japan-Clothes-Prices-2024-New-Updated">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Price List Of Japan Clothes Prices 2024 New Updated</h3>
+        <small class="page-url url "><a href="https://vinazgarment.com/the-ultimate-guide-to-understanding-japan-clothes-prices/" target="_blank">(https://vinazgarment.com/the-ultimate-guide-to-understanding-japan-clothes-prices/)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h3>日本服装价格范围</h3>
+<p>日本服装价格根据服装类型、品牌、质量和地点等多种因素而有所不同。以下是不同类别服装价格范围的概览：</p>
+<h4>基础服装</h4>
+<ul>
+<li>T恤：¥1,000 至 ¥5,000</li>
+<li>牛仔裤：¥3,000 至 ¥10,000</li>
+<li>便服：¥3,000 至 ¥15,000</li>
+<li>基础毛衣：¥3,000 至 ¥10,000</li>
+</ul>
+<h4>中档服装</h4>
+<ul>
+<li>衬衫和女衬衫：¥5,000 至 ¥15,000</li>
+<li>裤子和长裤：¥5,000 至 ¥20,000</li>
+<li>裙子：¥5,000 至 ¥15,000</li>
+<li>毛衣和开衫：¥5,000 至 ¥20,000</li>
+</ul>
+<h4>设计师和高端服装</h4>
+<ul>
+<li>设计师衬衫和女衬衫：¥15,000 至 ¥50,000 或以上</li>
+<li>设计师裤子和长裤：¥20,000 至 ¥80,000 或以上</li>
+<li>高端礼服和长袍：¥30,000 至 ¥200,000 或以上</li>
+<li>奢侈品牌毛衣和开衫：¥20,000 至 ¥100,000 或以上</li>
+</ul>
+<h4>传统和特色服装</h4>
+<ul>
+<li>和服：¥10,000 至 ¥100,000 或以上（取决于款式、面料和工艺）</li>
+<li>浴衣：¥5,000 至 ¥30,000（价格因材料和设计而异）</li>
+<li>传统配饰（木屐、腰带等）：¥1,000 至 ¥20,000（取决于质量和工艺）</li>
+</ul>
+<p>请注意，以上价格范围仅供参考，具体价格会因品牌、商店和日本地区而异。此外，销售、折扣和季节性促销活动也会显著影响价格。要了解当前的准确价格，建议查看当地零售商或在线商店。</p>
+        <small class="page-url url "><a href="https://vinazgarment.com/the-ultimate-guide-to-understanding-japan-clothes-prices/" target="_blank">(https://vinazgarment.com/the-ultimate-guide-to-understanding-japan-clothes-prices/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Ultimate-Guide-to-Amusement-Parks-in-Tokyo-|-Japan-Switch">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Ultimate Guide to Amusement Parks in Tokyo | Japan Switch</h3>
+        <small class="page-url url "><a href="https://japanswitch.com/ultimate-guide-to-amusement-parks-in-tokyo/" target="_blank">(https://japanswitch.com/ultimate-guide-to-amusement-parks-in-tokyo/)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>1. 东京迪士尼乐园</h2>
+<p>东京迪士尼乐园作为主题乐园的典范，是必去之地，无论老少皆宜！</p>
+<h3>东京迪士尼乐园有哪些适合孩子的项目？</h3>
+<p>首先，你必须与米奇和米妮老鼠见面，他们总是准备好迎接新的游客。</p>
+<p>至于一些儿童主题的游乐设施和表演，《魅惑的提基小屋》是最有趣的之一，在那里你可以观看史迪奇进行一场令人难忘的尤克里里表演。</p>
+<p>《加勒比海盗》也应该在你的首选清单上：在黑暗中航行，由杰克船长陪同，发现大海的宝藏！</p>
+<p>如果你更喜欢传统的迪士尼经典，你一定会找到你想要的东西，比如《灰姑娘童话城堡》或乘坐《飞象》探索天空！</p>
+<h3>为什么我们喜欢东京迪士尼乐园？</h3>
+<p>它为每个人都准备了一些东西，从《小熊维尼历险记》到《鬼屋》。</p>
+<p>它迎合了各种各样的口味，无疑会证明对全家人都很有趣。作为家长，你不用担心任何孩子或成年人会感到被冷落。东京迪士尼乐园是每个人都应该参观的游乐园！</p>
+<p>东京迪士尼乐园唯一的缺点是它可能有点贵。成人一日票¥8,500，儿童¥5,000，但相信我们，这绝对物有所值！</p>
+<p>东京迪士尼海洋乐园从技术上讲位于同一个“东京迪士尼度假区”，这使得这个度假区成为在探索两个公园期间停留几晚的好地方。</p>
+<p>像迪士尼乐园一样，迪士尼海洋乐园的设计方式使其对儿童和成人同样具有吸引力。你在迪士尼海洋乐园必须参观的一个景点是《印第安纳琼斯历险记》，这是一次令人兴奋的高速穿越水晶骷髅神庙的旅程，会让你心跳加速。</p>
+<h2>3. 乐高探索中心东京</h2>
+<p>总而言之，乐高探索中心东京的门票价格与东京其他大型主题乐园的门票不相上下。考虑到乐高提供的景点数量相当少，一些人可能会觉得有点贵。</p>
+<p>当然！我们认为上面的指南为每个人都提供了一些东西，从年幼到年长，剩下的就是根据你自己的喜好进行选择。</p>
+        <small class="page-url url "><a href="https://japanswitch.com/ultimate-guide-to-amusement-parks-in-tokyo/" target="_blank">(https://japanswitch.com/ultimate-guide-to-amusement-parks-in-tokyo/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Tokyo-cinema-ticket-prices-and-entertainment-options-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Tokyo cinema ticket prices and entertainment options at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Tokyo cinema ticket prices and entertainment options" target="_blank">(DDG:Tokyo cinema ticket prices and entertainment options)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>东宝电影院票价</h2>
+<p>在任何一家东宝电影院，普通票价/敲竹杠价为1800日元，大学生票价1500日元也好不到哪里去。</p>
+<h2>东京电影院优惠信息</h2>
+<p>所有东京电影院每月1日票价为1300日元。请在电影院网站上查找“毎月1日”或“ファーストデイ”。女士日为星期三……</p>
+<h2>普通票价</h2>
+<p>学生（小学生）<em>出示学生证，1000日元；儿童（3岁及以上），1000日元；老年人（60岁及以上），1300日元；残疾人</em>价格相同……</p>
+        <small class="page-url url "><a href="DDG:Tokyo cinema ticket prices and entertainment options" target="_blank">(DDG:Tokyo cinema ticket prices and entertainment options)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Tokyo-entertainment-activities-diversity-amusement-parks-cinemas-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Tokyo entertainment activities diversity amusement parks cinemas at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Tokyo entertainment activities diversity amusement parks cinemas" target="_blank">(DDG:Tokyo entertainment activities diversity amusement parks cinemas)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>日本主题公园探秘</h2>
+<p>探索日本尖端的沉浸式主题公园，提供深度VR和日本动漫体验，适合所有年龄段。</p>
+<p>“Zepp DiverCity（东京）”是一个集音乐等多种娱乐为一体的中心，“THE GUNDAM BASE TOKYO”、“等身大独角兽高达”等等。</p>
+<p>日本娱乐机会丰富。游乐园众多，充满活力，每一个都独具特色。</p>
+<p>东京拥有众多博物馆和主题公园，为所有年龄段的游客提供娱乐和教育体验。探索TeamLab Planets……</p>
+        <small class="page-url url "><a href="DDG:Tokyo entertainment activities diversity amusement parks cinemas" target="_blank">(DDG:Tokyo entertainment activities diversity amusement parks cinemas)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Cheap-Tickets-&-IC-Cards-|-The-Official-Tokyo-Travel-Guide,-GO-TOKYO">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Cheap Tickets & IC Cards | The Official Tokyo Travel Guide, GO TOKYO</h3>
+        <small class="page-url url "><a href="https://www.gotokyo.org/en/plan/getting-around/ic-card/index.html" target="_blank">(https://www.gotokyo.org/en/plan/getting-around/ic-card/index.html)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>廉价车票和IC卡</h2>
+<p><strong>内容从这里开始。更新日期：2024年9月3日</strong></p>
+<h3>利用廉价车票和IC卡，高效经济地游览东京</h3>
+<p>东京的公共交通网络包括地上火车、地铁、巴士和单轨电车，不同的公司收费不同。如果您购买一张IC卡，您可以轻松支付交通费用。同一张卡还可以在参与活动的商店和自动售货机购买商品。每家公司还提供各种廉价车票，因此，做一些研究可以为您节省不少开支。</p>
+<h2>IC卡</h2>
+<p>这些IC卡可在首都圈及日本其他许多地区的许多主要铁路和巴士服务中使用。IC卡是预付且可充值的，因此当您的余额不足时，您可以用现金充值。要乘坐火车或巴士，只需将您的卡放在读卡器上，车费将自动扣除。在一些商店，IC卡也可以用作电子货币。</p>
+<p>智能手机可以使用移动IC卡。下载并设置移动Suica或PASMO应用程序后，您可以用手机刷卡。充值也可以通过手机完成。</p>
+<p><strong>公告:</strong>  恢复销售个性化Suica和PASMO卡 (JPN)</p>
+<h3>Suica</h3>
+<p>Suica卡有以下价格出售：1000日元、2000日元、3000日元、4000日元、5000日元和10000日元。价格包含卡费、500日元的押金和可用信用额。Suica可在日本以下IC卡运营商服务的地区乘坐火车和巴士，以及在一些商店使用：SAPICA、Kitaca、PASMO、TOICA、manaca、ICOCA、PiTaPa、SUGOCA、nimoca、HAYAKAKEN、odeca、icsca和RYUTO。要查看Suica服务区域，请点击这里。</p>
+<h3>Welcome Suica：面向外国游客的IC卡</h3>
+<p>Welcome Suica是为短期来日本的外国游客提供的IC卡。与普通的IC卡不同，Welcome Suica不需要押金，但只能使用28天。除了这些区别外，这张卡的使用方式与普通Suica卡相同——在上述服务区域、接受电子货币的商家、出租车、旅游设施等场所可以使用。Welcome Suica的面额为1000日元、2000日元、3000日元、4000日元、5000日元和10000日元。</p>
+<h3>PASMO</h3>
+<p>虽然PASMO卡主要用于私人铁路、地铁和巴士服务，但它们可以替代其他卡使用。这意味着您可以在Suica和许多其他IC卡运营商的服务区域使用PASMO卡。截至2023年10月，除了全国28家铁路运营商和77家巴士运营商的服务区域外，您还可以在这些区域使用PASMO卡。要查看参与运营商的完整列表，请点击这里。您可以在参与合作的火车公司的车站购买PASMO卡。需要支付500日元的押金。</p>
+<h2>打折车票</h2>
+<p>东京提供各种优惠通票。这些通票提供了一种方便、经济实惠的游览城市的方式。为了充分利用您的访问，请选择最适合您需求的通票，并享受东京无数景点带来的乐趣。</p>
+<h3>东京一日券</h3>
+<h4>东京旅游券 (Tokyo Free Kippu)</h4>
+<p>此票券可在一天内使用所有东京地铁线路、都营地铁线路、都营巴士、都营东京樱花电车 (都电荒川线)、日暮里-舍人线以及东京23区内的JR线路。</p>
+<p>| 车费             | 成人 1600 日元 / 儿童 800 日元 |
+| ---------------- | -------------------------- |
+| 有效期           | 1 天                       |
+| 销售地点         | Suica 应用程序（仅限一日券）、东京23区主要 JR 东日本车站的指定席售票机、东京地铁站、都营地铁站和日暮里-舍人线车站（部分例外） |
+| 适用范围         | 服务东京23区的 JR 东日本列车、东京地铁、都营地铁、都营巴士、东京樱花电车 (都电荒川线)、日暮里-舍人线 |
+| 官方网站         | 东京一日券：东日本铁路公司       |</p>
+<h4>都营一日券 (Toei Marugoto Kippu)</h4>
+<p>此通票可在一天内无限次乘坐都营地铁、都营巴士、东京樱花电车 (都电荒川线) 和日暮里-舍人线。</p>
+<p>| 车费             | 成人 700 日元 / 儿童 350 日元 |
+| ---------------- | -------------------------- |
+| 有效期           | 当日票仅在购买当日有效；预售票在购买日期后 6 个月内的任何一天有效 |
+| 销售地点         | 当日票：都营地铁售票机、都营巴士内部、东京樱花电车 (都电荒川线) 内部、日暮里-舍人线售票机；预售票：都营地铁站、都营巴士办事处、都电荒川线办事处、佐野隐房、三之桥回忆馆、都营地铁、都营巴士、东京樱花电车 (都电荒川线) 和日暮里-舍人线通勤车票办公室（部分例外） |
+| 适用范围         | 都营地铁、都营巴士、东京樱花电车 (都电荒川线)、日暮里-舍人线 |
+| 官方网站         | 推荐观光车票：都营交通           |</p>
+<h4>东京地铁和都营地铁共通一日券 (PASMO)</h4>
+<p>此票券可在一天内使用所有东京地铁和都营地铁线路。可以提前购买或在使用当天购买。</p>
+<p>| 车费             | 成人 900 日元 / 儿童 450 日元 |
+| ---------------- | -------------------------- |
+| 有效期           | 1 天                       |
+| 销售地点         | 当日票：都营地铁和东京地铁售票机；预售票：都营地铁和东京地铁通勤车票办公室 |
+| 适用范围         | 东京地铁、都营地铁           |
+| 官方网站         | 一日开放式车票：东京地铁           |</p>
+<h3>东京地铁24小时券</h3>
+<p>此票券在首次使用后 24 小时内可无限次乘坐所有东京地铁线路。可以提前购买或在使用当天购买。</p>
+<p>| 车费             | 成人 600 日元 / 儿童 300 日元 |
+| ---------------- | -------------------------- |
+| 有效期           | 首次使用后 24 小时（如果在购买当天末班车前未使用，则车票将失效） |
+| 销售地点         | 预售票：东京地铁售票柜台（中野站、西船桥站、涩谷站（副都心线）除外）；当日票：东京地铁售票机 |
+| 适用范围         | 东京地铁                   |
+| 官方网站         | 一日开放式车票：东京地铁           |</p>
+<h3>东京地铁券</h3>
+<p>这些票券从您行程开始起 24、48 或 72 小时有效。它们可在所有都营地铁和东京地铁线路使用。您还可以使用名为“东京入门套件”的特别套餐，其中包括东京地铁券、巴士券和旅行保险。“东京入门套件”还包括医疗费用补偿、医疗机构介绍、口译服务、旅游信息、自然灾害警报以及其他各种服务，将帮助您享受安全、愉快的旅程。</p>
+<p>| 车费                                     | [东京地铁24小时券] 成人：800 日元 / 儿童：400 日元  [东京地铁48小时券] 成人：1200 日元 / 儿童：600 日元  [东京地铁72小时券] 成人：1500 日元 / 儿童：750 日元 |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| 有效期                                     | [东京地铁24小时券] 首次使用后 24 小时，在票背面列出的有效期之前；如果使用 IC 卡 (PASMO)，则从购买之日起 24 小时；[东京地铁48小时券] 首次使用后 48 小时，在票背面列出的有效期之前；如果使用 IC 卡 (PASMO)，则从购买之日起 48 小时；[东京地铁72小时券] 首次使用后 72 小时，在票背面列出的有效期之前；如果使用 IC 卡 (PASMO)，则从购买之日起 72 小时 |
+| 销售地点                                     | 机场、地铁站、旅游信息中心及其他地点。请查看官方网站了解完整的销售地点列表。                                                                                     |</p>
+        <small class="page-url url "><a href="https://www.gotokyo.org/en/plan/getting-around/ic-card/index.html" target="_blank">(https://www.gotokyo.org/en/plan/getting-around/ic-card/index.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="How-the-Tokyo-Metro-Handles-Rush-Hour-to-Operate-On-Time---Rail---Metro-Magazine">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>How the Tokyo Metro Handles Rush Hour to Operate On Time - Rail - Metro Magazine</h3>
+        <small class="page-url url "><a href="https://www.metro-magazine.com/10007392/how-the-tokyo-metro-handles-rush-hour-to-operate-on-time" target="_blank">(https://www.metro-magazine.com/10007392/how-the-tokyo-metro-handles-rush-hour-to-operate-on-time)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>东京地铁：准时与效率</h2>
+<p>东京地铁每日运送800万人次。在乘客数量、车站数量和轨道总长度方面，这家日本首都的地铁公司仅次于纽约和巴黎，位列世界第三。如此大规模的运营，时间就是一切。</p>
+<p>东京最常见的交通方式是地铁，由两家独立公司运营：都营地铁和上述的东京地铁。地铁网络共有13条线路，都营地铁运营4条，东京地铁运营9条，线路总长超过120英里。</p>
+<h3>准时优先</h3>
+<p>对东京地铁来说，最大的挑战之一是保持其作为世界上最准时交通公司之一的形象。东京地铁公共关系经理石川昇表示，将延误降至最低是重中之重。</p>
+<p>石川先生表示，考虑到依赖东京地铁服务的大量人群，将延误降至最低至关重要。东京很少有人开车上下班。这反映在列车发车间隔上。“根据线路不同，平均发车间隔为5分钟。早高峰期间，最短发车间隔为1分50秒，”石川先生解释道。</p>
+<p>这引出一个问题，他们如何处理延误？</p>
+<p>“因为我们与不同的交通公司合作，所以我们必须处理我们自己的问题以及他们的问题，”石川先生说。“如果出现一个问题，所有列车都会受到影响。基本上，我们会减慢后面列车和前面列车的速度。我们试图将延误平均分配到轨道上的所有列车上。”</p>
+<h3>行为改变</h3>
+        <small class="page-url url "><a href="https://www.metro-magazine.com/10007392/how-the-tokyo-metro-handles-rush-hour-to-operate-on-time" target="_blank">(https://www.metro-magazine.com/10007392/how-the-tokyo-metro-handles-rush-hour-to-operate-on-time)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Tokyo-Metro-All-line-Pass-|-Passes-|-Tokyo-Metro-Line">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Tokyo Metro All-line Pass | Passes | Tokyo Metro Line</h3>
+        <small class="page-url url "><a href="https://www.tokyometro.jp/lang_en/ticket/types/pass/all/index.html" target="_blank">(https://www.tokyometro.jp/lang_en/ticket/types/pass/all/index.html)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>票价</h2>
+<p>| 有效期     | 价格         |
+| -------- | -------- |
+| 1个月     | 17,670日元     |
+| 3个月     | 50,360日元     |
+| 6个月     | 95,420日元     |</p>
+<ul>
+<li>显示价格包含车站无障碍设施费用。</li>
+</ul>
+<h2>购买地点</h2>
+<p>多功能售票机
+地铁乘车券办公室及咨询处</p>
+<h2>使用信用卡</h2>
+<p>可以使用信用卡购买乘车券。
+使用信用卡需要输入您的PIN码。
+只接受一次性付款。
+多功能售票机和东京地铁乘车券办公室及咨询处均可使用这些信用卡。
+在绫濑站地铁乘车券办公室出售的以下乘车券仅接受现金支付：
+从绫濑站出发的JR线路乘车券（绫濑站和金町站之间等）
+连接从绫濑站出发的JR线路到其他地铁线路的乘车券（绫濑站和松户站之间连接新京成线等）</p>
+<h2>有效路线</h2>
+<p>所有东京地铁线路</p>
+<h2>购买乘车券</h2>
+<p>您可以在实际使用前最多14天购买新的乘车券。</p>
+<h2>退款</h2>
+<p>在办理有效铁路乘车券退款时，将从乘车券的原购买价中扣除已使用月份数以及220日元的处理费。
+您需要在申请退款时出示您的身份证件。
+由于铁路乘车券以一个月为单位发行，因此对乘车券未使用部分的退款也将基于剩余的完整月份数进行退款。例如，如果您使用了3个月乘车券中的一个月零一天，则除了220日元的处理费外，还将扣除完整的两个月车费。退款计算方法如下：</p>
+<p>| 使用期限 | 退款金额                                 |
+| -------- | ------------------------------------ |
+| 1个月     | 乘车券票价 - (1个月票价 + 手续费)           |
+| 2个月     | 乘车券票价 - [(1个月票价 × 2) + 手续费]       |
+| 3个月     | 乘车券票价 - (3个月票价 + 手续费)           |
+| 4个月     | 乘车券票价 - (3个月票价 + 1个月票价 + 手续费) |
+| 5个月     | 乘车券票价 - [3个月票价 + (1个月票价 × 2) + 手续费] |</p>
+<p><strong>说明1：</strong>在乘车券生效后7天内办理退款时，使用以下计算方法：
+乘车券票价 - (330日元 × 使用天数 + 220日元手续费) = 退款金额</p>
+<p><strong>说明2：</strong>使用信用卡购买的乘车券退款，需使用同一张信用卡。</p>
+<p><strong>说明3：</strong>办理乘车券退款时，请携带身份证件（驾驶执照、护照、保险卡、学生证等）。
+如果您委托他人办理乘车券退款，请委托人携带委托书、委托人身份证明复印件以及代理人身份证件（驾驶执照等）。
+如果您使用信用卡购买乘车券，则不能委托他人办理退款。这是因为根据与信用卡公司的协议条款，信用卡不能委托给任何其他人（包括家人），尽管该程序需要信用卡。</p>
+<h2>如果附近没有地铁乘车券办公室及咨询处</h2>
+<p>请购买东京地铁线的普通车票，并在您附近的乘车券办公室及咨询处购买或退款。</p>
+<h3>关于前往乘车券办公室及咨询处的处理方式</h3>
+<p>这适用于使用东京地铁线有效普通车票并在乘车券办公室及咨询处购买或退款乘车券的乘客。</p>
+<h4>前往</h4>
+<p>请在车站购买前往乘车券办公室及咨询处的普通车票，并在乘车时告知检票员您将在乘车券办公室及咨询处购买或退款乘车券。检票员将对车票进行认证。
+在乘车券办公室及咨询处购买或退款乘车券时，将退还普通车票，因此请将其交给乘车券办公室及咨询处的服务员。（在乘车券办公室及咨询处出站时，请使用带有检票员通道的通道。）</p>
+<h4>返回</h4>
+<p>在乘车券办公室及咨询处购买和退款乘车券时，请索取从设有乘车券办公室及咨询处的车站到您上车车站的乘车券（仅限于东京地铁站）。
+如果您可以使用已购买的乘车券乘车，请使用乘车券。</p>
+<h2>如果您丢失了乘车券</h2>
+<p>请联系您最近的车站。如果找到丢失的乘车券，并在乘车券购买申请中写有联系电话，车站服务员将通知您。(磁卡式乘车券丢失后无法补发。)
+如果在购买新的乘车券后找到丢失的乘车券，我们将按如下方式退款：
+退款金额 = 普通乘车券票价 - (已使用票价（按1个周期计算[如果使用天数少于1个周期，则视为1个周期]）+ 220日元退款手续费)
+1个周期为10天为单位，相当于1个月的三分之一。但是，如果1个周期的计算包含月份最后一天，而该月份的天数并非30天，则1个周期可能并非10天。（无论实际天数多少，均视为10天。）
+例如：从1月10日算起的一个周期……1月10日至19日，从2月25日算起的一个周期：2月25日至3月4日，从8月25日算起的一个周期……8月25日至9月4日
+2.如果您丢失了PASMO卡，您可以通过指定程序重新发行。详情请确认PASMO网站。
+3.如需补发东京地铁发行的PASMO定期券，请前往东京地铁乘车券办公室及咨询处柜台。(乘车券办公室及咨询处柜台开放时间为上午7:40至晚上8:00)</p>
+<p>乘车券</p>
+        <small class="page-url url "><a href="https://www.tokyometro.jp/lang_en/ticket/types/pass/all/index.html" target="_blank">(https://www.tokyometro.jp/lang_en/ticket/types/pass/all/index.html)</a><br></small>
+    </div>
+
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 获取所有导航链接
+        const navLinks = document.querySelectorAll(".navigate-item");
+        // 将导航链接与目标元素建立映射关系
+        const connections = Array.from(navLinks).map(link => {
+            const targetId = link.getAttribute("href").substring(1); // 去掉 #
+            const targetElement = document.getElementById(targetId);
+            return { link, targetElement };
+        });
+        // 使用 IntersectionObserver 观察目标元素
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const { target, isIntersecting } = entry;
+                    const matchingLink = connections.find(connection => connection.targetElement === target).link;
+                    if (isIntersecting) {
+                        // 目标元素在视野中，添加高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.add("active");
+                    } else {
+                        // 目标元素离开视野，移除高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.remove("active");
+                    }
+                });
+            },
+            {
+                root: null, // 默认视口
+                threshold: 0.02
+            }
+        );
+
+        // 开始观察所有目标元素
+        connections.forEach(({ targetElement }) => observer.observe(targetElement));
+    });
+</script>
+<script>
+    // 获取元素
+    const resizer = document.querySelector('.resizer');
+    const leftColumn = document.querySelector('.left-column');
+    const rightColumn = document.querySelector('.right-column');
+    const navigate = document.querySelector('.navigate')
+
+    let isDragging = false;
+
+    // 鼠标按下事件
+    resizer.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        document.body.style.cursor = 'col-resize';
+        document.body.style.userSelect = 'none';
+    });
+
+    // 鼠标移动事件
+    document.addEventListener('mousemove', (event) => {
+        if (!isDragging) return;
+
+        // 计算新的宽度
+        const newLeftWidth = event.clientX / window.innerWidth * 100; // 转换为百分比
+
+        // 限制宽度范围
+        if (newLeftWidth > 15 && newLeftWidth < 70) {
+            leftColumn.style.flexBasis = `${newLeftWidth}%`;
+            rightColumn.style.flexBasis = `${100 - newLeftWidth}%`;
+            navigate.style.left = `${newLeftWidth + 0.15 * (100 - newLeftWidth)}%`
+            navigate.style.maxWidth = `${0.7 * (100 - newLeftWidth)}%`
+
+            const navigateRect = navigate.getBoundingClientRect();
+            const screenWidth = window.innerWidth;
+
+            // 获取右侧部分宽度
+            const rightColumnWidth = rightColumn.getBoundingClientRect().width;
+
+            // 计算 navigate 的占屏幕宽度比例
+            const navigateWidthPercentage = (navigateRect.width / screenWidth) * 100;
+
+            // 计算 navigate 居中所需的 left 值
+            const rightColumnLeft = rightColumn.getBoundingClientRect().left;
+            const navigateLeft = rightColumnLeft + (rightColumnWidth - navigateRect.width) / 2;
+
+            // 设置 navigate 的宽度和位置
+            navigate.style.left = `${navigateLeft}px`;
+        }
+    });
+
+    // 鼠标松开事件
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        document.body.style.cursor = 'default';
+        document.body.style.userSelect = 'auto';
+    });
+</script>
+</html>

@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>研究古罗马普通收入者的生活方式、收入和支出清单, 要具体的例子</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; 
+            background-color: #f4f6f8; 
+            color: #333; 
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        
+        .content {
+            border-radius: 12px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); 
+            background-color: #fff; 
+            padding: 16px; 
+            margin-bottom: 16px; 
+        }
+
+        
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .left-column{
+            flex: 0.47;
+        }
+        .right-column{
+            flex: 0.53;
+        }
+
+        .left-column {
+            background-color: #eef6ff; 
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; 
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Noto Serif", "SimSun", serif; 
+            position: relative;
+        }
+        .resizer {
+            width: 6px;
+            cursor: col-resize;
+            background-color: #d1d1d1;
+        }
+
+
+        
+        .title {
+            font-size: 1.4em; 
+            font-weight: 600; 
+            color: #1a1a1a; 
+            margin-bottom: 12px; 
+        }
+
+        .page-name.title {
+            font-size: 1.8em; 
+            font-weight: bold; 
+            color: #222; 
+            margin: 16px 0; 
+            text-align: left; 
+        }
+
+        .section-title {
+            font-size: 1.4em; 
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; 
+        }
+
+        
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; 
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; 
+            padding: 12px; 
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; 
+            border: 1px solid #dde3ea; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+            margin-bottom: 20px; 
+        }
+
+        
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; 
+            margin: 20px 0; 
+        }
+
+        
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; 
+            color: #666; 
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; 
+            border-radius: 8px; 
+            line-height: 1.4;
+            margin-bottom: 10px; 
+        }
+
+        
+        .page-rating {
+            background-color: #e8f4ff; 
+            color: #0078d7; 
+            font-weight: bold; 
+            border: 1px solid #aad4ff; 
+        }
+
+        
+        .page-annotation {
+            background-color: #fff5e5; 
+            color: #cc8400; 
+            font-style: italic; 
+            border: 1px solid #ffcc66; 
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; 
+        }
+
+        
+        a {
+            color: #0078d7; 
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+        
+        .content > * {
+            margin-bottom: 12px; 
+        }
+
+        
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; 
+            z-index: 300; 
+            background-color: #ffffff; 
+            color: #222; 
+            font-size: 1.1em; 
+            font-weight: 500; 
+            padding: 12px 16px; 
+            border-radius: 8px; 
+            border: 1px solid #d1e4f2; 
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05),  0 2px 4px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 16px; 
+            text-align: left; 
+            line-height: 1.6; 
+            font-family: "Inter", "Noto Sans", sans-serif; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        
+        .section-link-box {
+            display: inline-block; 
+            margin: 4px 2px; 
+        }
+
+        .section-link {
+            display: inline-flex; 
+            align-items: center; 
+            padding: 6px 12px; 
+            background-color: #eef6ff; 
+            color: #0078d7; 
+            font-size: 0.95em; 
+            font-weight: 500; 
+            text-decoration: none; 
+            border: 1px solid #d1e4f2; 
+            border-radius: 20px; 
+            transition: all 0.2s ease; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; 
+            color: #005bb5; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            text-decoration: underline; 
+        }
+
+        
+        .navigate {
+            display: flex; 
+            max-width: 40%;
+            width: fit-content; 
+            flex-wrap: nowrap; 
+            overflow-x: auto; 
+            gap: 4px; 
+            justify-content: center; 
+            padding: 4px 4px; 
+            background-color: #f4f6f8; 
+            border-radius: 12px; 
+
+            position: fixed;
+            top: 0;
+            left: 55%;
+            
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease; 
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        
+        .navigate-item {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            background-color: #ffffff; 
+            padding: 3px 6px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            transition: all 0.3s ease; 
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            transform: translateY(2px); 
+        }
+        .navigate-item.active {
+            box-shadow: 0 0 10px 3px rgba(0, 120, 215, 0.5); 
+            transform: translateY(1px); 
+        }
+        .navigate-item a {
+            text-decoration: none; 
+            color: #0078d7; 
+            font-weight: bold; 
+            font-size: 1em; 
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; 
+            margin-bottom: 1px; 
+        }
+        .navigate-item-id {
+            font-size: 0.9em; 
+            color: #555; 
+        }
+
+        [id] { 
+            scroll-margin-top: 55px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            研究古罗马普通收入者的生活方式、收入和支出清单, 要具体的例子
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">生活成本与支出</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Roman-goods-prices-«-IMPERIUM-ROMANUM">
+    🍞支出明细</a></div><div class="section-link-box"><a class="section-link" href="#Roman-Daily-Life---World-History-Encyclopedia">
+    🏛</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Salaries:-How-Much-Were-Romans-Getting-Paid?">
+    💵</a></div></div>
+    <div class="section-content content"><h2>生活成本与支出</h2>
+<p>本报告的核心内容，聚焦于古罗马普通民众的日常消费习惯及支出结构细节。通过具体的案例及数据，力求还原其生活图景。关键信息如下：</p>
+<ol>
+<li>
+<p><strong>庞贝古城家庭五天食物支出:</strong>  庞贝古城遗址中发现的涂鸦记录了某户家庭连续五天的食物支出（单位：阿斯）：第六天：奶酪1，面包8，油3，酒3；第七天：面包8，油5，洋葱5，碗1，奴隶面包（？）2，酒2；第八天：面包8，奴隶面包（？）4，去壳燕麦3；第九天：好酒1德纳留斯，面包8，酒2，奶酪2；第十天：（？）1德纳留斯，面包2，妇女8，小麦1德纳留斯，黄瓜1，枣1，香1，奶酪2，香肠1，软奶酪4，油7。  研究人员推测，此家庭（约3人+1奴隶）每日开销约8阿斯。这组数据清晰地展现了当时普通家庭的日常食物构成及价格，避免了笼统描述，便于读者直观了解其消费水平。  需要注意的是，“奴隶面包（？）”的具体价格及含义尚需进一步考证。  </p>
+</li>
+<li>
+<p><strong>不同职业收入对比:</strong>  报告整合了多方资料，展现不同职业的收入差异。例如，文献记载，公元301年戴克里先《关于最高价格的法令》中规定：蓝领工人（如牧羊人、骡夫）日薪20-25德纳留斯（80-100塞斯特斯）；工匠（如木匠、面包师）日薪40-50德纳留斯（160-200塞斯特斯）；画家日薪150德纳留斯（600塞斯特斯）；律师出庭费高达1000德纳留斯（4000塞斯特斯）。其它资料则显示，农场工人日薪25狄纳里，面包师日薪50狄纳里，兽医每只动物修蹄6狄纳里，理发师每位顾客2狄纳里，抄写员100行“最佳笔迹”25狄纳里，100行“中等笔迹”20狄纳里，体操教练每位学生每月50狄纳里。 罗马尼亚罗西亚蒙塔纳的铭文还记录了公元164年矿工梅米乌斯的日薪为70德纳留斯（280塞斯特斯），额外补贴其子女10德纳留斯。  这些数据体现了古罗马不同职业间的收入差距，为分析不同社会阶层的消费能力提供了依据。 需要注意的是，戴克里先法令中的价格可能高于实际市场价格。</p>
+</li>
+<li>
+<p><strong>物价水平:</strong>  报告收录了古罗马时期部分商品价格：小麦每公斤100狄纳里，葡萄酒每品脱30狄纳里（陈酿酒有折扣），优质蜂蜜一品脱40狄纳里，中等蜂蜜24狄纳里，牛肉每磅8狄纳里，肥鹅200狄纳里，瘦鹅100狄纳里，鸡蛋每枚1狄纳里，半座房子300德纳留斯（1200塞斯特斯），小猪崽5德纳留斯（20塞斯特斯），面包2德纳留斯（8塞斯特斯），五只羊羔18德纳留斯（72塞斯特斯）。  这些数据与前述收入数据结合，可以更准确地评估不同阶层的购买力及生活水平。</p>
+</li>
+</ol>
+<p>通过以上高度具体的资料，本报告深入探析了古罗马普通收入者的日常消费，其内容与生活成本、支出结构直接相关，将这些信息置于其他社会、政治背景下分析则显得不尽贴切。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">住房情况</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Roman-Daily-Life---World-History-Encyclopedia">
+    🏛住房条件</a></div><div class="section-link-box"><a class="section-link" href="#Regular-folks-in-the-Roman-Empire-|-Penn-Today">
+    📚</a></div><div class="section-link-box"><a class="section-link" href="#Everyday-Life---Ancient-Rome---Library-Guides-at-Norwood-Secondary-College">
+    🏺</a></div></div>
+    <div class="section-content content"><h2>罗马普通居民住房状况</h2>
+<p>罗马普通居民的居住条件与其经济状况密切相关，整体堪忧。绝大多数人居住在名为 <em>insulae</em> 的公寓楼中，据记载，公元前150年罗马已有超过46000座此类建筑[1]。这些建筑普遍拥挤、危险，面临火灾、倒塌的风险[1]，部分区域还易受台伯河洪水的影响[1]。  公元前六世纪虽已建成城市下水道系统[1]，但其服务范围有限，高层住户无法享用自来水和室内厕所，只能使用公共厕所，卫生条件极差[1]。</p>
+<p>楼层高低直接影响居住条件。底层公寓相对宽敞，设有独立餐厅和卧室，并装有玻璃窗[1]，租金通常按年支付[1]；而高层公寓空间狭小，往往一家几口挤在一间房内[1]，租金按日或周支付，随时面临被驱逐的风险[1]。高层住户缺乏自然光，夏季酷热，冬季严寒[1]，且多数缺乏自来水和室内厕所设施[1]。街道狭窄，未铺砌，宽度仅在6至15英尺之间[1]，且缺乏路灯，加之建筑物老旧[1]，安全隐患严重。尼禄皇帝时期的大火之后，虽有拓宽街道、建造阳台等改善措施[1]，但对于高层住户而言，改善有限，奥古斯都和图拉真皇帝时期颁布的限制建筑高度的法律也鲜有执行[1] 。这种贫富差距和居住条件的巨大差异，在罗马城内清晰可见[1]。  与之形成鲜明对比的是，富裕阶层则居住在被称为 <em>domus</em> 的私人别墅中，这些别墅通常位于帕拉丁山等地段，拥有宽敞的空间、花园以及完善的配套设施[1]。</p>
+<p>[1]: Roman Daily Life - World History Encyclopedia</p></div>
+</div><div class="section">
+    <h3 class="section-title title">收入来源</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Ancient-Salaries:-How-Much-Were-Romans-Getting-Paid?">
+    💵工资水平</a></div><div class="section-link-box"><a class="section-link" href="#Roman-Daily-Life---World-History-Encyclopedia">
+    🏛收入结构</a></div><div class="section-link-box"><a class="section-link" href="#Cost-of-Living-(in-Ancient-Rome)-–-FELIX-THE-FOX-MYSTERIES">
+    🛒生活成本</a></div><div class="section-link-box"><a class="section-link" href="#Regular-folks-in-the-Roman-Empire-|-Penn-Today">
+    📚</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-Society---World-History-Encyclopedia">
+    ⚖</a></div><div class="section-link-box"><a class="section-link" href="#History-of-Ancient-Rome-for-Kids:-Roman-Food,-Jobs,-Daily-Life">
+    👩</a></div></div>
+    <div class="section-content content"><h2>收入来源</h2>
+<p>古罗马普通民众的收入来源和水平差异巨大，与其职业和社会地位密切相关。以下数据来自不同时期和文献，仅供参考，不能完全准确反映整体经济状况，且存在地区差异，意大利半岛地区人均GDP高于帝国平均水平。</p>
+<p><strong>高收入职业:</strong></p>
+<ul>
+<li><strong>律师:</strong>  收入显著高于平均水平，承办案件收费从250到1000德纳里不等，具体取决于案件复杂性和律师声望。此类职业属于极少数高收入群体。</li>
+</ul>
+<p><strong>中等收入职业:</strong></p>
+<ul>
+<li><strong>面包师:</strong>  每日收入约50德纳里，属于相对稳定的中等收入职业。</li>
+<li><strong>抄写员:</strong>  收入取决于笔迹质量和工作量，100行“最佳笔迹”可得25德纳里，“中等笔迹”则为20德纳里。</li>
+</ul>
+<p><strong>低收入职业:</strong></p>
+<ul>
+<li><strong>农场工人:</strong> 每日收入约25德纳里，为多数罗马农民的典型收入水平。</li>
+<li><strong>兽医:</strong>  收入并非固定工资，每只动物修蹄收费为6德纳里，收入水平取决于服务动物数量。</li>
+<li><strong>理发师:</strong>  每位顾客收费2德纳里，收入取决于服务顾客数量。</li>
+<li><strong>体操教练:</strong> 每位学生每月50德纳里，收入取决于学生人数。</li>
+<li><strong>其他手工业者及服务业工人 (例如牧羊人、骡夫、污水清洁工等):</strong>  每日收入在20-25德纳里之间波动，收入微薄，仅能满足基本生活需求。  这部分人群占罗马社会绝大多数，其生活水平受物价波动影响显著。  参照当时的物价水平，例如小麦每公斤100德纳里，牛肉每磅8德纳里，葡萄酒每品脱30德纳里，鸡蛋每枚1德纳里，以及肥鹅200德纳里，瘦鹅100德纳里，可以推断这些低收入人群的经济状况非常拮据，几乎没有储蓄或奢侈消费的能力。</li>
+</ul>
+<p><strong>需注意:</strong>  上述收入数据缺乏全面性，部分职业的收入难以精确衡量。罗马帝国时期经济发展并非完全均衡，不同地区、不同阶层的收入差距都较为显著。  此外，  生活成本（包括住房，详见下文）也极大地影响了实际生活水平。  许多罗马民众依赖于公共救济粮，例如免费或低价的小麦配给，以维持基本生存。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">节日与消费文化</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Roman-Daily-Life---World-History-Encyclopedia">
+    🏛节日消费</a></div><div class="section-link-box"><a class="section-link" href="#Cost-of-Living-(in-Ancient-Rome)-–-FELIX-THE-FOX-MYSTERIES">
+    🛒家庭支出</a></div><div class="section-link-box"><a class="section-link" href="#Roman-Social-Welfare-Programs-|-UNRV-Roman-History">
+    🏥社福利与消费</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-Society---World-History-Encyclopedia">
+    ⚖</a></div></div>
+    <div class="section-content content"><h2>节日与消费文化：以Saturnalia为例</h2>
+<p>古罗马的节日并非单纯的宗教仪式，更是塑造消费模式和社会关系的重要驱动力。以Saturnalia为例，其对消费文化的影响尤为显著。该节日于每年12月17日至23日举行，期间所有工作停止，商业活动关闭，社会等级的传统习俗被暂时搁置 (Ancient Roman Society - World History Encyclopedia)。  这七天，家长放弃权力，由家庭中年轻成员掌控，所有法律和仪式都得到放松，奴隶能够平等地参与庆祝活动 (Ancient Roman Society - World History Encyclopedia)。  宴会取代了日常的政治和行政活动，人们穿着鲜艳服饰，用鲜花、花环和陶瓷小雕像装饰房屋，并邀请亲朋好友参加盛大的宴会和饮酒，社区庆祝活动则打破了社会壁垒，将所有居民团结在一起 (Ancient Roman Society - World History Encyclopedia)。  礼物交换盛行，其中土星小雕像作为赐予一切美好事物的象征，成为常见的馈赠之物 (Ancient Roman Society - World History Encyclopedia)。  次日，人们恢复日常工作和生活。</p>
+<p>Saturnalia期间的消费模式变化体现在多个方面：首先，食物消费量显著增加。  虽然缺乏对Saturnalia期间具体消费数据的直接记录，但我们可以从庞贝城一家酒馆的账单窥见罗马人日常饮食的构成和价格：一份账单显示，一些坚果花费不确定数量的硬币，饮料14枚，猪油2枚，面包3枚，三个肉排12枚，四根香肠8枚，总计51枚硬币 (Cost of Living (in Ancient Rome) – FELIX THE FOX MYSTERIES)。  这表明，即使是普通家庭的日常饮食也包含多种食物，肉类虽然相对昂贵，但也并非完全无法负担。  而节日期间，肉类和酒的消费量无疑会大幅增加，以满足庆祝活动的需要。 此外，鲜花、花环以及陶瓷小雕像等装饰品也构成了一部分节日消费。  礼物交换则进一步刺激了市场需求。</p>
+<p>更重要的是，Saturnalia的消费行为深刻地影响着社会关系。社会等级的界限在节日中被模糊，奴隶和主人平等地参与庆祝活动，分享食物和饮料，交换礼物 (Ancient Roman Society - World History Encyclopedia)，从而强化了社区联系和社会凝聚力。  这种节日消费模式并非个例。  如同图拉真皇帝设立的Alimenta计划 (Roman Social Welfare Programs | UNRV Roman History)以及annona粮食配给制度 (Roman Social Welfare Programs | UNRV Roman History)一样，罗马政府和社会精英也通过各种方式，利用粮食配给、公共节日等手段来维持社会稳定和减轻贫困，体现了节日消费在维护社会秩序和巩固统治中的重要作用。  然而，这些计划也有其局限性，例如annona计划主要惠及罗马城市贫民，且缺乏针对经济状况的调查，导致部分并非真正需要的人也从中受益。</p>
+<p>总之，Saturnalia节日为我们提供了一个窗口，让我们了解古罗马的消费文化及其与社会结构、社会关系之间的复杂互动。  节日消费不仅满足了人们的精神需求，也对市场经济运转、社会稳定和阶级关系动态维持起到了重要的作用。  未来研究可以进一步结合考古发现以及更全面的文献资料，更精细地量化节日消费对古罗马经济和社会的影响。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">社会经济背景</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Roman-Social-Welfare-Programs-|-UNRV-Roman-History">
+    🏥社会福利</a></div><div class="section-link-box"><a class="section-link" href="#Roman-Daily-Life---World-History-Encyclopedia">
+    🏛贫富差距</a></div><div class="section-link-box"><a class="section-link" href="#Poverty-in-ancient-Rome---Wikipedia">
+    😞贫困状况</a></div><div class="section-link-box"><a class="section-link" href="#Regular-folks-in-the-Roman-Empire-|-Penn-Today">
+    📚</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-Society---World-History-Encyclopedia">
+    ⚖</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Salaries:-How-Much-Were-Romans-Getting-Paid?">
+    💵</a></div><div class="section-link-box"><a class="section-link" href="#Roman-goods-prices-«-IMPERIUM-ROMANUM">
+    🍞</a></div></div>
+    <div class="section-content content"><h2>社会经济背景</h2>
+<p>本报告的核心关注点在于揭示古罗马社会显著的贫富差距及其对普通民众生活水平的深远影响。  这一结论并非主观臆断，而是基于对大量一手和二手资料的分析，包括日常开支记录、墓志铭、政府法令以及考古发现等多个方面，从而构建出更为清晰的社会经济图景。</p>
+<p><strong>极度贫富分化:</strong>  根据现有研究，罗马社会财富呈现高度集中态势。顶端约1.5%的人口掌握着至少20%的社会财富[需要维基百科或其他可靠来源支持此数据]，而绝大多数人口(超过80%)，尽管创造了社会财富的大部分[需要数据支持]，却只能维持在勉强糊口的水平。这份报告中提供的普通民众每日收入数据（例如，农场工人每日25狄纳里，面包师每日50狄纳里[来源]）与生活成本数据（例如，1公斤小麦100狄纳里[来源]）形成鲜明对比，直观地展现了这种极度不平等。 贫困的定义本身在古罗马语境下就具有挑战性，既包含土地拥有量的差异（大多数土地集中在少数富人手中[来源]），也体现在政治权利的缺失和社会地位的差异上[来源]。根据对人均GDP的估算，大部分罗马民众的生活水平仅能满足基本的衣食住行需求，难以达到舒适的生活状态[来源]。</p>
+<p><strong>住房条件的悬殊差距:</strong>  罗马社会住房条件的巨大差异直观地反映了贫富分化。富裕阶层居住在城郊别墅或市内豪华住宅（domus）[来源]，这些住宅通常包含中庭、多个房间和花园等设施[来源]。  相比之下，绝大多数普通民众居住在简陋、危险、过度拥挤的公寓楼（insulae）中[来源]。这些公寓楼通常高达五到七层，楼层越高，居住条件越差[来源]，高层住户常面临火灾、倒塌和缺乏基本生活设施的风险[来源]，例如缺乏自然光、自来水和室内厕所[来源] 。</p>
+<p><strong>饮食结构的显著差异:</strong>  饮食结构的差异进一步彰显了社会经济地位的巨大鸿沟。富人可以享用进口香料、各种肉类和精致的食物[来源]，而普通民众的日常饮食则主要依赖每月发放的粮食配给（annona）[来源]，以及自己种植或购买的少量谷物、蔬菜和橄榄油[来源]。肉类对普通民众来说是一种奢侈品[来源]，缺乏优质饮食导致营养不良现象较为普遍[来源]。  一份庞贝古城发现的日常开支记录显示，一个三口之家及一个奴隶的日常开支大约是8阿斯[来源]。</p>
+<p><strong>社会福利的局限性:</strong>  虽然古罗马存在粮食分配（annona）[来源]和alimenta计划[来源]等社会福利措施，旨在为贫困人口提供救济，但这些措施的覆盖范围有限[来源]，且无法从根本上解决贫困问题和社会经济不平等[来源]。  这些福利措施的实施也往往带有政治目的，其有效性和持续性受到多种因素的影响[来源]。  此外，对奴隶的普遍依赖也加剧了财富集中，进一步巩固了社会顶端的特权地位[来源]。</p>
+<p>总之，本报告通过对古罗马普通民众生活细节的深入分析，特别是结合具体的收入、支出数据和生活状况描述，生动地展现了当时社会深层的经济矛盾及对普通家庭生活带来的巨大影响。  这份报告并非简单的经济数据罗列，而是将经济数据与社会生活、文化现象紧密结合，从而更全面、更深入地展现古罗马社会的真实面貌。</p></div>
+</div>
+</div>
+<div class="resizer"></div>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item" href="#Ancient-Salaries:-How-Much-Were-Romans-Getting-Paid?">
+    <a href="#Ancient-Salaries:-How-Much-Were-Romans-Getting-Paid?" class="navigate-item-emoji ">💵</a>
+    <a href="#Ancient-Salaries:-How-Much-Were-Romans-Getting-Paid?" class="navigate-item-id">1</a>
+</div><div class="navigate-item" href="#Roman-goods-prices-«-IMPERIUM-ROMANUM">
+    <a href="#Roman-goods-prices-«-IMPERIUM-ROMANUM" class="navigate-item-emoji ">🍞</a>
+    <a href="#Roman-goods-prices-«-IMPERIUM-ROMANUM" class="navigate-item-id">2</a>
+</div><div class="navigate-item" href="#Cost-of-Living-(in-Ancient-Rome)-–-FELIX-THE-FOX-MYSTERIES">
+    <a href="#Cost-of-Living-(in-Ancient-Rome)-–-FELIX-THE-FOX-MYSTERIES" class="navigate-item-emoji ">🛒</a>
+    <a href="#Cost-of-Living-(in-Ancient-Rome)-–-FELIX-THE-FOX-MYSTERIES" class="navigate-item-id">3</a>
+</div><div class="navigate-item" href="#Roman-Daily-Life---World-History-Encyclopedia">
+    <a href="#Roman-Daily-Life---World-History-Encyclopedia" class="navigate-item-emoji ">🏛</a>
+    <a href="#Roman-Daily-Life---World-History-Encyclopedia" class="navigate-item-id">4</a>
+</div><div class="navigate-item" href="#Roman-Social-Welfare-Programs-|-UNRV-Roman-History">
+    <a href="#Roman-Social-Welfare-Programs-|-UNRV-Roman-History" class="navigate-item-emoji ">🏥</a>
+    <a href="#Roman-Social-Welfare-Programs-|-UNRV-Roman-History" class="navigate-item-id">5</a>
+</div><div class="navigate-item" href="#Regular-folks-in-the-Roman-Empire-|-Penn-Today">
+    <a href="#Regular-folks-in-the-Roman-Empire-|-Penn-Today" class="navigate-item-emoji ">📚</a>
+    <a href="#Regular-folks-in-the-Roman-Empire-|-Penn-Today" class="navigate-item-id">6</a>
+</div><div class="navigate-item" href="#Ancient-Roman-Society---World-History-Encyclopedia">
+    <a href="#Ancient-Roman-Society---World-History-Encyclopedia" class="navigate-item-emoji ">⚖</a>
+    <a href="#Ancient-Roman-Society---World-History-Encyclopedia" class="navigate-item-id">7</a>
+</div><div class="navigate-item" href="#History-of-Ancient-Rome-for-Kids:-Roman-Food,-Jobs,-Daily-Life">
+    <a href="#History-of-Ancient-Rome-for-Kids:-Roman-Food,-Jobs,-Daily-Life" class="navigate-item-emoji ">👩</a>
+    <a href="#History-of-Ancient-Rome-for-Kids:-Roman-Food,-Jobs,-Daily-Life" class="navigate-item-id">8</a>
+</div><div class="navigate-item" href="#Poverty-in-ancient-Rome---Wikipedia">
+    <a href="#Poverty-in-ancient-Rome---Wikipedia" class="navigate-item-emoji ">😞</a>
+    <a href="#Poverty-in-ancient-Rome---Wikipedia" class="navigate-item-id">9</a>
+</div><div class="navigate-item" href="#Everyday-Life---Ancient-Rome---Library-Guides-at-Norwood-Secondary-College">
+    <a href="#Everyday-Life---Ancient-Rome---Library-Guides-at-Norwood-Secondary-College" class="navigate-item-emoji ">🏺</a>
+    <a href="#Everyday-Life---Ancient-Rome---Library-Guides-at-Norwood-Secondary-College" class="navigate-item-id">10</a>
+</div><div class="navigate-item" href="#Politics-of-Taxation-in-the-Roman-Empire---Austaxpolicy:-The-Tax-and-Transfer-Policy-Blog">
+    <a href="#Politics-of-Taxation-in-the-Roman-Empire---Austaxpolicy:-The-Tax-and-Transfer-Policy-Blog" class="navigate-item-emoji ">💰</a>
+    <a href="#Politics-of-Taxation-in-the-Roman-Empire---Austaxpolicy:-The-Tax-and-Transfer-Policy-Blog" class="navigate-item-id">11</a>
+</div><div class="navigate-item" href="#Income-inequality-in-the-Roman-Empire-—-Per-Square-Mile">
+    <a href="#Income-inequality-in-the-Roman-Empire-—-Per-Square-Mile" class="navigate-item-emoji ">📊</a>
+    <a href="#Income-inequality-in-the-Roman-Empire-—-Per-Square-Mile" class="navigate-item-id">12</a>
+</div><div class="navigate-item" href="#Roman-economy---Wikipedia">
+    <a href="#Roman-economy---Wikipedia" class="navigate-item-emoji ">📈</a>
+    <a href="#Roman-economy---Wikipedia" class="navigate-item-id">13</a>
+</div>
+    </div>
+    <div class="page"  id="Ancient-Salaries:-How-Much-Were-Romans-Getting-Paid?">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💵&nbsp;</span>Ancient Salaries: How Much Were Romans Getting Paid?</h3>
+        <small class="page-url url "><a href="https://premium-ancient-coins.com/en-us/blogs/news/ancient-salaries-how-much-were-romans-getting-paid?srsltid=AfmBOooYja7s9O0Xb_9vxZlwS1j2Za3r_usm8rE6G5OAlTWQD2XRgnhc" target="_blank">(https://premium-ancient-coins.com/en-us/blogs/news/ancient-salaries-how-much-were-romans-getting-paid?srsltid=AfmBOooYja7s9O0Xb_9vxZlwS1j2Za3r_usm8rE6G5OAlTWQD2XRgnhc)</a><br></small>
+        <small class="page-rating rating ">评分: 10.0<br></small>
+        <small class="page-annotation annotation ">注释: 提供了古罗马普通职业的收入水平和物价信息，与报告中的消费模式分析直接相关。<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马职业薪水</h2>
+<p>农场工人 – 每日 25 狄纳里
+面包师 – 每日 50 狄纳里
+兽医 – 每只动物修蹄 6 狄纳里
+理发师 – 每位顾客 2 狄纳里
+抄写员 – 100 行“最佳笔迹”25 狄纳里，100 行“中等笔迹”20 狄纳里
+体操教练 – 每位学生每月 50 狄纳里
+律师 – 立案 250 狄纳里，辩护 1000 狄纳里</p>
+<h2>罗马商品价格</h2>
+<p>小麦 – 每公斤 100 狄纳里
+葡萄酒 – 每品脱 30 狄纳里（陈酿酒有折扣！）
+蜂蜜 – 一品脱“优质蜂蜜”40 狄纳里，“中等蜂蜜”24 狄纳里
+牛肉 – 每磅 8 狄纳里
+肥鹅 – 200 狄纳里
+瘦鹅 – 100 狄纳里
+鸡蛋 – 每枚 1 狄纳里</p>
+        <small class="page-url url "><a href="https://premium-ancient-coins.com/en-us/blogs/news/ancient-salaries-how-much-were-romans-getting-paid?srsltid=AfmBOooYja7s9O0Xb_9vxZlwS1j2Za3r_usm8rE6G5OAlTWQD2XRgnhc" target="_blank">(https://premium-ancient-coins.com/en-us/blogs/news/ancient-salaries-how-much-were-romans-getting-paid?srsltid=AfmBOooYja7s9O0Xb_9vxZlwS1j2Za3r_usm8rE6G5OAlTWQD2XRgnhc)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Roman-goods-prices-«-IMPERIUM-ROMANUM">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🍞&nbsp;</span>Roman goods prices « IMPERIUM ROMANUM</h3>
+        <small class="page-url url "><a href="https://imperiumromanum.pl/en/roman-economy/roman-goods-prices/" target="_blank">(https://imperiumromanum.pl/en/roman-economy/roman-goods-prices/)</a><br></small>
+        <small class="page-rating rating ">评分: 10.0<br></small>
+        <small class="page-annotation annotation ">注释: 通过庞贝平民的开支记录，具体展示了古罗马的消费文化，与报告中的具体数据相一致。<br></small>
+    </div>
+    <div class="page-content content"><h2>普通罗马公民的开支</h2>
+<p>当然，我们从庞贝古城了解到很多关于普通公民开支的信息。在一座房屋中，发现保存下来的罗马“涂鸦”；居民在墙上计算了未来五天的开支（价格以阿斯表示）：</p>
+<p>第六天：奶酪1，面包8，油3，酒3；</p>
+<p>第七天：面包8，油5，洋葱5，碗1，奴隶面包（？）2，酒2；</p>
+<p>第八天：面包8，奴隶面包（？）4，去壳燕麦3；</p>
+<p>第九天：好酒1德纳留斯，面包8，酒2，奶酪2；</p>
+<p>第十天：（？）1德纳留斯，面包2，妇女8，小麦1德纳留斯，黄瓜1，枣1，香1，奶酪2，香肠1，软奶酪4，油7。</p>
+<p>研究人员认为，这份家庭成本估算证明，下层阶级可以用很少的钱生存下来，塞内卡回忆道。维持一个家庭（这里可能是3个人+1个奴隶）的费用大约是8阿斯。</p>
+<h2>路奇乌斯·卡利迪乌斯·埃罗提库斯及其妻子的墓志铭</h2>
+<p>来自意大利南部伊塞尔尼亚的，可以追溯到公元一到二世纪的路奇乌斯·卡利迪乌斯·埃罗提库斯及其妻子法尼亚·沃卢普塔斯的墓志铭也留下了有趣的信息。墓志铭写道：</p>
+<p>卡利迪乌斯·埃罗提库斯为自己和法尼亚·沃卢普塔斯（两人还活着的时候）制作了[这座纪念碑]。</p>
+<p>——客栈老板！让我们算算账！</p>
+<p>——你喝了一品脱酒，面包：一阿斯。佐料，两阿斯。</p>
+<p>——好的。</p>
+<p>——女孩，八阿斯。</p>
+<p>——这也行。</p>
+<p>——骡子的干草，两阿斯。</p>
+<p>——那该死的骡子会把我毁了的。</p>
+<p>相比之下，值得注意的是普通罗马人——工匠、体力劳动者和企业家——可以指望获得多少收入。</p>
+<h2>罗马尼亚罗西亚蒙塔纳的铭文</h2>
+<p>先前提到的来自罗马尼亚罗西亚蒙塔纳的铭文是关于日常生活中价格和开支的重要信息来源。例如，公元164年的一块石碑证实雇佣某个梅米乌斯在矿井工作176天。雇主承诺提供食物并支付每天70德纳留斯（280塞斯特斯）的工资，以及梅米乌斯子女额外10德纳留斯的补贴。公元159年的石碑证实购买半座房子花费300德纳留斯（1200塞斯特斯）。然而，他还从石碑上提到，小猪崽的价格是5德纳留斯（20塞斯特斯），面包2德纳留斯（8塞斯特斯），五只羊羔18德纳留斯（72塞斯特斯）。</p>
+<h2>戴克里先的物价法令</h2>
+<p>了解罗马人生活状况的一大帮助是前面提到的戴克里先皇帝于公元301年颁布的《关于最高价格的法令》，该法令设定了最高价格以防止通货膨胀。例如，蓝领工人、牧羊人、骡夫和污水清洁工每天只能赚20-25德纳留斯（80-100塞斯特斯）。他们可以用这笔钱购买大约2磅（约600克）猪肉。工匠，例如木匠、面包师或马赛克制造者，每天能得到40-50德纳留斯（160-200塞斯特斯）。画家每天能得到150德纳留斯（600塞斯特斯），律师出庭一次能得到1000德纳留斯（4000塞斯特斯）。</p>
+<h2>戴克里先法令与实际物价</h2>
+<p>公元301年的戴克里先法令是了解罗马物价的最宝贵资料之一。然而，人们认为文本中显示的价格实际上要高得多。因此，我们必须分析我们“遭受打击”的价格，并推测所呈现的价值与古罗马的实际市场价格在多大程度上相符。</p>
+        <small class="page-url url "><a href="https://imperiumromanum.pl/en/roman-economy/roman-goods-prices/" target="_blank">(https://imperiumromanum.pl/en/roman-economy/roman-goods-prices/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Cost-of-Living-(in-Ancient-Rome)-–-FELIX-THE-FOX-MYSTERIES">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🛒&nbsp;</span>Cost of Living (in Ancient Rome) – FELIX THE FOX MYSTERIES</h3>
+        <small class="page-url url "><a href="https://egretia.com/2019/05/08/cost-of-living-and-housing-prices-in-ancient-rome/" target="_blank">(https://egretia.com/2019/05/08/cost-of-living-and-housing-prices-in-ancient-rome/)</a><br></small>
+        <small class="page-rating rating ">评分: 10.0<br></small>
+        <small class="page-annotation annotation ">注释: 具体阐述了古罗马的生活成本和消费模式，提供数据支撑，对报告有直接的贡献。<br></small>
+    </div>
+    <div class="page-content content"><h2>生活成本</h2>
+<p>当然，一旦你有了睡觉的地方（和你的家人——这可能包括奴隶），你就需要养活所有人。从国家补贴的谷物救济，到用玉米（那是旧的英国说法，指的是小麦，而不是美国玉米）或斯佩耳特小麦或其他谷物制成的主食面包，到肉类和鱼类（为了保持新鲜，几乎每天都必须购买），再到那些使生活值得过的额外食物，例如鱼露和酒（这在社会上和饮食方面都很重要）。所有这些都需要花钱。多少钱？这当然取决于情况。例如，看看庞贝一家酒吧外面的涂鸦：</p>
+<p>一杯酒只要一枚硬币。更好的酒两枚硬币。法勒尼酒四枚硬币。</p>
+<p>或者这个酒吧账单：</p>
+<p>一些坚果……？枚硬币；饮料：14枚硬币；猪油：2枚硬币；面包：3枚硬币；三个肉排：12枚硬币；四根香肠：8枚硬币。总计：51枚硬币</p>
+<h3>钱币</h3>
+<p>上面提到的硬币可能是as，这是罗马共和国最常见的硬币。我在Egretian经济中没有包含这种硬币，因为它在英语中太令人困惑了。我使用了semis和quadrans（五分镍币和十分镍币）作为小面值的青铜币，sestertii作为“标准”银币，银denarii作为最常见的货币，以及稀有的金币aureus。</p>
+<p>Sestertii很有趣。它们在罗马共和国（以及在Egretia）是银币，但在帝国时期是青铜币。尽管它是记账的基本单位，但它很少发行。</p>
+<p>Denarii是最常见的银币。请注意，还有许多其他小面值的硬币——在帝国时期，还有更多高面值的硬币——但我选择保持简单。旁注：sesterce（英语中的表示方式）是我最喜欢的硬币，因为Astrix一直在使用它们🙂</p>
+<p>就兑换率而言，一枚aureus = 25 denarii = 100 sestertii（即每denarius 4 sestertii）。as是denarius的十分之一（因此每sestertius 2.5 as）。Semis和Quadrans指的是as，因此分别相当于sestertius的五分之一和十分之一。</p>
+<p>在高端的银行层面，还有基于重量的计量单位talent。它基于一个人能携带多少重量，大约30公斤（66磅）。一塔兰特的银denarii包含6250枚硬币（相当于25000 sestertii）。它用于大规模交易，在银行家之间通过纸张转移，或作为军团的薪水（“军费”）进行实物携带。</p>
+<p>对于那些想要进一步阅读的人，我建议阅读这篇关于罗马钱币的文章，或者维基百科关于罗马货币的文章（这更深入地探讨了历史、价值贬值问题、兑换率等）。对于那些只想看漂亮图片的人，请查看我之前关于如何获得报酬的帖子。</p>
+<h3>定价</h3>
+<p>回到物品的价格。一些好心人收集了我们掌握的信息，并制作了一个罗马价格表。这会随着几个世纪而变化，并且基于可用数据，但这应该能给你一个概念。或者看看以下关于罗马军队薪酬等级和古代罗马工资支付和钱币方面的文章（更学术性）。</p>
+<p>简而言之，让我们这么说吧。自从马略改革建立职业军队以来，一名士兵的薪水是每年900 sestertii（或225 denarii）。这意味着你需要一塔兰特的银子来支付一个由480名士兵组成的队列一个月的工资。我们确实知道，伙食、服装、装备、殡葬俱乐部会员费等费用都会从工资中扣除，因此士兵最终获得的硬币总数会非常少。这就是为什么他们依赖于上层人士的奖金和土地补助，以及整个“忠于将军而非忠于国家”是如何开始并最终导致共和国崩溃的原因。</p>
+<p>回到定价。我将书籍发生时的价格“固定”如下。一枚sestertius相当于一顿丰盛的饭菜，或者可能足以让一个小型家庭廉价地吃饱。（并且请记住，大多数人都将他们的谷物救济金作为现成面包，而不是自己做饭，而是会从当地的熟食店购买东西）。</p>
+<p>奴隶的价格会根据质量而有所不同。不到500银denarii可以买到一个牙齿腐烂的老人，他要么在回家途中死去，要么逃跑。为你的贵族家庭子弟聘请希腊（赫利坎）导师可能会花费你至少一塔兰特的银子，甚至更多。</p>
+<p>我没有真正计算房价，主要是因为小说不需要。费利克斯继承了他的房子，在他被迫搬家之前，他不需要购买或租赁。但请考虑一下，大多数普通民众都会租赁公寓。购买和建造一座insula将花费数百塔兰特（数百万sestertii），这也是参议员（他们正式不允许参与商业，只能从租金中获得收入）赚钱的方式。由于建筑标准并不像今天的标准那样注重安全，因此insula建造得非常便宜，并以尽可能高的价格出租。房屋也可以出租，尽管这比较罕见——例如，对于来访的高级上层人士比普通民众更常见。</p>
+        <small class="page-url url "><a href="https://egretia.com/2019/05/08/cost-of-living-and-housing-prices-in-ancient-rome/" target="_blank">(https://egretia.com/2019/05/08/cost-of-living-and-housing-prices-in-ancient-rome/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Roman-Daily-Life---World-History-Encyclopedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏛&nbsp;</span>Roman Daily Life - World History Encyclopedia</h3>
+        <small class="page-url url "><a href="https://www.worldhistory.org/article/637/roman-daily-life/" target="_blank">(https://www.worldhistory.org/article/637/roman-daily-life/)</a><br></small>
+        <small class="page-rating rating ">评分: 9.5<br></small>
+        <small class="page-annotation annotation ">注释: 探讨古罗马城市生活的贫富差距和社会结构，为理解普通收入者的生活条件提供了具体背景。<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马帝国时期城市居民的日常生活</h2>
+<p>从罗马共和国早期到卡里古拉、尼禄和康茂德等不得志的皇帝动荡的统治时期，罗马帝国持续扩张，疆域扩展到整个地中海以及北至高卢和不列颠。历史记载了英雄们的功绩以及皇帝们的暴行。尽管帝国统治有时会做出可耻的行为，但帝国的建立却是在其公民——那些过着相对平静生活、经常被历史忽视的默默无闻的人民——的支撑下完成的。罗马是一个国际化大都市，居住着希腊人、叙利亚人、犹太人、北非人、西班牙人、高卢人和不列颠人，就像任何社会一样，普通的罗马公民每天早晨醒来，劳动，休息，吃饭，虽然他或她的日常生活可能常常很忙碌，但他或她总是能够生存。</p>
+<h2>人口流动</h2>
+<p>在城市以外，在城镇和小型农场上，人们过着简单得多的生活——几乎完全依赖自己的劳动。然而，普通城市居民的日常生活却大相径庭，而且大多是例行公事。帝国的城市地区——无论是罗马、庞贝、安条克还是迦太基——都吸引着许多人离开较小的城镇和农场，寻求更好的生活方式。然而，就业机会的落空迫使无数人生活在城市贫困地区。他们寻求的工作往往并不存在，导致无家可归的居民数量激增。然而，这些新移民能够获得的工作却很难找到。奴隶从事几乎所有卑微的工作以及许多职业，例如教师、医生、外科医生和建筑师。大多数自由民从事各种行业，例如面包师、鱼贩或木匠。偶尔，贫穷的妇女也会为富人服务，担任理发师、助产士或裁缝。</p>
+<h2>住房——公寓楼</h2>
+<p>与其他地方一样，无论是在农场还是在城市，日常生活仍然以家庭为中心，当人们到达城市时，他们首先要考虑的是找到居住的地方。像罗马这样的城墙都市，空间非常宝贵，从一开始，人们就很少关注迁移到城市的居民的住房需求——公寓提供了最好的答案。大多数罗马公民，并非全部是穷人，都居住在这些公寓楼或“insulae”中。早在公元前150年，整个城市就有超过46000座“insulae”。这些破旧的公寓楼大多过度拥挤且极其危险，导致居民生活在持续的火灾、倒塌的恐惧之中，在某些地区，还容易受到台伯河洪水的影响。最初，城市很少考虑设计笔直甚至宽阔的街道（街道通常未铺砌，宽度可能只有6英尺，也可能宽达15英尺），如果发生火灾，则无法方便地进入这些建筑物。直到尼禄皇帝时期的大火，这个问题才得以改善，当时拓宽了街道，建造了阳台，以在紧急情况下提供安全和通道。这些“公寓”通常有五到七层楼高（超过70英尺）；然而，由于许多这些公寓被认为不安全，奥古斯都和图拉真皇帝时期颁布了法律，以防止它们长得太高；不幸的是，这些法律很少得到执行。无论通过一个人的缺乏教育还是穿着方式，整个城市的贫困都是显而易见的，而这些公寓中的生活反映了这种差距。一个人住在哪一层楼取决于他的收入。“insulae”的底层或一楼的低层公寓远比顶层公寓舒适。它们宽敞，包含独立的餐厅和卧室，带玻璃窗，并且与其他楼层不同，租金通常每年支付一次。高层公寓的租金按日或周支付，空间狭小，往往一家人只有一间房。一个家庭生活在持续被驱逐的恐惧中。他们没有自然光，夏天炎热，冬天寒冷，几乎没有自来水——这意味着甚至连厕所也没有。虽然城市的第一套下水道系统或最大下水道出现在公元前六世纪，但它并没有惠及高层居民（低层居民可以使用自来水和室内厕所）。垃圾，甚至人类粪便，通常被随意倾倒在街道上，不仅造成难闻的气味，而且成为疾病的滋生地。对许多人来说，唯一的替代方案是使用公共厕所。结合缺乏路灯（由于犯罪率高，晚上没有行人通行）、建筑物腐朽和对火灾的恐惧，公寓楼高层的居住环境对许多穷人来说并不十分令人愉快。</p>
+<h2>私人别墅</h2>
+<p>相反，大多数富有的居民——那些不住在城市外别墅的人——住在“domus”里。这些房屋，至少在罗马，通常位于帕拉丁山，靠近皇宫。与许多公寓楼一样，这些住宅的前面（尤其是在庞贝和赫库兰尼姆这样的城市）通常有一家商店，业主在那里进行日常生意。商店后面是中庭——一个接待客人或客户的地方，有时也进行私人业务。中庭通常包括一个小神龛，供奉家庭或祖先的神灵。中庭的天花板是敞开的，下面是一个长方形的水池。在下雨天，通过这个开口进入的水会被收集起来，用于“domus”的其他地方。中庭的两侧是较小的房间，称为“cubiculum”，用作卧室、图书馆和办公室。当然，还有足够的空间用于餐厅或“triclinium”和厨房。“domus”的后面是家庭花园。</p>
+<h2>家庭</h2>
+<p>无论贫富，无论公寓还是别墅，整个帝国的基本社会单位都是家庭，从共和国早期开始，家庭的存在完全以“paterfamilias”（家长）的概念为中心——家长对家庭的所有成员（甚至大家庭）都拥有生杀予夺的大权。如果孩子有缺陷，如果他怀疑孩子的亲生父亲是谁，如果他已经不止一个女儿，或者仅仅是因为他感觉这样倾向，他都可以拒绝孩子。他还可以将他任何一个孩子卖为奴隶。逐渐地，随着时间的推移，这种极端且几乎无所不能的控制家庭的力量（“patria potestas”）将会减弱。然而，丈夫或父亲的这种铁腕统治并没有限制女主人在家的权力。家是妻子的领域。虽然她最初被限制不得公开露面，但她掌管着家务，并且经常负责孩子的教育，直到找到家教。到共和国结束时，她甚至被允许和丈夫一起吃饭，去洗澡（尽管不能与男人同时），以及参加戏剧和游戏。后来，可以看到妇女从事面包师、药剂师和店主的工作，并且在法律上，妇女的权利得到了改善，例如，离婚诉讼可以由丈夫或妻子提出。</p>
+<h2>食物</h2>
+<p>每个人都必须吃饭，罗马居民的饮食，就像他们的住房一样，取决于他们的经济状况。对于许多穷人来说，这意味着等待每月的粮食配给。对大多数罗马人来说，一天的主要膳食是在下午晚些时候，从四点到六点。早饭和午饭通常是清淡的零食，有时只是面包。由于没有冰箱，人们每天都在许多小商店和街边小贩或城市的广场购物。我们今天认为是意大利菜的许多食物在罗马早期并不存在。那时没有土豆、西红柿、玉米、辣椒、米饭或糖。也没有橙子、柚子、杏子或桃子。虽然富人享受进口香料带来的美味佳肴，依偎在枕头上，由奴隶服务，但许多极度贫穷或无家可归的人吃的是变质的谷物或麦片粥（缺乏优质饮食导致许多人患有营养不良）。对其他人来说，日常饮食包括谷物、面包、蔬菜和橄榄油；肉类对普通人的预算来说太贵了，尽管它有时会在向神明献祭后获得（因为只有内脏在祭祀中使用）。葡萄酒是常见的饮料，但对穷人来说，可以在公共喷泉获得水。</p>
+<h2>工作与休闲</h2>
+<p>对富人来说，一天的时间分配在工作和休闲之间。当然，生意只在早上进行。大多数罗马人工作六个小时，从黎明开始，中午结束，尽管有时一些商店可能会在傍晚重新开张。城市的广场会空无一人，因为下午是用来休闲的——参加游戏（角斗比赛、赛车或摔跤）、戏剧或洗澡——所有这些都是穷人也能享受到的（因为许多政府官员都认为穷人需要娱乐）。即使在危机时期，罗马市民也能通过面包和游戏保持快乐。他们可以在最大竞技场、斗兽场或庞贝剧院被找到。</p>
+<p>在整个帝国，安条克、亚历山大、迦太基甚至新迦太基等城市都罗马化了，拥有圆形剧场或竞技场。庞贝城有三个公共浴室、两个剧院、一座大教堂和一座圆形剧场。在克劳狄皇帝时期，有159天没有进行任何业务（罗马一周没有休息日）；然而，马库斯·奥里利乌斯皇帝认为这太极端了，并下令至少要有230天的业务。</p>
+<h2>浴场</h2>
+<p>在忙碌的一天进行商业活动和参加游戏之后，罗马公民需要放松身心，这种放松时间是在浴场度过的——沐浴对所有罗马人都很重要（通常每周一到两次）。浴场是社交和有时进行商业活动的地方。公元前33年，罗马有170个浴场，到公元400年，超过800个，包括最大最豪华的图拉真浴场、卡拉卡拉浴场和戴克里先浴场。皇帝总是可以通过建造浴场来确保自己的受欢迎程度。典型的浴场包括体育馆、健康中心、游泳池，有时甚至还有妓院（为较富裕的客人提供）。大多数浴场的费用非常低廉，甚至在公共假日免费。典型的浴场有三个房间——温水室或休息室、热水室或较热的房间，以及冷水室或冷却室。奴隶被用来维持各个热水房的温度，以及满足富人的需求。最著名的浴场之一是戴克里先皇帝赠送给城市的那个。它占地32英亩，拥有奢华的花园、喷泉、雕塑甚至跑道。它可以容纳3000名客人。在浴场度过轻松的下午后，无论富裕还是贫穷的罗马公民都会回家吃晚饭。</p>
+<h2>结论</h2>
+<p>罗马城市中的日常生活完全取决于一个人的经济状况。然而，这座城市仍然是财富与贫穷的混合体，经常并存。富人可以享受奴隶的劳动，无论是给浴场加热水、为他们准备晚饭，还是教育他们的孩子。另一方面，穷人无法接受教育，生活在破旧的公寓里，有时靠城市的慈善机构维持生计。历史学家仍在争论帝国的衰落——是宗教还是野蛮人的涌入？然而，也有人指出城市的穷人——肮脏的环境、失业人数的增加以及疾病和犯罪的增加——是西罗马帝国最终灭亡的一个促成因素。</p>
+        <small class="page-url url "><a href="https://www.worldhistory.org/article/637/roman-daily-life/" target="_blank">(https://www.worldhistory.org/article/637/roman-daily-life/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Roman-Social-Welfare-Programs-|-UNRV-Roman-History">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏥&nbsp;</span>Roman Social Welfare Programs | UNRV Roman History</h3>
+        <small class="page-url url "><a href="https://www.unrv.com/government/social-welfare-programs.php" target="_blank">(https://www.unrv.com/government/social-welfare-programs.php)</a><br></small>
+        <small class="page-rating rating ">评分: 9.0<br></small>
+        <small class="page-annotation annotation ">注释: 介绍了古罗马的社会福利制度，强调其在贫困救助方面的局限性，与报告关于普遍生活水平的讨论相符。<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马社会福利计划</h2>
+<h3>导论</h3>
+<p>罗马帝国以其广阔的征服、建筑奇迹和复杂的社会结构而闻名，但也拥有鲜为人知的一面：社会福利计划。虽然不像现代福利制度那样全面或系统，但罗马人实施了各种措施来支持社会中的穷人、孤儿和弱势群体。罗马共和国后期，政治家们利用粮食捐赠作为争取选民的工具。这种做法，虽然按现代标准来看是腐败的，但在古罗马并不违法，为更正规的福利制度奠定了基础。</p>
+<h3>alimenta计划</h3>
+<p>古罗马最著名的福利计划之一是alimenta计划，由图拉真皇帝在公元98年左右建立。该计划旨在为意大利贫困自由民的子女（男孩和女孩）提供经济支持。通过为家庭提供食物和衣物等基本生活必需品的资源，alimenta计划试图改善这些儿童的福祉，并鼓励自由民人口的增长。</p>
+<p>该计划的资金主要来自一个系统，即国家向意大利地主提供低息贷款。这些贷款的利息收入产生稳定的收入，用于支持alimenta计划。这种创新的融资机制不仅为福利计划提供了资金，而且还通过支持小农促进了农业经济发展。与罗马的其他慈善事业不同，alimenta计划主要是一个国家赞助的倡议，并不严重依赖私人捐款。</p>
+<h3>粮食分配（Annona）</h3>
+<p>罗马社会福利的另一个例子是向穷人分配粮食，通常与annona相关联。这种做法始于罗马共和国后期，并在整个帝国时期持续。国家会从埃及和北非等各个行省获得粮食，然后将其分发给罗马的公民。</p>
+<p>最初，公民可以以补贴价格购买粮食，但在公元前58年，在普布利乌斯·克洛迪乌斯·普尔切尔的执政下，该计划扩大到向符合条件的罗马公民免费提供粮食。符合条件的标准是公民身份和注册，而不是经济需求。这导致了固定的受益人数，通常约为20万人，后来的皇帝试图限制人数以控制成本。缺乏经济状况调查意味着即使那些能够负担得起食物的人有时也会利用该计划。</p>
+<p>仓储和配送中心对该系统至关重要。大型粮仓储存进口粮食，官员们仔细管理这些物资，以确保持续供应。</p>
+<p>分配过程井然有序，却又复杂。受益人必须证明其资格，并获得代币或票券（tesserae），然后在指定的分配点兑换粮食。分配每月进行一次，公民们排队在指定地点领取他们的配额。标准数量通常是每人每月5modii（约33公斤或72磅）的粮食，这通常足以维持一个人的生活。</p>
+<p>质量控制是一个持续关注的问题。官员们努力防止欺诈并确保公平分配。措施包括防止人们索取多份份额或在黑市上出售其配额。</p>
+<p>在后期，该计划扩展到粮食之外。在塞普蒂米乌斯·塞维鲁等皇帝统治下，有时还会分发橄榄油、猪肉和葡萄酒等其他商品。这种多样化旨在改善营养状况并满足公众需求。</p>
+<p>annona计划有多种用途。从根本上说，它有助于确保穷人能够获得食物，从而降低饥饿和营养不良的风险。然而，该计划也具有政治意义。通过向大众提供粮食，国家可以获得人气并维持社会稳定，因为吃饱的民众不太可能造反或引发骚乱。</p>
+<p>annona计划也对罗马的农业和贸易产生了影响。对粮食的需求鼓励在各行省种植小麦和其他谷物，刺激农业生产和经济增长。粮食从各行省运往罗马，促进了贸易网络和航运基础设施的发展，包括奥斯蒂亚和波尔图斯等港口设施的进步。</p>
+<h3>罗马福利制度的成功与不足</h3>
+<p>alimenta计划旨在支持贫困自由民的子女，包括男孩和女孩。虽然它为许多家庭提供了帮助，但它却使其他弱势群体得不到援助。同样，annona粮食分配计划主要集中在罗马的城市贫民，而农村人口往往还在为贫困和饥饿而挣扎。</p>
+<p>对罗马福利制度的另一个批评是，虽然它提供了急需的援助和救济，但它并没有解决社会贫困和不平等的根本原因。例如，对奴隶的依赖导致财富集中在少数精英手中，使大部分人口处于奴役和贫困状态。</p>
+<p>此外，援助的分配往往与政治动机有关，可能不一致或不可靠。皇帝和富人有时会将福利计划作为获得人气或政治支持的手段，而不是出于对穷人福祉的真正关心。因此，援助可能是零星的，并且在对当权者有利时才会提供。</p>
+<p>罗马福利制度也具有明显的排斥性，因为它主要侧重于支持罗马公民。非公民往往得不到援助，不得不自力更生，有时甚至沦为乞讨或偷窃。</p>
+<p>古代罗马的作家和政治家对社会福利计划的有效性持有不同的观点。成功的计划往往因维持社会稳定和支持城市穷人而受到赞扬。然而，参议员和其他精英人士有时会批评这些倡议具有政治动机或经济负担过重。</p>
+<h3>罗马社会救济的成功与不足</h3>
+<p>尽管罗马古代社会福利制度存在固有的弱点、缺点以及常常带有自私自利的动机，但它无疑在其贫困公民的生活中扮演着至关重要的角色。</p>
+<p>粮食和其他援助的分配不仅挽救了无数人的生命，而且还显著提高了社会弱势成员的福祉和幸福感。通过解决民众的基本需求，这些措施减轻了可能因普遍贫困和不满而产生的社会动荡和不稳定的可能性。</p>
+<p>虽然罗马福利计划背后的动机常常与政治利益、安抚或巩固权力有关，但其对社会凝聚力的影响不容忽视。这些举措突显了罗马国家的一个关键认识：所有社会阶层的健康和满意度都与帝国的整体稳定和繁荣内在关联。</p>
+        <small class="page-url url "><a href="https://www.unrv.com/government/social-welfare-programs.php" target="_blank">(https://www.unrv.com/government/social-welfare-programs.php)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Regular-folks-in-the-Roman-Empire-|-Penn-Today">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📚&nbsp;</span>Regular folks in the Roman Empire | Penn Today</h3>
+        <small class="page-url url "><a href="https://penntoday.upenn.edu/news/regular-folks-roman-empire-kimberly-bowes-archaeology-economics" target="_blank">(https://penntoday.upenn.edu/news/regular-folks-roman-empire-kimberly-bowes-archaeology-economics)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 考古学家关注在罗马帝国生活的普通贫民的经济历史，呼应报告对普通收入者的描述。<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马帝国时期普通民众的生活：考古学家的新发现</h2>
+<p>宾夕法尼亚大学古典研究教授，考古学家Kimberly Bowes的研究重点是罗马帝国时期90%的普通民众的生活体验以及主导他们生活的经济模式，而非以往历史学家和考古学家所关注的精英阶层。</p>
+<h3>研究项目与成果</h3>
+<p>Bowes教授获得了古根海姆奖学金和国家人文基金会奖学金。她还编辑了一套两卷本的书籍《2009-2015年罗马农民项目：挖掘罗马农村贫困人口》，该书记录了为期六年的考古项目成果，该项目研究了罗马时期托斯卡纳南部地区农村居民的生活空间、建筑、饮食、农业、市场互动和迁徙。</p>
+<p>这项研究颠覆了她作为学者的观念，使其更加关注经济史，尽管她仍在继续研究罗马世界的考古学和物质文化。与宾夕法尼亚大学经济学教授Petra Todd合作开设的综合研究课程也对她的研究方向产生了影响。Todd教授对现代扶贫项目（特别是关于农村贫困人口的项目）的统计分析，与Bowes教授对古代时期的研究产生了共鸣。</p>
+<p>Bowes教授的古根海姆项目是对这项工作的扩展，其研究对象从农民扩展到所有劳动贫困人口。她新书的暂定书名是《在罗马帝国的生存：90%人口的经济史》，该书将通过对家庭层面的研究，考察劳动人民所经历的机会和压力。</p>
+<p>Bowes教授指出，将占绝大多数的劳动人民纳入古代世界的历史叙事中，能够打破以往以精英男性为中心的视角，这对于我们今天也有重要的意义。这些人是罗马整体经济的一部分，他们参与到各个方面，可以说是他们创造了罗马——这一个早期全球经济体。</p>
+<h3>研究灵感与过程</h3>
+<p><strong>是什么激发你进行这类考古研究？</strong></p>
+<p>罗马历史和罗马考古学大多关注精英阶层。我之前的工作也主要围绕富人的住宅和宗教体验展开。我的书中总是会有一些脚注写着：“这仅适用于10%的人口。”如果有人能够挖掘出剩余的90%人口的信息，那就是考古学家。为什么我们没有真正尝试去寻找大部分人口的信息呢？以前从未有过一个项目的目标是：“让我们看看我们能找到关于90%人口（在古代世界主要是小农）的什么信息。”我一直都在谈论历史和考古学。如果从底层视角讲述，它们会有什么不同？</p>
+<p><strong>六年的挖掘工作是如何进行的？</strong></p>
+<p>从来没有人做过这样的项目，所以有很多疑问，不知道我们是否能找到什么。用印第安纳·琼斯电影里的一句话来说，我们花了四年时间在错误的地方挖掘。我们认为这些小小的散落物是房屋，因为我们现代人会想到房屋，但事实上，它们不是房屋。它们是所有其他生产性设施，是农民从事各种活动的地方。他们在那里榨橄榄或葡萄；在恶劣天气下将动物圈养在里面；制作陶瓷；以多种方式改造他们的景观。有些地方很大，有些地方很小，但都不是房子。我们发现的是一片景观，每一寸土地都被用于非常具体的用途，并以一种最大化的方式进行生产。这实际上颠覆了许多关于小农的假设：他们居住在一个地方，他们的生活不会改变，他们天生保守。</p>
+<h3>研究发现</h3>
+<p><strong>你发现了关于罗马农民的哪些新见解？</strong></p>
+<p>罗马农民完全融入他们的经济世界；他们是流动的、消费的、追求最大化的。他们有一个主要的住所，然后他们会一直在景观中移动，在不同的地方做不同的事情。他们购买他们需要的大部分东西。他们显然参与到罗马世界的货币化经济中。我们不断发现证据表明，这些人真正融入罗马世界的巨大全球化经济中。与此同时，他们是小的农村农民，他们坚持不懈地、精确地、并且非常了解他们的小型特定景观：他们知道每一寸土地，以及它能做什么。这些人几乎肯定拥有散布在地中海景观各处的小块土地，而地中海景观是极其多样的；这是使土地产生效益的最佳方式。我们发现了许多这方面的证据，这非常令人兴奋。</p>
+<p><strong>你了解到他们的耕作方式是什么？</strong></p>
+<p>我们花了大量时间试图了解这些人是如何使土地产生效益的。我们发现他们对土地进行了非常密集和相当复杂的利用，尤其是在控制水方面，这些也是我们从未预测到的。</p>
+<p>这也是该项目取得突破的地方；我们在环境或生物遗迹方面做了大量工作。我们研究了花粉。花粉实际上会沉积到泥土中，并构成我们挖掘的单元的一部分，并且有方法可以提取和研究它。通过花粉，我们了解了附近生长着哪些植物。这就是我们发现他们正在实行所谓的“三田轮作”或“休耕农业”的方式：一年种植谷物，第二年种植固氮豆类（理想情况下是饲料，可以喂养动物），然后在第三个轮作周期中继续放牧动物，这是牧场。因此，他们将土地的生产能力提高了三倍。这块土地以一种极其有效的方式被利用着。这种复杂程度并非人们对这些人的预期。所有这些都非常令人兴奋。</p>
+<p><strong>动物是如何融入这些耕作方式的？</strong></p>
+<p>动物是罗马农业中沉默的参与者，没有人真正考虑过这一点。此前，历史学家对罗马农民的贫困有一种极端的看法，认为他们都是素食者，因为他们买不起肉，也无法获得用于耕地等工作的动物。相反，我们可以从一系列作物决策中看出，所有这些周期都需要动物。你需要它们来耕种这些非常重的土壤，你喂它们你刚刚种植的饲料，它们在牧场周期中放牧，并通过粪便将养分送回土壤中。我们还发现农民吃了大量的肉，与富人吃的一样，主要是猪肉，还有牛肉和羊肉。因此，动物对农业很重要，它们也是农民饮食的重要组成部分。</p>
+<h3>研究意义与未来展望</h3>
+<p><strong>你的发现对今天的意义是什么？</strong></p>
+<p>对环境，特别是水的可持续利用非常重要。这些人对每一个环境优势都进行了如此精确、最大化的利用，这对于今天的小农来说是至关重要的。现代小农往往面临一系列问题，但其中最大的一个问题是他们拥有非常小的、单一的土地，面积非常有限。古罗马的这些人使用小块土地，但分散在不同的微型生态系统中，可以有效地降低风险，同时生产出少量可以出售的剩余产品。他们通过施肥、轮作和调动雨水（不仅仅是灌溉）来改善土壤质量。这些是对小块土地的可持续的、降低风险的微观管理方法，但它们要求农民能够移动并获得多种土地。现代小农，尤其是在中美洲和南美洲，没有这种土地获取能力。</p>
+<p><strong>研究人员是否越来越关注研究罗马帝国时期的普通民众？</strong></p>
+<p>我认为局面正在转变。我认为人们已经意识到，尽管谈论精英阶层更容易，因为我们有很多证据，但我们必须对此进行反驳，并开始讲述那些实际上反映了大多数人口的更难的故事。</p>
+<p>古根海姆项目与劳动贫困人口的经济史有关。如果罗马农民像我们发现的那样具有创新性，那么其他人呢？陶工、金属工、商人、纺织工人使用了哪些策略来维持生计？大量的奴隶和自由民是如何与自由民的经济生活交叉的呢？我们实际上拥有所有这些人的账目——支出清单和合同——以及他们生活的考古学证据。我希望将所有这些结合起来，以了解人们如何花钱和储蓄，他们如何结合不同的工作，例如农业和零星的工资劳动，来谋生。</p>
+        <small class="page-url url "><a href="https://penntoday.upenn.edu/news/regular-folks-roman-empire-kimberly-bowes-archaeology-economics" target="_blank">(https://penntoday.upenn.edu/news/regular-folks-roman-empire-kimberly-bowes-archaeology-economics)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Ancient-Roman-Society---World-History-Encyclopedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">⚖&nbsp;</span>Ancient Roman Society - World History Encyclopedia</h3>
+        <small class="page-url url "><a href="https://www.worldhistory.org/article/1463/ancient-roman-society/" target="_blank">(https://www.worldhistory.org/article/1463/ancient-roman-society/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 分析罗马社会的阶级冲突及其与普通家庭生活的相关性，深入揭示社会经济矛盾。<br></small>
+    </div>
+    <div class="page-content content"><h2>家庭与冲突</h2>
+<p>罗马社会以家庭为核心，家庭构成每个社群的基础。稳定的家庭造就稳定的社会，是严格等级制度最重要的组成部分，该制度以性别、公民身份、血统和人口普查等级（居住地和土地拥有量）为基础。公民最初是指任何超过十五岁的男性，并且是拉丁人最初三个部落之一的成员，这三个部落在政治和社会上决定着人们的生活。</p>
+<p>政治上，最高统治者是（共和国时期的执政官，帝国时期的皇帝），其次是元老院、法官和议会；社会上，则有家长（pater familias）、他的妻子、子女，以及某些情况下他的大家庭（未婚姐妹、寡居母亲、年迈的父亲）。在政治和社会这两个领域中，父权制都遵循庇护制度：当权者有义务照顾其下属。执政官、皇帝或家长为其受庇护者提供父母般的关怀和必需品，而作为回报，则获得他们的忠诚和服役。</p>
+<h2>社会等级</h2>
+<p>社会分为两个阶级——上层的<strong>贵族</strong>和平民阶级<strong>平民</strong>——他们的社会地位和法律权利最初严格地界定为有利于上层阶级，直到以等级冲突时期（公元前500-287年）为特征的时期，这是平民与贵族之间的一场权力斗争。</p>
+<p>等级冲突始于罗马贵族为争夺该地区的主导地位而对邻近部落发动战争，他们需要军队。公元前494年，构成大部分战斗力的平民拒绝服役，直到他们在政府中获得发言权。他们的不满通过新的法律得到解决，这些法律允许他们向元老院派遣自己的代表（保民官），并在公元前449年通过《十二铜表法》，即罗马的法律，公开张贴供所有人查看，并保证没有人凌驾于法律之上。</p>
+<p>冲突之前，平民严格来说是二等公民，禁止与贵族结婚，而公元前445年之后，这项法律被改变，平民可以与他们选择的人结婚，并在政治中拥有发言权。等级冲突结束后，罗马社会由五个社会等级构成：<strong>贵族</strong>、<strong>骑士</strong>、<strong>平民</strong>、<strong>自由民</strong>、<strong>奴隶</strong>。</p>
+<p>尽管贵族传统上被描绘成地主绅士，而平民则被描绘成无地穷人，但这是一种误解。贵族确实组成了元老院，是统治阶级，但也有许多强大的平民家庭，随着罗马历史的发展，许多贵族家庭失去了财富和地位，而平民家庭的财富则显著提高。基本上，贵族是贵族——必须出生为贵族——而平民则是其他人；但平民并不一定等于穷人。农民、管道工、工匠、教师、承包商、建筑师以及许多其他受人尊敬且利润丰厚的职业都由平民阶级代表。</p>
+<h2>其他阶级</h2>
+<p><strong>骑士</strong>（骑兵阶级）最初是王室的骑兵，在早期共和国时期，他们得到一定数量的钱来购买和照顾他们的马，因此与商业和贸易联系在一起。他们最终成为处理业务的上层阶级的一部分。公元前218年，一项法律禁止参议员从事商业活动，因为它可能会损害他们的立法决策。骑士是贵族阶级的男性，在社会地位上低于参议员阶级，他们经营银行、收税、经营商品进出口，以及管理贸易公司和奴隶贸易。</p>
+<p><strong>自由民</strong>是被买取得自由或被主人释放的奴隶。然后，自由民（或妇女）成为他们前主人的客户，依靠他们的庇护。获释的奴隶被授予公民权，但不能担任公职。然而，自由民的任何子女都被赋予完全的公民权利。自由民可以从事任何他们有资格从事的职业，但当奴隶时，他们通常会继续从事他们为前主人所做的任何职责。</p>
+<p><strong>奴隶</strong>是社会上最低等的阶级，没有任何权利，被认为是主人的财产。作为罗马奴隶的生活质量因其主人和工作而异。在矿井或修建道路中的生活比为工匠工作的熟练工匠奴隶或作为导师或音乐家为主人服务的奴隶要困难得多。即便如此，无论奴隶的责任看起来多么轻松，他们仍然受到主人的摆布，主人可以出于任何原因对他们进行殴打，甚至杀死他们。</p>
+<p>即便如此，妇女可以提出离婚，进行堕胎（经男子同意），继承、管理和出售财产，下层阶级妇女可以经营企业，在商店和餐馆工作，并经营自己的精品店，出售珠宝、服装和陶瓷等商品。妇女对其子女没有法律权利，在离婚的情况下，子女自动归父亲所有。当一个女子大约15岁时，她的父亲已经为她找到了合适的对象，但有些女孩在更早的时候就订婚了——通常是嫁给比她们大得多的男人。</p>
+<h2>婚姻</h2>
+<p>没有像现代社会那样被认可的结婚仪式。婚姻只在两个同意结婚的罗马公民之间是合法的，但“同意”可能并不总是自愿的。如果父亲为儿子或女儿安排了婚姻，除非他非常宽容，否则孩子即使不愿意也必须遵守。</p>
+<p>结婚仪式通常在日出后举行，象征着这对夫妇正在开始的新生活。仪式需要十名证婚人才合法，虽然有祭司在场，但他并不主持仪式。新娘会背诵传统的誓言，之后，婚礼队伍会参加盛大的宴会，然后跟随新娘和新郎到他们的新家（或新郎父亲的家）。</p>
+<p>新娘在行走时会扔下一枚献给道路之灵的硬币（一种为她未来的婚姻之路带来好运的祭品），并给她的新丈夫两枚硬币，一枚是为了亲自向他致敬，另一枚是为了向他家的灵魂致敬。当他们一起走的时候，新郎会向人群扔坚果和糖果，跟随他们的人也会反过来撒同样的东西（一种在现代婚礼上扔大米的仪式），直到他们到达新郎的家。</p>
+<p>到达那里后，新郎会将新娘抱过门槛。学者哈罗德·约翰斯顿认为，这可能是“另一种婚姻被捕获的延续”，指的是萨宾妇女被劫掠的故事（Nardo，79）。虽然这是可能的，但这也有可能是为了防止新娘绊倒摔倒（不祥之兆），或者更可能是象征性的姿态，把她从旧生活带到新生活中。然后邀请亲密的朋友和家人到家里，丈夫向他的新妻子提供火和水作为家的基本元素，她点燃了壁炉里的第一把火。之后，会有更多的宴会，直到这对新人休息过夜。</p>
+<h2>家庭生活</h2>
+<p>女孩的法定结婚年龄最低为12岁，男孩为15岁，但大多数男性结婚较晚，大约26岁左右。这是因为男性在15-25岁之间被认为精神不平衡。他们被认为完全受其激情支配，无法做出合理的判断。女孩被认为在较早的年龄更加成熟（现代社会普遍接受的事实），因此在她们的年龄比新郎小得多时，她们就已经准备好承担婚姻的责任了。</p>
+<p>婚姻的中心目的是生育和抚养孩子，让他们成为社会中负责任和富有成效的成员。由于男性在社会等级中占主导地位，家庭的重点主要放在长子身上。在男婴出生九天后（女婴八天），婴儿在称为“涤罪”（Lustratio）的净化仪式中被命名，并收到护身符以避开邪恶的灵魂。男子的护身符被称为bulla，而女子的护身符被称为lunula。这些物品由铅或布制成，在富裕的家庭中，则由黄金制成。</p>
+<p>男孩每天佩戴bulla直到15岁，在成年仪式后被认为是男人并成为公民。女孩在结婚前不久会丢弃lunula以及她们的儿童玩具和衣服，换上妇女的服装和配饰。男孩将被抚养以学习他父亲的生意，如果他是贵族或骑士，则学习骑马、狩猎和战斗。在罗马共和国时期，服兵役是强制性的，因此每个男性都接受军事技能训练，而不管其阶级如何，而在帝国时期，服兵役则是自愿的。如上所述，女孩被抚养长大成为妻子和母亲，尽管罗马历史上有很多杰出的女性例子，但她们仍然是有孩子的已婚妇女。</p>
+<p>罗马历法中最大的节日是农神节，以农业之神、播种之神和丰收之神萨图恩为名。农神节在某些时期从12月17日至23日庆祝，在此期间，所有工作停止，企业关闭，传统被暂停。这是这一年中唯一一次家长放弃责任，由家庭中的年轻成员掌权的时候。所有法律和仪式都被放宽，奴隶被允许作为平等的人参加庆祝活动，聚会取代了议会会议、集会和建筑项目规划委员会。</p>
+<p>人们穿着色彩鲜艳的衣服，用鲜花、花环和陶瓷小雕像装饰他们的家，并邀请朋友和家人参加宴会和饮酒，而社区庆祝活动则欢迎社区中的所有人。人们互赠礼物，通常包括萨图恩的小雕像，作为所有美好礼物的赐予者，第二天，每个人都从庆祝活动中恢复过来，并回到了他们的正常生活。</p>
+        <small class="page-url url "><a href="https://www.worldhistory.org/article/1463/ancient-roman-society/" target="_blank">(https://www.worldhistory.org/article/1463/ancient-roman-society/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="History-of-Ancient-Rome-for-Kids:-Roman-Food,-Jobs,-Daily-Life">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">👩&nbsp;</span>History of Ancient Rome for Kids: Roman Food, Jobs, Daily Life</h3>
+        <small class="page-url url "><a href="https://www.ducksters.com/history/ancient_rome_food_daily_life.php" target="_blank">(https://www.ducksters.com/history/ancient_rome_food_daily_life.php)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 探讨了古罗马常见职业的生活状况，为报告提供了实际支出与收入对比数据。<br></small>
+    </div>
+    <div class="page-content content"><h2>农民</h2>
+<p>大多数居住在罗马乡村的居民都是农民。最常见的作物是小麦，用来制作面包。</p>
+<h2>士兵</h2>
+<p>罗马军队规模庞大，需要大量的士兵。军队为贫困阶级提供获得固定工资和在服役结束后获得宝贵土地的机会。这对穷人来说是提升社会地位的好途径。</p>
+<h2>商人</h2>
+<p>各种各样的商人买卖来自帝国各地的商品。他们维持着经济运转，使帝国富裕。</p>
+<h2>工匠</h2>
+<p>从制作餐具和陶器到为军队制作精美的珠宝和武器，工匠对帝国都至关重要。一些工匠在个体作坊工作，学习特定的手艺，通常是向他们的父亲学习。另一些人是奴隶，他们在大型作坊工作，生产大量的商品，如餐具或陶器。</p>
+<h2>演艺人员</h2>
+<p>古罗马的人们喜欢娱乐。就像今天一样，罗马有很多演艺人员，包括音乐家、舞者、演员、战车赛车手和角斗士。</p>
+<h2>律师、教师、工程师</h2>
+<p>受过良好教育的罗马人可以成为律师、教师和工程师。</p>
+<h2>政府</h2>
+<p>古罗马的政府规模庞大。各种各样的政府职位，从税务员和办事员到参议员等高级职位。参议员是富人和权势者。参议员终身任职，有时参议院成员多达600人。</p>
+        <small class="page-url url "><a href="https://www.ducksters.com/history/ancient_rome_food_daily_life.php" target="_blank">(https://www.ducksters.com/history/ancient_rome_food_daily_life.php)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Poverty-in-ancient-Rome---Wikipedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">😞&nbsp;</span>Poverty in ancient Rome - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Poverty_in_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Poverty_in_ancient_Rome)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 分析古罗马贫穷的复杂性，以及其对普通民众生活的影响，与报告紧密相关。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马的贫困</h2>
+<p>古罗马的贫困定义起来极具挑战性，因为大部分罗马人的生活状况与现代贫困相似。罗马社会主要是农业社会，低识字率、高婴儿死亡率和不良饮食等问题在民众中普遍存在。贫困可以通过无地来定义；在古罗马，大部分土地集中在少数富裕阶层手中，其余人口土地稀少。然而，城市居民可能在不拥有土地的情况下也能过得很好。古罗马的贫困也可以从政治权利剥夺的角度来看；穷人更难获得政治职位，投票也更加困难，选票意义较小，税率也更高。《西奥多西法典》(Codex Theodosianus)，一部罗马后期的法律文件，描述了各种法律，其中规定穷人的惩罚与富人不同。对古罗马人均GDP的估计表明，大部分人口生活在勉强糊口水平，勉强够衣食住行，但谈不上舒适。</p>
+<p>像塞内卡（Seneca）和西塞罗（Cicero）这样的罗马作家将贫困人口描述为不道德的、对国家构成威胁的民众，他们漠视罗马世界的价值观。公元前一世纪的罗马政治家和历史学家萨卢斯特（Sallust）认为，平民嫉妒更富有的人，并出于嫉妒而试图破坏罗马社会；他引用了卡提林阴谋（Catilinarian conspiracy），这起未遂政变他认为是被平民推动起来的。其他罗马作家，如一世纪的罗马哲学家塞内卡，谴责财富，认为财富具有腐蚀性，会导致生活不满。罗马人也推崇简单的农业生活方式，崇敬像辛西纳图斯（Cincinnatus）这样的英雄，根据传说，他在参加军事行动之前居住在一个农场里。</p>
+<p>古罗马基督教的描述往往将穷人描绘得更富有同情心，并经常呼吁富人帮助他们。四世纪的基督教神学家约翰·金口（John Chrysostom）认为，如果富人将他们的财富重新分配给民众，“你将很难找到一个穷人，一百个人中甚至五十个人中也找不到一个”。[1]然而，其他基督教作家对财富采取了不太批判的观点；三世纪的神学家亚历山大的克莱门特（Clement of Alexandria）将财富描绘成道德中性的，认为富人的虔诚并不一定被他们的财富所扼杀。</p>
+<p>古罗马政府实施了各种旨在向穷人提供财政援助的政策：粮食供应管理局（cura Annonae）是一个粮食再分配项目，而alimenta是一个为贫困儿童提供的福利项目。罗马富人的慈善行为，虽然确实存在，但往往更多的是出于表现仁慈和提升社会地位的愿望，而不是真正的利他主义。古罗马的慈善家期望为他们建造雕像和铭牌以纪念他们的慷慨。当代作家注意到了并且嘲笑了常常成为罗马赠送礼物背后动机的自私行为：西塞罗描述了这一现象，他说：“我们还可以观察到，许多人做了许多事情，这些事情似乎更多的是出于炫耀的精神，而不是发自内心的善良；因为这些人并非真正慷慨，而是受到了某种炫耀慷慨的野心的影响。”[2]塞内卡在他的著作中提倡真正的慈善，宣称“智者”会“向遇难的水手伸出援助之手，向流亡者提供款待，向穷人施舍”。[3]然而，塞内卡并不主张无限制的慷慨，认为慈善应该局限于“好人或那些慈善可能使之成为好人的人”。[4]公元前三世纪的喜剧作家普劳图斯（Plautus）表达了类似的观点：“给乞丐吃喝的人是在害他：他得到的东西会被浪费掉，而他会在痛苦中延长寿命。”[5]</p>
+<h3>罗马文学对贫困的观点</h3>
+<p>罗马文学对贫困没有统一的观点；[43]它取决于谁在创作特定文本的修辞意图。贫困在塞内卡长者（Seneca the Elder）的《辩论》（Controversiae）中经常作为一种说教工具出现。[44]尽管这些描述可能并不反映塞内卡本人的个人信仰，但它们很可能反映了罗马社会中关于贫困的论述。[45]塞内卡通常避免专门关注贫困；[46]贫困通常被用来与过度物质主义形成对比或批判。[47]小塞内卡（Seneca the Younger）认为，贫困的人可以免受贪婪和不满的困扰，但他并非一定要劝告读者放弃财富：他而是命令他们“要么做一个穷人，要么像个穷人”。[48][49]小塞内卡认为财富有助于自我完善，而贫困可能会阻止个人获得除“不被贫困扭曲或压垮”以外的任何“美德”。[50][51]</p>
+<h3>罗马对城市与农村贫困的看法</h3>
+<p>罗马人崇拜农民和农业生活的理想。在罗马英雄辛西纳图斯的故事中，据说他在担任独裁官权力帮助对抗共和国的反对者之前和之后都住在一个小农场里。[50]西塞罗称赞农村生活方式促进了美德，他说：“城市创造了奢侈，从奢侈不可避免地产生贪婪，而从贪婪中又爆发了胆大妄为，这是所有罪恶和恶行的根源。另一方面，你称之为粗俗的这种乡村生活，却教会了节俭、谨慎和正义。”[52]然而，许多古罗马人认为城市贫困更为卑鄙；他们将城市贫困与犯罪和疾病联系起来。[50]西塞罗称体力劳动“对绅士来说也不得体，而且庸俗”。他声称支付给体力劳动者的工资是“他们奴隶身份的保证”。[53][54]</p>
+<p>在共和国后期，穷人被认为不如其他人，在声望和美德上都低于其他社会等级。穷人被视为社会的阴险残渣，容易被煽动，对政治稳定构成威胁。公元前一世纪的罗马政治家和历史学家萨卢斯特声称，平民支持卡提林阴谋，这威胁到推翻罗马政府。萨卢斯特认为，他们嫉妒富人，并出于不满而试图颠覆社会秩序。[55][56]罗马作家还认为，穷人只关心“面包和马戏”，而不是罗马社会的复杂性和价值观。一世纪的罗马作家塔西佗（Tacitus）抱怨“堕落的民众”是“竞技场和剧场的常客”。[57][27]犬儒哲学家，他们坚持认为人类应该按照自然规律过简朴的生活，被一些人视为“疯狂、不幸的一群”，在“实际事务”上缺乏技巧，根据一世纪的希腊演说家狄奥·克里索斯托姆（Dio Chrysostom）的说法。[58][59]</p>
+<p>一世纪的罗马诗人马提亚尔（Martial）将一个名叫科斯穆斯（Cosmus）的贫困潦倒的人比作一条狗，[60]说虽然其他人把他误认为是犬儒哲学家，“他不是犬儒派，科斯穆斯。那么是什么？一条狗。”这个人被描述为头发花白、胡子蓬乱、披着斗篷的老人。[61]马提亚尔描述了一个使用担架和仆人来将富人和穷人分开的情况；他声称仆人会驱散人群，以防止民众和富有的客户之间发生互动。[62][63]富有的罗马人害怕贫困，以及随之而来的羞辱和社会排斥。富人和穷人之间的角色互换是古典新喜剧中的一个常见主题。[46]</p>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Poverty_in_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Poverty_in_ancient_Rome)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Everyday-Life---Ancient-Rome---Library-Guides-at-Norwood-Secondary-College">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏺&nbsp;</span>Everyday Life - Ancient Rome - Library Guides at Norwood Secondary College</h3>
+        <small class="page-url url "><a href="https://library.norwood.vic.edu.au/c.php?g=950210&p=6889482" target="_blank">(https://library.norwood.vic.edu.au/c.php?g=950210&p=6889482)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 介绍普通罗马人日常生活的方方面面，提供的结构与报告的内容呼应。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马人的日常生活</h2>
+<p>当我们想到古罗马时，我们常常想到角斗士和皇帝，但大多数罗马人的日常生活是什么样的呢？请阅读以下资料，了解更多关于古罗马人生活方式的信息，包括工作、食物、家庭和服饰。</p>
+<h3>罗马日常生活 (世界历史百科全书，2018年4月23日)</h3>
+<p>阅读这篇非常深入的文章，了解古罗马的日常生活。</p>
+<h3>食物、工作和日常生活 (Ducksters，未注明日期)</h3>
+<p>一个典型的罗马人的一天从一顿清淡的早餐开始，然后去工作。工作在下午早些时候结束，许多罗马人会快速去浴场沐浴和社交。大约下午3点，他们会吃晚饭，这既是一次社交活动，也是一顿饭。阅读本网站了解更多信息。</p>
+<h3>古罗马的日常生活究竟是什么样的？（儿童古罗马，未注明日期）</h3>
+<p>古罗马的日常生活不仅对富人和穷人来说大相径庭（这几乎适用于所有文化），而且在罗马是王国、共和国，然后是帝国时期也大不相同。阅读本网站了解更多信息。</p>
+<h3>罗马时期的生活 (PBS，未注明日期)</h3>
+<p>与许多文化一样，一个人的生活质量在很大程度上取决于他们在社会结构中的地位。同时居住在同一城市的两个罗马人可能会有截然不同的生活。阅读本网站了解更多信息。</p>
+<h3>古罗马的生活是什么样的？（BBC，未注明日期）</h3>
+<p>在其鼎盛时期，罗马统治着遍布欧洲、北非和亚洲的超过4500万人口。它的军队是世界上最强大的军队，随着它征服了更多的土地，罗马从一个城镇发展成为一个巨大的首都。古罗马拥有闪闪发光的白色大理石神庙、奢华的宫殿和壮观的角斗士表演。那里居住着超过一百万人，这座城市也是一个肮脏而危险的地方，到处都是错综复杂的胡同和贫民窟。阅读本网站了解更多信息。</p>
+<h3>服装和时尚 (Ducksters，未注明日期)</h3>
+<p>古罗马人穿的大部分衣服都是羊毛制成的。羊毛在意大利和罗马帝国的大部分地区，在家中和商业上都有生产。有时，衣服是用稀有的材料制成的，例如来自埃及的亚麻布、来自印度的棉花和来自中国的丝绸。阅读本网站了解更多信息。</p>
+<h3>罗马世界的贸易 (世界历史百科全书，2018年4月12日)</h3>
+<p>地区性、区域性和国际贸易是罗马世界的共同特征。国家控制和自由市场机制相结合，确保了一个地区生产的商品可以远销各地。谷物、葡萄酒和橄榄油尤其大量出口，而来自其他方向的重要进口商品包括贵金属、大理石和香料。阅读本文了解更多信息。</p>
+<h3>古罗马家庭生活 (世界历史百科全书，2016年2月26日)</h3>
+<p>无论是一个国王、一个执政官，还是一个皇帝统治着罗马及其领土，贯穿罗马历史始终不变的是家庭。像许多早期的社会一样，家庭是永恒之城的基本社会单位，而家庭的首脑是父亲，如果没有父亲，则是最年长的男性——拉丁语表达是 paterfamilias。一位历史学家指出，罗马家庭实际上反映了塑造罗马共和国价值观的原则。阅读本文了解更多信息。</p>
+<h3>维亚大道上的消息：福图纳塔 (国家地理，未注明日期)</h3>
+<p>奴隶制是罗马帝国日常生活中被接受的一部分。几乎所有的劳动，无论是在城市还是在农场，都是由奴隶完成的，他们的主人几乎不会因为残酷的待遇而受到惩罚。阅读本网站了解罗马奴隶的日常生活。</p>
+<h3>古罗马人吃什么？（历史热播，2021年10月6日）</h3>
+<p>罗马人并不总是躺在摆满烤鸵鸟的桌子旁，吃到吐。罗马历史跨越1000年，遍及全欧洲，包含了大量的烹饪范围。罗马也是一个等级森严的社会，奴隶的饮食与他所服务的主人大相径庭。阅读本文了解更多信息。</p>
+<h3>住房和房屋 (Ducksters，未注明日期)</h3>
+<p>罗马人的住房种类繁多，这取决于他们是富人还是穷人。穷人住在城市里狭小的公寓里，或者住在乡下的小棚屋里。富人住在城市里的私人住宅或乡下的别墅里。阅读本网站了解更多信息。</p>
+<h3>罗马住房 (大都会艺术博物馆，2009年2月)</h3>
+<p>“罗马住房”一词可以包含许多类型的居住空间。被称为 insulae 的城市里建造和维护不良的塔楼式建筑，以危险和拥挤的条件容纳着社会底层的人们。在农村地区，穷人则居住在小型村庄或农场，住在石头建筑里。精英阶层对农业和畜牧业中雇佣劳动和奴隶劳动的剥削，提供了一种更不寻常的罗马住房类别——橄榄油厂等工业综合体内的房间，工人会在生产季节居住在那里。在社会阶层的另一端，精英阶层拥有他们令人印象深刻的联排别墅，通常此外还有他们的大型别墅或乡村别墅，拥有宽敞的平面图、众多的娱乐场所和丰富的理石装饰，反映了精英阶层对国内空间在塑造其公众形象方面的重要性。阅读本文了解更多信息。</p>
+        <small class="page-url url "><a href="https://library.norwood.vic.edu.au/c.php?g=950210&p=6889482" target="_blank">(https://library.norwood.vic.edu.au/c.php?g=950210&p=6889482)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Politics-of-Taxation-in-the-Roman-Empire---Austaxpolicy:-The-Tax-and-Transfer-Policy-Blog">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💰&nbsp;</span>Politics of Taxation in the Roman Empire - Austaxpolicy: The Tax and Transfer Policy Blog</h3>
+        <small class="page-url url "><a href="https://www.austaxpolicy.com/politics-taxation-roman-empire/" target="_blank">(https://www.austaxpolicy.com/politics-taxation-roman-empire/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 详细描述了罗马税制及其对社会财富分配的影响，进而影响普通收入者的经济状况。<br></small>
+    </div>
+    <div class="page-content content"><h2>古代税收与罗马帝国的统治</h2>
+<p>罗马帝国的统治者们十分重视税收，将其视为巩固统治的重要手段。这并非罗马帝国的创举，罗马共和国时期就已经存在多种税收和关税制度，主要包括：</p>
+<ul>
+<li><strong>人口税或税单征收的税款 (tributa):</strong>  经常被误称为“直接税”，但与现代概念有所不同。</li>
+<li><strong>关税 (portoria):</strong>  并非基于人口普查名单征收，而是根据实际情况征收。</li>
+<li><strong>其他税收 (vectigalia):</strong>  只能预先确定税率，而无法确定具体收入（被误称为“间接税”）。</li>
+</ul>
+<p>公元前167年起，罗马公民免除tributa，除非在共和国后期内战期间的特殊情况下。因此，tributa连同军饷 (stipendium) 成为罗马行省居民的专属税款，主要包括人头税 (tributum capitis) 和土地税 (tributum soli)，均基于人口普查名单计算。而vectigalia则对所有具备特定身份或居住在特定区域的人征收，除非享有豁免权 (immunitas)。</p>
+<p>奥古斯都（公元前27年—公元14年在位）的遗产税就是一个很好的例子，它巧妙地结合了财政筹措、社会保障和自身利益。</p>
+<h3>奥古斯都的遗产税</h3>
+<p>奥古斯都设立的5%遗产税 (vicesima hereditatium)并非为了平均罗马公民和行省居民的税负，而是为了确保其统治，巩固军队忠诚度。在公元前40年，奥古斯都曾短暂地尝试过对遗产征税，但遭到了精英阶层的强烈抵制。最终，他在公元6年通过正式法令 (lex) 实施了遗产税。</p>
+<h3>奥古斯都的军事宝库</h3>
+<p>为了确保军队的忠诚度，除了组建职业军队外，奥古斯都还必须安置可能造成危险的退伍老兵。由于传统的土地分发方式越来越不受欢迎，奥古斯都于公元5年设立了军事宝库 (aerarium militare)，用以支付退伍军人的遣散费 (praemia militiae)。遗产税是这个新宝库的主要收入来源，此外还有拍卖税 (centesima rerum venalium) 和奥古斯都个人财产的一部分。面对来自富裕阶层（元老院和骑士阶层）在公元6年和公元13年的强烈抵抗，奥古斯都巧妙地以重新实施土地税相威胁，从而成功地压制了反对。这将是自公元前167年以来第一次永久性的tributa。</p>
+        <small class="page-url url "><a href="https://www.austaxpolicy.com/politics-taxation-roman-empire/" target="_blank">(https://www.austaxpolicy.com/politics-taxation-roman-empire/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Income-inequality-in-the-Roman-Empire-—-Per-Square-Mile">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📊&nbsp;</span>Income inequality in the Roman Empire — Per Square Mile</h3>
+        <small class="page-url url "><a href="https://persquaremile.com/2011/12/16/income-inequality-in-the-roman-empire/" target="_blank">(https://persquaremile.com/2011/12/16/income-inequality-in-the-roman-empire/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 通过对罗马财富分配的研究，为报告中关于收入差距的描述提供了学术支持。<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马经济规模与收入分配</h2>
+<p>历史学家 Walter Schiedel 和 Steven Friesen 通过查阅纸莎草记录、以往学术估计、帝国法令以及圣经章节，来确定罗马经济的规模和收入分配。他们的目标是帝国人口达到顶峰时期，大约公元 150 年左右的经济状况。</p>
+<p>Schiedel 和 Friesen 估计，罗马社会顶尖的 1% 控制着 16% 的财富，不到美国顶尖 1% 控制财富的一半。</p>
+<p>为了得出这个数字，他们将罗马社会划分为既定的和隐含的等级。大多数平民的收入需要估计他们可能消费的小麦数量。由此，他们可以根据小麦成本追溯到每日工资（大多数平民几乎没有，如果有的话，可支配收入）。接下来，他们通过将底层阶级的工资乘以从文献综述中得出的系数，来估计“体面”和“中等”阶层的收入。“体面”和“中等”罗马人享受着舒适但并非奢华的生活方式。</p>
+<p>平民之上是罗马精英阶层。这些明确定义的阶级在政治和商业中扮演着重要角色。统治阶级的贵族位于顶端，尽管他们的人数可能少到不足以考虑。在他们之下是元老。他们的人数是众所周知的——公元 150 年有 600 人——但估计他们的财富却很困难。像今天大多数政治家一样，他们非常富有——要成为一名元老，一个人必须至少拥有 100 万塞斯特提斯（一种罗马硬币，缩写为 HS）。实际上，大多数人拥有更多的财富。Schiedel 和 Friesen 估计，平均每位元老的财富超过 500 万 HS，年收入超过 30 万 HS。</p>
+<p>元老之后是骑士阶层。他们最初是罗马军队的骑兵，在公元前 218 年元老被禁止进行商业交易后，他们发展成为一个商业阶级。一名骑士的财产平均价值约为 60 万 HS，平均年收入为 4 万 HS。</p>
+<p>等级制度中低于骑士阶层的是地方议员（decuriones）。他们的年收入约为 9000 HS，资产约为 15 万 HS。其他一些富人拥有与地方议员大致相同的收入和财富。</p>
+<p>总的来说，Schiedel 和 Friesen 认为，精英阶层和其他富人约占帝国鼎盛时期 7000 万居民的 1.5%。他们 together 控制着大约 20% 的财富。</p>
+<p>这些数字描绘了两幅罗马的图景，一幅是体面，即使不是奢华的财富，另一幅是微薄的工资，足以维持日常生活，但不足以致富。富人主要集中在城市。这与今天的美国很相似。事实上，基于广泛使用的收入不平等衡量标准——基尼系数——罗马帝国略微比美国更加平等。</p>
+        <small class="page-url url "><a href="https://persquaremile.com/2011/12/16/income-inequality-in-the-roman-empire/" target="_blank">(https://persquaremile.com/2011/12/16/income-inequality-in-the-roman-empire/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Roman-economy---Wikipedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📈&nbsp;</span>Roman economy - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Roman_economy" target="_blank">(https://en.wikipedia.org/wiki/Roman_economy)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 论述了古罗马经济的变化及其对普通百姓消费的影响，相关性明显。<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马经济</h2>
+<p>罗马经济在公元前几个世纪的繁荣，得益于其先进的贸易和商业，但随着其商业运作方式的剧变，这种繁荣也受到了抑制。由于奥古斯都和贵族掌握着罗马大部分土地和财富，[53]日常基本商品的贸易和商业开始衰退。贸易开始只针对更奢侈的商品，由于贫困，有效地排除了大多数罗马人。[53]对外贸易对罗马经济的崛起和复杂化也至关重要，罗马人将葡萄酒、油、谷物、盐、武器和铁等商品贸易到主要位于西方的国家。[53][37]当这些国家在公元2世纪左右衰落，它们与罗马帝国之间的贸易因此不得不停止时，这对罗马经济的增长造成了影响，因为对外贸易是这个资源丰富的帝国经济增长的主要因素。[53]加上他们无法进行适当的生产改进以适应其不断发展壮大的经济，这些事件阻碍了罗马贸易，限制了他们的商品种类并损害了经济。</p>
+<h2>劳动和职业</h2>
+<p>铭文记载了罗马城有268种不同的职业，庞培城有85种。[54]各种职业都有专业协会或行业协会（collegia），包括渔民（piscatores）、盐商（salinatores）、橄榄油商（olivarii）、演员（scaenici）、牲畜商（pecuarii）、金匠（aurifices）、车夫（asinariiormuliones）和石匠（lapidarii）。[55]有些非常专业化：罗马的一个collegium严格限制在从事象牙和柑橘木工作的工匠。[56]奴隶从事的工作大致分为五类：家务，墓志铭记录了至少55种不同的家务工作；帝国或公共服务；城市手工艺和服务；农业；和采矿。[57]罪犯在矿山或采石场提供了大部分劳动力，那里的条件臭名昭著地残酷。[58]实际上，奴隶和自由民之间的劳动分工很少，[59]大多数工人都是文盲，没有特殊技能。[60]大多数普通劳动者受雇于农业：在意大利的工业化农业制度（latifundia）中，这些人可能大多是奴隶，但在整个帝国，奴隶农场劳动力可能不如其他形式的依赖性劳动力重要，这些人从技术上讲并非奴隶。[59]纺织和服装生产是主要的就业来源。纺织品和成衣都在帝国各民族之间交易，其产品通常以其名称或特定城镇命名，就像时尚“标签”一样。[61]更好的成衣由商人（negotiatoresormercatores）出口，他们通常是生产中心的富裕居民。[62]成衣可能由他们的销售代理人零售，他们前往潜在客户那里，也可能由vestiarii（服装经销商，大多是自由民）零售；或者可能由流动商人兜售。[62]在埃及，纺织品生产商可以经营繁荣的小企业，雇用学徒、领取工资的自由工人和奴隶。[63]织工（fullones）和染工（coloratores）有自己的行会。[64]Centonarii是专门从事纺织品生产和将旧衣服回收成拼布商品的行会工人。[65]</p>
+<h2>国家账户和收入分配的估计</h2>
+<p>由于没有幸存的记录能让经济历史学家对古罗马的国民经济账户进行可靠的估计，因此对古罗马产品水平的估计仍然是推测性的。对罗马经济在帝国时期国内生产总值的估计。[66]对于公元14年、100年和150年的样本年份，人均GDP的估计值从166到380塞斯台尔提不等。罗马帝国的发展并不均衡。由于城市化和贸易程度更高（部分原因是与帝国外围省份相比，地中海的通道），以及精英收入集中在中心地区，意大利的人均GDP估计值高于帝国时期平均水平。地中海沿岸的其他地区，如爱琴海和北非，在同一时期也被认为比帝国平均水平发达。[67]意大利收入水平与帝国平均水平之间的差异估计值从高出帝国其他地区40%[68]到66%[69]，甚至高达100%[70]不等。在Scheidel-Friesen罗马国民经济账户模型中，帝国产生的年度总收入接近200亿塞斯台尔提，其中约5%被帝国政府抽取。收入分配最高的1.5%的家庭获得了约20%的收入。另有20%流向了约10%的人口，这些人可以被归类为非精英中产阶级。“绝大多数”剩余人口创造了超过一半的总收入，但生活水平接近于维持生计。[71]所有引用的经济史学家都强调，鉴于普遍缺乏幸存的相关数据，任何估计都只能被视为对古代经济现实的粗略近似。</p>
+<p>根据繁荣的罗马城镇庞培的房屋考古遗迹留下的证据，杰弗里·克朗[72]估计庞培的平均家庭收入为7900塞斯台尔提，远高于整个帝国GDP估计值所暗示的水平。根据这些考古遗迹中房屋大小的分布，他还估计了收入分布，这表明庞培的中产阶级比Scheidel-Friesen模型中预期的要大得多。他的估计表明，庞培的生活水平优于19世纪的西欧。他得出结论，应该向上修正现有的罗马GDP估计值。</p>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Roman_economy" target="_blank">(https://en.wikipedia.org/wiki/Roman_economy)</a><br></small>
+    </div>
+
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 获取所有导航链接
+        const navLinks = document.querySelectorAll(".navigate-item");
+        // 将导航链接与目标元素建立映射关系
+        const connections = Array.from(navLinks).map(link => {
+            const targetId = link.getAttribute("href").substring(1); // 去掉 #
+            const targetElement = document.getElementById(targetId);
+            return { link, targetElement };
+        });
+        // 使用 IntersectionObserver 观察目标元素
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const { target, isIntersecting } = entry;
+                    const matchingLink = connections.find(connection => connection.targetElement === target).link;
+                    if (isIntersecting) {
+                        // 目标元素在视野中，添加高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.add("active");
+                    } else {
+                        // 目标元素离开视野，移除高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.remove("active");
+                    }
+                });
+            },
+            {
+                root: null, // 默认视口
+                threshold: 0.02
+            }
+        );
+
+        // 开始观察所有目标元素
+        connections.forEach(({ targetElement }) => observer.observe(targetElement));
+    });
+</script>
+<script>
+    // 获取元素
+    const resizer = document.querySelector('.resizer');
+    const leftColumn = document.querySelector('.left-column');
+    const rightColumn = document.querySelector('.right-column');
+    const navigate = document.querySelector('.navigate')
+
+    let isDragging = false;
+
+    // 鼠标按下事件
+    resizer.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        document.body.style.cursor = 'col-resize';
+        document.body.style.userSelect = 'none';
+    });
+
+    // 鼠标移动事件
+    document.addEventListener('mousemove', (event) => {
+        if (!isDragging) return;
+
+        // 计算新的宽度
+        const newLeftWidth = event.clientX / window.innerWidth * 100; // 转换为百分比
+
+        // 限制宽度范围
+        if (newLeftWidth > 15 && newLeftWidth < 70) {
+            leftColumn.style.flexBasis = `${newLeftWidth}%`;
+            rightColumn.style.flexBasis = `${100 - newLeftWidth}%`;
+            navigate.style.left = `${newLeftWidth + 0.15 * (100 - newLeftWidth)}%`
+            navigate.style.maxWidth = `${0.7 * (100 - newLeftWidth)}%`
+
+            const navigateRect = navigate.getBoundingClientRect();
+            const screenWidth = window.innerWidth;
+
+            // 获取右侧部分宽度
+            const rightColumnWidth = rightColumn.getBoundingClientRect().width;
+
+            // 计算 navigate 的占屏幕宽度比例
+            const navigateWidthPercentage = (navigateRect.width / screenWidth) * 100;
+
+            // 计算 navigate 居中所需的 left 值
+            const rightColumnLeft = rightColumn.getBoundingClientRect().left;
+            const navigateLeft = rightColumnLeft + (rightColumnWidth - navigateRect.width) / 2;
+
+            // 设置 navigate 的宽度和位置
+            navigate.style.left = `${navigateLeft}px`;
+        }
+    });
+
+    // 鼠标松开事件
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        document.body.style.cursor = 'default';
+        document.body.style.userSelect = 'auto';
+    });
+</script>
+</html>
