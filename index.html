@@ -11,7 +11,7 @@
         <div class="container">
             <div class="flex-item" id="left-column">
                 <div class="logo">
-                    <h2>🤖🔍BotBotGo 项目报告 <small>小型智能体搜索项目</small></h2>
+                    <h2>🤖🔍BotBotGo 项目报告 <small>小型类DeepResearch系统</small></h2>
                 </div>
                 <video controls autoplay muted loop class="full-width">
                     <source src="media/bbgo-intro-short.mp4" type="video/mp4">
@@ -26,27 +26,25 @@
                 <a class="report" href="https://www.bilibili.com/video/BV1sh68YvEJT/" target="_blank">6</a>
                 </div>
                 <div id="examples-container">
-                    <h2>一些生成的样例</h2> 
+                    <h2>一些生成的研究报告</h2>
                     <div class="float-left">
-                        <h3>样例报告结构</h3>
+                        <h3>研究报告结构</h3>
+                        <p>报告左侧是正文, 右侧是参考资料.</p>
                         <img src="media/report-structure.jpeg" style="height: 150px; margin-right: 20px;" class="border-image">
                     </div>
                     <div id="examples">
-                        <a class="report" href="reports/2025年比特币价位预测.html" target="_blank">2025年比特币价位预测</a>
-                        <a class="report" href="reports/东京各种质量生活的开销清单.html" target="_blank">东京各种质量生活的开销清单</a>
-                        <a class="report" href="reports/古罗马贵族的财富来源和花销.html" target="_blank">古罗马贵族的财富来源和花销</a>
-                        <a class="report" href="reports/古罗马普通收入者的生活方式、收支清单.html" target="_blank">古罗马普通收入者的生活方式、收支清单</a>
-                        <a class="report" href="reports/罗马贵族的豪华生活.html" target="_blank">罗马贵族的豪华生活</a>
-                        <a class="report" href="reports/找到PMF的AI Startup.html" target="_blank">找到PMF的AI Startup</a>
-                        <a class="report" href="reports/OpenAI员工对AI Agents的评论.html" target="_blank">OpenAI员工对AI Agents的评论</a>
-                        <a class="report" href="reports/Trump获胜原因.html" target="_blank">Trump获胜原因</a>
-                        <a class="report" href="reports/穷游新加坡攻略.html" target="_blank">穷游新加坡攻略</a>
+                        <a class="report" href="reports/东京各种质量生活的开销清单.html" target="_blank">研究东京各种质量生活的开销清单</a>
+                        <a class="report" href="reports/古罗马贵族的财富来源和花销.html" target="_blank">研究古罗马贵族的财富来源和花销</a>
+                        <a class="report" href="reports/古罗马普通收入者的生活方式、收支清单.html" target="_blank">研究古罗马普通收入者的生活和收支</a>
+                        <a class="report" href="reports/罗马贵族的豪华生活.html" target="_blank">研究罗马贵族的豪华生活</a>
+                        <a class="report" href="reports/找到PMF的AI Startup.html" target="_blank">研究找到PMF的AI Startup</a>
+                        <a class="report" href="reports/穷游新加坡攻略.html" target="_blank">研究穷游新加坡攻略</a>
                     </div>
                 </div>
             </div>
             <div class="flex-item" id="right-column">
                 <div id="diagram" class="break-float" style="max-width: 85%; margin-top: 20px;">
-                    <h2>项目工作流程 <small>(单击可以放大)</small></h2>
+                    <h2>研究工作流程 <small>(单击可以放大)</small></h2>
                     <a href="media/bbgo-diagram.pdf" target="_blank">
                     <img src="media/bbgo-diagram.jpeg" class="full-width border-image"></a>
                 </div>
@@ -59,9 +57,9 @@
                 <div id="info">
                     <h2>更多信息</h2>
                     <ol>
-                        <li>这个项目是我在2024年12月花了16天开发的. 我本来打算做一个机器人辩论赛, 所以做了查询维基百科的机器人Wikibot, 以及可以上网的Webbot, 本来它们的任务是为辩手提供论据, 
-                            后面干脆直接用它们做了搜索引擎</li>
-                        <li>这个项目调用OpenAI/OpenRouter接口开发, 没有微调模型, 也没有用LangChain/CrewAI等框架</li>
+                        <li>这个项目是我在2024年12月的时候一个人做的, 一共花了16天. 我本来因为好奇打算试试一个机器人辩论赛, 所以做了查询维基百科的机器人Wikibot, 以及可以上网的Webbot, 本来它们的任务是为辩手提供论据, 
+                            后面干脆直接基于它们做了一个研究式搜索引擎</li>
+                        <li>这个项目调用OpenAI/OpenRouter接口开发, 没有微调模型, 也没有用LangChain/CrewAI等框架. 我希望之后如果有机会的话用强化微调等技术做类似的项目</li>
                         <li>上网/本地查找/维基查找的Agent都基于gpt-4o-mini; 报告生成工作流基于gemini-flash</li>
                         <li>单任务成本约 $0.2</li>
                     </ol>
