@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>神界:原罪2 讲了一个什么故事?我要从头到尾的完整叙事. 不是浅尝辄止的概述, 而是要详细的材料和细节</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; 
+            background-color: #f4f6f8; 
+            color: #333; 
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        
+        .content {
+            border-radius: 12px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); 
+            background-color: #fff; 
+            padding: 16px; 
+            margin-bottom: 16px; 
+        }
+
+        
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .left-column{
+            flex: 0.47;
+        }
+        .right-column{
+            flex: 0.53;
+        }
+
+        .left-column {
+            background-color: #eef6ff; 
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; 
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Noto Serif", "SimSun", serif; 
+            position: relative;
+        }
+        .resizer {
+            width: 6px;
+            cursor: col-resize;
+            background-color: #d1d1d1;
+        }
+
+
+        
+        .title {
+            font-size: 1.4em; 
+            font-weight: 600; 
+            color: #1a1a1a; 
+            margin-bottom: 12px; 
+        }
+
+        .page-name.title {
+            font-size: 1.8em; 
+            font-weight: bold; 
+            color: #222; 
+            margin: 16px 0; 
+            text-align: left; 
+        }
+
+        .section-title {
+            font-size: 1.4em; 
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; 
+        }
+
+        
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; 
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; 
+            padding: 12px; 
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; 
+            border: 1px solid #dde3ea; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+            margin-bottom: 20px; 
+        }
+
+        
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; 
+            margin: 20px 0; 
+        }
+
+        
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; 
+            color: #666; 
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; 
+            border-radius: 8px; 
+            line-height: 1.4;
+            margin-bottom: 10px; 
+        }
+
+        
+        .page-rating {
+            background-color: #e8f4ff; 
+            color: #0078d7; 
+            font-weight: bold; 
+            border: 1px solid #aad4ff; 
+        }
+
+        
+        .page-annotation {
+            background-color: #fff5e5; 
+            color: #cc8400; 
+            font-style: italic; 
+            border: 1px solid #ffcc66; 
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; 
+        }
+
+        
+        a {
+            color: #0078d7; 
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+        
+        .content > * {
+            margin-bottom: 12px; 
+        }
+
+        
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; 
+            z-index: 300; 
+            background-color: #ffffff; 
+            color: #222; 
+            font-size: 1.1em; 
+            font-weight: 500; 
+            padding: 12px 16px; 
+            border-radius: 8px; 
+            border: 1px solid #d1e4f2; 
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05),  0 2px 4px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 16px; 
+            text-align: left; 
+            line-height: 1.6; 
+            font-family: "Inter", "Noto Sans", sans-serif; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        
+        .section-link-box {
+            display: inline-block; 
+            margin: 4px 2px; 
+        }
+
+        .section-link {
+            display: inline-flex; 
+            align-items: center; 
+            padding: 6px 12px; 
+            background-color: #eef6ff; 
+            color: #0078d7; 
+            font-size: 0.95em; 
+            font-weight: 500; 
+            text-decoration: none; 
+            border: 1px solid #d1e4f2; 
+            border-radius: 20px; 
+            transition: all 0.2s ease; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; 
+            color: #005bb5; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            text-decoration: underline; 
+        }
+
+        
+        .navigate {
+            display: flex; 
+            max-width: 40%;
+            width: fit-content; 
+            flex-wrap: nowrap; 
+            overflow-x: auto; 
+            gap: 4px; 
+            justify-content: center; 
+            padding: 4px 4px; 
+            background-color: #f4f6f8; 
+            border-radius: 12px; 
+
+            position: fixed;
+            top: 0;
+            left: 55%;
+            
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease; 
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        
+        .navigate-item {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            background-color: #ffffff; 
+            padding: 3px 6px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            transition: all 0.3s ease; 
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            transform: translateY(2px); 
+        }
+        .navigate-item.active {
+            box-shadow: 0 0 10px 3px rgba(0, 120, 215, 0.5); 
+            transform: translateY(1px); 
+        }
+        .navigate-item a {
+            text-decoration: none; 
+            color: #0078d7; 
+            font-weight: bold; 
+            font-size: 1em; 
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; 
+            margin-bottom: 1px; 
+        }
+        .navigate-item-id {
+            font-size: 0.9em; 
+            color: #555; 
+        }
+
+        [id] { 
+            scroll-margin-top: 55px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            神界:原罪2 讲了一个什么故事?我要从头到尾的完整叙事. 不是浅尝辄止的概述, 而是要详细的材料和细节
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">逃脱方法</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Divinity:-Original-Sin-2-walkthrough:-How-to-get-out-of-Fort-Joy-|-PC-Gamer">
+    🔓逃生方法</a></div><div class="section-link-box"><a class="section-link" href="#Escape-from-Fort-Joy-|-Divinity-Original-Sin-2-Wiki">
+    🚪Fort Joy解锁</a></div><div class="section-link-box"><a class="section-link" href="#Original-Sin-2-Quests-|-Divinity-Wiki-|-Fandom">
+    📋任务列表</a></div><div class="section-link-box"><a class="section-link" href="#Endings-|-Divinity-Original-Sin-2-Wiki">
+    🗝</a></div><div class="section-link-box"><a class="section-link" href="#Divinity:-Original-Sin-2-|-All-Side-Quests-Checklist">
+    ✅</a></div><div class="section-link-box"><a class="section-link" href="#End-Times-|-Divinity-Original-Sin-2-Wiki">
+    ⚔</a></div></div>
+    <div class="section-content content"><h2>逃离欢乐堡：多种策略与任务关联</h2>
+<p>逃离欢乐堡并非单一途径，而是取决于玩家在游戏前期完成的任务和自身能力，可采取以下多种策略：</p>
+<p><strong>一、利用魔法师的钥匙:</strong>  此策略需要完成“凶残的幽灵”支线任务。玩家需与位于欢乐堡北墙的法师雅洛对话，帮助她找到失踪的父亲米戈（位于东南海滩）。米戈通常会攻击玩家，但若玩家持有遍布全岛的雅洛之花（紫色），则可避免战斗，并获得米戈的戒指。将戒指交给雅洛，即可获得钥匙。此钥匙开启的是要塞南侧走道上的门，需配合传送手套（详见策略三）才能抵达并使用。该策略考察玩家的探索、对话和战斗能力。</p>
+<p><strong>二、利用威瑟莫尔勋爵的秘密通道:</strong>  此策略依赖“威瑟姆尔的灵魂瓶”支线任务。玩家需在南滩的隐藏通道（可通过与躲藏的精灵儿童对话或高智力属性自行发现）中找到不死骷髅威瑟莫尔勋爵。完成其委托任务后，他将揭示地牢的秘密入口。该入口位于营地入口的航点雕像旁，需启动开关才能显现。此路线上存在一道锁着的门，附近有杠杆可开启。  该策略对玩家的探索能力、智力属性和战斗能力提出要求。进入地牢后，楼上还有一道锁着的门，需要开锁或战斗才能通过（钥匙并非从战斗中掉落，而位于凳子上）。</p>
+<p><strong>三、利用传送手套:</strong>  此策略需要完成“传送器”支线任务。玩家需找到西北墙附近的加温，他需要拥有传送能力的同伴才能使用传送卷轴。传送手套位于北边海滩一只拥有传送能力的鳄鱼腹中。玩家需战胜鳄鱼夺取手套。获得手套后，玩家可以帮助加温逃离，但加温会背叛玩家。  利用手套，玩家可以逐一传送队伍成员越过山脊，最终到达码头或地牢入口。  该策略考验玩家的战斗能力和对传送手套功能的熟练运用。</p>
+<p><strong>四、解救艾米罗:</strong> 此策略与“被囚禁的精灵”支线任务相关。  欢乐堡老大格里夫将精灵艾米罗囚禁在厨房。玩家需要找到真正的偷橙贼毒尾（位于西南海滩），并向格里夫证明艾米罗的清白，从而解救他。艾米罗将指引玩家一条进入地牢的秘密通道。  该策略需要玩家进行细致的调查，并可能需要巧妙地处理与红王子和塞比尔（他们有各自与毒尾相关的任务）的互动。</p>
+<p><strong>五、利用欢乐堡竞技场:</strong>  参与欢乐堡竞技场并获胜后，玩家的项圈会被移除，将会被抓捕并投入地牢。 这将直接为玩家提供一条进入地牢，并最终逃离欢乐堡的路线。  此策略需要玩家具备强大的战斗能力。</p>
+<p><strong>六、其他逃脱路线：</strong>  除了上述策略，玩家还可以利用以下途径逃离：</p>
+<ul>
+<li><strong>吊桥：</strong> 利用杠杆放下要塞后方的吊桥逃脱，可能需要与北侧墙的法师战斗。</li>
+<li><strong>坏掉的梯子：</strong>  从二楼瞭望塔的破损梯子跳下逃脱。</li>
+<li><strong>码头：</strong>  通过传送手套到达码头，并战胜守卫的法师。</li>
+<li><strong>韩船夫：</strong>  帮助韩逃脱后，搭乘他的船逃离。</li>
+<li><strong>下水道井盖：</strong>  通过酷刑室旁的下水道井盖逃离。  该策略考验玩家对地图的熟悉程度和潜行技巧。</li>
+</ul>
+<p>综上所述，逃离欢乐堡的方法多样，策略的选择取决于玩家的游戏进度、角色能力和个人偏好。  每个策略都与多个支线任务及NPC互动紧密相关，需要玩家积极探索游戏世界，完成任务并积累经验。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">角色间关系</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Endings-|-Divinity-Original-Sin-2-Wiki">
+    🗝Ending Choices</a></div><div class="section-link-box"><a class="section-link" href="#Best-Divinity:-Original-Sin-2-Romance-Options-&-How-To-Romance-Them">
+    💞Romance Dynamics</a></div><div class="section-link-box"><a class="section-link" href="#End-Times-|-Divinity-Original-Sin-2-Wiki">
+    ⚔Final Choices</a></div><div class="section-link-box"><a class="section-link" href="#Divinity:-Original-Sin-II---Wikipedia">
+    🌍Setting Relationships</a></div><div class="section-link-box"><a class="section-link" href="#Origins-|-Divinity-Original-Sin-2-Wiki">
+    🎭Origins and Interactions</a></div><div class="section-link-box"><a class="section-link" href="#Divinity-Original-Sin-2:-Every-Playable-Character,-Ranked">
+    🏆Character Ranking</a></div><div class="section-link-box"><a class="section-link" href="#Divinity-Original-Sin-2:-The-Worst-Choices-You-Can-Make-In-The-Game">
+    💕Character vs. Relationships</a></div><div class="section-link-box"><a class="section-link" href="#The-Power-of-Video-Game-Narrative:-Lohse-"Sing-For-Me"-Analysis---GameCloud">
+    🎶Emotional Moments</a></div><div class="section-link-box"><a class="section-link" href="#The-Impact-of-Choices-in-Divinity:-Original-Sin-2:-A-Deep-Dive-into-the-Story---Hyper3D">
+    📖Choice Impact</a></div><div class="section-link-box"><a class="section-link" href="#Lore-|-Divinity-Original-Sin-2-Wiki">
+    📜</a></div><div class="section-link-box"><a class="section-link" href="#Characters-in-Divinity:-Original-Sin-II---TV-Tropes">
+    🤝</a></div></div>
+    <div class="section-content content"><h2>《神界：原罪2》角色关系深度解析</h2>
+<p>《神界：原罪2》中角色关系错综复杂，并非静态刻板，而是动态演变，深受角色背景、玩家选择和道德困境影响，构成了游戏叙事的重要组成部分。  以下将对部分关键角色关系进行详细分析，并探讨玩家选择对其的影响：</p>
+<p><strong>1. Sebille与红王子:</strong>  游戏伊始，Sebille 作为遭遇种族歧视并饱受奴役之苦的精灵，一心复仇；红王子则为流亡王子，追逐权力。两人因各自背景而产生初始冲突，体现为互相敌视和不信任。然而，<a href="https://divinityoriginalsin2.fandom.com/wiki/The_Red_Prince">根据Divinity Original Sin 2 Wiki中关于红王子的介绍，其与Sebille的关系并非单一模式，最终走向取决于玩家互动选择。</a>  <a href="https://divinityoriginalsin2.fandom.com/wiki/Sebille">根据Divinity Original Sin 2 Wiki中关于Sebille的介绍，其复仇目标及与其他角色的互动，包括与红王子的关系，都取决于玩家的选择。</a>  通过共同经历任务，尤其是在<a href="需要补充具体任务">关键任务中（具体任务名称需根据游戏内容补充）</a>，玩家的选择性对话将决定两人关系走向：从敌对走向互相理解、甚至建立信任，抑或是持续冲突直至游戏结束。  <a href="https://en.wikipedia.org/wiki/Divinity:_Original_Sin_II">根据Divinity: Original Sin II - Wikipedia中对角色的介绍，玩家可在游戏中招募六个预设角色中的任何一个，包括红王子和塞比尔。其互动以及关系的变化都将根据玩家选择性的对话和行为而发生改变。</a></p>
+<p><strong>2. Lohse与Ifan:</strong> Lohse 身负恶魔，使其性格充满痛苦与不确定性； Ifan 则以其理解和支持，试图帮助Lohse摆脱困境。  <a href="https://divinityoriginalsin2.fandom.com/wiki/Lohse">Divinity: Original Sin 2 Wiki中对Lohse的介绍，</a>  <a href="https://divinityoriginalsin2.fandom.com/wiki/Ifan_Ben-Mezd">以及对Ifan Ben-Mezd的介绍，</a> 都表明两人关系发展并非必然，而是随着剧情推进和玩家选择而变化。 Ifan 对 Sebille 的好感 （即使只是友谊），也会影响其与 Lohse 的互动，造成关系张力。此三角关系的走向，同样依赖于玩家在游戏中的选择和互动。 这并非简单的线性发展，而是充满微妙变化和张力的多面关系。</p>
+<p><strong>3. 其他角色关系:</strong>  Beast 的复仇目标与红王子的野心存在交集，<a href="https://divinityoriginalsin2.fandom.com/wiki/Beast">这在Divinity Original Sin 2 Wiki中关于野兽的介绍中有所体现。</a>  玩家的选择将直接影响Beast 与其他角色的关系。  Fane 的不死身份和悠久历史，使之与其他角色互动独特，<a href="https://en.wikipedia.org/wiki/Divinity:_Original_Sin_II">这在Divinity: Original Sin 2 Wikipedia中对Fane的介绍有所体现。</a>  他对于叙事走向的影响，同样体现在其与其他角色互动和玩家选择的回应中。 <a href="https://gamerant.com/divinity-original-sin-2-playable-characters-ranked/">根据Divinity: Original Sin 2: Every Playable Character, Ranked 中对Fane的评价，其独特的身份与游戏剧情紧密相连，并影响着主线发展。</a></p>
+<p><strong>总结:</strong>  《神界：原罪2》角色关系并非预设的简单线性关系，而是动态且复杂的多面体。  玩家在游戏中的每一次选择，都将深刻影响角色之间的互动，最终塑造出独一无二的叙事体验，并极大提升了游戏的可玩性和重玩价值。  不同玩家的游玩将会产生千差万别的关系网络和结局。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">与Voidwoken的冲突</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#The-Impact-of-Choices-in-Divinity:-Original-Sin-2:-A-Deep-Dive-into-the-Story---Hyper3D">
+    📖玩家选择的影响</a></div><div class="section-link-box"><a class="section-link" href="#Endings-|-Divinity-Original-Sin-2-Wiki">
+    🗝结局</a></div><div class="section-link-box"><a class="section-link" href="#Origins-|-Divinity-Original-Sin-2-Wiki">
+    🎭角色背景</a></div><div class="section-link-box"><a class="section-link" href="#Divinity-Original-Sin-2:-The-Worst-Choices-You-Can-Make-In-The-Game">
+    💕叙事分析</a></div><div class="section-link-box"><a class="section-link" href="#End-Times-|-Divinity-Original-Sin-2-Wiki">
+    ⚔最终任务</a></div><div class="section-link-box"><a class="section-link" href="#Divinity:-Original-Sin-2-walkthrough:-How-to-get-out-of-Fort-Joy-|-PC-Gamer">
+    🔓Fort Joy监狱，冲突起点</a></div><div class="section-link-box"><a class="section-link" href="#Divinity:-Original-Sin-II---Wikipedia">
+    🌍</a></div><div class="section-link-box"><a class="section-link" href="#Characters-in-Divinity:-Original-Sin-II---TV-Tropes">
+    🤝</a></div><div class="section-link-box"><a class="section-link" href="#Original-Sin-2-Quests-|-Divinity-Wiki-|-Fandom">
+    📋</a></div><div class="section-link-box"><a class="section-link" href="#Divinity-Original-Sin-2:-Every-Playable-Character,-Ranked">
+    🏆</a></div><div class="section-link-box"><a class="section-link" href="#Favorite-Character+Romance?---Larian-Studios-forums">
+    ⚖</a></div><div class="section-link-box"><a class="section-link" href="#God-King-|-Divinity-Wiki-|-Fandom">
+    👑</a></div><div class="section-link-box"><a class="section-link" href="#Escape-from-Fort-Joy-|-Divinity-Original-Sin-2-Wiki">
+    🚪</a></div></div>
+    <div class="section-content content"><h2>神界：原罪2中与虚空生物（Voidwoken）冲突的叙事</h2>
+<p>《神界：原罪2》的核心叙事围绕着玩家操控的源力使用者与虚空生物及其首领——神王（God King）之间的冲突展开。故事始于玩家被神圣教派囚禁在死神之眼（Reaper’s Eye）岛上的欢乐堡（Fort Joy）监狱。逃离欢乐堡是剧情的关键转折点，为玩家提供了多种选择：</p>
+<ul>
+<li>
+<p><strong>任务路线:</strong>  例如，完成“凶残的幽灵”任务获得雅洛的钥匙，打开南侧通道逃离；或完成“威瑟姆尔的灵魂瓶”任务，发现隐藏通道进入地牢，最终逃脱。  《Divinity: Original Sin II walkthrough: How to get out of Fort Joy | PC Gamer》详细描述了这些逃生路线，包括利用传送手套、释放艾米罗、或参与欢乐堡竞技场等方法。</p>
+</li>
+<li>
+<p><strong>暴力对抗:</strong>  玩家可以直接与看守的法师战斗，以武力突破重围。</p>
+</li>
+</ul>
+<p>每种选择都将影响后续剧情发展，并改变与其他角色的关系。</p>
+<p>逃离欢乐堡后，玩家逐渐揭露虚空生物的起源及其对里维隆（Rivellon）世界的威胁。  他们并非凭空出现，而是被放逐到虚空的远古种族——永恒者（Eternals）。  他们的首领神王企图重返里维隆，夺回属于他们的世界。《Divinity: Original Sin II - Wikipedia》详细阐述了永恒者与七神之间的恩怨，以及虚空生物与面纱破裂之间的关联。</p>
+<p>玩家在游戏中与虚空生物的主要冲突包括：</p>
+<ol>
+<li>
+<p><strong>欢乐堡逃亡:</strong>  玩家必须运用策略和技能逃离欢乐堡，这本身就是一场与看守法师的战斗。《Escape from Fort Joy | Divinity Original Sin 2 Wiki》列举了多种逃离方法及相关任务。</p>
+</li>
+<li>
+<p><strong>对抗亚历山大与达利斯:</strong>  玩家在后续剧情中将与神圣教派首脑亚历山大（Alexandar）和达利斯（Dallis）发生冲突，这场对抗关乎玩家对自身源力及命运的理解，以及与其他角色关系的发展。《Divinity Original Sin 2: The Worst Choices You Can Make In The Game》提到了玩家可能面临的艰难抉择，例如为了拯救洛丝而犯下种族灭绝。</p>
+</li>
+<li>
+<p><strong>无名岛决战:</strong>  最终，玩家将在无名岛（Nameless Isle）与神王展开决战。《End Times | Divinity Original Sin 2 Wiki》详细描述了这场最终战役，包括与神圣卢西安（Lucian）和达利斯对抗，以及选择是否放弃源力，以及最终的三种选择：成为新神、净化所有源力或释放源力给所有人。</p>
+</li>
+</ol>
+<p>这些战斗中，玩家需要运用策略，巧妙运用技能与环境，克服强大的敌人。  《Divinity Original Sin 2: Every Playable Character, Ranked》中提到，玩家角色的职业选择和技能搭配将直接影响战斗结果。</p>
+<p>游戏中的关键转折点在于玩家对自身源力及命运的理解，以及与其他角色关系的发展。  玩家将面临诸多选择：</p>
+<ul>
+<li>
+<p><strong>塞比尔（Sebille）:</strong>  帮助她复仇或劝说她放下仇恨。</p>
+</li>
+<li>
+<p><strong>红王子（The Red Prince）:</strong>  支持他夺回王位或引导他走向不同道路。</p>
+</li>
+<li>
+<p><strong>伊凡（Ifan）:</strong>  与他和解或保持隔阂。</p>
+</li>
+</ul>
+<p>这些选择不仅影响角色关系，也直接影响最终决战的结果和结局。《Original Sin 2 Quests | Divinity Wiki | Fandom》中列出了游戏中的所有任务及相关选择。</p>
+<p>最终决战前，玩家将遭遇卢西安（Lucian），他揭示了关于神明、虚空以及源力的真相。  玩家基于自身的道德观念和目标，需做出最终抉择：《End Times | Divinity Original Sin 2 Wiki》详细列举了这四个最终选择及其结果。   每个选择都将导致不同的结局，对里维隆的未来和主要角色的命运产生深远影响。</p>
+<p>总而言之，《神界：原罪2》通过精妙地将玩家选择与虚空生物的冲突交织，构建了一个充满深度和张力的叙事结构。  玩家的每一个选择都将影响最终结局，最终决战不仅是与虚空生物的战斗，更是玩家对自身命运、责任和道德的终极拷问。  游戏通过大量细节和选择，创造出高度可重玩性和深度沉浸的体验。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">结局选择</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Endings-|-Divinity-Original-Sin-2-Wiki">
+    🗝结局选择</a></div><div class="section-link-box"><a class="section-link" href="#End-Times-|-Divinity-Original-Sin-2-Wiki">
+    ⚔</a></div><div class="section-link-box"><a class="section-link" href="#Divinity:-Original-Sin-II---Wikipedia">
+    🌍</a></div><div class="section-link-box"><a class="section-link" href="#The-Impact-of-Choices-in-Divinity:-Original-Sin-2:-A-Deep-Dive-into-the-Story---Hyper3D">
+    📖</a></div></div>
+    <div class="section-content content"><h2>神界：原罪2 结局选择维度分析</h2>
+<p>《神界：原罪2》拥有多个结局，皆基于玩家在游戏过程中一系列关键选择的累积结果，深刻影响着里维隆的命运及主要角色的个人归宿。  这些结局并非简单的善恶二元对立，而是呈现出多种复杂且充满张力的可能性。</p>
+<p><strong>一、主要结局及影响：</strong></p>
+<p>| 结局                                     | 结局概述                                                                                                        | 对里维隆的影响                                                                            | 对主要角色的影响                                                                                         | 触发条件                                                                                                 |
+|------------------------------------------|---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| <strong>升为神 (Ascend to Divinity)</strong>           | 玩家成为新神，里维隆表面上团结，但与虚空的战争持续。                                                                | 表面团结，但虚空威胁依然存在。                                                                 |  玩家成为受万人敬仰的神明，其他角色命运因玩家抉择和其个人故事线而异，例如温迪戈的结局取决于玩家在第四幕的选择。 | 最终战役后选择成为新神。                                                                               |
+| <strong>将源力释放到世界 (Release Source)</strong>     | 源力赋予所有人，短暂的黄金时代后，权力斗争导致社会崩溃。                                                  | 短暂的黄金时代，最终陷入权力斗争和混乱。                                                        |  人人成为源力使用者，但社会秩序崩塌，角色命运取决于个体在混乱中的选择，例如阿尔胡可能会选择用猫的身份生活。 | 最终战役后选择释放源力。                                                                               |
+| <strong>让卢西安依旧为神 (Lucian Remains Divine)</strong> | 卢西安继续执掌神权，里维隆种族团结，虚空被击退。                                                              | 种族团结，虚空被击退，但卢西安的统治方式暗含隐忧。                                                | 卢西安继续统治，其他角色命运依然受玩家在游戏中的选择影响，例如阿尔胡可能意识到某些事情有所改变。           | 向卢西安投降，让他保有神力。                                                                               |
+| <strong>封印面纱 (Seal the Veil)</strong>             | 达利斯净化源力，恢复面纱，源力使用者成为沉默僧侣，卢西安失去神力。                                                       |  永久和平，但失去源力带来的可能性，世界恢复到一个相对原始的状态。                                        | 玩家失去源力，成为沉默僧侣，但玛拉迪可能会尝试恢复他们的灵魂。其他角色结局受玩家之前的选择影响，例如Saheila可能会寻求复仇。 |  最终战役后选择放弃源力。                                                                               |
+| <strong>允许神王回归 (God King's Return)</strong>       | 神王统治里维隆，凡人种族被奴役。                                                                                 | 永恒者的统治，凡人种族被奴役。                                                                   | 角色命运悲惨，沦为奴隶或在反抗中丧生。                                                                     |  选择与神王合作或无人升为神。                                                                                 |</p>
+<p><strong>二、对主要角色的影响：</strong></p>
+<p>除了上述宏观结局，玩家的选择也深刻影响着包括赛比尔（解放/母树）、洛丝（音乐家）、红王子（皇帝）、伊凡（隐士）、费恩（记录者）、野兽（立法者/领袖）、温迪戈（自由/神王/费恩的仆从/恶魔仆从）、多萝西娅、玛拉迪、塔尔奎因、阿尔胡、格拉蒂亚娜、Saheila及雷克等主要及次要角色的个人命运。   每个角色都有多个结局，取决于玩家与他们的互动和关键选择。 例如，赛比尔的结局取决于玩家是否帮助她成为新的森林之母；红王子的结局取决于玩家是否帮助他复国等等。  这些结局分支进一步增加了游戏的可玩性和重玩价值，使每个玩家的体验都独一无二。</p>
+<p><strong>三、玩家争议与游戏评价：</strong></p>
+<p>部分玩家对某些结局的设定及对角色个人故事线的处理方式存在争议，例如对神明设定、虚空威胁的处理，以及某些角色结局的合理性。  这些争议也体现了游戏在叙事深度和玩家参与度上的成功与不足之处，也反映了游戏复杂叙事的成功之处和引发玩家深刻思考的地方。</p>
+<p><strong>四、总结：</strong></p>
+<p>《神界：原罪2》的结局选择并非简单的线性发展，而是构建了一个复杂且多维度的情节网络。  玩家的每个选择都会产生连锁反应，影响游戏世界和角色的最终命运。  这种开放式结局设计，既丰富了游戏体验，也引发了玩家对权力、责任、牺牲等主题的深入思考。</p></div>
+</div>
+</div>
+<div class="resizer"></div>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item" href="#Endings-|-Divinity-Original-Sin-2-Wiki">
+    <a href="#Endings-|-Divinity-Original-Sin-2-Wiki" class="navigate-item-emoji ">🗝</a>
+    <a href="#Endings-|-Divinity-Original-Sin-2-Wiki" class="navigate-item-id">1</a>
+</div><div class="navigate-item" href="#Divinity:-Original-Sin-2-walkthrough:-How-to-get-out-of-Fort-Joy-|-PC-Gamer">
+    <a href="#Divinity:-Original-Sin-2-walkthrough:-How-to-get-out-of-Fort-Joy-|-PC-Gamer" class="navigate-item-emoji ">🔓</a>
+    <a href="#Divinity:-Original-Sin-2-walkthrough:-How-to-get-out-of-Fort-Joy-|-PC-Gamer" class="navigate-item-id">2</a>
+</div><div class="navigate-item" href="#Favorite-Character+Romance?---Larian-Studios-forums">
+    <a href="#Favorite-Character+Romance?---Larian-Studios-forums" class="navigate-item-emoji ">⚖</a>
+    <a href="#Favorite-Character+Romance?---Larian-Studios-forums" class="navigate-item-id">3</a>
+</div><div class="navigate-item" href="#Escape-from-Fort-Joy-|-Divinity-Original-Sin-2-Wiki">
+    <a href="#Escape-from-Fort-Joy-|-Divinity-Original-Sin-2-Wiki" class="navigate-item-emoji ">🚪</a>
+    <a href="#Escape-from-Fort-Joy-|-Divinity-Original-Sin-2-Wiki" class="navigate-item-id">4</a>
+</div><div class="navigate-item" href="#The-Impact-of-Choices-in-Divinity:-Original-Sin-2:-A-Deep-Dive-into-the-Story---Hyper3D">
+    <a href="#The-Impact-of-Choices-in-Divinity:-Original-Sin-2:-A-Deep-Dive-into-the-Story---Hyper3D" class="navigate-item-emoji ">📖</a>
+    <a href="#The-Impact-of-Choices-in-Divinity:-Original-Sin-2:-A-Deep-Dive-into-the-Story---Hyper3D" class="navigate-item-id">5</a>
+</div><div class="navigate-item" href="#Divinity-Original-Sin-2:-The-Worst-Choices-You-Can-Make-In-The-Game">
+    <a href="#Divinity-Original-Sin-2:-The-Worst-Choices-You-Can-Make-In-The-Game" class="navigate-item-emoji ">💕</a>
+    <a href="#Divinity-Original-Sin-2:-The-Worst-Choices-You-Can-Make-In-The-Game" class="navigate-item-id">6</a>
+</div><div class="navigate-item" href="#Divinity:-Original-Sin-II---Wikipedia">
+    <a href="#Divinity:-Original-Sin-II---Wikipedia" class="navigate-item-emoji ">🌍</a>
+    <a href="#Divinity:-Original-Sin-II---Wikipedia" class="navigate-item-id">7</a>
+</div><div class="navigate-item" href="#Characters-in-Divinity:-Original-Sin-II---TV-Tropes">
+    <a href="#Characters-in-Divinity:-Original-Sin-II---TV-Tropes" class="navigate-item-emoji ">🤝</a>
+    <a href="#Characters-in-Divinity:-Original-Sin-II---TV-Tropes" class="navigate-item-id">8</a>
+</div><div class="navigate-item" href="#The-Power-of-Video-Game-Narrative:-Lohse-"Sing-For-Me"-Analysis---GameCloud">
+    <a href="#The-Power-of-Video-Game-Narrative:-Lohse-"Sing-For-Me"-Analysis---GameCloud" class="navigate-item-emoji ">🎶</a>
+    <a href="#The-Power-of-Video-Game-Narrative:-Lohse-"Sing-For-Me"-Analysis---GameCloud" class="navigate-item-id">9</a>
+</div><div class="navigate-item" href="#Origins-|-Divinity-Original-Sin-2-Wiki">
+    <a href="#Origins-|-Divinity-Original-Sin-2-Wiki" class="navigate-item-emoji ">🎭</a>
+    <a href="#Origins-|-Divinity-Original-Sin-2-Wiki" class="navigate-item-id">10</a>
+</div><div class="navigate-item" href="#Divinity-Original-Sin-2:-Every-Playable-Character,-Ranked">
+    <a href="#Divinity-Original-Sin-2:-Every-Playable-Character,-Ranked" class="navigate-item-emoji ">🏆</a>
+    <a href="#Divinity-Original-Sin-2:-Every-Playable-Character,-Ranked" class="navigate-item-id">11</a>
+</div><div class="navigate-item" href="#Best-Divinity:-Original-Sin-2-Romance-Options-&-How-To-Romance-Them">
+    <a href="#Best-Divinity:-Original-Sin-2-Romance-Options-&-How-To-Romance-Them" class="navigate-item-emoji ">💞</a>
+    <a href="#Best-Divinity:-Original-Sin-2-Romance-Options-&-How-To-Romance-Them" class="navigate-item-id">12</a>
+</div><div class="navigate-item" href="#End-Times-|-Divinity-Original-Sin-2-Wiki">
+    <a href="#End-Times-|-Divinity-Original-Sin-2-Wiki" class="navigate-item-emoji ">⚔</a>
+    <a href="#End-Times-|-Divinity-Original-Sin-2-Wiki" class="navigate-item-id">13</a>
+</div><div class="navigate-item" href="#Divinity:-Original-Sin-2-character-arcs-detailed-analysis-at-DuckDuckGo">
+    <a href="#Divinity:-Original-Sin-2-character-arcs-detailed-analysis-at-DuckDuckGo" class="navigate-item-emoji ">🔑</a>
+    <a href="#Divinity:-Original-Sin-2-character-arcs-detailed-analysis-at-DuckDuckGo" class="navigate-item-id">14</a>
+</div><div class="navigate-item" href="#God-King-|-Divinity-Wiki-|-Fandom">
+    <a href="#God-King-|-Divinity-Wiki-|-Fandom" class="navigate-item-emoji ">👑</a>
+    <a href="#God-King-|-Divinity-Wiki-|-Fandom" class="navigate-item-id">15</a>
+</div><div class="navigate-item" href="#Lore-|-Divinity-Original-Sin-2-Wiki">
+    <a href="#Lore-|-Divinity-Original-Sin-2-Wiki" class="navigate-item-emoji ">📜</a>
+    <a href="#Lore-|-Divinity-Original-Sin-2-Wiki" class="navigate-item-id">16</a>
+</div><div class="navigate-item" href="#Races---Divinity:-Original-Sin-II-Guide---IGN">
+    <a href="#Races---Divinity:-Original-Sin-II-Guide---IGN" class="navigate-item-emoji ">👤</a>
+    <a href="#Races---Divinity:-Original-Sin-II-Guide---IGN" class="navigate-item-id">17</a>
+</div><div class="navigate-item" href="#Rivellon-|-Divinity-Wiki-|-Fandom">
+    <a href="#Rivellon-|-Divinity-Wiki-|-Fandom" class="navigate-item-emoji ">🗺</a>
+    <a href="#Rivellon-|-Divinity-Wiki-|-Fandom" class="navigate-item-id">18</a>
+</div><div class="navigate-item" href="#Original-Sin-2-Quests-|-Divinity-Wiki-|-Fandom">
+    <a href="#Original-Sin-2-Quests-|-Divinity-Wiki-|-Fandom" class="navigate-item-emoji ">📋</a>
+    <a href="#Original-Sin-2-Quests-|-Divinity-Wiki-|-Fandom" class="navigate-item-id">19</a>
+</div><div class="navigate-item" href="#Divinity:-Original-Sin-2-|-All-Side-Quests-Checklist">
+    <a href="#Divinity:-Original-Sin-2-|-All-Side-Quests-Checklist" class="navigate-item-emoji ">✅</a>
+    <a href="#Divinity:-Original-Sin-2-|-All-Side-Quests-Checklist" class="navigate-item-id">20</a>
+</div>
+    </div>
+    <div class="page"  id="Endings-|-Divinity-Original-Sin-2-Wiki">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🗝&nbsp;</span>Endings | Divinity Original Sin 2 Wiki</h3>
+        <small class="page-url url "><a href="https://divinityoriginalsin2.wiki.fextralife.com/Endings" target="_blank">(https://divinityoriginalsin2.wiki.fextralife.com/Endings)</a><br></small>
+        <small class="page-rating rating ">评分: 9.0<br></small>
+        <small class="page-annotation annotation ">注释: 总结了《神界：原罪2》中逃脱Fort Joy的多种方法与策略。<br></small>
+    </div>
+    <div class="page-content content"><h2>Divinity 原罪2 (DOS 2)结局指南</h2>
+<p>Divinity 原罪2 (DOS 2)包含所有可用的游戏结局。DOS 2 的多个结局取决于玩家在游戏中各种任务和互动中做出的关键选择。所有任务列表，请访问任务页面；关于主要战役的指南，请查看攻略页面。此页面涵盖了Divinity 原罪2 (DOS 2)的所有结局。</p>
+<h3>Divinity 原罪2 所有主要结局</h3>
+<p>| 结局 | 概述 | 要求 |
+|---|---|---|
+| 升为神 | 瑞威隆在新的神灵统治下团结起来，但与虚空的战斗仍在继续。 | 在最终战斗后选择成为新的神灵。 |
+| 让卢西安依旧为神 | 瑞威隆的种族团结起来，虚空被击退。卢西安和达利斯受到所有人的尊敬。 | 向卢西安投降，让他拥有神力。 |
+| 与医生一起升为神 | 你和医生作为光明之神和黑暗之神统治世界。虚空生物很容易被恶魔军队击败，但后来你和医生之间爆发了更加血腥的战争。 | 与医生达成协议并在最终战斗中遵守。 |
+| 将源力释放到世界 | 瑞威隆的所有人都成为源力使用者。他们团结起来，将神王驱逐回虚空。黄金时代来临，但很快随着源力赋权者争夺权力而破灭。 | 选择将源力释放给所有瑞威隆人。 |
+| 封印面纱 | 达利斯净化了瑞威隆的源力，恢复了面纱，并将源力使用者变成了沉默的僧侣。玛拉迪访问回声大厅，恢复了源力使用者的灵魂。卢西安仍然是神灵，但他不再拥有力量（但没有人知道）。 | 选择放弃你的源力。 |
+| 允许神王回归 | 神王对瑞威隆发动战争。凡人种族被永恒者推翻并奴役。 | 选择与神王合作，或无人升为神。 |</p>
+<h3>DOS 2 原创角色结局</h3>
+<p>| 结局 | 描述 | 要求 |
+|---|---|---|
+| 赛比尔（解放者） | 赛比尔成为瑞威隆受所有人赞扬的流浪英雄。 | 解救赛比尔摆脱奴隶主并杀死他。拒绝成为新的母树并杀死现任母树。 |
+| 赛比尔（新母树） | 赛比尔在一个新的森林中找到了作为母树的位置，精灵们聚集在她周围并崇拜她。她发誓再也不杀人。 | 解救赛比尔摆脱奴隶主并杀死他。同意成为新的母树。 |
+| 洛丝 | 洛丝成为伟大的音乐家，在瑞威隆各地演奏。 | 解救洛丝摆脱她的恶魔。 |
+| 红王子 | 红王子作为英雄回到家乡。他成为皇帝，统治他的帝国，国泰民安。 | 帮助红王子成为龙父。 |
+| 伊凡·本·梅兹德 | 伊凡帮助恢复精灵森林，然后消失。 | 完成伊凡的所有任务（待定） |
+| 费恩 | 费恩开始记录新世界的一切。他继续寻找他的妻子。 | 神王和永恒者没有回归。 |
+| 野兽（立法者） | 野兽作为立法者返回矮人王国。 | ??? |
+| 野兽（领袖） | 野兽作为领袖返回矮人王国。 | ??? |</p>
+<h3>DOS 2 其他角色结局</h3>
+<p>| 结局 | 描述 | 要求 |
+|---|---|---|
+| 温迪戈（自由） | 温迪戈摆脱了神王的控制，其余的生<strong>活中</strong>照顾病人和老人。 | 通过给予她誓言破坏者或封印面纱来切断温迪戈与神王的联系。神王和永恒者没有回归。 |
+| 温迪戈（神王） | 温迪戈被神王活着留下，等待她的惩罚。 | 温迪戈与神王的联系没有被切断。 |
+| 温迪戈（费恩） | 温迪戈侍奉费恩。 | 通过给予她誓言破坏者或封印面纱来切断温迪戈与神王的联系。允许神王和永恒者回归。 |
+| 温迪戈（与医生一起升为神） | 温迪戈侍奉恶魔神灵。 | 切断温迪戈与神王的联系？与医生达成协议并在最终战斗中遵守。 |
+| 多萝西娅 | 多萝西娅前往古代帝国寻找完美的吻。 | 亲吻多萝西娅并让她活下去。 |
+| 玛拉迪（升为神） | 玛拉迪在神灵那里有强大的盟友，但她并不急于寻求帮助。 | 在最终战斗后选择成为新的神灵。 |
+| 玛拉迪（与医生一起升为神） | 玛拉迪在神灵那里有强大的盟友，但在与恶魔开战时，她受到了双方人士的怀疑。 | 与医生达成协议并在最终战斗中遵守。 |
+| 玛拉迪（将源力释放到世界/封印面纱） | 玛拉迪的搜索仍在继续。 | 选择将源力释放给所有瑞威隆人，或选择放弃你的源力。 |
+| 塔尔奎因 | 塔尔奎因痴迷于一个新的存在位面，有一天消失了。 | 允许塔尔奎因活下去。 |
+| 阿尔胡（升为神） | 阿尔胡侍奉神灵。如果卢西安是神灵，阿尔胡意识到有些事情发生了变化。 | 救下阿尔胡。在最终战斗后选择成为新的神灵，或选择放弃你的源力。 |
+| 阿尔胡（将源力释放到世界） | 阿尔胡最终决定永久地作为一只猫生活。 | 救下阿尔胡。选择将源力释放给所有瑞威隆人。 |
+| 格拉蒂亚娜（升为神） | 格拉蒂亚娜在她避难所等待。 | 让格拉蒂亚娜活下去。在最终战斗后选择成为新的神灵。 |
+| 格拉蒂亚娜（将源力释放到世界） | 格拉蒂亚娜离开她的避难所，为不死族建立了一个新的避难所。 | 让格拉蒂亚娜活下去。选择将源力释放给所有瑞威隆人。 |
+| Saheila（升为神） | Saheila 是神灵的盟友，Tovah 是她最值得信赖的战士。 | 在最终战斗后选择成为新的神灵。 |
+| Saheila（封印面纱） | Saheila 计划向卢西安复仇；Tovah 是唯一一个阻止她的人。 | 选择放弃你的源力。 |
+| Saheila（与医生一起升为神） | Saheila 不信任恶魔神灵。她和 Tovah 最终逃往恶魔领域，涅墨西斯。 | 与医生达成协议并在最终战斗中遵守。 |
+| 雷克（升为神） | 雷克是神灵的有用盟友。 | 让雷克活下去。在最终战斗后选择成为新的神灵。 |
+| 雷克（将源力释放到世界） | 雷克留在他的豪宅并繁荣起来。 | 让雷克活下去。选择将源力释放给所有瑞威隆人。 |
+| 雷克（封印面纱） | 雷克在他豪宅里消沉，渐渐消失。 | 让雷克活下去。选择放弃你的源力。 |
+| 雷克（与医生一起升为神） | 雷克成为恶魔最喜欢的将军之一。 | 让雷克活下去。与医生达成协议并在最终战斗中遵守。 |</p>
+<h3>Divinity 原罪2 所有地区结局</h3>
+<h3>DOS 2 喜悦堡结局</h3>
+<p>| 结局 | 描述 |
+|---|---|
+| 喜悦堡（升为神） | 喜悦堡成为源力使用者的天堂和流放之地。 |
+| 喜悦堡（与医生一起升为神） | ??? |
+| 喜悦堡（将源力释放到世界） | 喜悦堡成为一个度假胜地。 |
+| 喜悦堡（封印面纱） | 喜悦堡成为一个度假胜地。 |</p>
+<h3>DOS 2 收割者海岸结局</h3>
+<p>| 结局 | 描述 |
+|---|---|
+| 收割者海岸（升为神） | 海岸挣扎求生，黑坑着火，漂流木被虚空摧毁（这结束了饥荒）。 |
+| 收割者海岸（与医生一起升为神） | ??? |
+| 收割者海岸（将源力释放到世界） | 海岸繁荣，农民获得丰收，血岛变得肥沃，漂流木变成了工业、贸易和运输中心。 |
+| 收割者海岸（封印面纱） | 海岸繁荣，农民获得丰收，血岛变得肥沃，漂流木变成了工业、贸易和运输中心。 |</p>
+<h3>DOS 2 阿克斯结局</h3>
+<p>| 结局 | 描述 |
+|---|---|
+| 阿克斯（升为神） | 阿克斯仍然是神圣联盟的权力中心。 |
+| 阿克斯（与医生一起升为神） | 阿克斯仍然是神圣联盟的权力中心，但很快成为恶魔袭击的焦点。 |
+| 阿克斯（将源力释放到世界） | 阿克斯衰落并空虚。 |
+| 阿克斯（封印面纱） | 阿克斯仍然是卢西安统治下的神圣联盟的权力中心，并成为一个大都市。 |</p>
+<p>以下是一些玩家评论的翻译和整理：</p>
+<p><strong>玩家评论总结：</strong></p>
+<p>游戏很棒，世界引人入胜，但故事情节漏洞百出。一些玩家抱怨结局，是因为没有注意到游戏过程中的一些糟糕情节。神选者的命运似乎过于预料之中，而卢西安战胜众神的方式显得过于牵强。游戏对神明的刻画不够深入，结局与玩家在游戏中的选择关联性不强，令人失望。  许多玩家对结局的不满集中在主角获得神力后依然无法有效控制虚空，以及精灵的死亡削弱神力等设定上的不合理之处。 尽管如此，游戏仍然十分优秀，但故事主线有待改进。</p>
+        <small class="page-url url "><a href="https://divinityoriginalsin2.wiki.fextralife.com/Endings" target="_blank">(https://divinityoriginalsin2.wiki.fextralife.com/Endings)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Divinity:-Original-Sin-2-walkthrough:-How-to-get-out-of-Fort-Joy-|-PC-Gamer">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🔓&nbsp;</span>Divinity: Original Sin 2 walkthrough: How to get out of Fort Joy | PC Gamer</h3>
+        <small class="page-url url "><a href="https://www.pcgamer.com/divinity-original-sin-2-fort-joy-walkthrough/" target="_blank">(https://www.pcgamer.com/divinity-original-sin-2-fort-joy-walkthrough/)</a><br></small>
+        <small class="page-rating rating ">评分: 9.0<br></small>
+        <small class="page-annotation annotation ">注释: 给出了多种关于逃离Fort Joy的方法与细节。<br></small>
+    </div>
+    <div class="page-content content"><h2>进入法尔乔监狱营地的方法</h2>
+<p><strong>法师的钥匙</strong></p>
+<p>法师雅洛的父亲失踪了，如果你能将他们父子团聚，你将获得雅洛的要塞钥匙。你可以和位于要塞北墙的雅洛对话开始任务，或者在东南海滩找到她的父亲米戈。米戈神志不清，发现你后很可能会攻击你。避免战斗的唯一方法是在与他交谈时持有雅洛之花。幸运的是，雅洛之花遍布全岛（它们是紫色的，我们在那个带着棺材的人附近找到了一朵）。给他一朵花来提醒他他的雅洛女孩，他就会给你他的戒指。将戒指交给雅洛作为她父亲还活着的证据，跟随她参加家庭团聚，她会给你一把钥匙，帮助你在变成和她父亲一样悲惨的景象之前逃脱。唯一的问题是，这把钥匙打开的是要塞主大门南边的一条走道上的门，梯子被支起来够不着。要使用法师的钥匙，你需要用传送手套传送到走道上。</p>
+<p><strong>威瑟莫尔勋爵</strong></p>
+<p>在南滩的奇怪洞穴里，有一小群精灵在格里夫和他的恶霸的追赶下躲藏起来。如果你和躲猫猫的孩子们说话，他们可以透露一条隐藏通道。如果你的智力足够高，你也可以在不需要他们的帮助下自己发现它。你需要一把铲子，你可以在法尔乔贫民窟入口（你从海滩第一次走近的地方）外找到一把，在一个废墟墙上，那里还有一床睡袋。顺着通道往下走，你会遇到一个名叫威瑟莫尔勋爵的长生不死的骷髅。如果你同意为他完成法尔乔地牢底部的任务，他会透露一条进入地牢的隐藏路线。营地入口处的航点雕像上有一个开关，可以显示另一个隐蔽的门。如果你爬进去，你会发现另一个航点和通往地牢的入口。一道锁着的门挡住了你的去路，但如果你仔细看，附近有一个可以打开它的杠杆。</p>
+<p>从那里，你会发现楼上有一扇锁着的门。你必须开锁，或者战斗。请注意，钥匙不会从法师身上掉落——它放在你与他们战斗的凳子上。</p>
+<h2>获取传送手套</h2>
+<p>一个名叫加温的精明的男人在西北墙附近闲逛，他会告诉你他有一张传送卷轴可以帮助你离开岛屿。他需要一个也拥有传送能力的同伙。如果你想加入，你必须找到传送手套。别担心，加温告诉你，它们就在一只暴怒的鳄鱼的肚子里。你可以在你第一次遇到野兽的那艘船北边的海滩上找到它们。小心，那些鳄鱼也拥有传送技能。为什么不呢，对吧？一旦你从它们冰冷的、死去的嘴里撬出传送手套，你就可以去帮助加温完成他在要塞北侧墙外的计划了。他声称你们只有一人可以同行，但这并不完全正确。加温一旦把你送到对面的山脊，就会背叛你，把你抛在尘埃中。无论如何，带上那些手套，让你的队伍跟在他后面。你们仍然彼此足够接近，可以把手套送到对面队友的背包里。传送你队伍中最后一位可怜的成员，然后出发。这条路将带你到码头。如果你独自一人，无法跟随加温，你可以把山脊上的箱子砸碎，然后掉进洞里到达海滩。之后，对面山脊下面的一个洞穴将把你带到法尔乔地牢。</p>
+<p><strong>释放艾米罗</strong></p>
+<p>营地里的老大格里夫把一个名叫艾米罗的精灵关在厨房里。如果你释放艾米罗，他将会告诉你一条进入要塞的秘密通道。要释放他，你需要向格里夫证明这个精灵不是偷走一批橙子的人。真正的罪魁祸首是毒尾，在西南海滩。小心接近他，因为你可能会意外地破坏两个同伴的任务。红王子需要和毒尾说话，塞比尔需要杀死他。让他们两个按顺序，分别去做他们的事。别担心毒尾最终会死。你可以从附近的箱子里拿到橙子，然后交给格里夫，以此换取艾米罗的自由。艾米罗指引你的道路最终将带你进入地牢，中间有一些插曲，我拒绝剧透。我想说的是，你想带一个有宠物伙伴特权的角色，或者确保拥抱东侧的墙壁，寻找藤蔓攀爬，以安全地穿过通道。</p>
+<p><strong>法尔乔竞技场</strong></p>
+<p>厨房下面的斗技场是另一场艰难的战斗。如果你计划参加这场战斗，我建议你先开始其他任务以获得经验。不仅如此，如果你选择在竞技场中赢得胜利，你的奖励将是你的项圈被取下，法师会立即把你扔进地牢。这将迫使你通过与地牢中的敌人战斗来逃离要塞，所以先完成你感兴趣的其他事情。</p>
+<h2>逃离法尔乔监狱营地的方法</h2>
+<p>如果你选择了一条通往地牢的入口路线，准备战斗逃脱。当你这样做的时候，你将从通往要塞主楼的楼梯离开。否则，你将发现自己身处要塞的主要楼层或二楼，并拥有以下所有逃生路线：</p>
+<p><strong>吊桥</strong></p>
+<p>要塞后面的吊桥可以用附近的杠杆放下。要到达那里，你可能必须与北侧墙上的几个法师作战。你可以通过走上要塞庭院内的外部楼梯到达这个区域，或者进入二楼，然后走到帕拉丁科克已经在与他们对抗的北门。或者，你可以偷偷溜出同一个房间的后门，偷偷放下吊桥，然后迅速离开。</p>
+<p><strong>坏掉的梯子</strong></p>
+<p>在二楼，在高级法官奥里万德正在训斥某个可怜的囚犯的忏悔大厅东边，有一个小的圆形房间，看起来像一个瞭望塔。有一些桶挡住了你通往木制走道的出口。只需把桶移开，你就可以自由了。在平台的尽头是一个坏了的梯子。你会重重地摔倒，但这在逃生尝试中不算太糟糕。</p>
+<p><strong>码头</strong></p>
+<p>如果你费尽心思地将你的队伍传送到加温如此不经意地抛弃你的悬崖，码头将是你的逃生路线。当你到达时，加温正在码头上受到法师的报应。你可以自己消灭这群人然后离开，或者偷偷溜走。你可以在主要码头区域后面偷偷摸摸，然后一个接一个地将你的队伍传送到下面的海滩上。这需要时间，但对像我这样的胆小鬼来说是值得的。</p>
+<p><strong>韩船夫</strong></p>
+<p>如果你上了要塞的二楼走道，但没有法师的钥匙，你可以在偷偷摸摸地爬下庭院里的梯子，然后进入要塞正门。方便的是，那些门没有锁。进去后，立即向右走，与骚扰一个名叫韩的年轻男孩的两个法师对抗。这孩子被派来营救另一个人，如果你探索了地牢，你可以告诉他那个人不会来了。在消灭了法师之后，韩会帮助你乘船逃跑。</p>
+<p><strong>下水道井盖</strong></p>
+<p>在要塞的主楼层还有一个酷刑室。不要去韩在等待的码头，向左走然后往回走。如果你真的想的话，你可以与弗莱泽的奈尔斯战斗，但要注意，在别处是顺从的静默僧侣会加入他。相反，你可以偷偷溜过他房间的左边，然后走出通往污水排水管的开着的门。自由了！</p>
+        <small class="page-url url "><a href="https://www.pcgamer.com/divinity-original-sin-2-fort-joy-walkthrough/" target="_blank">(https://www.pcgamer.com/divinity-original-sin-2-fort-joy-walkthrough/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Favorite-Character+Romance?---Larian-Studios-forums">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">⚖&nbsp;</span>Favorite Character+Romance? - Larian Studios forums</h3>
+        <small class="page-url url "><a href="https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=629120" target="_blank">(https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=629120)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 描述了游戏结局的多样性和玩家选择的重要性。<br></small>
+    </div>
+    <div class="page-content content"><h2>OP omegazen journeyman O</h2>
+<p>加入时间：2017年9月</p>
+<p>我的队伍成员有：伊凡、王子和塞比尔。费恩、洛丝和野兽对我来说完全没有吸引力。</p>
+<ul>
+<li>
+<p>伊凡是典型的酷哥，直接参与了卢西安的事件，并寻求救赎和复仇。总的来说是个好人。不过，当我在一些浪漫对话中时，我完全拒绝了他，我说：“我不是那个意思”，伊凡则说：“哦，是的，完全是。”哈哈，对不起，伊凡，你就像我角色的兄弟。兄弟，你被发好人卡了。</p>
+</li>
+<li>
+<p>王子是个混蛋，但他的背景故事后来提供了一些有趣的看点，我原以为会很糟糕，但出乎意料地对他有了好感。</p>
+</li>
+<li>
+<p>塞比尔是我最喜欢的角色，无论从性格还是背景故事来看。在我看来，她比其他人有趣得多。我可能会因为偏见而选择与我的女性人类角色和她发展浪漫关系，当我得到选择时，我忍不住笑了，我主动亲吻了她。塞比尔绝对是个辣妹。她的背景故事很棒，她被卷入了整个神圣事件中，但她真正想要的只是自由并向她的主人复仇。而且，她在与精灵相关的次要背景故事中还有更深层次的内容，这让她更酷。她的性格非常霸气。她是不信任类型，需要一段时间才能对她产生好感，但之后她就像最好的朋友。而且，她在我的团队中造成了最大的伤害。（5次攻击背刺，全部消灭）唯一让我恼火的是她在主屏幕上的形象，让她看起来很奇怪，根本不像游戏中的样子。</p>
+</li>
+</ul>
+        <small class="page-url url "><a href="https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=629120" target="_blank">(https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=629120)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Escape-from-Fort-Joy-|-Divinity-Original-Sin-2-Wiki">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🚪&nbsp;</span>Escape from Fort Joy | Divinity Original Sin 2 Wiki</h3>
+        <small class="page-url url "><a href="https://divinityoriginalsin2.wiki.fextralife.com/Escape+from+Fort+Joy" target="_blank">(https://divinityoriginalsin2.wiki.fextralife.com/Escape+from+Fort+Joy)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 概述了进入Fort Joy监狱与逃脱的主要方法和策略。<br></small>
+    </div>
+    <div class="page-content content"><h2>逃离欢乐堡的几种方法</h2>
+<p>直接杀死门口的四个法师，拿到钥匙，进入要塞，然后杀出一条血路。</p>
+<p>进入要塞后，如果选择向北走，可以在港口附近遇到一位也在与法师战斗的圣骑士。你将发现自己身处海岸的另一边。</p>
+<p>可以通过以下几种方法进入监狱：让法师发现你（移除你的项圈）被抓（欢乐堡竞技场）；通过古老的隧道（完成“被囚禁的精灵”任务后即可得知位置）；或者通过任务“威瑟姆尔的灵魂瓶”（找到隧道不需要此任务）。</p>
+<p>你也可以使用任务“传送者”获得的传送手套，将你的一个队员传送到欢乐堡的第二层（四个法师把守的大门以南）。放下梯子，偷偷潜入要塞。然后你可以前往地下一层到达监狱。在那里你可以找到一个叫做“弗莱泽·克奈尔斯”的敌人。杀死他并使用他身上的钥匙打开通往污水道的门。你可以通过这个下水道逃离欢乐堡。</p>
+<p>或者，如果你身上带着阿图萨的腿，你可以把它交给克奈尔斯。之后他会无视你，避免战斗。之后管道前方的道路就打开了。</p>
+<p>你也可以传送到你第一次找到费恩的地方附近。海滩上（宝箱下面，你可以把自己传送到宝箱那里）有一个通往欢乐堡地牢层的入口。</p>
+<p>如果你难以对付克奈尔斯，并且你身处监狱，你可以爬上通往要塞地面的楼梯。注意：在相邻的大房间里，高级法官奥里万和四个法师正在对一个魔法师进行仪式。你可以沿着上层楼的侧面潜行，到达后面的破墙，从那里可以爬下梯子获得自由。你也可以与法师战斗，但他们可能会构成挑战。</p>
+<p>在监狱里的“弗莱泽的游乐场”附近，你还可以找到两个威胁一个孩子的法师，击败他们就可以乘船逃脱。你可以选择与这些法师战斗，或者如果你救了德洛鲁斯，你可以避免与他们战斗。说佐尔夫人派你来的，但不要提到德洛鲁斯。</p>
+<h2>提示与技巧</h2>
+<p>与每个人交谈。在大多数情况下，这是推进故事的唯一方法。</p>
+<p>达利斯房间里有一封信，在欢乐堡贫民窟梯子附近的锁门后面（你需要传送手套才能拿到它），信中会告诉你关于寻求者（一个帮助人们逃离欢乐堡的组织）的信息。</p>
+        <small class="page-url url "><a href="https://divinityoriginalsin2.wiki.fextralife.com/Escape+from+Fort+Joy" target="_blank">(https://divinityoriginalsin2.wiki.fextralife.com/Escape+from+Fort+Joy)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="The-Impact-of-Choices-in-Divinity:-Original-Sin-2:-A-Deep-Dive-into-the-Story---Hyper3D">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📖&nbsp;</span>The Impact of Choices in Divinity: Original Sin 2: A Deep Dive into the Story - Hyper3D</h3>
+        <small class="page-url url "><a href="https://hyper3d.ai/collections/the-impact-of-choices-in-divinity-original-sin-2-a-deep-dive-into-the-story/" target="_blank">(https://hyper3d.ai/collections/the-impact-of-choices-in-divinity-original-sin-2-a-deep-dive-into-the-story/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 探讨了选择在《神界：原罪2》中对剧情与角色命运的深远影响。<br></small>
+    </div>
+    <div class="page-content content"><h2>神界：原罪 2：抉择的力量</h2>
+<p>由Larian Studios开发的《神界：原罪 2》不仅仅是一款游戏；它还是讲故事和玩家自主性的典范。游戏设定在丰富的里维隆世界中，玩家将沉浸在一个充满意义选择的叙事中。这篇博文将探讨玩家做出的决定如何影响游戏的故事、角色发展和整体体验，并深入探讨这些选择中交织的伦理考量。</p>
+<h3>玩家自主性的力量</h3>
+<p>《神界：原罪 2》最引人入胜的方面之一就是玩家自主性的力量。从一开始，玩家就面临着可能彻底改变故事进程的选择。例如，选择角色的种族和背景不仅会影响他们的能力，还会影响其他角色对他们的看法。</p>
+<h4>现实世界例子</h4>
+<p>以不死永生者费恩为例。他独特的视角使玩家能够探索死亡和身份认同的主题。玩家在引导他的故事线时做出的选择可能会导致截然不同的结果，反映了现实世界中关于接纳和偏见的伦理困境。</p>
+<h2>伦理困境与道德</h2>
+<p>随着玩家在游戏中不断进步，他们会遇到挑战其信仰和价值观的道德难题。例如，是站在暴君一边还是帮助反抗军，迫使玩家仔细权衡自己的选择。</p>
+<h3>对伦理考量的洞察</h3>
+<p>游戏的这一方面反映了现实生活中的场景，在这些场景中，个人必须在个人利益和更大的利益之间做出选择。例如，玩家可能会为了权力或财富而背叛信任的盟友，从而引发关于忠诚和道德的问题。这种动态鼓励玩家反思自己的伦理框架，使游戏体验不仅引人入胜，而且发人深省。</p>
+<h2>通过选择进行角色发展</h2>
+<p>《神界：原罪 2》擅长角色发展，玩家的选择会显著影响队员之间的关系。游戏的情节充满了对话选项，这些选项可以加强或削弱角色之间的联系。</p>
+<h3>角色互动的例子</h3>
+<p>一个关键时刻发生在玩家必须决定是支持一个角色的复仇愿望还是主张宽恕的时候。这个选择不仅会影响眼前的故事情节，还会影响派系内部的长期关系，导致不同的结局，这取决于玩家如何驾驭这些人际关系。</p>
+<h2>选择的连锁反应</h2>
+<p>游戏的设定强调了选择的连锁反应，看似微小的决定可能会导致以后产生巨大的后果。这种机制增强了游戏的可重复性，因为玩家可能希望探索替代路径和结果。</p>
+<h3>游戏中的后果</h3>
+<p>例如，在关键时刻选择饶恕生命可能会在未来的战斗中带来意想不到的盟友，甚至解锁新的任务。这种错综复杂的原因和结果网络反映了现实世界决策的复杂性，其中一个选择可能会改变事件的轨迹，使其变得更好或更糟。</p>
+<h2>展望未来：选择驱动型叙事的未来</h2>
+<p>随着游戏产业的发展，选择驱动型叙事的重要性日益增长。《神界：原罪 2》为未来的角色扮演游戏树立了高标准，展示了玩家的决定如何增强故事性和参与度。</p>
+<h3>总结</h3>
+<p>总而言之，《神界：原罪 2》中选择的影响是深远的，它不仅塑造了游戏的情节，也塑造了玩家面临的伦理考量。当玩家在里维隆丰富的篇章中穿梭时，他们会被提醒自己决定的分量——无论是在游戏中还是在现实生活中。这款游戏不仅仅是关于幻想；它也是通过选择的视角来理解人类经验。</p>
+        <small class="page-url url "><a href="https://hyper3d.ai/collections/the-impact-of-choices-in-divinity-original-sin-2-a-deep-dive-into-the-story/" target="_blank">(https://hyper3d.ai/collections/the-impact-of-choices-in-divinity-original-sin-2-a-deep-dive-into-the-story/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Divinity-Original-Sin-2:-The-Worst-Choices-You-Can-Make-In-The-Game">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💕&nbsp;</span>Divinity Original Sin 2: The Worst Choices You Can Make In The Game</h3>
+        <small class="page-url url "><a href="https://gamerant.com/divinity-original-sin-2-worst-choices-game/" target="_blank">(https://gamerant.com/divinity-original-sin-2-worst-choices-game/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 探讨游戏中角色关系和情感的复杂性。<br></small>
+    </div>
+    <div class="page-content content"><h2>15. 无意义的浪漫</h2>
+<p>Divinity: Original Sin 2 的文字很少出现错误，角色之间自然互动，形成可以经受时间考验的伟大纽带。然而，并非游戏中所有角色都可以发展浪漫关系……但如果玩家希望在游戏最后一章之前共度激情之夜，仍然有很多选择。</p>
+<p>此时，玩家应该选择与之建立了浪漫关系的人，而不是其他人，因为这种放荡的相遇最终会相当空洞。像野兽和红王子这样的角色可能很有趣，但他们远非玩家可以共度这个亲密之夜的最佳伴侣。</p>
+<h2>2. 为了拯救洛丝而犯下种族灭绝</h2>
+<p>这个选择可能是整个游戏中最难做出的选择。粉丝们会知道，洛丝是一位粗俗的吟游诗人，被鬼魂和一个伪装成医生的特别邪恶的阿奇恶魔所困扰。他们可能还记得，为了帮助洛丝和团队打败他，玛拉迪给了他们一个可怕的选择。</p>
+<p>她把团队带到虚空，恶魔在那里控制着所有被他夺取生命的灵魂。那里有数百万支蜡烛，每一支都代表一个灵魂。为了削弱他，玛拉迪告诉洛丝熄灭蜡烛，消灭它们所代表的灵魂。为了拯救洛丝而杀死数百万人，挑战一个无所不能的生物，还是让洛丝永远受制于邪恶的恶魔领主？这是一个多么艰难的选择。</p>
+        <small class="page-url url "><a href="https://gamerant.com/divinity-original-sin-2-worst-choices-game/" target="_blank">(https://gamerant.com/divinity-original-sin-2-worst-choices-game/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Divinity:-Original-Sin-II---Wikipedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🌍&nbsp;</span>Divinity: Original Sin II - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Divinity:_Original_Sin_II" target="_blank">(https://en.wikipedia.org/wiki/Divinity:_Original_Sin_II)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 介绍了《神界：原罪2》的背景设定与剧情主线。<br></small>
+    </div>
+    <div class="page-content content"><h2>背景设定</h2>
+<p>如同系列中的其他游戏一样，《神界：原罪 2》的背景设定在中古世纪奇幻世界里维隆，故事发生在《神界：原罪》几百年之后。故事开始于卢西安去世数年之后，卢西安是一位拥有无与伦比的力量的人类，被里维隆人民尊为“神选者”，“七神”（里维隆主要宗教的神）的选民。里维隆目前正遭受虚空生物的困扰，这些神秘起源的怪兽攻击所有其他生物，而它们的威胁在卢西安去世后大大增加。</p>
+<p>在里维隆的人民中，源力者是天生具有操纵一种被称为源力的能量天赋的个体，他们可以用它来施放强大的法术；然而，使用源力会吸引虚空生物，导致源力者受到恐惧和憎恨。因此，由卢西安创建的神圣教派将其中的一个派系——法师——专门用来抓捕或杀死所有源力者；被捕获的源力者被送往欢乐堡，这是位于死神之眼岛上的一个监狱城镇，该岛屿以前由已故的“源力之王”兼里维隆前暴君统治者布拉库斯·雷克斯居住。法师由卢西安的儿子亚历山大主教领导，他自称是新的神选者，以及他的顾问达利斯。</p>
+<p>玩家角色是一个源力者，可以由玩家从头创建，也可以是六个预设角色之一，所有这些角色也可以作为玩家角色队伍的一部分被招募：野兽，一个一心结束其表姐矮人女王贾斯蒂娜统治的男性矮人；范恩，一个男性，是早已被遗忘的不死种族最后的成员，他被囚禁了无数个纪元，现在试图找出他的同族发生了什么；伊凡·本·梅兹德，一个男性人类，是卢西安的前朋友和神圣教派的前成员，现在是名为“孤狼”的雇佣兵团的一员；洛丝，一个女性人类，正在寻求从体内一个每天都获得更多控制权的神秘而强大的恶魔手中获得自由；红王子，一个男性蜥蜴人，原本注定要成为他的人民中的领导者，但由于与恶魔交易而被放逐，现在旨在恢复他的皇室地位；塞比尔，一个女性精灵和前奴隶，正在寻找向其前蜥蜴主人复仇。</p>
+<h2>故事情节</h2>
+<p>玩家角色，一个源力者，被神圣教派俘获并被送往岛上监狱欢乐堡。这艘船遭到一只巨大的克拉肯虚空生物的袭击并沉没；然而，玩家角色被一股神秘的力量救了上来，这股力量的声音称他们为“神选者”。在欢乐堡，神选者目睹了由亚历山大和达利斯领导的法官的残酷统治，他们经常“清除”囚犯的源力，将他们变成他们用作战斗力量的没有意识的躯壳。</p>
+<p>逃离欢乐堡后，神选者遇到了搜寻者，这是一个寻找有潜力成为新神选者的源力者的组织。神选者还访问了回声大厅，在那里他们遇到了七神之一。这位神明，也就是之前救了神选者的神明，解释说，隔开里维隆和虚空的魔法屏障——面纱——正在削弱，并允许虚空生物进入里维隆，消耗七神的源力。神明敦促神选者发挥他们的潜力，升为神明，并在虚空杀死七神之前阻止它。</p>
+<p>在搜寻者和半恶魔玛拉迪的帮助下，神选者在击败亚历山大并偷走他的有知觉的飞船——复仇女神号之后，逃离了死神之眼。复仇女神号遭到达利斯及其得力助手弗雷德曼的袭击；大部分搜寻者都被杀死了，但由于玛拉迪的帮助，飞船成功地逃脱了。</p>
+<p>神选者航行到死神海岸岛，在那里他们解开了他们的源力。他们的神后来将神选者引向提升之井，在那里他们可以吸收足够的源力来成为神明。他们还了解到，达利斯挖掘了永恒物，这是一件能够从里维隆清除所有源力的神器。神选者遇到永恒，一个自称是不死种族永恒族成员的生物，他们是里维隆的原始居民。神选者了解到，七神实际上是渴望权力的永恒族，他们背叛了其余的同族，将他们放逐到虚空。然后，七神创造了里维隆的凡人种族，并伪装成神明来维持他们自己的权力，从凡人那里汲取源力。</p>
+<p>神选者到达无名岛，提升之井就位于那里。在那里，他们了解到虚空生物就是那些被放逐到虚空的永恒族，而虚空之王，也是虚空生物的领导者，就是永恒族的旧王。虚空之王和虚空生物打算返回里维隆，并将其夺回。在与亚历山大的最后一次遭遇之后，神选者到达了井边，但在他们成为神明之前，达利斯出现并用永恒物摧毁了井。神选者的失败激怒了他们的神，他们的神变得愤怒而攻击他们；神选者在战斗中击败了他们，杀死了所有七神。</p>
+<p>神选者前往阿克斯城，该城已被虚空生物围攻。他们追踪达利斯和弗雷德曼到卢西安的坟墓，在那里他们发现卢西安还活着，他透露他伪造了自己的死亡，并且是他，而不是虚空，一直在从七神那里汲取源力。卢西安打算从里维隆清除所有源力，并用它来永久性地封闭面纱，永远地将虚空生物挡在外面，代价是世界上所有的源力。达利斯，秘密地是一个永恒族，一直在亚历山大的背后在弗雷德曼的帮助下帮助卢西安，弗雷德曼实际上是被达利斯变成不情愿奴隶的复活的布拉库斯·雷克斯。</p>
+<p>布拉库斯·雷克斯摆脱了达利斯的控制，并召唤克拉肯攻击神选者、卢西安和达利斯。在击败他们之后，玩家将面临四个最终选择：成为新的神明和里维隆最强大的存在；实现卢西安的愿望，从里维隆清除所有源力，以永远封印虚空生物；释放源力和神性的力量给世界，让里维隆的所有生物都成为神明；或者允许虚空之王返回里维隆，恢复永恒族的统治。</p>
+<h2>《神界：堕落英雄》</h2>
+<p>一款名为《神界：堕落英雄》的衍生续作于2019年3月通过预告片公布，由Larian Studios和Logic Artists联合开发。虽然该游戏将使用与《原罪II》相同的引擎，并且允许玩家影响故事，但由于它更侧重于战斗而不是探索、RPG元素和与NPC的互动，所以它被认为是一款衍生作品，它提供了一种更短的游戏体验，战斗在玩家回合和敌人回合之间交替进行，在此期间，该方的所有成员都可以执行他们的行动（而不是《原罪II》中的个人主动性机制），然后切换到另一个团队的回合。其他新的游戏玩法新增内容将包括六个角色的队伍（比《神界II》的四个角色限制多），枪支和火药作为武器，以及一种名为硫磺的新元素；将提供两人合作游戏，两个玩家都控制三个角色。</p>
+<p>《堕落英雄》设定在上一款游戏结束两年后，延续了《原罪II》中神选者从里维隆清除所有源力的结局。它将有八个主要可玩主角，包括野兽、范恩、伊凡、洛丝、红王子（现名为红皇帝）、塞比尔和玛拉迪。故事将跟随这些角色在一个现在没有源力的世界中，除了玩家的队伍，这是因为玛拉迪保护了复仇女神号免受源力清除；这些角色将领导对抗无血者的战斗，无血者是一种正在摧毁里维隆的不死力量，同时在复仇女神号上旅行。</p>
+<p>最初计划于2019年11月在多个平台上发布，但在宣布发布前一个月，即10月15日，它被无限期搁置，Larian Studios声称该游戏需要“比现在可用的更多开发时间和资源才能实现”。多年没有后续消息后，Larian Studios创始人兼《神界》总监Swen Vincke在2023年7月14日接受GamesRadar+采访时证实，《堕落英雄》已被取消，并表示“那没有成功……它永远消失了”。</p>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Divinity:_Original_Sin_II" target="_blank">(https://en.wikipedia.org/wiki/Divinity:_Original_Sin_II)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Characters-in-Divinity:-Original-Sin-II---TV-Tropes">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🤝&nbsp;</span>Characters in Divinity: Original Sin II - TV Tropes</h3>
+        <small class="page-url url "><a href="https://tvtropes.org/pmwiki/pmwiki.php/Characters/DivinityOriginalSinII" target="_blank">(https://tvtropes.org/pmwiki/pmwiki.php/Characters/DivinityOriginalSinII)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 强调了角色和剧情间的互动关系与发展。<br></small>
+    </div>
+    <div class="page-content content"><h2>玩家角色</h2>
+<p>你可以创建一个自定义角色，或者选择六个起源角色中的一个作为你的化身。你没有选择的起源角色可以招募为同伴。最多可以有三个其他人加入你的队伍。</p>
+<ul>
+<li><strong>起死回生:</strong>  将死灵法提升到更高等级的角色。</li>
+<li><strong>反英雄团队:</strong>  他们都是相当有缺陷的个体，为了实现他们不可否认的自私目标，他们愿意做一些非常糟糕的事情，而且大多数人甚至都是不折不扣的罪犯。但当对抗虚空生物时，他们最终成为世界上最好的希望。</li>
+<li><strong>穿甲攻击:</strong>  专注于恶棍或猎手技能树的角色可以获得这些技能，某些武器可以穿透护甲。</li>
+<li><strong>任意人数限制:</strong>  某种程度上是合理的，因为如果一群重武装的囚犯一起旅行，魔法师可能会起疑。</li>
+<li><strong>死而复生:</strong> 你没有招募的任何起源角色将在第一幕结束时被达利斯杀死。然后他们将在无名岛屿上作为boss角色回归。更传统的是，玩家控制的角色和潜在的所有其他同伴在教程结束时溺水身亡，但被神复活。这包括在与虚空生物的第一次战斗中被杀死的那些人（甚至是被玩家角色自己杀死的那些人）。</li>
+<li><strong>邪恶力量，邪恶之人:</strong>  施加诅咒和源力魔法通常不是一件好事，你可以扮演极其邪恶的角色。</li>
+<li><strong>邪恶力量，善良之人:</strong> 你可以施加源力魔法和诅咒，但仍然是一个好人。</li>
+<li><strong>黑魔法师:</strong>  神性的无职业系统使得有可能以这种方式扮演每一个角色。</li>
+<li><strong>血魔法:</strong>  投资死灵法可以让你获得与血魔法相关的技能。</li>
+<li><strong>食人超能力:</strong>  精灵和亡灵角色。</li>
+<li><strong>角色定制:</strong>  即使你选择了一个起源角色，你仍然可以编辑他们的外观。当你完成第一幕后，你将获得重置整个队伍的能力，包括他们的外观，但有一些限制（例如，你不能让红王子不红）。游戏拥有一个无职业系统，这让你有很大的自由度来构建你的整个队伍，让你的队伍感觉你喜欢的样子。</li>
+<li><strong>游戏性和剧情整合:</strong> 你可以改变所有玩家角色的外观，但你不能改变红王子的肤色，因为他的红色鳞片是一个情节点。此外，你无法让野兽刮干净胡子，也无法给他设计一个没有胡子的面部毛发造型，因为他的胡子在对话中被多次提及，并且是他宇宙中形象的重要组成部分。甚至有人为他写了一首海歌！</li>
+<li><strong>游戏性和剧情分离:</strong>  尽管有上述情况，你可以为塞比尔选择任何面部模型……即使是她默认拥有的那个面部模型才是唯一一个拥有她主人用来控制她的活体伤疤的面部模型，而这伤疤是她整个个人任务的关键。</li>
+<li><strong>万人迷:</strong> 如果你不是扮演一个十足的恶棍，那么与起源角色发展恋情是惊人的容易。即使你与他们所有的互动都是柏拉图式的，在第三幕结束时，如果他们的好感度达到100，你也可以与他们中的任何一个发生性关系。</li>
+<li><strong>天选之人:</strong> 所有玩家角色和同伴都是神选者，有潜力成为新的神。更具体地说，他们是他们各自种族神所选择的冠军。</li>
+<li><strong>黑暗艺术:</strong> 源力魔法和死灵法。</li>
+<li><strong>死板讽刺者:</strong> 可以扮演成一个。</li>
+<li><strong>功能失调的结合:</strong> 他们都被搞得一团糟，只有他们成为神这一共同目标将他们团结在一起。<ul>
+<li>红王子有一种真正令人讨厌的优越感，他用这种优越感来弥补他的自卑感和缺乏人际关系。</li>
+<li>洛斯体内有一个可怕的恶魔试图控制她，否定她对喜剧和音乐的热情，这导致她很难信任别人，并且愿意做出巨大的牺牲来重获自由。</li>
+<li>野兽是一个友好的家伙，但他对自己有点太苛刻了，并且由于他在迷雾岛上的流放经历而遭受某种程度的发育迟滞。</li>
+<li>塞比尔完全疯了，因为她作为奴隶的经历非常可怕，在此期间她被迫杀死了她种族中许多重要的人，为的是一个想要将她的人民从地球上抹去的人。</li>
+<li>伊凡已经对他的道德准则非常松懈，并且是一个相当冷漠的家伙，因为他未能将精灵从神圣秩序的死亡雾中拯救出来而感到内疚。然后事实证明他被欺骗了，并通过交付一个他被告知可以拯救他们的装置来确保精灵森林的毁灭。</li>
+<li>费恩是一个心胸狭隘的学者，他瞧不起所有凡人种族，并且间接地对瑞维隆发生过的每一件坏事负责。</li>
+</ul>
+</li>
+<li><strong>元素打击:</strong>  他们一开始就拥有元素技能，或者可以在提升所需技能属性后学习这些技能，尽管如果你招募他们并让他们选择不同的职业，这些技能显然会发生变化。</li>
+<li><strong>人人皆双:</strong> 所有同伴都可以被玩家角色调情，无论性别如何，而且如果玩家扮演他们，他们都可以调情任何人，无论性别如何。</li>
+<li><strong>邪恶巫师:</strong> 可以扮演善良、邪恶或介于两者之间的角色，并且可以获得作为源力法师的黑暗艺术。</li>
+<li><strong>邪恶对抗邪恶:</strong> 邪恶角色仍然被迫与神圣秩序和虚空生物作战。</li>
+<li><strong>经验丰富主角:</strong> 在游戏开始时，他们都有一个相当传奇的过去和一些值得注意的事迹和冒险经历。</li>
+<li><strong>改邪归正:</strong> 你没有招募的任何角色不仅最终会死亡，而且他们会在无名岛屿的尽头作为亡灵回归，并为神王效力。</li>
+<li><strong>患难见真情:</strong>  即使是那些一开始就互相讨厌的队员（特别是塞比尔和红王子）最终也能在游戏结束时成为朋友，因为他们互相救了对方的命很多次，并且彼此了解了。</li>
+<li><strong>四人乐队:</strong> 你的队伍一次只能有四名成员，而那些你没有带去与达利斯战斗的成员将会在第一幕结束时的战斗中死去。然而，《堕落英雄》暗示该队伍原本是完整的六人组，因为他们在那个游戏中都还活着。</li>
+<li><strong>强制睡眠:</strong>  氯仿，一种专注于恶棍技能树的角色的技能。</li>
+<li><strong>儿童之友:</strong>  潜在地。在一个支线任务中，你了解到一个男孩试图游到欢乐堡去找他的父亲，结果被鲨鱼吃掉了。与其残酷地向他的朋友们说出孩子的命运，你不如撒谎，告诉他们他设法到达了欢乐堡的海岸。</li>
+<li><strong>万物之友:</strong> 可以以这种方式扮演。</li>
+<li><strong>劫后余生的性爱:</strong> 在第三幕紧张的高潮之后，如果你与起源角色的关系足够好，你可以和他们做爱。</li>
+<li><strong>善良力量，邪恶之人:</strong>  即使是最邪恶的玩家角色也仍然能够施放祝福。</li>
+<li><strong>隐身:</strong>  变色龙皮肤是那些专注于变形技能树的人的选择。</li>
+<li><strong>地狱之火:</strong> 源力使用者能够施放的一种潜在技能。</li>
+<li><strong>负面评价的英雄:</strong>  由于源力法师被指责为虚空生物袭击的罪魁祸首，主角们不断地逃离魔法师，并且必须隐藏他们的真实身份，即使他们是在执行神旨。</li>
+<li><strong>我爱死者:</strong>  如果你扮演费恩（一个亡灵角色）或与费恩发展恋情，那么这个说法就成立了，因为上述角色是亡灵，只不过是活动着的骨头而已。</li>
+<li><strong>迟来角色综合症:</strong>  起源角色避免了这种情况：首先，所有六个角色都可以在到达欢乐堡城墙之前（红王子和费恩）或之后不久（其余角色）被找到和招募；其次，无论是谁在达利斯试图在第一幕和第二幕之间登上海上复仇号时没有和你在一起，在该流程中都会永久失去，最终先死亡，然后被神王奴役。</li>
+<li><strong>主题音乐:</strong>  每个角色都有一个乐器，当他们在战斗中做一些重要的或令人印象深刻的事情时，这个乐器就会成为主导。特别是洛斯，每当她头脑中的恶魔在故事中开始行动时，她的主题曲就会播放。</li>
+<li><strong>可爱的恶棍:</strong>  带有“歹徒”标签的角色可以以这种方式扮演。</li>
+<li><strong>魔法强化:</strong></li>
+<li><strong>魔法是吸引怪物的磁石:</strong>  施放你的源力可能会召唤虚空生物。</li>
+<li><strong>魔法骑士:</strong>  任何角色都可以使用物理或魔法战斗，并且可以在任何方向上滑行，这取决于玩家的意愿。</li>
+<li><strong>军事法师:</strong>  一个带有士兵起源标签的角色，并使用魔法。</li>
+<li><strong>物理之神:</strong> 所有潜在的可玩角色都是神选者，他们必须与虚空生物战斗，这是一种即使是神也无法一起战胜的邪恶力量。</li>
+<li><strong>力量限制器:</strong> 你一开始带着一个源力项圈，它阻止你施放源力魔法。你在第一幕的目标之一是将其移除。</li>
+<li><strong>心灵能力:</strong>  专注于心灵感应民用技能或气系技能树的角色。</li>
+<li><strong>逆天改命:</strong>  即使其中一个神选者注定要成为新的神，你也可以最终没有神，方法是给每个人源力魔法，或者去除所有源力魔法。</li>
+<li><strong>第二春:</strong>  任何起源角色，包括自定义起源，都可以成为费恩的第二春，他是一个已婚男人，很久以前就失去了他的家人以及他的族人。</li>
+<li><strong>招牌动作:</strong> 每个起源角色都有一个独特的源力技能。所有自定义角色都拥有相同的源力技能：保护圆顶，它可以恢复物理护甲、魔法护甲，并增加区域内盟友的抗性。</li>
+<li><strong>通晓动物语言:</strong>  拥有宠物伙伴能力的角色可以与动物交谈，动物通常会提供各种各样的有用信息，有时还会给你一些你原本不知道的任务。</li>
+<li><strong>静态角色，可互换的角色:</strong>  他们中的每一个都可以是玩家角色或同伴角色。</li>
+<li><strong>超强基因:</strong>  你必须天生就拥有源力魔法才能使用它，所有可玩角色都是如此。</li>
+<li><strong>召唤魔法:</strong>  专注于死灵法或召唤术的角色可以获得这些技能。伊凡的源力技能是召唤一只狼。</li>
+<li><strong>强忍着合作:</strong>  他们大多数人一开始彼此都不怎么看得起（尤其是塞比尔和红王子）。这甚至延伸到他们的个人任务，因为他们中的许多人以各种方式相互冲突，例如一个角色需要杀死另一个角色需要保留下来的某人。</li>
+<li><strong>善良提升:</strong>  如果你选择那些更卑鄙的角色作为你的玩家角色，你可以用这种方式扮演他们。例如，红王子是一个毫不掩饰的奴隶主，他几乎抓住每一个机会告诉人们他是最好的，其他人应该对他顶礼膜拜。如果他是你的化身，你可以让他对其他人更加尊重，甚至对他种族奴隶制度的做法表示极大的悔恨和厌恶。</li>
+<li><strong>龙卷风移动:</strong>  几个技能树拥有这种类型的攻击。</li>
+<li><strong>反派主角:</strong>  带有反派标签的玩家角色仍然是世界阻止虚空生物的唯一机会。</li>
+<li><strong>自愿变形:</strong>  专注于变形技能树可以让你获得变形能力。</li>
+<li><strong>白魔法师:</strong>  角色可以以这种方式扮演。</li>
+<li><strong>狂野魔法:</strong>  召唤术技能树中的维度闪电。它会发射一个随机类型的闪电，并留下一个相应的表面。</li>
+<li><strong>囚室相遇:</strong>  你在前往欢乐堡的囚船上遇到了你所有潜在的队员。</li>
+<li><strong>你们都分享我的故事:</strong>  囚船上那些看似陌生的人实际上至少在两个层面上有着深刻的联系：<ul>
+<li>首先，所有六个人（如果你玩的是自定义角色，则是七个人）实际上都是神选者，是他们各自种族之神的化身，由他们选择以便升为神，更新他们的神灵的存在。</li>
+<li>一个值得注意的例外是洛斯，她实际上是被人类之神拉利克拒绝的，但却被神灵恶魔阿德拉马利克附身了。</li>
+<li>除此之外，每个人都被证明直接参与了围绕神灵的大型戏剧：红王子的爱人被神王迷住了，洛斯被一个对成为神有既得利益的恶魔附身，野兽是矮人女王的离群的表亲，正受到神王仆人的操纵，塞比尔是精灵的首要子嗣，他们认为她的崛起是恢复他们种族的一种方式，伊凡是卢西安的前副官，现在正在追杀他的儿子亚历山大的头，而费恩实际上是无意中煽动整个神灵事件的人。</li>
+</ul>
+</li>
+<li><strong>我的灵魂是我的！:</strong>  可以吞噬鬼魂的灵魂来为他们的源力提供能量。</li>
+<li><strong>屏障战士:</strong>  他们的特殊源力技能是一个保护性圆顶，可以提升所有元素抗性，并为区域内的盟友恢复护甲点。</li>
+<li><strong>天选之人:</strong>  与其他人一样，自定义起源是神选者，并且赢得了他们神的恩宠。矮人角色受到杜纳的青睐，蜥蜴受到佐尔-斯蒂萨的青睐，精灵受到提尔-森德利乌斯的青睐，人类受到拉利克的青睐。与此同时，亡灵角色受到阿玛迪亚的青睐。</li>
+<li><strong>角色定制:</strong>  你的角色的大多数方面都可以随意调整，从性别和种族到起始职业。你甚至可以扮演任何种族的亡灵。</li>
+<li><strong>骷髅:</strong>  如果扮演亡灵角色，他们是没有血肉的骷髅，尽管非蜥蜴人仍然可以有头发。</li>
+<li><strong>奇幻种族歧视:</strong>  像费恩一样，如果你扮演亡灵角色，你也会受到这种歧视，这意味着你必须一直蒙面，以免有人发现你的真实身份并攻击你。</li>
+<li><strong>经验丰富的主角:</strong>  无论背景如何，自定义起源都被暗示拥有丰富的经验，鉴于他们作为源力法师的名声和力量。带有士兵标签的角色最直接地扮演了这个角色，因为他们可以告诉伊凡他们曾在各自国家的军队服役。</li>
+<li><strong>从零到英雄:</strong>  大多数背景标签都暗示着卑微的出身，例如野蛮人、小丑或歹徒，但他们可以崛起成为新的神。</li>
+<li><strong>有史以来最伟大的故事从未被讲述:</strong>  弱化了。如果你扮演的是亡灵，并且拥有士兵标签，伊凡会质疑你是否服过役。亡灵选择会让你评论，你服过役，但在没有人记得的战斗中战斗过。</li>
+<li><strong>多种选择:</strong>  虽然他们没有详细说明他们的过去，但他们的种族和标签提供了无数的背景供你选择，甚至包括亡灵角色。</li>
+<li><strong>奇特的友谊:</strong>  与伊凡和红王子等不太道德的角色。如果你扮演的是非蜥蜴人，后者尤其值得注意，因为他瞧不起像人类这样的“低等种族”，同时又发现你是一个极好的伙伴。如果你扮演的是蜥蜴人，这也适用于塞比尔，因为她以前是蜥蜴人的奴隶，并且理所当然地鄙视他们。如果你与他们发展恋情，这可以直接升级为关系升级（尽管红王子永远会优先考虑萨达而不是你）。</li>
+<li><strong>唯一清醒的人:</strong>  与其他拥有黑暗和痛苦的过去以及需要处理的个人恶魔的起源角色相比，你的角色相当平淡，可能除了洛斯和野兽之外，唯一一个一开始就“道德良好”的角色。当然，除非你扮演的是反派主角。</li>
+<li><strong>七百岁高龄:</strong>  亡灵自定义起源暗示比大多数演员都年长，他们早期的对话选择之一提到他们参加过一场没有人记得的战争。</li>
+<li><strong>反派感兴趣:</strong>  虽然虚空生物对他们的待遇与对其他神选者（费恩除外）一样，他们将费恩视为叛徒，但仍然能够“救赎”，但神王却为亡灵自定义起源提供在其身边的位置，并试图诱惑他们为他效力。</li>
+</ul>
+<h2>红王子</h2>
+<p>配音：哈里·哈登-帕顿</p>
+<p>一个注定要成为古代帝国下一任皇帝的战争将军。然后他因与恶魔混杂而被逐出家园。</p>
+<p>他的起源故事可以在这里查看。</p>
+<ul>
+<li><strong>亚当和夏娃情节:</strong> 虽然蜥蜴人没有灭绝的危险，但他会产生一个新物种。红王子和萨达注定要带回蜥蜴人曾经是的那种伟大的红龙。</li>
+<li><strong>闪光而不实:</strong> 如果你遵循他的个人任务，他最终会得出这个结论。</li>
+<li>在他成为游戏结束时的皇帝时，他仍然承认他最终真正想要的是与他的爱人在一起，看着他的孩子飞翔。</li>
+</ul>
+<p>&gt; 红王子：我的一生都为了这一刻，成为万王之王，万神之神。我不会说这是徒劳的，但我会说这是虚荣的。如果我现在有机会登上我的王位，我会坐在它旁边，将目光投向地平线，并思考更有价值的事情。我会想起萨达，我的挚爱。我会想起我的孩子们，在火热的空中快乐地跳舞。当然，我也会想起你，我们一起经历的冒险，我们不太可能的真诚友谊。是的，我会坐在那里，心满意足，然后让你登上王位。</p>
+<ul>
+<li><strong>贵族皆邪恶:</strong>  他的许多独特对话选择都将他描绘成对所有被他视为低下的人漠不关心，即：所有人。他甚至可以卑鄙到将塞比尔作为礼物送给影王子而将其出卖为奴隶。然而，他也可以被扮演成认清自己的错误并努力成为善良的王子。</li>
+<li><strong>纸上谈兵:</strong>  字面意思。他是一位非常成功的将军和战略大师，据他自己承认，他已经赢得了无数场战斗……这一切都是舒适地坐在沙发上和，是的，扶手椅上完成的，因为他太重要了，不能冒险在战场上失败。然而，他仍然在战斗中训练自己，而且他在打斗中绝对不是个弱者。</li>
+<li><strong>刺客超越:</strong>  他曾是如此多想杀他的刺客的目标，以至于他对不断发生的暗杀企图感到厌倦。</li>
+</ul>
+<p>&gt;  旁白：那么，那些试图杀死红王子的刺客……他担心吗？
+&gt;
+&gt;  红王子：天哪，不。尽管他们很讨厌。</p>
+<ul>
+<li><strong>赎罪者:</strong> 将红王子扮演成一个好人很可能会引发这个说法，因为他之前在你控制他之前在战争之家已经做过一些可疑的事情，例如拥有和虐待奴隶，也许最可怕的是想出一个用死亡雾气在精灵家园上击败黑环的计划。你有充足的选择来表达对你的行为的遗憾，承诺你会尽你所能来赎罪，甚至在海上复仇号上谴责奴隶制度。</li>
+<li><strong>孩子让一切变得更好:</strong>  他最脆弱的时刻之一就是当他遇到他的孩子时；一只龙崽，假设你让他和萨达在第二幕发生性关系。一想到成为父亲，他几乎就要哭了。</li>
+<li><strong>高智商型硬汉:</strong> 是一位学者，而且绝对是个硬汉。</li>
+<li><strong>芭比娃娃解剖学:</strong> 与其他种族不同，像他这样的蜥蜴人当他们没有任何装备时不穿内衣，但他的裤裆部位看起来完全光滑。</li>
+<li><strong>大块头:</strong>  在体型和战斗能力方面都是如此。他是所有可用队员中最大的一位（虽然塞比尔比他高一点，但她瘦骨嶙峋，与王子的英勇体型形成对比）并且是扮演物理伤害使用者的“骑士”原型角色的人。即使你让他专注于力量以外的东西，叙述者也会多次评论他的力量，而且他仍然强大到足以提起塞比尔的脖子并将你的角色轻松地从地上提起来。</li>
+<li><strong>双性恋三角恋:</strong>  在同一个故事中，他是唯一一个可以与男性和女性伴侣发展恋情的队员。他爱上女性是肯定的，因为萨达，所以如果他是玩家角色并试图与男性队员发展恋情，或者如果你的玩家角色是男性并试图与他发展恋情，那么这个说法就生效了。但是，无论哪种方式，虽然不否认他的感情，但他会优先考虑他对萨达的爱。</li>
+<li><strong>蓝色血液:</strong>  蜥蜴人总的来说已经认为自己比其他任何人都伟大。红王子更是如此，因为他出身皇室。</li>
+</ul>
+        <small class="page-url url "><a href="https://tvtropes.org/pmwiki/pmwiki.php/Characters/DivinityOriginalSinII" target="_blank">(https://tvtropes.org/pmwiki/pmwiki.php/Characters/DivinityOriginalSinII)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="The-Power-of-Video-Game-Narrative:-Lohse-"Sing-For-Me"-Analysis---GameCloud">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🎶&nbsp;</span>The Power of Video Game Narrative: Lohse "Sing For Me" Analysis - GameCloud</h3>
+        <small class="page-url url "><a href="https://gamecloud.net.au/features/opinion/the-power-of-video-game-narrative-lohse-sing-for-me-analysis" target="_blank">(https://gamecloud.net.au/features/opinion/the-power-of-video-game-narrative-lohse-sing-for-me-analysis)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 分析了游戏叙事中角色之间的亲密关系和发展。<br></small>
+    </div>
+    <div class="page-content content"><h2>游戏：终极娱乐媒介</h2>
+<p>视频游戏是终极的娱乐媒介形式，它囊括了所有其他媒体形式，并在其之上增加了互动性。在游戏中，你可以阅读故事和对话，观看过场动画，聆听音乐，拥有共同的体验，以及许多其他独特的参与方式。从本质上讲，书籍或电影能做到的事情，视频游戏也能做到，而将所有这些与互动叙事相结合的能力可以创造出令人难以置信的强大体验。今天我要剖析的一种体验可以在《神界：原罪 2》(DOS2)中找到，但请注意，这将包含一些轻微的剧透。</p>
+<h3>Lohse的歌声分析</h3>
+<p>我要分析的时刻是你的同伴洛丝演唱她的歌曲“为我歌唱”。这听起来很简单，但它背后隐藏着许多使其变得特别的东西。人声和音乐令人难以置信；为洛丝配音并演唱这首歌的塔玛琳·佩恩在这首歌和整个游戏中都做得非常出色。演唱和演奏的音乐优美而令人振奋，这是使这个场景很棒的基础。音乐的节奏和速度与动画和视频效果相匹配；歌曲开始时缓慢，洛丝轻轻摇摆以配合它，但随着歌曲强度的增加，她的动作也变得更活跃。在歌曲中，缕缕轻烟、精灵和音符在她周围形成并环绕着她，火花和效果从她身上散发出来，并随着歌曲的节奏飞舞。</p>
+<p>合唱效果贯穿歌曲始终，巧妙地补充了洛丝的歌声，但在某一点上，洛丝停了下来，精灵和轻烟环绕着她。然后合唱效果转移到前景，洛丝惊奇地环顾四周，暗示轻烟和精灵正在回响她的歌声。这向玩家传达了回声效果的来源是这些精灵，这增加了场景的沉浸感，因为它暗示你的游戏角色和其他同伴也能听到合唱效果的美妙之处并看到视觉效果。</p>
+<p>DOS2 还使用了文学象征手法；洛丝周围有一圈光环，与她演奏的闪闪发光的金色鲁特琴相匹配，象征着温暖、丰富和欣快。在她歌曲的结尾，金色的叶子和蝴蝶从地面升起并飞走，象征着复活、希望和生命。在某一点上，精灵、轻烟和蝴蝶都环绕着她，使洛丝显得神圣。音频和视觉效果的精心配合非常出色，但到目前为止，这与动画音乐视频中可能实现的效果并没有什么不同。使这个场景真正引人注目的关键在于它背后的叙事以及玩家为此付出的旅程。</p>
+<h3>叙事背景与玩家体验</h3>
+<p>坦白地说，洛丝的歌声是对完成她的支线任务的“奖励”，但需要更深入的见解来解释为什么完整的语境会使这首歌充满活力。洛丝是一位小丑和音乐家，她怀抱着善良的精灵，但现在却在努力摆脱试图附身的恶魔。在与洛丝和其他NPC一起旅行的过程中，你与她交谈并了解她，并逐渐建立联系，尤其是在你与她展开浪漫关系并分享亲密时刻时。除其他外，恶魔毁了她唱歌的能力，你可以在游戏开始时发现这一点，那时她试图为你唱歌。在整个战役中，你试图发现是谁或是什么东西附身于她，以摆脱最终会吞噬她的负担。经过多次遭遇和任务，你最终找到了并面对了可怕的恶魔安德拉玛利克。</p>
+<p>叙事背景增加了歌曲带来的喜悦和奇迹。当你杀死恶魔时，洛丝告诉你她感觉多么自由和充满活力，现在完全控制了自己的思想和唱歌的能力。任何优秀的虚构作品都能使角色感觉真实，而视频游戏可以将这一点提升到更高的水平，因为你花费了大量时间与它们互动。当你见证洛丝从绝望到幸福的转变时，它会蔓延到玩家身上，因为他们已经在 100 个小时的游戏时间里建立了联系。玩家对自己感觉良好，因为他们投入时间去追求可选的支线任务来帮助洛丝并杀死恶魔；这是一个令人难以置信的挑战，我尝试了许多次改变不同的策略。作为一名玩家，你的行为是导致洛丝兴奋的原因，并且通过像她的歌声这样强烈的方式来体验它，比仅仅作为电影中的被动观察者所能唤起的感受要强大得多。</p>
+<h3>游戏叙事与情感体验</h3>
+<p>视频游戏具有传递叙事和角色的能力，远超其他媒体形式。所有现有媒体形式的协同作用，加上更长的游戏时间和叙事和对话的互动性，赋予了视频游戏传递令人难以置信的时刻的力量。《神界：原罪 2》中的洛丝的“为我歌唱”只是众多游戏中能够引起我强烈情感共鸣的时刻之一，这种共鸣超过了我以往从电影、书籍或节目中获得的任何体验。</p>
+        <small class="page-url url "><a href="https://gamecloud.net.au/features/opinion/the-power-of-video-game-narrative-lohse-sing-for-me-analysis" target="_blank">(https://gamecloud.net.au/features/opinion/the-power-of-video-game-narrative-lohse-sing-for-me-analysis)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Origins-|-Divinity-Original-Sin-2-Wiki">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🎭&nbsp;</span>Origins | Divinity Original Sin 2 Wiki</h3>
+        <small class="page-url url "><a href="https://divinityoriginalsin2.wiki.fextralife.com/Origins" target="_blank">(https://divinityoriginalsin2.wiki.fextralife.com/Origins)</a><br></small>
+        <small class="page-rating rating ">评分: 5.5<br></small>
+        <small class="page-annotation annotation ">注释: 定义了游戏中Origin角色的特殊背景和能力。<br></small>
+    </div>
+    <div class="page-content content"><h2>Divinity: 原罪 2 中的起源</h2>
+<p>起源在《Divinity: 原罪 2》中提供独特的沉浸式角色创建体验，玩家可以选择不同的标签、外观选项，某些情况下甚至还有天赋。起源本质上是预设角色，每个角色都有自己的背景故事、性格和个人动机。这些预设角色拥有自己的一套优势，提供自定义角色无法获得的独特对话选项和任务。虽然玩家也可以选择自定义选项以更灵活地创建自己的角色，但选择起源可以获得游戏中独有的叙事机会和互动。</p>
+<h2>《DOS 2》中与同伴的浪漫关系不受起源、性别或种族的限制</h2>
+<p>《Divinity: 原罪 2》的突出特点之一是能够与任何同伴发展浪漫关系，而不管你角色的起源、性别或种族如何。这种包容性系统允许各种浪漫互动，使你能够根据你的对话选择、性格和行动与同伴建立关系。</p>
+<h2>Divinity: 原罪 2 中的起源是什么？</h2>
+<p>起源是预定义的角色背景，它塑造了你在《Divinity: 原罪 2》中角色的故事、性格和能力。每个起源都带有一套独特的标签、外观选项，有时还有一个天赋，为玩家提供更结构化的角色扮演体验。这些角色拥有丰富的背景故事、个人动机和与游戏剧情息息相关的任务。当你选择一个起源时，你实际上是在选择一个拥有自己叙事路径和对话选项的角色，这使你与自定义角色相比对故事有了不同的视角。</p>
+<h3>Divinity: 原罪 2 中的起源</h3>
+<h4>Sebille</h4>
+<p>不再是奴隶，你仍然带着主人留下的伤疤，并运用他教你的技能：尤物、间谍、刺客。你计划将这些技能用于对抗所有主人。</p>
+<h4>The Red Prince</h4>
+<p>你与众不同，你是被放逐的王子。这片土地充满敌意，其居民低下，但没有人能阻止你前进，去寻求你的辩护。</p>
+<h4>Ifan ben-Mezd</h4>
+<p>没有人能毫发无损地逃脱孤狼，你的自由是以可怕的代价换来的。你发誓你已经结束了，但还有最后一个错误你需要纠正。</p>
+<h4>Lohse</h4>
+<p>你从来都不正常：你的思想是恶魔的乐园，你的身体容易发生暴力事件。神自己也救不了你，你能救自己吗？</p>
+<h4>Beast</h4>
+<p>你对抗女王的叛乱失败几乎摧毁了你——所以你开始在公海上过新的生活。现在，你的老敌人回来了。如果你不阻止她，就没有人能阻止她了。</p>
+<h4>Fane</h4>
+<p>你醒来时，你的世界消失了。作为你种族中的最后一人，你隐藏在一张有魅力的面具后面，寻找关于一段无人知晓的历史的真相。</p>
+<h3>Divinity: 原罪 2 中的自定义起源</h3>
+        <small class="page-url url "><a href="https://divinityoriginalsin2.wiki.fextralife.com/Origins" target="_blank">(https://divinityoriginalsin2.wiki.fextralife.com/Origins)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Divinity-Original-Sin-2:-Every-Playable-Character,-Ranked">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏆&nbsp;</span>Divinity Original Sin 2: Every Playable Character, Ranked</h3>
+        <small class="page-url url "><a href="https://www.thegamer.com/divinity-original-sin-2-characters/" target="_blank">(https://www.thegamer.com/divinity-original-sin-2-characters/)</a><br></small>
+        <small class="page-rating rating ">评分: 5.5<br></small>
+        <small class="page-annotation annotation ">注释: 对可玩角色进行评估与排名，强调角色的故事深度。<br></small>
+    </div>
+    <div class="page-content content"><h2>神性：原罪 2：所有可玩角色排名</h2>
+<p>《神性：原罪 2》是一款设定在里维隆世界中的精彩史诗级 RPG 游戏。你扮演一名被神圣秩序俘获的源力者，必须想方设法逃离你所在的监狱岛。从那里开始，冒险会越来越大，有很多分支路径和令人兴奋的遭遇。你可能会发现自己一遍又一遍地玩游戏，以体验它的所有可能性。</p>
+<p>相关：神性：原罪 2 中一些说不通的事情</p>
+<p>《神性：原罪 2》成为 Larian Studio 最佳游戏之一的原因之一，是因为你可以扮演非常棒的角色。你可以创建一个自定义角色，也可以扮演六个独特角色中的一个，所有角色都有错综复杂的身世和个性。你在游戏开始时的选择将在很大程度上影响叙事。那么，究竟哪个可玩角色是最佳选择呢？</p>
+<h3>7. 自定义角色</h3>
+<p>与第一款游戏一样，《神性：原罪 2》允许你完全自定义你的角色。你可以选择各种种族，例如精灵或蜥蜴。你甚至可以扮演任何种族的亡灵版本，这为游戏体验增加了独特的挑战，因为你不能再从普通药剂中恢复生命值，而必须使用毒药。</p>
+<p>自定义角色确实允许你专注于你选择的技能和游戏风格，没有任何预先设定好的东西。这对于在冒险过程中创造你自己的个人故事非常棒，但你会错过六个预设角色提供的精彩故事。当然，你可以带上六个角色中的三个作为同伴，但直接从他们的角度欣赏他们的故事比从旁观者的角度观看要令人满意得多。</p>
+<h3>6. 野兽</h3>
+<p>野兽是一位矮人队长，也称为马库斯·迈尔斯。他决心推翻他的暴君表妹，女王，在她完成邪恶计划之前。他曾经反抗她失败过一次，不会再这样做了。这是一个经典的复仇故事，但在游戏后期之前对主线剧情的影响并不大。</p>
+<p>如果你决定扮演野兽，他的默认职业是战斗法师，因为他擅长在战斗中双持武器，并在激烈的战斗中承受相当大的打击。这个职业与他的石化触碰能力相结合，该能力仅在靠近敌人时才有效。当然，与所有角色一样，你可以随意扮演任何你想要的职业。</p>
+<p>虽然他是一个有趣而令人兴奋的角色，但在引人入胜的叙述方面，他无法与其他五个角色相比。野兽经常被完全抛在后面，甚至在逃离欢乐堡时都没有被带作同伴。</p>
+<h3>5. 塞比勒</h3>
+<p>塞比勒是一位精灵，曾经受制于一个邪恶的主人，被迫为他们执行各种可怕的任务。现在自由了，她终于可以自己选择道路了，并开始追捕她的老主人，让他付出代价。</p>
+<p>相关：神性：原罪 2——值得用宠物语言与之交谈的动物</p>
+<p>塞比勒默认为盗贼职业，但与所有角色一样，你可以让她扮演任何你想要的职业。她吃尸体的能力也能让你在前进的路上获得有见地的记忆和技能。</p>
+<p>扮演塞比勒可能非常有趣，特别是如果你有红王子或伊凡作为你的同伴。他们会和她发生不少冲突，但会促使故事揭示更多关于塞比勒和她的动机的信息。然而，关于塞比勒需要考虑的主要事情是她可能非常反复无常，经常让你别无选择，只能杀死某些 NPC，例如欢乐堡里的梦游者。这可能会让你难以驾驭她自己的故事和她同伴的故事。</p>
+<h3>4. 伊凡·本-梅兹德</h3>
+<p>伊凡·本-梅兹德曾经忠于卢西安神，但此后发生了很多事情。如今，他是一名雇佣杀手，为臭名昭著的孤狼工作。他的最新合同？他必须杀死卢西安的儿子。</p>
+<p>伊凡默认为旅行者职业，非常适合喜欢玩远程角色的玩家。他还可以召唤一只狼来帮助战斗，这非常令人兴奋。</p>
+<p>伊凡与你周围的世界有着密切的联系，尤其是在第二幕中。能够识别各种角色并进行你可能没有体验过的对话可能会有益。如果他只是一个同伴，你将听不到这些对话，这可能会很遗憾。伊凡看起来像一个相当标准的经典英雄类型，虽然其他一些角色有更精彩的叙述，但他仍然是一个强大而可靠的选择作为你的玩家角色。</p>
+<h3>3. 红王子</h3>
+<p>红王子是一个引人入胜的角色。他是一位蜥蜴王族，在被放逐之前过着奢侈的生活，因为他与恶魔做交易。现在，他正在逃亡，试图夺回王位，同时躲避致命的刺客。</p>
+<p>红王子通常扮演战士的角色。他的恶魔凝视能力帮助他在战斗中恢复魔法护甲，让他保持强劲。</p>
+<p>这位贵族王子的支线任务是最有趣的任务之一，并将带你进入各种娱乐场景。但是，即使你决定不扮演他，红王子也值得在欢乐堡找到他，让他加入你的冒险。他那自大的态度增添了很多幽默感。</p>
+<h3>2. 法恩</h3>
+<p>法恩是一个拥有令人难以置信的神秘过去的亡灵骷髅。逃脱了看似无限的监禁时间后，法恩终于逃脱了，并想揭开他曾经认识的所有人消失的真相。</p>
+<p>相关：如果你喜欢《神性：原罪 2》，可以玩哪些等距 RPG 游戏</p>
+<p>法恩最适合作为一名巫师，但无论你选择什么职业，他的时间扭曲能力都非常宝贵，让你可以在战斗中获得额外回合。与扮演亡灵自定义角色一样，法恩确实为游戏增加了一些令人兴奋的挑战，例如，如果你没有伪装，每个人都会对你怀有敌意。一旦你拥有变形面具，你就可以变成任何种族并利用各种能力。</p>
+<p>法恩与《神性：原罪 2》中的许多传说都密切相关。这使得他作为玩家角色非常迷人，因为你可以在旅途中揭开他过去真相。甚至神秘的虚空生物在攻击你时也经常嘲讽他并直接与他交谈。由于他的历史，法恩也是一个很棒的同伴，总是为故事增添一些精彩的见解。但是，他非常适合主角的角色，因为他的故事与主线剧情紧密相连。</p>
+<h3>1. 洛丝</h3>
+<p>洛丝是一位表演者，习惯于灵魂和精灵停留在她的脑海里。但最近，一个恶魔实体非常喜欢她，并紧紧抓住了她的思想。洛丝现在正处于一场永无止境的战斗中，以重新掌控并阻止该实体的邪恶计划。</p>
+<p>洛丝的默认职业是魅惑师。她也很擅长鼓励团队或用她的疯狂之歌能力让敌人陷入狂怒。洛丝还有一些令人难以置信的时刻，她可以展示她的才能，为每个人演奏和表演她的鲁特琴，尽管只是短暂的。</p>
+<p>《神性：原罪》的故事很棒，而洛丝的个人故事是所有可玩角色中最有趣的一个。它为整个叙事增添了独特的风格。她体内的恶魔提供了与其他可玩角色不同的互动。仅某些时刻的对话选项就使得扮演洛丝如此令人愉快。她的故事引人入胜，而且使用她的视角通关非常令人满意。凭借其极佳的个性、大量的幽默感和许多引人入胜的时刻，洛丝轻松成为可玩角色的最佳选择。</p>
+        <small class="page-url url "><a href="https://www.thegamer.com/divinity-original-sin-2-characters/" target="_blank">(https://www.thegamer.com/divinity-original-sin-2-characters/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Best-Divinity:-Original-Sin-2-Romance-Options-&-How-To-Romance-Them">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💞&nbsp;</span>Best Divinity: Original Sin 2 Romance Options & How To Romance Them</h3>
+        <small class="page-url url "><a href="https://gamerant.com/divinity-original-sin-2-best-romance-options/" target="_blank">(https://gamerant.com/divinity-original-sin-2-best-romance-options/)</a><br></small>
+        <small class="page-rating rating ">评分: 5.5<br></small>
+        <small class="page-annotation annotation ">注释: 列出与《神界：原罪2》中的恋爱选项相关的信息。<br></small>
+    </div>
+    <div class="page-content content"><h2>Divinity: Original Sin 2 恋爱选项</h2>
+<p>| 名称        | 性别 | 种族    |
+| :---------- | :---- | :------ |
+| 巴特尔(Butter) | 女   | 人类    |
+| 红王子(The Red Prince) | 男   | 蜥蜴人  |
+| 费恩(Fane)    | 男   | 骨骼    |
+| 野兽(Beast)   | 男   | 矮人    |
+| 洛丝(Lohse)   | 女   | 人类    |
+| 伊凡·本·梅兹德(Ifan Ben-Mezd) | 男   | 人类    |
+| 赛比尔(Sebille) | 女   | 精灵    |</p>
+<h3>巴特尔</h3>
+<p>在欢乐堡营地，玩家在航点雕像后方的营地内区域走动时，会遇到一位名叫巴特尔的金色头发的NPC在巡逻。她站在营地头目格里夫的正上方，起初会对玩家有所戒备。考虑到欢乐堡是一个充满悲伤和愤怒的残酷地方，许多无辜者都被那些偏执的魔法师们强行监禁，这也是可以理解的。</p>
+<p>巴特尔是格里夫的跟班之一，但这并不意味着她的心无法被融化。有可能和她开始一段小小的恋爱支线，但这需要大部分的游戏时间才能再次见到她。因此，即使她的故事可能是一种有趣的消遣，巴特尔也不是游戏中最吸引人的伴侣。</p>
+<h3>如何在Divinity: Original Sin 2中与巴特尔发展恋爱关系</h3>
+<p>要和她发展恋爱关系，只需和她进行对话，并确保选择最暧昧的对话选项。对话结束时，巴特尔和玩家角色都会同意在以后的阿克斯再次见面，在那里恋爱故事线将达到高潮；然而，这在第四幕。这可能需要很长时间的等待，但那些不介意长期游戏的玩家会发现他们在第一幕的努力会在以后得到巴特尔的适当回报。</p>
+<p>与此同时，在营地与巴特尔发展恋爱关系会让她在玩家挑战营地头目格里夫时站在玩家一边，帮助玩家解救被囚禁的精灵。如果玩家选择和她调情，巴特尔实际上会为玩家而战，这是一件好事，因为这场战斗在游戏早期将会非常具有挑战性。</p>
+<h2>红王子</h2>
+<p>红王子是一位拥有王室血统的蜥蜴人。他原本将成为他族人的下一任皇帝，却被流放，现在成为逃犯，一心想要夺回王位。</p>
+<p>他拥有战士职业，他带来的许多优势之一是可以不用铲子就能挖掘。</p>
+<p>不幸的是，和他之间没有真正的恋爱关系，因为他最多只会把玩家当成他的奴隶，而他的爱则留给了故乡的某人。这就是为什么他无疑是游戏中最糟糕的恋爱对象，这与这个角色的傲慢相符。虽然他的性格可能会带来一些以这个角色为特色的娱乐时刻，但很明显，无论玩家如何努力，他都不会在意玩家。无论游戏事件如何发展，他的心，以及他的崇高使命，都与红公主在一起。</p>
+<h3>如何在Divinity: Original Sin 2中与红王子发展恋爱关系</h3>
+<p>第一步是与毒尾和巴哈拉在阿玛迪亚的圣所交谈。一旦玩家离开岛屿和欢乐堡前往漂流木，就在石花园墓地与梦游者的鬼魂交谈。之后，在红公主的营地附近，玩家必须允许红王子与红公主交配，之后她会消失。在玩家潜入领事馆的任务之后，需要在阿克斯找到并释放她。需要一个宣誓者来释放她，之后红王子将生下一条龙。</p>
+<p>按照这一系列事件，玩家将到达故事的关键点，在那里玩家将可以选择与游戏中许多潜在伙伴之一共度一个亲密的夜晚。如果玩家与红王子的好感度为正，那么他们可能会共度一些亲密时光，尽管这被证明是一次肤浅的相遇，并没有任何长期的影响，因为红王子的真爱是其他人。</p>
+<h2>费恩</h2>
+<p>费恩这位巫师是游戏中更独特的人物之一，因为他是不死的。戴着他的特殊面具，他能够采用周围任何人的脸，或者，他需要隐藏自己的脸。他是游戏中最神秘的人物之一，与他互动绝对是一种乐趣。有很多玩家认为他的起源故事是重玩游戏的最佳选择，因为他对世界的深入了解。</p>
+<p>他看起来相当反复无常和粗鲁，但他受到了很多偏见和仇恨。最终，他只想找出瑞维隆的历史，并理解他周围的世界。他是一位巫师，在游戏结束时，无论他的浪漫依恋如何，他都选择出去探索，这使他成为一个不太理想的选择。当然，这并不意味着这段恋爱根本不值得追求，尤其因为他是一个如此引人入胜且有趣的人物！</p>
+<h3>如何在Divinity: Original Sin 2中与费恩发展恋爱关系</h3>
+<p>为了在欢乐堡找到费恩，玩家需要穿过欢乐堡北部的一条隐藏小路。在堡垒内部，他们需要杀死剥皮者奈尔斯并拾取剥皮刀。在堡垒外，他们将再次遇到温迪戈，战斗结束后，玩家可以拾取费恩的变形者面具。确保他在逃离欢乐堡岛屿后前往黑坑时加入队伍。</p>
+<p>为了保持他对玩家积极的态度，确保不要意外地对他使用治疗药水或法术，因为它会伤害他。费恩在阿克斯的一位同事会试图说服他成为神，这样他就可以恢复他的种族，但玩家角色需要在卢西安的墓穴说服他不要这样做。当然，那些不关心与他发展恋爱关系的玩家可以让他选择他们认为适合这个引人注目的角色的任何东西。</p>
+<h2>野兽</h2>
+<p>野兽是一位才华横溢的战斗法师和可怕的野蛮人战士。当然，除了给他默认的角色外，他的职业可以是玩家想要的任何职业。他有点像他那一类人的叛逆者，试图对矮人女王发动战争。然而，女王摧毁了他的叛乱，并将野兽逐出成为一个游牧民族。他现在决心回到她身边，永远结束这场争吵。</p>
+<p>他是一个优秀的讲故事的人，几乎在任何场合都会有一些引人入胜的话要说。话虽如此，在旅程结束时，我们真正知道的是，他为玩家提供了一个故事，似乎准备独自生活而没有他们。在大多数情况下，许多玩家认为野兽是所有角色中描写最糟糕的角色，因此玩家在选择他作为游戏最终的恋爱对象之前应该记住这一点。当然，与这个喧闹的矮人发展恋爱关系并没有什么本质上的错误，无论他的角色弧线多么陈词滥调。</p>
+<h3>如何在Divinity: Original Sin 2中与野兽发展恋爱关系</h3>
+<p>野兽拥有最简单的故事情节。这实际上是人们在谈到这个角色时认为是一个问题的事情，但不可否认的是，即使野兽简单直接的故事最终也会因为《Divinity: Original Sin 2》中极其强大的写作而变得令人愉快。玩家可以在欢乐堡岛屿的西侧找到他。更好的是，如果他在团队中，那么如果玩家参观堡垒的竞技场，他们将获得欢乐堡监狱的钥匙。</p>
+<p>在漂流木，玩家应该确保他在访问地下酒馆的洛哈尔时加入队伍。他的任务中最重要的一部分，也是大部分内容都将在阿克斯进行，在那里玩家需要帮助他对付贾斯蒂娜女王。由他们决定她的命运，但他们需要在做出这个选择时记住野兽的担忧。许多揭示会影响野兽的决定，玩家应该在最终结束这个任务之前完全确定自己的选择。</p>
+<h2>洛丝</h2>
+<p>洛丝是一位才华横溢的歌手和艺术家。然而，她心中藏着一个黑暗的秘密。她被一个黑暗的恶魔附身，偶尔会控制她。她大部分个人故事都围绕着试图弄清楚这个恶魔是谁以及是什么，但也确保她不会对自己失去希望。</p>
+<p>重要的是要保持她的积极态度，对她表示鼓励。</p>
+<p>她是一位女巫，拥有强大的法术，在游戏结束时，她似乎很高兴与玩家一起去任何地方，这使她成为一个非常好的恋爱对象。她也被许多人认为是游戏中最好的原创角色之一，特别是由于她体内的恶魔可以让她的起源游戏以许多细微而惊人的方式完全不同，这让她拥有非常独特的叙事时刻。无论如何，如果玩家真的想和她发展恋爱关系，他们总是可以带走其他角色或创建自己的角色。</p>
+<h3>如何在Divinity: Original Sin 2中与洛丝发展恋爱关系</h3>
+<p>洛丝的恶魔会在与萨希拉见面时首次显现。在随后的战斗中，玩家需要不伤害萨希拉，而是消耗洛丝的活力，以至于不会杀死她，而是触发下一个事件。在欢乐堡监狱，一名囚犯将敦促队伍寻找贾汉，这是前作《Divinity: Original Sin》中的同伴。</p>
+<p>这个任务将带领玩家前往血月岛，在那里杀死辩护者后，他们将发现她受折磨的恶魔的名字。与恶魔的最后一场战斗将在阿克斯进行，在那里他将首先以医生的身份出现。这很容易成为游戏中最具挑战性的战斗之一，尤其因为他可以接管洛丝，并且如果某些条件不满足，基本上可以在几回合内结束战斗。</p>
+<p>与全盛状态下的医生进行这场战斗，很容易成为游戏中最具挑战性的努力之一，并且如果玩家在此次危险的遭遇中降低难度，这是可以理解的。玩家还可以牺牲许多无辜的灵魂来使这场战斗更容易，尽管可以肯定的是，玩家的道德观会阻碍这一决定。</p>
+        <small class="page-url url "><a href="https://gamerant.com/divinity-original-sin-2-best-romance-options/" target="_blank">(https://gamerant.com/divinity-original-sin-2-best-romance-options/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="End-Times-|-Divinity-Original-Sin-2-Wiki">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">⚔&nbsp;</span>End Times | Divinity Original Sin 2 Wiki</h3>
+        <small class="page-url url "><a href="https://divinityoriginalsin2.wiki.fextralife.com/End+Times" target="_blank">(https://divinityoriginalsin2.wiki.fextralife.com/End+Times)</a><br></small>
+        <small class="page-rating rating ">评分: 5.5<br></small>
+        <small class="page-annotation annotation ">注释: 总结了重要的主线任务和关键战斗的过程。<br></small>
+    </div>
+    <div class="page-content content"><h2>末日</h2>
+<p>这是神陨：原罪 2 的末日章节；你准备好飞升了吗？</p>
+<h3>重要 NPC</h3>
+<p>达利斯</p>
+<p>卢西安</p>
+<p>布拉库斯·雷克斯</p>
+<p>神圣卢西安</p>
+<h3>末日目标</h3>
+<p>杀死所有敌人。</p>
+<h2>末日流程</h2>
+<p>整章都是你必须面对的最终战斗。做好准备，因为这可能漫长而充满挑战。</p>
+<p>到达后，你“复仇女神”号上的追随者（例如玛拉迪、加雷斯、艾米拉和塔奎因）会出现并为你祈祷。他们的祈祷会将你所有技能的源点消耗降低到 0，所以你现在基本上可以免费施放所有最强大的法术。所以不要忘记利用它并记住你最好的技能。另外，如果你还没有这样做，记得将你的复活卷轴平均分配给每个队员，以便他们在需要时可以互相复活。</p>
+<p>当你向前走时，惊喜！神圣卢西安还活着；他一直伪造了自己的死亡，并且和达利斯、布拉库斯·雷克斯、沉默的盖斯特和一些魔法师一起等着你。卢西安会向你解释他的计划，为什么他杀死了其他所有神选者，为什么虚空生物出现了，以及他想做什么——从世界上移除所有源力来治愈面纱，以便里维隆最终能够和平。</p>
+<p>达利斯也会露出她的真面目——一位永恒者——并解释说范恩实际上是她的父亲，她想给她父亲一个弥补罪孽的机会。她还会透露，真正的达利斯是找到她陵墓的人，之后她取代了真正的达利斯成为魔法师将军。</p>
+<p>一切都结束后，你将有 2 个选择：牺牲自己并为了里维隆的福祉而放弃你的源力，或者拒绝并攻击卢西安和达利斯。这两个选择都会导致一场战斗。这里需要一个小小的警告：如果你在杀死最后一个敌人（例如布拉库斯）时有任何队友死亡，他们最终将永久死亡，并且不会加入你的结语——所以确保所有盟友都活着，然后再给予最后一击。</p>
+<h3>放弃你的源力</h3>
+<p>如果你选择牺牲自己，事实证明布拉库斯·雷克斯从达利斯那里偷走了束缚魔杖，并挣脱了他的束缚。达利斯、卢西安和其他人都会与你结盟，而你们所有人都会试图粉碎布拉库斯。然而，布拉库斯会收到来自海神——克拉肯的“礼物”，它会施放“命运的誓言”法术并召唤你以前战斗过的敌人，例如伊斯贝尔、林德·肯姆勋爵等等。但是，如果你之前已经耗尽了他们的源力，那么克拉肯将无法召唤他们，所以如果你之前耗尽了伊斯贝尔和林德·肯姆勋爵灵魂的源力，那么克拉肯将无法召唤他们来帮助布拉库斯进行这场战斗。然而，无论他能否召唤他们，克拉肯都会不断地向战场召唤更多敌人，例如黑环成员。为了杀死克拉肯，你需要使用远程技能和法术，但在这场战斗中，你真正需要做的就是杀死布拉库斯·雷克斯，克拉肯就会死去。另外，虽然现在这没什么意义，但杀死他们每个人都能获得 299,700 点经验值。</p>
+<p>或者，你也可以对克拉肯使用“魅惑虚空生物”法术来魅惑它及其所有召唤物，从而使战斗变得微不足道。</p>
+<p>布拉库斯倒下后，达利斯会说她失败了，并说世界的命运掌握在你的手中。战斗似乎结束了。</p>
+<h3>拒绝放弃你的源力</h3>
+<p>战斗即将开始，你将对抗所有敌人。你不需要杀死他们所有人；你只需要杀死布拉库斯或达利斯其中一人。根据你的队伍配置，你可能会发现其中一个更容易击败。当你杀死他们中的一个时，下一阶段就会开始。不要浪费时间，只需集中火力干掉其中一个；当他们中的一个倒下时，布拉库斯·雷克斯会宣称他从达利斯手中夺取了束缚魔杖，然后他会借助海神的帮助召唤克拉肯。战斗随后与你放弃源力给达利斯的情况相同——但有一个警告：每个人都会对你怀有敌意，但达利斯和她的帮派也会对布拉库斯的帮派怀有敌意。布拉库斯也会恢复所有生命值。“魅惑虚空生物”在这里可以救命。</p>
+<p>与上面一样，完成此任务最简单的方法是首先集中火力干掉布拉库斯。一旦他死了，克拉肯和它所有的召唤物都会消失。然后，你可以轻松干掉达利斯（如果你还没有这样做），战斗就结束了。</p>
+<p>如果你完成了“王者重生”任务，还有一个选择。你可以在杀死卢西安或达利斯之前用诅咒杀死布拉库斯，他不会被海神复活，战斗的第二部分也不会触发。然后，清理剩下的敌人并结束战斗就容易得多了。</p>
+<h3>选择</h3>
+<p>如果你之前在“医生的命令”任务中与医生签订了契约，那么当你击败布拉库斯·雷克斯时，医生会出现，如果卢西安和达利斯还活着的话，他会杀死他们。然后他会要求你遵守契约，如果你同意，你需要杀死你的队友。在这个结局中，医生将驱逐海神，并与你一起统治世界成为神。如果你拒绝，他会杀死你的主要角色，你必须和你的队友一起杀死他。</p>
+<p>假设你没有与医生签订契约，如果你在第四幕之前与你的一个同伴睡过，他们会热情地吻你并宣称他们爱你，而你可以说你爱他们。在那之后，你必须做出一个选择：飞升为神，或者拒绝。如果你拒绝，而且也没有其他人飞升，海神会嘲笑你的愚蠢，将世界奴役于他的 прихотям，而你将成为他的仆人。虽然在修复后的“复仇女神”号上仍然会有一个结语，但这将是一个严峻的结语。</p>
+<p>如果你决定接受神的力量，你必须从 3 个选择中选择一个，这将决定里维隆的命运。所有选择都会显示一个简短的过场动画，并将带你到一个美好的结语，你将在修复后的“复仇女神”号上。</p>
+<p>你可以履行你作为神选者的命运，成为新的神圣者。如果你选择这个，你将成为新的神圣者，受到所有人的崇拜、爱戴和喜爱。你将组成一个联盟来对抗海神及其爪牙，但由于虚空裂缝没有完全关闭，海神卷土重来的威胁仍然存在。温迪戈的命运取决于你在第四幕中是否将她从誓言中解救出来。</p>
+<p>你可以将源力归还给所有人民，并将神性释放到世界。当每个人都是神时，没有人是神。如果你这样做，那么每个人都将成为一个魔法师，并团结起来将海神驱逐回虚空中。尽管这曾经为一段时间带来了一个新的和平黄金时代，但人们最终利用他们的源力发动战争并互相残杀，绝望地寻求更多权力。与上述选择一样，温迪戈的命运取决于你在第四幕中是否将她从誓言中解救出来。</p>
+<p>你可以允许你和整个世界都被清除其源力。如果你选择这个选项，你和所有其他神选者将被珍视并被铭记为伟大的英雄，你们牺牲了所有源力来封闭虚空中的裂缝，永远消除了海神的威胁。在结语中，还透露玛拉迪设法阻止了你被完全清除并变成沉默的僧侣，但你将无法再使用或收集源力。无论你在第四幕中是否使用誓言破坏者切断了她的联系，温迪戈都将被释放。</p>
+<p><strong>(以下为玩家评论，已翻译并格式化)</strong></p>
+<p><strong>玩家评论总结：</strong>  玩家分享了在最终战役中遇到的各种问题、策略和bug，包括战斗的难度、触发第二阶段的条件、某些角色的行动和结局等。部分玩家提出了一些游戏机制上的问题和建议。</p>
+        <small class="page-url url "><a href="https://divinityoriginalsin2.wiki.fextralife.com/End+Times" target="_blank">(https://divinityoriginalsin2.wiki.fextralife.com/End+Times)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Divinity:-Original-Sin-2-character-arcs-detailed-analysis-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🔑&nbsp;</span>Divinity: Original Sin 2 character arcs detailed analysis at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Divinity: Original Sin 2 character arcs detailed analysis" target="_blank">(DDG:Divinity: Original Sin 2 character arcs detailed analysis)</a><br></small>
+        <small class="page-rating rating ">评分: 4.5<br></small>
+        <small class="page-annotation annotation ">注释: 分析了游戏中人物的叙事和关键选择。<br></small>
+    </div>
+    <div class="page-content content"><h2>结果：</h2>
+<p>它有很多故事。有6个预设角色，每个角色都有自己的特殊故事弧线以及游戏的主要故事线。</p>
+<h2>角色故事线 :: 神性：原罪 2 通用讨论</h2>
+<p>角色故事大部分时间都与主线故事同步进行，你不需要主动追求它们。例如，你可能正在探索……</p>
+<h2>神性：原罪 2：不同的模式及其含义</h2>
+<p>对故事进行了完整的更新，改进了对话和故事弧线，使它们更具沉浸感。·包含新的战斗和故事的新任务……</p>
+<h2>在神性游戏中，为了获得最佳故事体验，应该做什么或选择什么？</h2>
+<p>洛丝拥有最佳故事情节，但它与其他故事情节截然不同。因此你将不会获得通常的故事体验。范获得最多的传说……</p>
+<h2>角色分析：洛丝。（剧透） - Larian Studios 论坛</h2>
+<p>洛丝作为一名角色最重要的方面是她被附身的事实，这意味着她和她附身的……</p>
+        <small class="page-url url "><a href="DDG:Divinity: Original Sin 2 character arcs detailed analysis" target="_blank">(DDG:Divinity: Original Sin 2 character arcs detailed analysis)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="God-King-|-Divinity-Wiki-|-Fandom">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">👑&nbsp;</span>God King | Divinity Wiki | Fandom</h3>
+        <small class="page-url url "><a href="https://divinity.fandom.com/wiki/God_King" target="_blank">(https://divinity.fandom.com/wiki/God_King)</a><br></small>
+        <small class="page-rating rating ">评分: 4.5<br></small>
+        <small class="page-annotation annotation ">注释: 讨论了God King的背景及其对Voidwoken的影响。<br></small>
+    </div>
+    <div class="page-content content"><h3>神王</h3>
+<p>神王是一位古老而永生的存在，领导着虚空觉醒者——那些被虚空和誓约者污染的前永恒者。他试图通过惩罚七神来报复“原罪”[需要引用]，因为七神将他的人民放逐到虚空之中，同时也试图将他的子民带回瑞威隆。</p>
+<h3>内容</h3>
+<ol>
+<li>背景</li>
+<li>外貌</li>
+<li>相关任务</li>
+<li>琐事</li>
+<li>画廊</li>
+</ol>
+<h3>背景</h3>
+<p>在凡人种族踏足瑞威隆的亿万年前，神王是永恒者的统治者。七位领主侍奉于他，作为“地方男爵”。然而，当法恩发现面纱并告知诸位领主后，他们将神王和其余的永恒者封印在了虚空中。</p>
+<p>公元1233年，卢西安及其议会决定使用死亡雾炸弹来击败黑环军队，但由于亚历山大在精灵有机会穿过裂隙之前释放了死亡雾，导致精灵和敌军都被消灭殆尽。由于精灵人口锐减，第七神提尔-森德利乌斯因此虚弱，无法继续维持面纱的封印。</p>
+<p>一旦面纱出现缺口，虚空觉醒者就能通过面纱回到瑞威隆。神王利用这个缺口来扩大他的影响力，主要方法是获得黑环的效忠，并向各种各样的人提供恩惠，条件是他们以自己的凡人生命为代价向他宣誓效忠。[需要引用]</p>
+<p>公元1242年，卢西安、达利斯之锤和神选者们用世界联合的源力最终将他和他的虚空觉醒者困在了虚空中，彻底封闭了面纱。</p>
+<h3>相关任务</h3>
+<p>林德·肯姆的宝库</p>
+        <small class="page-url url "><a href="https://divinity.fandom.com/wiki/God_King" target="_blank">(https://divinity.fandom.com/wiki/God_King)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Lore-|-Divinity-Original-Sin-2-Wiki">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📜&nbsp;</span>Lore | Divinity Original Sin 2 Wiki</h3>
+        <small class="page-url url "><a href="https://divinityoriginalsin2.wiki.fextralife.com/Lore" target="_blank">(https://divinityoriginalsin2.wiki.fextralife.com/Lore)</a><br></small>
+        <small class="page-rating rating ">评分: 4.0<br></small>
+        <small class="page-annotation annotation ">注释: 讨论了Rivellon的历史概况及相关事件。<br></small>
+    </div>
+    <div class="page-content content"><h2>Rivellon的历史</h2>
+<p><strong>时间缩写说明：</strong></p>
+<p>AR：Anno Rivellonis（瑞维隆纪元），指七神登基之前的年份。</p>
+<p>AD：Anno Deorum（众神纪元），指七神登基之后，沿用至今的纪年方式。</p>
+<h3>8800 AR - 龙之指挥官</h3>
+<p>瑞维隆第一任皇帝西格德被自己的孩子所杀，一场血腥的王位争夺战随即爆发。据说整个世界都面临着毁灭的危险，因为流传至今的谣言称，所有的战斗都动用了巨大的机器和威力惊人的飞艇；这种技术早已失传——也许仅仅是传说。最终，一位龙骑士——也是西格德的儿子——取得了胜利。详细情况鲜为人知，但我的研究表明，他得到了传奇法师马科斯的支持。</p>
+<h3>失落的世纪</h3>
+<p>关于这些失落的时代，几乎一无所知。人们只能推断，由上述龙骑士统一的帝国一定已经衰落或陷入颓废。它存在了一千年？两千年？我们可能永远也不会知道。</p>
+<p>在这些失落的时代，一场灾难性的冲突确实发生了：旷日持久的残酷的巫师战争。</p>
+<h3>4 AR - 原罪</h3>
+<p>关于发生在两位所谓的源能猎手身上的奇怪而壮观的事件，知之甚少。然而，如果人们能够相信老法师们零散的故事，他们既阻止了，也引发了改变瑞维隆命运的事件。</p>
+<h3>100 AD - 混沌的第一次兴衰</h3>
+<p>在这一黑色年份，一个比以往任何敌人更凶残的敌人袭击了瑞维隆。它被称为混沌，自从赞达洛尔不愿提及的那些时代起，它就已被邪恶势力崇拜并掌握了权力。经过长期残酷的战斗，以混沌领主为首的敌人被矮人军队击败。正是他们独自守护着世界，使其免受混沌的侵蚀，至今仍值得我们赞扬。</p>
+<h3>611 AD - 混沌的第二次兴衰</h3>
+<p>混沌恶魔在几个世纪前就被击败了，但一位名叫奥尔特林的阴险巫师重新集结了受伤的恶魔，并再次集结了新的军队。这次，如果不是七人的牺牲，瑞维隆肯定已经沦陷：在七位神明的加持下，一位人类、一位矮人、一位精灵、一位蜥蜴人、一位小鬼和一位兽人献出了自己的生命，从而击败了混沌领主。其中包括鲁本·费罗尔公爵，而他的学徒拉尔夫则带着奥尔特林的剑——不祥的谎言之剑离开了战场。</p>
+<h3>1218 AD - 神圣神性</h3>
+<p>在身后只留下森森白骨，并且在一条龙——族长的帮助下，光明化身——追随敌人到达位于尤图尔·戈尔沙漠深处的老巢，在那里他猎杀了每一个黑环长老；最后，他和他们的恶魔首领，谎言恶魔，面对面地站立着。恶魔笑着告诉神圣神，他已经太迟了：转移已经完成，混沌领主将再次降临。事实上，在他身后，在一个巨大的祭坛上躺着一个新生婴儿，一个天真无邪的外表包裹着一颗彻底堕落的灵魂。神圣神之剑杀死了恶魔，但他虽然能够终结这场几乎让瑞维隆跪倒的巨大瘟疫，却无法狠下心来杀死这个孩子。</p>
+<h3>1218年至1233年 AD - 达米安的青年时代</h3>
+<p>卢西安给他的“儿子”取名达米安，多年来，这个孩子一直没有意识到在他孩子般的外表下潜伏着可怕的力量，在神圣神的教导下长大。在黑环死灵法师卡林父亲的指使下，伊格纳结识了这位年轻人，后者立刻被她迷住了。她不仅回以爱意，还唤醒了他的沉睡的力量。起初，他们练习的是简单的法术，但后来是更邪恶的魔法、更罕见的咒语，以及最危险的，他们解开了禁忌的知识。有一段时间，达米安的神圣养父全然不知伊格纳对他儿子的不祥影响，直到证据将她与他最近处决的卡林联系起来。在被质问时，她承认她支持他腐朽的策略，其中最重要的是达米安黑暗、沉睡力量的复苏。</p>
+<p>听到如此可怕的证词后，卢西安别无选择，只能依次处决伊格纳：黑环从不宽恕，无论情况如何。在睿智但忧心忡忡的赞达洛尔的注视下，神圣神的剑斩下了伊格纳的头颅。然而，就在那个预言的时刻，当伊格纳的鲜血仍在吞噬更多的地面时，达米安走了进来，说出了一个甚至连那强大的团队都感到震惊的咒语：灵魂熔炼的咒语。在任何人反应过来之前，达米安转身看似消失了。神圣神知道他的儿子将成为他最大的敌人，并且明白达米安已经意识到他大部分邪恶的潜能：能够进行灵魂熔炼的人确实是一个可怕的对手。</p>
+<p>当卢西安和达米安集结军队时，赞达洛尔思考着达米安行为的后果。灵魂熔炼本身就是一个非同寻常的事件；在生命与死亡之间短暂的时间片段中，进行灵魂熔炼是前所未有的。他不确定这对他和达米安来说会有什么后果，于是，他将伊格纳的尸体托付给殓葬师，放弃了通常的黑环尸体焚烧仪式。</p>
+<h3>1233 AD - 达米安被放逐到尼墨西斯</h3>
+<p>几天之内，黑环和神圣圣骑士发生了冲突。然而，达米安只关注卢西安：他要对他表现出与他对伊格纳一样的仁慈。但他不知道的是，神圣神已经为他做好了准备。他要将他儿子引诱到一个裂隙神庙，如果一切按照计划进行，就会将他放逐到另一个维度。由于被吞噬一切的愤怒蒙蔽了双眼，达米安没有意识到自己正被引诱进入陷阱，很快就被囚禁在阴魂萦绕的尼墨西斯。神圣神回到了瑞维隆，高兴的是他养子构成的威胁被消除了，但奇怪的是，他感到悲伤，因为他意识到，尽管邪恶已经控制了他，但达米安一时冲动的灵魂熔炼本质上是一种爱的行为。</p>
+<h3>1238 AD - 超越神性</h3>
+<p>他等待时机，不断壮大实力，直到他做了大多数人认为不可能做到的事情：在一位被蒙骗的圣骑士（他不知道自己正在与达米安并肩作战）的帮助下，他从他的监狱维度中逃脱，并最初冲垮了措手不及的瑞维隆军队。</p>
+<h3>1238年至1300年 AD - 达米安和神圣神的兴衰</h3>
+<p>他的思想仍然完全集中在一件事上：摧毁神圣神，从而为伊格纳报仇。这场战争改变了瑞维隆的面貌：多年来，它肆虐不止，一场又一场灾难性的事件接踵而至。曾经的山脉变成了平坦的焦土平原，风景如画的农田被推高，变成了崎岖的悬崖。然而，人类以非凡的勇气和毅力面对着可怕的敌人。他们顽强乐观的一个决定性原因是神圣神与现在非常罕见但仍然极其强大的龙骑士之间新建立的联盟，他们是恶魔横行的领域中最后一位难以捉摸的龙魔法拥护者。在决定性的战斗中，胜利的天平可能向任何一方倾斜。但随后发生了不可思议的事情：一位龙骑士背叛并杀死了毫无戒心的神圣神。在随之而来的混乱中，圣骑士们开始攻击龙和恶魔。幸运的是，赞达洛尔能够团结军队，从而避免了灾难。达米安已经失去了大部分军队，并且已经报了仇，他命令他的军队放弃战场。他统治瑞维隆可以等待。此外，他还另有打算。</p>
+<p>战争结束了，但战斗从未停止。由于龙骑士的背叛和神圣神的死亡激怒了人类，人类建立了屠龙骑士团，专门消灭族长挑选的少数人。随着马科斯的离去和族长不愿干预，他们本来就很少的人数迅速减少，直到最终只剩下一个：塔拉娜。</p>
+<h3>1300 AD - 神性II - 龙骑士传奇</h3>
+<p>塔拉娜遭到无情追捕，但当她最终被最伟大的屠龙骑士罗德指挥官追捕并重伤时，她将所有力量都赋予了一名年轻的屠龙骑士学员，从而成为最后的龙骑士。</p>
+<p>他的目标是通过复活与他灵魂熔炼的伊格纳来杀死死敌达米安。在他任务的过程中，人们发现杀死神圣神的龙骑士是被达米安用计谋欺骗的，而屠龙骑士对龙骑士的追捕对达米安有利。当他回来时，他将不再需要对付这些可怕的敌人。</p>
+<p>事实证明，暗杀神圣神的龙骑士并非最后一个上当受骗的人，因为屠龙骑士出身的龙骑士也被欺骗了，这一次是被伊格纳欺骗的，伊格纳自称是塔拉娜，将她从阴间——回声大厅——带到他面前，以便他复活她。龙骑士相信这会杀死达米安，于是他照做了，但很快发现自己被骗了，并发现自己被囚禁在一个超越时空的领域：虚构幻想境。</p>
+<p>一切对达米安都有利，他之前也曾试图复活伊格纳，但并未成功。但这并不是他一直都在做的事情，因为达米安了解他的历史，并且了解西格德帝国的传说。在屠龙骑士的黄金时代，他所做的不仅仅是四处闲逛并策划下一次战役：他一直在研究马科斯和龙骑士数千年前用来统一帝国的技术。结果与这项技术曾经的样子相差甚远，但尽管如此，他建造的粗糙但令人印象深刻的飞行堡垒仍然是一股不可忽视的力量，他毫不犹豫地将其部署到阿勒洛斯的人类首都。</p>
+<p>为了保护这座城市，赞达洛尔采取了孤注一掷的措施：他在城市周围变出一面盾牌，有效地保护了城市免受伤害，但他为了做到这一点，首先必须从一位名叫贝赫林的混沌巫师的监狱周围收集这种保护魔法，自从巫师战争后被监禁以来，他一直腐烂在他的阿勒洛斯地底深处的地牢里。</p>
+<p>贝赫林在很多方面都是万能的，尽管被囚禁，但他知道世界上发生的一切，现在他感觉到了盾牌的消失，他立刻以精神形态前往虚构幻想境，当防护魔法还在的时候，他无法做到这一点。在这里，他找到了失落的龙骑士，以及事实上仍然活着并同样被达米安囚禁的神圣神。贝赫林与龙骑士达成协议。</p>
+<p>后者将从被围困的城市下面释放前者的物理形态，作为回报，贝赫林将把神圣神从他另一个世界的囚禁中解救出来，并将族长的眼睛——一件能够摧毁阿勒洛斯周围飞行堡垒舰队的强大物品——交给龙骑士。因此，龙骑士再次自由地漫游城市，寻找释放可怕的混沌巫师的方法。</p>
+<p>最终，龙骑士释放了贝赫林，贝赫林给了他族长的眼睛，但却拒绝释放神圣神。手持这件强大的物品，龙骑士出发去消灭飞行堡垒舰队，结果发现这支舰队是由刚复活的伊格纳指挥的。阿勒洛斯上空的威胁被消灭了，但战斗并未结束。伊格纳和贝赫林将自己带到了虚构幻想境，并将龙骑士也拉了进去。最后，这三个人之间进行了最终的对抗，很快贝赫林和伊格纳都死了。</p>
+<p>他们的生命和力量都被摧毁了，因此神圣神被释放了。阿勒洛斯，事实上整个瑞维隆都欢欣鼓舞，但达米安至今仍活着——从某种意义上说，他仍然未被击败。</p>
+<h2>永恒者的时代和七神的崛起</h2>
+<p><strong><em>*</em>警告！剧透警告！</strong>***</p>
+<p>以下是根据游戏《神性：原罪2》中与角色的对话和阅读各种书籍中发现的关于古代永恒者和七神的传说总结。如果你想通过游戏自己发现它，请不要继续阅读！</p>
+<p>在现存种族有记载的历史之前数千年，永恒者种族统治着世界。他们的魔法和机械技术如此先进，以至于他们能够有效地使自己免受衰老的影响，因此被称为永恒者，而现存种族中没有一个能够复制它。他们的文明是一个君主制，由一位国王和七位领主组成，他们的身体有着各种各样的形态；今天的人类、矮人、精灵、哥布林、蜥蜴人和兽人都在这个社会中拥有祖先。他们还如此先进，以至于他们实际上创造了某些生命形式本身，基本的双足类人动物，充当他们所谓的“源能容器”，但永恒者认为这些创造物只不过是野兽。</p>
+<p>而范恩——你扮演的范恩本人——独自一人引发了导致这一切毁灭的事件。</p>
+<p>范恩是一位与统治家族关系密切的魔法研究员。通过他的研究，他发现了创造的面纱，以及隐藏在其背后的源能和虚无的力量。他相信，永恒者种族可以通过驾驭这种力量而极大地进步，于是他去找国王，请求为这项任务提供资源和人员。但国王拒绝了，认为尝试这样做太危险了。范恩对他的发现充满热情，于是他又去找了七位领主，请求他们的帮助。七位领主被范恩向他们展现的潜在力量所吸引，欣然同意，并集体对抗国王，试图改变他的主意。当国王拒绝时，领主们聚集了他们的军队，并发动了内战。</p>
+<p>这场战争是灾难性的。整个永恒者文明都卷入了其中，并实际上毁灭了自己。在战争期间，七位领主已经开始驾驭范恩向他们展示的力量，并开始显著增强力量，这最终导致了他们的胜利。最后，在阿玛迪亚的领导下，七位领主将国王和所有其他永恒者都扔进了虚无，并将他们封印在那里。</p>
+<p>艾特拉对国王忠心耿耿（你在游戏中可以在黑坑下面的古代神庙中找到她），试图扭转七位领主所做的一切，并且还开始研制一种能够摧毁现在实力强大的七位领主的武器：艾特兰。但在她可以使用它之前，她被发现了，并被埋葬了。她完全记得范恩如何参与了这些事件，并且深深地恨他。</p>
+        <small class="page-url url "><a href="https://divinityoriginalsin2.wiki.fextralife.com/Lore" target="_blank">(https://divinityoriginalsin2.wiki.fextralife.com/Lore)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Races---Divinity:-Original-Sin-II-Guide---IGN">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">👤&nbsp;</span>Races - Divinity: Original Sin II Guide - IGN</h3>
+        <small class="page-url url "><a href="https://www.ign.com/wikis/divinity-original-sin-2/Races" target="_blank">(https://www.ign.com/wikis/divinity-original-sin-2/Races)</a><br></small>
+        <small class="page-rating rating ">评分: 4.0<br></small>
+        <small class="page-annotation annotation ">注释: 各大种族在《神界：原罪2》中的技能与特点。<br></small>
+    </div>
+    <div class="page-content content"><h2>种族</h2>
+<p>《神界：原罪 2》中有四个主要种族。各个种族在很大程度上是相同的，尽管每个种族确实都拥有 2 个独特的技能和天赋。在选择种族时，不仅要考虑外观，还要考虑独特的天赋和技能以及它们如何与你选择的职业相结合。</p>
+<h3>矮人</h3>
+<p>矮人种族，正如你所料，身材矮壮。这使得他们凭借被动奖励成为优秀的先锋战士。</p>
+<p>技能：石化触碰，保护光罩</p>
+<p>天赋：强壮 - 提供 +10% 最大生命值和 +5% 闪避几率。矮人狡诈 - 你从 +1 潜行开始。</p>
+<h3>精灵</h3>
+<p>精灵种族身材高挑，其性格和文化围绕着强烈的自然动机。</p>
+<p>技能：血肉祭祀，保护光罩</p>
+<p>天赋：祖传知识 -  使你获得 +1 专家知识。食尸者 - 允许你吃掉身体部位来获取死者的记忆。</p>
+<h3>人类</h3>
+<p>人类种族是全能型种族。他们也是《神界：原罪 2》中最常见的种族。</p>
+<p>技能：鼓励，保护光罩</p>
+<p>天赋：足智多谋 - 你从 +2 先发制人和 +5%暴击几率开始。节俭 - 你从 +1 讨价还价开始。</p>
+<h3>蜥蜴人</h3>
+<p>蜥蜴人是高度“文明”的种族，他们经常看不起其他人。他们较高的教育水平使他们成为优秀的法师。</p>
+<p>技能：龙炎，保护光罩</p>
+<p>天赋：老练 - 提供 +10% 火和毒抗性。咒语之歌 - 你从 +1 劝说开始。</p>
+        <small class="page-url url "><a href="https://www.ign.com/wikis/divinity-original-sin-2/Races" target="_blank">(https://www.ign.com/wikis/divinity-original-sin-2/Races)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Rivellon-|-Divinity-Wiki-|-Fandom">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🗺&nbsp;</span>Rivellon | Divinity Wiki | Fandom</h3>
+        <small class="page-url url "><a href="https://divinity.fandom.com/wiki/Rivellon" target="_blank">(https://divinity.fandom.com/wiki/Rivellon)</a><br></small>
+        <small class="page-rating rating ">评分: 3.0<br></small>
+        <small class="page-annotation annotation ">注释: 描绘了Rivellon的地图及区域概况。<br></small>
+    </div>
+    <div class="page-content content"><p>里维隆是神性系列游戏发生的世界。里维隆虽然广阔，但却是已知世界，其星球本身尚未被居民完全探索，有记录显示来自未知土地的探险家曾进入其边界。</p>
+<h3>世界地图</h3>
+<p>最初在《神性：原罪》中以四个主要区域呈现：费罗尔占据地图北部大部分地区，主要由人类居住，但绿地斯地下区域则主要为蜥蜴人占据；塔诺罗斯山脉位于西部，是矮人的故乡，他们在费罗尔本身也拥有一个前哨站；南部是特内布·蒂里尔黑暗森林，精灵的家园，他们也在特内布·蒂里尔/费罗尔边界设有一个前哨站；东南部是尤图尔·戈尔，兽人的领地，这是游戏中唯一没有出现的地点。《神性：原罪2》中，塔诺罗斯西部和阿勒罗斯南部出现了破碎山谷和奥罗巴斯峡湾；法格洛位于塔诺罗斯东侧和南部，依其位置来看，它位于特内布·蒂里尔的西部；在大陆西南水域是哨兵群岛。</p>
+<p>鉴于《神性：原罪》发生在《神性：原罪》1000年前，我们无法判断西塞尔、银色峡谷和卢库拉森林是否与我们已知的地区截然不同，或者事实上它们已被废弃并被其他文明取代。</p>
+<p>在《神性：原罪2》中，我们看到了位于大陆南部半岛的死神之眼、死神海岸、龙脊、风暴谷和阿克斯。</p>
+        <small class="page-url url "><a href="https://divinity.fandom.com/wiki/Rivellon" target="_blank">(https://divinity.fandom.com/wiki/Rivellon)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Original-Sin-2-Quests-|-Divinity-Wiki-|-Fandom">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📋&nbsp;</span>Original Sin 2 Quests | Divinity Wiki | Fandom</h3>
+        <small class="page-url url "><a href="https://divinity.fandom.com/wiki/Original_Sin_2_Quests" target="_blank">(https://divinity.fandom.com/wiki/Original_Sin_2_Quests)</a><br></small>
+        <small class="page-rating rating ">评分: 2.5<br></small>
+        <small class="page-annotation annotation ">注释: 列出了《神界：原罪2》的所有任务和活动。<br></small>
+    </div>
+    <div class="page-content content"><h2>原罪2 任务</h2>
+<p>这是一个详细列出《神界：原罪2》游戏中所有任务和编年史的页面。除少数例外，所有这些任务和编年史都存在于游戏的经典版和最终版中。</p>
+<h3>目录</h3>
+<ol>
+<li>第一幕任务 - 梅里韦瑟</li>
+<li>第二幕任务 - 逃离收割者之眼</li>
+<li>第三幕任务 - 我，神选之人</li>
+<li>第四幕任务 - 掌握源能</li>
+<li>第五幕任务 - 无名岛</li>
+<li>第六幕任务 - 追捕达利斯</li>
+<li>第七幕任务 - 成神</li>
+<li>角色起源任务</li>
+<li>编年史</li>
+<li>被删减的任务</li>
+</ol>
+<h3>第一幕任务 - 梅里韦瑟</h3>
+<p>| 任务                     | 地点                       | 发布者             | 类型     |
+| ------------------------ | -------------------------- | ---------------- | -------- |
+| 甲板下的死亡             | 梅里韦瑟 - 下层船舱          | 沃特斯大师         | 支线     |
+| 混乱的水域               | 梅里韦瑟                   | /                 | 主线     |</p>
+<h3>第二幕任务 - 逃离收割者之眼</h3>
+<p>| 任务                     | 地点                       | 发布者                 | 类型     |
+| ------------------------ | -------------------------- | --------------------- | -------- |
+| 比死亡更糟糕的命运       | 布拉库斯·雷克斯之塔          | 格威克/拉斯克/坦辛     | 支线     |
+| 暴君的遗物             | 收割者之眼                 |                       |           |
+| 战斗的号召             | 废墟城堡/阿玛迪亚圣所       | 加雷斯                 | 主线     |
+| 寻找埃米                 | 欢乐堡                   | 巴迪                   | 支线     |
+| 治疗的触碰             | 阿玛迪亚圣所               | 西蒙                 | 支线     |
+| 热锅上的蚂蚁             | 收割者之眼                 |                       | 主线     |
+| 穷途末路                 | 阿玛迪亚圣所               | 格拉蒂安娜/塔琳       | 主线     |
+| 只是儿戏                 | 欢乐堡监狱                 | 韩                     | 支线     |
+| 欢乐堡竞技场             | 欢乐堡                   | “多拉，荆棘者”       | 支线     |
+| 军械库                   | 破败的废墟                 | 加雷斯·普莱斯         |           |
+| 熊熊燃烧的猪             | 空心沼泽                 | 火猪                   | 支线     |
+| 被诅咒的戒指             | 疯子据点                 | 布拉库斯帮             | 支线     |
+| 逃离                     | 收割者之眼                 |                       | 主线     |
+| 永恒的崇拜者             | 阿玛迪亚圣所               | 格拉蒂安娜             |           |
+| 石像鬼的迷宫             | 石像鬼的迷宫               |                       | 支线     |
+| 被囚禁的精灵             | 欢乐堡                   | 阿米罗/萨海拉         | 支线     |
+| 凶残的幽灵               | 欢乐堡                   | 米戈/亚罗               | 支线     |
+| 被净化的巨龙             | 巨龙海滩                 | 斯莱恩，冬日巨龙       |           |
+| 敲诈                     | 欢乐堡                   | 艾洛迪                 | 支线     |
+| 尖叫者                   | 废墟城堡/阿玛迪亚圣所       | 加雷斯/格拉蒂安娜/塔琳 |           |
+| 传送器                   | 欢乐堡贫民区               | 加温                   | 支线     |
+| 萨海拉部落               | 欢乐堡/洞穴               | 阿米罗                 |           |
+| 布拉库斯·雷克斯的宝库     | 收割者之眼                 |                       |           |
+| 声音                     | 收割者之眼                 |                       | 主线     |
+| 逃离欢乐堡               | 欢乐堡                   |                       | 主线     |
+| 逃离收割者之眼           | 收割者之眼                 |                       | 主线     |
+| 威瑟姆尔的灵魂瓶         | 被遗忘的牢房               | 威瑟姆尔勋爵           | 支线     |</p>
+        <small class="page-url url "><a href="https://divinity.fandom.com/wiki/Original_Sin_2_Quests" target="_blank">(https://divinity.fandom.com/wiki/Original_Sin_2_Quests)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Divinity:-Original-Sin-2-|-All-Side-Quests-Checklist">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">✅&nbsp;</span>Divinity: Original Sin 2 | All Side Quests Checklist</h3>
+        <small class="page-url url "><a href="https://mapgenie.io/divinity-original-sin-2/checklists/side-quests" target="_blank">(https://mapgenie.io/divinity-original-sin-2/checklists/side-quests)</a><br></small>
+        <small class="page-rating rating ">评分: 2.5<br></small>
+        <small class="page-annotation annotation ">注释: 概述了游戏任务的主要目标和过程。<br></small>
+    </div>
+    <div class="page-content content"><h2>抵抗的迹象 (Signs of Resistance)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>要求：找到在阿图萨导师 (Magister Atusa) 的尸体上发现的“精灵吃阿图萨的腿” (Elf Eat Atusa&#x27;s Leg) 来开始此任务。</p>
+<h2>每个母亲的噩梦 (Every Mother&#x27;s Nightmare)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>与法拉 (Fara) 或杰斯 (Jeth) 谈话。注意：不会接受蜥蜴的帮助。</p>
+<h2>凶杀的幽灵 (The Murderous Gheist)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>与亚罗导师 (Magister Yarrow) 谈话。</p>
+<h2>敲诈 (The Shakedown)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<h2>威瑟摩尔的灵魂瓶 (Withermoore&#x27;s Soul Jar)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>将布拉库斯·雷克斯之矛 (Spear of Bracchus Rex) 从威瑟摩尔勋爵 (Lord Withermoore) 的胸膛拔出以开始（需要12+力量）。</p>
+<h2>布拉库斯·雷克斯的宝库 (The Vault of Braccus Rex)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>阅读血迹斑斑的日记 (Bloodstained Journal) 来开始。</p>
+<h2>被囚禁的精灵 (The Imprisoned Elf)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>与艾米罗 (Amyro) 谈话。通过武力释放精灵，偷取他笼子的钥匙，或通过找到真正的窃贼来证明他的清白。</p>
+<h2>寻找埃米 (Finding Emmie)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>与巴迪 (Buddy) 谈话。</p>
+<h2>传送器 (The Teleporter)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>与加温 (Gawin) 谈话。</p>
+<h2>燃烧的猪 (The Burning Pigs)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<h2>暴君的文物 (Artefacts of the Tyrant)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>阅读导师的日记 (Magister&#x27;s Journal) 来开始。</p>
+<h2>尖叫者 (The Shriekers)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>与塔琳 (Tarlene) 谈话来开始。</p>
+<h2>穷途末路 (Most Dangerous When Cornered)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>进入废墟时获得。</p>
+<h2>武器招募 (Call To Arms)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>由加雷斯 (Gareth) 授予。</p>
+<h2>军械库 (The Armoury)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<h2>死不足惜 (A Fate Worse Than Death)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>首先与死灵法师谈话即可开始。如果你先找到灵魂瓶，也会自动开始。</p>
+<h2>被净化之龙 (The Purged Dragon)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>打破柱子并与斯莱恩 (Slane) 谈话。</p>
+<h2>永恒的崇拜者 (The Eternal Worshipper)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>与格拉蒂安娜 (Gratiana) 谈话。</p>
+<h2>治愈之触 (Healing Touch)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>与西蒙 (Simone)、朱尔斯 (Jules)、克劳德 (Klaud) 和马蒂斯 (Matis) 谈话。注意：如果你在来这里之前救了加雷斯，你就无法开始这个任务。</p>
+<h2>石像鬼的迷宫 (The Gargoyle&#x27;s Maze)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>试图打开铁门时开始。</p>
+<h2>分类帐上的红墨水 (Red Ink in the Ledger)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>捉迷藏 (Hide &amp; Seek)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>他们不能过去 (They Shall Not Pass)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>教团法 (The Law of the Order)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>德里特伍德竞技场 (The Driftwood Arena)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与布莱辛 (Blaithin) 谈话。奖励：德里特伍德竞技场冠军钥匙 (Driftwood Arena Champion Key)。</p>
+<h2>奇特的货物 (Strange Cargo)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>取桶里的鱼来开始。</p>
+<h2>失物招领 (Lost and Found)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>燃烧的先知 (The Burning Prophet)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>爱有代价 (Love has a Price)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与洛夫里克 (Lovrik) 谈话。</p>
+<h2>欲望的网 (A Web of Desire)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>强势接管 (Aggressive Takeover)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>进入该区域时会激活。</p>
+<h2>商业竞争对手 (Business Rivals)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与巨魔谈话来开始。</p>
+<h2>一厢情愿 (Wishful Thinking)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>德里特伍德的阴影 (Shadow over Driftwood)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与洛哈尔 (Lohar) 谈话。</p>
+<h2>艾思妮·商人 (Eithne the Trader)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>绳子上的 (On The Ropes)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与汉纳格 (Hannag) 谈话。</p>
+<h2>机会之窗 (Window of Opportunity)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>邪恶的猎手 (A Hunter of Wicked Things)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>像牲畜一样对待 (Treated Like Cattle)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与梅贝尔 (Mabel) 和杰拉尔丁 (Geraldine) 谈话。</p>
+<h2>一家人 (All in the Family)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>英雄的安息处 (Heroes&#x27; Rest)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>丑陋的小鸟 (The Ugly Little Bird)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与费诺 (Ferno) 谈话。</p>
+<h2>打盹的冒险者 (The Snoozing Adventurer)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>黑坑中的黑暗交易 (Dark Dealings in the Blackpits)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与圣骑士汤姆·哈德温 (Paladin Thom Hardwin) 谈话。</p>
+<h2>沉溺于悲伤 (Drowning her Sorrows)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>慷慨的提议 (A Generous Offer)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>深夜的油灯 (The Midnight Oil)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>一箭之仇 (A Prize Kill)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与鹿的灵魂 (Spirit of a Deer) 谈话。</p>
+<h2>织布者 (The Weaver)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>相反相吸 (Opposites Attract)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>存在主义危机 (An Existential Crisis)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与草堆互动来开始。警告：每个角色只有一次机会完成此任务。</p>
+<h2>说分叉的舌头 (Speaking in Forked Tongues)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>陌生之地中的陌生人 (Stranger in a Strange Land)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与维尔克斯·克里瓦的灵魂 (Spirit of Vilnx Creeva) 谈话。</p>
+<h2>对自己和他人的危险 (A Danger to Herself and Others)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>埋葬过去 (Burying the Past)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>三个祭坛 (The Three Altars)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>精灵先知 (The Elven Seer)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>四季的考验 (A Trial for all Seasons)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>自由的味道 (A Taste of Freedom)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>死雾升起 (Deathfog Rising)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>完成德里特伍德的阴影 (Shadow over Driftwood)。</p>
+<h2>绝路 (No Way Out)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>永恒者 (The Aeteran)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>人气大赛 (Popularity Contest)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与多特 (Dot) 和棉尾兔 (Cottontail) 谈话。</p>
+<h2>坚忍的灵魂 (The Stoic Spirit)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与赛勒斯·奥茨的灵魂 (Spirit of Syrus Oates) 谈话。注意：你必须释放他的手而不是在对话结束时对他大喊大叫才能触发此任务。</p>
+<h2>旧情复燃 (Old Flames)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与艾迪·恩格里姆的灵魂 (Spirit of Edie Engrym) 谈话。</p>
+<h2>寻物费 (Finder&#x27;s Fee)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与圣骑士埃弗哈特的灵魂 (Spirit of Paladin Everhart) 谈话。</p>
+<h2>不是笑柄 (No Laughing Matter)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与穆德巴罗的灵魂 (Spirit of Mudbarrow) 谈话。</p>
+<h2>征募 (Press-Ganged)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与弗莱彻·科宾·戴 (Fletcher Corbin Day) 谈话。</p>
+<h2>以眼还眼 (An Eye for an Eye)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与一位年迈法师的灵魂 (Spirit of an Elderly Mage) 谈话。</p>
+<h2>苦涩的补药 (Bitter Tonic)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与黑寡妇制造者的灵魂 (Spirit of the Black Widowmaker) 谈话。</p>
+<h2>不可能的恋人 (Unlikely Lovers)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>阿尔米拉的要求 (Almira&#x27;s Request)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<h2>倡导者 (The Advocate)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与腐败的朝圣者 (The Corrupted Pilgrim) 谈话。</p>
+<h2>被遗忘的和被诅咒的 (The Forgotten and the Damned)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>阅读血月岛地图 (Map of the Bloodmoon Island) 来开始。</p>
+<h2>德鲁伊 (The Druid)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与精灵朝圣者的灵魂 (Spirit of an Elven Pilgrim) 谈话。</p>
+<h2>树皮的咬痕 (The Bark&#x27;s Bite)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与树干灵魂 (spirit Log) 谈话。</p>
+<h2>甲板下的死亡 (Death Belowdecks)</h2>
+<p>地点：船舱 (The Hold)</p>
+<h2>让老板开心 (Keep the Boss Happy)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>同意找到营地老板格里夫 (Camp Boss Griff) 被偷的橙子以换取释放精灵艾米罗 (Amyro)。</p>
+<h2>让老板付出代价 (Make the Boss Pay)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>武力释放艾米罗 (Amyro) 或拒绝透露真正的小偷——辛格泰尔 (Stingtail) 的身份。</p>
+<h2>欢乐堡竞技场 (The Arena of Fort Joy)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>与索拉 (Thola) 谈话。</p>
+<h2>被诅咒的戒指 (The Cursed Ring)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>在第二次与特罗姆多伊 (Trompdoy) 作战后，从他身上掠夺布拉库斯之戒 (Band of Braccus)。</p>
+<h2>观察者的仁慈 (The Watcher&#x27;s Mercy)</h2>
+<p>地点：无名岛 (Nameless Isle)</p>
+<p>与观察者 (The Watcher) 谈话。</p>
+<h2>行云流水 (Running Like Clockwork)</h2>
+<p>地点：无名岛 (Nameless Isle)</p>
+<p>与克桑特扎骑士的灵魂 (Knight of Xantezza&#x27;s spirit) 谈话。</p>
+<h2>淹没的寺庙 (The Drowned Temple)</h2>
+<p>地点：无名岛 (Nameless Isle)</p>
+<h2>母树 (The Mother Tree)</h2>
+<p>地点：无名岛 (Nameless Isle)</p>
+<p>与精灵继承人 (Elven Scion) 谈话。</p>
+<h2>磨练场 (Proving Ground)</h2>
+<p>地点：无名岛 (Nameless Isle)</p>
+<p>与竞技场大师格奇斯沃尔 (Ghechswol the Arena Master) 谈话。</p>
+<h2>自由的钥匙 (The Key to Freedom)</h2>
+<p>地点：无名岛 (Nameless Isle)</p>
+<p>与阿尔米拉 (Almira) 谈话。注意：只有在你完成了收割者海岸 (Reaper&#x27;s Coast) 的阿尔米拉的要求 (Almira&#x27;s Request) 后才能进行此任务。</p>
+<h2>人和他的狗 (A Man and His Dog)</h2>
+<p>地点：收割者海岸 (Reaper&#x27;s Coast)</p>
+<p>与无所事事的乞丐 (The Idle Beggar) 或拉斯蒂 (Rusty) 谈话。</p>
+<h2>进入山腹 (To the Belly of the Mountain)</h2>
+<p>地点：无名岛 (Nameless Isle)</p>
+<p>阅读在被净化的尸体上发现的导师日记 (Magister&#x27;s Diary)。</p>
+<h2>不可能的支持者 (An Unlikely Patron)</h2>
+<p>地点：无名岛 (Nameless Isle)</p>
+<p>战斗后与任何导师谈话，以了解亚历山大主教 (Bishop Alexander) 还活着，并躲藏在提尔·森德利乌斯神庙 (Temple of Tir-Cendelius)。</p>
+<h2>熟悉的面孔 (A Familiar Face)</h2>
+<p>地点：无名岛 (Nameless Isle)</p>
+<p>与德洛鲁斯 (Delorus) 谈话。</p>
+<h2>寻求复仇 (Seeking Revenge)</h2>
+<p>地点：无名岛 (Nameless Isle)</p>
+<p>走近，加雷斯 (Gareth) 会自动和你说话。</p>
+<h2>不学无术的追求 (Unscholarly Pursuits)</h2>
+<p>地点：无名岛 (Nameless Isle)</p>
+<p>与塔里安·格雷耶的灵魂 (Spirit of Taryan Greye) 谈话。</p>
+<h2>学院 (The Academy)</h2>
+<p>地点：无名岛 (Nameless Isle)</p>
+<p>与总管 (The Seneschal) 谈话。</p>
+<h2>苍白之人 (The Sallow Man)</h2>
+<p>地点：无名岛 (Nameless Isle)</p>
+<p>与阿尔米拉 (Almira) 谈话或与从任何黑环成员处掠夺的黑镜子互动。</p>
+<h2>云端之上 (Up in the Clouds)</h2>
+<p>地点：无名岛 (Nameless Isle)</p>
+<p>爬上藤蔓到达阿玛迪亚神庙 (The Temple of Amadia)。</p>
+<h2>减少数量 (Thinning the Herd)</h2>
+<p>地点：无名岛 (Nameless Isle)</p>
+<p>与苍白之人 (The Sallow Man) 谈话并与黑环 (Black Ring) 站在一起。</p>
+<h2>林德·肯姆的宝库 (The Vault of Linder Kemm)</h2>
+<p>地点：阿尔克斯 (Arx)</p>
+<p>与拉姆恩·奥克 (Ramn Oak) 谈论一幅罕见的画作。</p>
+<h2>课程结束 (School&#x27;s Out)</h2>
+<p>地点：阿尔克斯 (Arx)</p>
+<p>与贝里尔·格里夫 (Beryl Griff) 谈话，帮助她收回校舍。</p>
+<h2>旧物值黄金 (Old Means Gold)</h2>
+<p>地点：阿尔克斯 (Arx)</p>
+<p>与猫评估师 (Cat the Appraiser) 谈话。通过说服检查，她会告诉你一起抢劫的事。</p>
+<h2>梦想和噩梦的工匠 (A Craftsman of Dreams and Nightmares)</h2>
+<p>地点：阿尔克斯 (Arx)</p>
+<p>与玩具商桑德斯 (Toyseller Sanders) 谈话。</p>
+<h2>君王重生 (A King Reborn)</h2>
+<p>地点：阿尔克斯 (Arx)</p>
+<p>阅读带有笔记的日记 (Journal with Note) 来了解弗雷德曼 (Vredeman) 的真相。</p>
+<h2>削弱恶魔 (Crippling a Demon)</h2>
+<p>地点：阿尔克斯 (Arx)</p>
+<p>与玛拉迪 (Malady) 谈话，她会带你去恶魔的家乡领域 (Demon&#x27;s Home Realm)。</p>
+<h2>城门之战 (Battle at the Gates)</h2>
+<p>地点：阿尔克斯 (Arx)</p>
+<p>接近吸血鬼虚空生物 (Vampiric Voidwoken)。</p>
+<h2>行刑 (The Execution)</h2>
+<p>地点：阿尔克斯 (Arx)</p>
+<p>当你第一次进入导师军营时，有一位圣骑士因为不服从命令而即将被处决。与玛丽 (Marie) 或林德·肯姆勋爵 (Lord Linder Kemm) 谈话。警告：如果你在处理任务之前离开该区域，圣骑士就会被杀害。</p>
+<h2>导师的最后抵抗 (The Last Stand of Magisters)</h2>
+<p>地点：阿尔克斯 (Arx)</p>
+<p>与林德·肯姆勋爵 (Lord Linder Kemm) 谈论对导师活动的调查。</p>
+<h2>失踪的囚犯 (The Missing Prisoners)</h2>
+<p>地点：阿尔克斯 (Arx)</p>
+<p>与看守约娜 (Warden Yona) 谈话。</p>
+<h2>过去的错误 (Past Mistakes)</h2>
+<p>地点：阿尔克斯 (Arx)</p>
+<p>进入该区域后自动开始。与卡隆 (Karon) 或附近的灵魂之一谈话。</p>
+<h2>血腥嫁妆 (Blood Dowry)</h2>
+<p>地点：阿尔克斯 (Arx)</p>
+<p>与多里安·加尔 (Dorian Gall) 谈话。</p>
+<h2>最紧急的事 (A Most Urgent Matter)</h2>
+<p>地点：阿尔克斯 (Arx)</p>
+<p>与查理 (Charlie) 谈话。</p>
+<h2>寻找阿胡勋爵 (Finding Lord Arhu)</h2>
+<p>地点：阿尔克斯 (Arx)</p>
+<p>与圣骑士塔拉·布里 (Paladin Tara Bree) 谈话，了解阿胡勋爵 (Lord Arhu) 失踪的消息。</p>
+<h2>领事馆 (The Consulate)</h2>
+<p>地点：阿尔克斯 (Arx)</p>
+<p>与圣骑士女射手 (Paladin Markswoman) 谈论虚空生物 (Voidwoken) 袭击古代帝国领事馆 (Ancient Empire Consulate) 的事。</p>
+<h2>仁慈即力量 (Mercy is Power)</h2>
+<p>地点：阿尔克斯 (Arx)</p>
+<p>与烦躁的老鼠 (Fretful Rat) 或圣骑士萨尔 (Paladin Sauer) 谈话。</p>
+<h2>矮人的秘密 (The Secrets of Dwarves)</h2>
+<p>地点：阿尔克斯 (Arx)</p>
+<p>与皇家保护者 (Royal Protector) 谈论虚空生物 (Voidwoken) 袭击矮人婚礼的事。</p>
+<h2>闹剧 (What a Fuss to Have Wrought)</h2>
+<p>地点：阿尔克斯 (Arx)</p>
+<p>与桑奎尼亚·特尔 (Sanguinia Tell) 谈话并向她借款。</p>
+<h2>力量的种子 (Seed of Power)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>阅读沉船宣言 (Shipwreck&#x27;s Manifesto) 来开始。</p>
+<h2>保持冷静和腐肉 (Keep Calm and Carrion)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>阅读矮人习俗与传统 (Dwarven Customs &amp; Traditions) 来开始。注意：添加到礼品袋#5中。</p>
+<h2>来自彼岸的饥饿 (A Hunger from Beyond)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>阅读附近死去的冒险家 (Dead Adventurer) 处的笔记来开始此任务。</p>
+<h2>诅咒的线索 (Threads of a Curse)</h2>
+<p>地点：欢乐堡 (Fort Joy)</p>
+<p>与附近的奇异骨骼手臂 (Odd Skeletal Arm) 互动来开始此任务。</p>
+        <small class="page-url url "><a href="https://mapgenie.io/divinity-original-sin-2/checklists/side-quests" target="_blank">(https://mapgenie.io/divinity-original-sin-2/checklists/side-quests)</a><br></small>
+    </div>
+
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 获取所有导航链接
+        const navLinks = document.querySelectorAll(".navigate-item");
+        // 将导航链接与目标元素建立映射关系
+        const connections = Array.from(navLinks).map(link => {
+            const targetId = link.getAttribute("href").substring(1); // 去掉 #
+            const targetElement = document.getElementById(targetId);
+            return { link, targetElement };
+        });
+        // 使用 IntersectionObserver 观察目标元素
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const { target, isIntersecting } = entry;
+                    const matchingLink = connections.find(connection => connection.targetElement === target).link;
+                    if (isIntersecting) {
+                        // 目标元素在视野中，添加高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.add("active");
+                    } else {
+                        // 目标元素离开视野，移除高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.remove("active");
+                    }
+                });
+            },
+            {
+                root: null, // 默认视口
+                threshold: 0.02
+            }
+        );
+
+        // 开始观察所有目标元素
+        connections.forEach(({ targetElement }) => observer.observe(targetElement));
+    });
+</script>
+<script>
+    // 获取元素
+    const resizer = document.querySelector('.resizer');
+    const leftColumn = document.querySelector('.left-column');
+    const rightColumn = document.querySelector('.right-column');
+    const navigate = document.querySelector('.navigate')
+
+    let isDragging = false;
+
+    // 鼠标按下事件
+    resizer.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        document.body.style.cursor = 'col-resize';
+        document.body.style.userSelect = 'none';
+    });
+
+    // 鼠标移动事件
+    document.addEventListener('mousemove', (event) => {
+        if (!isDragging) return;
+
+        // 计算新的宽度
+        const newLeftWidth = event.clientX / window.innerWidth * 100; // 转换为百分比
+
+        // 限制宽度范围
+        if (newLeftWidth > 15 && newLeftWidth < 70) {
+            leftColumn.style.flexBasis = `${newLeftWidth}%`;
+            rightColumn.style.flexBasis = `${100 - newLeftWidth}%`;
+            navigate.style.left = `${newLeftWidth + 0.15 * (100 - newLeftWidth)}%`
+            navigate.style.maxWidth = `${0.7 * (100 - newLeftWidth)}%`
+
+            const navigateRect = navigate.getBoundingClientRect();
+            const screenWidth = window.innerWidth;
+
+            // 获取右侧部分宽度
+            const rightColumnWidth = rightColumn.getBoundingClientRect().width;
+
+            // 计算 navigate 的占屏幕宽度比例
+            const navigateWidthPercentage = (navigateRect.width / screenWidth) * 100;
+
+            // 计算 navigate 居中所需的 left 值
+            const rightColumnLeft = rightColumn.getBoundingClientRect().left;
+            const navigateLeft = rightColumnLeft + (rightColumnWidth - navigateRect.width) / 2;
+
+            // 设置 navigate 的宽度和位置
+            navigate.style.left = `${navigateLeft}px`;
+        }
+    });
+
+    // 鼠标松开事件
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        document.body.style.cursor = 'default';
+        document.body.style.userSelect = 'auto';
+    });
+</script>
+</html>

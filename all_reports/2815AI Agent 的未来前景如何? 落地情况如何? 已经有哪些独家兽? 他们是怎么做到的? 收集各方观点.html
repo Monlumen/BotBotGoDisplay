@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Agent 的未来前景如何? 落地情况如何? 已经有哪些独家兽? 他们是怎么做到的? 收集各方观点</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; /* 更现代、更通用的字体 */
+            background-color: #f4f6f8; /* 更柔和的整体背景色 */
+            color: #333; /* 默认字体颜色 */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* 主内容区样式 */
+        .content {
+            border-radius: 12px; /* 圆角边界 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* 柔和的阴影 */
+            background-color: #fff; /* 明亮背景色 */
+            padding: 16px; /* 增加内边距 */
+            margin-bottom: 16px; /* 间隔 */
+        }
+
+        /* 左右分栏样式 */
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .left-column{
+            flex: 3;
+        }
+        .right-column{
+            flex: 4;
+        }
+
+        .left-column {
+            background-color: #eef6ff; /* 更亮的浅蓝背景 */
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); /* 内阴影 */
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; /* 明亮的背景色 */
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); /* 内阴影 */
+            font-family: "Noto Serif", "SimSun", serif; /* 更适合长文本阅读的字体 */
+            position: relative;
+        }
+
+        /* 标题样式 */
+        .title {
+            font-size: 1.4em; /* 增大标题字体 */
+            font-weight: 600; /* 半粗体 */
+            color: #1a1a1a; /* 深灰色标题 */
+            margin-bottom: 12px; /* 增加下方间距 */
+        }
+
+        .page-name.title {
+            font-size: 1.8em; /* 更大的字体 */
+            font-weight: bold; /* 加粗标题 */
+            color: #222; /* 更深的灰色 */
+            margin: 16px 0; /* 增加上下间距 */
+            text-align: left; /* 左对齐 */
+        }
+
+        .section-title {
+            font-size: 1.4em; /* 调整大小 */
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; /* 中灰色标题 */
+        }
+
+        /* 段落样式 */
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; /* 更现代的中英双语字体 */
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; /* 柔和的深灰色 */
+            padding: 12px; /* 内边距 */
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; /* 更清新的背景色 */
+            border: 1px solid #dde3ea; /* 添加边框 */
+            border-radius: 12px; /* 圆角 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 轻微阴影 */
+            margin-bottom: 20px; /* 增加间距 */
+        }
+
+        /* 分割线样式 */
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; /* 更柔和的分割线 */
+            margin: 20px 0; /* 增加上下间距 */
+        }
+
+        /* 元数据样式 */
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; /* 更小的字体 */
+            color: #666; /* 浅灰色 */
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; /* 更深的字体颜色 */
+            border-radius: 8px; /* 圆角 */
+            line-height: 1.4;
+            margin-bottom: 10px; /* 增加间距 */
+        }
+
+        /* 评分样式 */
+        .page-rating {
+            background-color: #e8f4ff; /* 浅蓝背景 */
+            color: #0078d7; /* 蓝色文字 */
+            font-weight: bold; /* 加粗文字 */
+            border: 1px solid #aad4ff; /* 边框 */
+        }
+
+        /* 评价样式 */
+        .page-annotation {
+            background-color: #fff5e5; /* 浅黄背景 */
+            color: #cc8400; /* 深黄色文字 */
+            font-style: italic; /* 斜体文字 */
+            border: 1px solid #ffcc66; /* 边框 */
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; /* 隐藏部分 */
+        }
+
+        /* 链接样式 */
+        a {
+            color: #0078d7; /* 蓝色 */
+            text-decoration: none; /* 移除下划线 */
+        }
+
+        a:hover {
+            text-decoration: underline; /* 鼠标悬停时显示下划线 */
+        }
+
+        /* 提高整体间距 */
+        .content > * {
+            margin-bottom: 12px; /* 增加内容之间的间距 */
+        }
+
+        /* query */
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; /* 紧贴页面顶部 */
+            z-index: 300; /* 确保在其他元素之上 */
+            background-color: #ffffff; /* 纯白背景，模拟输入框 */
+            color: #222; /* 深灰色文字 */
+            font-size: 1.1em; /* 略大的字体，提升可读性 */
+            font-weight: 500; /* 中等字体权重，轻松而非刻板 */
+            padding: 12px 16px; /* 内边距，增强舒适感 */
+            border-radius: 8px; /* 圆角设计，柔和外观 */
+            border: 1px solid #d1e4f2; /* 浅蓝边框 */
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05), /* 内阴影，模拟输入框的凹陷效果 */ 0 2px 4px rgba(0, 0, 0, 0.1); /* 外阴影，提升立体感 */
+            margin-bottom: 16px; /* 与下面内容留出空间 */
+            text-align: left; /* 左对齐，模拟自然输入 */
+            line-height: 1.6; /* 提高行间距，增强舒适性 */
+            font-family: "Inter", "Noto Sans", sans-serif; /* 与 sections 不同的字体，轻松现代 */
+            display: flex; /* 使用 flexbox 布局 */
+            align-items: center; /* 确保表情和文字垂直居中 */
+            gap: 10px; /* 表情和文字之间的间距 */
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        /* Section Link */
+        .section-link-box {
+            display: inline-block; /* 让链接保持块状但不独占一行 */
+            margin: 8px 4px; /* 控制胶囊之间的间距 */
+        }
+
+        .section-link {
+            display: inline-flex; /* 使用 flex 布局对齐内容 */
+            align-items: center; /* 垂直居中对齐 */
+            padding: 6px 12px; /* 增加内边距，增强胶囊感 */
+            background-color: #eef6ff; /* 胶囊的背景色 */
+            color: #0078d7; /* 文字颜色 */
+            font-size: 0.95em; /* 调整字体大小 */
+            font-weight: 500; /* 适度加粗 */
+            text-decoration: none; /* 去掉下划线 */
+            border: 1px solid #d1e4f2; /* 胶囊的浅色边框 */
+            border-radius: 20px; /* 胶囊效果 */
+            transition: all 0.2s ease; /* 添加动画过渡效果 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; /* 悬停时更深的背景色 */
+            color: #005bb5; /* 更深的文字颜色 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 加强阴影效果 */
+            text-decoration: underline; /* 可选：添加下划线 */
+        }
+
+        /* Navigate 样式 */
+        .navigate {
+            display: flex; /* 使用 flex 布局 */
+            max-width: 40%;
+            width: fit-content; /* 宽度由内容决定 */
+            flex-wrap: nowrap; /* 禁止换行 */
+            overflow-x: auto; /* 水平方向开启滚动 */
+            gap: 4px; /* 子元素之间的间距 */
+            justify-content: center; /* 主轴居中对齐 */
+            padding: 4px 4px; /* 增加内边距 */
+            background-color: #f4f6f8; /* 柔和背景色 */
+            border-radius: 12px; /* 圆角设计 */
+
+            position: fixed;
+            top: 0;
+            right: 4%;
+            /*transform: translateX(-50%);*/
+            z-index: 1000; /* 确保层级在前 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+            transition: transform 0.3s ease; /* 平滑过渡效果 */
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        /* Navigate 静态内容 */
+        .navigate-item {
+            display: flex; /* 使用 flex 布局 */
+            flex-direction: column; /* 垂直排列子元素 */
+            align-items: center; /* 水平居中 */
+            justify-content: center; /* 垂直居中 */
+            background-color: #ffffff; /* 背景色 */
+            padding: 2px 4px; /* 增加内边距 */
+            border-radius: 12px; /* 圆角设计 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+            transition: all 0.3s ease; /* 平滑的交互效果 */
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; /* 悬停时更浅的背景色 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 增强阴影效果 */
+            transform: translateY(-2px); /* 悬停时微微上浮 */
+        }
+        .navigate-item a {
+            text-decoration: none; /* 移除下划线 */
+            color: #0078d7; /* 蓝色字体 */
+            font-weight: bold; /* 加粗文字 */
+            font-size: 1em; /* 增大字体 */
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; /* 放大 emoji */
+            margin-bottom: 1px; /* 与文字保持间距 */
+        }
+        .navigate-item-id {
+            font-size: 0.9em; /* 稍小的 ID 字体 */
+            color: #555; /* 中灰色字体 */
+        }
+
+        [id] { /* 导航后不要触顶, 不好看 */
+            scroll-margin-top: 50px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            AI Agent 的未来前景如何? 落地情况如何? 已经有哪些独家兽? 他们是怎么做到的? 收集各方观点
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">AI代理的定义与主要功能</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#What-Are-AI-Agents?-|-IBM">
+    💼功能描述</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agents-in-Practice:-Types-and-Use-Cases-|-Codica">
+    🔮定义与特性</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agents-Use-Cases-in-the-Real-World">
+    🤖应用场景</a></div><div class="section-link-box"><a class="section-link" href="#Why-AI-agents-are-the-next-frontier-of-generative-AI-|-McKinsey">
+    🌐协作能力</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agents-Market-Size,-Share-and-Global-Forecast-to-2030-|-MarketsandMarkets">
+    📈</a></div><div class="section-link-box"><a class="section-link" href="#Autonomous-AI-and-Autonomous-Agents-Market-Share,-Forecast-|-Growth-Analysis-by-2030">
+    🏥</a></div><div class="section-link-box"><a class="section-link" href="#Top-15-AI-Agent-Use-Cases-in-Business">
+    👨</a></div><div class="section-link-box"><a class="section-link" href="#LangChain-State-of-AI-Agents-Report">
+    📝</a></div><div class="section-link-box"><a class="section-link" href="#Predictions-for-AI-in-2025:-Collaborative-Agents,-AI-Skepticism,-and-New-Risks">
+    🤝</a></div></div>
+    <div class="section-content content"><p><strong>定义</strong>：
+AI代理是一种自主执行任务的数字系统，能够通过使用可用工具来完成用户或其他系统的请求。这类系统利用自然语言处理和机器学习等技术，具备在动态环境中进行决策的能力。</p>
+<p><strong>主要功能</strong>：
+1. <strong>自动化决策</strong>：AI代理能够根据输入的信息作出自动化的决策，尤其是在复杂的情境中，可以进行实时分析和反应。
+2. <strong>处理复杂请求</strong>：它可以处理多种复杂的请求，整合各种信息源，确保尽可能准确地满足用户需求。
+3. <strong>与外部环境互动</strong>：AI代理可与外部环境进行互动，通过调用接口与其他系统或数据库交流，从而获取实时数据并做出相应的反应。
+4. <strong>任务自动化</strong>：AI代理能够自动化常规和重复性的任务，减少人工干预，提高效率，允许人类聚焦于更复杂的任务。
+5. <strong>支持多种应用场景</strong>：其应用不仅限于一项简单功能，还能在客户服务、数据分析、项目管理等多个领域发挥作用。</p>
+<p>这些功能共同赋予了AI代理极大的灵活性和实用价值，尤其是在企业级应用场景中，它们能够显著提升运营效率和决策准确性。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">市场规模与增长预测</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#AI-Agents-Market-Size,-Share-and-Global-Forecast-to-2030-|-MarketsandMarkets">
+    📈市场增长预测</a></div><div class="section-link-box"><a class="section-link" href="#North-America-AI-Agents-Market-Size-&-Outlook,-2030">
+    🌎收入数据</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agents-Use-Cases-in-the-Real-World">
+    🤖市场规模</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agents-Research-Report-2024-2029:-Market-to-Grow-by-$42">
+    📊市场报告</a></div><div class="section-link-box"><a class="section-link" href="#What-Are-AI-Agents?-|-IBM">
+    💼</a></div></div>
+    <div class="section-content content"><p>从对话记录中提取的关于市场规模与增长预测的内容如下：</p>
+<p><strong>市场规模与增长预测</strong></p>
+<ol>
+<li><strong>2023年的市场收入数据</strong>：AI代理市场在2023年的收入为156.76亿美元。</li>
+<li><strong>预计到2030年的市场规模</strong>：预计到2030年，AI代理市场将增长至186.5亿美元。</li>
+<li><strong>年均增长率</strong>：在此期间，市场预计的年均增长率为42.4%。</li>
+<li><strong>驱动市场增长的关键因素</strong>：市场的增长主要受到自然语言处理技术进步的推动，这提高了AI代理在处理复杂请求和用户互动中的能力。</li>
+</ol>
+<p>这些信息中用户可能最关心的部分包括2023年的市场收入数据、预计的2030年市场规模和年均增长率，以及推动市场增长的自然语言处理技术进步，因这直接关系到对AI代理未来投资和应用的信心。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">成功案例的具体分析</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#AI-Agents-Use-Cases-in-the-Real-World">
+    🤖AI法律应用效率</a></div><div class="section-link-box"><a class="section-link" href="#Top-15-AI-Agent-Use-Cases-in-Business">
+    👨AI客户服务与支持</a></div><div class="section-link-box"><a class="section-link" href="#LangChain-State-of-AI-Agents-Report">
+    📝AI代理实际应用</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agents-Market-Size,-Share-and-Global-Forecast-to-2030-|-MarketsandMarkets">
+    📈</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agents-in-Practice:-Types-and-Use-Cases-|-Codica">
+    🔮</a></div><div class="section-link-box"><a class="section-link" href="#Why-AI-agents-are-the-next-frontier-of-generative-AI-|-McKinsey">
+    🌐</a></div></div>
+    <div class="section-content content"><ol>
+<li>
+<p><strong>JPMorgan Chase的COIN平台</strong>：该平台利用机器学习解读商业贷款协议，显著节省了360,000小时的律师劳动时间，并减少了人工审核的错误率。这一案例表明，AI代理在处理复杂法律文本方面的效率提升，从而释放了人力资源，提高了工作效率。</p>
+</li>
+<li>
+<p><strong>HSBC的欺诈检测</strong>：通过分析交易模式，AI系统能够主动识别潜在的欺诈活动，从而节省了数百万的损失。这一案例展示了AI代理在实时监控和风险识别方面的能力，帮助银行在财务安全上做出更及时的反应。</p>
+</li>
+<li>
+<p><strong>Google的DeepMind Health项目</strong>：该项目开发的AI应用能预测病人的病情恶化，从而改善了关键护理单位的患者结局。这一案例强调了AI代理在医疗健康领域的应用价值，提高了患者监护的效率，增强了医院的决策能力。</p>
+</li>
+</ol>
+<h3>用户可能最关心的部分</h3>
+<ul>
+<li>COIN平台如何通过使用机器学习减少了大量律师劳动时间，并且降低了人工审核的错误率，说明AI代理在法律领域的高效性和准确性。</li>
+<li>HSBC利用AI系统主动识别欺诈活动，避免了潜在的数百万损失，展现了AI代理在金融风险管理中的积极作用。</li>
+<li>DeepMind Health项目的AI应用在预测病情恶化方面的成功，体现了AI代理在医疗领域的重大价值，进而改善了患者的健康结果。  </li>
+</ul>
+<p>这些信息集成了成功案例的具体实施效果，尤其是其如何实质性提升了各个领域的效率与决策能力。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">专家观点与未来趋势</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#AI-Agents-Use-Cases-in-the-Real-World">
+    🤖AI在各行业应用</a></div><div class="section-link-box"><a class="section-link" href="#Top-15-AI-Agent-Use-Cases-in-Business">
+    👨AI代理案例研究</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agents-Research-Report-2024-2029:-Market-to-Grow-by-$42">
+    📊未来趋势分析</a></div><div class="section-link-box"><a class="section-link" href="#Predictions-for-AI-in-2025:-Collaborative-Agents,-AI-Skepticism,-and-New-Risks">
+    🤝人机协作发展</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agents-Market-Size,-Share-and-Global-Forecast-to-2030-|-MarketsandMarkets">
+    📈市场增长预测</a></div><div class="section-link-box"><a class="section-link" href="#Autonomous-AI-and-Autonomous-Agents-Market-Share,-Forecast-|-Growth-Analysis-by-2030">
+    🏥自主AI市场展望</a></div><div class="section-link-box"><a class="section-link" href="#LangChain-State-of-AI-Agents-Report">
+    📝AI代理当前状态</a></div><div class="section-link-box"><a class="section-link" href="#Why-AI-agents-are-the-next-frontier-of-generative-AI-|-McKinsey">
+    🌐生成式AI与代理用途</a></div><div class="section-link-box"><a class="section-link" href="#What-Are-AI-Agents?-|-IBM">
+    💼</a></div><div class="section-link-box"><a class="section-link" href="#North-America-AI-Agents-Market-Size-&-Outlook,-2030">
+    🌎</a></div></div>
+    <div class="section-content content"><p>在对AI代理的未来发展中，多位专家提供了深入的见解。以下是从对话中提取的重要信息：</p>
+<ol>
+<li><strong>Salesforce的观点</strong>：</li>
+<li>
+<p>Salesforce预测，AI代理将成为企业日常工作中的常规自动化工具，尤其是在复杂任务中的多代理协作。这种协作将能够高效处理多方面的问题，推动企业创新和效率提升。</p>
+</li>
+<li>
+<p><strong>McKinsey的看法</strong>：</p>
+</li>
+<li>
+<p>McKinsey强调了生成式AI代理在解决复杂问题中的潜力，提出通过多个专门化的AI代理协同工作，能够应对以前难以解决的业务挑战。这种多代理合作的模式预示着企业将进入一个更加高度自动化和智能化的阶段。</p>
+</li>
+<li>
+<p><strong>斯坦福大学的研究</strong>：</p>
+</li>
+<li>
+<p>斯坦福大学的专家指出，多代理系统的崛起将会在健康、教育和金融等关键行业中显著应用。这种趋势的提出反映了AI技术在复杂决策环境中的适应性和有效性，尤其是在人机协作的场景中。</p>
+</li>
+<li>
+<p><strong>行业影响</strong>：</p>
+</li>
+<li>这些观点表明，AI代理的广泛应用将加速数字转型，并提升行业的决策能力和响应速度。随着生成式AI技术的发展，企业将更依赖于这种智能化的系统来提升客户体验、优化业务流程，并降低运营成本。</li>
+</ol>
+<p>用户最关心的部分可能集中在如何通过AI代理的协作来解决复杂行业问题，以及企业在数字转型过程中如何利用这些技术来提高效率与创新。92% 的企业负责人表示，他们预计将继续投资于AI代理及其相关技术，以满足不断增长的业务需求和市场挑战。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">市场面临的挑战与机遇</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#AI-Agents-Use-Cases-in-the-Real-World">
+    🤖挑战与机遇</a></div><div class="section-link-box"><a class="section-link" href="#Autonomous-AI-and-Autonomous-Agents-Market-Share,-Forecast-|-Growth-Analysis-by-2030">
+    🏥合规性问题</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agents-Market-Size,-Share-and-Global-Forecast-to-2030-|-MarketsandMarkets">
+    📈市场潜力</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agents-in-Practice:-Types-and-Use-Cases-|-Codica">
+    🔮个性化服务</a></div><div class="section-link-box"><a class="section-link" href="#Top-15-AI-Agent-Use-Cases-in-Business">
+    👨成本节约</a></div><div class="section-link-box"><a class="section-link" href="#Why-AI-agents-are-the-next-frontier-of-generative-AI-|-McKinsey">
+    🌐操作效率</a></div><div class="section-link-box"><a class="section-link" href="#What-Are-AI-Agents?-|-IBM">
+    💼</a></div><div class="section-link-box"><a class="section-link" href="#North-America-AI-Agents-Market-Size-&-Outlook,-2030">
+    🌎</a></div><div class="section-link-box"><a class="section-link" href="#LangChain-State-of-AI-Agents-Report">
+    📝</a></div></div>
+    <div class="section-content content"><p>在对话记录中，关于“市场面临的挑战与机遇”维度的相关信息如下：</p>
+<ol>
+<li><strong>挑战</strong>：</li>
+<li>AI代理的实施面临数据隐私和合规性的问题。这些问题源于AI代理在操作中需要接触大量的数据，其中一些数据可能是个人或敏感数据。因此，企业在采用AI代理时需要特别关注这些合规性和隐私保护的法规。</li>
+<li>
+<p>近60%的公司对部署AI代理表示担忧，不愿意冒着可能导致巨额罚款或法律复杂性的风险。对于跨多个地区运营的企业来说，这种合规性问题显得尤为突出。</p>
+</li>
+<li>
+<p><strong>机遇</strong>：</p>
+</li>
+<li>尽管面临挑战，市场依然看好AI代理的潜力。尤其是在需求日益增加的个性化服务方面，AI代理能够根据客户的特定需求提供量身定制的体验。</li>
+<li>此外，AI代理能够提升企业的运营效率，减少人工干预，从而降低成本。许多公司正在利用AI代理来处理常规的、耗时的任务，使员工能够集中精力于更复杂、更高价值的工作。</li>
+</ol>
+<p>用户可能最关心的部分是：
+- AI代理实施中遇到的数据隐私和合规性问题将如何影响其部署决策，特别是对企业的罚款风险。
+- 在提供个性化服务和提升运营效率方面，AI代理能带来的具体潜力和变革。这些效益将如何改变企业与客户的互动及其运营模式。</p></div>
+</div>
+</div>
+<hr>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item">
+    <a href="#AI-Agents-Use-Cases-in-the-Real-World" class="navigate-item-emoji ">🤖</a>
+    <a href="#AI-Agents-Use-Cases-in-the-Real-World" class="navigate-item-id">1</a>
+</div><div class="navigate-item">
+    <a href="#AI-Agents-Market-Size,-Share-and-Global-Forecast-to-2030-|-MarketsandMarkets" class="navigate-item-emoji ">📈</a>
+    <a href="#AI-Agents-Market-Size,-Share-and-Global-Forecast-to-2030-|-MarketsandMarkets" class="navigate-item-id">2</a>
+</div><div class="navigate-item">
+    <a href="#AI-Agents-in-Practice:-Types-and-Use-Cases-|-Codica" class="navigate-item-emoji ">🔮</a>
+    <a href="#AI-Agents-in-Practice:-Types-and-Use-Cases-|-Codica" class="navigate-item-id">3</a>
+</div><div class="navigate-item">
+    <a href="#Top-15-AI-Agent-Use-Cases-in-Business" class="navigate-item-emoji ">👨</a>
+    <a href="#Top-15-AI-Agent-Use-Cases-in-Business" class="navigate-item-id">4</a>
+</div><div class="navigate-item">
+    <a href="#AI-Agents-Research-Report-2024-2029:-Market-to-Grow-by-$42" class="navigate-item-emoji ">📊</a>
+    <a href="#AI-Agents-Research-Report-2024-2029:-Market-to-Grow-by-$42" class="navigate-item-id">5</a>
+</div><div class="navigate-item">
+    <a href="#Why-AI-agents-are-the-next-frontier-of-generative-AI-|-McKinsey" class="navigate-item-emoji ">🌐</a>
+    <a href="#Why-AI-agents-are-the-next-frontier-of-generative-AI-|-McKinsey" class="navigate-item-id">6</a>
+</div><div class="navigate-item">
+    <a href="#Predictions-for-AI-in-2025:-Collaborative-Agents,-AI-Skepticism,-and-New-Risks" class="navigate-item-emoji ">🤝</a>
+    <a href="#Predictions-for-AI-in-2025:-Collaborative-Agents,-AI-Skepticism,-and-New-Risks" class="navigate-item-id">7</a>
+</div><div class="navigate-item">
+    <a href="#What-Are-AI-Agents?-|-IBM" class="navigate-item-emoji ">💼</a>
+    <a href="#What-Are-AI-Agents?-|-IBM" class="navigate-item-id">8</a>
+</div><div class="navigate-item">
+    <a href="#The-Future-of-AI-Agents:-Top-Predictions-&-Trends-to-Watch-in-2025---Salesforce" class="navigate-item-emoji ">⚖</a>
+    <a href="#The-Future-of-AI-Agents:-Top-Predictions-&-Trends-to-Watch-in-2025---Salesforce" class="navigate-item-id">9</a>
+</div><div class="navigate-item">
+    <a href="#Autonomous-AI-and-Autonomous-Agents-Market-Share,-Forecast-|-Growth-Analysis-by-2030" class="navigate-item-emoji ">🏥</a>
+    <a href="#Autonomous-AI-and-Autonomous-Agents-Market-Share,-Forecast-|-Growth-Analysis-by-2030" class="navigate-item-id">10</a>
+</div><div class="navigate-item">
+    <a href="#LangChain-State-of-AI-Agents-Report" class="navigate-item-emoji ">📝</a>
+    <a href="#LangChain-State-of-AI-Agents-Report" class="navigate-item-id">11</a>
+</div><div class="navigate-item">
+    <a href="#North-America-AI-Agents-Market-Size-&-Outlook,-2030" class="navigate-item-emoji ">🌎</a>
+    <a href="#North-America-AI-Agents-Market-Size-&-Outlook,-2030" class="navigate-item-id">12</a>
+</div>
+    </div>
+    <div class="page">
+    <div class="page-meta" id="AI-Agents-Use-Cases-in-the-Real-World">
+        <h3 class="page-name title"><span class="page-emoji ">🤖&nbsp;</span>AI Agents Use Cases in the Real-World</h3>
+        <small class="page-url url "><a href="https://www.nurix.ai/resources/ai-agents-use-cases-in-the-real-world" target="_blank">(https://www.nurix.ai/resources/ai-agents-use-cases-in-the-real-world)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 讨论了AI代理的定义、功能和市场前景，强调其在多个行业的变革潜力。<br></small>
+    </div>
+    <div class="page-content content"><h2>1. 医疗保健领域的 AI 智能体</h2>
+<p><strong>患者诊断和治疗:</strong> AI 智能体分析病历和基因信息，制定改进治疗效果并降低成本的治疗方案，是 AI 智能体顶级应用案例。你知道吗？AI 模型预测癌症患者生存结果的准确率已达到 80%，有助于个性化治疗方案的制定。</p>
+<p><strong>预测分析:</strong> 通过预测疾病趋势，AI 智能体使医疗保健提供者能够更好地分配资源并增强护理水平，这属于 AI 智能体在商业中的应用。</p>
+<p><strong>虚拟健康助手:</strong> 这些 AI 驱动的助手通过提醒和预约与患者互动，简化互动，并确保遵守治疗方案，是 AI 智能体顶级应用。</p>
+<p><strong>行政效率:</strong> AI 智能体自动化账单和预约流程，减少人工工作量，使医疗保健人员能够专注于患者护理，这属于自动化 AI 智能体的应用。</p>
+<p><strong>药物研发:</strong> AI 智能体加快药物研究速度，更快地找到候选药物，并缩短研发时间，这涵盖了 AI 智能体的应用。</p>
+<h2>2. 金融领域的 AI 智能体</h2>
+<p><strong>欺诈检测:</strong> AI 智能体监控交易，精确检测欺诈模式，保护机构并最大限度地减少误报，属于 AI 智能体应用案例。摩根大通使用 AI 智能体使欺诈行为减少了 70%，每年节省约 2 亿美元。</p>
+<p><strong>客户服务:</strong> 虚拟助手提供全天候客户支持，解答疑问，提高满意度，属于 AI 智能体在商业中的应用。</p>
+<p><strong>投资管理:</strong> AI 智能体分析市场趋势，优化投资组合，并为财务顾问提供数据驱动的见解，涵盖了 AI 智能体应用案例。</p>
+<p><strong>风险管理:</strong> 预测分析帮助企业评估风险并主动降低损失，这属于自动化 AI 智能体的应用。</p>
+<p><strong>合规和监管:</strong> AI 智能体监控交易中的异常情况，以确保符合行业标准和法规，属于 AI 智能体顶级应用。</p>
+<h2>3. 零售领域的 AI 智能体</h2>
+<p><strong>个性化购物体验:</strong> AI 智能体分析客户行为，提供产品推荐，从而提高销售额和满意度，属于 AI 智能体在商业中的应用。</p>
+<p><strong>库存管理:</strong> AI 智能体通过实时监控库存水平，优化库存，避免库存过剩和缺货，属于 AI 智能体应用案例。</p>
+<p><strong>价格优化:</strong> AI 智能体根据市场趋势动态调整价格，最大限度地提高收入并保持竞争力，属于 AI 智能体在商业中的应用。</p>
+<p><strong>图像搜索:</strong> 客户可以通过图像搜索产品，AI 驱动的识别技术简化了购物流程，属于 AI 智能体应用案例。</p>
+<p><strong>客户支持:</strong> AI 智能体提供快速解决方案，提高整体满意度和参与度，这属于专注于零售的 AI 智能体。</p>
+<h2>4. 保险领域的 AI 智能体</h2>
+<p><strong>理赔处理:</strong> AI 智能体自动化理赔审核，加快赔付速度，提高投保人满意度，属于 AI 智能体重要的应用案例。</p>
+<p><strong>风险评估:</strong> AI 智能体评估客户资料，确保准确的风险分析和公平的保费计算，属于专门用于商业运营的 AI 智能体。</p>
+<p><strong>承保:</strong> AI 智能体简化承保流程，提高速度和准确性，提供可靠的见解，属于各种 AI 智能体应用案例。</p>
+<p><strong>客户服务:</strong> 虚拟助手高效地处理投保人的疑问，提供及时的支持，属于以客户为中心的自动化 AI 智能体应用案例。</p>
+<p><strong>欺诈检测:</strong> AI 智能体识别理赔申请中的异常情况，减少欺诈活动，维护财务稳定性，属于 AI 智能体重要的应用案例。</p>
+<h2>5. 酒店业领域的 AI 智能体</h2>
+<p><strong>个性化宾客体验:</strong> AI 智能体分析宾客喜好，提供量身定制的服务，增强满意度，属于以客户为中心的 AI 智能体应用案例。</p>
+<p><strong>自动化入住和退房:</strong> AI 智能体简化这些流程，减少等待时间，提高运营效率，属于重要的 AI 智能体应用案例。</p>
+<p><strong>虚拟礼宾服务:</strong> AI 工具提供实时建议，通过个性化协助丰富宾客体验，属于创新的自动化 AI 智能体场景。</p>
+<p><strong>预测性维护:</strong> AI 智能体监控设备性能，主动解决问题，防止中断，属于酒店业领域 AI 智能体重要的应用案例。</p>
+<p><strong>收益管理:</strong> AI 智能体利用需求预测优化定价策略，在旺季提高盈利能力，属于 AI 智能体重要的应用案例。</p>
+<h2>6. 供应链管理领域的 AI 智能体</h2>
+<p><strong>需求预测:</strong> AI 智能体预测趋势，实现精确的库存规划，防止缺货或库存过剩，这在许多 AI 智能体应用案例中都很有帮助。</p>
+<p><strong>库存优化:</strong> 实时库存监控，自动化 AI 智能体得到高效管理，降低成本，并保持运营顺畅，这属于供应链 AI 智能体应用案例。</p>
+<p><strong>路线优化:</strong> AI 智能体计算最佳路线，节省时间，降低运输成本，提高可靠性，这属于物流领域 AI 智能体在商业中的应用。</p>
+<p><strong>供应商管理:</strong> AI 智能体加强供应商关系，并利用数据优化协调与合作，属于 AI 智能体顶级应用案例。</p>
+<p><strong>风险管理:</strong> AI 智能体预测中断，使企业能够提前做好准备，并保持运营顺畅，这对于强大的 AI 智能体解决方案至关重要。</p>
+<h2>7. 法律服务领域的 AI 智能体</h2>
+<p><strong>法律研究:</strong> AI 智能体分析文件，以提高研究的准确性、效率和价值，属于法律领域 AI 智能体应用案例。</p>
+<p><strong>合同分析:</strong> AI 智能体识别风险和不一致之处，增强可靠性，防止纠纷，属于法律专业人士使用的重要 AI 智能体应用案例。你知道吗？到 2024 年，法律 AI 软件支出预计将达到约 23 亿美元，42% 的法律专业人士使用 AI 起草文件。</p>
+<p><strong>文件审查:</strong> AI 智能体管理文书工作，让律师专注于策略和客户互动，并展示 AI 智能体的商业优势。</p>
+<p><strong>预测分析:</strong> AI 智能体利用数据驱动的见解预测案件结果，从而制定有效的法律策略，这属于不断发展的 AI 智能体应用案例。</p>
+<p><strong>客户管理:</strong> AI 智能体与客户沟通，使客户保持知情，提高满意度和效率，属于 AI 智能体在法律领域的应用。</p>
+<h2>8. 汽车领域的 AI 智能体</h2>
+<p><strong>自动驾驶:</strong> 用于自动驾驶汽车的 AI 智能体，更安全的道路和更多便利是交通 AI 智能体的基准。</p>
+<p><strong>预测性维护:</strong> 车辆健康监控，AI 智能体在问题发生之前修复问题，最大限度地减少停机时间，并延长使用寿命，属于 AI 智能体应用案例。</p>
+<p><strong>车载助手:</strong> 语音控制的 AI 智能体用于导航和娱乐，更安全、更便利的驾驶被用于汽车领域 AI 智能体在商业中的应用。</p>
+<p><strong>制造优化:</strong> AI 智能体简化生产流程，提高效率，减少浪费，并推动价值提升，属于专注于汽车的 AI 智能体应用案例。</p>
+<p><strong>供应链管理:</strong> AI 智能体确保材料平稳流动，防止延误并改进生产进度，属于重要的 AI 智能体应用案例。</p>
+<h2>9. 社交媒体领域的 AI 智能体</h2>
+<p><strong>内容审核:</strong> AI 智能体检测和过滤有害或不当内容，创建更安全的平台，并展示 AI 智能体应用案例的影响。</p>
+<p><strong>个性化推荐:</strong> AI 智能体通过分析用户行为，提供量身定制的内容，从而提高参与度和满意度，这涵盖了各种 AI 智能体应用案例。</p>
+<p><strong>情感分析:</strong> AI 智能体衡量公众舆论，帮助品牌完善信息传递，改进宣传活动，并在动态的 AI 智能体商业领域保持领先地位。</p>
+<p><strong>社交媒体广告:</strong> AI 智能体优化广告投放，通过精确的目标定位和实时调整，最大限度地提高投资回报率，属于重要的自动化 AI 智能体解决方案。</p>
+<p><strong>趋势分析:</strong> AI 智能体识别新兴趋势，使企业能够有效地抓住机遇，确保在快速发展的 AI 智能体应用案例中保持相关性。</p>
+<h2>10. 电信领域的 AI 智能体</h2>
+<p><strong>网络优化:</strong> 增强网络可靠性，减少停机时间，同时确保电信领域智能系统应用的一致性能。</p>
+<p><strong>客户支持:</strong> 由自动化 AI 智能体驱动的虚拟助手及时解决疑问，提高满意度和忠诚度，属于 AI 智能体在商业运营中的重要应用案例。</p>
+<p><strong>欺诈检测:</strong> AI 智能体监控活动模式，识别和减轻欺诈行为，展示其在安全 AI 智能体应用案例中的价值。</p>
+<p><strong>预测性维护:</strong> AI 智能体解决潜在的设备故障，确保不间断的服务交付，这属于电信领域 AI 智能体重要的应用案例。</p>
+<p><strong>个性化服务:</strong> AI 智能体定制计划以满足个体客户的需求，提高满意度和保留率，属于电信领域 AI 智能体在商业运营中的应用。你知道吗？一项调查显示，69% 的客户更倾向于从提供个性化体验的品牌购买产品，这突出了定制化客户参与的重要性。</p>
+<h2>11. 教育领域的 AI 智能体</h2>
+<p><strong>个性化学习路径:</strong> AI 智能体适应学生的需求，创建量身定制的教育体验并改善结果，属于 AI 智能体重要的应用案例。</p>
+<p><strong>智能辅导系统:</strong> AI 智能体提供实时支持，有效解决挑战，增强参与度，涵盖各种 AI 智能体应用案例。</p>
+<p><strong>自动化评分:</strong> AI 智能体高效地评估学生作业，节省教育工作者的时间，同时确保一致性，属于有效的自动化 AI 智能体解决方案。</p>
+<p><strong>学生支持:</strong> AI 驱动的平台提供即时帮助，为学习者提供指导和资源，属于以学生为中心的 AI 智能体应用案例。</p>
+<p><strong>行政效率:</strong> 通过自动化行政任务，AI 智能体简化学校运营，减少工作量，提高生产力，属于教育领域 AI 智能体在商业场景中的应用。</p>
+<h2>12.  农业领域的 AI 智能体</h2>
+<p><strong>精准农业:</strong> AI 智能体分析土壤和天气数据，优化种植和收获过程，提高作物产量，并展示 AI 智能体在农业中的实际应用案例。</p>
+<p><strong>预测分析:</strong> 自动化 AI 智能体预测天气模式，帮助农民规划灌溉和种植时间表，确保关键 AI 智能体应用的效率。</p>
+<p><strong>自动化机械:</strong> AI 系统自动化种植、收获和施肥，降低劳动力成本，提高生产力，属于农业相关 AI 智能体在商业流程中的应用。</p>
+<p><strong>供应链优化:</strong> AI 智能体简化物流，减少腐败，确保高效的农产品配送，突出了 AI 智能体在农业中的有效应用案例。</p>
+<p><strong>可持续农业:</strong> AI 智能体推广环保措施，实现资源节约和可持续发展，在创新的 AI 智能体商业战略中发挥着关键作用。</p>
+<h2>13. 能源领域的 AI 智能体</h2>
+<p><strong>预测性维护:</strong> AI 智能体监控能源系统，识别潜在故障，确保不间断的电力供应，并提高可靠性，属于 AI 智能体重要的应用案例。</p>
+<p><strong>能源管理:</strong> AI 智能体优化能源消耗，降低成本，提高效率，展示 AI 智能体在能源领域的应用多功能性。</p>
+<p><strong>可再生能源优化:</strong> 自动化 AI 智能体增强太阳能和风能发电，预测峰值效率时段，推动可再生能源领域 AI 智能体商业运营的进步。</p>
+<p><strong>需求响应:</strong> AI 智能体动态平衡能源供需，提高电网稳定性和弹性，属于重要的 AI 智能体应用案例。</p>
+<p><strong>智能电网:</strong> AI 智能体集成物联网系统，增强能源分配和监控，为重要的 AI 智能体应用提供附加值见解。</p>
+<h2>14. 房地产领域的 AI 智能体</h2>
+<p><strong>房产估价:</strong> AI 智能体分析市场趋势，提供准确的评估，实现明智的投资决策，并展示 AI 智能体在房地产领域的变革性应用案例。</p>
+<p><strong>虚拟房产参观:</strong> AI 驱动的参观提高了买家的便利性，节省时间并增强用户体验，属于创新的 AI 智能体应用案例。</p>
+<p><strong>租户筛选:</strong> 自动化 AI 智能体评估申请人，确保可靠的租户选择，降低房地产管理领域 AI 智能体商业战略中的风险。</p>
+<p><strong>预测性维护:</strong> AI 智能体监控房产状况，主动解决问题，保持资产价值，属于 AI 智能体重要的应用案例。</p>
+<p><strong>市场分析:</strong> AI 智能体识别趋势，为投资者提供数据驱动的见解，突出了与房地产相关的 AI 智能体应用的有效性。</p>
+<h2>15. 物流领域的 AI 智能体</h2>
+<p><strong>路线优化:</strong> AI 智能体计算高效的配送路线，节省成本并确保货物按时运输，属于物流领域 AI 智能体重要的应用案例。</p>
+<p><strong>仓库管理:</strong> 自动化存储和检索，AI 智能体提高库存准确性和运营效率，属于重要的 AI 智能体应用案例。</p>
+<p><strong>预测性维护:</strong> AI 智能体监控设备，尽早检测潜在故障，最大限度地减少关键 AI 智能体商业流程中的中断。你知道吗？西门子使用 AI 智能体进行预测性维护，停机时间减少了 40%，生产力提高了 10%。</p>
+<p><strong>需求预测:</strong> AI 智能体预测库存需求，确保运营顺畅并满足客户期望，属于创新的自动化 AI 智能体解决方案。</p>
+<p><strong>风险管理:</strong> AI 智能体识别中断，实现主动响应，在动态的 AI 智能体应用中保持可靠的物流流程。</p>
+<p>这 15 个 AI 智能体应用案例展示了企业如何利用 AI 解决挑战，抓住机遇，提高效率，并推动创新以实现增长。了解 AI 智能体对企业的益处解释了为什么公司采用这些系统来有效地转变运营，降低成本，并提高客户满意度。告别瓶颈，使用 Nurix AI 智能体。提供即时响应，实时解决问题，并通过 AI 驱动的协助提高客户满意度。</p>
+<h2>AI 智能体实施的益处</h2>
+<p>AI 智能体通过自动化、可扩展性和智能决策彻底改变了各个行业，改善了工作流程，降低了成本，并提高了各种 AI 智能体应用案例中的客户满意度。以下是 AI 智能体应用如何提高效率，改进决策，并使组织能够在动态的 AI 智能体应用案例中保持竞争力的方法。</p>
+<h3>实施 AI 智能体的关键益处：</h3>
+<p><strong>增强的运营效率:</strong> AI 智能体实时处理数据，查找问题并优化工作流程，以便所有行业的 AI 智能体应用案例中的运营都能顺利进行。</p>
+<p><strong>降低成本:</strong> 使用 AI 智能体实现客户服务自动化，可大幅降低劳动力成本，从而在资源密集型场景中节省大量资金。</p>
+<p><strong>提高客户满意度:</strong> AI 智能体全天候可用，可立即处理询盘，提供快速解决方案，从而提高商业环境中的客户忠诚度。</p>
+<p><strong>可扩展性:</strong> AI 智能体将重复性任务从员工手中解放出来，以便团队能够专注于高价值自动化 AI 智能体角色中的创新。</p>
+<p><strong>提高生产力:</strong> AI 智能体将员工从重复性任务中解放出来，使团队能够专注于企业内高价值自动化 AI 智能体角色中的创新。你知道吗？近 50% 的销售时间浪费在非生产性任务上，这突出了通过 AI 智能体实现工作流程自动化的必要性。</p>
+<p><strong>数据驱动的决策:</strong> AI 智能体快速分析大型数据集，生成可操作的见解，从而改进各种 AI 智能体应用案例中的决策。</p>
+<p><strong>持续可用性:</strong> AI 智能体全天候运行，确保不间断的服务和提高客户互动。</p>
+<p><strong>预测能力:</strong> AI 智能体预测趋势和行为，使企业能够保持竞争力，这在动态的 AI 智能体应用环境中至关重要。</p>
+<p><strong>简化的工作流程:</strong> AI 智能体自动化复杂流程，减少人工任务，提高效率，并在 AI 智能体关键商业场景中实现协作。</p>
+<p><strong>增强的员工体验:</strong> AI 智能体通过减少重复性工作并促进协作和创新，提高工作满意度，这属于创新的自动化 AI 智能体环境。</p>
+<p>实施 AI 智能体可提高效率，增强客户满意度，并实现更智能的决策，使其成为旨在创新和在竞争激烈的市场中蓬勃发展的组织的必备工具。</p>
+<h2>AI 智能体的挑战和注意事项</h2>
+<p>实施 AI 自身也存在障碍。企业必须认真处理这些挑战，从集成复杂性到伦理问题，才能成功部署 AI 智能体应用案例。</p>
+<p>想要克服这些挑战？以下是企业如何应对 AI 智能体应用的复杂性，以有效地释放自动化 AI 智能体的变革力量的方法。</p>
+<h3>实施 AI 智能体的关键挑战：</h3>
+<p><strong>对变革的抵制:</strong> 员工会担心工作岗位流失或新系统。清晰的沟通和培训使 AI 智能体在商业中的采用变得容易。</p>
+<p><strong>选择合适的 AI 工具:</strong> 功能、可扩展性和集成确保企业为其 AI 智能体应用案例和运营需求选择合适的平台。</p>
+<p><strong>与现有系统的集成:</strong> 确保与 ERP 和 CRM 系统的兼容性需要测试和调整，以便在关键 AI 智能体应用工作流程中无缝集成。</p>
+<p><strong>数据质量和准备:</strong> 干净、高质量的数据是自动化 AI 智能体取得成功成果的基础，需要为各种 AI 智能体应用案例中的准确结果做好充分准备。</p>
+<p><strong>安全性和合规性:</strong> 健全的安全措施保护敏感数据。遵守 GDPR 等法规可增强客户为中心的 AI 智能体商业解决方案的信任度。</p>
+<p><strong>定义明确的目标:</strong> 使 AI 实施与可衡量的目标保持一致，确保项目专注于关键 AI 智能体应用和商业战略中的有效结果。</p>
+<p><strong>持续维护和监控:</strong> 定期更新和监控可维护 AI 的性能，解决各种 AI 智能体应用案例中不断变化的业务需求。</p>
+<p><strong>试点测试:</strong> 在较小的范围内测试自动化 Agentic AI，允许在关键的 AI 智能体应用案例中全面部署之前评估和改进性能。</p>
+<p><strong>伦理考虑:</strong> 解决算法中的偏差并确保透明度对于在面向客户的 AI 智能体商业场景中的道德部署至关重要。</p>
+<p><strong>容错机制:</strong> 实施错误恢复系统可确保 AI 智能体可靠运行，最大限度地减少基本 AI 智能体应用工作流程中的中断。</p>
+<p>成功部署 AI 智能体应用案例需要从战略角度解决这些挑战。企业可以通过有效规划和确保道德、可靠的实施来释放创新和效率。</p>
+<h2>AI 智能体的未来前景</h2>
+<p>AI 智能体的未来在于更智能的自动化、更深入的个性化和无缝的创新。各行各业才刚刚开始挖掘其变革潜力。2023 年全球 AI 市场价值约为 1966.3 亿美元，预计 2024 年至 2030 年的复合年增长率将达到 36.6%。以下是 AI 智能体应用案例如何塑造未来，提供无与伦比的解决方案并重新定义各行各业的业务运营。</p>
+<h3>AI 智能体的未来前景：</h3>
+<p><strong>高级自动化:</strong> 未来的自动化 AI 智能体将与业务系统无缝集成，自主处理复杂任务，以最大限度地减少人工干预，并提高各行业的运营效率。</p>
+<p><strong>改进的个性化:</strong> AI 智能体将分析大量数据集以提供量身定制的体验，预测零售、医疗保健和教育等行业中的客户偏好和需求。</p>
+<p><strong>全行业创新:</strong> AI 智能体将通过使企业能够快速进行实验来简化产品开发，从而根据实时数据和客户反馈促进持续改进。</p>
+<p><strong>主动决策:</strong> 通过利用预测分析，面向企业的 AI 智能体将做出实时、数据驱动的决策，从而使组织能够快速适应不断变化的市场需求。</p>
+<p><strong>与人类的协作:</strong> AI 智能体将在其不断发展的同时增强人类能力，协助决策和战略执行，而不是完全取代人类角色。</p>
+<p><strong>多智能体系统:</strong> 多个 AI 智能体的协调系统将实现共同的目标，提高供应链管理和物流的效率和有效性。</p>
+<p><strong>生成式 AI 的集成:</strong> 利用生成式 AI，智能体将自主创建内容、想法和解决方案，为各行各业的创造力和问题解决开辟新的机遇。</p>
+<p><strong>增强型工具利用率:</strong> AI 智能体应用能够与各种应用程序和 API 交互，将无缝执行多步骤任务，从而扩展其在工作流程中的实用性。</p>
+<p><strong>关注伦理考虑:</strong> AI 智能体的兴起将需要更强大的伦理框架，确保所有 AI 智能体应用案例中的公平、透明和负责任的部署。</p>
+<h2>结论</h2>
+<p>AI 智能体的可能性非常广泛，它正在以看似未来感的方式影响各个行业。从简化客户互动到自动化工作流程，它们在现实世界中的影响是不可否认的。</p>
+<p>随着企业探索 AI 智能体的应用案例，从自动化 AI 智能体到个性化解决方案，其益处变得越来越清晰。面向企业的 AI 智能体正在推动更智能的决策，释放效率，并为更具活力的未来铺平道路。</p>
+<h3>使用 Nurix AI 加速您的业务增长！</h3>
+        <small class="page-url url "><a href="https://www.nurix.ai/resources/ai-agents-use-cases-in-the-real-world" target="_blank">(https://www.nurix.ai/resources/ai-agents-use-cases-in-the-real-world)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="AI-Agents-Market-Size,-Share-and-Global-Forecast-to-2030-|-MarketsandMarkets">
+        <h3 class="page-name title"><span class="page-emoji ">📈&nbsp;</span>AI Agents Market Size, Share and Global Forecast to 2030 | MarketsandMarkets</h3>
+        <small class="page-url url "><a href="https://www.marketsandmarkets.com/Market-Reports/ai-agents-market-15761548.html" target="_blank">(https://www.marketsandmarkets.com/Market-Reports/ai-agents-market-15761548.html)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 分析了AI代理市场的规模、增长预测，并指出了自然语言处理在其中的关键作用。<br></small>
+    </div>
+    <div class="page-content content"><h2>AI 代理市场报告 (432页)</h2>
+<p>预计AI代理市场规模将从2024年的51亿美元增长到2030年的471亿美元。这一显著增长，其特点是在2024年至2030年期间复合年增长率（CAGR）高达44.8％，主要受自然语言处理技术进步的推动。随着GPT-4o、AgentGPT等AI代理在理解和生成人类语言方面能力的提高，它们能够处理更复杂、更细致的上下文感知用户交互。这带来了更好的用户体验，从而促使AI代理在客户服务、医疗保健和金融等行业得到更广泛的应用。自然语言处理 (NLP) 的增强不仅帮助AI代理处理复杂的查询，还使它们能够轻松适应不同的方言，从而增加了其全球适用性和市场覆盖范围。“构建自己的代理”解决方案也正在推动行业发展，使公司能够设计专门定制的AI代理以满足其特定需求。多代理系统的日益普及，其中多个AI代理协同工作以解决具有挑战性的问题，是另一个重要的市场扩张驱动力。AI代理是自主或半自主的软件，旨在执行特定任务或根据输入数据做出实时决策。这些复杂的AI工具通常包括NLP、机器学习和计算机视觉。具体来说，这些代理在有限的环境中与用户、系统或其他代理交互以实现特定目标。从完全独立工作无需任何人工干预的代理到需要偶尔外部指导的半自主代理，这些代理被用于客户服务、后端流程自动化以及作为辅助软件进行决策和数据分析。</p>
+<h3>生成式AI对AI代理的影响</h3>
+<p>了解研究中考虑的假设，请索取免费样品报告。</p>
+<h3>市场动态</h3>
+<h4>驱动因素：AI代理与企业级自动化工具的整合日益增强</h4>
+<p>AI代理与企业级自动化工具整合的兴起已成为人工智能代理市场的主要驱动力，这极大地增强了企业在不同业务职能方面的能力。企业可以使用AI代理自动化各种复杂流程，减少人工干预以避免人为错误。例如，在银行服务中，集成到自动化平台的AI代理执行从欺诈检测和客户支持到实时合规性监控等任务。根据MarketsandMarkets的估计，由AI驱动的自动化可使生产力提高20-30％，其中AI代理将在这种变化中发挥重要作用。该领域的领先公司，如UiPath和Blue Prism，已开始在其RPA工具中整合人工智能能力，以便可以在不中断的情况下扩展跨业务边界的自动化项目。此举不仅可以降低运营支出，还可以通过这些AI代理提供的实时数据分析来改进决策。</p>
+<h4>限制因素：高度管制的行业中的数据隐私规范</h4>
+<p>尽管AI代理具有巨大的潜力，但它们的大规模应用受到数据隐私和合规性复杂性的阻碍。为了使AI代理正常运行，它们本质上需要访问大量数据，其中一些数据可能是个人或机密数据。根据立法，包括欧盟的GDPR（通用数据保护条例）和美国的健康保险携带和责任法案（HIPAA），对这些信息的利用受到严格审查，这些法规规定了数据收集、存储和处理的方式。根据行业估计，近60％的公司表示担心部署AI代理，因为他们不想冒不合规的风险，这可能导致巨额罚款甚至法律纠纷。对于在多个司法管辖区运营的全球性组织而言，这一限制尤其困难，因为它使他们几乎不可能由于各种相互矛盾的法定规定而扩大AI代理部署活动。</p>
+<h4>机遇：为利基业务角色量身定制的个性化虚拟助理的出现</h4>
+<p>AI代理市场的一个特定增长机会在于为利基行业设计的专业虚拟助理的扩展领域。与通用虚拟助理不同，专业虚拟助理旨在满足法律、医疗保健或金融等行业的独特需求。例如，在法律领域，AI代理协助起草文件、进行研究和进行合规性监控，从而大大减少了律师的工作量。根据MarketsandMarkets的估计，由于特定行业对高度专业化AI工具的需求不断增长，未来五年，行业特定AI解决方案市场将以约35％的复合年增长率增长。此外，随着AI助理不仅以行业为中心，而且根据用户的偏好和与他们职业相关的技能进行个性化定制，“超级个性化”的出现也增强了这种变化。能够胜过其他公司胜任地生产和交付此类专业智能代理的供应商将具有额外优势，因为此类系统已深度集成到各种企业业务职能中。</p>
+<h4>挑战：AI代理在动态现实世界条件下实现真正上下文理解的不足</h4>
+<p>在动态的日常环境中实现真实的上下文理解已成为AI代理市场的一个紧迫挑战。尽管它们在处理语言方面的有效性不断提高，但AI代理有时无法在长时间或参与多主题对话时保持上下文。例如，在客户服务或销售中，AI代理可以处理一系列简单的请求，但在对话突然改变时却难以应对，从而导致用户感到沮丧。在麻省理工学院斯隆管理学院2022年的一项调查中，75％部署AI代理的公司遇到了与上下文准确性相关的问题，尤其是在多轮对话中。当前模型缺乏理解AI系统所需的各种文化细微差别和特定领域术语，这进一步加剧了这些问题。这构成了其采用的重大障碍，因为组织不愿在需要准确解释的关键高风险环境中使用它们。</p>
+<h3>AI 代理市场生态系统</h3>
+<h4>按代理系统划分，2024年至2030年期间，多代理系统将经历最快增长</h4>
+<p>由于对能够在分散环境中工作的AI解决方案的需求不断增长，尤其是在智能电网、自动驾驶汽车和分布式计算网络中，多代理系统细分市场预计将在未来五年内迅速增长。多代理系统能够扩展和适应复杂的实际问题，这不仅是技术优势，也是希望以变革性方式利用AI的行业的关键推动因素。多代理系统的快速发展归因于其与单一代理相比在处理复杂和动态任务方面的无与伦比的能力。这种同时处理多个任务的能力对于解决需要高度协调性和适应性的环境中的问题至关重要。例如，在物流领域，可以通过一个代理实现库存管理，通过第二个代理规划最佳路线，并通过第三个代理监控实时交付条件来制定多代理供应链运营。这将提高在时间和精度至关重要的行业的解决问题效率。</p>
+<h4>按产品类型划分，2024年，随时部署的代理将占据最大的市场份额</h4>
+<p>“随时部署”代理的简单性和即时影响使其在各种规模的企业中都很受欢迎。这些AI代理本质上是即插即用的替代方案，在插入公司运营之前不需要复杂的开发或定制流程。这尤其对需要快速高效的工具以保持竞争力的小型和中型企业而言是一个巨大的优势。希望改进其客户支持的公司可以在几小时内安装预构建的聊天机器人，从而优化其客户互动，而不是等待数月来构建定制的AI系统。真正的优势在于，这些代理不仅可以立即解决问题，而且还提供持续的支持，因此企业无需担心维护。正是这种以经济高效的价格快速安装以及即时结果相结合，使随时部署的代理在市场上保持领先地位。</p>
+<h4>按代理角色划分，在预测期内，编码和软件开发预计将见证可观的复合年增长率</h4>
+<p>编码和软件开发代理的采用率正在上升，因为它们可以简化开发过程，提高生产力并缩短上市时间。这些基于AI的代理可以自动创建代码，调试问题并提出改进建议，从而使开发人员能够专注于更复杂和更有创意的任务。例如，GitHub Copilot使用人工智能推荐用户输入的代码部分以及完整的代码行，从而大大加快了编程速度。同样，像DeepCode这样的平台提供即时代码检查并提出建议，从而减少代码中出现错误的可能性，同时还提高代码质量。这在软件开发周期迅速，新软件版本之间的时间间隔越来越短的不同行业中对这些代理的需求很高。编码代理不仅加快了开发过程，而且还使初学者更容易进行编码，从而确保更广泛地参与创建将在不同行业中使用的程序。</p>
+<h4>按最终用户划分，2024年，BFSI部门将占据最大的市场份额</h4>
+<p>由于BFSI部门对在严格控制的环境中提高效率、安全性和客户参与度的迫切需求，它是AI代理最大的最终用户。在实时欺诈检测中，AI代理是处理大量交易数据以检测可疑模式的重要组成部分。例如，摩根大通先进的AI代理驱动监控系统可以在欺诈影响用户之前将其阻止。在客户服务方面，美国银行的Erica等AI增强型虚拟助理执行检查账户余额和申请贷款等例行任务，从而允许人工代理从事更复杂的任务。使用这些AI代理的另一个重要方面是自动化合规程序和监管报告，这在准确性和遵守法规非常重要的行业中起着至关重要的作用。鉴于当前金融法规的改革，AI代理帮助银行和其他金融机构有效地保持合规性，减少了手动后端任务的负担。</p>
+<h4>按地区划分，在预测期内，亚太市场将经历最快的增长率</h4>
+<p>亚太地区AI代理市场的快速增长正受到技术进步、广泛的数字化转型举措以及私营和公共部门对AI研发支出的不断增加的推动。中国、日本和韩国在各个行业中使用AI代理方面处于领先地位。例如，中国平安保险已将其AI代理集成到其客户服务系统中，该系统现在处理超过60％的客户咨询，从而帮助缩短响应时间并提高客户满意度。在日本，三菱UFJ金融集团（MUFG）利用AI代理简化贷款审批流程和欺诈检测等关键职能，从而使银行业务更高效、更安全。除此之外，韩国还在其智慧城市项目中使用AI代理，其中包括优化交通管理以节约能源和预防犯罪——这表明该国完全致力于将AI与城市基础设施相结合。新加坡也是主要的参与者，政府鼓励使用人工智能（AI）——例如，通过实施国家AI战略等计划，其中包括在医疗机构中建立AI代理以帮助诊断和患者管理。</p>
+<h3>主要市场参与者</h3>
+<p>AI代理解决方案和服务提供商已实施多种类型的市场策略，例如新产品发布、产品升级、伙伴关系和协议、业务扩展以及并购，以加强其在市场中的产品。AI代理市场的一些主要参与者包括谷歌（美国）、Amelia（美国）、IBM（美国）、OpenAI（美国）和AWS（美国），以及Fluid AI（印度）、Stability AI（英国）、Cognigy（德国）、Aisera（美国）和Cognosys（加拿大）等中小企业和初创企业。</p>
+<h3>想要探索能够推动AI代理市场新收入的隐藏市场？解锁见解</h3>
+<h4>报告范围</h4>
+<p>&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;报告指标&lt;/td&gt;&lt;td&gt;详情&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;可用年份的市场规模&lt;/td&gt;&lt;td&gt;2019-2030&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;考虑的基准年&lt;/td&gt;&lt;td&gt;2023&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;预测期&lt;/td&gt;&lt;td&gt;2024-2030&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;预测单位&lt;/td&gt;&lt;td&gt;百万美元&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;涵盖的细分市场&lt;/td&gt;&lt;td&gt;代理系统、产品类型、代理角色、最终用户和地区&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;涵盖的地区&lt;/td&gt;&lt;td&gt;北美、欧洲、亚太地区、中东和非洲以及拉丁美洲&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;涵盖的公司&lt;/td&gt;&lt;td&gt;微软（美国）、IBM（美国）、谷歌（美国）、Oracle（美国）、AWS（美国）、英伟达（美国）、Meta（美国）、Salesforce（美国）、OpenAI（美国）、LivePerson（美国）、Tempus AI（美国）、Kore.ai（美国）、LeewayHertz（美国）、CS DISCO（美国）、Aerogility（英国）、GupShup（美国）、HireVue（美国）、Helpshift（美国）、Fluid AI（印度）、Amelia（美国）、Irisity（瑞典）、Cogito（美国）、SmartAction（美国）、Cognosys（加拿大）、Aisera（美国）、Markovate（美国）、Rasa（美国）、Stability AI（英国）、Infinitus Systems（美国）、Sierra（美国）、Level AI（美国）、Sybill（美国）、Truva（美国）、Leena AI（美国）、Tars（美国）、Talkie.ai（美国）、HeyMilo AI（美国）、CUJO AI（美国）、K Health（美国）、Locale.ai（美国）、Newo.ai（美国）、Beam AI（美国）和Cognigy（德国）。&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</p>
+<h4>按地区划分：</h4>
+<p>2024年7月，Salesforce宣布推出Einstein Service Agent，这是Salesforce的首个完全自主的AI代理。Einstein Service Agent凭借其理解和处理各种服务问题（无需预编程场景）的能力，使传统的聊天机器人过时，从而帮助提高客户服务的效率。</p>
+<p>2024年5月，IBM和Salesforce宣布扩大战略合作伙伴关系，这将把IBM watsonx AI和数据平台功能与Salesforce Einstein平台结合起来，为客户提供更大的AI和数据部署选择和灵活性。这将使团队能够做出数据驱动的决策，并在工作流程中直接采取行动。</p>
+<p>2024年5月，微软宣布其“团队副驾驶”，它与Microsoft Teams、Loop和Planner等平台无缝集成，提供一系列超越单个用户通常从AI工具获得的功能。微软的团队副驾驶是一项先进的AI功能，旨在通过充当宝贵的团队成员（而不仅仅是个人助理）来增强团队内的协作和生产力。</p>
+<p>2024年4月，IVeS、Sopra Steria和IBM合作创建了IRIS，这是世界上第一个面向聋人和听力障碍者的会话助手。“signbot”利用人工智能的力量实现数字手语交流，标志着无障碍领域的一个重要里程碑。</p>
+<p>2024年4月，谷歌通过Gemini API在公开预览中向180多个国家/地区提供Gemini 1.5 Pro。它具有首个原生音频（语音）理解能力和新的文件API，可轻松处理文件。该公司还推出了系统指令和JSON模式等新功能，使开发人员能够更好地控制模型的输出。</p>
+<p>2024年4月，微软推出了其面向安全的Copilot。该解决方案将帮助安全和IT专业人员发现其他人错过的内容，加快速度并增强团队专业知识。Copilot的信息来自大规模数据和威胁情报，包括微软每天处理的超过78万亿个安全信号，并与大型语言模型相结合，以提供定制的见解并指导后续步骤。</p>
+<p>AI代理是自主或半自主执行任务和做出决策的软件实体，利用机器学习、NLP和其他AI技术。它们在特定环境中运行，与用户、系统或其他代理交互，其特点是能够自适应学习、上下文感知处理以及在各种应用程序中的自主功能。</p>
+<h4>2024-2030年期间，AI代理市场的预期复合年增长率是多少？</h4>
+<p>预计2024年至2030年期间，AI代理市场的复合年增长率为44.8％。</p>
+<h4>生成式AI和网络安全如何融合成一种融合技术？</h4>
+<p>生成式AI正在彻底改变AI代理市场，通过显著增强其以更人性化和上下文细致的方式创建、适应和响应的能力。集成GPT-4/4o等生成模型使AI代理能够进行更自然和动态的交互，无论是创建个性化的客户服务回复、生成内容，还是编写复杂的代码。此功能正在扩展AI代理在各行各业的应用，使其更加多才多艺和有效，并推动其采用，因为它们现在可以提供以前传统AI代理无法提供的更复杂、更量身定制的解决方案。</p>
+<h4>支持AI代理市场增长的关键驱动因素是什么？</h4>
+<p>推动AI代理市场增长的关键因素包括：自然语言处理（NLP）技术的加速发展增强了AI代理的理解和交互能力；对高度个性化数字体验的需求推动AI代理在面向客户的角色中的采用率提高；以及将AI代理集成到企业业务流程自动化中以提高运营效率和降低成本。</p>
+<h4>AI代理市场中主要的最终用户有哪些？</h4>
+<p>AI代理市场领先的企业最终用户包括BFSI、医疗保健和生命科学以及专业服务提供商。</p>
+<h4>AI代理市场的主要供应商有哪些？</h4>
+<p>AI代理市场的一些主要参与者包括微软（美国）、IBM（美国）、谷歌（美国）、甲骨文（美国）、AWS（美国）、英伟达（美国）、Meta（美国）、Salesforce（美国）、OpenAI（美国）、LivePerson（美国）、Tempus AI（美国）、Kore.ai（美国）、LeewayHertz（美国）、CS DISCO（美国）、Aerogility（英国）、GupShup（美国）、HireVue（美国）、Helpshift（美国）、Fluid AI（印度）、Amelia（美国）、Irisity（瑞典）、Cogito（美国）、SmartAction（美国）、Cognosys（加拿大）、Aisera（美国）、Markovate（美国）、Rasa（美国）、Stability AI（英国）、Infinitus Systems（美国）、Sierra（美国）、Level AI（美国）、Sybill（美国）、Truva（美国）、Leena AI（美国）、Tars（美国）、Talkie.ai（美国）、HeyMilo AI（美国）、CUJO AI（美国）、K Health（美国）、Locale.ai（美国）、Newo.ai（美国）、Beam AI（美国）和Cognigy（德国）。</p>
+<p>在二次研究过程中，参考了各种来源，以识别和收集本研究的信息。二手资料包括公司年度报告、新闻稿和投资者演示文稿；白皮书、期刊和经认证的出版物；以及来自知名作者、目录和数据库的文章。通过利用其他二手来源，例如博客、政府白皮书、期刊和供应商网站，收集了其他数据。不同国家对AI代理的支出是根据相应的来源收集的。二次研究主要用于获取与行业价值链和供应链相关的重要信息，以根据主要参与者的解决方案、服务、市场分类和细分来识别主要参与者，并根据主要参与者的产品、与代理系统、产品类型、代理角色、最终用户和地区相关的行业趋势以及从市场和技术角度来看的关键发展进行细分。</p>
+<h3>初次研究</h3>
+<p>在初步研究过程中，对来自供需双方的各种主要来源进行了访谈，以获取有关市场的定性和定量信息。来自供给方的主要来源包括各种行业专家，包括首席体验官（CXO）；副总裁（VP）；来自业务发展、营销和AI代理专业知识的总监；来自AI代理解决方案供应商、SI、专业服务提供商和行业协会的相关关键高管；以及主要意见领袖。</p>
+<p>进行初步访谈是为了收集定性和定量见解，其中包括但不限于市场统计数据、从解决方案和服务中收集的收入数据、市场细分、市场规模估计、市场预测和数据三角测量。初步研究还用于帮助了解与技术、应用、部署和地区相关的各种趋势。对来自需求方面的利益相关者，例如首席信息官（CIO）、首席技术官（CTO）、首席战略官（CSO）和使用AI代理解决方案的最终用户进行了访谈，以了解买方对供应商、产品、服务提供商以及他们目前使用AI代理解决方案和服务的看法，这将影响整体AI代理市场。</p>
+        <small class="page-url url "><a href="https://www.marketsandmarkets.com/Market-Reports/ai-agents-market-15761548.html" target="_blank">(https://www.marketsandmarkets.com/Market-Reports/ai-agents-market-15761548.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="AI-Agents-in-Practice:-Types-and-Use-Cases-|-Codica">
+        <h3 class="page-name title"><span class="page-emoji ">🔮&nbsp;</span>AI Agents in Practice: Types and Use Cases | Codica</h3>
+        <small class="page-url url "><a href="https://www.codica.com/blog/brief-guide-on-ai-agents/" target="_blank">(https://www.codica.com/blog/brief-guide-on-ai-agents/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 提供了对AI代理未来趋势的专家观点，展望其如何推动企业智能化转型。<br></small>
+    </div>
+    <div class="page-content content"><h2>AI 代理概述</h2>
+<p>AI 代理是代表用户或系统执行任务的软件。这些 AI 实体使用人工智能并独立运行。与传统软件不同的是，AI 代理可以从其环境中学习。AI 代理可以像聊天机器人一样简单，也可以像自动驾驶系统一样复杂。</p>
+<h3>AI 代理及其核心特征说明</h3>
+<p>与传统软件相比，AI 代理具有更高级的特性。它们是自主的、适应性强的，并且能够学习。自主性意味着它们可以自行采取行动以实现既定的目标，而无需人工干预。如果 AI 代理注意到环境的变化或获得新的输入，它的行为将相应改变。最后，AI 代理可以从过去的经验和结果中学习，从而随着时间的推移不断改进自身。例如，AI 代理可以收集和处理信息，例如传感器数据或用户交互。由于上述能力和推理能力，AI 代理可以解决从简单到复杂的问题。此外，如果经过适当的训练和编程，它们可以应对复杂的情况。</p>
+<h3>AI 代理与传统软件程序的区别</h3>
+<p>这些技术的根本区别在于其运行原理。传统软件程序基于一组指令，这些指令集是为软件使用的每种可能情况而创建的。这种方法限制了传统软件在新情况或不可预见情况下的行为。相比之下，AI 代理使用算法来适应和学习。这些算法允许 AI 根据数据而不是预设规则做出决策。因此，如果数据发生变化，AI 代理会修改其行为。这一特性扩展了其能力范围，并有助于 AI 代理随着时间的推移不断改进。此外，AI 代理可以基于当前反馈实时与环境交互并调整行为。</p>
+<h3>AI 代理发展中的关键里程碑</h3>
+<p>虽然近年来我们见证了人工智能的突破，但此类解决方案的开发始于更早时期。专家系统早在 20 世纪 70 年代至 80 年代就出现了。这些解决方案可以模仿特定领域的决策过程。例如，DENDRAL 可以假设有机化合物的分子结构，从而帮助化学家开展工作。另一个例子是 MYCIN，它是在 DENDRAL 的经验基础上开发的，于 20 世纪 70 年代在斯坦福大学设计。该专家系统可以分析多种因素，并建议抗生素来治疗细菌感染。尽管它很有帮助，但 20 世纪 70 年代的硬件限制阻止了它在实际临床环境中的使用。然而，这个系统成为 AI 代理发展中的一个重要事件。来源：slideshare.net  虽然人工智能发展成就曾一度引起轰动，但它们从未产生实质性成果。曾预测财富 500 强公司将使用人工智能，但这些预测在 20 世纪 80 年代的人工智能寒冬时期破灭了，当时对人工智能研究的投资降至零。然而，人工智能的又一次突破发生在 20 世纪 80 年代后期。这一次，IBM T.J. Watson 研究中心的成员提出，机器中的知识获取应该通过统计分析来实现。这一建议与当时普遍采用的人工智能任务和行动方法相反，为人工智能的进一步发展奠定了基础。下一个里程碑发生在 20 世纪 90 年代至 21 世纪 10 年代，当时机器学习模型取得了突破。由于机器学习，AI 代理能够在没有明确编程的情况下分析数据。因此，公司将其作为推荐系统和自然语言处理系统推出。亚马逊、eBay 和 Coursera 等公司都属于此类公司。近年来，AI 代理在许多方向上都有发展。深度学习和神经网络为 AI 代理带来了新的能力。这些技术有助于图像识别、驾驶车辆和理解自然语言。AI 代理的学习能力导致了机器人技术和游戏玩法的许多改进。</p>
+<h2>AI 代理的类型</h2>
+<p>AI 代理针对不同的任务而设计，具有不同的能力和用途。基于这些方面，我们可以概述人工智能中几种类型的代理，如下所述。</p>
+<h3>反馈式代理</h3>
+<p>反馈式代理是最简单的一种此类技术。它们基于映射的动作输入进行操作，而不考虑过去的经验。这意味着此类代理基于对特定事件的预编程反应而采取行动。反馈式代理没有记忆，也不会从交互中学习。它们适用于需要快速响应的简单、可预测和重复性任务。</p>
+<h4>反馈式 AI 代理示例</h4>
+<p>反馈式代理通常用于游戏中的人物角色。这些代理具有简单的规则来与玩家互动。此外，这种类型的代理也可以在家用自动化中使用。当有移动时，它们会打开灯；当一段时间内没有检测到移动时，它们会关闭灯。</p>
+<h3>权衡式代理</h3>
+<p>这种类型的代理比反馈式代理更高级。权衡式代理可以根据其知识和目标进行推理和规划。他们对世界有基本的了解，并利用这个模型来执行任务。由于权衡式代理可以制定目标、计划并做出决策，因此它们可以在比反馈式代理更复杂的环境中行动。</p>
+<h4>权衡式 AI 代理示例</h4>
+<p>我们可以在决策和规划至关重要的任务中找到权衡式代理。因此，权衡式代理充当制造业和探险任务中的机器人。例如，IBM Watson 可以利用视觉识别技术帮助你发现飞机上的故障和缺陷。</p>
+<h3>混合式代理</h3>
+<p>为什么是“混合式”？因为它们结合了反馈式代理和权衡式代理的优势。在需要快速响应的地方，混合式代理使用反馈式方法。如果需要基于实时数据做出决策，则会激活权衡式方面。因此，混合式代理可以快速响应简单的情况，并且可以在环境变化时进行规划和决策。</p>
+<h4>混合式 AI 代理示例</h4>
+<p>混合式智能代理的示例包括自动驾驶汽车和高级机器人系统。对于自动驾驶汽车，系统会规划路线并可以对障碍物做出反应。混合式机器人系统可以根据预定义的输入完成任务，并在需要时适应不断变化的环境。</p>
+<h3>学习型代理</h3>
+<p>这些技术在需要持续改进的地方非常有用。你可以在 eBay 和 Netflix 等市场和流媒体平台上看到它们的实际应用。学习型代理分析客户的输入，并建议相关的产品或节目。另一个应用是自学习聊天机器人。由于具有学习能力，此类聊天机器人可以以有意义且类似人类的方式处理客户查询。</p>
+<h2>AI 代理的应用</h2>
+<h3>客户服务</h3>
+<p>AI 代理帮助你的客户解决问题并了解你平台上的流程。因此，你的客户可以全天候快速获得其查询的答案。此外，你可以使用自然语言处理 (NLP) 来改进你的 AI 代理。这样，他们就能理解复杂的查询并提供个性化的支持。</p>
+<h3>医疗保健</h3>
+<p>在医疗保健领域，AI 代理工具可以承担人工工作量，帮助接待员和助理专注于更有意义的任务。有了 AI 代理，病人不必等待 20 分钟才能告知他们取消预约。因此，这带来了更好的服务和预约体验。AI 代理可以加快重复处方的签发速度。他们在与病人的通话过程中收集信息，并将其发送给医生。医生检查处方的正确性，并将其签发给病人。该流程简单且确保安全，因为医生会检查所有内容。然后，医生通过 AI 代理将处方发送给病人。观看 NVIDIA 关于 AI 代理如何帮助医疗保健的简短视频。</p>
+<h3>金融</h3>
+<p>AI 代理在金融行业中非常有价值。由于 AI 可以处理大量数据，因此它可以发现异常和潜在的欺诈活动。客户还可以快速获得有关其账户、余额和交易的查询回复。此外，你还可以获得机器人帮助，它会根据你的目标和风险承受能力建议你进行有前景的投资。</p>
+<h3>电子商务</h3>
+<p>电子商务市场平台也受益于 AI 代理。它们为推荐引擎提供动力，并帮助客户查找商品。此外，AI 代理处理订单方面的沟通，因此卖家可以简化其运营。由于 AI 代理可以检测欺诈，因此它们可以保护卖家免受非法活动的影响，从而使电子商务平台值得信赖。AI 代理还可以帮助你进行库存管理和交付。因此，你或你平台上的卖家知道他们需要什么库存以及应该如何处理订单。</p>
+<h3>制造业</h3>
+<p>简化制造业运营至关重要，而 AI 代理可以帮助解决流程中的关键点。AI 代理可以帮助检测生产过程和设备中的异常情况，并防止重大故障。它们还可以安排生产过程并确保优化资源利用率。此外，AI 代理可以根据传感器和摄像机的数据检查产品并发现缺陷。通过监控生产环境，AI 代理可以检测危险情况，并确保生产环境的安全。</p>
+<h2>AI 代理的实际示例</h2>
+<h3>虚拟助手</h3>
+<p>这些工具使用 NLP 和理解力来帮助完成不同的任务。AI 虚拟助手可以管理日程安排、回答查询并提供建议。这些生成式 AI 代理处理海量数据以学习并改进自身。让我们来看一些 AI 虚拟代理的示例。苹果的 Siri、谷歌助手和亚马逊的 Alexa 是帮助你执行不同任务的最佳 AI 代理。你可以控制智能家居设备并获取天气预报。此外，虚拟助手使你能够在线订购产品、获取烹饪食谱和处理日常任务。</p>
+<h3>聊天机器人</h3>
+<p>这些 AI 代理帮助用户解决问题。它们通常用于客户服务、营销和支持应用程序。聊天机器人可以回答常见问题和其他查询。此类助手为用户提供他们所需的一般信息。这些 AI 代理通常是你与平台或客户支持交互的起点。聊天机器人非常普遍，你肯定知道它们是如何工作的。尽管如此，让我们还是来看一些著名的智能代理示例。例如，ChatGPT 已经成为我们使用 AI 驱动的聊天机器人的一个转折点。Zendesk Chat 是聊天机器人如何在客户支持和 SaaS 开发服务中发挥作用的一个示例。同时，Kuki（以前称为 Mitsuku）是一个屡获殊荣的聊天机器人，以其情商和幽默感而闻名。</p>
+<h3>自动驾驶汽车</h3>
+<p>你可以在自动驾驶汽车中使用 AI 代理来导航和操作它们，而无需人工干预。这些车辆使用传感器、摄像头和机器学习算法的组合来感知其环境。因此，它们可以做出决策并安全地运输乘客或货物。在使用数十亿美元投资的产品中，有特斯拉的 Robotaxi 车队、谷歌的 Waymo、亚马逊的 Zoox、通用汽车的 Cruise 和梅赛德斯-奔驰的 Drive Pilot。这些技术使用部分和完全自主性。它们有助于转向、车道引导、速度限制、制动等等。自动驾驶汽车是一项很有前景的技术，但由于当前的安全问题，全自动驾驶汽车仍然是未来的事情。</p>
+<h3>机器人技术</h3>
+<p>机器人技术涉及使用 AI 代理来控制机器人，以便在各个行业中执行任务。这些行业包括制造业、医疗保健和物流业。这些机器人可以被编程或训练以处理重复性任务、危险环境和精密工作。因此，它们提高了生产率和安全性。例如，波士顿动力公司的 Spot 在生产设施中工作，即使在最危险的条件下也能进行日常检查。由 Rethink Robotics 公司制造的称为 Sawyer 的协作机器人与人类一起工作，并帮助完成制造任务。另一个最佳 AI 代理的例子是 Intuitive Surgical 公司的达芬奇手术机器人系统。它是一个手术系统，可以在手术中提供超越人类能力的精度和控制。观看一个视频示例，该示例展示了使用此机器人平台进行的人工操作。</p>
+<h2>Codica 使用 AI 代理的经验</h2>
+<p>凭借 9 年多的经验，我们依靠成熟的技术来实施 AI 代理。例如，人工智能开发服务帮助我们改进了一个在线招聘平台。由于集成了 AI 代理，人力资源专家现在可以快速创建符合最新标准的职位发布信息。改进后的平台的突出之处在于其语义搜索。招聘人员可以键入职位名称的任何修改，系统会建议正确的名称。例如，如果人力资源专家键入“PM”，系统将返回“项目经理”。此外，该平台还有一个聊天窗口，人力资源专业人员可以在其中回答问题。这一系列 AI 提问和人工回答将导致符合标准的职位描述。它将与知名平台上的当前职位描述标准相匹配。以下是一个此类发布的示例。查看我们的产品组合，了解我们为实现客户的商业理念而交付的更多成功项目。</p>
+<h2>结论</h2>
+<p>正如我们所看到的，AI 代理帮助我们在许多行业和领域取得进步。它们减轻了工作量，并赋予我们帮助我们达到更高标准和服务水平的能力。由于自动化，人力资源可以专注于复杂和战略性的任务。如果你有一个需要改进的产品，或者你想构建一个 AI 代理，请联系我们。我们的专家渴望帮助你实施 AI 代理，以获得最佳的业务成果。</p>
+<p>AI 代理是 AI 驱动的软件，可以执行任务。AI 代理，也称为智能代理，用于不同的在线平台、游戏和设备中以执行任务和解决问题。例如，聊天机器人是一个 AI 代理，可以帮助获取有关特定问题的资料。主要的 AI 代理类型包括用于简单任务的反馈式代理、用于自适应任务的权衡式代理、结合了反馈式和权衡式特征的混合式代理以及用于不断变化的任务的学习型代理。AI 代理可以执行简单的任务。它们还可以适应周围环境并在随着时间的推移而学习。在业务运营中，这些能力意味着提高生产力、可扩展性、成本效益和改进决策。AI 代理通常为电子商务平台提供个性化推荐，为客户服务提供问题解决，为自动驾驶汽车提供人员和产品的运输，以及为不同环境中的运营提供机器人辅助。</p>
+        <small class="page-url url "><a href="https://www.codica.com/blog/brief-guide-on-ai-agents/" target="_blank">(https://www.codica.com/blog/brief-guide-on-ai-agents/)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Top-15-AI-Agent-Use-Cases-in-Business">
+        <h3 class="page-name title"><span class="page-emoji ">👨&nbsp;</span>Top 15 AI Agent Use Cases in Business</h3>
+        <small class="page-url url "><a href="https://www.rapidinnovation.io/post/top-15-use-cases-of-ai-agents-in-business" target="_blank">(https://www.rapidinnovation.io/post/top-15-use-cases-of-ai-agents-in-business)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 总结了AI代理在商业中的应用和成效，并对案例进行了详细分析。<br></small>
+    </div>
+    <div class="page-content content"><h2>5. AI 代理在商业中的 15 个主要用例</h2>
+<h3>5.1. 客户服务与支持</h3>
+<p>AI 代理正在彻底改变客户服务与支持领域，为客户提供快速、一致且全天候的帮助。这些 AI 驱动的代理，通常被称为聊天机器人或虚拟助手，无需人工干预即可处理大量的客户查询，从解答常见问题到管理交易相关查询。这不仅通过减少等待时间和提供个性化互动来增强客户体验，而且还能大幅降低企业的运营成本。</p>
+<p>人工智能 (AI) 通过提高效率、改善客户体验和增强安全性，极大地改变了银行业。一个显著的例子是摩根大通在其 COIN（合同情报）平台中实施 AI。该平台使用机器学习来解读商业贷款协议，此前的流程每年要占用律师 360,000 小时。通过使用 AI，摩根大通不仅节省了时间，还减少了人工审核相关的错误。</p>
+<p>AI 在银行业的另一个重要应用是欺诈检测。像汇丰银行这样的银行已经整合了 AI 系统，用于分析交易模式以标记潜在的欺诈活动。这种主动方法使银行能够避免因欺诈而造成的数百万美元损失。AI 系统不断学习并适应新的欺诈策略，使其成为银行业打击欺诈的不可或缺的工具。有关汇丰银行方法的详细信息可在其官方网站上找到。</p>
+<p>此外，AI 还通过使用聊天机器人和虚拟助手彻底改变了银行的客户服务。这些 AI 驱动的工具为客户提供 24/7 全天候支持，处理从基本查询到更复杂的银行需求的所有事项，从而增强客户满意度和参与度。一个例子是美国银行的虚拟助手 Erica，它极大地改善了客户互动。</p>
+<h3>9.3. 案例研究 3：AI 在医疗保健中的应用</h3>
+<p>AI 整合到医疗保健中具有革命性意义，在诊断、患者护理和运营效率方面取得了进步。一个突出的例子是谷歌的 DeepMind Health 项目，该项目与临床医生合作开发可以比现有方法更快地预测患者恶化的 AI 应用程序。这项技术通过提供预警和建议，在重症监护室改善了预后。更多详细信息可在 DeepMind 的官方页面上找到。</p>
+<p>AI 还在医学影像领域发挥着重要作用。像 IBM Watson Health 这样的工具展示了 AI 如何能够比传统方法更准确、更快速地增强医学图像（例如 MRI 扫描）的解读。这不仅有助于早期诊断，还减少了放射科医生的工作量，他们通常每天必须分析数千张图像。</p>
+<p>此外，个性化医疗是 AI 正在产生重大影响的另一个领域。通过分析来自各种来源的大量数据，AI 可以帮助创建患者的个性化治疗方案，从而提高治疗效果并减少副作用。一个例子是 Tempus 等公司使用 AI，该公司使用机器学习来提供个性化的癌症护理。有关 Tempus 工作的见解可在其网站上找到。</p>
+<h2>10. 选择服务提供商的关键因素</h2>
+<h3>10.1. 专业知识和经验</h3>
+<p>在选择服务提供商或顾问时，他们提供的专业知识和经验至关重要。这在 IT、咨询、医疗保健和法律服务等领域尤其如此，在这些领域，专业知识和良好的业绩记录会显著影响项目或案件的结果。经验丰富的专业人士不仅对其领域有深入的了解，而且对管理复杂情景也有实际的见解，而这些见解只能通过多年的实践工作获得。</p>
+<p>例如，在 IT 咨询领域，像 IBM 或埃森哲这样的经验丰富的公司以其处理大型项目和交付符合当前技术趋势和业务需求的创新解决方案的能力而闻名。它们悠久的历史和与技术共同发展的奉献精神使它们成为寻求实施复杂 IT 系统的企业的可靠选择。</p>
+<p>此外，在法律领域，成功处理过许多案件的老练律师不仅带来了法律知识，还带来了战略思维和谈判技巧，这对于诉讼和公司法至关重要。Law.com 或美国律师协会等网站提供了经验丰富的法律专业人士如何影响法律诉讼结果的见解。</p>
+<h3>10.2. 定制解决方案</h3>
+<p>定制解决方案对于解决每个客户或项目的独特挑战和要求至关重要。与现成的产品或服务不同，定制解决方案是根据企业的特定需求量身定制的，这可以带来更高的效率、更高的满意度和竞争优势。这种方法在软件开发、市场营销和管理咨询等行业尤其有利，在这些行业中，一刀切的策略往往达不到预期效果。</p>
+<p>例如，在软件开发方面，像 SAP 和 Oracle 这样的公司提供与现有业务流程和系统无缝集成的定制解决方案，从而增强功能和用户体验。有关这些定制解决方案如何使企业受益的信息可以在 CNET 或 TechRadar 等科技行业网站上找到。</p>
+<p>在营销方面，考虑公司独特的市场地位、品牌标识和客户群的定制化策略可以带来更有效的营销活动和更高的投资回报率。像 HubSpot 和 Marketo 这样的营销平台擅长提供专门满足个别企业需求的工具和服务。有关定制营销策略的见解可以通过 Marketing Week 或 AdAge 等网站上的文章和案例研究进行探讨。</p>
+<h3>10.3. 全面的支持</h3>
+<p>全面的支持对于确保所提供服务的顺利运行和持续成功至关重要。这种支持可以包括从技术援助和维护到客户服务和售后服务的方方面面。这在电信、软件和消费电子产品等技术驱动领域尤其重要，在这些领域，用户通常需要持续的帮助来导航复杂的系统或排除问题。</p>
+<p>例如，像 Apple 和 Microsoft 这样的公司以其全面的支持生态系统而闻名，该生态系统包括 24/7 全天候客户服务、广泛的在线资源和全球各地的门店支持。这种级别的支持不仅有助于解决技术问题，而且还增强了客户忠诚度和满意度。有关全面支持如何影响客户满意度的更多详细信息，可以在 Customer Service Manager 或 Help Scout 等专注于客户服务的网站上找到。</p>
+<p>此外，在医疗保健等行业，全面的支持可以包括患者教育、后续护理和治疗计划的协调，这对于患者的预后和满意度至关重要。医疗保健提供者可以参考 HealthLeaders 或 Modern Healthcare 等网站上的资源，了解全面患者支持的最佳实践。</p>
+<h3>10.4. 经过验证的业绩记录</h3>
+<p>AI 代理的概念已经存在了一段时间，多年来，它们在各个行业都建立了良好的业绩记录。从医疗保健到金融，AI 代理不仅提高了效率，而且还增强了决策过程。例如，在医疗保健中，AI 代理用于分析患者数据、预测疾病和建议治疗方法，从而显著改善了患者的预后。《自然医学》发表的一项研究强调了 AI 如何比一些人类同行更准确地从患者的电子健康记录中预测患者诊断（来源：自然医学）。</p>
+<p>在金融领域，AI 代理用于检测欺诈活动和自动化交易。像 PayPal 这样的公司已经成功地使用 AI 来防止欺诈性交易，每年节省数百万美元。麦肯锡的一份报告显示，AI 技术有可能为全球银行业每年带来高达 1 万亿美元的价值。</p>
+<p>此外，在客户服务方面，AI 聊天机器人彻底改变了企业与客户互动的方式，提供 24/7 全天候支持并显著减少了等待时间。IBM 的一份报告表明，AI 可以帮助企业将客户服务指标提高多达 30%。这些例子强调了 AI 代理在提高各个行业的运营效率和决策方面的良好业绩记录。</p>
+<h3>11.1. AI 代理影响的回顾</h3>
+<p>AI 代理在通过自动化任务、增强决策和改善客户互动来改变行业方面取得了显著进展。正如我们所看到的，它们的影响遍及医疗保健、金融和客户服务等各个行业。在医疗保健领域，AI 分析大量数据的能力可以带来更好的诊断准确性和个性化治疗方案。在金融领域，AI 通过自动化和欺诈检测增强了安全措施和效率。</p>
+<p>通过聊天机器人和虚拟助手将 AI 整合到客户服务中，不仅简化了运营，而且还通过确保全天候服务和快速响应时间来提高了客户满意度。这些进步突显了 AI 代理不仅可以增强人类能力，而且还可以为创新和效率创造新机遇的潜力。</p>
+<p>随着 AI 技术不断发展，在更多领域进一步整合的潜力看起来很有前景。AI 代理的持续开发和改进可能会释放更多功能，从而导致更广泛的应用和更深远的影响，遍及商业和社会的各个领域。AI 代理的旅程远未结束，它们的未来充满光明，发展和改进的可能性无限。</p>
+        <small class="page-url url "><a href="https://www.rapidinnovation.io/post/top-15-use-cases-of-ai-agents-in-business" target="_blank">(https://www.rapidinnovation.io/post/top-15-use-cases-of-ai-agents-in-business)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="AI-Agents-Research-Report-2024-2029:-Market-to-Grow-by-$42">
+        <h3 class="page-name title"><span class="page-emoji ">📊&nbsp;</span>AI Agents Research Report 2024-2029: Market to Grow by $42</h3>
+        <small class="page-url url "><a href="https://www.globenewswire.com/news-release/2024/11/11/2978211/28124/en/AI-Agents-Research-Report-2024-2029-Market-to-Grow-by-42-Billion-Driven-by-Demand-for-Hyper-Personalized-Digital-Experiences-and-Expansion-of-AI-Powered-SaaS-Platforms.html" target="_blank">(https://www.globenewswire.com/news-release/2024/11/11/2978211/28124/en/AI-Agents-Research-Report-2024-2029-Market-to-Grow-by-42-Billion-Driven-by-Demand-for-Hyper-Personalized-Digital-Experiences-and-Expansion-of-AI-Powered-SaaS-Platforms.html)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 预测了AI代理市场的未来增长，并详细说明了推动增长的因素。<br></small>
+    </div>
+    <div class="page-content content"><h2>2024-2029年人工智能代理研究报告：市场将增长420亿美元，这得益于对高度个性化数字体验的需求以及人工智能驱动型SaaS平台的扩展</h2>
+<p>2024年11月11日</p>
+<p>来源：Research and Markets</p>
+<p>都柏林，2024年11月11日 (GLOBE NEWSWIRE) --  《按代理角色（生产力与个人助理、销售、营销、客户服务、代码生成）、代理系统（单代理、多代理）、产品类型（随时部署的代理、构建您自己的代理）划分的 AI 代理市场——2030 年全球预测》报告已添加到 ResearchAndMarkets.com 的产品中。</p>
+<p>预计 2024 年至 2030 年期间，人工智能代理市场将以 44.8% 的复合年增长率增长，从 2024 年的 51 亿美元增长到2030年的 471 亿美元。</p>
+<p>本报告将为该市场的市场领导者/新进入者提供有关整个 AI 代理市场及其细分市场收入数字最接近近似值的信息。这将有助于利益相关者了解竞争格局，并获得更多见解，以便更好地定位其业务并规划合适的市场策略。它还有助于利益相关者了解市场的脉搏，并为他们提供有关关键市场驱动因素、制约因素、挑战和机遇的信息。</p>
+<p>人工智能代理市场一直在快速增长。由于多种关键因素的影响，各种部门和业务运营都发生了变化。由于客户互动的复杂性日益增加以及对定制体验的需求，公司正在寻求能够扩展个性化响应的人工智能代理。</p>
+<p>例如，在全渠道沟通策略中，人工智能代理可以跨多个平台处理客户查询，从而提高客户满意度和忠诚度。此外，由于自然语言处理 (NLP) 和机器学习的进步，人工智能代理得到了显著改进。因此，这些工具现在更擅长理解上下文、意图或情感，从而实现更高效的自动化流程。随着数字化转型在各行业的普及，许多组织都转向使用人工智能代理，目的是简化其活动，同时降低成本，从而提高整体效率。</p>
+<p>对主要行业参与者进行了详细分析，以深入了解他们的业务概览、解决方案和服务；关键策略；合同、伙伴关系、协议、新产品和服务发布、并购以及与人工智能代理市场相关的最新发展。本报告涵盖了人工智能代理市场生态系统中即将出现的初创企业的竞争分析。</p>
+<p>按代理系统划分，多代理系统细分市场预计将在预测期内实现最快的市场增长率。</p>
+<p>随着多代理系统 (MAS) 能够比单代理系统更好地处理复杂的去中心化任务，人工智能代理市场正在看到多代理系统 (MAS) 的快速增长。这种人工智能代理在一个需要多个参与方之间进行谈判、协作或竞争的环境中效果很好——这就是为什么它们被广泛用于交通运输、金融服务、医疗保健和自主系统的原因。</p>
+<p>工业 4.0 的出现（侧重于自动化和智能技术）也导致了对 MAS 的需求增加，因为它们能够优化流程、允许分布式数据管理并改善实时决策过程。此外，MAS 非常适合扩展运营，因为它们能够将不同代理的功能融合到其软件平台中。这使得多代理系统能够适应动态的大规模环境。</p>
+<p>按代理角色划分，客户服务与支持预计将在预测期内占据最大的市场份额。</p>
+<p>客户服务与支持已成为最广泛接受的人工智能代理角色。这是由于客户提出不满的电话数量快速增长——需要专门的人工智能代理来管理和应对这些大量的互动。数字平台的出现增加了对快速、准确和定制化响应的需求，人工智能代理可以全天候提供这些响应，从而大大提高了消费者的满意度和品牌忠诚度。</p>
+<p>此外，努力通过资源优化和运营支出最小化来合理化成本的公司正在赞赏人工智能代理的可承受性，人工智能代理处理日常工作，同时为同事腾出时间处理更复杂的问题。此外，人工智能代理与 CRM 系统的轻松集成使企业能够毫无障碍地采用它们。</p>
+<p>按地区划分，北美将在 2024 年占据最大的市场份额，而亚太地区预计将在预测期内实现最快的增长速度。</p>
+<p>北美拥有最大的人工智能代理市场区域份额，这基于对尖端技术的早期采用和强大的数字基础设施。谷歌、微软和 IBM 等主要参与者在人工智能代理的开发方面投入巨资，这使得该地区具有显著优势。例如，IBM 开发了人工智能驱动的客户支持工具，已被领先的银行和医疗保健提供商采用，以最大限度地减少其运营并改善客户体验。此外，沃尔玛已在美国利用人工智能代理来提高供应链效率和改善客户服务，这展示了该地区如何利用人工智能系统来实现卓越运营。此外，各行业对数字化转型的强大推动力，加上支持性立法，进一步巩固了北美在人工智能代理市场的主导地位。</p>
+<p>由于人工智能的快速发展、数字化加速以及大量技术娴熟的人口，人工智能代理市场在亚太地区增长最快。中国和日本正在凭借对人工智能技术的巨大国家支持和资金来引领这一潮流。例如，阿里巴巴和京东等中国的电子商务巨头大量利用人工智能代理来提高其客户服务水平并最大限度地降低物流成本。此外，日本对自动化的重视体现在软银等公司身上，这些公司将人工智能代理集成到客户支持系统和机器人技术中，表明该地区对人工智能的强烈倾向。</p>
+<p><strong>关键属性：</strong></p>
+<p>| 报告属性         | 详情           |
+|------------------|-----------------|
+| 页数             | 433             |
+| 预测期           | 2024 - 2030      |
+| 2024 年估计市场价值（美元） | 51 亿美元         |
+| 2030 年预测市场价值（美元） | 471 亿美元        |
+| 复合年增长率       | 44.8%           |
+| 涵盖地区         | 全球             |</p>
+<p><strong>市场概览和行业趋势</strong></p>
+<p><strong>驱动因素：</strong></p>
+<ul>
+<li>自然语言处理 (NLP) 技术的加速发展，以增强人工智能代理的理解和交互能力</li>
+<li>对高度个性化数字体验的需求，推动人工智能代理在面向客户的角色中的采用率提高</li>
+<li>将人工智能代理集成到企业业务流程自动化中，以提高运营效率和降低成本</li>
+</ul>
+<p><strong>制约因素：</strong></p>
+<ul>
+<li>数据隐私和安全问题限制了市场采用</li>
+<li>高昂的实施成本限制了对先进人工智能代理解决方案的访问</li>
+</ul>
+<p><strong>机遇：</strong></p>
+<ul>
+<li>为专门的行业应用量身定制的人工智能解决方案将满足利基市场需求并创造新的收入来源</li>
+<li>人工智能驱动的 SaaS 平台的扩展将扩大可及性，并推动中小企业的采用</li>
+<li>人工智能代理的多语言功能将增加全球市场渗透率和采用率</li>
+</ul>
+<p><strong>挑战：</strong></p>
+<ul>
+<li>人工智能代理中的道德和偏见问题将威胁到敏感应用中的信任和合规性</li>
+<li>高需求环境中的可扩展性问题将挑战人工智能代理的性能和可靠性</li>
+</ul>
+        <small class="page-url url "><a href="https://www.globenewswire.com/news-release/2024/11/11/2978211/28124/en/AI-Agents-Research-Report-2024-2029-Market-to-Grow-by-42-Billion-Driven-by-Demand-for-Hyper-Personalized-Digital-Experiences-and-Expansion-of-AI-Powered-SaaS-Platforms.html" target="_blank">(https://www.globenewswire.com/news-release/2024/11/11/2978211/28124/en/AI-Agents-Research-Report-2024-2029-Market-to-Grow-by-42-Billion-Driven-by-Demand-for-Hyper-Personalized-Digital-Experiences-and-Expansion-of-AI-Powered-SaaS-Platforms.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Why-AI-agents-are-the-next-frontier-of-generative-AI-|-McKinsey">
+        <h3 class="page-name title"><span class="page-emoji ">🌐&nbsp;</span>Why AI agents are the next frontier of generative AI | McKinsey</h3>
+        <small class="page-url url "><a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/why-agents-are-the-next-frontier-of-generative-ai" target="_blank">(https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/why-agents-are-the-next-frontier-of-generative-ai)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 讨论了生成式AI代理的未来，展望其在智能化工作流程中的应用潜力。<br></small>
+    </div>
+    <div class="page-content content"><h2>生成式 AI 代理：迈向行动</h2>
+<p>在过去的几年里，世界对生成式人工智能 (gen AI) 所释放的能力和可能性感到惊叹。大型语言模型 (LLM) 等基础模型可以完成令人印象深刻的壮举，从多种媒介（例如文本、音频、图像和视频）中提取见解和生成内容。但 gen AI 的下一阶段可能会带来更多变革。我们正在从基于知识的、gen AI 驱动的工具（例如，回答问题和生成内容的聊天机器人）转向 gen AI 驱动的“代理”，这些代理使用基础模型在数字世界中执行复杂的多步骤工作流程。简而言之，这项技术正在从思想转向行动。“代理”系统指的是能够在动态世界中独立交互的数字系统。虽然这些软件系统已经存在多年，但 gen AI 的自然语言能力展现了新的可能性，使系统能够规划其行动，使用在线工具完成这些任务，与其他代理和人员协作，并学习改进其性能。Gen AI 代理最终可以充当熟练的虚拟同事，以无缝且自然的方式与人类一起工作。例如，虚拟助手可以规划和预订复杂的个性化旅行行程，处理多个旅行平台的物流。工程师可以使用日常语言向程序员代理描述一个新的软件功能，然后程序员代理将编写代码、测试、迭代和部署它帮助创建的工具。</p>
+<h2>代理能为企业带来什么价值？</h2>
+<p>代理可以解锁的价值来自于它们自动执行复杂用例的长尾的潜力，这些用例的特点是输入和输出变化很大——这些用例历史上很难以具有成本效益或时间效益的方式解决。例如，像商务旅行这样简单的事情，可能涉及许多可能的行程，包括不同的航空公司和航班，更不用说酒店奖励计划、餐厅预订和非营业时间的活动了，所有这些都必须在不同的在线平台上处理。虽然已经努力自动化这个过程的一部分，但大部分仍然必须手动完成。这很大程度上是因为潜在输入和输出的广泛变化使得自动化过程过于复杂、昂贵或耗时。</p>
+<p>Gen AI 驱动的代理可以通过三种重要方式简化复杂和开放式用例的自动化：</p>
+<p>代理可以管理多样性。许多业务用例和流程的特点是线性工作流程，具有明确的起点和一系列步骤，这些步骤会导致特定的解决方案或结果。这种相对的简单性使得它们易于在基于规则的系统中进行编码和自动化。但是，基于规则的系统通常表现出“脆弱性”——也就是说，当面临设计者没有考虑到的情况时，它们就会崩溃。例如，许多工作流程远不如预期的那样可预测，其特点是出乎意料的曲折和一系列可能的结果；这些工作流程需要特殊处理和细致的判断，这使得基于规则的自动化具有挑战性。但是，gen AI 代理系统由于基于基础模型，因此有可能处理给定用例中各种不太可能的情况，并实时适应以执行完成流程所需的专门任务。</p>
+<p>代理系统可以使用自然语言进行指导。目前，要自动化用例，必须首先将其分解成一系列可以编码的规则和步骤。这些步骤通常被翻译成计算机代码并集成到软件系统中——这是一个经常昂贵且费力的过程，需要大量的技术专业知识。由于代理系统使用自然语言作为指令的形式，即使是复杂的工作流程也可以更快、更容易地编码。更重要的是，这个过程可能由非技术员工而不是软件工程师来完成。这使得更容易集成主题专业知识，更广泛地访问 gen AI 和 AI 工具，并简化技术团队和非技术团队之间的协作。</p>
+<p>代理可以与现有的软件工具和平台一起工作。除了分析和生成知识之外，代理系统还可以使用工具并在更广泛的数字生态系统中进行通信。例如，可以指示代理使用软件应用程序（例如绘图和制图工具）、搜索网络信息、收集和编译人工反馈，甚至利用其他基础模型。数字工具的使用既是代理的定义特征（这是它们可以在世界上发挥作用的一种方式），也是它们可以发挥 gen AI 能力的独特方式。基础模型可以学习如何与工具交互，无论是通过自然语言还是其他接口。如果没有基础模型，这些功能将需要大量的体力劳动来集成系统（例如，使用提取、转换和加载工具）或繁琐的手动工作来整理来自不同软件系统的输出。</p>
+<h2>可能的艺术：三个潜在的用例</h2>
+<p>这些类型的系统对企业意味着什么？以下三个假设的用例提供了对不久的将来可能发生的事情的了解。</p>
+<h3>用例 1：贷款承销</h3>
+<p>金融机构准备信用风险备忘录，以评估向借款人提供信贷或贷款的风险。该过程涉及编制、分析和审查与借款人、贷款类型和其他因素相关的各种形式的信息。鉴于需要多种信用风险情景和分析，这往往是一项耗时且高度协作的工作，需要关系经理与借款人、利益相关者和信用分析师合作进行专门分析，然后提交给信用经理进行审查和进一步的专业知识。</p>
+<p>基于代理的潜在解决方案：一个代理系统——包括多个代理，每个代理承担专门的基于任务的角色——可能能够处理各种信用风险情景。人工用户将使用自然语言提供具有特定规则、标准和条件的任务高级工作计划来启动该过程。然后，这个代理团队将工作分解成可执行的子任务。例如，一个代理可以充当关系经理，处理借款人和金融机构之间的沟通。执行代理可以编译必要的文档并将它们转发给财务分析师代理，例如，检查现金流量表中的债务并计算相关的财务比率，然后由评论代理审查以识别差异和错误并提供反馈。这个分解、分析、改进和审查的过程将重复进行，直到最终完成信用备忘录（图 2）。</p>
+<h3>用例 3：在线营销活动创建</h3>
+<p>设计、启动和运行在线营销活动往往涉及一系列不同的软件工具、应用程序和平台。在线营销活动的工作流程非常复杂。必须将业务目标和市场趋势转化为创意营销活动。必须为不同的细分市场和地区创建和定制书面和视觉材料。必须在各种平台上对活动进行用户组测试。为了完成这些任务，营销团队通常使用不同形式的软件，并且必须将输出从一个工具移动到另一个工具，这通常既乏味又耗时。</p>
+<p>基于代理的潜在解决方案：代理可以帮助连接这个数字营销生态系统。例如，营销人员可以使用自然语言描述目标用户、初始想法、预期渠道和其他参数。然后，代理系统——在营销专业人员的帮助下——将帮助开发、测试和迭代不同的活动创意。数字营销策略代理可以使用在线调查、来自客户关系管理解决方案的分析以及其他旨在收集见解的市场研究平台来使用多模态基础模型制定策略。然后，内容营销、文案撰写和设计方面的代理可以构建定制内容，人工评估人员将审查其品牌一致性。这些代理将协同工作以迭代和改进输出，并朝着优化活动影响同时最大限度地降低品牌风险的方法方向发展。</p>
+<h2>了解代理系统带来的独特风险</h2>
+<p>众所周知，大型语言模型 (LLM) 容易出错和出现幻觉。由于代理系统处理一系列 LLM 生成的输出，如果未采取保护措施，其中一个输出中的幻觉可能会产生级联效应。此外，由于代理系统旨在自主运行，因此业务领导者必须考虑额外的监督机制和安全措施。虽然很难完全预料到代理将带来的所有风险，但以下是一些应该考虑的风险。</p>
+<h3>潜在有害的输出</h3>
+<p>大型语言模型并不总是准确的，有时会提供不正确的信息或执行具有不良后果的操作。随着生成式人工智能 (gen AI) 代理在高度可变的情况下独立使用数字工具和数据执行任务，这些风险会加剧。例如，代理可能会批准高风险贷款，导致财务损失，或者它可能会为客户进行昂贵且不可退款的购买。</p>
+<p>缓解策略：组织应实施强大的问责制措施，明确界定代理和人类的责任，同时确保可以解释和理解代理的输出。这可以通过开发管理代理自主性的框架（例如，根据用例的复杂性限制代理行为）和确保人工监督（例如，在执行之前验证代理输出并定期审核代理决策）来实现。此外，透明度和可追溯性机制可以帮助用户了解代理的决策过程，以便及早发现潜在的棘手问题。</p>
+<h3>工具的滥用</h3>
+<p>凭借其访问工具和数据的能力，如果被故意滥用，代理可能会很危险。例如，代理可用于开发漏洞代码、创建令人信服的网络钓鱼骗局或入侵敏感信息。</p>
+<p>缓解策略：对于潜在的高风险情景，组织应设置安全措施（例如，访问控制、代理行为限制）并为代理创建封闭的环境（例如，限制代理对某些工具和数据源的访问）。此外，组织应应用对代理活动的实时监控，并针对可疑行为发出自动警报。定期审核和合规性检查可以确保安全措施保持有效和相关。</p>
+<h3>人工与代理之间信任不足或过度</h3>
+<p>就像与人类同事的关系一样，人与人工智能代理之间的互动也是基于信任的。如果用户对代理系统缺乏信心，他们可能会减少代理系统学习和改进所需的人工与代理互动和信息共享。相反，随着代理在模仿类人行为方面变得越来越熟练，一些用户可能会对它们过于信任，赋予它们人类水平的理解力和判断力。这可能导致用户不加批判地接受建议或在没有充分监督的情况下赋予代理过多的自主权。</p>
+<p>缓解策略：组织可以通过优先考虑代理决策的透明度、确保用户接受有关负责任地使用代理的培训以及建立人工参与流程来管理代理行为来管理这些问题。人工监督代理流程对于确保用户保持平衡的视角、批判性地评估代理绩效以及保留代理行为的最终权力和问责制至关重要。此外，应通过将代理的活动与具体成果（例如，客户满意度、工单的成功完成率）联系起来对代理绩效进行评估。</p>
+<p>为了为代理系统的出现做好准备，组织应考虑以下三个因素，如果这些系统要实现其潜力，这些因素将至关重要：</p>
+<p>相关知识的编码：实施复杂的用例可能需要组织将业务流程定义和记录到编码的工作流程中，然后用于培训代理。同样，组织也可能考虑如何捕获主题专业知识，这将用于以自然语言指导代理，从而简化复杂流程。</p>
+<p>战略技术规划：组织需要组织其数据和 IT 系统，以确保代理系统可以有效地与现有基础设施交互。这包括捕获用户交互以获得持续反馈，并创建灵活性以集成未来的技术，而不会扰乱现有运营。</p>
+<p>人工参与的控制机制：随着 gen AI 代理开始与现实世界进行交互，控制机制对于平衡自主性和风险至关重要（参见侧栏，“了解代理系统带来的独特风险”）。人类必须验证输出的准确性、合规性和公平性；与主题专家合作维护和扩展代理系统；并为持续改进创建一个学习飞轮。组织应该开始考虑在什么条件下以及如何部署这种人工参与机制。</p>
+<p>麦肯锡最近的“人工智能现状”调查发现，超过 72% 的受访公司正在部署人工智能解决方案，并且对 gen AI 的兴趣日益增长。鉴于这项活动，看到公司开始将代理等前沿技术纳入其规划流程和未来人工智能路线图中也就不足为奇了。代理驱动的自动化仍然是一个令人兴奋的主张，它有可能彻底改变整个行业，为工作带来新的行动速度。</p>
+<p>也就是说，这项技术仍处于早期阶段，在其实现其全部功能之前还需要进行大量的开发。这些系统的复杂性和自主性的提高带来了一系列挑战和风险。如果部署人工智能代理类似于为团队增加新的员工，就像他们的人类团队成员一样，代理需要大量的测试、培训和指导，然后才能信任它们独立运行。但即使在这些最早的日子里，也不难想象这一代虚拟同事可能释放的巨大机遇。</p>
+        <small class="page-url url "><a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/why-agents-are-the-next-frontier-of-generative-ai" target="_blank">(https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/why-agents-are-the-next-frontier-of-generative-ai)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Predictions-for-AI-in-2025:-Collaborative-Agents,-AI-Skepticism,-and-New-Risks">
+        <h3 class="page-name title"><span class="page-emoji ">🤝&nbsp;</span>Predictions for AI in 2025: Collaborative Agents, AI Skepticism, and New Risks</h3>
+        <small class="page-url url "><a href="https://hai.stanford.edu/news/predictions-ai-2025-collaborative-agents-ai-skepticism-and-new-risks" target="_blank">(https://hai.stanford.edu/news/predictions-ai-2025-collaborative-agents-ai-skepticism-and-new-risks)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 提供了关于AI代理未来趋势的预见，包括多代理协作和人类互动的变化。<br></small>
+    </div>
+    <div class="page-content content"><h2>AI代理，监管减少</h2>
+<p>我们真的会看到AI代理——我们在研究中看到了一些，但现在我们在研究和行业中都看到了很多。基本上，你如何将这些代理组合起来为你做事？我们现在正在看到接口。例如，Anthropic的Claude有一些API，它实际上可以操作你的电脑来做一些事情，比如在你的日历上安排会议或帮你买机票。显然，这有一些风险——如果他们真的能够使用你的电脑，他们可以造成损害，他们可能会犯错误。因此，人们对如何做到这一点感到担忧。但是，虽然这些工具的第一个版本并不成功，但我们现在看到了更多可能性。</p>
+<p>另一个我认为很重要的事情，我称之为渐近线。大型模型改进缓慢。我们看到大型模型的发布速度比以前慢了，而且它们在某些基准测试中的表现仍然令人印象深刻，但是对于许多这些任务，它们的改进速度要慢得多。我们是否只会得到稍微更好的结果，因为他们使用了如此多的数据，也许合成数据并没有像一些人想象的那样有效？事实上，一些较新的模型在某些任务上的表现甚至更差。现在，有些人会问，这是AI寒冬吗？但是这些模型可以做很多有用的事情，所以我认为这不是寒冬。但是，可能有些人会画出向上向右的直线，关于AI接管世界或能够做任何事情，我认为在有人在架构方面取得重大突破之前，还需要更长的时间。</p>
+<p>最后，随着新的特朗普政府上任，我预计美国对AI的监管会减少。我们之前并没有太多监管，但拜登政府的行政命令为许多美国政府机构制定了指南，这确实会产生影响，因为它是一个大型科技客户。但我预计特朗普政府会撤销其中一些措施。这并不意味着不会有AI政策或法规。我们只会看到来自欧盟或零散的州监管等其他参与者。</p>
+<p>我们将继续看到滥用生成式AI来帮助实施诈骗，尤其是在人们声音的音频深度伪造方面。我预测，即将上任的政府在保护公众免受这些诈骗的侵害方面，将采取比现任政府更为宽松的做法。如果联邦贸易委员会退居二线，那么州检察长将在消费者保护中扮演更重要的角色。银行和其他金融机构，以及电话、电子邮件和互联网服务提供商，应该加强努力，教育他们的客户了解这些诈骗。特别是，他们（以及政府机构）应该确保他们提供除英语以外的其他语言的资源，因为英语使用者并不是诈骗的唯一目标。</p>
+<p>——Riana Pfefferkorn，HAI政策研究员</p>
+<h2>“总承包商”大型语言模型</h2>
+<p>我们将开始看到用于解决问题的复杂系统，这些系统是由许多相互交流的AI系统组成的。例如，想象一下一系列具有特定专业知识（微调）的大型语言模型结合起来解决问题。在某些情况下，它们可能正在相互协商；在其他情况下，它们将任务交给“专家大型语言模型”，后者将返回答案。因此，将有一种“总承包商”大型语言模型来处理人类客户，它将把部分问题解决工作分包给其他拥有专业知识的代理。这些首先出现的地方可能包括复杂的模拟、医疗决策、财务安排或教育计划。</p>
+<p>——Russ Altman，HAI副主任，肯尼斯·方工程学院教授，生物工程、遗传学、医学、生物医学数据科学教授，以及（荣誉）计算机科学教授</p>
+<h2>AI代理协同工作</h2>
+<p>在2025年，我们将看到一个显著的变化，即从依赖单个AI模型转向使用多个不同专业领域的AI代理协同工作的系统。例如，我们最近推出了虚拟实验室，其中一个教授AI代理领导着一个由AI科学家代理（例如，AI化学家、AI生物学家）组成的团队来解决具有挑战性的、开放式研究，人类研究人员提供高级反馈。通过利用不同代理的多学科专业知识，虚拟实验室成功设计了新的纳米抗体，我们验证了它们作为最近SARS-CoV-2变体的有效结合剂。展望未来，我预测许多高影响力的应用将使用这样的AI代理团队，它们比单个模型更可靠、更有效。我特别兴奋的是混合协作团队的潜力，其中人类领导着一组不同的AI代理。</p>
+<p>我们将体验到围绕人类如何与AI代理协同工作的研究新范式。确定AI和人类协同工作以实现集体智能的最佳方法将变得越来越重要。目前，AI系统的评估主要基于其支持自主设置的能力；我们将看到更多考虑人机交互和人机协作的评估基准和环境。随着AI的发展，我们将继续看到大量关于风险评估的工作。AI风险评估远落后于AI能力开发研究。除了继承传统AI系统的这些风险外，基于LLM/VLM系统的广泛采用也将放大其中一些风险并引入新的风险。</p>
+<p>——Diyi Yang，计算机科学助理教授</p>
+        <small class="page-url url "><a href="https://hai.stanford.edu/news/predictions-ai-2025-collaborative-agents-ai-skepticism-and-new-risks" target="_blank">(https://hai.stanford.edu/news/predictions-ai-2025-collaborative-agents-ai-skepticism-and-new-risks)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="What-Are-AI-Agents?-|-IBM">
+        <h3 class="page-name title"><span class="page-emoji ">💼&nbsp;</span>What Are AI Agents? | IBM</h3>
+        <small class="page-url url "><a href="https://www.ibm.com/think/topics/ai-agents" target="_blank">(https://www.ibm.com/think/topics/ai-agents)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 探讨了成功案例，通过具体实例展示了AI代理在不同领域的应用效果。<br></small>
+    </div>
+    <div class="page-content content"><h2>人工智能 (AI) 代理</h2>
+<p>人工智能 (AI) 代理指的是能够代表用户或其他系统自主执行任务的系统或程序，它通过设计工作流程并利用可用工具来实现。AI 代理的功能范围广泛，远超自然语言处理，包括决策、问题解决、与外部环境交互以及执行操作。这些代理可以部署在各种应用程序中，以解决从软件设计和 IT 自动化到代码生成工具和对话式助理等各种企业环境中的复杂任务。它们利用大型语言模型 (LLM) 的高级自然语言处理技术，逐步理解和响应用户输入，并确定何时调用外部工具。</p>
+<h2>AI 代理的工作原理</h2>
+<p>AI 代理的核心是大型语言模型 (LLM)。因此，AI 代理通常被称为 LLM 代理。传统的 LLM，例如 IBM® Granite™ 模型，会根据用于训练它们的数据生成响应，并且受到知识和推理能力的限制。相反，代理技术使用后端工具调用来获取最新信息、优化工作流程并自主创建子任务以实现复杂目标。在这个过程中，自主代理会随着时间的推移学习适应用户的期望。代理能够将过去的交互存储在内存中并规划未来的行动，从而促进了个性化体验和全面的响应。这种工具调用无需人工干预，并扩展了这些 AI 系统在现实世界中应用的可能性。AI 代理在实现用户设定的目标时采取的方法包括以下三个阶段：</p>
+<h3>目标初始化和规划</h3>
+<p>虽然 AI 代理在其决策过程中是自主的，但它们需要人类定义的目标和环境。自主代理行为的三个主要影响因素是：</p>
+<ul>
+<li>设计和训练代理 AI 系统的开发团队。</li>
+<li>部署代理并向用户提供访问权限的团队。</li>
+<li>向 AI 代理提供特定目标并确定可用工具的用户。</li>
+</ul>
+<p>根据用户的目标和代理可用的工具，AI 代理然后执行任务分解以提高性能。从本质上讲，代理会创建一个包含特定任务和子任务的计划来实现复杂的目标。对于简单的任务，规划不是必要的步骤。相反，代理可以迭代地反思其响应并改进它们，而无需规划其后续步骤。</p>
+<h3>使用可用工具进行推理</h3>
+<p>AI 代理将其行动建立在其感知到的信息之上。通常，AI 代理不具备解决复杂目标内所有子任务所需的完整知识库。为了弥补这一点，AI 代理使用其可用的工具。这些工具可以包括外部数据集、网络搜索、API 甚至其他代理。在从这些工具检索到缺失的信息后，代理可以更新其知识库。这意味着在每一个步骤中，代理都会重新评估其行动计划并进行自我纠正。</p>
+<p>为了说明这个过程，想象一下用户正在计划他们的假期。用户指派一个 AI 代理来预测明年哪一周最有可能为他们在希腊的冲浪之旅提供最好的天气。由于代理核心的 LLM 模型并不专门研究天气模式，因此代理会从一个外部数据库中收集信息，该数据库包含过去几年希腊的每日天气报告。</p>
+<p>尽管获得了这些新信息，但代理仍然无法确定冲浪的最佳天气条件，因此创建了下一个子任务。对于这个子任务，代理与专门从事冲浪的外部代理进行通信。假设通过这样做，代理了解到涨潮和阳光明媚的天气，几乎不下雨，提供了最佳的冲浪条件。</p>
+<p>代理现在可以结合从其工具中学习到的信息来识别模式。它可以预测明年希腊哪一周可能会有涨潮、阳光明媚的天气以及下雨的可能性较低。然后将这些发现呈现给用户。工具之间这种信息的共享使得 AI 代理比传统的 AI 模型更具通用性。</p>
+<h3>学习和反思</h3>
+<p>AI 代理使用反馈机制（例如其他 AI 代理和人工参与环路 (HITL)）来提高其响应的准确性。让我们回到之前的冲浪示例来突出这一点。在代理形成对用户的响应后，代理会将学习到的信息以及用户的反馈一起存储起来，以提高性能并适应未来目标的用户的偏好。</p>
+<p>如果使用了其他代理来实现目标，则也可以使用它们的反馈。多代理反馈在最大限度地减少人类用户花费在提供指导上的时间方面尤其有用。但是，用户也可以在代理的操作和内部推理过程中提供反馈，以更好地使结果与预期目标保持一致。反馈机制提高了 AI 代理的推理能力和准确性，这通常被称为迭代改进。为了避免重复相同的错误，AI 代理还可以将以前障碍的解决方案数据存储在知识库中。</p>
+<h3>最新 AI 新闻和见解</h3>
+<p>在每周的 Think Newsletter 中，探索经过精心策划的关于 AI、云计算等的见解和新闻。</p>
+<h2>代理型与非代理型 AI 聊天机器人</h2>
+<p>AI 聊天机器人使用诸如自然语言处理 (NLP) 等对话式 AI 技术来理解用户的问题并自动回复。这些聊天机器人是一种模式，而代理是一种技术框架。</p>
+<p>非代理型 AI 聊天机器人是没有可用工具、内存和推理能力的聊天机器人。他们只能实现短期目标，无法提前规划。众所周知，非代理型聊天机器人需要持续的用户输入才能做出响应。他们可以对最有可能符合用户期望的常见提示做出响应，但在针对用户及其数据独特的问题上表现不佳。由于这些聊天机器人不保留内存，因此如果它们的响应不令人满意，它们就无法从错误中学习。</p>
+<p>相反，代理型 AI 聊天机器人会随着时间的推移学习适应用户的期望，提供更个性化的体验和更全面的响应。他们可以通过创建子任务来完成复杂的任务，而无需人工干预并考虑不同的计划。这些计划也可以根据需要进行自我纠正和更新。与非代理型聊天机器人不同，代理型 AI 聊天机器人会评估其工具并利用其可用资源来填补信息缺口。</p>
+<h3>解码 AI：每周新闻综述</h3>
+<h3>1. 简单反射代理</h3>
+<p>简单反射代理是最简单的代理形式，它根据当前感知来指导行动。该代理不保留任何内存，如果缺少信息，它也不会与其他代理交互。这些代理根据所谓的反射或规则运行。这意味着代理被预编程为执行与某些条件满足相对应的操作。</p>
+<p>如果代理遇到它没有准备的情况，它就无法做出适当的响应。这些代理仅在完全可观察的环境中有效，这些环境允许访问所有必要的信息。</p>
+<p>示例：一个在每天晚上设定时间打开供暖系统的恒温器。这里的条件-动作规则例如是，如果晚上 8 点，则激活供暖。</p>
+<p>基于模型的反射代理使用其当前感知和内存来维护一个内部世界模型。随着代理继续接收新信息，该模型会得到更新。代理的动作取决于其模型、反射、先前的感知和当前状态。</p>
+<p>与简单反射代理不同，这些代理可以将信息存储在内存中，并且可以在部分可观察和不断变化的环境中运行。但是，它们仍然受到其规则集的限制。</p>
+<p>示例：一个机器人吸尘器。当它清洁脏房间时，它会感知到诸如家具之类的障碍物，并在它们周围进行调整。机器人还会存储其已经清洁的区域的模型，以避免陷入重复清洁的循环中。</p>
+<p>基于目标的代理拥有内部世界模型以及目标或一组目标。这些代理搜索达到其目标的动作序列，并在采取行动之前规划这些动作。与简单反射代理和基于模型的反射代理相比，这种搜索和规划提高了它们的有效性。</p>
+<p>示例：一个推荐到达目的地的最快路线的导航系统。该模型考虑到达目的地的各种路线，或者换句话说，你的目标。在这个例子中，代理的条件-动作规则指出，如果找到更快路线，则代理推荐该路线。</p>
+<h3>4. 基于效用的代理</h3>
+<h3>5. 学习代理</h3>
+<p>学习代理拥有与其他代理类型相同的 capabilities，但它们能够学习的独特之处在于。新的体验会被添加到它们的初始知识库中，这是自主发生的。这种学习增强了代理在陌生环境中运行的能力。学习代理在其推理中可能是基于效用的或基于目标的，并且由四个主要元素组成：</p>
+<ul>
+<li>学习：这通过代理的感知和传感器从环境中学习来改进代理的知识。</li>
+<li>批评者：这为代理提供有关其响应质量是否达到性能标准的反馈。</li>
+<li>性能：此元素负责在学习后选择操作。</li>
+<li>问题生成器：这会为要采取的操作创建各种提议。</li>
+</ul>
+<p>示例：电子商务网站上的个性化推荐。这些代理在其内存中跟踪用户活动和偏好。这些信息用于向用户推荐某些产品和服务。每次提出新的建议时，循环都会重复。用户的活动会持续存储以供学习之用。通过这样做，代理会随着时间的推移提高其准确性。</p>
+<h3>AI 代理的用例</h3>
+<p>AI 代理可以集成到网站和应用程序中，通过充当虚拟助理、提供心理健康支持、模拟面试以及其他相关任务来增强客户体验。有许多无需编码的模板可供用户实施，这使得创建这些 AI 代理的过程更加容易。</p>
+<p>AI 代理可用于各种现实世界的医疗保健应用。多代理系统在解决此类环境中的问题方面可能特别有用。从急诊室患者的治疗计划到管理药物流程，这些系统节省了医护人员的时间和精力，使他们能够处理更紧急的任务。</p>
+<p>在自然灾害情况下，AI 代理可以使用深度学习算法来检索需要救援的用户的社交媒体网站信息。可以绘制这些用户的位置，以帮助救援服务在更短的时间内拯救更多人。因此，AI 代理可以在日常任务和挽救生命的场合中极大地造福人类生活。</p>
+<h2>AI 代理的优势</h2>
+<h3>任务自动化</h3>
+<p>随着生成式 AI 的不断进步，人们越来越关注使用 AI 进行工作流程优化，或智能自动化。AI 代理是可以自动化否则需要人力资源的复杂任务的 AI 工具。这意味着目标可以廉价、快速且大规模地实现。反过来，这些进步意味着人工代理不需要指导 AI 助手创建和导航其任务。</p>
+<h3>更高的性能</h3>
+<p>多代理框架往往优于单个代理。这是因为，可用的行动计划越多，学习和反思就越多。结合来自专门从事相关领域的 AI 代理的知识和反馈的 AI 代理对于信息综合非常有用。AI 代理的后端协作以及填补信息空白的能力是代理框架独有的，这使得它们成为强大的工具以及人工智能的有意义的进步。</p>
+<h3>响应质量</h3>
+<p>与传统的 AI 模型相比，AI 代理提供的响应更全面、更准确，并且更个性化。这对我们用户来说极其重要，因为更高质量的响应通常会带来更好的客户体验。如前所述，这是通过与其他代理交换信息、使用外部工具和更新其内存流来实现的。这些行为会自行出现，而不是预先编程的。</p>
+<h2>风险和局限性</h2>
+<h3>多代理依赖性</h3>
+<p>某些复杂任务需要多个 AI 代理的知识。在实施这些多代理框架时，存在故障的风险。建立在相同基础模型上的多代理系统可能会遇到共同的缺陷。此类弱点可能会导致所有相关代理的系统范围内的故障，或使系统容易受到恶意攻击。这凸显了在构建基础模型以及彻底的培训和测试流程中数据治理的重要性。</p>
+<h3>无限反馈循环</h3>
+<p>对于使用 AI 代理的人类用户来说，轻松的无人监督推理也伴随着其风险。无法制定周全计划或反思其发现的代理可能会发现自己反复调用相同的工具，从而引发无限反馈循环。为了避免这些冗余，可以使用某种程度的实时人工监控。</p>
+<h3>计算复杂度</h3>
+<p>从头开始构建 AI 代理既费时，也可能非常耗费计算资源。培训高性能代理所需的资源非常广泛。此外，根据任务的复杂程度，代理可能需要几天时间才能完成任务。</p>
+<p>为了解决多代理依赖性的问题，开发人员可以向用户提供代理操作日志的访问权限。操作可以包括使用外部工具并描述为实现目标而使用的外部代理。这种透明度使用户能够深入了解迭代决策过程，并提供发现错误和建立信任的机会。</p>
+<h3>中断</h3>
+<p>建议防止 AI 代理运行时间过长。特别是在意外的无限反馈循环、某些工具的访问权限发生变化或由于设计缺陷而发生故障的情况下。实现这一点的一种方法是实现可中断性。</p>
+<p>维护对此的控制包括允许人类用户选择优雅地中断一系列操作或整个操作。选择是否以及何时中断 AI 代理需要一些思考，因为某些终止可能会造成比好处更多的伤害。例如，允许有故障的代理继续协助危及生命的紧急情况可能比完全关闭它更安全。</p>
+<h3>独特的代理标识符</h3>
+<p>为了降低代理系统被用于恶意用途的风险，可以使用唯一标识符。如果这些标识符是代理访问外部系统所必需的，那么追踪代理的开发人员、部署人员及其用户的来源将更容易。这在代理的任何恶意使用或意外造成的损害的情况下尤其有用。这种级别的问责制将为这些 AI 代理提供更安全的运行环境。</p>
+<p>除此之外，在 AI 代理采取影响较大的行动之前，要求人工批准是最佳实践。例如，从发送群发电子邮件到进行金融交易等操作应需要人工确认。对于此类高风险领域，建议进行一定程度的人工监控。</p>
+        <small class="page-url url "><a href="https://www.ibm.com/think/topics/ai-agents" target="_blank">(https://www.ibm.com/think/topics/ai-agents)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="The-Future-of-AI-Agents:-Top-Predictions-&-Trends-to-Watch-in-2025---Salesforce">
+        <h3 class="page-name title"><span class="page-emoji ">⚖&nbsp;</span>The Future of AI Agents: Top Predictions & Trends to Watch in 2025 - Salesforce</h3>
+        <small class="page-url url "><a href="https://www.salesforce.com/uk/news/stories/the-future-of-ai-agents-top-predictions-trends-to-watch-in-2025/" target="_blank">(https://www.salesforce.com/uk/news/stories/the-future-of-ai-agents-top-predictions-trends-to-watch-in-2025/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 概述了市场面临的挑战和机遇，特别是在隐私和合规性方面的风险与应对。<br></small>
+    </div>
+    <div class="page-content content"><p>Agentforce 是 Salesforce 平台上的一个新层，使组织能够构建和部署自主式 AI 代理。OpenTable、Saks 和 Wiley 等公司目前正在使用 Agentforce 来增强员工能力、扩展员工队伍和改善客户体验。了解更多</p>
+<p>虽然大多数员工并不完全信任 AI 能够自主运行，但 77% 的员工表示他们最终会信任 AI 自主运行。这揭示了企业在 2025 年增强员工能力、扩展员工队伍和改善客户体验的真正机会。</p>
+<p>Salesforce 的领导者们展望代理式 AI 时代，他们看到了这项技术可能实现的各种方式，以及确保其成功的策略。继续阅读 Salesforce 领导者对以下方面的预测：</p>
+<p>未来人类将如何与代理互动<br />
+人类信任自主式 AI 需要什么</p>
+<h2>人类将如何与代理互动</h2>
+<p>代理式 AI（具有自主性、目标导向性和决策能力的 AI 系统）的概念带来了未来各种令人着迷的可能性。Salesforce 的领导者们预见到了这项革命性技术在未来的各种可能性。</p>
+<h5>1. 副驾驶将成为商品化。“将 AI 用作通用生产力的被动式个人助理——起草电子邮件、制作食谱、总结文档、规划行程——将成为基本要求，就像拼写检查一样常见。这项技术很快就会内置于个人设备中，并在业务中使用的 AI 工具和平台之间无缝集成。变革性的飞跃将来自超越通用辅助并发展为业务感知型智能的 AI——理解您所在行业的独特背景、挑战和需求，代表您执行有意义的战略性业务任务和决策。”——Adam Evans，Salesforce AI 平台执行副总裁兼总经理</h5>
+<h5>2. 我们将从单一代理转向多代理团队来处理复杂的用例。“在 2024 年，AI 代理开始在简单的用例中增强人们的能力，例如销售和服务。在 2025 年，我们将越来越多地看到更复杂的多代理编排解决整个企业中更高阶的挑战，例如模拟新产品发布或营销活动，以及制定调整建议。Salesforce 自身的 Atlas 推理引擎采用多个大型语言模型 (LLM)、大型动作模型 (LAM) 和专门的 RAG 模块来执行不同的子任务，例如 (重新) 排序、细化和合成，从而实现最先进水平的可信自主性。”——Mick Costigan，Salesforce 未来事务副总裁</h5>
+<h5>3. 对 AI 的怀疑将让位于对 AI 的信心。“尽管高管们迫切希望将 AI 工具纳入业务运营，但超过三分之二的办公人员仍然表示他们从未在工作中使用过 AI。在 2025 年，我们将看到对 AI 的依赖障碍减弱，因为用户将肩并肩地与代理一起执行常见的任务，例如自动化项目、新员工入职、生成内容或管理 IT 事件。代理的高级推理能力以及做出决策和采取行动的能力将改变每个用户的运作方式以及他们与客户互动的方式。反过来，办公人员将对 AI 更有信心，企业将看到更高的采用率和投资回报率。”——Rob Seaman，Slack 首席产品官</h5>
+<h5>4. AI 代理将成为客户与企业互动的首选渠道。“随着 AI 代理变得越来越强大，并且能够提供高度个性化的体验，消费者与这项技术的互动预计将会激增，为企业创造一个有价值的新营销渠道。为了充分利用 AI 代理的潜力，组织需要组建跨职能的“代理体验”团队，连接营销、销售、服务和商务部门。这些团队对于优化 AI 驱动的互动至关重要，使企业能够提供更深入、更动态的消费者体验，同时推动增长并在整个客户旅程中提高运营效率。”——Jon Belkowitz，营销云 AI 产品管理高级总监</h5>
+<h5>5. 个人代理和自带 AI 的兴起。“新的进步将把更强大的 AI 代理掌握在消费者手中。消费者设备和应用程序中的代理功能，例如 Apple Intelligence 和中国的超级应用程序（为用户提供一站式服务），已经出现，并旨在利用个人背景来帮助用户轻松完成事情。随着人们开始将个人 AI 代理带到工作场所，公司需要找到更快地将 AI 集成到企业中的方法。我们将这种趋势称为 BYO AI（自带 AI 代理），与早期的 BYOD（自带设备）运动类似，该运动见证了员工将个人智能手机带到办公室。随着它们成为主流，个人 AI 代理将永远改变公司与客户联系的方式。成功的公司将在最重要的时刻提供可信赖的、高度个性化的消息、服务和产品，并将所有内容以易于 AI 代理（越来越多地充当客户代理）消费的方式打包。”——Mick Costigan，Salesforce 未来事务副总裁</h5>
+<h5>6. Agentforce 检查员将支持可操作的分析。“在这个代理时代，我们正在发展到一个通过 Agentforce，我们可以拥有始终开启并查找任何企业或部门异常的“检查员代理”的地方。这些分析代理将能够识别任何业务中的问题和机会，然后触发即时行动。我们认为这将导致改进的结果，并使分析师和业务用户有更多时间做出需要人为判断的重要决策和行动。例如，当销售团队使用 Tableau（由 Agentforce 提供支持）等工具时，代理将帮助识别团队的渠道何时低于某个阈值，然后立即在 Slack 中触发销售策略。这只是人类和代理如何大规模取得成功的一个例子。”——Ryan Aytay，Tableau 首席执行官</h5>
+<h5>7. AI 代理将协同工作。“在来年，我们将开始看到 AI 代理成群结队地工作，协同解决日常任务和业务挑战，就像蚂蚁建造复杂的蚁群一样。这一发展将以前所未有的规模重新定义生产力和问题解决能力。AI 代理将无缝地融入我们的生活中，个人将拥有个人代理，而组织将部署专门的代理。通过 Agentforce 等平台提供，这些代理将针对特定任务量身定制，并共同努力以实现共同目标。未来不仅仅是关于使用 AI；它将是关于创建和定制协同工作以理解和执行战略任务和决策的代理，无论是在个人还是业务环境中。”——Silvio Savarese，Salesforce AI 研究首席科学家兼负责人</h5>
+<h5>8. 代理将解决支离破碎的客户体验问题。“如今，不同的团队将漫长客户旅程的多个部分的所有权分开，从营销创建潜在客户到业务发展代表收集和获得潜在客户，再到客户代表培养客户关系和提供售后服务等等。如果没有在部门之间共享对话内容，客户的体验就会支离破碎且令人沮丧。代理将在 2025 年改变这种情况。代理将能够访问在人际互动中被遗漏的数据，包括之前的对话和上下文。未来的代理将能够在不同的职能代理和人类之间协调无缝的交接和过渡，以个性化当今无法想象的客户旅程。”——Gabrielle Tao，产品管理高级副总裁</h5>
+<h2>OpenTable 使用秘密武器 Agentforce 快速扩展全球客户服务</h2>
+<p>OpenTable 正在使用 Agentforce 通过自主式 AI 代理提供更快、更个性化的客户支持，使公司的员工团队有更多时间专注于更耗时、更复杂的任务。了解更多</p>
+<h5>9. 学习者更喜欢与灵活的、全天候的 AI 代理沟通。“许多在 COVID 大流行期间忍受隔离并从他们的第一部 iPhone（而不是他们的第一辆汽车）中找到自由的学习者，会更乐意通过代理获得问题的答案。这些学生将能够与代理自由互动，无需社交焦虑，并且能够立即在一天中的任何时间获得问题的答案。这种提供灵活的全天候支持的能力也将使代理成为在职学生或需要在整个学年灵活性的有孩子的学生的首选支持方式。但是，随着 AI 使用变得普遍，各机构需要有意地同时帮助他们的学习者克服社交焦虑并培养他们在校外茁壮成长所需的社交技能。”——Margo Martinez，教育事业部副总裁兼总经理</h5>
+<h2>人类信任自主式 AI 需要什么</h2>
+<p>要实现这个代理式未来，信任至关重要。如今，54% 的全球员工信任人类和 AI 共同完成大多数工作任务。当被问及这些员工是否信任 AI 自主完成这些相同的任务时，对于一小部分人来说，答案是一些。Salesforce 的领导者们分享了如何在自主式 AI 时代保持信任，以及代理如何支持安全相关任务。</p>
+<h5>1. 企业将在代理式 AI 时代建立信任。“我们在对 AI 的信任方面正处于一个转折点，特别是对于代理式 AI——值得注意的是，60% 的消费者表示 AI 的进步使得公司更值得信赖变得更加重要。维护对 AI 系统的信任将成为企业的首要任务，我们将看到公司创造一个公平的竞争环境，让每个人都可以访问这项技术，以确保人类和 AI 能够成功地合作。为此，公司将实施以下要素：随着时间的推移，通过可解释性功能和用户指南建立人们的信任和信心；启用学习以帮助用户了解技术并确保有反馈机制，以便用户可以改进系统输出；并将转向以人为中心的 AI 设计，将人优先考虑在中心位置。”——Paula Goldman，首席道德和人道使用官</h5>
+<h2>解锁更多见解。查看 Salesforce 统计库。</h2>
+<h5>2. AI 代理将作为企业安全的前线守护者。“AI 代理将成为组织安全的主要守护者，在检测安全漏洞、增强安全态势和进行主动更改方面超越人类能力。同时，随着不法行为者利用代理发动更复杂的攻击，将需要安全代理来支持自适应实时威胁检测和响应。这一转变将使安全专家能够专注于更高级别的架构。”——Alice Steinglass，Salesforce 平台执行副总裁兼总经理</h5>
+<h5>3. AI 治理将成为 CEO 级别的优先事项。“API 允许 AI 代理高效地执行任务、访问数据和执行流程。因此，管理 AI 代理变得与管理 API 一样关键，因为两者对于维持顺畅的运营和实现业务目标都至关重要。因此，到 2026 年，AI 治理将成为 CEO 级别的优先事项，因为代理主题和行动需要进行审核、管理和保护。一旦公司很好地掌握了 API 和 AI 治理，他们将能够广泛而成功地使用 AI 代理。”——Ahyoung An，MuleSoft 首席业务官</h5>
+<h5>4. 公司需要在代理式 AI 时代保持网络卫生。“坚持传统的安全措施并确保人为尽职调查将比以往任何时候都更加关键，尤其是在代理式 AI 时代。就像锁门是防止汽车被盗的最佳方式一样，使用经过验证的防御措施来对抗非 AI 威胁是应对基于 AI 的攻击最有效的方法。有效的策略将包括：确保公司建立信任和安全文化；为用户身份验证实施硬件根信任 (RoT)；要求多因素身份验证 (MFA)；当网络钓鱼者试图通过短信或其他消息平台进行基于 AI 的诈骗时，依赖可信赖的公司渠道（如 Slack）；并确保软件不断修补和更新。”——Brad Arkin，首席信任官</h5>
+<h5>5. 对可信 AI 的需求将导致更多公共-私人政策合作。“AI 的快速发展，尤其是代理式 AI，将推动科技公司更积极地参与政策讨论。为了在促进创新和确保公共安全之间取得最佳平衡，私营部门将其技术专长带到谈判桌至关重要。这种合作对于指导 AI 政策框架的发展至关重要，这些框架并非一刀切，而是要考虑可以使用该技术的许多不同方式和情境。”——Eric Loeb，全球政府事务执行副总裁</h5>
+<h4>相关</h4>
+<h3>高级推理引擎如何为下一代 AI 代理提供支持</h3>
+<h3>隆重推出 Agentforce 2.0：构建无限员工队伍的数字劳动力平台</h3>
+<h2>AI 代理将如何改变工作</h2>
+<p>据估计，员工时间的 41% 用于重复性、低影响的工作。Salesforce 的领导者们看到了一个代理承担这些重复性任务的世界，让人类专注于推动收入的更具战略意义的、建立关系的工作。</p>
+<h5>1. AI 的进步将推动简化和激活。“AI 将更容易在日常业务应用程序中实施，使公司（特别是那些拥有对客户和业务数据中心视图的公司）能够本地集成代理并安全地使用数据来支持特定流程。AI 也将变得更具可操作性，使基础数据能够大规模地触发实时事件和行动，从而提高生产力并实现以前无法实现的结果。这种易用性和可操作性的结合将导致对业务中 AI 的更高信心、利用率和价值。”——Steve Hammond，营销云执行副总裁兼总经理</h5>
+<h5>2. 分析将变得环境化。“到 2025 年，由于 AI，所有分析见解的 25% 将以‘环境化’的方式交付——无缝地集成到工作和生活的流程中，而无需用户有意识地决定，‘现在该进行一些分析了’。这些见解将实时出现，嵌入在日常互动中，无论是通过在会议工具中弹出的建议、在撰写电子邮件时 AI 代理的轻微提示，还是智能设备上的通知。随着数据变得越来越普遍，分析师的角色将转变为塑造这些环境体验，整理和完善 AI 自动呈现的见解，确保它们与上下文相关且可立即采取行动。”——Nate Nichols，Tableau 产品管理副总裁</h5>
+<h5>3. AI 代理是新的应用程序。“就像移动应用程序彻底改变了交互性、沟通和生产力一样，AI 代理现在正准备重新定义对技术的访问并解决日常业务挑战。这些代理将具有可定制性、高度适应性以及自主决策能力，使它们能够预测需求、优化任务并提供个性化的帮助和解决方案。它们将在用户启动的会话中以对话方式运行，并作为嵌入式工作流程中的代理运行，从而提高生产力，同时扩展所有行业的业务实践，使组织能够比以往任何时候都更高效、更智能地运行。”——Jayesh Govindarajan，Salesforce AI 执行副总裁</h5>
+<h5>4. 自主式 AI 未来时代的工作将需要一组新的技能。“未来的工作——特别是与 AI 和代理相关的——将需要三种类型的技能：技术技能、人类技能和软技能。技术技能包括执行任务所需的特定知识，例如数据分析、编程语言、图形设计或会计原则。软技能是帮助我们有效地与他人互动的交往能力，例如沟通、时间管理、解决问题和冲突解决。人类技能植根于我们的个性和性格，例如同理心、韧性、创造力和情商。那些在 AI 领域获胜的公司将帮助其员工培养这些技能。”——Lori Castillo Martinez，人才发展与培养执行副总裁</h5>
+<h5>5. 浏览、分析和处理非结构化数据的能力将定义您在 2025 年的业务。“顾名思义，非结构化数据通常是最难理解的，但它也是公司内最有价值的信息之一。根据 Gartner 的数据，80% 的企业数据是非结构化数据。2025 年将区分拥有者和非拥有者：拥有处理非结构化数据并使其成为 AI 就绪数据的工具和技术的企业将在这个新的代理时代占据领先地位。这些公司将不仅能够产生更强大的业务见解，而且他们的团队和代理将能够更好地做出决策并采取行动——从分析客户情绪到生成博客文章和制定竞争计划。”——Sarah Walker，Slack 首席运营官</h5>
+<h5>6. 雇主需要优先考虑员工技能提升。“我们将看到大量新的工作岗位因 AI 创新的加速而产生——现有的工作岗位将被代理所改变。为此，2025 年将是技能提升之年。每个雇主都必须找出如何将 AI 和代理交给员工，以确保他们不会被抛在后面。员工将选择那些能够帮助他们获得关键技能的公司，以确保他们现在和未来都能取得成功。”——Nathalie Scardino，首席人力官</h5>
+<h5>7. AI 将重新定义员工体验。“AI 代理将改变员工在办公室聚会时的体验。AI 和代理将帮助雇主了解员工如何使用办公空间、预订会议室以及与团队一起聚会，并为团队提出建议，以确保他们始终在正确的时间拥有正确的空间。最后，AI 将使用劳动力规划数据来简化公司设计其房地产投资组合的方式，并确定他们在世界各地需要的空间类型。”——Relina Bulchandani，房地产和工作场所服务执行副总裁</h5>
+<h2>AI 代理将如何改变行业</h2>
+<p>AI 可以帮助解决的任务、挑战和目标因行业而异。Salesforce 的领导者们分享了代理式 AI 将以意想不到的方式使不同行业受益的方式。</p>
+<h5>1. 中小型企业将通过利用 AI 代理超越大型竞争对手。“中小型企业 (SMB) 和成长型公司不仅将跟上大型竞争对手的步伐，甚至可以通过利用 AI 代理实现可扩展的增长来超越它们。借助 AI 代理，这些企业将能够简化运营、提升客户参与度和提供个性化营销。从管理供应链和跟进销售线索到处理客户支持，自主式代理将使中小型企业能够快速扩展，同时保持强大的竞争优势。”——Kris Billmaier，销售云和自助服务与增长产品执行副总裁兼总经理</h5>
+<h5>2. 2025 年将是制作繁琐的非营利年度报告的最后一年。“随着总结大量信息的能力加快，个人捐助者将更自主地参与他们关心的事业。非营利组织将能够提供其工作的证据点，展示切实的成果，并在第一接触点向潜在捐助者提供实时见解。繁琐的年度报告将不复存在。相反，每个捐助者都将能够直接与组织互动，并立即了解其使命的影响，他们的捐赠或志愿者时间将如何帮助支持该使命，并进行捐赠——所有这些都直接通过 AI 代理完成。”——Lori Freeman，非营利组织副总裁兼总经理</h5>
+<h5>3. AI 代理将增强零售体验。“代理有可能通过帮助零售商在最需要的时候为购物者提供个性化、及时有效的服务来改变节假日季节及以后的购物体验。到目前为止，AI 提供的产品推荐已经影响了 10 月和 11 月所有销售额的 16%；数字零售商有一个大好机会可以使用 AI 来创建个人购物代理，帮助消费者找到他们确切想要的东西，并继续使购买过程变得轻松。”——Michael Affronti，商务云高级副总裁兼总经理</h5>
+<h5>4. 代理将扩大非营利组织的影响。“非营利组织是 AI 的早期采用者，其中 90% 使用 AI 来推动参与。AI 代理将通过评估非营利组织的员工需求和优先事项以及共同创建有影响力的志愿者角色来帮助推动这些组织内的有意义的变化。代理还将帮助拥有志愿者项目的公司识别变革性的技能建设，并为其员工提供当地非营利组织的志愿者机会。”——Molly Ford，雇主品牌和招聘营销副总裁</h5>
+<h5>5. AI 代理将在教育领域比任何其他技术更快地实现大规模采用。“AI 代理将激励教育机构更深入地了解其日常运营的经济性。这将导致思维方式从每个部门的人员成本转变为活动级别的成本——例如回答学生询问的成本——帮助机构降低成本，同时产生更大的影响。而且，由于员工倦怠威胁到高校的稳定，教育工作者将欢迎能够承担安排约会和协助入学等任务的代理的支持，甚至可以在员工需要额外人手时（例如在繁忙的招聘季节和开学季）帮助填补季节性人员缺口。”——Margo Martinez，教育事业部副总裁兼总经理</h5>
+<h5>6. AI 代理将使政府服务和福利更容易获得。“效率、成本节约、提高生产力以及提供更好公民支持的能力将使自主式 AI 成为历史上采用速度最快的技术。到 2025 年底，公民将直接与 AI 代理互动以获得政府援助。美国各地的联邦和地方机构将部署代理，使他们的选民能够快速轻松地完成从更新护照到获得职业许可再到登记车辆的一切事情。代理还将能够帮助人们轻松了解他们可以获得哪些福利、他们符合哪些条件以及如何申请。”——Nasi Jazayeri，公共部门执行副总裁兼总经理</h5>
+        <small class="page-url url "><a href="https://www.salesforce.com/uk/news/stories/the-future-of-ai-agents-top-predictions-trends-to-watch-in-2025/" target="_blank">(https://www.salesforce.com/uk/news/stories/the-future-of-ai-agents-top-predictions-trends-to-watch-in-2025/)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Autonomous-AI-and-Autonomous-Agents-Market-Share,-Forecast-|-Growth-Analysis-by-2030">
+        <h3 class="page-name title"><span class="page-emoji ">🏥&nbsp;</span>Autonomous AI and Autonomous Agents Market Share, Forecast | Growth Analysis by 2030</h3>
+        <small class="page-url url "><a href="https://www.marketsandmarkets.com/Market-Reports/autonomous-ai-and-autonomous-agents-market-208190735.html" target="_blank">(https://www.marketsandmarkets.com/Market-Reports/autonomous-ai-and-autonomous-agents-market-208190735.html)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 分析了自主AI和自主代理市场的动态，讨论了健康护理和自动化的重要性。<br></small>
+    </div>
+    <div class="page-content content"><h2>自主式 AI 和自主代理市场预测</h2>
+<p>全球自主式 AI 和自主代理市场的估值在 2023 年预计为 48 亿美元。预计到 2028 年将达到 285 亿美元，复合年增长率为 43.0%。自主式 AI 和代理的扩张是由多种因素推动的，包括 AI 应用的日益普及、并行计算资源的可及性提高以及自动驾驶和医疗保健的进步。</p>
+<h3>自主式 AI 和自主代理市场动态</h3>
+<h4>驱动因素：AI 应用的增长成为自主式 AI 和代理的催化剂</h4>
+<p>自主式 AI 和代理兴起的一个重要驱动因素是 AI 应用在各个领域的不断增加。从医疗保健和金融到交通运输和制造业，AI 都被用来解决复杂问题和优化流程。这些应用利用先进的算法、机器学习和数据分析技术来提取有价值的见解并自动化决策。随着对高效和智能解决方案的需求不断增长，对能够适应和独立运行而无需持续人为干预的自主式 AI 系统和代理的需求也在增长。</p>
+<h4>限制因素：自主式 AI 和代理的适应性和情境理解有限</h4>
+<p>适应性和情境理解有限是阻碍自主式 AI 和代理在各个领域有效性的重要限制因素。这些限制源于人际互动的复杂性和现实世界场景的动态性。虽然 AI 系统可能擅长在预定义参数内的特定任务，但它们往往难以适应不熟悉的情况或处理不可预测的环境。情境理解（包括解释和适当地响应各种线索和环境因素）对 AI 算法来说是一项具有挑战性的任务。</p>
+<h4>机遇：自主式 AI 和代理在医疗保健领域的进步</h4>
+<p>医疗保健领域的进步为自主式 AI 和代理的应用提供了非凡的机会，彻底改变了医疗保健的提供方式。这些技术有可能增强诊断、治疗计划和药物研发，从而改善患者预后和优化医疗保健的提供。自主式 AI 可以分析大量的医疗数据，包括患者记录、实验室结果和医学影像，以协助医疗专业人员进行准确的诊断。</p>
+<h4>挑战：伦理和法律问题对市场构成重大挑战</h4>
+<p>随着自主式 AI 系统和代理变得越来越先进和普及，出现了若干伦理方面的考虑。一个主要问题是自主车辆或机器人可能造成的意外和伤害。在涉及自主系统的意外事故中确定责任引发了复杂的法律问题。法律框架和规章制度往往难以跟上快速发展的自主式 AI 技术。建立涵盖责任、隐私、安全标准和数据保护的全面法律框架至关重要。</p>
+<h4>按服务划分，在预测期内，培训、支持和维护部门的复合年增长率预计最高</h4>
+<p>在自主式 AI 和代理领域，培训、支持和维护服务对于寻求有效利用和维护其 AI 系统的组织至关重要。培训服务专注于赋予用户必要的技能和知识，以利用 AI 技术和代理系统的能力。支持服务包括技术援助和故障排除，以解决在 AI 系统运行过程中可能出现的任何问题或挑战。维护服务专注于主动监控、性能优化和定期更新，以确保 AI 系统的可靠性和使用寿命。</p>
+<p>北美，特别是美国和加拿大，是自主式 AI 和自主代理开发和采用的领先地区。该地区拥有主要的科技公司、研究机构和处于人工智能进步前沿的初创企业。自主 AI 指的是 AI 系统在没有人为干预的情况下运行和做出决策的能力。在北美，自主 AI 应用于各个领域，包括交通运输、医疗保健、金融、制造业和娱乐业。</p>
+<h3>主要市场参与者</h3>
+<p>自主式 AI 和自主代理供应商已实施各种类型的有机和无机增长战略，例如新产品发布、产品升级、伙伴关系和协议、业务扩张以及兼并和收购，以增强其在市场上的产品。全球自主式 AI 和自主代理市场的主要供应商包括 IBM（美国）、AWS（美国）、Microsoft（美国）、Oracle（美国）、Google（美国）、Waymo LLC（美国）、DeepMind（英国）、OpenAI（美国）、Salesforce（美国）、SAP SE（德国）、NVIDIA Corporation（美国）、百度（中国）、ServiceNow（美国）、H2O.ai（美国）、Genesys（美国）、Aerogility（英国）、Kore.ai（美国）、Fetch.ai（英国）、Automation Anywhere（美国）、Tecnotree（芬兰）、C3.ai（美国）、Helpshift（美国）、Algotive（美国）、CognosysAI（美国）、Level AI（美国）、Mobileye（以色列）、Deeproute.ai（中国）、Cogito（美国）、Uber Technologies（美国）、Attri（美国）。</p>
+<p>2023 年 5 月，IBM 推出了 WatsonX，这是一个新的 AI 和数据平台，将使企业能够利用可信赖的数据来扩展和加速最先进 AI 的影响。WatsonX 是一个全面的平台，包括 AI 开发工作室、数据存储和 AI 治理工具包。</p>
+<p>2023 年 3 月，亚马逊宣布将 Amazon Chime SDK 与 Amazon Lex 集成用于聊天机器人，这允许构建者使用简化的架构来开发持久性对话式聊天界面。这种新的集成使构建者能够创建能够理解自然语言的 AI 驱动的聊天工具。</p>
+<p>2022 年 6 月，Waymo 宣布与 Uber 建立合作伙伴关系，根据该伙伴关系，Waymo Via 的自动驾驶卡车将能够使用 Uber Freight 的货运商和承运商网络来寻找货物并预订运输。这将使 Waymo 能够扩大其影响范围，并为其客户提供更多运输货物的选择。</p>
+<p>2021 年 9 月，谷歌云宣布对其 Vertex AI 平台进行重大升级，其中包括扩展对 PyTorch 和 TensorFlow 的支持、新的 AutoML 功能以及改进的数据准备和管理工具。</p>
+<p>2020 年 9 月，IBM 和 ProMare 宣布完成并启动了 Mayflower Autonomous Ship (MAS)，这是一艘完全自主的研究船，由 IBM 的 AI、自动化、云和边缘技术提供动力。IBM 和 ProMare 之间的合作是自主航运领域的一项重大发展。</p>
+<h4>什么是自主式 AI 和自主代理？</h4>
+<p>自主式 AI 和自主代理是指可以自主执行特定任务而无需人工干预的软件程序。这些程序利用算法和机器学习技术来做出决策并随着时间的推移提高其性能。</p>
+<h4>欧洲地区包括哪些国家？</h4>
+<p>该报告包括对欧洲地区的英国、德国、法国、意大利和西班牙的分析。</p>
+<h4>哪些关键垂直行业正在采用自主式 AI 和自主代理的硬件、软件和服务？</h4>
+<p>采用自主式 AI 和自主代理的硬件、软件和服务的关键垂直行业包括 BFSI（银行、金融服务和保险）、零售和电子商务、医疗保健和生命科学、电信、汽车、运输和物流、制造业、能源和公用事业、政府和国防、媒体和娱乐以及其他垂直行业，其中包括农业、IT/ITes 和房地产和建筑业。</p>
+<h4>哪些关键驱动因素支持自主式 AI 和自主代理市场的增长？</h4>
+<p>支持自主式 AI 和自主代理市场增长的关键驱动因素包括：AI 应用的增长成为自主式 AI 和自主代理的催化剂，以及并行计算资源的可用性增加。</p>
+<h4>自主式 AI 和自主代理市场的主要供应商有哪些？</h4>
+<p>全球自主式 AI 和自主代理市场的主要供应商包括 IBM（美国）、AWS（美国）、Microsoft（美国）、Oracle（美国）、Google（美国）、Waymo LLC（美国）、DeepMind（英国）、OpenAI（美国）、Salesforce（美国）、SAP SE（德国）、NVIDIA Corporation（美国）、百度（中国）、ServiceNow（美国）、H2O.ai（美国）、Genesys（美国）、Aerogility（英国）、Kore.ai（美国）、Fetch.ai（英国）、Automation Anywhere（美国）、Tecnotree（芬兰）、C3.ai（美国）、Helpshift（美国）、Algotive（美国）、CognosysAI（美国）、Level AI（美国）、Mobileye（以色列）、Deeproute.ai（中国）、Cogito（美国）、Uber Technologies（美国）、Attri（美国）。</p>
+<p>5.2 市场动态
+驱动因素 - AI 应用的增加将成为自主式 AI 和自主代理的催化剂 - 并行计算资源的可用性增加
+限制因素 - 自主式 AI 和自主代理的适应性和情境理解有限 - 人机交互和信任的缺乏
+机遇 - 自主式 AI 驾驶技术的进步将彻底改变交通系统 - 利用自主式 AI 和自主代理提升客户服务和个性化 - 医疗保健领域自主式 AI 和自主代理的进步
+挑战 - 伦理和法律问题将对市场构成重大挑战 - 数据隐私和安全挑战</p>
+<p>5.3 案例分析
+汽车、运输和物流 - 案例研究 1：IBM 云自动化为 Mayflower 自主船航行提供动力 - 案例研究 2：Zoox 使用 AWS 加速自动驾驶汽车的开发
+BFSI - 案例研究 1：Arabesque AI 利用谷歌云平台提升财务绩效分析 - 案例研究 2：Vision Banco 利用 H2O Driverless AI 改善客户体验
+医疗保健和生命科学 - 案例研究 1：NHS 与 DeepMind 合作推动数字医疗创新
+制造业 - 案例研究 1：Stanley Black &amp; Decker 利用自动化简化运营
+零售和电子商务 - 案例研究 1：利用共识简化机器学习的数据整理
+媒体和娱乐 - 案例研究 1：谷歌云帮助 Meredith Corporation 建立可扩展的数据平台
+能源和公用事业 - 案例研究 1：Kore.ai 帮助能源公司利用对话式 AI 改善客户服务 - 案例研究 2：ENGIE 利用 C3.ai 转型能源管理
+教育 - 案例研究 1：Automation Anywhere 的 RPA 解决方案改变墨尔本大学的行政运营</p>
+<p>5.4 自主式 AI 和自主代理市场：生态系统分析
+5.5 定价分析
+5.6 专利分析
+方法论
+文件类型
+创新和专利申请 - 主要申请人
+6.3 软件
+对各种自主式 AI 代理的专用软件算法的需求不断增长
+自主式 AI 代理 - 机器人代理 - 计算代理
+自主式 AI 和自主代理市场，按部署方式划分 - 云 - 本地
+6.4 服务
+对管理自主系统的高质量服务的需求
+咨询服务 - 对专家指导和战略建议的需求不断增长，以推动增长
+部署和集成 - 将 AI 技术无缝集成到现有基础设施中，以促进增长
+培训、支持和维护 - 持续的支持和维护，以确保持续的功能和可靠性
+7.1 导言
+技术：自主式 AI 和自主代理市场驱动因素
+7.2 机器学习
+机器学习驱动的自主系统日益增长的潜在益处将促进增长
+深度学习 - 可用标记数据集和计算能力的进步将促进增长 - 监督学习 - 无监督学习 - 强化学习 - 大型语言模型 (LLM)
+8.2 银行、金融服务和保险
+利用自主技术增强金融机构以推动增长
+欺诈检测和预防
+风险评估和管理
+算法交易
+信用评分和承销
+客户服务自动化（聊天机器人）
+智能文档处理
+投资组合管理
+合规性监控
+其他 BFSI 应用（贷款违约预测、反洗钱）
+8.3 零售和电子商务
+自主式 AI 和代理提供个性化体验的能力
+推荐引擎
+虚拟商店
+用于客户服务的聊天机器人和虚拟助手
+库存管理和优化
+需求预测
+供应链物流优化
+定价优化
+自动化结账和收银系统
+仓库自动化和订单履行
+其他零售和电子商务应用（质量控制、欺诈检测和预防以及客户情绪分析）
+8.4 电信
+改善连接性和沟通体验以推动增长
+智能网络规划和优化
+故障检测和解决
+智能虚拟助手
+服务质量管理
+网络安全和威胁情报
+动态服务配置
+数据货币化和分析
+自主计费和收入保证
+其他电信应用（客户流失预测、虚拟网络管理、呼叫中心自动化）
+8.5 制造业
+对敏捷响应市场需求的需求，以获得动力
+质量控制和检验
+预测性维护
+产品组装和自动化
+RPA/AI 中的认知决策
+自主机器人
+自主物料搬运
+生产线优化
+库存和供应链管理
+其他制造应用（生产线优化、库存管理）
+8.6 医疗保健和生命科学
+通过应用自主式 AI 自主代理推动医疗突破的潜力
+医学诊断
+医学影像
+患者数据分析和模式识别
+药物研发
+远程患者监控
+个性化医疗建议
+虚拟护理助手
+机器人手术和辅助
+其他医疗保健应用（临床研究和试验、基因组学和精准医疗）
+8.7 能源和公用事业
+向清洁和可持续能源资源过渡以推动增长
+智能电网管理和优化
+能源消耗监控
+能源基础设施的预测性维护
+可再生能源集成和优化
+故障检测和诊断
+能源需求预测
+高效资源分配
+电网安全和网络威胁检测
+其他能源和公用事业应用（能源资产优化和需求响应管理）
+8.8 汽车、运输和物流
+显著减少道路上人为错误和事故的潜力
+预测分析和需求预测
+交通管理和优化
+车队管理
+路线规划和优化
+最后一公里交付自动化
+供应链优化
+仓库自动化
+半自主和自主车辆
+其他汽车、运输和物流应用（预测性维护、智能物流和风险管理与安全）
+8.10 媒体和娱乐
+对个性化和沉浸式内容能力的需求不断增长，以推动增长
+自动化内容生成
+视频和音频分析
+受众洞察和分析
+实时内容审核
+知识产权保护
+其他媒体和娱乐应用
+8.11 其他
+9.1 导言
+10.6 中小企业/初创企业的评估象限矩阵
+进步型公司
+响应型公司
+动态公司
+起步阶段
+10.7 竞争基准测试
+10.8 自主式 AI 和自主代理市场：产品格局
+自主式 AI 和自主代理产品的比较分析
+AI 代理 - Agent GPT - BabyAGI - AutoGPT - AgentLLM - Jarvis/HuggingGPT - Xircuits - MicroGPT - AutoGPT.js - SFighterAI
+10.9 竞争态势
+产品发布
+交易
+其他
+10.10 主要自主式 AI 和自主代理供应商的估值和财务指标
+10.11 主要自主式 AI 和自主代理供应商的年初至今价格总回报和股票 Beta
+11.1 导言
+11.2 主要参与者
+IBM - 业务概览 - 提供的产品/解决方案/服务 - 最新发展 - MnM 观点
+Oracle - 业务概览 - 提供的产品/解决方案/服务 - 最新发展 - MnM 观点
+AWS - 业务概览 - 提供的产品/解决方案/服务 - 最新发展 - MnM 观点
+Microsoft - 业务概览 - 提供的产品/解决方案/服务 - 最新发展 - MnM 观点
+Alphabet（母公司） - Google - Waymo - DeepMind
+Salesforce - 业务概览 - 提供的产品/解决方案/服务 - 最新发展 - MnM 观点
+SAP - 业务概览 - 提供的产品/解决方案/服务 - 最新发展
+OpenAI - 业务概览 - 提供的产品/解决方案/服务 - 最新发展
+NVIDIA - 业务概览 - 提供的产品/解决方案/服务 - 最新发展
+百度 - 业务概览 - 提供的产品/解决方案/服务 - 最新发展
+ServiceNow - 业务概览 - 提供的产品/解决方案/服务 - 最新发展
+H2O.AI - 业务概览 - 提供的产品/解决方案/服务 - 最新发展
+Genesys - 业务概览 - 提供的产品/解决方案/服务 - 最新发展
+Aerogility - 业务概览 - 提供的产品/解决方案/服务 - 最新发展
+Kore.AI - 业务概览 - 提供的产品/解决方案/服务 - 最新发展
+11.3 其他参与者
+Fetch.AI
+Automation Anywhere
+Tecnotree
+C3.AI
+Helpshift
+Algotive
+Cognosys
+Level AI
+Mobileye
+Deeproute.ai
+Cogito
+Uber
+Attri
+12.1 相关市场
+导言
+生成式 AI 市场——全球预测至 2028 年 - 市场定义 - 市场概览
+对话式 AI 市场——全球预测至 2028 年 - 市场定义 - 市场概览
+13.1 讨论指南
+13.2 知识库：MarketsandMarkets 的订阅门户
+13.3 定制选项
+13.4 相关报告
+13.5 作者详细信息
+表 1 2020-2022 年美元汇率
+表 2 因素分析
+表 3 研究假设
+表 4 经济衰退对全球自主式 AI 和自主代理市场的影响
+表 5 全球自主式 AI 和自主代理市场规模和增长率，2018-2022 年（百万美元，同比%）
+表 6 全球市场规模和增长率，2023-2028 年（百万美元，同比%）
+表 7 市场：平台提供商
+表 8 市场：服务提供商
+表 9 市场：最终用户
+表 10 市场：框架提供商
+表 11 市场：多代理 AI 框架
+表 12 市场：监管机构
+表 13 自主式 AI 和自主代理市场：定价水平
+表 14 专利申请数量，2013-2023 年
+表 15 2013-2023 年前 20 大专利拥有者
+表 16 市场专利清单，2021-2023 年
+表 79 计算机视觉：市场，按地区划分，2023-2028 年（百万美元）
+表 80 自主式 AI 和自主代理市场，按垂直行业划分，2018-2022 年（百万美元）
+表 81 市场，按垂直行业划分，2023-2028 年（百万美元）
+表 84 BFSI：市场，按地区划分，2023-2028 年（百万美元）
+表 85 BFSI：市场，按应用划分，2018-2022 年（百万美元）
+表 86 BFSI：市场，按应用划分，2023-2028 年（百万美元）
+表 106 医疗保健和生命科学：市场，按应用划分，2023-2028 年（百万美元）
+表 107 能源和公用事业：使用案例
+表 108 能源和公用事业：市场，按地区划分，2018-2022 年（百万美元）
+表 109 能源和公用事业：市场，按地区划分，2023-2028 年（百万美元）
+表 111 能源和公用事业：市场，按应用划分，2023-2028 年（百万美元）
+表 112 汽车、运输和物流：使用案例
+表 113 汽车、运输和物流：市场，按地区划分，2018-2022 年（百万美元）
+表 115 汽车、运输和物流：市场，按应用划分，2018-2022 年（百万美元）
+表 116 汽车、运输和物流：市场，按应用划分，2023-2028 年（百万美元）
+表 117 政府和国防：使用案例
+表 118 政府和国防：市场，按地区划分，2018-2022 年（百万美元）
+表 140 北美：市场，按部署方式划分，2023-2028 年（百万美元）
+表 141 北美：市场，按服务划分，2018-2022 年（百万美元）
+表 142 北美：市场，按服务划分，2023-2028 年（百万美元）
+表 143 北美：市场，按技术划分，2018-2022 年（百万美元）
+表 144 北美：市场，按技术划分，2023-2028 年（百万美元）
+表 146 北美：市场，按机器学习技术划分，2023-2028 年（百万美元）
+表 147 北美：市场，按垂直行业划分，2018-2022 年（百万美元）
+表 148 北美：市场，按垂直行业划分，2023-2028 年（百万美元）
+表 149 欧洲：自主式 AI 和自主代理市场，按国家划分，2018-2022 年（百万美元）
+表 150 欧洲：市场，按国家划分，2023-2028 年（百万美元）
+表 151 欧洲：市场，按产品划分，2018-2022 年（百万美元）
+表 152 欧洲：市场，按产品划分，2023-2028 年（百万美元）
+表 222 自主式 AI 和自主代理市场：竞争对手竞争激烈程度</p>
+        <small class="page-url url "><a href="https://www.marketsandmarkets.com/Market-Reports/autonomous-ai-and-autonomous-agents-market-208190735.html" target="_blank">(https://www.marketsandmarkets.com/Market-Reports/autonomous-ai-and-autonomous-agents-market-208190735.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="LangChain-State-of-AI-Agents-Report">
+        <h3 class="page-name title"><span class="page-emoji ">📝&nbsp;</span>LangChain State of AI Agents Report</h3>
+        <small class="page-url url "><a href="https://www.langchain.com/stateofaiagents" target="_blank">(https://www.langchain.com/stateofaiagents)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 通过调查数据探讨了AI代理的当前状态及其采纳挑战，提供了一些实证分析。<br></small>
+    </div>
+    <div class="page-content content"><h2>AI Agent现状调查</h2>
+<p>我们调查了1300多名专业人士，包括工程师、产品经理、业务领导和高管，以了解AI Agent的现状。让我们深入了解数据，分析AI Agent当前的应用情况（或未应用情况）。</p>
+<h3>绪论</h3>
+<p>2024年，AI Agent不再是小众兴趣。各行各业的公司都越来越重视将Agent整合到其工作流程中——从自动化日常任务到协助数据分析或编写代码。</p>
+<p>但幕后究竟发生了什么？AI Agent是否达到了其潜力，还是仅仅是另一个流行词？谁一直在部署它们，什么因素阻止其他人积极参与？</p>
+<p>我们调查了1300多名专业人士，以了解2024年AI Agent的现状。让我们深入了解以下数据。</p>
+<h3>洞察</h3>
+<h4>首先，什么是Agent？</h4>
+<p>在LangChain，我们将Agent定义为使用LLM来决定应用程序控制流的系统。就像自动驾驶汽车的自主级别一样，Agent的能力也存在一个范围。</p>
+<h4>Agent的采用率各半——但几乎每个人都计划采用它</h4>
+<p>Agent竞赛正在升温。在过去一年中，许多Agent框架获得了极大的普及——无论是使用ReAct结合LLM推理和行动，多Agent协调器，还是更可控的框架，例如LangGraph。</p>
+<p>并非所有关于Agent的讨论都是Twitter上的炒作。大约51%的受访者目前正在生产环境中使用Agent。当我们按公司规模查看数据时，中型公司（100-2000名员工）在将Agent投入生产方面最为积极（达到63%）。</p>
+<p>令人鼓舞的是，78%的受访者有积极计划很快将Agent投入生产。虽然很明显，对AI Agent的需求很强烈，但实际的生产部署仍然是许多人的障碍。</p>
+<p>我们也继续看到公司从简单的基于聊天的实现转向更高级的框架，这些框架强调多Agent协作和更自主的能力。（参见下面的“新兴主题”部分。）</p>
+<p>虽然科技行业通常被认为是早期采用者，但对Agent的兴趣正在所有行业中获得关注。90%的非科技公司受访者已经或计划将Agent投入生产（几乎与科技公司持平，为89%）。</p>
+<h4>主要Agent用例</h4>
+<p>人们将Agent用于什么？Agent不仅处理日常任务，而且也为知识工作打开了新的大门。</p>
+<p>Agent的主要用例包括执行研究和总结（58%），其次是简化个人生产力或辅助任务（53.5%）。</p>
+<p>这些都体现了人们希望有人（或某物）为他们处理耗时任务的愿望。用户可以依靠AI Agent从大量信息中提取关键见解，而不是筛选无尽的数据进行文献综述或研究分析。同样，AI Agent通过协助日常任务（如日程安排和组织）来提高个人生产力，从而使用户能够专注于重要的事情。</p>
+<p>效率的提高并不局限于个人。客户服务（45.8%）是Agent用例的另一个主要领域，它帮助公司处理咨询、故障排除并加快团队的客户响应时间。</p>
+<h4>安全第一：需要跟踪和人工监督来控制Agent</h4>
+<p>能力越大，责任越大——或者至少需要对你的Agent进行一些制衡和控制。</p>
+<p>跟踪和可观察性工具位于必备控制工具列表的首位，帮助开发人员了解Agent的行为和性能。大多数公司也正在采用防护措施，以防止Agent偏离航向。</p>
+<p>在LLM应用程序测试方面，离线评估（39.8%）比在线评估（32.5%）更常被提及。这可能说明了监控实时性能的难度。在书面回复中，许多公司也安排了人工专家手动检查或评估回复，以增加一层预防措施。</p>
+<p>尽管人们对Agent寄予了厚望，但大多数人在让Agent“脱缰”到何种程度方面采取了更为保守的做法。很少有受访者允许他们的Agent自由地读取、写入和删除。相反，大多数团队允许只读工具权限或需要人工批准才能执行更重要的操作，例如写入或删除。</p>
+<p>不同规模的公司在Agent控制方面也赋予不同的优先级。不出所料，大型企业（2000多名员工）更加谨慎，严重依赖“只读”权限以避免不必要的风险。他们还倾向于将防护措施与离线评估相结合，以在客户看到任何回复之前捕获预生产中的回归。</p>
+<p>与此同时，小型公司和初创企业（&lt;100名员工）更关注跟踪，以了解其Agent应用程序中正在发生的事情（而不是其他控制）。从我们的谈话中，小型公司倾向于关注交付和仅通过查看数据来了解结果；而企业则在全面实施更多控制。</p>
+<p>虽然非科技公司和科技公司受访者的Agent采用率相似，但在生产环境中使用Agent控制的受访者中，科技公司更有可能使用多种控制方法。51%的科技受访者目前正在使用2种或更多种控制方法，而其他行业的受访者仅为39%。这表明科技公司在构建可靠的Agent方面可能走得更远，因为高质量体验需要控制。</p>
+<h4>将Agent投入生产的障碍和挑战</h4>
+<p>保持LLM应用程序性能的高质量——从回复是否准确，到是否符合正确的风格——并非易事。</p>
+<p>性能质量是受访者最关心的问题——其重要性是成本和安全等其他因素的两倍多。</p>
+<p>使用LLM来控制工作流程的Agent固有的不可预测性会带来更多出错的空间，这使得团队难以确保其Agent始终提供准确、符合情境的回复。</p>
+<p>特别是对于小型公司而言，性能质量远超过其他考虑因素，45.8%的人将其列为主要关注点，而成本（下一个最大关注点）仅为22.4%。这一差距突显了可靠、高质量的性能对于组织将Agent从开发转移到生产的重要性。</p>
+<p>虽然质量仍然是企业最关心的问题，但安全问题对于这些必须遵守法规并更敏感地处理客户数据的大型公司来说也很普遍。</p>
+<p>挑战并不止于质量。从书面回复来看，许多人对构建和测试Agent的最佳实践感到不确定。特别是有两个主要障碍脱颖而出：知识和时间。</p>
+<ul>
+<li><strong>知识：</strong>团队经常难以掌握使用Agent所需的专业技术知识，包括为特定用例实施Agent。许多员工仍在学习，需要提高技能才能有效地利用AI Agent。</li>
+<li><strong>时间：</strong>构建和部署所需的时间投入非常大，尤其是在试图确保Agent可靠地执行时——这可能需要调试、评估、微调等等。</li>
+</ul>
+<h4>Agent成功案例：Cursor独占鳌头</h4>
+<p>在我们的调查中，Cursor成为讨论最多的Agent应用程序，紧随其后的是Perplexity和Replit等重量级应用。</p>
+<p>Cursor是一个AI驱动的代码编辑器，它帮助开发人员使用智能自动完成和上下文辅助来编写、调试和解析代码。Replit还通过设置环境、配置以及允许您在几分钟内构建和部署功能齐全的应用程序来加快软件开发生命周期。Perplexity是一个AI驱动的答案引擎，它可以使用网页搜索并在其回复中链接来源来回答复杂的问题。</p>
+<p>这些应用程序正在突破Agent能力的界限，表明AI Agent不再是理论上的——它们正在当今的生产环境中解决实际问题。</p>
+<h4>AI Agent采用中的新兴主题</h4>
+<p>从我们的书面回复中，我们看到了组织在将其AI Agent纳入其工作流程时面临的一些不断变化的期望和挑战。</p>
+<p>人们对AI Agent的这些能力表示赞赏：</p>
+<p>但也有一些挑战需要团队在构建Agent时考虑。这包括：</p>
+<ul>
+<li>理解Agent行为的障碍。
+几位工程师在书面回复中谈到了他们在向公司其他利益相关者解释AI Agent的能力和行为方面的困难。有时，对步骤进行一些额外的可视化可以解释Agent响应中发生了什么。其他时候，LLM仍然是一个黑盒。可解释性的额外负担留给了工程团队。</li>
+</ul>
+<p>尽管存在这些挑战，但在以下领域仍然存在显著的关注和活力：</p>
+<h2>结论</h2>
+<p>整合AI Agent的竞赛已经开始，因为公司已经开始重塑工作流程，并通过将LLM作为改进决策和提高人类生产力的核心来设计它们的未来。</p>
+<p>但尽管人们的热情很高，但公司也意识到它们必须谨慎行事，才能实施正确的控制措施来应对新的用例和应用程序。团队既渴望又谨慎，正在尝试使用各种框架来保持Agent响应的高质量并避免幻觉。</p>
+<p>展望未来，能够破解可靠、可控Agent密码的公司将在下一波AI创新中占据领先地位——并开始为智能自动化的未来设定标准。</p>
+<h2>方法论</h2>
+<p>五大行业：</p>
+<p>教育（受访者的5%）</p>
+<p>消费品（4%）</p>
+<p>公司规模：</p>
+<p>&lt;100人（受访者的51%）</p>
+<p>100-2000人（22%）</p>
+<p>2000-10,000人（11%）</p>
+<p>10,000+人（16%）</p>
+<h2>查看相关资源</h2>
+<p>LangGraph：构建可控Agent</p>
+<p>“循环中”：关于AI Agent的博客系列</p>
+<p>5个突破性Agent案例</p>
+        <small class="page-url url "><a href="https://www.langchain.com/stateofaiagents" target="_blank">(https://www.langchain.com/stateofaiagents)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="North-America-AI-Agents-Market-Size-&-Outlook,-2030">
+        <h3 class="page-name title"><span class="page-emoji ">🌎&nbsp;</span>North America AI Agents Market Size & Outlook, 2030</h3>
+        <small class="page-url url "><a href="https://www.grandviewresearch.com/horizon/outlook/ai-agents-market/north-america" target="_blank">(https://www.grandviewresearch.com/horizon/outlook/ai-agents-market/north-america)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 描述了北美地区AI代理市场的现状，并提供了公司和技术的详细数据。<br></small>
+    </div>
+    <div class="page-content content"><p>北美AI代理市场概述</p>
+<p>2023年北美AI代理市场营收达15.676亿美元。预计2024年至2030年，市场将以42.4%的复合年增长率增长。</p>
+<h4>北美数据手册摘要</h4>
+<p>| 2023年市场营收 | 15.676亿美元 |
+|---|---|
+| 2030年市场营收 | 186.50亿美元 |
+| 增长率 | 42.4% (2023年至2030年复合年增长率) |
+| 最大细分市场 | 机器学习 |
+| 增长最快的细分市场 | 机器学习 |
+| 历史数据覆盖 | 2018 - 2022 |
+| 估算基准年 | 2023 |
+| 预测期覆盖 | 2024 - 2030 |
+| 计量单位 | 以百万美元计的营收 |
+| 市场细分 | 机器学习 |</p>
+<h4>其他关键行业趋势</h4>
+<p>就营收而言，2023年北美地区占全球AI代理市场40.7%。全球范围内，预计北美将在2030年按营收计引领区域市场。亚太地区是增长最快的区域市场，预计到2030年将达到141.548亿美元。</p>
+<h4>AI代理市场公司</h4>
+<p>| 公司名称 | 简介 | 员工人数 | 总部 | 网站 |
+|---|---|---|---|---|
+| Amazon Web Services | 查看简介 | 10001+ | 美国华盛顿州西雅图 | aws.amazon.com |
+| Google | 查看简介 | 10001+ | 美国加利福尼亚州山景城 | www.google.com |
+| Salesforce Inc | 查看简介 | 72682 | 美国加利福尼亚州旧金山Mission Street 415号Salesforce Tower 3楼, 94105 | www.salesforce.com |
+| 百度公司ADR | 查看简介 | 45500 | 中国北京市海淀区百度园区上地十街10号, 100085 | ir.baidu.com |
+| 阿里巴巴集团控股有限公司ADR | 查看简介 | 204891 | 中国香港铜锣湾麦当劳道1号时代广场一期26楼 | www.alibabagroup.com |
+| Meta Platforms Inc A类股 | 查看简介 | 69329 | 美国加利福尼亚州门洛帕克Meta Way 1号, 94025 | about.meta.com |
+| NVIDIA公司 | 查看简介 | 29600 | 美国加利福尼亚州圣克拉拉San Tomas Expressway 2788号, 95051 | www.nvidia.com |
+| 微软公司 | 查看简介 | 221000 | 美国华盛顿州雷德蒙德One Microsoft Way, 98052-6399 | www.microsoft.com |</p>
+<h4>北美AI代理市场展望</h4>
+<p>该数据库旨在作为导航该行业的综合指南。该数据库侧重于以全球和区域营收、同比增长和复合年增长率表示的市场统计数据。关于AI代理市场的详细竞争和机遇分析将帮助公司和投资者设计战略格局。2023年，机器学习是最大的细分市场，营收份额为100%。Horizon数据库根据机器学习对北美AI代理市场进行了细分，涵盖了2018年至2030年每个细分市场的营收增长。</p>
+        <small class="page-url url "><a href="https://www.grandviewresearch.com/horizon/outlook/ai-agents-market/north-america" target="_blank">(https://www.grandviewresearch.com/horizon/outlook/ai-agents-market/north-america)</a><br></small>
+    </div>
+
+</div>
+</div>
+</body>
+<!--<script>-->
+<!--    document.addEventListener("DOMContentLoaded", function () {-->
+<!--        const navigate = document.querySelector(".navigate");-->
+<!--        if (!navigate) {-->
+<!--            console.error("找不到 .navigate 元素!");-->
+<!--            return;-->
+<!--        }-->
+
+<!--        let lastScrollY = 0; // 初始化滚动位置-->
+<!--        const scrollContainer = document.querySelector(".right-column");-->
+<!--        let isNavigating = false;-->
+<!--        document.querySelectorAll("a").forEach(link => {-->
+<!--            link.addEventListener("click", () => {-->
+<!--                isNavigating = true; // 设置导航状态-->
+<!--                navigate.classList.add("navigate-hidden"); // 隐藏导航栏-->
+
+<!--                setTimeout(() => {-->
+<!--                    isNavigating = false;-->
+<!--                }, 100);-->
+<!--            });-->
+<!--        })-->
+
+<!--        scrollContainer.addEventListener("scroll", () => {-->
+<!--            const currentScrollY = scrollContainer.scrollTop; // 获取容器的滚动位置-->
+
+<!--            // 判断滚动方向-->
+<!--            if (!isNavigating) {-->
+<!--                if (currentScrollY > lastScrollY) {-->
+<!--                    navigate.classList.add("navigate-hidden");-->
+<!--                } else {-->
+<!--                    navigate.classList.remove("navigate-hidden");-->
+<!--                }-->
+<!--            }-->
+
+<!--            // 更新上一次的滚动位置-->
+<!--            lastScrollY = currentScrollY;-->
+<!--        });-->
+<!--    });-->
+<!--</script>-->
+</html>

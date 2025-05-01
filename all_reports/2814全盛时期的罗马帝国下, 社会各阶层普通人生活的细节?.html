@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全盛时期的罗马帝国下, 社会各阶层普通人生活的细节?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; /* 更现代、更通用的字体 */
+            background-color: #f4f6f8; /* 更柔和的整体背景色 */
+            color: #333; /* 默认字体颜色 */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* 主内容区样式 */
+        .content {
+            border-radius: 12px; /* 圆角边界 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* 柔和的阴影 */
+            background-color: #fff; /* 明亮背景色 */
+            padding: 16px; /* 增加内边距 */
+            margin-bottom: 16px; /* 间隔 */
+        }
+
+        /* 左右分栏样式 */
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .left-column{
+            flex: 3;
+        }
+        .right-column{
+            flex: 4;
+        }
+
+        .left-column {
+            background-color: #eef6ff; /* 更亮的浅蓝背景 */
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); /* 内阴影 */
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; /* 明亮的背景色 */
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); /* 内阴影 */
+            font-family: "Noto Serif", "SimSun", serif; /* 更适合长文本阅读的字体 */
+            position: relative;
+        }
+
+        /* 标题样式 */
+        .title {
+            font-size: 1.4em; /* 增大标题字体 */
+            font-weight: 600; /* 半粗体 */
+            color: #1a1a1a; /* 深灰色标题 */
+            margin-bottom: 12px; /* 增加下方间距 */
+        }
+
+        .page-name.title {
+            font-size: 1.8em; /* 更大的字体 */
+            font-weight: bold; /* 加粗标题 */
+            color: #222; /* 更深的灰色 */
+            margin: 16px 0; /* 增加上下间距 */
+            text-align: left; /* 左对齐 */
+        }
+
+        .section-title {
+            font-size: 1.4em; /* 调整大小 */
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; /* 中灰色标题 */
+        }
+
+        /* 段落样式 */
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; /* 更现代的中英双语字体 */
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; /* 柔和的深灰色 */
+            padding: 12px; /* 内边距 */
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; /* 更清新的背景色 */
+            border: 1px solid #dde3ea; /* 添加边框 */
+            border-radius: 12px; /* 圆角 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 轻微阴影 */
+            margin-bottom: 20px; /* 增加间距 */
+        }
+
+        /* 分割线样式 */
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; /* 更柔和的分割线 */
+            margin: 20px 0; /* 增加上下间距 */
+        }
+
+        /* 元数据样式 */
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; /* 更小的字体 */
+            color: #666; /* 浅灰色 */
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; /* 更深的字体颜色 */
+            border-radius: 8px; /* 圆角 */
+            line-height: 1.4;
+            margin-bottom: 10px; /* 增加间距 */
+        }
+
+        /* 评分样式 */
+        .page-rating {
+            background-color: #e8f4ff; /* 浅蓝背景 */
+            color: #0078d7; /* 蓝色文字 */
+            font-weight: bold; /* 加粗文字 */
+            border: 1px solid #aad4ff; /* 边框 */
+        }
+
+        /* 评价样式 */
+        .page-annotation {
+            background-color: #fff5e5; /* 浅黄背景 */
+            color: #cc8400; /* 深黄色文字 */
+            font-style: italic; /* 斜体文字 */
+            border: 1px solid #ffcc66; /* 边框 */
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; /* 隐藏部分 */
+        }
+
+        /* 链接样式 */
+        a {
+            color: #0078d7; /* 蓝色 */
+            text-decoration: none; /* 移除下划线 */
+        }
+
+        a:hover {
+            text-decoration: underline; /* 鼠标悬停时显示下划线 */
+        }
+
+        /* 提高整体间距 */
+        .content > * {
+            margin-bottom: 12px; /* 增加内容之间的间距 */
+        }
+
+        /* query */
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; /* 紧贴页面顶部 */
+            z-index: 300; /* 确保在其他元素之上 */
+            background-color: #ffffff; /* 纯白背景，模拟输入框 */
+            color: #222; /* 深灰色文字 */
+            font-size: 1.1em; /* 略大的字体，提升可读性 */
+            font-weight: 500; /* 中等字体权重，轻松而非刻板 */
+            padding: 12px 16px; /* 内边距，增强舒适感 */
+            border-radius: 8px; /* 圆角设计，柔和外观 */
+            border: 1px solid #d1e4f2; /* 浅蓝边框 */
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05), /* 内阴影，模拟输入框的凹陷效果 */ 0 2px 4px rgba(0, 0, 0, 0.1); /* 外阴影，提升立体感 */
+            margin-bottom: 16px; /* 与下面内容留出空间 */
+            text-align: left; /* 左对齐，模拟自然输入 */
+            line-height: 1.6; /* 提高行间距，增强舒适性 */
+            font-family: "Inter", "Noto Sans", sans-serif; /* 与 sections 不同的字体，轻松现代 */
+            display: flex; /* 使用 flexbox 布局 */
+            align-items: center; /* 确保表情和文字垂直居中 */
+            gap: 10px; /* 表情和文字之间的间距 */
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        /* Section Link */
+        .section-link-box {
+            display: inline-block; /* 让链接保持块状但不独占一行 */
+            margin: 8px 4px; /* 控制胶囊之间的间距 */
+        }
+
+        .section-link {
+            display: inline-flex; /* 使用 flex 布局对齐内容 */
+            align-items: center; /* 垂直居中对齐 */
+            padding: 6px 12px; /* 增加内边距，增强胶囊感 */
+            background-color: #eef6ff; /* 胶囊的背景色 */
+            color: #0078d7; /* 文字颜色 */
+            font-size: 0.95em; /* 调整字体大小 */
+            font-weight: 500; /* 适度加粗 */
+            text-decoration: none; /* 去掉下划线 */
+            border: 1px solid #d1e4f2; /* 胶囊的浅色边框 */
+            border-radius: 20px; /* 胶囊效果 */
+            transition: all 0.2s ease; /* 添加动画过渡效果 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; /* 悬停时更深的背景色 */
+            color: #005bb5; /* 更深的文字颜色 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 加强阴影效果 */
+            text-decoration: underline; /* 可选：添加下划线 */
+        }
+
+        /* Navigate 样式 */
+        .navigate {
+            display: flex; /* 使用 flex 布局 */
+            max-width: 40%;
+            width: fit-content; /* 宽度由内容决定 */
+            flex-wrap: nowrap; /* 禁止换行 */
+            overflow-x: auto; /* 水平方向开启滚动 */
+            gap: 4px; /* 子元素之间的间距 */
+            justify-content: center; /* 主轴居中对齐 */
+            padding: 4px 4px; /* 增加内边距 */
+            background-color: #f4f6f8; /* 柔和背景色 */
+            border-radius: 12px; /* 圆角设计 */
+
+            position: fixed;
+            top: 0;
+            right: 4%;
+            /*transform: translateX(-50%);*/
+            z-index: 1000; /* 确保层级在前 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+            transition: transform 0.3s ease; /* 平滑过渡效果 */
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        /* Navigate 静态内容 */
+        .navigate-item {
+            display: flex; /* 使用 flex 布局 */
+            flex-direction: column; /* 垂直排列子元素 */
+            align-items: center; /* 水平居中 */
+            justify-content: center; /* 垂直居中 */
+            background-color: #ffffff; /* 背景色 */
+            padding: 2px 4px; /* 增加内边距 */
+            border-radius: 12px; /* 圆角设计 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+            transition: all 0.3s ease; /* 平滑的交互效果 */
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; /* 悬停时更浅的背景色 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 增强阴影效果 */
+            transform: translateY(-2px); /* 悬停时微微上浮 */
+        }
+        .navigate-item a {
+            text-decoration: none; /* 移除下划线 */
+            color: #0078d7; /* 蓝色字体 */
+            font-weight: bold; /* 加粗文字 */
+            font-size: 1em; /* 增大字体 */
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; /* 放大 emoji */
+            margin-bottom: 1px; /* 与文字保持间距 */
+        }
+        .navigate-item-id {
+            font-size: 0.9em; /* 稍小的 ID 字体 */
+            color: #555; /* 中灰色字体 */
+        }
+
+        [id] { /* 导航后不要触顶, 不好看 */
+            scroll-margin-top: 40px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            全盛时期的罗马帝国下, 社会各阶层普通人生活的细节?
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">饮食习惯</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-cuisine---Wikipedia">
+    🎊饮食习惯</a></div><div class="section-link-box"><a class="section-link" href="#Clothing-in-ancient-Rome---Wikipedia">
+    👗食物种类</a></div><div class="section-link-box"><a class="section-link" href="#What-Did-Ancient-Romans-Eat?-|-Getty-News">
+    💍食材来源</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-Entertainment">
+    🍞</a></div></div>
+    <div class="section-content content"><p>在全盛时期罗马帝国，普通人的饮食习惯主要受经济状况的显著影响。以下是该维度的详细信息：</p>
+<ol>
+<li>
+<p><strong>常见的早餐食物</strong>：普通人的早餐通常是面包、奶酪和浑水的酒，这种简单的组合贯穿了他们的每一餐。</p>
+</li>
+<li>
+<p><strong>主食和食物类型</strong>：贫穷人群的主食主要是由煮过的谷物制作的简单粥，称为puls。尽管蔬菜和水果在饮食中有一定的存在，但其种类和数量依赖于家庭的经济条件。富裕家庭通常能获取更丰富的食材，而贫穷家庭常常只能依赖于廉价和简单的食物。</p>
+</li>
+<li>
+<p><strong>调味品</strong>：常用的调味品例如garum（腌鱼酱）在普通人饮食中普遍流行，它为许多菜肴增加了风味。其他调味品的使用则可能因家庭的经济状况而有所不同，富裕家庭会使用更多样化和昂贵的调味品，而贫穷家庭则更依赖基本的盐和简单配料。</p>
+</li>
+<li>
+<p><strong>食物的种类</strong>：罗马人的饮食包含新鲜的谷物、蔬菜和水果，但通常富裕家庭能获得更多品种和更高质量的食材，贫穷家庭则往往只能接受简单的谷物和些许蔬菜。</p>
+</li>
+</ol>
+<p>这一系列信息表明，罗马帝国时期普通人的饮食习惯深受社会经济状况的影响，经济条件较好的家庭能够享用更加丰富和多样化的饮食，而贫困家庭则受到限制，往往只能依靠简单和基础的食物。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">住房条件</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Housing-conditions-of-ordinary-people-in-the-Roman-Empire-at-DuckDuckGo">
+    🏢住房类型</a></div><div class="section-link-box"><a class="section-link" href="#Roman-Daily-Life---World-History-Encyclopedia">
+    📚日常生活</a></div><div class="section-link-box"><a class="section-link" href="#All-roads-lead-to-Rome:-Aspects-of-public-health-in-ancient-Rome---PMC">
+    💧公共卫生</a></div></div>
+    <div class="section-content content"><p>在全盛时期的罗马帝国，普通人的住房条件主要体现在以下几个方面：</p>
+<ol>
+<li>
+<p><strong>居住类型</strong>：普通人主要居住在狭小的公寓楼，称为“天井式公寓”（insulae）。这些公寓大致有三到五层，通常空间狭小，缺乏隐私。</p>
+</li>
+<li>
+<p><strong>拥挤程度</strong>：居住环境极为拥挤，许多家庭可能挤在同一栋公寓内，空间狭窄，生活条件差。</p>
+</li>
+<li>
+<p><strong>安全性</strong>：这些公寓环境较为危险，由于建筑质量低劣，居民常常面临火灾、倒塌等风险。此外，高密度的人口和缺乏有效的公共卫生设施使得居住环境更加不安全，容易传播疾病。</p>
+</li>
+</ol>
+<p>总体而言，普通人所居住的环境十分拥挤且不安全，生活质量受到严重影响。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">家庭结构</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Family-life-in-the-Roman-Empire-at-DuckDuckGo">
+    👨父权制度</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-Family-Life---World-History-Encyclopedia">
+    ⛪家庭结构</a></div><div class="section-link-box"><a class="section-link" href="#Roman-Daily-Life---World-History-Encyclopedia">
+    📚家庭日常生活</a></div></div>
+    <div class="section-content content"><h3>家庭结构分析</h3>
+<p>在全盛时期的罗马帝国，家庭结构以父亲为核心，体现出明显的父权制度。父亲（paterfamilias）在家庭中拥有绝对的权力，这种权力被称为“patria potestas”，不仅涵盖妻子和子女，也包括家中所有依附者如奴隶。父亲可以决定家庭成员的生死，包括是否接受新生儿，即使是出生有缺陷的婴儿，父亲亦有权拒绝接受。</p>
+<p>家庭成员的角色及相互关系较为固定：父亲负责家庭的管理和决策，母亲则是家庭的管理者，负责日常事务和子女的教育。对女性而言，婚姻通常是在缺乏选择权的前提下与家族利益密切相关，女性被视为属于父亲和后来的丈夫，其个人身份和社会地位高度依赖于男性。</p>
+<p>整体来看，罗马家庭的结构特点受父权制度的深刻影响，使得家庭内的权力关系不对称，父亲在家庭中居于绝对统治地位。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">职业类型</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Occupations-and-Jobs-in-Ancient-Rome-for-Kids---Ancient-Rome-for-Kids">
+    ⚕职业种类</a></div><div class="section-link-box"><a class="section-link" href="#Social-class-in-ancient-Rome---Wikipedia">
+    🎓社会阶级</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-Clothing-And-Social-Class---828-Words-|-Bartleby">
+    👷社会阶层</a></div><div class="section-link-box"><a class="section-link" href="#Housing-conditions-of-ordinary-people-in-the-Roman-Empire-at-DuckDuckGo">
+    🏢</a></div><div class="section-link-box"><a class="section-link" href="#Eating-habits-of-Romans-«-IMPERIUM-ROMANUM">
+    🎉</a></div><div class="section-link-box"><a class="section-link" href="#Medicine-in-ancient-Rome---Wikipedia">
+    🏥</a></div></div>
+    <div class="section-content content"><p>在全盛时期罗马帝国，普通人的职业类型多样，主要包括以下几种：</p>
+<ol>
+<li><strong>农民</strong>：</li>
+<li>
+<p>农民是普通人中最为常见的职业，尤其是在乡村地区。他们依靠辛勤的劳动种植谷物、果蔬和其他作物。农业是罗马社会的基础，农民通过土地耕作为城市提供粮食。</p>
+</li>
+<li>
+<p><strong>工匠</strong>：</p>
+</li>
+<li>
+<p>工匠负责手工业产品的生产，如陶器、金属制品和家具等。他们通常在城市中设有作坊，拥有一定的专业技能。工匠的地位取决于作品的质量和市场需求。</p>
+</li>
+<li>
+<p><strong>商人</strong>：</p>
+</li>
+<li>
+<p>商人通过贸易来获得财富，往往在城市中心的市场进行交易。商人的社会地位较高，特别是那些经营成功的商人，由于他们能够积累财富并与贵族交往，通常享有较好的生活条件。</p>
+</li>
+<li>
+<p><strong>医生</strong>：</p>
+</li>
+<li>
+<p>医生在全盛时期的地位较高，尤其是受到古希腊医学影响的专业人士，如盖伦（Galen）和迪奥斯科里德斯（Dioscorides）。医生通常为富裕家庭提供医疗服务，往往需要相当的教育背景和声望。</p>
+</li>
+<li>
+<p><strong>教师</strong>：</p>
+</li>
+<li>
+<p>教师负责教授年轻人基础知识，尤其是在财富较为充裕的家庭中。一些教师从希腊引入，教授语法和修辞等课程。他们的社会地位与教育水平和学生的家庭背景密切相关。</p>
+</li>
+<li>
+<p><strong>奴隶</strong>：</p>
+</li>
+<li>奴隶在罗马社会中承担了大量日常劳务工作，包括家庭佣工、农田劳作、手工业工作，以及在城市中担任医生或教师等角色。奴隶的职位和工作内容往往与主人家庭的经济状况紧密相连，部分奴隶可以通过表现优异获得自由，进而改变自己的社会地位。</li>
+</ol>
+<p><strong>职业与社会地位的关系</strong>：
+普通人的职业往往与其社会地位直接相关。富裕家庭的孩子能接受良好的教育，职业发展机会相对丰富；而贫穷家庭的孩子通常只能获得初步教育，限制了他们上升的可能性。整体而言，社会阶层决定了一个人获得职业机会的种类和质量，影响着其生活条件和未来的发展方向。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">服装样式与材料使用</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Clothing-in-ancient-Rome---Wikipedia">
+    👗服装风格</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-Clothing-And-Social-Class---828-Words-|-Bartleby">
+    👷社会阶层</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-Family-Life---World-History-Encyclopedia">
+    ⛪女性服装</a></div></div>
+    <div class="section-content content"><p>在全盛时期罗马帝国，普通人的服装主要以短袖或无袖的膝长tunic为主，tunic是最基本的日常服装，男女皆可穿着。女性通常穿着更长的tunic，具体长度视季节和场合而定。</p>
+<p>服装的材料主要使用羊毛和亚麻，羊毛因其耐用性和保暖性而广泛使用，亚麻则在夏季因其轻便和透气性而受到青睐。鞋子一般由皮革制成，普通人平时的穿着较为简单，只有富有人士才能够消费得起丝绸等奢华材料。</p>
+<p>此外，服装的颜色和装饰在社会阶层中也有明显差异，高阶层会穿着边缘装饰的长裙（stola），而低阶层则通常穿着普通色彩的tunic。孩子们的服装与大人相似，但有特定的toga praetexta，只有自由的孩子能够穿。这种服装不仅反映了个人的穿着品味，也鲜明地标示出穿着者的社会身份。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">教育结构与娱乐形式</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Roman-Education---World-History-Encyclopedia">
+    📖教育不平等</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-Entertainment">
+    🍞公众娱乐</a></div><div class="section-link-box"><a class="section-link" href="#Family-life-in-the-Roman-Empire-at-DuckDuckGo">
+    👨家庭与教育</a></div></div>
+    <div class="section-content content"><h4>教育机会</h4>
+<ol>
+<li>罗马帝国时期的教育机会因家庭背景和财富差异显著不同。富裕家庭的孩子能够接受良好的教育，而贫穷家庭的孩子大多只能接受初步教育，影响了他们的职业发展和社会流动机会。</li>
+<li>教育主要由家庭提供，富裕的家庭通常雇佣希腊奴隶或自由人作为私人教师。普通家庭则可能没有这样的资源，导致教育机会受限。</li>
+<li>男孩通常会接受更高层次的教育，尤其是那些家庭有条件的孩子，他们可以继续在外部学习，包括到其他地区接受更高的教育。而女孩则很少接受更为系统的教育，通常都在早期结婚后结束学业。</li>
+</ol>
+<h4>娱乐活动</h4>
+<ol>
+<li>普通人参与的娱乐活动丰富多样，包括公开剧场的演出和角斗士战斗。戏剧和相关的娱乐活动是普通公众重要的社交方式。</li>
+<li>普通人还可以参加运动会，特别是平民运动会（Ludi Plebeii），这些运动会体现了对普通人娱乐需求的重视。</li>
+<li>其他常见的娱乐活动包括公共澡堂，澡堂不仅被用作洗澡的地方，更是人们放松和社交的场所。</li>
+</ol>
+<h4>用户关注点</h4>
+<p>用户可能最关心的是教育机会的不平等如何影响孩子们未来的职业选择以及普通人如何通过参与娱乐活动增强社交联系和获得放松。从教育结构中的经济差异到娱乐活动的参与方式，这些都是对普通人生活有直接影响的重要方面。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">健康与医疗</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Roman-Daily-Life---World-History-Encyclopedia">
+    📚公共卫生措施</a></div><div class="section-link-box"><a class="section-link" href="#Housing-conditions-of-ordinary-people-in-the-Roman-Empire-at-DuckDuckGo">
+    🏢住房条件</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-cuisine---Wikipedia">
+    🎊饮食与健康</a></div><div class="section-link-box"><a class="section-link" href="#Eating-habits-of-Romans-«-IMPERIUM-ROMANUM">
+    🎉</a></div></div>
+    <div class="section-content content"><ol>
+<li><strong>公共卫生措施的影响</strong>：</li>
+<li>
+<p>罗马的公共卫生措施显著影响了普通人的生活，包括建立法律以改善母婴健康、卫生设施的建设以及饮用水系统的改善（如水道系统）。这些措施有助于提高城市卫生条件，确保居民能够获得清洁的饮用水，并通过公共浴场提供卫生设施。</p>
+</li>
+<li>
+<p><strong>医疗资源的获取</strong>：</p>
+</li>
+<li>
+<p>古罗马医学受到古希腊医学的影响，重视个人及公共健康。在医疗资源的获取上，平民与富人之间存在差异。大多数普通人依赖草药治疗，而只有少数人能够获得专业医生的帮助，这导致了普通人在面对疾病时，医疗支持的缺乏。</p>
+</li>
+<li>
+<p><strong>安东尼瘟疫的影响</strong>：</p>
+</li>
+<li>安东尼瘟疫（公元165-180年）对平民生活造成了深远影响，导致500-1000万人死亡，约占帝国人口的10%。这场疫情的蔓延与城市化的高密度、欠缺的卫生条件密切相关。普通人在疾病面前的生存状况非常严峻，面对公共卫生危机，他们的生活质量和生存机会明显受到威胁。</li>
+</ol></div>
+</div><div class="section">
+    <h3 class="section-title title">社交习惯与公共活动</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-Entertainment">
+    🍞Entertainment culture</a></div><div class="section-link-box"><a class="section-link" href="#Family-life-in-the-Roman-Empire-at-DuckDuckGo">
+    👨Family structure</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-Family-Life---World-History-Encyclopedia">
+    ⛪Family and social values</a></div><div class="section-link-box"><a class="section-link" href="#Roman-Daily-Life---World-History-Encyclopedia">
+    📚</a></div><div class="section-link-box"><a class="section-link" href="#Roman-festivals---Wikipedia">
+    👥</a></div></div>
+    <div class="section-content content"><p>普通人的社交习惯在全盛时期的罗马帝国中主要围绕家庭和公共场所，例如澡堂、游戏和剧院进行。以下是相关信息的整理：</p>
+<ol>
+<li>
+<p><strong>家庭</strong>：罗马人的生活中心围绕着家庭，男女在家庭中承担不同的角色。家庭不仅是生活的基础单位，也是一种社交单位，常常通过家庭聚会及庆祝活动建立更深的联系和情感纽带。</p>
+</li>
+<li>
+<p><strong>公共澡堂</strong>：公共澡堂是社交的主要场所。人们在这里不仅洗澡，还进行业务交流和社交活动。澡堂提供了一个放松的环境，成为普通人交流思想、资讯和建立社交关系的重要平台。</p>
+</li>
+<li>
+<p><strong>游戏及剧院</strong>：罗马的社交活动还包括参加各种游戏、剧院和其他娱乐活动。这些活动不仅提供消遣，还加强了社区的凝聚力和互动性，使普通人能够在休闲活动中建立友谊和社交网络。</p>
+</li>
+<li>
+<p><strong>社交活动的日常角色</strong>：参与社交活动是普通人日常生活的重要组成部分。这不仅有助于个人与社区之间的联系，还提供了一个展示社会身份、参与社区事务的机会。</p>
+</li>
+</ol>
+<p>总体而言，这些社交习惯和公共活动在罗马人的日常生活中扮演着重要角色，既丰富了人们的生活，也加强了社会的交往与互动。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">庆典活动</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Roman-festivals---Wikipedia">
+    👥Saturnalia庆典</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-cuisine---Wikipedia">
+    🎊农业节日</a></div><div class="section-link-box"><a class="section-link" href="#Roman-Daily-Life---World-History-Encyclopedia">
+    📚Ludi Plebeii</a></div></div>
+    <div class="section-content content"><p>在对话记录中关于庆典活动的相关信息如下：</p>
+<ol>
+<li>
+<p><strong>Saturnalia庆典</strong>：这是最受欢迎的节日之一，通常在12月庆祝，为期一周，包含了各种欢庆活动和交换礼物。普通人积极参与这一盛大节日，强调了社区团结和欢乐的氛围。</p>
+</li>
+<li>
+<p><strong>Ludi Plebeii</strong>：这是专为普通民众设立的运动会，体现了对普通人娱乐需求的重视，普通人可以参与和观看比赛，增强了社会的凝聚力。</p>
+</li>
+<li>
+<p><strong>农业节日</strong>：如Vinalia和Opalia等，这些节日庆祝丰收并祭祀神灵，普通人参与其中，表达了对土地和自然的感恩，反映了农业社会的核心价值。</p>
+</li>
+</ol>
+<p>这些节日和庆典活动在罗马帝国的社会生活中具有重要意义，它们不仅为普通人提供了欢庆和参与的机会，还强化了家庭和社区之间的联系，促进了社会的凝聚力。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">婚姻制度与家庭结构的影响</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Family-life-in-the-Roman-Empire-at-DuckDuckGo">
+    👨婚姻制度</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-Family-Life---World-History-Encyclopedia">
+    ⛪家庭结构</a></div><div class="section-link-box"><a class="section-link" href="#Roman-Betrothal-&-Marriage">
+    ⚰婚约法律</a></div></div>
+    <div class="section-content content"><p>从对话记录中提取关于“婚姻制度与家庭结构的影响”的信息如下：</p>
+<ol>
+<li>罗马的婚姻通常是两家族之间的战略性联盟，并非单纯基于爱情，女性常常在婚姻中没有选择权。</li>
+<li>婚约的过程包括许多法律背景和社会习俗，丈夫的家庭在婚约中承诺接受新娘，反之新娘家庭负责提供嫁妆。</li>
+<li>婚姻的法律地位在公元前18年由奥古斯都帝实施的法律进行了加强，鼓励婚姻和生育。</li>
+<li>风俗规范强调女性的地位较低，法律上她们的权利受到限制，父亲不仅对她们拥有绝对权力，婚姻后权力直接转移至丈夫。</li>
+<li>家庭结构体现出强烈的父权制度，父亲是家庭的核心，拥有对妻子、孩子及其他家庭成员的绝对控制权。</li>
+</ol>
+<p>用户可能最关心的部分是：</p>
+<ul>
+<li>罗马的婚姻通常是两家族之间的战略性联盟，女性常常在婚姻中没有选择权。</li>
+<li>婚约的过程中，丈夫家庭承诺接受新娘，而新娘家庭负责提供嫁妆，这显示了嫁妆的习俗对婚姻的重要影响。</li>
+<li>女性在家庭结构中处于从属地位，婚姻后她们的权利归顺于丈夫，反映出社会对女性的不平等对待。</li>
+</ul>
+<p>这些信息突显了罗马婚姻制度的复杂性以及女性在其中所处的特殊地位。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">宗教信仰的作用</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Family-life-in-the-Roman-Empire-at-DuckDuckGo">
+    👨家庭生活</a></div><div class="section-link-box"><a class="section-link" href="#What-was-the-impact-of-religion-on-the-daily-life-of-Roman-citizens-during-the-empire's-heyday?---Quora">
+    🕊信仰</a></div><div class="section-link-box"><a class="section-link" href="#Religion-in-ancient-Rome---Wikipedia">
+    🏰多神信仰</a></div><div class="section-link-box"><a class="section-link" href="#Housing-conditions-of-ordinary-people-in-the-Roman-Empire-at-DuckDuckGo">
+    🏢居住条件</a></div><div class="section-link-box"><a class="section-link" href="#Roman-Daily-Life---World-History-Encyclopedia">
+    📚日常生活</a></div><div class="section-link-box"><a class="section-link" href="#Roman-festivals---Wikipedia">
+    👥公共节庆</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-Clothing-And-Social-Class---828-Words-|-Bartleby">
+    👷</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-Family-Life---World-History-Encyclopedia">
+    ⛪</a></div><div class="section-link-box"><a class="section-link" href="#Social-class-in-ancient-Rome---Wikipedia">
+    🎓</a></div></div>
+    <div class="section-content content"><p>在讨论全盛时期罗马帝国普通人的宗教信仰及其对日常生活的影响时，可以提炼出以下关键信息：</p>
+<ol>
+<li>
+<p><strong>日常生活的中心</strong>：宗教信仰在罗马人的日常生活中占据中心地位，普通人参加家庭和社区的祭祀活动，强调对神灵的崇拜。这种崇拜体现在家庭设置的神龛上，家家户户都有家庭神灵的崇拜习俗。</p>
+</li>
+<li>
+<p><strong>节日和仪式</strong>：宗教节日和仪式是社交生活的重要组成部分，涉及每个阶层的共同庆祝活动。祭祀活动不仅是对神灵的崇拜，还影响了社会的价值观和传统习俗。</p>
+</li>
+<li>
+<p><strong>多元化的宗教实践</strong>：罗马人的宗教实践多样化，包括家庭的私密信仰和公共的宗教仪式，强调对多神灵的崇拜。这种演变大大丰富了罗马人的社会文化。</p>
+</li>
+<li>
+<p><strong>影响社会价值观</strong>：对神灵的崇拜和祭祀活动不仅仅是宗教行为，而是深深植根于罗马社会的价值观，形成了稳定的社会结构与家庭生活的基本框架。宗教在维护社会秩序和家庭和谐中起到了重要作用。</p>
+</li>
+</ol>
+<p>这些信息表明，宗教信仰在普通人的日常生活中，不仅是个人灵性需求的体现，更是社会价值观和家庭生活的重要基石。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">社会阶层的影响</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Housing-conditions-of-ordinary-people-in-the-Roman-Empire-at-DuckDuckGo">
+    🏢居住条件</a></div><div class="section-link-box"><a class="section-link" href="#Social-class-in-ancient-Rome---Wikipedia">
+    🎓阶层结构</a></div><div class="section-link-box"><a class="section-link" href="#Family-life-in-the-Roman-Empire-at-DuckDuckGo">
+    👨教育机会</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-Family-Life---World-History-Encyclopedia">
+    ⛪社会流动性</a></div><div class="section-link-box"><a class="section-link" href="#Roman-Education---World-History-Encyclopedia">
+    📖教育不平等</a></div><div class="section-link-box"><a class="section-link" href="#Clothing-in-ancient-Rome---Wikipedia">
+    👗</a></div><div class="section-link-box"><a class="section-link" href="#Roman-Daily-Life---World-History-Encyclopedia">
+    📚</a></div></div>
+    <div class="section-content content"><p>从提供的信息中，可以提取出以下关于社会阶层如何影响普通人生活质量和机会的内容：</p>
+<ol>
+<li>
+<p><strong>居住条件</strong>：普通人居住在狭小、拥挤的天井式公寓（insular）中，生活环境较为危险且缺乏基本卫生设施。这种居住条件直接影响了他们的生活质量，导致疾病和不安全问题的频繁发生。</p>
+</li>
+<li>
+<p><strong>教育机会</strong>：经济背景极大地决定了子女的教育质量。富裕家庭的孩子能够接受良好的教育，而贫穷家庭的孩子大多只能接受初步教育，甚至缺乏教育机会。这种差异限制了阶层的流动性，使得贫穷家庭的孩子难以打破经济与社会的限制，从而影响了他们未来的职业发展。</p>
+</li>
+<li>
+<p><strong>职业选择</strong>：普通人的职业通常局限于农民、工匠、商人等劳动密集型工作，工资水平和职业发展机会较低。富裕家庭则更可能拥有较高社会地位的职业和更丰富的职业选择，这影响了他们的经济能力和生活水平。</p>
+</li>
+<li>
+<p><strong>经济差异与社交网络</strong>：贫穷家庭往往缺乏社会资本，无法通过人际关系获得更好的工作机会或支持，而富裕家庭则通过社交网络和资源传递保障了他们的经济地位和职业发展的优势。</p>
+</li>
+</ol>
+<h3>用户可能最关心的部分</h3>
+<ul>
+<li>
+<p><strong>居住条件的恶劣性</strong>：普通人因经济条件受到限制，往往不得不居住在拥挤和危险的环境中，这直接影响了他们的健康和生活质量。</p>
+</li>
+<li>
+<p><strong>教育机会的不平等</strong>：富裕家庭的孩子能够获得更高质量的教育，这种教育差异深刻影响了个人未来的职业选择和社会流动性。而贫穷家庭的孩子因为缺乏资源，无法获取同样的教育机会，阻碍了他们打破社会阶层限制的能力。</p>
+</li>
+<li>
+<p><strong>职业限制</strong>：由于社会阶层的限制，普通人的职业选择和发展空间通常更为狭窄，他们只能从事经济回报较低的劳动密集型工作，无法实现更好的生活水平。</p>
+</li>
+</ul></div>
+</div>
+</div>
+<hr>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item">
+    <a href="#Roman-Betrothal-&-Marriage" class="navigate-item-emoji ">⚰</a>
+    <a href="#Roman-Betrothal-&-Marriage" class="navigate-item-id">1</a>
+</div><div class="navigate-item">
+    <a href="#Clothing-in-ancient-Rome---Wikipedia" class="navigate-item-emoji ">👗</a>
+    <a href="#Clothing-in-ancient-Rome---Wikipedia" class="navigate-item-id">2</a>
+</div><div class="navigate-item">
+    <a href="#Eating-habits-of-Romans-«-IMPERIUM-ROMANUM" class="navigate-item-emoji ">🎉</a>
+    <a href="#Eating-habits-of-Romans-«-IMPERIUM-ROMANUM" class="navigate-item-id">3</a>
+</div><div class="navigate-item">
+    <a href="#Roman-festivals---Wikipedia" class="navigate-item-emoji ">👥</a>
+    <a href="#Roman-festivals---Wikipedia" class="navigate-item-id">4</a>
+</div><div class="navigate-item">
+    <a href="#Roman-Daily-Life---World-History-Encyclopedia" class="navigate-item-emoji ">📚</a>
+    <a href="#Roman-Daily-Life---World-History-Encyclopedia" class="navigate-item-id">5</a>
+</div><div class="navigate-item">
+    <a href="#Ancient-Roman-cuisine---Wikipedia" class="navigate-item-emoji ">🎊</a>
+    <a href="#Ancient-Roman-cuisine---Wikipedia" class="navigate-item-id">6</a>
+</div><div class="navigate-item">
+    <a href="#What-was-the-impact-of-religion-on-the-daily-life-of-Roman-citizens-during-the-empire's-heyday?---Quora" class="navigate-item-emoji ">🕊</a>
+    <a href="#What-was-the-impact-of-religion-on-the-daily-life-of-Roman-citizens-during-the-empire's-heyday?---Quora" class="navigate-item-id">7</a>
+</div><div class="navigate-item">
+    <a href="#Housing-conditions-of-ordinary-people-in-the-Roman-Empire-at-DuckDuckGo" class="navigate-item-emoji ">🏢</a>
+    <a href="#Housing-conditions-of-ordinary-people-in-the-Roman-Empire-at-DuckDuckGo" class="navigate-item-id">8</a>
+</div><div class="navigate-item">
+    <a href="#Family-life-in-the-Roman-Empire-at-DuckDuckGo" class="navigate-item-emoji ">👨</a>
+    <a href="#Family-life-in-the-Roman-Empire-at-DuckDuckGo" class="navigate-item-id">9</a>
+</div><div class="navigate-item">
+    <a href="#Ancient-Roman-Clothing-And-Social-Class---828-Words-|-Bartleby" class="navigate-item-emoji ">👷</a>
+    <a href="#Ancient-Roman-Clothing-And-Social-Class---828-Words-|-Bartleby" class="navigate-item-id">10</a>
+</div><div class="navigate-item">
+    <a href="#Occupations-and-Jobs-in-Ancient-Rome-for-Kids---Ancient-Rome-for-Kids" class="navigate-item-emoji ">⚕</a>
+    <a href="#Occupations-and-Jobs-in-Ancient-Rome-for-Kids---Ancient-Rome-for-Kids" class="navigate-item-id">11</a>
+</div><div class="navigate-item">
+    <a href="#Ancient-Roman-Family-Life---World-History-Encyclopedia" class="navigate-item-emoji ">⛪</a>
+    <a href="#Ancient-Roman-Family-Life---World-History-Encyclopedia" class="navigate-item-id">12</a>
+</div><div class="navigate-item">
+    <a href="#Social-class-in-ancient-Rome---Wikipedia" class="navigate-item-emoji ">🎓</a>
+    <a href="#Social-class-in-ancient-Rome---Wikipedia" class="navigate-item-id">13</a>
+</div><div class="navigate-item">
+    <a href="#Roman-Education---World-History-Encyclopedia" class="navigate-item-emoji ">📖</a>
+    <a href="#Roman-Education---World-History-Encyclopedia" class="navigate-item-id">14</a>
+</div><div class="navigate-item">
+    <a href="#Ancient-Roman-Entertainment" class="navigate-item-emoji ">🍞</a>
+    <a href="#Ancient-Roman-Entertainment" class="navigate-item-id">15</a>
+</div><div class="navigate-item">
+    <a href="#All-roads-lead-to-Rome:-Aspects-of-public-health-in-ancient-Rome---PMC" class="navigate-item-emoji ">💧</a>
+    <a href="#All-roads-lead-to-Rome:-Aspects-of-public-health-in-ancient-Rome---PMC" class="navigate-item-id">16</a>
+</div><div class="navigate-item">
+    <a href="#Medicine-in-ancient-Rome---Wikipedia" class="navigate-item-emoji ">🏥</a>
+    <a href="#Medicine-in-ancient-Rome---Wikipedia" class="navigate-item-id">17</a>
+</div><div class="navigate-item">
+    <a href="#What-Did-Ancient-Romans-Eat?-|-Getty-News" class="navigate-item-emoji ">💍</a>
+    <a href="#What-Did-Ancient-Romans-Eat?-|-Getty-News" class="navigate-item-id">18</a>
+</div><div class="navigate-item">
+    <a href="#Antonine-Plague---Wikipedia" class="navigate-item-emoji ">😷</a>
+    <a href="#Antonine-Plague---Wikipedia" class="navigate-item-id">19</a>
+</div><div class="navigate-item">
+    <a href="#Religion-in-ancient-Rome---Wikipedia" class="navigate-item-emoji ">🏰</a>
+    <a href="#Religion-in-ancient-Rome---Wikipedia" class="navigate-item-id">20</a>
+</div>
+    </div>
+    <div class="page">
+    <div class="page-meta" id="Roman-Betrothal-&-Marriage">
+        <h3 class="page-name title"><span class="page-emoji ">⚰&nbsp;</span>Roman Betrothal & Marriage</h3>
+        <small class="page-url url "><a href="https://www.vindolanda.com/blog/roman-betrothal-marriage" target="_blank">(https://www.vindolanda.com/blog/roman-betrothal-marriage)</a><br></small>
+        <small class="page-rating rating ">评分: 5.5<br></small>
+        <small class="page-annotation annotation ">注释: 该页面讨论了罗马死亡与祭拜的文化，涉及到社会习俗与家庭价值观的交汇。<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马订婚与婚姻</h2>
+<h3>背景与法律</h3>
+<p>公元前2350年左右，美索不达米亚古文明首次记录了婚姻，即两人之间的仪式性结合。(1)在古罗马，早在共和国建立（公元前509年）之前，婚姻就受法律管辖。传说中罗马的缔造者罗慕路斯（公元前753年）的法律涉及妇女的谨慎、婚姻中妇女的有序行为、离婚以及对通奸妇女的死刑。妇女饮酒也面临死刑，可能是因为酒精会增加女性性不忠的可能性。另一方面，罗马男子则被允许随意结交朋友和饮酒。(2)  “十二铜表法”（公元前450-449年）随后成为罗马法一千多年的基础。铜表法作为一种确保和平与平等的机制，详细规定了罗马公民的民事权利和义务。它们刻在青铜板上，在广场上公开展示，供所有人阅读，内容涵盖司法程序、死罪、杀人罪、叛国罪、伪证罪、司法腐败和诽谤罪。第五、第六和第十三个部分涉及妇女在社会中的法律地位和处境，包括婚姻。(2,3)</p>
+<p>公元前18年，为了提高罗马不断下降的道德标准，奥古斯都皇帝（公元前63年出生，公元前27年即位，公元14年去世）颁布法律，鼓励婚姻和生育。尤里亚婚姻法和其他道德立法也禁止参议员与近亲、自由女奴、被判通奸罪的人以及演员等声名狼藉的人通婚。通奸的处罚被明确规定，并设立了离婚法庭。一定军衔以下的士兵被禁止结婚（尽管许多在行省的士兵确实与当地妇女结婚），直到公元197年，当时的皇帝塞普蒂米乌斯·塞维鲁才放宽了这项法律。(2,4)</p>
+<p>也许对现代人的情感来说令人震惊的是，罗马妇女一生都是他人的财产。起初她属于她的父亲，然后是她的丈夫，在她丈夫死后，属于她的儿子/儿子们或她父亲一方最近的男性亲属，她的监护人。在早期共和国时期，罗马妇女结婚后处于“manus”状态；在法律面前依赖，处于从属地位，几乎没有机会提出离婚，没有财产权，也没有对子女的管辖权，如果丈夫在她父亲去世后去世，子女就成为她丈夫家族的财产。(4)</p>
+<h3>阶级问题</h3>
+<p>罗马有一个僵化的父权制阶级制度，理想的婚姻发生在同一祖先阶级的成员之间：贵族与贵族，平民与平民。然而，跨阶级的婚姻可能是有利的，在公元前445年，“十二铜表法”禁止贵族和平民通婚的规定被废除了。富有的平民家庭与贫困的贵族之间的结合将为平民一方带来地位的提升，为贵族一方带来金钱。这种结合的子女继承父亲的社会地位。著名的罗马将军盖乌斯·马略（公元前157年-公元前86年）出生在一个富有的骑士家庭（一个由财富而非血统定义的等级），因此被认为是“novus homo”（新人）。嫁入贫困的朱利安贵族家庭，嫁给了尤利乌斯·凯撒的姑姑茱莉亚，这让他获得了体面，也为朱利安家族带来了急需的钱。(4,5)</p>
+<h3>订婚(4,5)</h3>
+<p>家长（罗马家庭或家庭的男性家长）会寻找一位品格良好的求婚者，他不仅能为新娘的家庭带来财富，还能带来政治和社会优势。新娘的愿望和她母亲的愿望都无关紧要，尽管当时和现在一样，许多家长忽视新娘的母亲都是冒着风险的。尤利乌斯·凯撒安排了他20岁的女儿茱莉亚与47岁的格奈乌斯·庞培·马格努斯结婚，以巩固公元前60年凯撒、庞培和马库斯·利西尼乌斯·克拉苏之间非正式的军事政治联盟，这个联盟被称为第一三头同盟。</p>
+<p>一旦达成协议，就可以宣布订婚。这构成了结婚的非正式承诺或“stipulatio”；新郎的家人承诺迎娶新娘，新娘的家人承诺将女儿交给新郎的“manus”，至少在富裕阶级中，还要提供嫁妆。在早期帝国时期，嫁妆可能高达100万塞斯特尔提乌斯，分三年支付，成为新郎的财产，但在离婚或新郎在女方父亲去世后去世时，将被女方家属收回。订婚以接吻为标志，准新娘得到一枚戒指，戴在左手的第三根手指上——被认为与心脏相连。尽管有这种浪漫的观念，但新娘和新郎之间的爱情，例如茱莉亚和庞培之间发展的那种爱情，是不寻常的。婚姻和谐和妻子的顺从就足够了。妻子的美貌是一个额外的好处。</p>
+<p>罗马女孩的适婚年龄为12岁，因此，由于月经初潮通常发生在13到14岁之间，一些婚姻，尤其是在倾向于比平民结婚更早的上层阶级中，是婚前的。罗马男孩的适婚年龄为14岁，新郎比新娘大得多，或者一个妻子去世或离婚的年长男子娶一个年轻得多的新娘，这并不罕见。一个男人为了进行更有利于政治的匹配而离婚也不是不寻常的。</p>
+<h3>婚礼迷信与实际情况(4,5)</h3>
+<p>迷信、实际情况、宗教：所有这些都在罗马婚礼中扮演着角色。在罗马历法中，有些日子被认为是不吉利的，因此，必须在快乐/幸运的日子（hilaris dies）举行婚礼。</p>
+<p>应该避免的日期是：</p>
+<p>| 何时 | 何时 | 为什么 |
+|---|---|---|
+| 卡兰德斯 | 每月的第一天 | 不吉利 |
+| 艾德斯 | 每月的中间左右：3月、5月、7月和10月的15日，以及其他月份的13日 | 不吉利 |
+| 诺恩斯 | 艾德斯之前的第9天：3月、5月、7月和10月的第7天，以及其他月份的第5天 | 不吉利 |
+| 帕伦塔利亚 | 2月18日至21日 | 为了纪念家族祖先的节日 |
+| 萨利 | 3月1日、9日和23日 | 或者在罗马四处游行的火星飞跃祭司 |
+| 列穆拉利亚 | 5月9日、11日和13日 | 死者的节日 |
+| 耕作和维斯塔神庙的清洁 | 5月和6月初 | 一年中耕作土地和维斯塔处女清洁维斯塔神庙的时间优先 |
+| 哈迪斯之门打开 | 8月24日 | 鬼魂出没 |
+| 哈迪斯之门打开 | 10月5日 | 鬼魂出没 |
+| 哈迪斯之门打开 | 11月8日 | 鬼魂出没 |</p>
+<p>更一般地说，2月和5月被认为是不吉利的月份，而6月（以罗马婚姻女神朱诺的名字命名）是最受青睐的月份。俗话说，“六月结婚，你一辈子都是新娘”。</p>
+<p>为了使婚姻被允许和合法，必须满足三个主要条件：conubium或结婚的合法权利——例如，奴隶没有conubium，罗马公民和外国人之间也没有conubium。未婚夫必须达到适婚年龄（新娘12岁，新郎14岁），并且双方必须同意。家长制的罗马人认为，新娘的不反对表示同意，只有新郎道德品质上的可疑之处才能成为拒绝的理由。</p>
+<p>通常会举行婚礼仪式，尽管对此没有法律要求。根据法律，唯一的要求是新娘被带到新郎的家；新郎甚至不必露面，可以通过意向书或通过信使奴隶结婚（in absentia）。</p>
+<h3>婚礼当天(4,5)</h3>
+<p>在婚礼当天，新娘脱掉童装和玩具，穿上长长的白色连衣裙，腰间系着在老式织机上编织的结实的腰带。这个赫拉克勒斯的结只有新郎才能解开。中上层阶级新娘的头发被仪式性的铁矛头分成六股，堆在头顶，戴上“tutulus”，并盖上火红色的面纱“flammeum”。她脚上穿着一双配套的鞋子。</p>
+<p>新郎、他的家人和客人会在新娘家聚集举行仪式。占卜之后，同意的话语被说出来：“Ubi tu Gaius，ego Gaia”（你在哪里是盖乌斯，我就是盖亚；盖乌斯是一个与运气相关的名字），这对夫妻的右手被伴娘紧紧握住。接下来是祭祀猪或蛋糕给朱庇特，尽管并非总是如此，还会出示和签署结婚合同。新娘嫁妆的第一笔款项被交出。客人们高呼“feliciter”（好运），宴会开始了。后者为新郎和/或他的家人提供了展示他们的财富和慷慨的机会——对罗马男性的“gravitas”（庄严）来说非常重要的外在象征——奥古斯都皇帝将此类支出限制在1000塞斯特尔提乌斯。</p>
+<p>饱餐一顿，可能还有一定程度的醉意后，队伍就穿过街道走向新郎的住所。这支队伍象征着权力从家长转移到新郎的仪式，由新娘带领，由三个男孩（他们的父母还健在）陪同；一个男孩在她右边，一个在她左边，一个在前面拿着从家长壁炉点燃的火炬，象征着他的权威。队伍在途中可能会变得越来越大，因为公众成员加入进来，扔下象征生育力的坚果。到达新郎家的入口处，火炬被扔进人群中，新娘会用油、脂肪和羊毛涂抹门道，然后被新郎带上门槛。然后新娘会触摸火和水，尽可能地防止不祥的预兆，然后被带到装饰华丽的婚床上，在那里，人们期望会发生性行为。</p>
+<h3>通奸(4,5)</h3>
+<p>如前所述，丈夫一方的通奸是可以接受的——奥古斯都皇帝与他的第二任妻子斯克里博尼亚离婚，因为她不能容忍他的婚外情，而他的第三任妻子利维娅则很宽容，因此尽管她没有生育，却与奥古斯都结婚超过五十年。另一方面，一个通奸的妻子可以被她的丈夫毫不犹豫地杀害。如果幸免于难，她就会加入被污辱的妇女群体，即妓女、演员、舞女和罪犯，她们被禁止与自由出生的罗马公民结婚，也不能在法庭上作证或继承财产。</p>
+<h3>离婚(4,5)</h3>
+<p>在早期的共和国时期，离婚是罗马男性的特权，通常仅限于诸如毒害子女、偷窃门钥匙或饮酒之类的恶行。由于生育是婚姻的主要目标之一，因此，由于不孕不育而离婚——总是被认为是女方的问题——是有效的。政治进步是离婚的另一个有效理由；在后期的共和国时期，小加图为了让他妻子马尔西亚结婚，以便他可以与演说家昆图斯·霍滕修斯建立联系而与她离婚。加图爱马尔西亚，非常想念她，所以几年后霍滕修斯去世时，加图又娶回了现在非常富有的前妻。</p>
+<p>罗马的离婚比现在简单得多；丈夫只需要对妻子说“我与你离婚”，这就行了——离开家门，没有任何补救措施，尽管毫无疑问，会有很多哭喊和咬牙切齿！</p>
+        <small class="page-url url "><a href="https://www.vindolanda.com/blog/roman-betrothal-marriage" target="_blank">(https://www.vindolanda.com/blog/roman-betrothal-marriage)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Clothing-in-ancient-Rome---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">👗&nbsp;</span>Clothing in ancient Rome - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Clothing_in_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Clothing_in_ancient_Rome)</a><br></small>
+        <small class="page-rating rating ">评分: 6.0<br></small>
+        <small class="page-annotation annotation ">注释: 此页面内容反映了罗马社会的服装风格，借此展现身份与社会阶层的重要性。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马的服装</h2>
+<p>古罗马的服装通常包括：对男性和男孩来说是短袖或无袖及膝的 <strong>托加</strong>；对女性和女孩来说是更长，通常有袖子的 <strong>托加</strong>。在正式场合，成年男性公民可以在他们的 <strong>托加</strong> 外面披一件羊毛 <strong>托加</strong>，已婚女公民则在 <strong>斯托拉</strong>（一件简单的、长袖的、宽大的，可以遮住脚的衣服）外面披一件羊毛披风，称为 <strong>帕拉</strong>。服装、鞋类和装备可以表明性别、地位、等级和社会阶层。这在官员、祭司和军队的独特、特权的正式服装中尤为明显。</p>
+<p><strong>托加</strong> 被认为是罗马的“民族服装”，罗马公民享有穿戴的特权，但日常生活大多数罗马人更喜欢更休闲、实用和舒适的服装；各种形式的 <strong>托加</strong> 是所有阶层、男女和大多数职业的基本服装。它通常由亚麻制成，并根据需要增加内衣，或各种防寒或防雨的衣物，如男性的及膝裤，以及斗篷、外套和帽子。在帝国较寒冷的地区，人们穿着长裤。大多数城市罗马人穿各种类型的鞋子、拖鞋、靴子或凉鞋；在农村，有些人穿木屐。</p>
+<p>大多数服装结构简单，形式基本，其生产所需的剪裁和缝纫最少，但所有服装都是手工制作的，每个过程都需要技能、知识和时间。纺纱和织布被认为是所有阶级的罗马妇女的道德和节俭的职业。包括奥古斯都的妻子利维娅在内的富有的贵妇们可能会通过制作自制的衣服来展示她们的传统价值观，但大多数负担得起的人都会从专业的工匠那里购买衣服。服装的制造和贸易及其原材料的供应对罗马经济做出了重要贡献。相对于整体基本生活成本而言，即使是简单的服装也很昂贵，并且会在社会阶层中多次循环利用。</p>
+<p>罗马的执政精英制定了旨在限制个人财富和奢侈品公开展示的法律。这些法律都不太成功，因为同样的富裕精英都渴望奢华和时尚的服装。异域面料是有价的；丝绸提花织物、半透明的薄纱、金线织物和复杂的刺绣；以及鲜艳、昂贵的染料，如藏红花黄或提尔紫。然而，并非所有染料都昂贵，大多数罗马人都穿着色彩鲜艳的衣服。干净、鲜亮的衣服是所有社会阶层都尊重的标志。用于固定斗篷等服装的扣环和胸针为个人装饰和展示提供了进一步的机会。</p>
+<h3>托尼卡</h3>
+<p>男女和所有阶层的<strong>基本服装是托尼卡（Tunic）</strong>。在最简单的形式中，<strong>托尼卡</strong>是由一块织物制成的单一矩形，最初是羊毛的，但从共和国中期开始，越来越多地由亚麻制成。它被缝成一个宽大的、无袖的管状，并像希腊基顿一样别在肩膀上，形成颈部和手臂的开口。在帝国东部的一些例子中，颈部开口是在编织中形成的。可以添加袖子，或者从多余的宽度中就地形成。大多数劳动人民穿着及膝的短袖<strong>托尼卡</strong>，腰部系着腰带。一些传统主义者认为长袖<strong>托尼卡</strong>只适合女性，男性穿很长的<strong>托尼卡</strong>是柔弱的象征，而短的或不系腰带的<strong>托尼卡</strong>则是奴性的标志；然而，非常长袖、宽松系腰带的<strong>托尼卡</strong>也是时尚的非常规服装，并被一些罗马男子采用；例如，尤利乌斯·凯撒。妇女的<strong>托尼卡</strong>通常是及踝或及地的长袖，可以松散地穿着或系着腰带。为了舒适和防寒，男女都可以在粗糙的外<strong>托尼卡</strong>下穿柔软的内<strong>托尼卡</strong>或背心（subucula）；在冬天，皇帝奥古斯都（他的体格和体质从来都不特别强壮）会穿多达四件<strong>托尼卡</strong>，一件背心在里面。虽然从基本设计上来说很简单，但<strong>托尼卡</strong>在面料、颜色和细节上也可以很奢华。</p>
+<p>腰布，被称为subligacula或subligaria，可以穿在<strong>托尼卡</strong>下面。它们也可以单独穿着，特别是从事炎热、出汗或肮脏工作的奴隶。妇女在<strong>托尼卡</strong>下面穿着腰布和胸布（一种胸布）；有些人为了工作或休闲而穿定制的内衣。罗马妇女也可以穿佩克托拉利斯（一种类似于现代女性胸罩的胸罩）。公元4世纪西西里岛的一幅马赛克画展示了几位“比基尼女孩”进行体育运动；1953年，伦敦一口井中挖掘出一件罗马皮革比基尼底裤。</p>
+<h3>斯托拉和帕拉</h3>
+<p>除了<strong>托尼卡</strong>外，已婚女公民还穿着一件简单的衣服，称为 <strong>斯托拉</strong> （复数 <strong>斯托拉</strong>），这与传统的罗马女性美德，尤其是贞洁有关。在罗马共和国早期，<strong>斯托拉</strong>是为贵族妇女保留的。在第二次布匿战争之前不久，穿戴它的权利被扩展到平民妇女，以及通过与公民结婚而获得妇女地位的自由妇女。<strong>斯托拉</strong>通常由两块矩形的布料组成，侧面用 fibulae 和纽扣连接，这种方式可以让衣服优雅地垂下，但可以隐藏褶皱，遮盖全身，包括脚部。在 <strong>斯托拉</strong> 上面，女公民经常穿着 <strong>帕拉</strong>，这是一种长达 11 英尺，宽 5 英尺的矩形披肩。它可以作为外套，也可以披在左肩上，穿过右臂，然后穿过左臂。在户外和公共场合，贞洁的贵妇的头发用羊毛带（发带，或 vitae）高高地盘起，被称为 tutulus。她的脸被面纱遮住了，不让公众，尤其是男性看到；她的 <strong>帕拉</strong> 也可以作为带帽斗篷。两个古代文学来源提到了在妇女的“披风”或她们的<strong>托尼卡</strong>下摆上使用彩色条纹或边缘（alimbus）；这可能是她们高地位的标志，大概是紫色的。在她们家门外，贵妇们必须戴面纱；一位没有戴面纱的贵妇被认为是拒绝了她结婚。被判犯有通奸罪的高种姓妇女和高级妓女（meretrices）不仅被禁止公开使用 <strong>斯托拉</strong>，而且可能被要求穿 <strong>托加穆利埃布里斯</strong> （“妇女的托加”）作为她们的耻辱标志。</p>
+<p>罗马婴儿通常 用襁褓包裹。除了为成年人保留的那些为数不多、通常是正式的服装外，大多数儿童都穿着他们父母穿的衣服的缩小版。女孩们通常穿着一条及脚或脚趾的长<strong>托尼卡</strong>，腰部系着腰带，装饰非常简单，最常见的是白色。在户外，她们可能会在上面再穿一件<strong>托尼卡</strong>。男孩子的<strong>托尼卡</strong>比较短。</p>
+<p>公共礼仪要求参议员穿红色的及踝长靴，骑兵穿有新月形扣环的鞋子，尽管有些人穿希腊风格的凉鞋来“随大流”。昂贵的鞋类是财富或地位的象征，但赤脚并不一定是贫穷的标志。小加图以公开赤脚的方式展示了他无可挑剔的共和国道德；许多罗马神灵的图像，以及后来半神奥古斯都的雕像，都是赤裸双脚的。</p>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Clothing_in_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Clothing_in_ancient_Rome)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Eating-habits-of-Romans-«-IMPERIUM-ROMANUM">
+        <h3 class="page-name title"><span class="page-emoji ">🎉&nbsp;</span>Eating habits of Romans « IMPERIUM ROMANUM</h3>
+        <small class="page-url url "><a href="https://imperiumromanum.pl/en/roman-society/eating-habits-of-romans/" target="_blank">(https://imperiumromanum.pl/en/roman-society/eating-habits-of-romans/)</a><br></small>
+        <small class="page-rating rating ">评分: 6.0<br></small>
+        <small class="page-annotation annotation ">注释: 页面信息指出了公众活动如何影响普通社交习惯，使其成为社区结构中的重要组成部分。<br></small>
+    </div>
+    <div class="page-content content"><h2>Apicius与鱼酱</h2>
+<p>Apicius是一位优秀的厨师和派对组织者（至少他是这样被人们铭记的）。他对服务质量的关注意味着他亲自监督为他厨房里的刀具准备的农场动物的喂养方式、时间和内容。他的酱汁首屈一指，鉴于肉类的质量较差，这一点非常出色。他的名字在整个帝国中，小型面包卷、蛋糕和其他烘焙食品被称为apikia或apikania。烹饪的想象力给他带来了鸡冠、骆驼蹄和各种鸟类的舌头的菜肴创意。除此之外，Apicius还发明了一种新的鹅肝制作方法：先用干无花果喂养鸟类，然后在菜肴中加入蜂蜜酒。</p>
+<p>酱汁在罗马菜肴中极其重要，尤其是一种叫做希腊鱼酱（garum）的酱汁。鱼酱是精致罗马菜肴中必不可少的调味品。它出现在Apicius的著作《论烹饪艺术》中保存的大多数食谱中。它的制作方法如下：将小鱼或鱼内脏（例如鲭鱼、凤尾鱼、沙丁鱼、小鲱鱼、染料、凤尾鱼或金枪鱼血）扔进盘中。所有这些都用盐腌制，然后在一个大盘中与香草混合（如莳萝、茴香、香菜、芹菜、香薄荷、鼠尾草、芸香、薄荷、牛防风、百里香、马郁兰），然后在阳光下暴晒长达一个月。在此期间，容器中发生了发酵过程，在此过程中，鱼会释放出汁液。将容器的内容物沥干，所得的liquamen液体用作香料。但如果气味令人作呕，为什么要使用鱼酱呢？这种物质负责鲜味。这是第五种味道，与咸、甜、酸和苦（辛辣味不是味道，而是刺激物刺激神经）一起。鲜味受体主要位于脸颊内侧，负责检测富含蛋白质的食物，如蚕豆、肉、奶酪等。海藻、帕尔马干酪、凤尾鱼、酱油、蘑菇或西红柿中含有大量谷氨酸。它被人工添加到肉汤块、“袋装菜肴”或“味精”型香料中。这些产品能显著丰富菜肴的味道，因为人们本能地寻找三种味道：甜味代表能量，酸味代表维生素，鲜味代表蛋白质。少量鱼酱可丰富清淡的燕麦粥或扁豆汤的味道。鱼酱不是在家中生产的，而是在靠近港口专门的工厂生产的。可能每个工厂都使用自己的配方，因此酱汁的原料可能有所不同。</p>
+<p>罗马医生使用鱼酱治疗消化不良、溃疡、坐骨神经痛、肺结核和偏头痛。鱼酱甚至被用作化妆品成分，以及去除多余的毛发和雀斑。鱼酱有多种不同的品种，例如，最珍贵的西班牙鱼酱sociorum仅由鲭鱼制成，而被称为血腥的鱼酱则由金枪鱼的血和内脏制成。生产商还考虑了罗马占领的犹太地区的需要——鱼酱castimoniale根据犹太教规只由去鳞的鱼制成。鱼酱的一个变种可能是称为muria的酱汁。</p>
+<p>鱼酱也有各种添加物。用水稀释后称为hydrogarum，用酒稀释后称为oenogarum（在拜占庭很受欢迎）。加入辛辣香料和醋后，得到oxygarum，加入油后得到oleogarum。鱼酱贸易和生产都是非常有利可图的企业。这种酱汁在公元前一世纪凯撒大帝时期，每congius（3.27升）的价格高达500个银塞斯特提乌斯。来自狮子湾的考古发现表明，远洋鱼酱贸易早在公元前五世纪就已经开展。酱油厂可能遍布整个地中海沿岸：意大利、高卢、伊比利亚、小亚细亚和利比亚。最珍贵的是来自西班牙贝蒂卡省的卡塔赫纳和加的斯地区的鱼酱sociorum，它是罗马的主要出口商品。在卢西塔尼亚（现在的葡萄牙）生产的酱汁，直接从拉科布里加港（现在的拉各斯）运送，也受到高度评价。前鱼酱厂位于里斯本市中心的拜沙区，可以参观。庞贝也是一个著名的鱼酱生产地。其他有标签的港口包括莱普蒂斯·马格纳和克莱奥米奈。在摩洛哥，包括利克苏斯，也发现了生产鱼酱的鱼类加工厂的罗马遗址。</p>
+<h2>关于烹饪艺术</h2>
+<p>上述Apicius的烹饪著作——《论烹饪艺术十书》包含约450个食谱，分为十本书，书名如下：</p>
+<ul>
+<li>Epimeles——谨慎的主人</li>
+<li>Sarcoptes——关于切碎的肉类菜肴</li>
+<li>Cepuros——园丁（关于蔬菜菜肴）</li>
+<li>Pandecter——关于各种菜肴</li>
+<li>Ospreon——关于豆类菜肴</li>
+<li>Tropetes——家禽（关于家禽菜肴）</li>
+<li>Polyteles——美食家（关于美食菜肴）</li>
+<li>Tetrapus——四足动物（关于四足动物）</li>
+<li>Thalassa——大海（关于海洋动物的菜肴）</li>
+<li>Halieus——渔夫（关于鱼酱）</li>
+</ul>
+<h2>食物</h2>
+<p>罗马晚餐的基本成分是用各种面粉制成的面包：黑面包（panis rusticus, plebeius）、白面包（panis secundaris）和最精致的奢侈面包（panis candidus, uniform）。有蔬菜、莴苣、卷心菜、韭菜、鹰嘴豆、蚕豆（煮熟的、烤熟的）、山羊奶酪和橄榄。牛肉和各种野味很受重视（包括鹿肉和野驴肉），但鱼类菜肴最受欢迎。</p>
+<p>罗马菜肴的典型特征是将甜味和咸味结合起来，在一个菜肴中混合醋和薄荷、蜂蜜和煮熟的葡萄汁泥。在地下室的小型陶罐中，一种珍贵且几乎是传奇的（前面提到的）鱼酱被用来调味菜肴。餐桌上从来不缺水果（苹果、梨、葡萄）和蘑菇。罗马人还制作了简单的用面粉制成的馅饼，类似于薄饼。富有的公民会用鸡蛋开始每顿正式的饭菜（因此拉丁谚语proverbab ovo——从鸡蛋开始，意思是需要从一开始就弄清楚这件事）。</p>
+<p>地位较低的罗马人早餐吃面包、奶酪和橄榄；人们喜欢将面包蘸在例如葡萄酒中。他们努力吃得足够多，以便能够整天工作。通常，没有时间或金钱吃午餐。所以下一顿饭是在睡觉前，通常相当简单。如果在家吃饭，会使用凳子/椅子和桌子。通常，小麦会被煮成某种粗粮。燕麦粥非常清淡，所以经常添加额外的配料来增加口味的多样性。如果他们买得起烤箱，有时小麦会被制成面包。然而，总的来说，贫穷的罗马人吃很少的肉，而且经常吃未煮熟的食物。由于缺乏厨房，人们使用公共酒吧。</p>
+<p>富有的罗马人通常一天吃三顿饭。早晨吃清淡的早餐：面包、葡萄酒，有时还有奶酪、鸡蛋、水果和蜂蜜。午餐/清淡的午餐：以鸡蛋、水果和蔬菜为基础。主餐是晚餐。它可能在下午晚些时候开始，一直持续到晚上。在丰盛的开胃菜（gustationes）之后，会供应许多菜肴（ferculae），并用plum（一种葡萄酒和蜂蜜的腌料）浇灌。</p>
+<p>罗马人用点心开始晚餐，其中第一道菜是鸡蛋。他们提供水果作为甜点。因此有了这样的说法：“从鸡蛋到苹果（水果）”（ab ovo usque ad mala）。主菜是肉类或鱼类菜肴配蔬菜。所有这些都大量洒上葡萄酒和蜂蜜。罗马人对女性很好，允许她们参加聚会。在躺到宴会床上之前，客人们会脱掉鞋子，奴隶会给他们洗脚。罗马宴会的盛况和辉煌已载入史册。为了遏制浪费，出台了法律来限制奢侈。我们知道十七项此类法律行为，规定了受邀客人的最大人数，以及列出了禁止或仅在一年中特定日子允许食用的长长的菜肴清单。大多数法律，从《法尼亚法》（公元前161年）开始，也对组织宴会可能产生的费用设置了上限。法尼亚的法律是关于总共100埃塞的。一些这些法律的作者（例如公元前143年的《迪迪亚法》）甚至走到了惩罚那些收到过于奢华的宴会邀请或命令组织敞开大门派对的客人的地步（公元前182年的《奥奇亚法》）。当然，每一项后续法令只会激起更聪明的贵族们寻找规避它的方法。因此，由于《法尼亚法》禁止食用鸟类菜肴，除非是家禽，并且规定鸡不能被喂肥，聪明的罗马人开始喂肥公鸡，同时发现它们的味道比这个物种的雌性代表更美味。</p>
+<p>各种胃灼热、腹胀和腹泻，与便秘交替出现，对那些在宴会上大吃大喝的上流社会罗马人来说是真正的痛苦。此外，据信，在凯撒的战争远征中，由于折磨人的食物中毒和腹泻营地，在厕所里居住的士兵比在战场上的士兵更多。</p>
+<p>在食品中，区分多达49种肉类。还知道许多乳制品和奶酪。一个有趣的事实是，罗马人不喜欢黄油，他们认为黄油是野蛮人的东西。他们用黄油来润滑车轮。此外，野蛮人将黄油用作护发素，这可能会让罗马人感到厌恶。</p>
+<h2>晚餐</h2>
+<p>罗马人的主餐，cena（“宴会”），通常在晚上很晚的时候享用。通常，那些邀请朋友或重要人物参加的晚宴，会用各种娱乐活动来丰富，它们的辉煌和盛况已载入史册，例如卢库鲁斯的宴会。</p>
+<p>除了刀子以外，不使用其他餐具，刀子主要用于切肉。吃菜的顺序——从鸡蛋到苹果——是众所周知的谚语“Ab ovo usque ad mala”的来源，这个谚语今天的含义是“(做某事) 从头到尾”。最后，让我们补充一点，如今在南欧如此受欢迎的柑橘类水果并不构成宴会的“菜单”——它们早在美洲被发现之前就从亚洲来到欧洲。罗马人不知道它们，尽管在公元二世纪，这个家族的水果——香橼——已经在种植了。</p>
+<h2>啤酒</h2>
+<p>在那些日子里，人们普遍饮用啤酒，从埃及到野蛮人的土地都有啤酒。萨米罗马人相当鄙视这种饮料，因为它是一种野蛮人的发明，实际上是将优质谷物用于愚蠢的目的的浪费（他们毕竟有葡萄酒）。但塔西佗和老普林尼都提到了高卢人和日耳曼人享用“用浸泡过的谷物醉酒……”的普遍习俗。罗马人不喜欢这种饮料，因为（在那些日子里）它味道酸涩（有时为了口感会添加蜂蜜、枣子、香草）。此外，它是现场生产的，立即饮用，不适合储存。然而，有趣的是，在公元前一世纪，凯撒大帝在他的著作《高卢战记》中写到了高卢啤酒。因为凯撒不喜欢罗马葡萄酒，他和他的士兵们喝了这种啤酒，他们真的很喜欢。凯撒甚至将高卢人的非凡勇敢和勇气归因于啤酒的特性。多亏了他，啤酒在罗马赢得了许多追随者，尽管它从未像葡萄酒那样占据相同的地位。</p>
+<h2>煎汁和铅中毒问题</h2>
+<p>煎汁（orcarenum或sapa）是一种葡萄汁（所谓的葡萄浆），用香料煮沸至变稠并获得甜味。这种制备的物质在古罗马用作甜味剂。对罗马人来说，普通的葡萄酒太苦太酸，所以他们决定用煎汁来使其变甜。将葡萄汁煮沸，直到容器中的液体体积减少到其容量的2/3（carenum）、一半（defrutum）或1/3（sapa）。这种甜味剂也添加到水果和肉类中，从而使其在更长的旅程中得以保存；在冬天，用煎汁和蜂蜜保存西洋梨和甜瓜。煎汁也与鱼酱混合，以获得极其受欢迎的oenogarum香料。</p>
+<p>有趣的是，当在铅制容器中煮沸果汁时，会释放出高度有毒和有毒物质——醋酸铅（醋酸铅II）。然而，这些中毒并不是立即发生的，总是呈慢性病程。铅从人体中排出非常缓慢，主要积聚在骨骼和血液中（随之进入所有器官）。长期使用它的后果可能是许多疾病：心脏心律失常、肾脏疾病、贫血和循环衰竭，几乎总是导致死亡。</p>
+<p>当检查罗马帝国居民的遗骸时，考古学家发现了非常高水平的铅。铅也会影响我们的神经系统，因此它会加剧甚至引起精神疾病。一个很好的例子是像卡里古拉或尼禄这样的凯撒。通过从铅酒杯中饮用大量的这种酒，他们将致命量的危险物质引入体内，这些物质会对他们的行为和精神产生负面影响。例如，卡里古拉从一个善良和富有同情心的男朋友突然转变为一个贪婪地进行酷刑和强奸的暴君，这也可以部分地解释这一点。</p>
+<p>富有的罗马人举行盛大的宴会。一个名叫特里马尔基奥的人举行了一场宴会，会上他为客人提供了陈酿多年的葡萄酒。在宴会上，还上了一头野猪，它的肚子活生生地膨胀起来，嘲笑百灵鸟。</p>
+<p>在宴会上，客人们吃得太多，以至于呕吐。马克西米安皇帝是一个贪吃的怪物。他据说曾经一天吃了20公斤肉。马克西米安每天还喝34升葡萄酒。这种暴饮暴食最终导致了他的死亡。然而，他统治了二十年。</p>
+<p>在富有的罗马人的厨房里，有一个专门用来喂养肉丸的容器。它们是用坚果、橡子栗子喂肥的。</p>
+<p>填塞的睡鼠（类似老鼠的啮齿动物——glis, gliris）是一种真正的美味佳肴。馅料通常是用猪肉香肠配胡椒和坚果制成的。睡鼠是用蜂蜜油炸的。显然，它们的耳朵容易烧焦。</p>
+<p>蜗牛用牛奶喂肥也是一种受欢迎的美味佳肴。它们整天放在装满牛奶和盐的平盘上。蜗牛喜欢牛奶，所以它们会喝牛奶，而盐会让可怜的生物感到口渴。然后将它们放入一碗牛奶中几天。它们喝得太多，变得油腻不堪，以至于它们再也装不下壳里了。喂肥的蜗牛用油炸，然后淋上葡萄酒醋食用。</p>
+<p>蜗牛也用生肉喂肥。这给了它们特殊的香味。</p>
+<p>罗马人喜欢填塞的画眉。罗马语中的画眉是通过喉咙填塞的，没有取出内脏。罗马人还食用了我们想不到的其他鸟类，例如海鸥、寒鸦、乌鸦、喜鹊、天鹅、黑水鸡、孔雀等等。</p>
+<p>罗马人什么也不浪费。一位名叫Apicius的人提供了一种切碎的猪乳房的食谱。罗马人还吃小脑和山羊或绵羊的肺。</p>
+<p>来自亚洲本都的米特里达梯国王害怕中毒。所以他一直在自己服毒。当然，剂量很小。他这样做是为了使他的身体对毒药产生抵抗力。这位统治者有一次得知罗马人想将他俘虏，因为他没有足够的勇气抵抗他们，所以他吞下了毒药。当然，这没有奏效。米特里达梯必须用他的剑突破。</p>
+<p>罗马人也有他们令人讨厌的饮料。其中一种是用鱼的内脏制成的。鱼内脏被腌制并在阳光下长时间放置。几天后，液体被排干。这种饮料可以饮用或用作调味酱。</p>
+<p>罗马人，就像我们一样，吃鸡、鸭和鹅。它们被端上桌子时没有头，但有爪子。</p>
+        <small class="page-url url "><a href="https://imperiumromanum.pl/en/roman-society/eating-habits-of-romans/" target="_blank">(https://imperiumromanum.pl/en/roman-society/eating-habits-of-romans/)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Roman-festivals---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">👥&nbsp;</span>Roman festivals - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Roman_festivals" target="_blank">(https://en.wikipedia.org/wiki/Roman_festivals)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 页面内涵盖古罗马的社交习惯与公共活动，增强了对普通人日常生活的理解。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马的节日</h2>
+<p>古罗马的节日是罗马宗教生活中非常重要的组成部分，在共和时代和帝国时代都是如此。“假日”（单数feriae或dies ferialis）的主要特征是公共的（publicae）或私人的（privatae）。国家假日由罗马人民庆祝，并获得公共资金。诸如阿波罗节（Ludi Apollinares）之类的游戏并非严格意义上的feriae，但庆祝它们的那些日子是dies festi，即现代意义上的休假日。虽然feriae由国家支付，但ludi通常由富人资助。Feriae privatae是为纪念个人或家庭而庆祝的节日。[1] 本文仅讨论公共假日，包括罗马国家祭司在寺庙中举行的仪式，以及同时在整个罗马举行的邻里、家庭和朋友的庆祝活动。</p>
+<p>Feriae publicae分为三种：</p>
+<ul>
+<li><strong>Stativae:</strong> 每年都在日历上固定日期举行的节日。</li>
+<li><strong>Conceptivae:</strong> 每年举行的可变节日（如同基督教日历中的复活节，或北美的感恩节）；日期由负责它们的行政长官或祭司宣布。</li>
+<li><strong>Imperativae:</strong>  根据需要（来自动词impero, imperare，“命令，指挥”）举行的节日，当需要特殊的庆祝活动或赎罪时。[2]</li>
+</ul>
+<p>关于罗马节日最重要的资料来源之一是奥维德的《节期诗》（Fasti），这是一首未完成的诗歌，描述并提供了从奥古斯都时代的一月到六月节日的起源。</p>
+<h3>保持feriae</h3>
+<p>瓦罗将feriae定义为“为神灵的性别而设立的日子”。[3]  在feriae上进行宗教仪式，公共事务暂停。即使是奴隶也应该得到某种形式的休息。西塞罗明确指出，自由民不应参与诉讼和争吵，奴隶应该从劳动中得到休息。[4] 农业作家认识到农场上的一些工作可能仍然需要进行，并指明了这些工作是什么。如果事先进行赎罪（piaculum），通常是牺牲一只小狗，则可以执行一些平时不允许进行的农业任务。[5] 在罗马城内，祭司flamens和被称为Rex sacrorum的祭司甚至不允许看到工作完成。在实践层面，“无意中”工作的人可以支付罚款或献上piaculum，通常是一只猪。根据一些宗教法专家，被认为对神灵或维护人类生命至关重要的工作是可以原谅的。尽管罗马人被要求不工作，但除非他们是祭司或有家族仪式（sacra gentilicia）需要维持，否则他们不需要采取任何宗教行动。[6]</p>
+<p>17–23：土卫星节（Saturnalia），为纪念土星，公共仪式在17日举行
+18：埃波纳节（Eponalia），为纪念埃波纳（Epona）
+19：欧普斯节（Opalia），为纪念欧普斯（Ops）
+21：安格罗娜节（Divalia），为纪念安格罗娜（Angerona）；赫拉克勒斯和谷物女神也接受了祭祀
+22：米努西亚柱廊（Porticus Minucia）的拉尔斯·佩马里尼神庙（Temple of the Lares Permarini）的周年纪念日
+23：拉伦塔利亚节（Larentalia）；弗拉米尼乌斯竞技场（Circus Flaminius）的戴安娜和朱诺·雷吉娜神庙的纪念活动，以及风暴神庙（Tempestates）；西吉拉利亚节（Sigillaria），土卫星节的最后一天，专门用于赠送礼物
+25：太阳神诞辰节（Dies Natalis Solis Invicti）；布鲁马利亚节（Brumalia）（均为帝国节日）</p>
+<h3>Feriae conceptivae</h3>
+<p>以下“可变节日”按大致时间顺序排列。</p>
+<ul>
+<li><strong>康皮塔利亚节（Compitalia）：</strong>  在12月17日（土卫星节）和1月5日之间举行；在后来的帝国时期，它们定期在1月3日至5日举行，但马克罗比乌斯（公元5世纪）仍然将它们归类为conceptivae。[22]</li>
+<li><strong>播种节（Sementivae）：</strong>  一个纪念大地女神和谷物女神的播种节日，奥维德将其定在1月24日至26日，他认为这些feriae与帕加纳利亚节相同；瓦罗可能表明这两个节日是分开的。[23]</li>
+<li><strong>烤炉节（Fornacalia）：</strong>  一个二月中旬的烘焙节，由curiae（罗马人民的30个古老部门）庆祝；日期由curio maximus宣布，并为每个curia分别设定，那些错过自己的节日或不确定自己属于哪个curia的人，在2月17日有一个总的Fornacalia。</li>
+<li><strong>城墙净化仪式（Amburbium）：</strong>  一个净化整个城市（urbs）的仪式，可能在二月份举行。</li>
+<li><strong>拉丁节（Feriae Latinae）：</strong>  四月的一个重要而古老的conceptivae。</li>
+<li><strong>田野净化仪式（Ambarvalia）：</strong>  五月份净化田野。</li>
+<li><strong>玫瑰节（Rosalia）：</strong>  也没有固定日期，但在技术上并非feriae conceptivae之一，其日期由公共祭司根据古老的习俗宣布。</li>
+</ul>
+<h3>Feriae imperativae</h3>
+<p>在古罗马，节日也因特定事件而举行，或出于特定目的，例如讨好或感谢诸神。例如，李维报道说，公元前7世纪罗马摧毁阿尔巴·隆加之后，并将阿尔巴人迁移到罗马，据报道阿尔巴努斯山（Mons Albanus）下起了石头雨。一个罗马代表团被派去调查此事，并目睹了另一场石头雨。罗马人认为这是阿尔巴神不满的迹象，阿尔巴·隆加的撤离使对阿尔巴神的崇拜被废弃了。李维接着说，罗马人根据阿尔巴努斯山上听到的“天声”或占卜师的建议，设立了一个为期九天的公共节日。李维还说，在罗马，每当有石头雨的报道，就会下令举行一个为期九天的节日作为回应。[24]</p>
+<p>另一个值得注意的不规则节日是世纪游戏（Secular Games）。在几天的时间里，国家举办了祭祀、娱乐表演和游戏，试图成为任何活着的人见过的最伟大的展示。这些游戏意在每100年举行一次，其目的仅在一个人的一生中发生一次。一度有两个世纪游戏周期同时举行，导致实际上有两次目睹它的人。</p>
+<h3>Mercatus</h3>
+<p>名词mercatus（复数mercatūs）通常指“商业”或“市场”，但也指某些ludi之后立即举行的集市或市场。西塞罗说[25]，努马·庞皮利乌斯（Numa Pompilius），罗马半传奇的第二任国王，与宗教节日一起建立了mercatus，以方便贸易，因为人们已经大量聚集在一起。在早期，这些mercatus可能在批发贸易中发挥了作用，但随着罗马商业变得越来越复杂，到了共和国后期，它们似乎变成了专门针对假日市场的零售集市。与土卫星节相关的Sigillaria可能就是这种mercatus。现存的fasti[26]记载了阿波罗市场（Mercatus Apollinares），7月14日至19日；罗马市场（Mercatus Romani），9月20日至23日；以及平民市场（Mercatus Plebeii），11月18日至20日。可能还存在其他市场。英语单词“fair”（集市）来源于拉丁语feria。[27]</p>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Roman_festivals" target="_blank">(https://en.wikipedia.org/wiki/Roman_festivals)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Roman-Daily-Life---World-History-Encyclopedia">
+        <h3 class="page-name title"><span class="page-emoji ">📚&nbsp;</span>Roman Daily Life - World History Encyclopedia</h3>
+        <small class="page-url url "><a href="https://www.worldhistory.org/article/637/roman-daily-life/" target="_blank">(https://www.worldhistory.org/article/637/roman-daily-life/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 此页面综述了罗马时期的教育结构，强调了教育机会的不平等现象对普通人未来的影响。<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马人的日常生活</h2>
+<h3>人口流动</h3>
+<p>在城市之外，城镇和小型农场上，人们过着更加简单的生活——几乎完全依赖自己的劳动。然而，普通城市居民的日常生活大相径庭，通常是例行公事。帝国的城市地区——无论是罗马、庞贝、安条克还是迦太基——都吸引了很多人离开较小的城镇和农场，寻求更好的生活方式。然而，未能实现的就业承诺迫使无数人生活在城市的贫困地区。他们寻求的工作往往并不存在，导致了无家可归者的疫情。然而，这些新移民所能获得的工作很难找到。奴隶从事几乎所有卑微的工作，以及许多职业，例如教师、医生、外科医生和建筑师。大多数自由民从事各种行业，例如面包师、鱼贩或木匠。有时，贫穷的妇女会为富人服务，担任理发师、助产士或裁缝。</p>
+<h3>住房——公寓楼</h3>
+<p>和其他地方一样，无论是在农场还是在城市，日常生活仍然以家庭为中心，当人们到达城市时，他们首先要考虑的是找到一个居住的地方。像罗马这样的城墙都市，空间非常宝贵，从一开始就很少关注迁移到城市的居民的住房需求——廉租公寓提供了最好的答案。大多数罗马公民，并非全部都是穷人，都居住在这些公寓楼或 insulae 中。早在公元前 150 年，整个城市就有超过 46,000 座 insulae。这些破旧的廉租公寓大多过度拥挤且极其危险，导致居民生活在持续的火灾、倒塌的恐惧中，在某些地区还容易受到台伯河洪水的侵袭。最初，城市很少关注设计笔直甚至宽阔的街道（街道通常未铺砌，宽度可能只有 6 英尺或宽达 15 英尺），如果发生火灾，则无法轻松进入这些建筑物。直到尼禄皇帝时期的大火才改善了这个问题，当时拓宽了街道，并建造了阳台以提供安全以及紧急情况下的通道。这些“公寓”通常高五到七层（超过 70 英尺）；然而，由于许多这些廉租公寓被认为不安全，奥古斯都和图拉真皇帝时期通过了法律，以防止它们变得太高；不幸的是，这些法律很少得到执行。整个城市的贫困是显而易见的，无论是缺乏教育还是穿着方式，这些廉租公寓的生活反映了这种差距。一个人居住的楼层取决于一个人的收入。较低的公寓——insulae 的底层或第一层——比顶层舒适得多。它们宽敞，设有单独的餐厅和卧室、带玻璃的窗户，并且与其他楼层不同，租金通常每年支付一次。较高的楼层，租金按日或周支付，空间狭窄，通常一家人只有一间房。一家人生活在不断被驱逐的恐惧中。他们没有自然光，夏天炎热，冬天寒冷，几乎没有自来水——这意味着甚至没有 latrina 或厕所。虽然城市的第一套下水道系统或最大下水道出现在公元前六世纪，但它并没有惠及上层楼的人们（下层楼可以使用自来水和室内厕所）。垃圾，甚至人类粪便，通常被倾倒在街道上，不仅造成难闻的气味，而且成为疾病的滋生地。对许多人来说，唯一的替代方案是使用公共厕所。结合缺乏路灯（由于犯罪率高，晚上没有行人通行）、建筑物腐朽以及对火灾的恐惧，廉租公寓上层的生活对许多穷人来说并不是很愉快。</p>
+<p>相反，大多数富有的居民——那些不住在城市外别墅的人——都住在 domus 中。这些房屋，至少在罗马，通常位于帕拉丁山，靠近皇宫。与许多廉租公寓一样，这些住宅的正面（尤其是在庞贝和赫库兰尼姆等城市）通常设有一家商店，业主在那里进行日常业务。商店后面是中庭——一个接待客人或客户的接待区，有时也进行私人业务。中庭通常包括一个供家庭或祖先神使用的祭坛。中庭的天花板是开放的，下面是一个长方形的水池。在下雨天，通过这个开口进入的水被收集起来，并在 domus 的其他地方使用。中庭的两侧是较小的房间，称为 cubiculum，用作卧室、图书馆和办公室。当然，还有足够的空间容纳餐厅或 triclinium 和厨房。domus 的后面是家庭花园。</p>
+<h3>家庭</h3>
+<p>无论贫富、公寓还是别墅，整个帝国的基本社会单位都是家庭，从共和国早期开始，以 paterfamilias 为中心的家庭——户主的男性家长拥有对所有家庭成员（甚至大家庭）的生杀予夺的权力。如果孩子畸形、怀疑孩子是私生子、已经有多个女儿或仅仅是他自己愿意，他都可以拒绝孩子。他甚至可以将他任何一个孩子卖为奴隶。逐渐地，随着时间的推移，这种极端、几乎全能的家庭管控（ patria potestas ）将会减弱。然而，这种由丈夫或父亲铁腕统治并没有限制家庭妇女的权力。</p>
+<p>家是妻子的领地。虽然她最初被限制出现在公众面前，但她经营着家庭，并且经常负责孩子的教育，直到找到一位导师。到共和国结束时，她甚至被允许与丈夫一起吃饭，去洗澡（尽管不是与男人同时），以及参加戏剧和游戏。后来，可以看到妇女从事面包师、药剂师和店主的工作，并且在法律上，妇女的权利得到了改善，例如，离婚诉讼可以由丈夫或妻子提起。</p>
+<h3>食物</h3>
+<p>每个人都必须吃饭，罗马居民的饮食，就像他们的住房一样，取决于他们的经济状况。对许多穷人来说，这意味着等待每月分配的谷物。对大多数罗马人来说，一天的主要膳食是在下午晚些时候，从四点到六点。早饭和午饭通常是少量零食，有时只有面包。由于没有冰箱，所以在许多小商店和街头摊位或城市的广场上每天都会购物。我们今天认为是意大利的许多食物在罗马早期并不存在。没有土豆、西红柿、玉米、辣椒、大米或糖。也没有橙子、柚子、杏或桃子。虽然富人会在饭菜中享用进口香料，斜躺在枕头上，由奴隶服务，但许多极度贫困或无家可归的人吃的是酸败的谷物或麦片粥（缺乏优质饮食导致许多人营养不良）。对其他人来说，日常饮食包括谷物、面包、蔬菜和橄榄油；肉类对普通人的预算来说太贵了，尽管有时在向神灵献祭后会得到（因为只有内脏用于献祭）。葡萄酒是常见的饮料，但对于穷人来说，公共喷泉里有水。</p>
+<h3>工作与休闲</h3>
+<p>对富人来说，一天的时间划分在工作和休闲之间。当然，业务只在早上进行。大多数罗马人每天工作六个小时，从黎明开始，中午结束，尽管有时某些商店可能会在傍晚重新开业。城市的广场将是空的，因为下午是休闲时间——参加游戏（角斗比赛、赛车或摔跤）、剧院或浴室——所有这些也受到穷人的喜爱（因为许多政府官员感到需要让穷人娱乐）。即使在危机时期，罗马市民也会通过面包和游戏保持快乐。他们可以在最大竞技场、罗马斗兽场或庞贝剧院找到他们。</p>
+<p>在整个帝国，安条克、亚历山大、迦太基甚至新迦太基等城市都罗马化了，拥有圆形剧场或竞技场。庞贝城有三座公共浴室、两座剧院、一座大教堂和一座圆形剧场。在克劳狄乌斯皇帝时期，有 159 天没有进行任何业务（罗马一周没有休息日）；然而，马可·奥勒留皇帝认为这太极端了，并下令至少要有 230 天的业务。</p>
+<h3>浴场</h3>
+<p>在忙碌的一天进行商务活动和参加游戏之后，罗马公民需要放松身心，这种放松时间是在浴室度过的——沐浴对所有罗马人都很重要（通常每周一到两次）。浴室是社交和有时进行业务的地方。公元前 33 年，罗马有 170 个，到公元 400 年，有超过 800 个，其中包括最大和最豪华的图拉真、卡拉卡拉和戴克里先浴场。皇帝总是可以通过建造浴室来确保他的受欢迎程度。一个典型的浴场包括一个健身房、一个健康中心、一个游泳池，有时甚至还有一个妓院（为更富有的客人提供服务）。大多数使用费用非常低廉，甚至在公共假日免费。一个典型的浴场将有三个房间——一个 tepidarium 或休息室、一个 caldarium 或较热的房间，以及一个 frigidarium 或冷却室。奴隶被用来维持各个热水房的温度，以及满足富人的需求。最著名的浴场之一是戴克里先皇帝送给城市的一个。它占地 32 英亩，拥有奢华的花园、喷泉、雕塑甚至跑道。它可以容纳 3,000 位客人。在浴场度过一个轻松的下午之后，无论是富有的还是贫穷的罗马公民都会回家吃晚饭。</p>
+<h3>结论</h3>
+<p>罗马城市中的日常生活完全取决于一个人的经济状况。然而，这座城市仍然是财富与贫困的混合体，常常并存。富人可以享受奴隶劳动，无论是加热浴场的水、为他们提供晚饭还是教育他们的孩子。另一方面，穷人无法获得教育，生活在破旧的廉租公寓中，有时靠城市的慈善机构生活。历史学家仍在争论帝国的灭亡——是宗教还是野蛮人的涌入？然而，有些人认为城市的穷人——肮脏的环境、失业人口的增加以及疾病和犯罪的增加——是西罗马帝国最终灭亡的一个促成因素。</p>
+<h2>参考文献</h2>
+<p>Hardy W.G.  《希腊与罗马世界》。Skenkman，1970 年</p>
+<p>Hill D.  《古代罗马》。Parragon，2007 年</p>
+<p>Matz D.  《古罗马人的日常生活》。Greenwood，2001 年</p>
+<p>McGeough K.  《罗马人》。Clio，2004 年</p>
+<p>Polard J.  《古代世界的奇迹》。Metro Books，2008 年</p>
+<p>Roberts P.  《庞贝和赫库兰尼姆的生与死》。牛津大学出版社，美国，2013 年</p>
+<p>Rodgers N.  《罗马帝国》。Metro，2008 年</p>
+<h2>免费面向世界，由您支持</h2>
+<p>世界历史百科全书是一个非营利组织。每月只需 5 美元，您就可以成为会员，并支持我们致力于让人们参与文化遗产和改善全球历史教育的使命。</p>
+<p>Wasson，Donald L.。“罗马人的日常生活。”世界历史百科全书。最后修改于 2018 年 4 月 23 日。https://www.worldhistory.org/article/637/roman-daily-life/。</p>
+<h4>MLA 样式</h4>
+<p>Wasson，Donald L.。“罗马人的日常生活。”世界历史百科全书。世界历史百科全书，2018 年 4 月 23 日。网络。2024 年 12 月 28 日。</p>
+<h2>许可和版权</h2>
+<p>由 Donald L. Wasson 提交，发表于 2018 年 4 月 23 日。版权持有者已根据以下许可发布此内容：知识共享署名-非商业性使用-相同方式共享。此许可允许其他人以非商业方式重新混合、调整和建立在此内容之上，只要他们注明作者并以相同的条件许可他们的新创作。在网络上重新发布时，必须包含指向原始内容源 URL 的超链接。请注意，从此页面链接的内容可能具有不同的许可条款。</p>
+        <small class="page-url url "><a href="https://www.worldhistory.org/article/637/roman-daily-life/" target="_blank">(https://www.worldhistory.org/article/637/roman-daily-life/)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Ancient-Roman-cuisine---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">🎊&nbsp;</span>Ancient Roman cuisine - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Ancient_Roman_cuisine" target="_blank">(https://en.wikipedia.org/wiki/Ancient_Roman_cuisine)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 该页面讨论了罗马的节庆活动，强调了社区凝聚力和社会交流的重要性。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马的饮食</h2>
+<p>古罗马文明存在的期间，其饮食文化发生了巨大的变化。从王国到共和国再到帝国的政治变革影响了饮食习惯，罗马与外国人的贸易以及帝国的巨大扩张使罗马人接触到许多新的食物、地方烹饪习惯和烹饪方法。</p>
+<h3>餐饮</h3>
+<p>传统上，黎明时分会供应名为ientaculum[2]的早餐。在中午到下午早些时候，罗马人会吃cena[2]，这是当天的主餐，在夜幕降临的时候，会吃一顿名为vesperna[3]的清淡晚餐。随着外国食品进口的增加，cena的规模越来越大，所包含的食物种类也越来越广。因此，它逐渐转移到晚上，而vesperna[3]在多年时间里被完全放弃了。中午的餐点prandium变成了一顿清淡的餐点，以维持到cena[2]。在罗马社会的下层阶级中，这些变化不太明显，因为传统的作息时间与日常体力劳动的节奏密切相关。然而，在上层阶级中，他们通常不从事体力劳动，因此习惯于在上午安排所有业务事务。prandium之后，会处理完最后的事务，然后去浴场。大约下午2点[4]，cena就开始了。这顿饭可能会持续到深夜，尤其是在邀请客人时，之后通常会进行comissatio，即一轮酒精饮料（通常是葡萄酒）。在国王时期和早期共和国时期，以及后来的时期（对于工人阶级来说），cena基本上由一种粥状食物puls[5]组成。最简单的做法是用埃默小麦、水、盐和脂肪制成。更精致的做法是用橄榄油制成，并佐以各种蔬菜（如果有的情况下）。富人通常会用鸡蛋、奶酪和蜂蜜来吃他们的puls，有时还会配上肉或鱼。在共和国时期，cena发展成为两道菜：主菜和一道水果和海鲜（例如软体动物、虾）的甜点。到共和国末期，通常这顿饭会分为三部分：开胃菜（gustatio）、主菜（primae mensae）和甜点（secundae mensae）。罗马军团的主食是小麦。在公元4世纪，大多数军团士兵的饮食与罗马任何地方的人都一样好。他们会得到面包和蔬菜以及牛肉、羊肉或猪肉等肉类的口粮。口粮也取决于军团驻扎或作战的地点。羊肉在高卢北部和不列颠很受欢迎，但猪肉是军团的主要肉类口粮[6]。</p>
+<h2>食物和食材</h2>
+<p>罗马殖民地为罗马提供了许多食物；该城市从比利时获得火腿，从布列塔尼获得牡蛎，从摩尔塔尼亚获得鱼露，从突尼斯获得野味，从昔兰尼加获得阿魏，从埃及获得鲜花，从卡帕多西亚获得莴苣，从普塔获得鱼[7]。古罗马饮食包括许多现代意大利烹饪的主食。老普林尼讨论了30多种橄榄、40多种梨、无花果（本地和从非洲和东部省份进口的）以及各种蔬菜[a][9]。其中一些蔬菜在现代世界中已经不存在了，而另一些则发生了重大变化。人们食用了不同颜色的胡萝卜，但不是橙色的[10]。许多种类的蔬菜都被种植和食用[11]。这些包括芹菜、大蒜、一些花球茎、卷心菜和其他芸苔属植物（如羽衣甘蓝和西兰花）、莴苣、菊苣、洋葱、韭菜、芦笋、萝卜、芜菁、欧防风、胡萝卜、甜菜、豌豆、甜菜、田间蔬菜、朝鲜蓟、橄榄和黄瓜[11]。有些蔬菜在浮雕中有所说明[12]。然而，一些被认为是现代意大利菜肴特色的食物并未被使用[13]。特别是菠菜和茄子是从阿拉伯世界后来传入的，番茄、土豆、辣椒和玉米（现代波伦塔的来源）[12]只在发现新世界和哥伦布交流之后才出现在欧洲[13]。菜豆起源于欧洲。罗马人知道稻米，但他们很少能吃到。柑橘类水果也很少[13]。从公元2世纪开始，意大利就已知柠檬，但并没有广泛种植[14]。</p>
+<h3>面包和谷物</h3>
+<p>从公元前123年开始，罗马国家每月向多达20万人分配未磨制的小麦（多达33公斤）口粮，称为frumentatio[15]。最初对此要收费，但从公元前58年起，平民保民官普布利乌斯·克洛迪乌斯·普尔切尔取消了这项收费。要获得frumentatio，个人必须是罗马公民并居住在罗马[15]。最初吃的是扁平的圆形面包，是用埃默小麦（一种与小麦密切相关的谷物）和少许盐制成的；在上层阶级中，还会食用鸡蛋、奶酪和蜂蜜，以及牛奶和水果。在帝国时期，大约公元1年，用小麦制成的面包被引进；随着时间的推移，越来越多的面粉食品开始取代埃默小麦面包。面包的种类很多，质量也各不相同。通常为精英烘焙白面包，中产阶级烘焙较深色的面包，而贫穷的农民则烘焙最深色的面包[16]。面包有时会蘸葡萄酒食用，并配以橄榄、奶酪和葡萄。在公元79年庞贝城被毁时，该城至少有33家面包店[17]。罗马厨师制作了用黑醋栗调味的甜面包和用面粉、蜂蜜、鸡蛋、类似乳清干酪的奶酪和罂粟种子制成的奶酪蛋糕。甜葡萄酒蛋糕是用蜂蜜、浓缩红葡萄酒和肉桂制成的。水果馅饼在上层阶级很受欢迎，但下层阶级无力自己制作或从市场和摊贩那里购买[需要引用]。Juscellum是一种肉汤，里面有磨碎的面包、鸡蛋、鼠尾草和藏红花，在阿皮修斯（一本公元4世纪末或5世纪初的罗马食谱）中有记载[18]。</p>
+<h3>肉类</h3>
+<p>肉贩的肉是一种不常见的奢侈品。最受欢迎的肉是猪肉，尤其是香肠[19]。牛肉在古罗马并不常见，在古希腊更常见——尤维纳利斯或贺拉斯都没有提到它[19]。海鲜、野味和家禽，包括鸭子和鹅，更为常见。例如，凯撒大帝在他的凯旋中为26万humiliores（较贫穷的人）举办了一场公共宴会，其中包括这三种食物，但没有肉贩的肉[19]。约翰·E·斯坦鲍格写道，肉“除了在祭祀和富人的晚宴上，都很稀少”[20]。奶牛因其牛奶而珍贵；公牛则作为犁和役畜。役畜的肉很坚韧，而且不好吃。偶尔会吃小牛肉。阿皮修斯只提供了四种牛肉食谱，但同样的食谱也以羊肉或猪肉作为选择。只有一种牛肉炖菜食谱和另一种小牛肉香煎肉食谱[21]。人们食用睡鼠，并将其视为美味佳肴[22]。这在富有的罗马人中是一种身份象征，有些人甚至会在晚餐客人面前称睡鼠的重量[23]。在马库斯·埃米利乌斯·斯卡鲁斯执政期间颁布的一项奢侈法禁止食用睡鼠，但这并没有阻止这种做法[24]。</p>
+<h3>鱼类和海鲜</h3>
+<p>鱼比肉更常见[20]。水产养殖很复杂，有专门从事牡蛎养殖的大型产业[20]。罗马人还从事蜗牛养殖和橡树幼虫养殖[20]。有些鱼类非常珍贵，价格很高，例如在科萨渔场养殖的灰 mullet，以及“人们发明了巧妙的方法来保证它的新鲜度”[20]。</p>
+<h3>水果</h3>
+<p>水果在季节时新鲜食用，并在冬季晒干或保存。受欢迎的水果包括苹果、梨、无花果、葡萄、木瓜、柑橘、草莓、黑莓、接骨木莓、醋栗、达马森李子、枣、甜瓜、玫瑰果和石榴[20]。不太常见的水果是比较奇特的酸角和欧李。樱桃和杏子（两种在公元前1世纪传入的水果）很受欢迎。桃子在公元1世纪从波斯传入。人们知道橙子和柠檬，但更多的是用于药用而不是烹饪[20]。虽然古罗马人知道柠檬，但在成为帝国统治时期之前，意大利并没有种植柠檬[20][25]。罗马至少种植了35种梨的栽培品种，以及三种类型的苹果。卡托描述的梨栽培方法与现代技术相似[26]。有梨子和桃子奶油以及用蜂蜜、胡椒粉和少量鱼露调味的牛奶布丁的食谱。科卢梅拉提供了通过将无花果与茴香、茴香籽、孜然和烤芝麻一起压成糊状，然后用无花果叶包裹起来保存无花果的建议[27]。</p>
+<h3>蔬菜</h3>
+<p>虽然抱子甘蓝、朝鲜蓟、豌豆、芜菁甘蓝和可能的花椰菜的前身可能存在于罗马时期，但我们认为的现代栽培形式直到中世纪后期和文艺复兴时期早期才发展起来。卷心菜既可以生吃（有时蘸醋），也可以煮熟[12]。卡托非常重视卷心菜，认为它对消化有益，还认为如果病人吃大量的卷心菜并在自己的尿液中洗澡，他就会康复[28]。</p>
+<h3>豆类</h3>
+<p>豆类限于干豌豆、蚕豆（蚕豆）、鹰嘴豆、扁豆和羽扇豆。罗马人知道几种鹰嘴豆，如维纳斯、公羊和布匿克。它们要么煮成肉汤，要么烤着作为零食。罗马食谱《阿皮修斯》提供了几种鹰嘴豆食谱[29]。</p>
+<h3>坚果</h3>
+<p>古罗马人食用核桃、杏仁、开心果、栗子、榛子（榛子）、松子、芝麻，他们有时会将其磨碎以增稠辛辣的甜葡萄酒酱汁，用于烤肉和家禽，作为配菜或浇在肉上作为釉料。坚果也用于咸味类似香蒜酱的冷盘酱汁中。坚果被用于用蜂蜜甜味的糕点、馅饼和布丁中。</p>
+<h3>调味品</h3>
+<p>鱼露是古罗马独特的鱼酱[32]。它被用作调味品，代替盐；作为餐桌调味品；以及酱汁。有四种主要的鱼露类型：鱼露、液体、盐水和沙丁鱼[32]。它是由不同质量的鱼制成的，例如金枪鱼、灰鲻鱼和鲈鱼[32]。它可以调味，例如与葡萄酒混合，或用水稀释（水鱼露），这是罗马士兵中流行的一种形式，尽管皇帝埃拉加巴卢斯声称他是第一个在罗马的公共宴会中供应它的人[32]。最昂贵的鱼露是garum sociorum，它是在西班牙新迦太基渔场用鲭鱼（scomber）制成的，并被广泛交易[32]。普林尼在他的《自然史》中写道，两congii（7升）这种酱油售价1000个塞斯特尔提乌斯[33]。早期帝国时期的1000个塞斯特尔提乌斯相当于110克黄金[需要引用]。</p>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Ancient_Roman_cuisine" target="_blank">(https://en.wikipedia.org/wiki/Ancient_Roman_cuisine)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="What-was-the-impact-of-religion-on-the-daily-life-of-Roman-citizens-during-the-empire's-heyday?---Quora">
+        <h3 class="page-name title"><span class="page-emoji ">🕊&nbsp;</span>What was the impact of religion on the daily life of Roman citizens during the empire's heyday? - Quora</h3>
+        <small class="page-url url "><a href="https://www.quora.com/What-was-the-impact-of-religion-on-the-daily-life-of-Roman-citizens-during-the-empires-heyday" target="_blank">(https://www.quora.com/What-was-the-impact-of-religion-on-the-daily-life-of-Roman-citizens-during-the-empires-heyday)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 此页面探讨罗马人的宗教信仰及其在社会和政治中的作用，反映出宗教与生活的紧密联系。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马的宗教</h2>
+<p>出现了一些问题。请稍后再试。</p>
+<p>这是一个有趣的问题。首先，请注意我不是历史学家，只是一个热情的业余爱好者。不过，我对这个话题相当了解。其次，我必须对您认为的帝国鼎盛时期做一些假设。我假设是图拉真或哈德良统治时期（即公元前）。在这种情况下，我认为可以肯定地说，宗教绝对是罗马公民（或古典世界几乎所有公民）生活的中心。然而，对他们来说，宗教与大多数现代人想到的宗教有点不同。</p>
+<p>这是一个有趣的问题。首先，请注意我不是历史学家，只是一个热情的业余爱好者。不过，我对这个话题相当了解。其次，我必须对您认为的帝国鼎盛时期做一些假设。我假设是图拉真或哈德良统治时期（即公元前）。在这种情况下，我认为可以肯定地说，宗教绝对是罗马公民（或古典世界几乎所有公民）生活的中心。然而，对他们来说，宗教与大多数现代人想到的宗教有点不同。</p>
+<p>罗马的宗教不像信奉亚伯拉罕宗教的人那样制度化，而是更加个人化。实际上并没有相当于“教会仪式”的东西，当然也没有定期的宗教聚会。各种献给不同神的节日参加人数很多，但人们不会求助于祭司来寻求有关道德方面的事情的建议。异教宗教实际上并没有对个人道德发表任何评论，神灵也不关心你如何生活。他们想要的是祭祀和崇拜。如果你向他们献祭，那么也许他们会对你友善，或者至少不会给你带来麻烦。因此，当罗马人想要一些东西时：好收成、治愈、战争中的胜利等等，他们会试图讨好那些对他们来说似乎最合适的众神。这通常是去神庙进行动物祭祀……如果你穷，就献祭一只小鸟；如果你富有，就献祭一头牛。</p>
+<p>请注意，早期的犹太教也是如此。如果你读过《摩西五经》，你可能会惊讶于其中有多少篇幅是专门解释如何用正确的姿势向雅威献祭动物的。</p>
+<p>此外，当我们想到罗马时，我们经常想到奥林匹斯神，但实际上有成千上万的神和半神。其中许多是家神，大多数家庭都有供奉他们的神龛，称为拉拉里亚（lararia），人们会在那里向较小的家庭神灵进行小小的祭祀。这些祭祀通常是食物，例如蛋糕和谷物。同样，这些祭祀主要是为了安抚神灵并祈求恩惠。</p>
+<p>同样，大量的占卜活动也在进行，无论是在个人层面还是在国家层面。人们检查动物的内脏（占卜术），并广泛使用鸟类的飞行模式（观鸟术）。如果你曾在冬天去过罗马，并且目睹过迁徙椋鸟相当壮观的集群行为，你就会很容易想象罗马人如何认为这些代表了神灵的旨意。那些被认为是这些“技艺”专家的，受雇于试图确定神灵的旨意。</p>
+<p>因此，一方面，宗教确实是罗马人日常生活的一部分，但它与现代宗教国家（无论是巴基斯坦还是美国）的宗教完全不同。今天，宗教通常被认为是与一位慈爱的神建立关系的一种方式，这位神希望我们通过一群信徒以某种方式行事。对于罗马人来说，神灵一点也不在乎所有这些——他们是反复无常和苛刻的，需要安抚。他们可以帮助你或伤害你，你需要尽你所能自己与他们打交道。</p>
+        <small class="page-url url "><a href="https://www.quora.com/What-was-the-impact-of-religion-on-the-daily-life-of-Roman-citizens-during-the-empires-heyday" target="_blank">(https://www.quora.com/What-was-the-impact-of-religion-on-the-daily-life-of-Roman-citizens-during-the-empires-heyday)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Housing-conditions-of-ordinary-people-in-the-Roman-Empire-at-DuckDuckGo">
+        <h3 class="page-name title"><span class="page-emoji ">🏢&nbsp;</span>Housing conditions of ordinary people in the Roman Empire at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Housing conditions of ordinary people in the Roman Empire" target="_blank">(DDG:Housing conditions of ordinary people in the Roman Empire)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 这一页面详细描述了古罗马期间普通人的住房状况，反映了经济与社会条件对生活质量的影响。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马的房屋：类型与社会等级</h2>
+<p>尽管罗马拥有辉煌的建筑，只有最富有的公民才能享受美好的生活——大多数人居住在危险、狭窄和臭气熏天的房屋里。</p>
+<p>罗马富人居住在宽敞的大别墅里，而社会上最贫穷的人则挤在黑暗、危险和不卫生的环境中。</p>
+<p>居住在罗马城市的绝大多数人住在名为“ insulae ”的狭窄公寓楼里。“insulae”通常有三到五层楼高……</p>
+<p>古罗马的房屋大小和风格各异，很大程度上取决于社会声望、经济地位和职业需求。</p>
+<p>富人拥有多处住宅，位于城墙内外，而经济状况较差的人则挤在公寓里……</p>
+<p>古罗马城市的“insulae”为城市大部分居民提供了住房。平民——定义为地位较低或中产阶级的普通民众——……</p>
+<p>每个人都必须吃饭，罗马居民的饮食，就像他们的住房一样，取决于他们的经济地位。对许多穷人来说，这意味着等待……</p>
+        <small class="page-url url "><a href="DDG:Housing conditions of ordinary people in the Roman Empire" target="_blank">(DDG:Housing conditions of ordinary people in the Roman Empire)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Family-life-in-the-Roman-Empire-at-DuckDuckGo">
+        <h3 class="page-name title"><span class="page-emoji ">👨&nbsp;</span>Family life in the Roman Empire at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Family life in the Roman Empire" target="_blank">(DDG:Family life in the Roman Empire)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 该页面阐释了古罗马的家庭结构，强调父权制度及其对个人生活的影响，体现了社会阶层的根深蒂固。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马的家庭生活</h2>
+<p>罗马家庭以男性为主导。罗马家庭的核心人物是最年长的男性，称为“家长”（paterfamilias）或“家庭之父”。他掌管……</p>
+<p>罗马家庭是永恒之城的基本社会单位，家庭的核心是父亲，如果没有父亲，则是最年长的男性。</p>
+<p>古罗马家庭是一个复杂的社会结构，主要基于核心家庭，但也包括其他成员的各种组合……</p>
+<p>基督以前的罗马人将基本的家庭单位视为父亲、母亲和孩子。维系家庭的核心价值是pietas（孝敬），它可以……</p>
+<p>家庭生活围绕家长（paterfamilias）——户主展开。按照传统，这位家长拥有……</p>
+<p>罗马社会的基本单位是家庭，称为“familia”。它由父亲（paterfamilias）、母亲（matrona）、子女以及有时……组成。</p>
+<p>罗马家庭生活是父权制的——也就是说，最年长的男性对其余家庭成员拥有相当大的权力。家长做出所有重大……</p>
+<p>罗马家庭是罗马人的基本制度。罗马家庭世代相传道德和社会地位。</p>
+        <small class="page-url url "><a href="DDG:Family life in the Roman Empire" target="_blank">(DDG:Family life in the Roman Empire)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Ancient-Roman-Clothing-And-Social-Class---828-Words-|-Bartleby">
+        <h3 class="page-name title"><span class="page-emoji ">👷&nbsp;</span>Ancient Roman Clothing And Social Class - 828 Words | Bartleby</h3>
+        <small class="page-url url "><a href="https://www.bartleby.com/essay/Ancient-Roman-Clothing-And-Social-Class-A8814C854453047F" target="_blank">(https://www.bartleby.com/essay/Ancient-Roman-Clothing-And-Social-Class-A8814C854453047F)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 页面分析了普通人的职业类型，将职业与社会地位相联系，揭示了工作的经济重要性。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马服装与社会阶层</h2>
+<p>服装是罗马人生活中最重要的方面之一，因为它直接反映了他们的社会地位。“古罗马服装”。罗马帝国从希腊人那里获得了许多灵感，希腊文化对罗马服装设计产生了深远的影响。社会等级森严，等级最高的是皇帝，其次是平民组成的中产阶级，然后是贫民，社会阶层的最底层是奴隶。</p>
+<p>每个人都穿著托加，但不同社会阶层的托加在材质和款式上有所不同，鞋履也是区分社会地位的标志。你的服装会受到你的社会阶层的影响吗？古罗马服装因社会阶层而异的原因有三点：妇女和儿童的服装不同；上层阶级的服装与下层阶级不同；奴隶和穷人的服装与其他人不同。妇女和儿童的服装与成人不同……</p>
+<h2>古罗马女性的化妆</h2>
+<p>问：那个时期女性会穿什么样的衣服？</p>
+<p>答：大多数罗马妇女穿著斯托拉（stola），这是一种类似长袍的长布，用胸针系住。有些妇女还穿著帕拉斯（palla），它可以作为披肩、头巾、斗篷或围巾。</p>
+<h2>古罗马的社会阶层</h2>
+<p>罗马帝国由奥古斯都凯撒于公元前27年建立，在罗马共和国衰落后建立。它是历史上最伟大的文明之一，在其鼎盛时期，罗马帝国统治着地中海周围200万平方英里的土地，包括欧洲、非洲和小亚细亚（Alchin，2015）。</p>
+<p>与其他文明不同，罗马帝国有其独特的社会结构、宗教信仰和生活方式。首先，古罗马的社会阶层主要分为下层、中层和上层，这取决于其重要性，包括皇帝、贵族、参议员、骑士、平民、自由民和奴隶。</p>
+<h2>罗马帝国概述</h2>
+<p>罗马帝国存在着“有”和“没有”的社会阶层隔离现象。社会结构是基于财产、财富、公民身份和自由的。人们也根据性别进行分类。妇女……</p>
+<h2>托加：古罗马的单件服装</h2>
+<p>托加是古罗马人穿著的一种单件服装，他们在行动时非常灵活自如。</p>
+<h2>家庭生活：真女性的崇拜</h2>
+<p>随着儿童被视为个体，儿童的服装变得更加细化。家庭生活的理想促成了这些变化，并使妇女更有信心和控制力……</p>
+<h2>古罗马人的生活方式</h2>
+<p>在古罗马时期，服装对于区分公民的地位至关重要，例如皇帝、富人、中产阶级、穷人和奴隶。皇帝会穿著托加特拉贝亚（toga trabea），这是一种“正式的托加差异，表示社会等级”（罗马服装）。皇帝本人会穿著一条带有紫色条纹的托加来显示他的地位。作为皇帝，他还将穿著拉图斯·克拉乌斯（latus clavus）、图尼卡·帕尔马塔（tunica palmata）和托加·帕尔马塔（toga palmata）。对于富有的公民，“对于这样的罗马公民来说，穿著如此简单是不合适的……”</p>
+<h2>古希腊的经典范例</h2>
+<p>虽然你不能相信你在电影中看到的一切，但你可以相当信任它们准确地描绘了希腊服装。除了非常富有的人之外，几乎所有人都穿着羊毛或亚麻制成的服装；非常富有的人则穿着丝绸或棉花等更昂贵的服装。服装本身也很简单。它们通常是带有袖孔的矩形裁剪的布料，在腰部系紧。那是他们通常的日常服装。如果男人要旅行，他们很可能会带上一件斗篷和宽边帽。妇女，同样取决于阶层，她们佩戴各种各样的珠宝，包括……</p>
+        <small class="page-url url "><a href="https://www.bartleby.com/essay/Ancient-Roman-Clothing-And-Social-Class-A8814C854453047F" target="_blank">(https://www.bartleby.com/essay/Ancient-Roman-Clothing-And-Social-Class-A8814C854453047F)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Occupations-and-Jobs-in-Ancient-Rome-for-Kids---Ancient-Rome-for-Kids">
+        <h3 class="page-name title"><span class="page-emoji ">⚕&nbsp;</span>Occupations and Jobs in Ancient Rome for Kids - Ancient Rome for Kids</h3>
+        <small class="page-url url "><a href="https://rome.mrdonn.org/occupations.html" target="_blank">(https://rome.mrdonn.org/occupations.html)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 该页面探讨了古罗马的健康与医疗体系，凸显了经济条件对医疗获取的影响。<br></small>
+    </div>
+    <div class="page-content content"><h2>美国历史</h2>
+<p>西部扩张</p>
+<p>南北战争</p>
+<p>工业革命</p>
+<p>第一次世界大战</p>
+<p>咆哮的二十年代</p>
+<p>大萧条</p>
+<p>第二次世界大战</p>
+<h2>罗马共和国时期</h2>
+<p>随着罗马的发展，工作变得更加专业化。</p>
+<p>到共和国时期，职业包括农民、医生、工程师、建筑师、教师、店主、工匠、士兵、水手、渔民、作家、诗人、音乐家、政治家、银行家、贸易商、商人、会计师、政府官员（包括税务人员）、铁匠、珠宝商、建筑工人、神庙工作人员、演艺人员、艺术家和奴隶。</p>
+<h2>罗马帝国时期</h2>
+<p>到帝国时期，职业还包括角斗士、车夫、消防员和福利工作者。</p>
+<p>一些工作以食物、住所或其他商品支付报酬，一些则以罗马硬币支付。</p>
+<p>平民：一些商人和工匠非常富有，有奴隶为他们工作。大多数平民非常贫穷，一直在城市或农场工作。</p>
+<p>贵族：主要是贵族阶级可以选择休闲。一些人消磨时间，一些人是政治家，一些人管理他们的乡间别墅，一些人投资各种企业，一些人是罗马军团的军官。贵妇的工作是照顾家庭，通常有奴隶帮助她。在帝国时期，妇女可以拥有企业，甚至在家里以外工作。</p>
+        <small class="page-url url "><a href="https://rome.mrdonn.org/occupations.html" target="_blank">(https://rome.mrdonn.org/occupations.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Ancient-Roman-Family-Life---World-History-Encyclopedia">
+        <h3 class="page-name title"><span class="page-emoji ">⛪&nbsp;</span>Ancient Roman Family Life - World History Encyclopedia</h3>
+        <small class="page-url url "><a href="https://www.worldhistory.org/article/870/ancient-roman-family-life/" target="_blank">(https://www.worldhistory.org/article/870/ancient-roman-family-life/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 页面内容探讨了古罗马的宗教信仰，展示了其对普通人日常生活的深远影响。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马家庭生活</h2>
+<h3>家庭是罗马社会的基本单位</h3>
+<p>无论罗马及其领土之上是国王、执政官还是皇帝至高无上，贯穿罗马历史始终的一个不变因素是家庭。像许多早期的社会一样，家庭是永恒之城中基本的社会单元，而家庭之首是父亲，如果没有父亲，则是最年长的男性——拉丁语表达是 <em>paterfamilias</em>。一位历史学家指出，罗马家庭实际上反映了塑造罗马共和国价值观的原则。</p>
+<h3>至高无上的父权</h3>
+<p>对罗马男性而言，他的家庭不仅仅是他的妻子和孩子。它决定了他的社会地位和个人价值。他的家或 <em>domus</em> 确立了他的声誉或尊严（<em>dignitas</em>）。根据罗马法律，父亲拥有绝对的父权（<em>patria potestas</em>），不仅对他妻子和孩子，而且对他孩子的孩子，甚至他的奴隶，事实上，任何住在他屋檐下的人都有权力。在他父亲去世后，罗马诗人和政治家西塞罗作为长子，承担起他兄弟及其兄弟家庭的责任。根据法律，父亲甚至可以殴打他的成年儿子（尽管这可能从未发生过）。父亲的血统、他的祖先至关重要，决定了他在社会等级中的地位。男性与他的血亲——他的子女、父母和兄弟姐妹（<em>cognati</em>）的联系最为紧密，而通过婚姻获得的亲属（他的姻亲）或 <em>adfinitas</em> 虽然仍然重要，却是次要的。</p>
+<h3>罗马婚姻</h3>
+<p>当然，没有婚姻就没有家庭。同样，大多数婚姻并非出于爱情，而是最常见出于政治、社会或经济原因。伟大的罗马统帅庞培与尤利乌斯·凯撒的女儿结婚，以巩固他们的政治关系。屋大维（未来的奥古斯都）将他的姐姐屋大维娅嫁给马克·安东尼，以巩固第二次三头同盟。奥古斯都强迫他的继子和继承人、未来的皇帝提比略与他的妻子维普萨尼亚离婚，以便与皇帝的女儿茱莉亚结婚，试图巩固这位年轻人登上王位的道路。不幸的是，女性在选择结婚对象方面几乎没有发言权。通常婚姻是嫁给一个比自己年长很多的男人——这后来让许多年轻新娘守寡。女孩通常在 12 到 15 岁之间结婚或订婚，有时甚至早在 11 岁，尽管没有提及婚姻何时圆房。国家在婚姻中几乎没有或没有起到任何作用。大多数婚姻都是简单私人的事情，而另一些则要精心和昂贵得多。基本上，如果一对夫妇自称已婚，则他们就是已婚的；如果他们说离婚，则他们就离婚了。之后可能会有或可能不会举行庆祝派对。当然，新娘的父亲必须提供嫁妆，但是，如果婚姻以离婚告终，丈夫有义务将其归还。与今天不同的是，离婚不需要有具体的理由。西塞罗在与妻子特伦蒂娅结婚数年后，在公元前 46 年没有给出任何理由就简单地结束了婚姻——这个过程被称为 <em>affectio maritalis</em>。不久之后，他又娶了一个年轻得多的女人，但婚姻也以离婚告终。公元前 58 年，西塞罗在罗马以外的塞萨洛尼卡度过一段人生危机时，给他的妻子写了一封非常感人、私人的信。许多人写信给我，每个人都告诉我你是多么令人难以置信的勇敢和坚强，特伦蒂娅，以及你如何拒绝让你的精神或身体上的麻烦让你筋疲力尽。你的勇气、忠诚、诚实和善良，因为我而遭受了所有这些痛苦，这让我多么不快乐！（格兰特，65）然而，也有一些婚姻有更精心和昂贵的仪式，包括一名牧师和一份婚姻契约。首先，要牺牲一只动物，并阅读其内脏，以查看神是否赞成。婚礼，六月一直是一个受欢迎的月份，在新娘家的中庭举行。她通常穿着长袍式连衣裙（<em>tunica recta</em>），通常是黄色的。在戒指戴在她左手的无名指上，伴娘将这对夫妇的手合在一起后，一份合同就签署了。接下来，一支队伍带领新娘前往新郎的家，在那里庆祝活动将持续数天。新娘甚至会被抱过门槛。当然，新郎负责婚宴的费用——包括食物、舞蹈和歌曲。</p>
+<h3>女性的地位</h3>
+<p>很明显，女性在罗马通常不受重视。她们在很小的时候就嫁给了一个她们可能爱也可能不爱的人。几乎没有，如果有的话，单身女性。尽管她们可以继承她们父亲遗产中的财产，但在身份方面却很少，事实上，大多数女性几乎都是默默无闻的。虽然法律认为她们是公民，但她们不能担任公职或投票。她们存在的控制权从她们的父亲转移到她们的新丈夫。虽然没有例子，但根据法律，丈夫甚至可以因通奸而处决他的妻子。然而，与古希腊妇女和近东社会妇女不同的是，罗马妇女可以与丈夫一起公开露面——尽管禁止公开表达感情。她可以参加戏剧（尽管是在后排），并使用公共罗马浴场（当然，与男性分开）。女性在罗马世界中的角色是生育子女并成为家庭主妇，为此她持有房屋的钥匙。她负责烹饪和服装生产——包括纺纱和织布——以及监督家佣。她控制着家庭的经济事务，并在必要时帮助丈夫的店铺。妻子甚至可以和丈夫坐在同一张桌子吃饭。很久以后，随着女性角色的改变，她可以成为药剂师、面包师甚至医生。奇怪的是，罗马妇女不像她们的男性同胞那样有名字或 <em>praenomen</em>。她们的名字来自父亲的中间名或 <em>nomen gentilicium</em>。例如，西塞罗女儿的名字图利亚来自他的中间名图利乌斯，而凯撒的女儿茱莉亚则来自尤利乌斯，因为他的出生名实际上是盖乌斯·尤利乌斯·凯撒。年长的妇女和她们同名的女儿使用主要和次要或 <em>prima</em> 和 <em>secunda</em> 来区分她们。</p>
+<h3>儿童的地位</h3>
+<p>除了政治目的外，婚姻的真正目的是生育子女和继承人。令人遗憾的是，古罗马的生育是年轻妇女死亡的主要原因。尽管资料来源各不相同，但超过三分之一的罗马家庭出生的孩子在他们一周岁生日前就夭折了。如果一个女人不能生育孩子，这被认为是她的错。这在今天的父母看来可能很奇怪，但罗马母亲被教导不要悲伤，而是要平静地接受孩子的死亡。几乎有一半的孩子活不过五岁。如果一个人活到十岁，他的预期寿命至少还有 40-50 年。孩子早逝的原因有很多——痢疾、腹泻、霍乱、伤寒、疟疾、肺炎和肺结核只是一些原因。除了古罗马儿童面临的这些风险外，还有营养不良、卫生条件差以及城市拥挤的居住条件。与我们今天成年子女经常离开家不同的是，在罗马，几代人很容易住在一个屋檐下，即使那样，成年已婚男性及其家人也要对父亲负责。这种无条件的权威允许父亲不仅为他的孩子安排婚姻，而且决定婴儿（尤其是女婴）是否被接受或允许死亡。与古代斯巴达一样，弱者、残疾者或不受欢迎的孩子被遗弃在野外的情况并不少见。女孩，尤其是在贫困家庭中，因为需要在结婚时提供嫁妆而特别不受欢迎。在更富裕的家庭中，男孩和女孩通常在家接受基础教育（母亲的责任），通常由私人教师（通常是希腊人）指导。一些男孩子会参加罗马广场的中学或 <em>grammaticus</em>，然后前往雅典等地接受修辞学和哲学方面的进一步教育。孩子的公民身份，特别是男性的公民身份，并非与生俱来的权利。父亲可以很容易地在孩子出生时就拒绝他。传统规定，他必须将新生儿抱在怀里才能被接受。如果没有，如果他拒绝了孩子，奴隶会把婴儿留在路边。罗马人是一个迷信的民族，父亲通常会在给男婴命名之前等至少九天。他们相信，九天后所有邪恶的灵魂都会消失。孩子的未来可以通过路过鸟类的行为简单地阅读。一个护身符 <em>orbulla</em> 会被戴在一个男孩子的脖子上以求好运，直到他成年（通常是 14 岁），那时他会穿上长袍，被带到广场，并被登记为公民。</p>
+<h3>结论</h3>
+<p>因此，罗马社会以家庭为中心，强调父亲的作用。很久以后，随着许多更传统的社会规范受到质疑和打破，父亲的绝对权力将会减弱。与其他地方的女性不同，古罗马的妇女将获得一定程度的独立性，而她们的孩子，或者至少是那些富裕的孩子，可以自由地结婚。在罗马共和国的后期，许多公众人物——其中最著名的是西塞罗——声称罗马道德的衰落和旧有价值观的丧失是其衰落的原因。公元前 18 年，奥古斯都皇帝（公元前 27 年至公元 14 年在位）反对这种罗马道德的衰落，并颁布了一系列法律以促进婚姻、婚姻忠诚和生育。然而，随着奥古斯都的改革， <em>paterfamilias</em> 的理念得到了扩展——他成为了 <em>pater patriae</em>，或国家的父亲。这并不是这个词第一次被使用，因为西塞罗在起诉卡提林后获得了这个称号，而凯撒在蒙达战役中获胜后也获得了这个称号。许多未来的皇帝都会接受这个概念，即成为人民之父的理念。当然，男性主导社会的观念不会随着西罗马帝国的灭亡而结束。它将在许多地区和文化中一直延续到现代。</p>
+        <small class="page-url url "><a href="https://www.worldhistory.org/article/870/ancient-roman-family-life/" target="_blank">(https://www.worldhistory.org/article/870/ancient-roman-family-life/)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Social-class-in-ancient-Rome---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">🎓&nbsp;</span>Social class in ancient Rome - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Social_class_in_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Social_class_in_ancient_Rome)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 该页面综合分析了教育在古罗马社会中的作用，展现了社会阶层对教育机会的影响。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马的社会等级</h2>
+<p>古罗马的社会等级制度是等级森严的，存在多个相互重叠的社会等级。个体在一个等级中的相对地位可能高于或低于另一个等级，这使得罗马的社会构成更加复杂。[1]共和国时期自由民罗马人的地位由以下因素决定：血统（贵族或平民）；基于财富和政治特权的人口普查等级（ordo），其中元老院等级和骑士等级高于普通公民；性别；公民身份，其中包含不同等级，享有不同的权利和特权。不同的罗马等级享有不同的权利和特权，包括投票权、婚姻权等等。</p>
+<h2>贵族和平民</h2>
+<p>传统上，贵族指的是上层阶级成员，而平民指的是下层阶级。[2]经济差异导致少数家族积累了罗马大部分财富，从而产生了贵族和平民阶级。[2]然而，在最初的这种区别之后，贵族和平民家族之间的界限是严格的世袭的，基于社会地位。[2]在一系列政治冲突和平等化之后，平民构成了大多数罗马公民。虽然贵族通常被描绘成富有而强大的家族，设法掌握了对地位较低的平民家族的权力，但元老院阶级的平民和贵族往往同样富有。[2]在罗马共和国中后期，随着平民的公民权利增加，许多平民家庭获得了财富和权力，而一些传统上的贵族家庭则沦落到贫困和默默无闻。无论平民家庭变得多么富有，他们都不会被提升到贵族的行列。[2]到公元前二世纪，贵族和平民之间的区别已经失去了大部分意义，并开始合并为一个阶级。[3]贵族被认为是早期罗马社会的上层阶级。他们控制着最好的土地，并构成罗马元老院的大部分成员。在公元前444年之前，平民成为参议员是罕见的，如果不是不可能的话。[2][需要页面]在外观上，他们主要与平民的区别在于他们穿着染色的装饰鞋（calceus patricius）。[4][5]古罗马的一种常见的社会关系是顾客制度，它涉及到一个保护人和顾客(们)，他们相互提供服务，并从事强烈的商业关系。贵族最常是保护人，他们通常会有多个平民顾客。[2]保护人向他们的顾客提供许多服务，以换取如果保护人去打仗的支持承诺。[2]这种庇护制度是将罗马社会紧密联系在一起的阶级关系之一，同时也保护了贵族的社会特权。[2]顾客制度延续到罗马后期社会，几乎贯穿了整个古代罗马的历史。[2]贵族还独家控制着检查官的职位，该职位控制着人口普查，任命参议员，并监督社会和政治生活的其他方面。通过检查官，贵族能够保持其对平民的地位。[2]</p>
+<h3>平民</h3>
+<p>平民是罗马的下层阶级，他们是劳动者和农民，主要耕种贵族拥有的土地。一些平民拥有小块土地，但这在公元前二世纪之前是罕见的。[2]平民通过顾客制度与贵族联系在一起，在战争中帮助他们的贵族保护人，提高他们的社会地位，并筹集嫁妆或赎金。[2]公元前450年，平民被禁止与贵族结婚，但五年后，即公元前445年，这项法律被平民保民官废除了。[2][需要页面]公元前444年，设立了拥有执政官权力的军政官职位。担任这一职位的平民在完成为期一年的任期后，就有资格加入元老院。[2][需要页面]然而，在大多数情况下，平民在整个古代罗马时期都依赖于社会地位较高的人。[2][需要页面]</p>
+<h2>基于财产的等级</h2>
+<p>罗马社会也根据财产在百年议会中划分，后来在共和国时期，元老院阶级的成员资格也基于财产。元老院阶级拥有最高的财产门槛。百年议会负责宣战，选举拥有执政权的行政长官，并审理特定案件。[2]只有那些足够富有能够负担得起自己盔甲的罗马人才被允许服役于军队，军队由贵族和平民组成。只要公民能负担得起盔甲，他就能成为一名士兵。[2]百年议会根据一个人的财富以及他提供盔甲和武器的能力被分成不同的组。</p>
+<p>&lt;br&gt;</p>
+<p>表：百年议会[2][6]</p>
+<p>&lt;br&gt;</p>
+<p>所有出生于女奴的儿童都是奴隶。那些有能力或技能谋生的奴隶，在主人死后，通常会被释放，作为其遗嘱的条件。[3]为主人经商的奴隶也被允许为自己赚钱和储蓄，有些奴隶可能能够买下自己的自由，而其他的奴隶则被他们的主人给予自由，尽管这种情况很少见。[3]</p>
+<h3>解放奴隶</h3>
+<p>解放奴隶（liberti）是被释放的奴隶，一旦被释放，就成为完全的罗马公民，然而，由于他们以前是奴隶或他们的祖先是奴隶，他们不被认为与其他公民平等，因此他们加入了下层阶级平民的行列。[2]只有几代之后，前奴隶的后裔才能在各阶级中上升（有时成为骑士或参议员）。[3]解放奴隶的地位在共和国时期随着其数量的增加而发展。通过服兵役以及其他努力，如手工艺和商业活动，解放奴隶在共和国后期经常积累巨额财富。[3]尽管许多解放奴隶都拥有财富，但在整个古代罗马，大多数解放奴隶都是平民，以农民或商人为生。[3]</p>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Social_class_in_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Social_class_in_ancient_Rome)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Roman-Education---World-History-Encyclopedia">
+        <h3 class="page-name title"><span class="page-emoji ">📖&nbsp;</span>Roman Education - World History Encyclopedia</h3>
+        <small class="page-url url "><a href="https://www.worldhistory.org/article/2224/roman-education/" target="_blank">(https://www.worldhistory.org/article/2224/roman-education/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 页面讨论了古罗马的教育系统，强调了贫富差距如何影响教育的可及性和质量。<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马教育</h2>
+<h3>概述</h3>
+<p>公元前3世纪，罗马教育出现了最早的“小学”，但这些学校并非强制性的，完全依赖学费。罗马没有官方学校，也没有专门用于教学的建筑。富裕家庭雇佣私人教师在家教导孩子，而较贫困的孩子则集体学习。</p>
+<h2>投资历史教育</h2>
+<h3>学校</h3>
+<p>教师的教学条件差异很大。在富裕家庭任教的教师生活舒适，拥有良好的设施；其中一些教师可能是战争期间被俘虏并被带到罗马的奴隶，他们可能受过高等教育。其他受雇于较贫困家庭的教师则租用房间上课，或在商店的扩展区域开办学校，罗马历史学家苏埃托尼乌斯（公元69年至约公元130/140年）称之为apergula（Gram.18.1）。较贫困的教师在户外的公共场所——街道拐角（trivium）或广场上为学生上课的情况并不少见。课程从黎明开始，持续到中午。罗马诗人马提亚尔（公元38/41-103年）抱怨黎明时被一位教师及其户外课堂的洪亮声音吵醒：“在高冠的公鸡啼叫之前，你用刺耳的声音打破了寂静……”（Ep. 9.68）。家长在每个学期结束时分期支付学费，但这并非确定的事情；由于没有钱支付，或者因为他们对孩子的学习进度不满意，他们并不总是支付，因此，教师常常发现自己处于艰难的财务状况。在教育等级制度中，litterator（小学教师）收入最低，无需任何特殊资格。公元301年，小学教师每生每月的工资为50德纳里；一蒲式耳（约35升）小麦为30德纳里。grammaticus（高级教育者）是一个更负盛名的职位，公元301年的记录显示其每生每月的工资为200德纳里。rhetor（修辞学教师）需要更高的技能和专业知识，因此，获得高薪的机会也更多。</p>
+<h3>学生</h3>
+<p>教育家和演说家昆体良（公元35-96年）认为，学校比家庭教育更好，因为孩子受益于学校的社会群体。孩子的正规教育从七岁开始。大多数学生是男孩，但也有女孩上学，尤其是在小学阶段；女孩很少能超过第一阶段，因为她们往往在十几岁初期就结婚了。</p>
+<p>学校规模似乎差异很大。马提亚尔在他的《Epigrams》中写道，穆纳得到第三个学生（14. 223），然而，昆体良在语法和修辞学校中提到了人群（Quint. Inst. II. 32-4）。教师坐在一把大椅子上，学生们半圆形地坐在他周围，或者在他面前排成几排。教室里学生通常的座位是无靠背的凳子。没有课桌，学生把他们的书板放在膝盖上写字。一个班级可能包含不同年龄和能力的学生，他们倾向于独立工作。老师不会对整个班级进行教学；每个学生都会单独去找他，以获得指导并朗读他们完成的功课。教师可以获得的教学材料有限，书籍稀少，书写材料昂贵。他们朗读段落，学生们为了学习目的而将其背诵下来。孩子们学习背诵诗歌、语法论文以及一些晦涩的词语及其含义。</p>
+<h3>课程</h3>
+<p>教育分为三个阶段：第一个阶段是基本的读写算。litterator负责教授年幼的孩子。课程包括教孩子书写字母；老师在木板上刻下字母，然后让孩子描摹字母。孩子们使用的书板通常小到一只手就能握住，因此无法容纳大量的文字。学生能够写出非常小的字母，大约一厘米（0.39英寸）高，经过练习，这个尺寸会缩小到0.5厘米（0.19英寸）。他们学习字母的形状和名称，然后学习音节，最后学习单词和句子的构成。孩子们还抄写句子，这些句子不应该是无用的，而是根据昆体良在他教科书《Institutio Oratoria》中的说法，应该给孩子一些道德教训，以便“在他未定型的头脑中留下的印象将有助于形成他的性格”（1.1 31-34）。阅读技巧比今天要难学得多。古代书籍更难阅读，因为大多数文本在单词之间没有空格，大小写字母没有区别，没有段落，也没有标点符号。学生的算术从用手指和鹅卵石（calculi）计数开始，然后他们开始使用算盘。他们还通过吟诵学习加法和乘法。许多孩子在这个阶段没有取得任何进一步的进步。</p>
+<p>第二个阶段是针对十到十一岁学生的学习，由grammaticus教授；进入这个阶段的孩子通常来自较富裕的家庭。许多这些孩子可能在家学会了阅读和写作，然后直接去grammaticus那里，grammaticus会发展和完善他们的写作和口语，并教他们希腊语。苏埃托尼乌斯写道，grammaticus从事某些适合演说家训练的练习，例如问题、演讲、释义和人物素描，这样他们就不会把完全无知或准备不足的学生交给修辞家。这些学生还学习音乐、哲学、天文学和自然科学。</p>
+<p>当他们获得成年人的托加时，学生们有时只有15岁，就可以进入第三阶段，这需要一位修辞学教师。rhetor训练学生进行公共演讲、罗马法和政治、天文学、地理、文学、哲学、音乐和神话。学生们会跟随他们的rhetor学习到20岁甚至更晚。rhetor的任务是教育他们成为熟练的演说家；他们被赋予练习来发展他们的技能，其中包括：declamation——一篇关于虚构主题的修辞作品，用于政治和法庭演说。declamation练习通过在年轻人的头脑中重申罗马精英的普遍观点来解决家庭或社会混乱的场景。controversia——一篇虚构的演讲，其中一方为某一法律观点的一方辩护。昆体良的评论为我们描绘了一幅画面：这些年轻的男孩站出来发表演讲，并受到他们的同学慷慨的赞扬和大声的表扬，而不管他们同学的演讲质量如何。</p>
+<p>教育的重要性被昆体良等教育家所强调，他写道，孩子被滋养、教育，他的天赋潜能被磨砺。教育并非强制性的。许多人仍然是文盲。那些父母能够送他们上学且来自较贫困阶层的男孩，他们的学习不会超过小学教育，他们学习了能够找到工作所需的基本技能。女孩们在接受了基础教育后，也可以在这个年龄段开始工作。来自较富裕阶级的孩子可以享受完整的教育，这为他们在上层社会的地位做好了准备。一些年轻人到雅典等地继续深造，跟随希腊大师学习的情况并不少见。</p>
+        <small class="page-url url "><a href="https://www.worldhistory.org/article/2224/roman-education/" target="_blank">(https://www.worldhistory.org/article/2224/roman-education/)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Ancient-Roman-Entertainment">
+        <h3 class="page-name title"><span class="page-emoji ">🍞&nbsp;</span>Ancient Roman Entertainment</h3>
+        <small class="page-url url "><a href="http://persweb.wabash.edu/facstaff/royaltyr/AncientCities/web/bradleyj/Project%201/Games.html" target="_blank">(http://persweb.wabash.edu/facstaff/royaltyr/AncientCities/web/bradleyj/Project%201/Games.html)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 页面讨论了普通罗马人的饮食习惯，突出经济水平对饮食多样性和质量的影响。<br></small>
+    </div>
+    <div class="page-content content"><h3>罗马的娱乐活动</h3>
+<p>罗马政府希望让大众保持娱乐，因为他们知道一大群穷人是他们帝国的主要威胁。因此，罗马人享受着许多不同的娱乐形式，其中大部分是免费的。</p>
+<p>剧院遍布城市和帝国各地。这些剧院是大型的露天剧场，最多可容纳7000人。剧院里上演着各种各样的戏。全天都有活动发生，尽管穷人通常在夜幕降临后就睡觉了，因为他们买不起油灯。</p>
+<p>斗兽场是各种角斗比赛、人和野兽之间的战斗、基督徒被狮子处死的地方，有时还会被淹没以进行海战。罗马人热爱血腥，看到别人互相殴打致死或被野兽吃掉，他们非常享受。斗兽场可容纳多达45,000名观众，正如现代电影《角斗士》中所看到的，观众常常决定战斗中失败者的命运。</p>
+<p>马戏最大剧场是另一个公共娱乐中心，在那里举行赛车比赛。电影《宾虚》中有一个马戏最大剧场的伟大复制品。马戏是罗马特有的，但它可以容纳250,000人。如今在罗马，一条路沿着跑道的长度延伸，而另一条路仍然可见。</p>
+<p>校场是城市里一座古老的士兵操练场，后来改建成田径运动场。校场是台伯河附近一大片平原。罗马各地的年轻人都聚集在校场参加各种运动，如赛跑、跳跃、射箭、摔跤和拳击。运动后，人们常常会跳入台伯河游泳，或者去浴场放松身心，洗漱干净。</p>
+<p>罗马各地的男人都喜欢骑马、击剑、摔跤、投掷和游泳。在乡下，男人们去狩猎和钓鱼，在家时玩球。有几种投掷和接球的游戏，其中一种流行的游戏是把球尽可能地扔高，然后在球落地前接住它。妇女从不参与这些游戏。</p>
+        <small class="page-url url "><a href="http://persweb.wabash.edu/facstaff/royaltyr/AncientCities/web/bradleyj/Project%201/Games.html" target="_blank">(http://persweb.wabash.edu/facstaff/royaltyr/AncientCities/web/bradleyj/Project%201/Games.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="All-roads-lead-to-Rome:-Aspects-of-public-health-in-ancient-Rome---PMC">
+        <h3 class="page-name title"><span class="page-emoji ">💧&nbsp;</span>All roads lead to Rome: Aspects of public health in ancient Rome - PMC</h3>
+        <small class="page-url url "><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8805493/" target="_blank">(https://pmc.ncbi.nlm.nih.gov/articles/PMC8805493/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 该页面探讨公共卫生措施在罗马对普通人生活的重要性。<br></small>
+    </div>
+    <div class="page-content content"><h2>摘要</h2>
+<p>现代西方文明在政策、立法、艺术和文化方面都可以追溯到罗马古代。古代罗马从拉丁姆的一个王国发展到一个民主政体，最终发展成为一个繁荣的帝国，这为医学和公共卫生铺平了道路。作为王国，罗马制定了孕产妇健康和堕胎的法律。后来，作为民主政体，罗马特别重视卫生和感染控制，修建了渡槽和公共浴场。在帝国时期，除了上述措施外，罗马政府还改进了应对大流行的公共卫生措施。将感染性疾病暴发与动物联系起来，被认为是公共卫生领域最早注意到的人畜共患病之一。公共卫生（medici publici）一词本身可以追溯到古罗马被任命负责公共卫生和疾病控制的医生。</p>
+<p>关键词：公共卫生、罗马、感染、卫生、水、疫情</p>
+<h2>介绍</h2>
+<p>罗马建于公元前625年左右，位于古意大利的伊特鲁里亚和拉丁姆地区。罗马历史上第一个时期被称为国王时期，从罗马建城持续到公元前510年。这一短暂的时期以显著的军事、政治和经济进步为标志。罗马于公元前510年进入共和国时期。这一时期持续到公元前31年。罗马扩张并在地中海地区获得了显赫的地位，为帝国时期奠定了基础。帝国时期始于公元前31年屋大维被宣布为奥古斯都。帝国时期于公元476年西罗马帝国灭亡而结束[1]。公共卫生是罗马的支柱，它面临着诸如大城市的卫生问题、应对罗马领土上的传染病暴发、维持军事实力以及高级官员的健康等实际需要[2]。</p>
+<h2>王国时期的公共卫生</h2>
+<p>从公元前8世纪开始，努玛·庞皮留斯国王（公元前753-653年）颁布了王家法令（leges regiae），规定如果孕妇患有重病或在分娩期间死亡，应将胎儿从子宫中取出。堕胎、流产和围产期死亡将被调查是否存在医疗事故，这一措施在罗马人口减少时期得到广泛应用。罗马上层社会对这些法律更为宽松，以确保所需数量的继承人能够出生。也就是说，如果一个家庭已经有一名或多名健康的继承人继续其家族遗产，而不会过度分割家族财产，则可以容忍堕胎、流产或围产期死亡[3]。</p>
+<h2>民主时期罗马的公共卫生</h2>
+<p>当罗马国家从王权时期过渡到民主时期时，制定了新的公共卫生保护法。公元前293年，火葬在罗马边界外进行。此外，在台伯岛上建立了新的阿斯克勒庇俄斯圣地，以保护罗马人民免受可能来自被迁移到罗马城墙外的病人的感染。国家还任命医生检查特定地区是否需要实施卫生措施。这些社区医生还负责识别和减轻新发感染。然而，medici publici的数量直到罗马帝国后期，即公元2世纪才显著增加[1]。</p>
+<p>除了立法领域外，罗马政府还通过其他方式干预公共卫生领域。就公共卫生和预期寿命的进一步发展而言，第一个有益的发明是渡槽。水是流动的，即使上层家庭可以拥有自己的自来水，但这并不排除穷人从某些蓄水池中取水。同时，有一种普遍的思想将水的状态与健康联系起来，这也可以从水务条约的著作中看出，例如塞克斯图斯·尤利乌斯·弗龙蒂努斯（公元30-104年）题为《罗马城的水》的著作，但更普遍的是通过法律，对任何污染水源的人处以惩罚。例如，公元前272年建造的阿庇亚水渠在地下输水到罗马，不仅节省了资金和时间，而且防止了敌对势力污染水源[4]。公元前144年建造的马尔西亚水渠是第一个使用桥梁（至少部分）向城市输水的工程。此外，阿格里帕被任命为Curator Aquarum（水专家），并在公元前20世纪后期建造了维尔戈水渠。阿格里帕甚至建造了超过700个喷泉和130个公共喷泉。公元1世纪末，罗马共有9条渡槽，而1/3的水被预留给半城市地区、农场和花园，以及特权阶级的别墅。污水也与富人的住宅相连，但与穷人的住宅不相连。罗马的大部分市民拒绝将他们的房屋与污水管道连接起来，因为担心河流可能泛滥，从而污染水源。也是因为没有排水沟，所以他们的家里总是有一股臭味，而且由于硫化氢（H2S）的存在，存在着持续的火灾隐患[4]。然而，罗马人成功地开发了一个名为Cloaca Maxima的非常先进的排水系统，该系统早在塔尔基尼乌斯·苏佩尔布斯统治的公元前6世纪后期就已经建成[1]。</p>
+<h3>帝国时期的公共卫生</h3>
+<p>古罗马有无数的医生和疗法，但很少有药剂师。提到的第一个药剂师之一是安东尼乌斯·穆萨，他作为奥古斯都皇帝的医生和药剂师，将他从严重的肝病中解救出来，这导致他晋升为骑士阶级。但罗马古代最重要的药剂师是斯克里波尼乌斯·拉格斯。公元47年，他出版了一本医学手册，其中包含271种针对多种疾病的处方，他还使用了电鳐的电力来治疗诸如头痛、痛风和脱肛等疾病[5,6]。</p>
+<p>拉格斯还将饮食学、药理学和外科手术视为医学临床实践的主要方面。在这方面，他与药剂师安布罗西乌斯发生争执，后者建议使用一种药物来溶解膀胱结石。安布罗西乌斯支持一种误解，即该药物的治疗潜力源于其制备者——一个不戴铁环、只使用石臼的人。拉格斯拒绝这种做法是迷信的。请注意，在这个罗马时代，精神疾病的药物包括喝角斗士头骨里的血液或吃他们肝脏的一部分，这些做法并未得到拉格斯的认可，认为与医学的“专业”无关[7]。似乎拉格斯专注于一种“专业文化”，在这种文化中，医生相互合作和支持，从而标志着希腊医学向罗马世界的过渡，拉丁语和希腊语的药物都可用。此外，他为丰富医学的伦理基础做出了贡献，医学不仅是一门艺术，更是一门科学[8]。</p>
+<p>公共浴池是城市建设和公共卫生的另一个关注点。罗马曾经有超过900个公共浴池，可容纳多达300人，而罗马的公共厕所达200个。通过这种方式，罗马政府试图限制罗马人从阳台上扔粪便到街道上的做法。然而，为了祈求神灵的保护，免受疾病传播的影响，人们会在公共厕所附近放置神像。此外，罗马时代的医院（valetudinaria）会为士兵和奴隶提供护理，而罗马公民则会在家里接受医生的检查和治疗。在东罗马（拜占庭）帝国时期，建立了更多的医院。这些医院将遵守当时的科学和卫生标准与它们被划分为外科、产科妇科和精神疾病等专业科室相结合[2]。</p>
+<p>罗马时代的另一个卫生方面是几次大流行病的暴发，例如安东尼瘟疫（公元165-180年），它对罗马帝国的衰落和灭亡产生了严重的影响，因为它杀死了超过500万人和罗马军队中的很大一部分。这种大流行病从帝国的东部边界爆发，可能由天花、炭疽或麻疹引起，其死亡人数估计约为500万[9,10]。关于传染病在罗马帝国衰落，特别是西罗马帝国（公元600年在拉丁姆地区）的作用，人们长期以来一直对疟疾的作用进行了讨论，疟疾在那里是地方病，其主要原因是蚊子叮咬[11,12]。古罗马人开始将与动物的接触与传染病暴发联系起来。如今，这一推测已被证实，因为超过60%的传染病暴发是由与野生或家养动物共有的病原体引起的[13,14]。一个常见的例子是狂犬病，其症状学已被古希腊医生详细描述，他们知道该疾病的人畜共患起源[15]。黑死病（1347年至1670年欧洲的大鼠疫）也是如此[16]。事实上，人畜共患病仍然是一个全球性的健康问题，考虑到历史上严重的疾病暴发，如H1N1流感和严重急性呼吸综合征（SARS）[17]。</p>
+<h3>从古罗马汲取的公共卫生经验教训</h3>
+<p>如今，全球SARS-CoV-2大流行似乎起源于人畜共患病，蝙蝠和穿山甲携带与感染人类的病毒株密切相关的病毒株[18]。从古罗马到现代世界的主要公共卫生经验教训可以用一句话来概括：国家需要投资于公共卫生，否则公共卫生危机可能会摧毁它们。随着公共卫生政策的改善，古罗马从小小的霸权发展成为一个帝国。公共卫生成为其公民日常生活甚至娱乐的一部分，考虑到公共浴池，人们将社交与卫生结合起来。同样，现代国家可以将COVID-19的缓解措施重新定义为社交和娱乐，而不是将其强加为限制。如果将保持社交距离的政策与虚拟直播音乐会和戏剧表演或简单的社交媒体聚会相结合，公众将更乐意遵守这些政策。像“我戴口罩”这样的社交媒体挑战等轻松的活动可以帮助公民参与国家推出的公共卫生措施。同时，古罗马也重视科学专业化和人口健康。现代国家可以为公共卫生、水卫生和环境可持续发展专家创造就业机会，同时使社区和职业医学对年轻医生更具吸引力，体现在声望、收入以及个人和职业发展方面。最后，但同样重要的是，鉴于大规模疫情导致西罗马帝国灭亡，现代国家必须重视疫情防范工作。在COVID-19大流行的早期阶段，感染的跨境传播加剧了多层次的公共卫生危机，不仅影响医疗保健，还影响经济和环境。最近，欧盟采取了重要的立法措施，重点是及时发现和控制跨境健康威胁。在一个全球化的世界中，为每个地区和国家创建一个这样的框架至关重要，从而促进全球合作和良好实践的交流与反馈[19]。</p>
+<h2>结论</h2>
+<p>公共卫生领域的进步遵循了古罗马的历史道路。不断扩张和多元文化的罗马国家为当时的医生提供了机遇和挑战。作为回应，医生和政府设法在人口层面解决健康问题，并调查超出个人层面疾病存在与否的人类健康方面。在古罗马，已经提出或增强了公共卫生的重要概念，如人畜共患病和水卫生。反思那个时期，可以为应对当代公共卫生危机提供经验教训。</p>
+<h2>参考文献</h2>
+<ol>
+<li>Dobraszczyk P.  Cloaca Maxima. In: Zimring Carl A, Rathje William L., editors. Encyclopedia of Consumption and Waste: The Social Science of Garbage. SAGE Reference; California: 2012. pp. 84–93.</li>
+<li>Baloyannis SJ. The neurosciences in the Byzantine era. Encephalos, Archives of Neurology and Psychiatry. 2012;49(1):38–47.</li>
+<li>Marketos S.  Illustrated History of Medicine. Zeta Publications; Athens, Greece [in Greek]: 2007. pp. 29–38.</li>
+<li>Cilliers L. Public health in Roman Legislation. Acta Classica. 1993;36:6–7.</li>
+<li>Pollak K.  In: Die Heilkunde der Antike. Criechenland - Rom - Byzanz. Die Medizin in Bibel und Talmud. Mavroudis A, translator. Athens: Papadimas Publications; 2007. pp. 41–52.</li>
+<li>Tsoucalas G, Karamanou M, Lymperi M, Gennimata V, Androutsos G. The “torpedo” effect in medicine. Int Marit Health. 2014;65(2):65–7.</li>
+<li>Nuton V.  In: Ancient Medicine. Mavroudis E, Kaprara E, translators. University Studio Press; Thessaloniki: 2018. pp. 23–31.</li>
+<li>Eftychiadis A.  Principles of Philosophy and History of Medicine. Veta Publications; Athens, Greece [in Greek]: 2010. pp. 34–9.</li>
+<li>Fears JR. The plague under Marcus Aurelius and the decline and fall of the Roman Empire. Infect Dis Clin North Am. 2004;18(1):65–77.</li>
+<li>Furuse Y, Suzuki A, Oshitani H. Origin of the Measles Virus: Divergence from Rinderpest Virus Between the 11th and 12th Centuries. Virology. 2010;7(1):52–5.</li>
+<li>Hassl AR. Die Malaria im Römischen Kaiserreich: eine bemerkenswerte Textstelle in den Digesten.  [The significance of malaria in the Western Roman Empire: A text passage in the Digesta]. Wien Klin Wochenschr. 2008;120(19–20 Suppl 4):11–14.</li>
+<li>Sallares R, Bouwman A, Anderung C. The spread of malaria to Southern Europe in antiquity: new approaches to old problems. Med Hist. 2004;48(3):311–28.</li>
+<li>Karesh WB, Dobson A, O Lloyd-Smith J, et al.  Ecology of zoonoses: natural and unnatural histories. The Lancet. 2012;380(9857):1936–45.</li>
+<li>Wolfe ND. The origin and prevention of pandemics. Clin Infect Dis. 2010;50(12):1636–40.</li>
+<li>Tsiodras S, Korou LM, Tzani M, et al.  Rabies in Greece; historical perspectives in view of the current reemergence in wild and domestic animals. Travel Med Infect Dis. 2014;12(6 Pt A):628–35.</li>
+<li>Duncan CJ, Scott S. What caused the Black Death? Postgrad Med J. 2005;81(955):315–20.</li>
+<li>Pike BL, Saylors KE, Fair JN. The origin and prevention of pandemics. Clin Infect Dis. 2010;50(12):1636–40.</li>
+<li>Lai CC, Shih TP, Ko WC, Tang HJ, Hsueh PR. Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) and coronavirus disease-2019 (COVID-19): The epidemic and the challenges. Int J Antimicrob Agents. 2020;55(3):105924.</li>
+<li>Renda A, Castro R. Towards Stronger EU Governance of Health Threats after the COVID-19 Pandemic. Eur J Risk Regul. 2020;11(2):1–10.</li>
+</ol>
+<p>Articles from Le Infezioni in Medicina are provided here courtesy of Edizioni Internazionali s.r.l.</p>
+        <small class="page-url url "><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8805493/" target="_blank">(https://pmc.ncbi.nlm.nih.gov/articles/PMC8805493/)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Medicine-in-ancient-Rome---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">🏥&nbsp;</span>Medicine in ancient Rome - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Medicine_in_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Medicine_in_ancient_Rome)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 页面讨论了古罗马对医学的贡献及其对公共健康的影响，显示了社会和经济条件的重要性。<br></small>
+    </div>
+    <div class="page-content content"><h2>医学与占星术</h2>
+<h3>文本流传</h3>
+<h3>参见</h3>
+<h3>参考文献</h3>
+<p>罗马医学深受古希腊医学的影响，但也通过结合希波克拉底文献的知识以及饮食疗法、养生法和外科手术的治疗方法，发展出新的实践。这在两位杰出的希腊医师狄奥斯科里德斯和盖伦的作品中最为显著，他们实践医学并记录了他们的发现。这与另外两位医师，埃菲索斯的索拉努斯和比提尼亚的阿斯克莱皮亚德斯相反，他们随后都在罗马境外和境内的领土上行医。狄奥斯科里德斯是罗马军医，索拉努斯是医学方法论学派的代表，盖伦进行公开演示，而阿斯克莱皮亚德斯是罗马的首席医生。这四位医师都掌握着医学、疾病和治疗方面的知识，这些知识具有疗效持久，并对人类历史影响深远。古罗马医学分为眼科和泌尿外科等专科。为了增进对人体的了解，医生们使用各种外科手术进行解剖，所用的器械包括镊子、手术刀和导管。</p>
+<h2>绪论</h2>
+<p>罗马帝国是希腊和罗马文化元素[1]复杂而有活力的结合，这种结合是几个世纪接触的产物。后来的拉丁作家，特别是卡托和普林尼，相信有一种特定的传统罗马疗法，这种疗法基于草药、咒语、祈祷和符咒，家庭主妇很容易获得并使用[2]。随着两地之间军事和政治联系的建立和发展，希腊医学被引入意大利[3]。直到公元前291年引入医神阿斯克勒庇俄斯和公元前219年希腊医生阿卡加图斯的到来[4]，外国医学才在罗马被公开接受，这主要是由于未来对罗马习俗的总体适应[5]。撇开希腊文化对罗马社会的一些更广泛的影响不谈，古希腊医学、民族志和气象学的影响对建筑和医疗保健这两个领域特别重要。这对于罗马军队[6]来说尤其重要，在罗马军队中，医学取得了很多进步。建立了医疗文献[6]，任命了常驻医生，建立了疗养院（军事医院），在凯撒时代，出现了对伤员进行系统护理的最初迹象。在罗马遗迹中发现的各种外科手术器械的种类和性质表明，人们对外科手术有很好的了解[7]。</p>
+<h2>罗马医学</h2>
+<p>罗马医学深受希腊医学传统的影。在引入希腊医学之前，罗马医学是宗教和魔法的结合。第一批罗马医生是没有任何医学训练的宗教人士或家庭主长[8]。第一批职业医生是希腊医生。比提尼亚的阿斯克莱皮亚德斯于公元前124年来到罗马。他是一位受人欢迎的医生，以对病人友善而闻名，经常开酒、休息和摇摆的沙发[8]。希腊医学融入罗马社会，使罗马在公元前100年变成一座不朽的[需要说明]城市[9]。与希腊医生一样，罗马医生也依赖于自然观察，而不是精神仪式；但这并不意味着没有精神信仰。悲惨的饥荒和瘟疫往往被归咎于神的惩罚；人们相信通过仪式来安抚神灵可以减轻此类事件。瘴气被认为是许多疾病的根本原因，无论是饥荒、战争还是瘟疫造成的。传染的概念被提出，导致了隔离和改善卫生状况的做法[10]。罗马人建立了公共卫生系统，这表明他们理解这对于公共卫生非常重要。这可以从他们将死者埋在城墙外、通过渡槽获得大量水供应、公共浴场和公共污水系统等做法中看出。他们还开始排干靠近城市的沼泽[8]。盖伦是罗马最早的著名医生之一。他在希腊通过解剖包括猴子在内的动物，成为人体解剖学的专家[11]。由于他在古罗马的突出地位和专业知识，盖伦成为皇帝马库斯·奥里略斯的私人医生[11]。公元前46年，当罗马军队需要训练有素的外科医生时，尤利乌斯·凯撒授予医生罗马公民权[8]。罗马人在公元前30年征服了亚历山大城，亚历山大城是重要的学习中心；它的伟大的图书馆收藏了无数卷古希腊医学资料[12]。罗马人采用了他们在伟大的图书馆中发现的许多实践和程序。公元10年，奥古斯都给予在罗马执业的医生免税权，并免除他们的公共职责[8]。这些奖励导致未受教育和无资格的医生涌入罗马，导致只有每个地区选定的公共医生才能获得免税[8]。希腊符号和神灵极大地影响了古罗马医学。蛇杖，一根缠绕着两条蛇的棍子，最初与商业之神赫尔墨斯有关[13]。这个标志后来与罗马神墨丘利联系在一起。后来，在7世纪，蛇杖由于与炼金术的“万能溶剂”阿佐特有关而与健康和医学联系在一起[14]。</p>
+<h2>反对罗马的希腊医学/前医生</h2>
+<p>老卡托鄙视罗马人决定模仿的希腊社会的各个方面，包括雕塑、文学和医学。他认为罗马对希腊医学和医生的欢迎是一个主要的威胁[15]。在罗马，在有医生之前，家长（家庭主长）负责治疗病人。老卡托本人检查了他附近居住的人，经常开卷心菜作为治疗从便秘到耳聋等多种疾病的处方。他会就如何为患有特定疾病的病人准备卷心菜发出精确的指示。他还使用液体形式的卷心菜。例如，将卷心菜、水和葡萄酒的混合物嵌入聋人的耳朵中，以恢复他的听力。卡托会用两端切断的芦苇来治疗骨折或断裂的肢体，并将它们绑扎在受伤部位[15]。</p>
+<h2>贡献者</h2>
+<p>许多希腊医生来到罗马。他们中的许多人坚信要达到四种体液的正确平衡，并恢复病人的自然热量。大约在公元前200年，罗马许多富裕家庭都有私人希腊医生。到公元前50年左右，拥有希腊医生已经变得很普遍[9]。由于哲学对他们的巨大影响，医生们也更倾向于学习人类学、生物学和生理学。普遍的观点是，哲学激起了人们对医学的兴趣，而不是医学激起了人们对哲学的兴趣[16]。</p>
+<h3>狄奥斯科里德斯</h3>
+<p>佩达尼乌斯·狄奥斯科里德斯（公元40-90年）是一位希腊植物学家、药理学家和医生，他在尼禄统治时期在罗马执业。狄奥斯科里德斯在塔尔苏斯学习植物学和药理学[17]。他成为著名的军医。在随军旅行期间，狄奥斯科里德斯能够试验许多植物的药用特性[18]。与他的前辈相比，他的作品被认为是在命名和撰写药物方面最大和最彻底的，狄奥斯科里德斯许多前辈的作品都丢失了。狄奥斯科里德斯撰写了一部五卷本的百科全书《药物论》，其中列出了600多种草药疗法，形成了一个有影响力且持久有效的药典。《药物论》在接下来的1500年中被医生广泛使用[19]。在他的五本书中，狄奥斯科里德斯提到了大约1000种简单的药物。此外……在他的书中，狄奥斯科里德斯提到鸦片和曼陀罗作为一种可以作为天然外科麻醉剂的安眠药[18]。</p>
+<h3>盖伦</h3>
+<p>佩加蒙的盖伦（129-约公元216年）[20]是一位杰出的希腊[21]医生，他的理论主导了西方医学科学超过一千年[22]。20岁时，他在当地的寺庙里做了四年治疗师（“侍者”或“助理”），侍奉阿斯克勒庇俄斯。虽然盖伦研究人体，但解剖人体尸体违反了罗马法律，所以他改用猪、猿、羊、山羊和其他动物。通过研究动物解剖，盖伦应用了他的动物解剖学发现，并发展出一个人体解剖学理论[23]。盖伦于162年移居罗马。在那里，他讲课，大量写作，并公开展示他的解剖学知识。他很快获得了经验丰富的医生的声誉，吸引了大量病人前来就诊。其中包括执政官弗拉维乌斯·博伊修斯，他将他介绍给帝国法院，在那里他成为皇帝马库斯·奥里略斯的医生。尽管是宫廷成员，但盖伦据说避开了拉丁语，更喜欢用他的母语希腊语说话和写作。他治疗了罗马皇帝卢修斯·维鲁斯、科莫德斯和塞普蒂米乌斯·塞维鲁斯。166年，盖伦回到佩加蒙，但于169年永久返回罗马。盖伦遵循希波克拉底的四种体液理论，认为一个人的健康取决于体内四种主要体液（血液、黄胆汁、黑胆汁和粘液）之间的平衡。食物被认为是最初允许稳定这些体液的物质。相反，药物、放血、灼烧和手术是极端的，只有在饮食和养生疗法不再有效时才使用[24]。希波克拉底医学的生存和修正归功于盖伦，他将冷、热、干、湿四种特性与体内的四种主要体液结合起来，将在医疗保健中持续存在千年左右[5]。盖伦写了一篇简短的论文《最好的医生也是哲学家》，他在文中写道，医生不仅需要了解身体，还需要了解逻辑和伦理哲学[23]。他写道，医生“必须熟练地推理他提出的问题，必须了解医生世界中身体的性质和功能，并且必须练习节制并鄙视一切金钱”[25]。理想的医生公平地对待穷人和精英，并且是所有影响健康的事物学生。盖伦认为，十一年学习时间足以培养一名称职的医生。他在他的著作中反复提到希波克拉底，说希波克拉底的著作是医生行为和治疗的基础。盖伦的著作比任何其他古代医学研究者的著作保存的时间都长[26]。盖伦还写了一篇占星学论文《论决定性日子》（关键日子书III），在文中他描述了占星学在预后和诊断中的重要性[27]。</p>
+<h3>阿斯克莱皮亚德斯</h3>
+<p>阿斯克莱皮亚德斯曾在亚历山大里亚学习成为医生，并在进入小亚细亚和希腊行医后，于公元前1世纪搬到罗马。他的医学知识使他得以蓬勃发展为一名医生。阿斯克莱皮亚德斯是罗马的首席医生，也是西塞罗的密友[28]。他发展了自己的人体分子结构版本[29]。阿斯克莱皮亚德斯的原子模型包含通过身体毛孔传递的多形状原子[30]。这些原子是圆形、方形或三角形的。阿斯克莱皮亚德斯指出，只要原子自由且持续地流动，那么人的健康就能维持[28]。他认为，如果原子太大或毛孔太狭窄，那么疾病就会表现出多种症状，如发烧、痉挛，或在更严重的情况下出现瘫痪[28]。阿斯克莱皮亚德斯坚信冷热水浴可以治疗疾病；他的技术故意不会给病人带来剧烈疼痛。阿斯克莱皮亚德斯使用这些技术是为了在继续治愈病人的同时，造成最少的痛苦[28]。他的其他疗法包括音乐疗法以诱导镇静，以及饮酒以治愈头痛和发烧。阿斯克莱皮亚德斯是罗马第一位有记载的采用按摩疗法的医生[28]。</p>
+<h3>奥卢斯·科尔内利乌斯·凯尔苏斯</h3>
+<p>凯尔苏斯（公元前25年-公元50年）是一位罗马百科全书编纂者，他撰写了一部关于许多主题的百科全书。他的确切出生地以及他何时生活尚不清楚；然而，众所周知，他生活在奥古斯都和提比略统治时期[31]。他较大的百科全书中唯一幸存的作品是《论医学》。这部作品包含八卷，其中两卷是关于外科手术的。《论医学》提供了关于他那个时代罗马医学的一些最佳描述。它的内容在教皇尼古拉五世重新发现它之后，甚至在15世纪仍然很有价值，成为1478年出版的第一本医学书籍。他是否自己实践医学或只是汇编了当时的著作，其中大部分来自希腊资料，仍在争论中。这很重要，因为当时希腊人受到罗马人的轻视，因此医生的工作也是如此[32]。在他的书中，他讨论了当时关于医学的两种不同的思想学派，他称之为“经验主义者”和“教条主义者”。经验主义者遵循经验观察，而教条主义者需要理解治疗方法背后的理论[33]。凯尔苏斯还因撰写炎症的五个特征中的四个而受到称赞，即发红（红斑）、肿胀（肿瘤）、发热（热量）和疼痛（疼痛）。盖伦将撰写第五个，功能丧失（功能受损）[34]。</p>
+<h3>索拉努斯</h3>
+<p>索拉努斯是一位出生于埃菲索斯的希腊医生，生活在图拉真和哈德良[35]（公元98-138年）统治时期。根据《苏达辞典》，他在亚历山大医学院学习，并在罗马行医。索拉努斯是阿斯克莱皮亚德斯方法论学派的一员，该学派培育了希波克拉底主义的理想[36]。他是方法论学派医生的主要代表。索拉努斯最著名的作品是他的妇科学著作，其中他讨论了许多被认为是现代观念的主题，如节育、怀孕、助产士的职责和产后护理[36]。他的专著《妇科学》现已出版（首次出版于1838年，后来由V.罗斯于1882年出版，以及同一学派的一位医生穆西奥的6世纪拉丁文译本）。他解释了分娩过程中母亲和胎儿可能出现的内部困难。他还从事骨折、手术和胚胎学方面的工作[36]。</p>
+<h2>医院</h2>
+<p>罗马医疗系统见证了第一批医院的建立；这些医院是为奴隶和士兵保留的。医生被指派跟随军队或船只，照顾伤员。在罗马，死亡是由恶劣的卫生条件、饥荒、疾病、流行病、营养不良和战争共同造成的；这导致了罗马的高死亡率[37]。罗马人对病人的态度冷漠、迷信和宗教信仰，拖延了卫生服务的发展[38]。古罗马医院始建于公元前1世纪，作为被称为疗养院的军事医院[39]。疗养院最初是一小群帐篷和堡垒，专门用于收容受伤的士兵[40]。最初的医院建在主要道路沿线，很快就成为罗马要塞建筑的一部分。它们通常位于外墙附近要塞的僻静处[38]。罗马帝国最早的罗马医院建于公元1世纪和2世纪[41]，在皇帝图拉真统治时期。罗马军队建立了这些医院，因为军队向意大利半岛以外的扩张意味着伤员不能再在私人住宅中得到护理[41]。随着时间的推移，临时堡垒发展成为永久性设施[42]。有些疗养院可能在早期就建立了。它们也可能由尤利乌斯·凯撒建立[43]。其他医院可能建于奥古斯都或克劳狄乌斯统治时期。疗养院是野战医院或飞行的军事营地，主要用于治疗军队中的士兵[44][41]。获得这些医院的医疗服务可能是服役的一项重要福利。这些机构提供的护理很可能是当时非常专业的，它们能够容纳多达200名病人[45]。凯尔苏斯将这些医院描述为大型医院，并配备了“工作过度的医生”[46]。这些工作过度的医生被称为医生。除了医生，还有一组兽医、管理人员和伤口敷料者，分别被称为兽医、疗养院官员和包扎员[47]。其他医院旨在照料奴隶。奴隶疗养院的质量低于军事医院，设备较少，医生素质较差。罗马作家将这些机构与兽医护理相比较，并将这些医院提供的治疗与野蛮行为等同起来[48][49]。标准的疗养院是一座长方形建筑，由四个翼组成，由一个可以作为分类中心的门厅连接[50]。每个军团的医院都建造成能够容纳该军团5000名士兵的6-10%。该建筑还包括一个大厅、接待病房、药房、厨房、员工宿舍以及洗漱和厕所设施。所有这些医院的形状和布局完全相同，每个军营都设有一个[51][52]。医生也可以在酒馆设立公共诊所。酒馆是另一种在古罗马获得医疗服务的方式。这些设施非常昂贵，而且没有住院护理[44]。这种方法很少见；医生到病人家中就诊要普遍得多[44]。那些无力支付医生费用或去疗养院的人会在阿斯克勒庇俄斯（罗马的医学之神）的庙宇祈祷，以求治愈[53]。</p>
+<h2>外科手术</h2>
+<p>由于存在风险，外科手术通常作为最后手段。然而，当进行手术时，手术通常局限于身体表面，因为医生认识到涉及身体最重要生理功能（大脑、心脏、脊髓等）的损伤通常无法治疗[40]。古罗马有各种各样的外科手术器械[54]。例如，骨杠杆是用于从颅骨中去除患病骨组织以及从骨骼中去除异物（如武器）的工具[55][56]。古罗马人能够进行白内障手术和剖腹产等技术。他们还可以进行更过时的程序，如放血。古罗马外科手术是基于希腊技术，由盖伦等医生在2世纪发展起来的。</p>
+<h3>饮食</h3>
+<p>正确的饮食被认为对健康生活至关重要。人们认为食物对疾病具有治疗作用或致病作用，这取决于它对体液的影响；以及预防疾病。其中一些食物包括大米、鹰嘴豆和橄榄，罗马军队广泛使用这些食物。在一个考古遗址中，发现了其他用于药用目的的植物，如扁豆、豌豆和无花果。在该遗址还发现各种肉类，据信这些肉类用于病人。家禽、鸡蛋和牡蛎被用作患有健康问题的病人的饮食[57]。食物的适度是健康生活和健康饮食哲学兴起的重要因素。当饮食不再促进健康时，就会使用药物、放血、灼伤或手术。病人能够控制自己的生活，管理自己的预防性医疗饮食以及寻求医生的自由，这表明病人的自主权受到重视[58]。</p>
+<h3>草药和其他药物</h3>
+<p>罗马医生使用各种草药和其他药物。它们古代的名字，通常源于希腊语，并不一定与现代单个物种相对应，即使这些物种具有相同的名称。已知的药物包括：[59]</p>
+<p>&lt;table caption=&quot;根据狄奥斯科里德斯的罗马药物&quot;&gt;
+  &lt;tr&gt;
+    &lt;th&gt;可能的物质&lt;/th&gt;
+    &lt;th&gt;拉丁语/希腊语名称&lt;/th&gt;
+    &lt;th&gt;适应症和作用&lt;/th&gt;
+    &lt;th&gt;参考文献&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;茴香&lt;/td&gt;
+    &lt;td&gt;Ippomarathron&lt;/td&gt;
+    &lt;td&gt;治疗排尿疼痛；排出月经；停止肠道排泄；排出母乳；破碎肾结石和尿结石，&lt;/td&gt;
+    &lt;td&gt;[60]&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;大黄&lt;/td&gt;
+    &lt;td&gt;Ra&lt;/td&gt;
+    &lt;td&gt;用于肠胃胀气、抽搐、内脏疾病（胃、脾、肝、肾、子宫、腹膜）、坐骨神经痛、哮喘、佝偻病、痢疾等&lt;/td&gt;
+    &lt;td&gt;[61]&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;龙胆&lt;/td&gt;
+    &lt;td&gt;Gentiane&lt;/td&gt;
+    &lt;td&gt;温热，收敛；用于毒蛇咬伤，肝脏疾病；诱发流产；治疗深溃疡，眼部炎症&lt;/td&gt;
+    &lt;td&gt;[62]&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;马兜铃&lt;/td&gt;
+    &lt;td&gt;Aristolochia&lt;/td&gt;
+    &lt;td&gt;有毒；协助分娩&lt;/td&gt;
+    &lt;td&gt;[63]&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;甘草&lt;/td&gt;
+    &lt;td&gt;Glukoriza&lt;/td&gt;
+    &lt;td&gt;镇静胃；胸、肝、肾和膀胱疾病&lt;/td&gt;
+    &lt;td&gt;[64]&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;芦荟&lt;/td&gt;
+    &lt;td&gt;Aloe&lt;/td&gt;
+    &lt;td&gt;治疗伤口（干用）；去除肿块；泻药；治疗秃头&lt;/td&gt;
+    &lt;td&gt;[65]&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</p>
+<p>雕像和治疗圣地是穷人和精英祈祷和祭祀的场所，遍布罗马帝国。对圣地和雕像的崇敬反映了对治疗、指导以及对无效的人类医生和药物的替代品的追求[66]。</p>
+<h2>治疗方法</h2>
+<h3>治疗圣地</h3>
+<p>医生的总体目标是尽其所能帮助患病或受伤的人；医生的信誉取决于他们成功的治愈。当然，他们不能可靠地治愈疾病；有时他们所能希望的最好的结果是他们的治疗不会加重患者的问题。许多医生因无法治愈明显的简单疾病而受到同行的批评。医生提供的护理中的差距被几种类型的超自然医疗保健所填补；罗马人相信神圣的信息和治疗的力量[68]。有很多来自多种宗教的神的描述，这些神与破坏或治愈有关[需要引文]。例如，公元前431年，为了应对肆虐意大利全国的瘟疫，阿波罗·梅迪库斯神庙被认为具有治愈作用[5]。在希腊罗马和埃及的历史上，散布着对献给各种治疗之神的治疗圣地的描述。患病或受伤的罗马人通常会涌向阿斯克勒庇俄斯神庙，即献给治疗之神阿斯克勒庇俄斯的庙宇，因为人们相信神实际上居住在圣地中，会向恳求者提供神圣的治疗。这个过程本身很简单：病人会向寺庙捐赠指定的贡品，然后进行一个称为“孵化”的过程，在这个过程中，他们会搬到一个特殊的房间，在那里神能够与他们联系，通常是通过梦境，在梦境中神要么开出治疗方案，要么亲自提供治疗。通常，规定的治愈类型与当时医生的实际医疗实践相当相似。这种超自然护理与主流医疗保健并不冲突。当医生无法治愈疾病时，医生经常会建议病人去治疗圣地。这使得医生的声誉能够保持不受损害，因为它更像是一种转诊，而不是一次失败[69]。罗马医生尽最大努力治疗战场伤口。凯尔苏斯描述了早期罗马医生对战场腹部伤口的治疗方法。凯尔苏斯描述说，医生应该首先观察肠的颜色，看看它们是否是“……青紫、苍白或黑色……”，在这种情况下，治疗是不可能的[70]。如果发现大肠被切断，他说治疗不太可能成功，但建议缝合肠子。腹部伤口的治疗应迅速进行，以免暴露的肠子变干。凯尔苏斯建议在肠子中加水以防止这种情况。罗马人也知道这种复杂伤口需要细致的护理。使用外科手术钩的助手用于缝合大型腹部伤口。它们被用来帮助分开腹部的边缘，因为内膜和表面皮肤都需要用两套缝线缝合，因为它很容易破裂。罗马人将各种软膏和敷料应用于这些伤口。凯尔苏斯描述了34种不同的软膏和敷料[32]。</p>
+<h3>初乳</h3>
+<p>初乳是哺乳动物分娩后产生的第一种乳汁。希腊和罗马医学文献都规定使用各种物质，这些物质具有不同的医学和宗教意义。几种物质，如硫磺、沥青和动物粪便，与人类净化实践有关。将妇女的母乳用作药物的做法在埃及医学文献中有着非常早期的根源。在几篇此类文献中，都提到了使用生过男婴的妇女的乳汁。据说这种做法是基于几尊女神伊西斯给她的儿子荷鲁斯神喂奶的雕像的描绘。埃及和希腊文献都指出，用于药用的乳汁应严格来自生过男婴的妇女。使用母乳的治疗方法在希腊和罗马文化之间差异很大。在希腊医学中，很少真正饮用牛奶。相反，它被用于制作软膏和洗剂的配方，可以治疗烧伤和其他皮肤疾病。这些治疗专门给予妇女，因为妇女的身体在某种程度上被认为是“污染的”。与之形成鲜明对比的是，罗马对初乳的使用更为广泛和多样化。故事表明，成年人饮用母乳在社会上是可以接受的，但除非用于治疗，否则并不常见[71]。相反，牛奶是由病人摄入的，治疗方法对男女都有效，这使得女性身体的观点与男性同龄人的观点相类似，而不是像几个世纪前那样成为对立面。总的来说，虽然并非所有关于女性生理学不断变化的医学观点的担忧都消失了，但罗马人似乎对所谓的女性身体的“污染”以及因此需要对女性有特殊的“净化”要求的担忧减少了[72]。在现代，已经表明，让病人摄入母乳（或初乳）实际上是一种相当有效的治疗方法，因为它具有相关的益处。例如，使用初乳已被证明可以预防金黄色葡萄球菌的生长，而金黄色葡萄球菌是几种类型的感染的已知原因[72]。初乳的有效性大约是目前开处方给病人的一些抗生素的一半。初乳对衣原体细菌也有效。衣原体是一种性传播疾病，其中某些亚型可引起沙眼，如果不能治愈失明的话，沙眼是严重视力障碍的主要原因。在没有其他抗生素的情况下，初乳对衣原体的治疗效果相当好[73]。</p>
+<h2>诊断方法</h2>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Medicine_in_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Medicine_in_ancient_Rome)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="What-Did-Ancient-Romans-Eat?-|-Getty-News">
+        <h3 class="page-name title"><span class="page-emoji ">💍&nbsp;</span>What Did Ancient Romans Eat? | Getty News</h3>
+        <small class="page-url url "><a href="https://www.getty.edu/news/what-did-ancient-romans-eat/" target="_blank">(https://www.getty.edu/news/what-did-ancient-romans-eat/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 此页面分析了罗马的婚姻制度及其对家庭结构的影响，显现出性别不平等及社会期望。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马人的饮食</h2>
+<h3>古罗马人的日常饮食</h3>
+<p>一顿常见的古罗马人的饭食可能包括面包（用斯佩尔特小麦、小麦或大麦制成，经济条件好的人通常会从面包店购买），通常与奶酪和兑过水的葡萄酒一起食用。面包几乎出现在每顿罗马人的饭食中：早餐、午餐（配奶酪和前一天剩下的冷盘）和晚餐（配豌豆或扁豆等配菜）。富人的晚餐还包括鸡蛋、新鲜家禽或鱼类和蔬菜。</p>
+<h3>穷人的饮食</h3>
+<p>那些买不起面包的人主要吃一种叫做 <em>puls</em> 的简单的粥，由煮熟的谷物（斯佩尔特小麦、小米或小麦）制成，可以用香草和蔬菜调味。</p>
+<h3>古罗马人的甜食</h3>
+<p>罗马菜肴中有很多甜味剂！蜂蜜在许多罗马甜点食谱中扮演着主角，但其他配料可能包括葡萄干酒（passum）或葡萄汁（defructum）。卡托写到了奶酪和芝麻“globi”（或甜食），盖伦写到了用蜂蜜和芝麻煎制的薄饼。作为饭后甜点，可以考虑阿皮修斯的蜂蜜油炸酿枣。</p>
+<h3>古罗马人的快餐店</h3>
+<p>完全正确！称为 <em>thermopolia</em> 的快餐店很常见，提供热葡萄酒、烤奶酪、扁豆、坚果和肉类。内置于柜台中的大罐子里装着可以为顾客加热的干冷食。这些地方通常提供“外卖”食物，尽管比较讲究的地方也有用餐区。有一种古代的汉堡式香肠食谱（Isicia Omentata），但这道美味佳肴可能不会在快餐店供应。</p>
+<h3>古罗马人的餐厅</h3>
+<p>这与我们通常认为的餐厅不太一样——除了快餐店外，还有一些稍好一些的场所，如酒吧或酒馆。但正式的用餐会在私人住宅进行，而不是在公共饮食场所。</p>
+<h3>常用调味料/香料</h3>
+<p>鱼露及其近亲 <em>liquamen</em> 是一种由发酵鱼内脏制成的鱼露，在许多菜肴中都有——无论是甜的还是咸的！新鲜的香草和诸如胡椒之类的进口香料也可能出现。</p>
+<h3>鱼露为何如今不再流行</h3>
+<p>鱼露在整个地中海地区的不同地点生产，古代作家描述了不同等级的鱼露，有些极其奢华。鱼露可能在过去几千年中已过时，但鱼露仍然是许多东南亚菜肴的重要组成部分，而伍斯特沙司等调味品仍然从发酵凤尾鱼中获得其辛辣味。</p>
+<h3>罗马菜与现代地中海饮食的关系</h3>
+<p>是的！减去后来引进的食物——例如来自亚洲的茄子和菠菜，以及来自美洲的西红柿、南瓜、辣椒、土豆和玉米。对某些食物的获取取决于您的地区和经济状况，但在大多数情况下，古罗马人享用全谷物、蔬菜、水果和橄榄油，以及一些奶制品和瘦肉蛋白。</p>
+<p>关于铅中毒的程度以及罗马帝国期间任何潜在影响的问题都是重要的问题，最近的研究表明，有多种途径可以了解铅如何在整个罗马世界成为一个问题。</p>
+<h3>古罗马时期的素食者</h3>
+<p>由于肉类和奶制品相对昂贵，许多罗马人默认情况下会吃大量的素食，尽管这取决于地区而会有很大差异！最近对以弗所角斗士墓地的骨骼研究表明，这些角斗士主要食用谷物和豆类（豆类是豆科植物的可食用种子，例如鹰嘴豆、干豆和扁豆）。一些宗教或哲学也与素食主义有关，例如希腊哲学家毕达哥拉斯的追随者。</p>
+<h3>古罗马时期被禁止的食物</h3>
+<p>对于罗马国教的信徒来说，似乎没有严格的饮食禁忌。几乎所有东西都可以！但在共和国时期，有禁止奢侈饮食的奢侈法——诸如剑鱼和海豚之类的美味佳肴是被禁止的。也就是说，古罗马人是一个多样化的群体，一些宗教团体有他们自己的饮食限制。有证据表明，为犹太消费者生产犹太洁食鱼露，因为不同的食谱可能会混合牡蛎、海胆和水母。</p>
+        <small class="page-url url "><a href="https://www.getty.edu/news/what-did-ancient-romans-eat/" target="_blank">(https://www.getty.edu/news/what-did-ancient-romans-eat/)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Antonine-Plague---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">😷&nbsp;</span>Antonine Plague - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Antonine_Plague" target="_blank">(https://en.wikipedia.org/wiki/Antonine_Plague)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 该页面分析了安东尼瘟疫对罗马社会及经济的重大影响，凸显公共卫生危机的重要性。<br></small>
+    </div>
+    <div class="page-content content"><p>安东尼瘟疫</p>
+<p>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;安东尼瘟疫&lt;/td&gt;
+    &lt;td&gt;安东尼瘟疫&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;疾病&lt;/td&gt;
+    &lt;td&gt;可能是天花&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;首次报告&lt;/td&gt;
+    &lt;td&gt;塞琉西亚&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;日期&lt;/td&gt;
+    &lt;td&gt;165-180年&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;死亡人数&lt;/td&gt;
+    &lt;td&gt;500万-1000万（估计）&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;死亡率&lt;/td&gt;
+    &lt;td&gt;25%&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</p>
+<p>公元165年至180年的安东尼瘟疫，也被称为盖伦瘟疫（以描述它的希腊医生盖伦命名），是一场长期且破坏性的流行病[1]，影响了罗马帝国。它可能是由从近东返回的士兵感染和传播的。学者们普遍认为这种瘟疫是天花[1][2][3]，因为全身出现的皮疹呈红色和黑色（霍根），尽管也有人认为是麻疹[4][5][6][7]，而最近的基因证据强烈表明，天花最严重的类型出现在欧洲要晚得多[8]。目前，安东尼瘟疫尚无基因证据[9]。古代文献一致认为，这种瘟疫很可能出现在公元165-166年冬季罗马围攻美索不达米亚城市塞琉西亚期间，当时是卢修斯·维鲁斯的帕提亚战役[10]。阿米阿努斯·马塞利努斯报道说，瘟疫蔓延到高卢和莱茵河沿岸的军团。尤特洛皮乌斯指出，帝国很大一部分人口死于这次疫情[11]。据当时的罗马历史学家卡西乌斯·狄奥记载，该疾病在公元189年再次爆发，并在罗马城每天导致多达2000人死亡，占受影响人口的25%[12]。总死亡人数估计为500万-1000万，约占帝国人口的10%[13][14]。这种疾病在城市和罗马军队中尤其致命[15]。安东尼瘟疫发生在所谓的罗马和平的最后几年，这是罗马帝国影响力、领土控制和人口的高峰期。历史学家对瘟疫对帝国日益动荡的时代的影响持有不同意见。根据考古记录，从罗马埃及的港口延伸到印度次大陆和东南亚的印度洋罗马商业活动在瘟疫之后似乎遭受了重大挫折。这种中断可能导致随后几年整个帝国的经济衰退和社会动荡加剧。</p>
+<h3>经济增长与健康状况不佳</h3>
+<p>流行病在古代世界很常见，但安东尼瘟疫是罗马帝国已知的第一场大流行病[16]。安东尼瘟疫蔓延到整个罗马帝国，感染了数百万人口。这场大流行爆发在通常被认为是罗马“黄金时代”[17]的最后几年，当时是共同皇帝马库斯·奥列留的统治时期。当时的罗马帝国人口估计为7500万。历史学家普遍认为，罗马帝国的人口在安东尼瘟疫出现时达到顶峰，此后人口下降[18]。尽管罗马帝国经济繁荣，但大流行的条件是有利的。人口健康状况不佳。按照古代标准，大约20%的人口生活在数百个城市中的一个；罗马人口估计为一百万，是最大的城市。即使在最好的时期，城市也是“人口消亡之地”。死亡率超过出生率，需要不断有新居民迁入才能维持城市人口。由于或许超过一半的儿童在成年之前死亡，出生时的平均预期寿命只有二十多岁。密集的城市人口和恶劣的卫生条件加剧了疾病的危险。罗马帝国广阔领土之间通过陆地和海洋的连通性使得传染病从一个地区转移到另一个地区比在较小、地理位置更局限的社会中更容易、更快。帝国中传染病的流行很常见，在公元前43年至公元148年期间记录了九次。富人并非不受不健康状况的影响。例如，皇帝马库斯·奥列留的十四个孩子中，只有两个已知活到了成年[19]。平均身高是营养状况和疾病负担的一个很好的指标。对数千具骨骼的研究得出的结论是，罗马人的平均身高低于罗马时期之前的意大利社会和罗马时代后的中世纪社会的人们。历史学家凯尔·哈珀认为，“在历史上并非最后一次，社会发展的飞跃带来了生物学的逆转”[20]。罗马时期平均身高的下降可能反映了城市化、战争和经济不平等的压力。尽管发展不断，但欧洲在1000年到1800年之间平均身高并没有增加，而在晚期古代的第5和第6世纪却增加了[21]。</p>
+<h3>疾病的传播</h3>
+<p>传统的罗马观点认为安东尼瘟疫的起因是罗马军队在卢修斯·维鲁斯的帕提亚战役期间亵渎了塞琉西亚城的一座寺庙。然后士兵们在166年初将它带回了罗马帝国，从帕提亚帝国带回。然而，瘟疫的第一个记录病例是在公元165年的士麦那（在罗马安纳托利亚），演说家埃留斯·阿里斯提德斯几乎死于这种疾病。瘟疫从东方向西蔓延，于166年到达罗马，到172年几乎蔓延到帝国的每一个角落。共同皇帝卢修斯·维鲁斯于169年死于瘟疫，瘟疫摧毁了罗马军队[22][23]。瘟疫持续到大约180年左右，狄奥·卡西乌斯报道说，另一种可能相关的疫情发生在公元189年的罗马城。该城每天经常有2000人死亡。这种新的疫情，或者安东尼瘟疫的复发，是否影响了罗马城以外的帝国，尚不清楚[24]。</p>
+<p>巴托尔德·格奥尔格·涅布尔（1776-1831年）表达了传统观点，他得出结论：“由于马库斯·奥列留的统治在许多事情上，尤其是在文学和艺术方面都构成了一个转折点，我毫不怀疑这场危机是由这场瘟疫造成的……古代世界从未从马库斯·奥列留统治时期发生的瘟疫对其造成的打击中恢复过来。”[32]最近，学者凯尔·哈珀也表达了类似的观点：这场大流行“在任何关于罗马命运的叙述中……都应该占据最前沿的位置。”[33]相反，一个由六位历史学家组成的团队对哈珀等人关于这场瘟疫的“极端”立场提出了质疑，认为他们“忽视了表明其结果并非灾难性的学术研究”，但这些历史学家肯定“我们毫不怀疑疾病和气候确实对哈珀描述的一些问题产生了影响。”[34]一些历史学家推测，这场流行病导致了对医学之神阿斯克勒庇俄斯教派的流行度激增；然而，碑文记录没有显示该教派流行度有任何增加的证据[35]。</p>
+<h3>对罗马军队的影响</h3>
+<p>古代编年史家将这场瘟疫描绘成罗马军队的灾难，军队“几乎被消灭了”[36]。这是在公元166年马科曼尼战争开始时发生的，当时日耳曼部落入侵罗马位于多瑙河中游以南的领土，现在属于捷克共和国和斯洛伐克，并向南延伸至意大利。随着罗马军队努力应对兵力短缺，瘟疫不仅使他们的队伍减少，还削弱了他们的战略地位。瘟疫的影响迫使马库斯·奥列留从“角斗士、奴隶和强盗”中招募和训练额外的士兵。经过两年的延迟，皇帝于169年对日耳曼部落发动了攻击。到171年，罗马军队已将入侵者驱逐出罗马领土。战争将零星地持续到180年，马库斯·奥列留去世，可能死于瘟疫。这场持续的冲突导致该地区动荡不安。瘟疫也可能影响了日耳曼部落[37]。</p>
+<h3>气候联系</h3>
+<p>根据2024年的研究，对罗马帝国造成重大影响的主要瘟疫，如安东尼瘟疫、西普里安瘟疫和查士丁尼瘟疫，与较冷和干燥的气候条件密切相关，这表明较冷的天气可能导致这些疾病在当时传播。人们认为气候压力与社会和生物变量（如食物供应、啮齿动物数量和人类迁移）相互作用，使人口更容易患病[38][39]。</p>
+<h3>参考文献</h3>
+<p>德·克雷斯皮尼，雷夫（2007年）。《从汉代到三国时期的人物词典（公元23-220年）》。莱顿：布里尔皇家出版社，第514-515页，ISBN 978-90-04-15605-0。</p>
+<p>吉利亚姆，J.F.  “马库斯·奥列留时期的瘟疫”。《美国语言学杂志》82.3（1961年7月），第225-251页。</p>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Antonine_Plague" target="_blank">(https://en.wikipedia.org/wiki/Antonine_Plague)</a><br></small>
+    </div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Religion-in-ancient-Rome---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">🏰&nbsp;</span>Religion in ancient Rome - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Religion_in_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Religion_in_ancient_Rome)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 页面描述了罗马帝国时期阶层结构与经济状况的关系，阐明了社会地位对生活的影响。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马的宗教</h2>
+<p>古罗马的宗教由各种帝国和地方宗教习俗构成，罗马人民以及被其统治的人民都遵循这些习俗。罗马人认为自己非常虔诚，并将他们作为世界强国的成功归因于他们在维护与神灵良好关系方面的集体虔诚（pietas）。他们的多神教以崇拜许多神灵而闻名。从历史时期开始，希腊人在意大利半岛的存在就影响了罗马文化，引入了一些成为根本的宗教习俗，例如阿波罗的崇拜。罗马人寻找他们主要神灵与希腊神灵之间的共同点（interpretatio graeca），为拉丁文学和罗马艺术改编希腊神话和图像，就像伊特鲁里亚人一样。伊特鲁里亚宗教也是一种主要的影响，尤其是在占卜的实践上，国家用它来探求神灵的意志。根据传说，罗马的大多数宗教机构都可以追溯到它的创始人，特别是努马·庞皮留斯，罗马的萨宾第二任国王，他直接与神灵谈判。这种古老的宗教是mos maiorum，“祖先的道路”或简称“传统”的基础，被认为是罗马认同的核心。</p>
+<p>罗马宗教是实用和契约性的，基于do ut des，“我给予，你或许会给予”的原则。宗教取决于对祈祷、仪式和祭祀的知识和正确的实践，而不是信仰或教条，尽管拉丁文学保留了关于神性本质及其与人类事务关系的学术推测。即使是罗马知识精英中最怀疑论者，如担任占卜官的西塞罗，也认为宗教是社会秩序的来源。随着罗马帝国的扩张，迁徙到首都的移民带来了他们的当地宗教，其中许多在意大利人中变得流行。基督教最终成为这些信仰中最成功的信仰，并在380年成为官方国教。对于普通的罗马人来说，宗教是日常生活的一部分。每个家庭都有一个家庭神龛，在那里供奉家庭神灵的祈祷和祭品。邻里神龛和像泉水和树林这样的圣地点缀着城市。罗马历是围绕宗教仪式安排的。妇女、奴隶和儿童都参与了一系列宗教活动。有些公共仪式只能由妇女进行，妇女组成了也许是罗马最著名的祭司团体，即国家支持的贞女，她们几个世纪以来一直照料着罗马的圣火，直到在基督教统治下被解散。</p>
+<h3>概述</h3>
+<p>大多数国家宗教的祭司职位由精英阶层成员担任。在古罗马没有类似于政教分离的原则。在罗马共和国（公元前509-27年），当选的公职人员也可能担任占卜官和祭司。祭司们结婚、养家糊口，并过着积极参与政治的生活。尤利乌斯·凯撒在当选执政官之前就成为了大祭司。占卜官们解读神灵的旨意，并监督边界标志的绘制，以此反映宇宙秩序，从而批准罗马的扩张主义和对外战争是神圣命运的问题。罗马凯旋式在其核心是一个宗教游行，在游行中，获胜的将军通过将一部分战利品献给神灵（特别是代表公正统治的朱庇特）来展示他的虔诚和为公共利益服务的意愿。由于布匿战争（公元前264-146年），当罗马努力确立自己作为主导力量时，许多新的寺庙是由行政长官为了履行对神明的誓言而建造的，以确保他们的军事成功。</p>
+<p>随着罗马人在整个地中海地区扩展其统治，他们的政策通常是吸收其他民族的神灵和宗教，而不是试图根除它们，因为他们相信维护传统能促进社会稳定。罗马融合不同民族的一种方式是支持他们的宗教遗产，建造供奉当地神灵的庙宇，并将他们的神学纳入罗马宗教的等级制度。整个帝国的铭文记录了当地神灵和罗马神灵的并行崇拜，包括罗马人为当地神灵所作的奉献。到帝国鼎盛时期，许多国际神灵在罗马受到推崇，甚至被带到最偏远的省份，其中包括塞伯勒、伊西斯、埃波纳，以及像密特拉和太阳神（Sol Invictus）这样的太阳一神教的神灵，这些神灵甚至在罗马不列颠北部都能找到。外国宗教越来越吸引罗马人的信徒，这些罗马人越来越多地拥有来自帝国其他地方的血统。进口的神秘宗教为入门者提供来世救赎，是个人选择的个人行为，除了继续进行家庭仪式和参与公共宗教外。然而，这些神秘仪式包含排他的誓言和保密，这些条件保守的罗马人认为是“魔法”、阴谋（coniuratio）或颠覆活动的特征。人们零星地、有时甚至是残酷地试图压制那些似乎威胁到传统道德和团结的宗教信徒，例如元老院在公元前186年限制酒神节的努力。因为罗马人从来没有被强迫只崇拜一个神或一个宗教，所以宗教宽容并不是像一神教体系那样是一个问题。犹太教的一神论严谨给罗马政策带来了困难，有时会导致妥协和给予特殊豁免，但有时也会导致棘手的冲突。例如，宗教纠纷导致了第一次犹太-罗马战争和巴尔·科赫巴起义。</p>
+<p>在共和国崩溃之后，国家宗教已经适应了支持皇帝的新政权。奥古斯都，第一位罗马皇帝，用一个庞大的宗教复兴和改革计划来证明一人统治的新颖性。以前为了共和国的安全而作出的公共誓言现在指向皇帝的福祉。所谓的“皇帝崇拜”大规模地扩展了罗马人对祖先和守护神（Genius）（每个人的神圣守护神）的传统尊敬。帝国崇拜成为罗马在各行省展示其存在感和在整个帝国培养共同文化认同感和忠诚感的主要方式之一。拒绝国家宗教无异于叛国。这就是罗马与基督教冲突的背景，罗马人将基督教视为一种无神论和新奇的迷信，而基督教徒则认为罗马宗教是异教。最终，随着基督教被确立为帝国的官方宗教，罗马多神教走向了终结。</p>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Religion_in_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Religion_in_ancient_Rome)</a><br></small>
+    </div>
+
+</div>
+</div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navigate = document.querySelector(".navigate");
+        if (!navigate) {
+            console.error("找不到 .navigate 元素!");
+            return;
+        }
+
+        let lastScrollY = 0; // 初始化滚动位置
+        const scrollContainer = document.querySelector(".right-column");
+        let isNavigating = false;
+        document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                isNavigating = true; // 设置导航状态
+                navigate.classList.add("navigate-hidden"); // 隐藏导航栏
+
+                setTimeout(() => {
+                    isNavigating = false;
+                }, 100);
+            });
+        })
+
+        scrollContainer.addEventListener("scroll", () => {
+            const currentScrollY = scrollContainer.scrollTop; // 获取容器的滚动位置
+
+            // 判断滚动方向
+            if (!isNavigating) {
+                if (currentScrollY > lastScrollY) {
+                    navigate.classList.add("navigate-hidden");
+                } else {
+                    navigate.classList.remove("navigate-hidden");
+                }
+            }
+
+            // 更新上一次的滚动位置
+            lastScrollY = currentScrollY;
+        });
+    });
+</script>
+</html>

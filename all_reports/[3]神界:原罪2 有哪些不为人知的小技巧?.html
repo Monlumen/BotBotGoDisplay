@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>神界:原罪2 有哪些不为人知的小技巧?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; 
+            background-color: #f4f6f8; 
+            color: #333; 
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        
+        .content {
+            border-radius: 12px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); 
+            background-color: #fff; 
+            padding: 16px; 
+            margin-bottom: 16px; 
+        }
+
+        
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .left-column{
+            flex: 0.47;
+        }
+        .right-column{
+            flex: 0.53;
+        }
+
+        .left-column {
+            background-color: #eef6ff; 
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; 
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Noto Serif", "SimSun", serif; 
+            position: relative;
+        }
+        .resizer {
+            width: 6px;
+            cursor: col-resize;
+            background-color: #d1d1d1;
+        }
+
+
+        
+        .title {
+            font-size: 1.4em; 
+            font-weight: 600; 
+            color: #1a1a1a; 
+            margin-bottom: 12px; 
+        }
+
+        .page-name.title {
+            font-size: 1.8em; 
+            font-weight: bold; 
+            color: #222; 
+            margin: 16px 0; 
+            text-align: left; 
+        }
+
+        .section-title {
+            font-size: 1.4em; 
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; 
+        }
+
+        
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; 
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; 
+            padding: 12px; 
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; 
+            border: 1px solid #dde3ea; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+            margin-bottom: 20px; 
+        }
+
+        
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; 
+            margin: 20px 0; 
+        }
+
+        
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; 
+            color: #666; 
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; 
+            border-radius: 8px; 
+            line-height: 1.4;
+            margin-bottom: 10px; 
+        }
+
+        
+        .page-rating {
+            background-color: #e8f4ff; 
+            color: #0078d7; 
+            font-weight: bold; 
+            border: 1px solid #aad4ff; 
+        }
+
+        
+        .page-annotation {
+            background-color: #fff5e5; 
+            color: #cc8400; 
+            font-style: italic; 
+            border: 1px solid #ffcc66; 
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; 
+        }
+
+        
+        a {
+            color: #0078d7; 
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+        
+        .content > * {
+            margin-bottom: 12px; 
+        }
+
+        
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; 
+            z-index: 300; 
+            background-color: #ffffff; 
+            color: #222; 
+            font-size: 1.1em; 
+            font-weight: 500; 
+            padding: 12px 16px; 
+            border-radius: 8px; 
+            border: 1px solid #d1e4f2; 
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05),  0 2px 4px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 16px; 
+            text-align: left; 
+            line-height: 1.6; 
+            font-family: "Inter", "Noto Sans", sans-serif; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        
+        .section-link-box {
+            display: inline-block; 
+            margin: 4px 2px; 
+        }
+
+        .section-link {
+            display: inline-flex; 
+            align-items: center; 
+            padding: 6px 12px; 
+            background-color: #eef6ff; 
+            color: #0078d7; 
+            font-size: 0.95em; 
+            font-weight: 500; 
+            text-decoration: none; 
+            border: 1px solid #d1e4f2; 
+            border-radius: 20px; 
+            transition: all 0.2s ease; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; 
+            color: #005bb5; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            text-decoration: underline; 
+        }
+
+        
+        .navigate {
+            display: flex; 
+            max-width: 40%;
+            width: fit-content; 
+            flex-wrap: nowrap; 
+            overflow-x: auto; 
+            gap: 4px; 
+            justify-content: center; 
+            padding: 4px 4px; 
+            background-color: #f4f6f8; 
+            border-radius: 12px; 
+
+            position: fixed;
+            top: 0;
+            left: 55%;
+            
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease; 
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        
+        .navigate-item {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            background-color: #ffffff; 
+            padding: 3px 6px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            transition: all 0.3s ease; 
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            transform: translateY(2px); 
+        }
+        .navigate-item.active {
+            box-shadow: 0 0 10px 3px rgba(0, 120, 215, 0.5); 
+            transform: translateY(1px); 
+        }
+        .navigate-item a {
+            text-decoration: none; 
+            color: #0078d7; 
+            font-weight: bold; 
+            font-size: 1em; 
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; 
+            margin-bottom: 1px; 
+        }
+        .navigate-item-id {
+            font-size: 0.9em; 
+            color: #555; 
+        }
+
+        [id] { 
+            scroll-margin-top: 55px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            神界:原罪2 有哪些不为人知的小技巧?
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">角色构建与组合技巧</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Tips-for-Playing-Divinity-Original-Sin-2---Divinity:-Original-Sin-II-Guide---IGN">
+    🛡角色构建技巧</a></div><div class="section-link-box"><a class="section-link" href="#Divinity:-Original-Sin-2-Beginner's-Guide-(Tips,-Tricks,-&-Strategies)">
+    🧙技能组合与战斗策略</a></div><div class="section-link-box"><a class="section-link" href="#Divinity-Original-Sin-2:-Game-Mechanics-—-Steemit">
+    📊角色属性与技能</a></div><div class="section-link-box"><a class="section-link" href="#Divinity:-Original-Sin-2-Expert-Guide---Advanced-Tips-For-Skills,-Combat,-And-More---GameSpot">
+    📈</a></div><div class="section-link-box"><a class="section-link" href="#What-are-some-good-tips-for-a-Divinity:-Original-Sin-2-beginner?---Quora">
+    💰</a></div><div class="section-link-box"><a class="section-link" href="#Best-character-builds---for-you-(spoilers)---Larian-Studios-forums">
+    🗡</a></div></div>
+    <div class="section-content content"><h2>角色构建与组合技巧</h2>
+<p>这份报告关于《神界：原罪2》角色构建与组合技巧的核心内容总结如下，并辅以游戏数据和策略细节：</p>
+<p><strong>1. 多技能分支混合构建：</strong>  与传统RPG专注单一技能树不同，《神界：原罪2》鼓励混合构建。例如，IGN指南推荐智力型角色同时学习水系、气系和召唤法术，形成强大的组合；GameSpot指南则建议战士型角色结合风系魔法，利用传送术提升机动性和生存能力。  这种策略并非单纯的技能堆砌，而是基于技能间的协同作用。例如，战士技能与风系魔法的结合提高了近战角色的灵活性与远程打击能力，有效应对不同战斗距离的敌人。  根据Quora的建议，一个高效的组合是盗贼（潜行、开锁）、坦克（高护甲、劝说）、以及两个游侠（远程输出）。这种搭配在面对强敌时能充分发挥各自优势，从而减少微操难度，提高战斗效率。</p>
+<p><strong>2. 元素交互与技能链：</strong>  《神界：原罪2》的战斗系统强调环境互动和技能连携。  Steemit指南指出，不同元素的组合会产生不同的效果：火和水产生蒸汽阻碍远程攻击；水和闪电则造成电击和晕眩。  这需要玩家充分了解游戏机制，并根据实际情况选择技能。  此外，多个网站均提及“撕裂肌腱”和“鸡爪”的组合，可以有效削弱并控制Boss。  GameSpot指南更进一步指出，利用环境中的油桶等道具可以有效提升战斗效率，甚至扭转战局(例如Blackpit战斗中对抗虚空生物)。  这体现了《神界：原罪2》战斗策略的深度与复杂性，不仅仅是技能本身的强弱，更在于技能与环境、技能与技能之间的巧妙配合。</p>
+<p><strong>3.  针对性角色构建与团队协作：</strong>  角色构建需根据游戏目标和战斗需求进行针对性定制。例如，Quora建议构建一个5个法术系全能施法者，追求技能多样性，或一个黑暗游侠，结合敏捷和远程输出的技能。  Larian论坛则分享了多种角色构建方案，例如战士+风系魔法、射手+土系魔法等，并强调了技能搭配的协同性与互补性。  这表明，成功的角色构建不仅取决于个体技能的选择，更重要的是团队成员技能间的互补与配合，以及对战局的精准判断。  例如，一个团队中同时拥有擅长物理伤害和魔法伤害的角色，就能更有效地应对不同类型的敌人。  </p>
+<p>总而言之，以上策略并非相互独立，而是相互关联，共同构成了《神界：原罪2》角色构建的核心思想：灵活运用技能、巧妙利用环境、注重团队协作，最终达到以弱胜强，克敌制胜。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">战斗策略与环境利用</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Tips-for-Playing-Divinity-Original-Sin-2---Divinity:-Original-Sin-II-Guide---IGN">
+    🛡环境元素结合</a></div><div class="section-link-box"><a class="section-link" href="#Basic-Combat-Strategy---Divinity:-Original-Sin-II-Walkthrough-&-Guide---GameFAQs">
+    🎮基本战斗战术</a></div><div class="section-link-box"><a class="section-link" href="#What-are-some-good-tips-for-a-Divinity:-Original-Sin-2-beginner?---Quora">
+    💰</a></div><div class="section-link-box"><a class="section-link" href="#Divinity:-Original-Sin-2-Expert-Guide---Advanced-Tips-For-Skills,-Combat,-And-More---GameSpot">
+    📈</a></div></div>
+    <div class="section-content content"><p>这份报告关于战斗策略与环境利用部分，详细阐述了超越单纯“利用环境”的策略深度，并提供了丰富的实战案例。具体而言：</p>
+<ol>
+<li>
+<p><strong>环境元素的组合运用:</strong> 报告并非泛泛而谈“利用环境”，而是具体指出多种环境元素组合的战术效果。例如：</p>
+<ul>
+<li><strong>水+电：</strong> 利用“电击”技能与水元素结合，造成大量伤害并眩晕敌人。 (引自GameSpot与Quora)</li>
+<li><strong>火+毒：</strong> 火与毒元素混合产生剧烈爆炸效果。(引自GameSpot)</li>
+<li><strong>火+水：</strong> 火与水混合产生蒸汽，阻碍远程攻击。(引自GameSpot)</li>
+<li><strong>水+闪电：</strong> 水与闪电结合，使水体带电，电击并击晕其中的敌人。(引自GameSpot)</li>
+<li><strong>祝福+水：</strong> 祝福与水结合，创造治愈水池。(引自IGN)  这些案例充分展现了环境元素互动在战斗中的关键作用。</li>
+</ul>
+</li>
+<li>
+<p><strong>陷阱的设置与运用:</strong>  报告强调了主动设置陷阱的重要性，而非被动利用现成陷阱。 具体战术包括：</p>
+<ul>
+<li><strong>油桶陷阱:</strong> 利用高力量角色搬运和放置油桶，制造爆炸陷阱，结合隐身等技能伏击敌人。(引自GameSpot, IGN)  此策略展现了对战斗节奏的主动掌控。</li>
+</ul>
+</li>
+<li>
+<p><strong>召唤魔法的策略性运用:</strong> 报告指出召唤魔法的意义远不止于数值提升，更在于策略性地适应环境。具体战术包括：</p>
+<ul>
+<li><strong>环境适配型召唤:</strong> 根据环境选择不同元素类型的召唤生物，例如在火元素环境中召唤火元素生物。(引自IGN)  这种策略性运用体现了对游戏机制的深入理解。</li>
+</ul>
+</li>
+</ol>
+<p>总而言之，该报告关于战斗策略与环境利用部分，并非空泛的理论说明，而是提供了诸多具体、实用、且贴合玩家实际需求的战术技巧及实战案例。  这些案例直接针对玩家在游戏过程中可能遇到的挑战，例如如何应对特定Boss，如何有效利用环境资源等，具有很强的指导意义。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">NPC互动及交易优化</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Tips-for-Playing-Divinity-Original-Sin-2---Divinity:-Original-Sin-II-Guide---IGN">
+    🛡赠送物品提升好感度</a></div><div class="section-link-box"><a class="section-link" href="#What-are-some-good-tips-for-a-Divinity:-Original-Sin-2-beginner?---Quora">
+    💰利用角色能力优化交易</a></div><div class="section-link-box"><a class="section-link" href="#Divinity-Original-Sin-2:-Game-Mechanics-—-Steemit">
+    📊偷窃与NPC态度关系</a></div><div class="section-link-box"><a class="section-link" href="#11-Things-Divinity:-Original-Sin-2-Doesn't-Tell-You---IGN">
+    ⚔</a></div><div class="section-link-box"><a class="section-link" href="#Divinity:-Original-Sin-2-Beginner's-Guide-(Tips,-Tricks,-&-Strategies)">
+    🧙</a></div><div class="section-link-box"><a class="section-link" href="#Divinity:-Original-Sin-2-Expert-Guide---Advanced-Tips-For-Skills,-Combat,-And-More---GameSpot">
+    📈</a></div><div class="section-link-box"><a class="section-link" href="#2-player-Possible-speedrunning-strat---Larian-Studios-forums">
+    😂</a></div></div>
+    <div class="section-content content"><p>这份报告总结了《神界：原罪2》中关于NPC互动和交易优化的若干策略，这些策略利用游戏机制最大化玩家收益，并超出简单的交易技巧范畴：</p>
+<p><strong>1. 赠送物品策略：</strong>  IGN攻略及Quora问答均指出，向商人赠送物品，即使不直接进行金币交易，也能有效提升其好感度。此举初期可能略微消耗资金，但长期来看，通过获得更低的购买价格和更高的出售价格，能显著节省开支，甚至获得额外利润。  这种策略的核心在于利用游戏机制中好感度系统与交易价格的关联性，而非单纯的讨价还价。  具体方法是，以12的倍数（例如12、60、120、240金币，随着等级提升而增加）赠送金币，或赠送有价值的物品，直至商人好感度达到100，以达到最大化交易折扣的目的。（Quora）</p>
+<p><strong>2. 偷窃行为的风险与收益：</strong>  游戏攻略明确指出偷窃行为的盈利潜力，以及快速致富的可能性 (IGN, Quora, Steemit)。然而，多次偷窃或扒窃行为会引发NPC的敌意和卫兵的追捕 (IGN, Quora)。因此，成功的偷窃需要技巧和时机把握，例如单次高价值物品的偷窃 (IGN)，以及偷窃后迅速离开 (Quora)。  这体现了游戏机制中风险与收益的平衡，需要玩家权衡利弊，而非简单的鼓励或谴责偷窃行为。</p>
+<p><strong>3.  利用多角色民用技能：</strong>  游戏攻略中建议玩家充分利用不同队员不同的民用技能，例如“讨价还价”，来优化交易效果 (Quora, Steemit)。  Steemit 指出，高等级“讨价还价”技能可以显著降低购买价格和提高出售价格。  此外，Quora建议玩家培养专门负责交易的角色，并为其配备提升“讨价还价”技能的装备，以最大限度地提升交易效率。  这凸显了角色养成与交易策略的结合，强调了团队协作在游戏中的重要性。  结合使用多个角色的民用技能，可以更容易实现高效率的物品交易。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">游戏内特殊技巧与提示</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Tips-for-Playing-Divinity-Original-Sin-2---Divinity:-Original-Sin-II-Guide---IGN">
+    🛡床垫使用</a></div><div class="section-link-box"><a class="section-link" href="#11-Things-Divinity:-Original-Sin-2-Doesn't-Tell-You---IGN">
+    ⚔</a></div><div class="section-link-box"><a class="section-link" href="#Basic-Combat-Strategy---Divinity:-Original-Sin-II-Walkthrough-&-Guide---GameFAQs">
+    🎮</a></div><div class="section-link-box"><a class="section-link" href="#What-are-some-good-tips-for-a-Divinity:-Original-Sin-2-beginner?---Quora">
+    💰</a></div></div>
+    <div class="section-content content"><p>这份报告总结了《神界：原罪2》中一些不为人知的技巧，旨在提高游戏效率和整体体验，尤其关注资源和环境利用：</p>
+<ol>
+<li>
+<p><strong>高效生命值恢复：</strong> 游戏早期即可获得睡袋，使用睡袋可在战斗外免费且快速地完全恢复全队生命值，此方法效率远高于持续施放再生法术。 （引自IGN攻略：https://www.ign.com/wikis/divinity-original-sin-2/Tips_for_Playing_Divinity_Original_Sin_2）</p>
+</li>
+<li>
+<p><strong>资源收集优化：</strong>  利用ALT键可高亮显示场景中所有可拾取物品，避免遗漏重要装备、材料和金钱。  (此点为常识性技巧，缺乏明确出处)</p>
+</li>
+<li>
+<p><strong>物品价值最大化:</strong> 游戏中几乎所有物品都具有价值，不仅限于金钱价值。书籍、银器等小物件可出售或赠予商人提升好感度；食物可烹饪增益属性和恢复生命值；制作材料需收集储备；甚至墙壁上的装饰画也能带来额外收益。 不要轻视任何物品的潜在价值！（引自IGN攻略：https://www.ign.com/articles/11-things-divinity-original-sin-2-doesnt-tell-you）</p>
+</li>
+<li>
+<p><strong>基于种族的特殊技能:</strong>  不同种族拥有独特隐藏技能：蜥蜴人可徒手挖洞，不死族可徒手开锁，精灵则可通过食用尸体学习技能。(引自IGN攻略：https://www.ign.com/articles/11-things-divinity-original-sin-2-doesnt-tell-you)</p>
+</li>
+<li>
+<p><strong>元素组合的策略性应用:</strong>  不同元素组合会触发特殊效果，例如火与毒的组合会造成巨大的爆炸，火与水的组合会产生蒸汽和烟雾，水与闪电会使水带电，而祝福与水则可创造治疗水池。(引自IGN攻略：https://www.ign.com/articles/11-things-divinity-original-sin-2-doesnt-tell-you)</p>
+</li>
+<li>
+<p><strong>商人库存的动态更新:</strong> 商人库存会随着玩家等级提升而更新，因此，升级后务必检查商人的商品。（引自IGN攻略：https://www.ign.com/articles/11-things-divinity-original-sin-2-doesnt-tell-you)</p>
+</li>
+</ol></div>
+</div><div class="section">
+    <h3 class="section-title title">任务提升与资源管理</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Basic-Combat-Strategy---Divinity:-Original-Sin-II-Walkthrough-&-Guide---GameFAQs">
+    🎮战斗策略</a></div><div class="section-link-box"><a class="section-link" href="#Tips-for-Playing-Divinity-Original-Sin-2---Divinity:-Original-Sin-II-Guide---IGN">
+    🛡技能点配置</a></div><div class="section-link-box"><a class="section-link" href="#Divinity-Original-Sin-2:-Game-Mechanics-—-Steemit">
+    📊属性与技能配置</a></div><div class="section-link-box"><a class="section-link" href="#Divinity:-Original-Sin-2-Expert-Guide---Advanced-Tips-For-Skills,-Combat,-And-More---GameSpot">
+    📈高级战斗技巧</a></div><div class="section-link-box"><a class="section-link" href="#What-are-some-good-tips-for-a-Divinity:-Original-Sin-2-beginner?---Quora">
+    💰</a></div></div>
+    <div class="section-content content"><h2>任务提升与资源管理：用户关注点分析</h2>
+<p>这份报告中，关于任务提升与资源管理，用户关注主要集中在以下三个方面，并辅以游戏数据和策略佐证：</p>
+<p><strong>1. 技能点配置策略与战斗效能:</strong>  用户高度关注技能点配置对战斗力的影响。报告中多次强调避免技能树发展过散，建议玩家专注于一到两种主要技能（例如：战士技能搭配气系法术，或标枪技能配合土系法术），或选择具有互补性的技能组合，以最大化战斗效能。  这体现了玩家对资源有效利用以及角色构建策略的重视。  报告中提及的五大学院法术的组合以及混合型职业构建，进一步说明了技能点配置策略的多样性和复杂性，并非简单的“样样通，样样松”，而是需要深入考量技能间的协同效应和实际战斗需求。  这直接影响玩家的战斗胜率和游戏体验。</p>
+<p><strong>2. 快速存档机制与游戏效率:</strong>  报告反复强调快速存档（F5/F8）在应对高难度挑战时的重要性，这被视为提升游戏效率的关键因素。  在《神界：原罪2》中，高难度战斗可能导致玩家反复尝试，而快速存档机制能够显著减少因失败而导致的时间和精力浪费，提升玩家的游戏体验，并节约成本（例如避免资源消耗）。</p>
+<p><strong>3. 高难度挑战应对策略及环境互动:</strong>  用户热衷于了解应对高难度战斗的有效策略。报告中总结了多种策略，例如：
+    * <strong>环境互动:</strong>  充分利用游戏环境中的元素（水、火、油等）及其交互效果，例如利用水与火焰或闪电的交互造成额外伤害；以及利用地形和掩体进行策略性作战。
+    * <strong>陷阱运用:</strong> 巧妙地利用游戏中的可移动物体，例如炸药桶，设置陷阱来杀伤敌人，提高战斗效率。
+    * <strong>技能组合:</strong>  有效利用隐身、控制、治疗以及复活等技能，并结合不同角色技能的特性，形成团队协同作战能力，提升生存能力和战斗效率。
+    * <strong>天赋选择:</strong>  报告中特别提到了“早晨人”天赋，进一步说明玩家对细节化战斗策略的关注，体现了对游戏机制的深入理解。</p>
+<p>上述策略的有效运用，能够大幅提升玩家在高难度战斗中的生存率和胜率，从而间接提升游戏效率和任务完成率。</p>
+<p><strong>总结:</strong> 用户的核心诉求在于通过合理的资源管理（技能点分配），高效的游戏机制运用（快速存档），以及策略性战斗技巧（环境互动、技能组合）来最大程度地提升任务完成效率和游戏体验，避免资源浪费和时间成本增加。</p></div>
+</div>
+</div>
+<div class="resizer"></div>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item" href="#Tips-for-Playing-Divinity-Original-Sin-2---Divinity:-Original-Sin-II-Guide---IGN">
+    <a href="#Tips-for-Playing-Divinity-Original-Sin-2---Divinity:-Original-Sin-II-Guide---IGN" class="navigate-item-emoji ">🛡</a>
+    <a href="#Tips-for-Playing-Divinity-Original-Sin-2---Divinity:-Original-Sin-II-Guide---IGN" class="navigate-item-id">1</a>
+</div><div class="navigate-item" href="#Divinity-Original-Sin-2:-Game-Mechanics-—-Steemit">
+    <a href="#Divinity-Original-Sin-2:-Game-Mechanics-—-Steemit" class="navigate-item-emoji ">📊</a>
+    <a href="#Divinity-Original-Sin-2:-Game-Mechanics-—-Steemit" class="navigate-item-id">2</a>
+</div><div class="navigate-item" href="#11-Things-Divinity:-Original-Sin-2-Doesn't-Tell-You---IGN">
+    <a href="#11-Things-Divinity:-Original-Sin-2-Doesn't-Tell-You---IGN" class="navigate-item-emoji ">⚔</a>
+    <a href="#11-Things-Divinity:-Original-Sin-2-Doesn't-Tell-You---IGN" class="navigate-item-id">3</a>
+</div><div class="navigate-item" href="#Basic-Combat-Strategy---Divinity:-Original-Sin-II-Walkthrough-&-Guide---GameFAQs">
+    <a href="#Basic-Combat-Strategy---Divinity:-Original-Sin-II-Walkthrough-&-Guide---GameFAQs" class="navigate-item-emoji ">🎮</a>
+    <a href="#Basic-Combat-Strategy---Divinity:-Original-Sin-II-Walkthrough-&-Guide---GameFAQs" class="navigate-item-id">4</a>
+</div><div class="navigate-item" href="#Divinity:-Original-Sin-2-Expert-Guide---Advanced-Tips-For-Skills,-Combat,-And-More---GameSpot">
+    <a href="#Divinity:-Original-Sin-2-Expert-Guide---Advanced-Tips-For-Skills,-Combat,-And-More---GameSpot" class="navigate-item-emoji ">📈</a>
+    <a href="#Divinity:-Original-Sin-2-Expert-Guide---Advanced-Tips-For-Skills,-Combat,-And-More---GameSpot" class="navigate-item-id">5</a>
+</div><div class="navigate-item" href="#10-Best-Divinity:-Original-Sin-2-Tips">
+    <a href="#10-Best-Divinity:-Original-Sin-2-Tips" class="navigate-item-emoji ">⚖</a>
+    <a href="#10-Best-Divinity:-Original-Sin-2-Tips" class="navigate-item-id">6</a>
+</div><div class="navigate-item" href="#What-are-some-good-tips-for-a-Divinity:-Original-Sin-2-beginner?---Quora">
+    <a href="#What-are-some-good-tips-for-a-Divinity:-Original-Sin-2-beginner?---Quora" class="navigate-item-emoji ">💰</a>
+    <a href="#What-are-some-good-tips-for-a-Divinity:-Original-Sin-2-beginner?---Quora" class="navigate-item-id">7</a>
+</div><div class="navigate-item" href="#Divinity:-Original-Sin-2-Beginner's-Guide-(Tips,-Tricks,-&-Strategies)">
+    <a href="#Divinity:-Original-Sin-2-Beginner's-Guide-(Tips,-Tricks,-&-Strategies)" class="navigate-item-emoji ">🧙</a>
+    <a href="#Divinity:-Original-Sin-2-Beginner's-Guide-(Tips,-Tricks,-&-Strategies)" class="navigate-item-id">8</a>
+</div><div class="navigate-item" href="#Tips-for-beginners.---Divinity:-Original-Sin-II---Giant-Bomb">
+    <a href="#Tips-for-beginners.---Divinity:-Original-Sin-II---Giant-Bomb" class="navigate-item-emoji ">🛌</a>
+    <a href="#Tips-for-beginners.---Divinity:-Original-Sin-II---Giant-Bomb" class="navigate-item-id">9</a>
+</div><div class="navigate-item" href="#Best-Tips-For-Divinity:-Original-Sin-2">
+    <a href="#Best-Tips-For-Divinity:-Original-Sin-2" class="navigate-item-emoji ">💡</a>
+    <a href="#Best-Tips-For-Divinity:-Original-Sin-2" class="navigate-item-id">10</a>
+</div><div class="navigate-item" href="#Best-character-builds---for-you-(spoilers)---Larian-Studios-forums">
+    <a href="#Best-character-builds---for-you-(spoilers)---Larian-Studios-forums" class="navigate-item-emoji ">🗡</a>
+    <a href="#Best-character-builds---for-you-(spoilers)---Larian-Studios-forums" class="navigate-item-id">11</a>
+</div><div class="navigate-item" href="#2-player-Possible-speedrunning-strat---Larian-Studios-forums">
+    <a href="#2-player-Possible-speedrunning-strat---Larian-Studios-forums" class="navigate-item-emoji ">😂</a>
+    <a href="#2-player-Possible-speedrunning-strat---Larian-Studios-forums" class="navigate-item-id">12</a>
+</div>
+    </div>
+    <div class="page"  id="Tips-for-Playing-Divinity-Original-Sin-2---Divinity:-Original-Sin-II-Guide---IGN">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🛡&nbsp;</span>Tips for Playing Divinity Original Sin 2 - Divinity: Original Sin II Guide - IGN</h3>
+        <small class="page-url url "><a href="https://www.ign.com/wikis/divinity-original-sin-2/Tips_for_Playing_Divinity_Original_Sin_2" target="_blank">(https://www.ign.com/wikis/divinity-original-sin-2/Tips_for_Playing_Divinity_Original_Sin_2)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 本页详细介绍了《神界：原罪2》的角色构建与最佳策略，尤其是技能组合和环境利用的重要性。<br></small>
+    </div>
+    <div class="page-content content"><h2>快速上手《神界：原罪2》的实用技巧</h2>
+<p>一些帮助你在《神界：原罪2》前期成功的实用技巧和窍门，包括简单的赚钱方法、巧妙的战术和强大的技能选择，助你轻松应对游戏中最艰难的战斗。</p>
+<h3>获取传送手套</h3>
+<p>到达欢乐堡后不久，你可以在城镇西侧的一堆大火附近找到一个名叫Gawin的人。你是否帮助他并不重要，重要的是他提到的物品：传送手套！</p>
+<p>它们位于城镇西侧的海滩上。那里有3只鳄鱼。杀死它们并搜刮周围区域的物品，其中一件就是传送手套。</p>
+<p>这些手套前期非常强大，因为它们使你可以使用完整的传送法术。在战斗中，它是一个很有用的技能，可以用来移动战场上的敌人，将他们投入火中，或将法师带到你的战士身边。</p>
+<p>在战斗之外，它甚至更好用。它允许你穿越无法步行的缝隙。你可以来回移动物体，甚至可以将陷阱完全传送到远离你的地方。</p>
+<h3>少付出，多收获</h3>
+<p>在《神界》中，很少有人提到在讨价还价时赠送物品给商人的选项。我知道，这听起来很疯狂，但这样做有很多好处！</p>
+<p>当你遇到你喜欢的商人，或预计会与之进行大量交易时，开始赠送物品给他们。你可以通过出售物品来做到这一点，而无需实际平衡金币。你赠送的物品越有价值，他们对你的态度就越好。虽然短期内这会花费一些金钱，但从长远来看，你将能够以更高的价格出售物品，而当他们的库存补充时，你可以以更低的价格从他们那里购买！</p>
+<p>前期由于资源有限，这很难做到，但随着时间的推移，一定要向你最喜欢的商人提供一些物品。提高他们的好感度将从长远来看为你赚取大量金钱，并且值得前期花费的几百金币。</p>
+<h3>召唤魔法很强……非常强</h3>
+<p>《神界》中没有不好的技能。每个技能都有其用途，有时甚至有多种用途，但在战斗中，召唤魔法占据着至高无上的地位。</p>
+<p>原因在于，化身技能会根据召唤它的表面召唤一个盟友。看到一些火焰？召唤一个火焰化身！到处都是毒液？召唤一个毒液化身！</p>
+<p>然而，元素并不是强大的部分，而是它为战斗增加的额外数量。《神界：原罪2》的设计和主要平衡是基于你的团队中有4个战斗人员。引入更多盟友将极大地提高你的生存几率。化身是很好的分散注意力目标，令人惊讶地强大，并且可以持续多个回合。即使某人只有1级召唤术，让他们也能创造化身仍然是明智之举，它们的强大之处无法言喻。</p>
+<h3>犯罪有利可图</h3>
+<p>没有委婉的说法，但在《神界：原罪2》中，现在是成为罪犯的最佳时机。</p>
+<p>偷窃、扒窃甚至杀死有钱人，都可以让你的队伍在装备和资金方面都非常富有。然后，你可以将这些新获得的货物带给你上面提到的最喜欢的商人，并通过出售它们赚取财富。</p>
+<p>当然，这种行为会有后果。不断地从人们那里偷窃会很快引起他们的怀疑，你将开始被NPC和卫兵发现。杀死NPC也可能很危险，因为其他NPC可能会发现尸体并通知卫兵，或在你做这件事时看到你。贪婪是好的，但贪婪过度会让你陷入很多麻烦。</p>
+<h3>不同种族有不同的反应</h3>
+<p>这并不是直接告诉你，而是暗示的。根据你正在交谈的角色，你角色的种族很重要。</p>
+<p>如果你选择错误的种族，整个任务可能会停止，或者根本不会开始。任何时候你遇到一个看起来可疑或闪烁其词的NPC，尝试以不同的队员身份与他们交谈，看看他们会说什么。</p>
+<p>切换到不同的角色还可以让你与NPC进行多次对话。每个角色都可以进行自己的互动，因此如果你被一个人挡住了对话，你可以切换到另一个人并尝试另一种提问方式，看看是否有其他选择。</p>
+<h3>混合搭配技能和能力</h3>
+<p>传统上，如果你坚持一个天赋树，RPG游戏会给你最多的奖励。你通常只选择魔法，并完全致力于它，最终成为一位拥有巨大力量的大法师。</p>
+<p>《神界：原罪2》则奖励多样性。这并不意味着你应该提升所有技能，但将你的点数分配到2个甚至3个不同的战斗能力中会有回报。例如，拥有一个既可以使用水系法术、气系法术和召唤术的智者是一个强大的组合。一个可以使用战争和死灵法术的恶棍几乎难以杀死，而变形术则凭借其奇特而独特的技能融入几乎任何构建中。</p>
+<h3>水系法术师多多益善</h3>
+<p>水系法术树中有很多有用的法术，但没有比再生更实用的了。它是主要的治疗法术，并且很长一段时间内都将是你主要的生存来源。</p>
+<p>在《神界：原罪2》中，伤害是丰富的，因此，如果你想成功，拥有几种治疗方法至关重要。此外，由于再生在战斗中的冷却时间相当长，拥有两个可以使用它的角色会使你的生活更加轻松。</p>
+<p>如果治疗还不够好，再生还会浇灭你身上的火焰！</p>
+<h3>宠物伙伴技能几乎是必备的</h3>
+<p>从技术上讲，它不是必备的。但是，如果你不选择宠物伙伴天赋，那么你将错过很多对话和几个任务。</p>
+<p>这当然不意味着你必须在你的主要角色身上拥有它。Ifan，一个同伴默认拥有它，如果你不使用他，你也可以稍后再在其他人身上选择它。有很多情况下你可以与动物交谈以完成任务和其他好处，没有它冒险感觉就不会一样了。</p>
+<h3>随身携带睡袋</h3>
+<p>游戏早期你会遇到睡袋物品。你可以在你开始乘坐的船上获得几个。捡起来！</p>
+<p>睡袋可能是游戏中最好的物品。在战斗外，它允许你免费完全治愈你的队伍。只要你的背包里有一个睡袋，你就可以在任何地方治愈整个队伍。它比不断地为每个人施放再生要快得多。</p>
+<h3>锻造很棒</h3>
+<p>它需要时间来建立，但锻造系统非常有用。烹饪尤其是一种隐藏的奇迹，你玩游戏时经常会忽略它。</p>
+<p>食物有一些在战斗中大有帮助的额外效果。首先，大多数食物可以治疗你一定比例的生命值，因此它在整个游戏中都非常有用，不像治疗固定数值的药水。食物还提供许多其他奖励，例如属性或抗性。食物也很丰富，因此很容易为整个队伍储备几种战斗中可以食用的选择。这是一个平衡游戏或获得额外属性点以帮助你度过特别艰难的Boss战的好方法。</p>
+<h3>多人游戏</h3>
+<p>乍一看，多人游戏似乎有点令人困惑。有两种方法可以做到这一点。</p>
+<p>首先，是服务器浏览器。你可以在主菜单中选择多人游戏，这将显示一个大厅列表。此方法用于启动战役。加入的任何人都可以创建角色，并从一开始就与你一起冒险。</p>
+<p>一旦你开始游戏，就不再需要使用它了。只需加载你的游戏，打开游戏中的主菜单，然后选择连接菜单。在这里，你可以选择谁能加入并邀请其他人。通过这种方法加入的人将被分配你当前队伍中的一个成员。</p>
+<h3>犯罪有利可图，但只有一次</h3>
+<p>做一个窃贼是快速致富的一种方法。无论你是在货架上偷东西，还是直接从别人的口袋里偷东西，你总是能获得利润。</p>
+<p>缺点？如果你被抓到在货架或桌子上偷东西，那么卫兵就会被提醒，NPC也可能会对你怀有敌意。如果你被抓到扒窃，那个人会注意到他们的物品丢失，如果你在附近逗留太久，他们会盘问你。</p>
+<p>故事的寓意？如果你计划偷东西，那就快点做，并在任何人起疑心之前迅速离开！</p>
+<h3>你可以免费重建属性</h3>
+<p>正如我们在我们全面的《创建《神界：原罪2》中最强大的角色》页面上提到的那样，你将在第3幕开始时获得一次免费的角色重建。</p>
+<p>这发生在你还在船上的时候。在甲板下方有一面镜子，如果你与它交谈，它会让你完全重做你的角色，但让你保留你获得的所有等级。这意味着，如果你做出了错误的决定，或使用具有重叠技能的队员，你可以重建他们以更好地适应你的团队。</p>
+<h3>特定种族获得独特的技能</h3>
+<p>游戏中几乎没有提及，但不同的种族拥有超出列表的隐藏天赋。</p>
+<p>例如，蜥蜴种族可以在不使用铲子的情况下挖洞，而骷髅种族可以用它们多骨的手指开锁。精灵可以吃身体部位，这是众所周知的，但游戏没有告诉你的是，他们在吃身体部位时也可以学习技能！</p>
+<p>矮人和人类则运气不佳，遗憾的是没有额外的特殊隐藏奖励。</p>
+<h3>祝福是一个非常挑剔的法术</h3>
+<p>游戏进行几个小时后，你将解锁祝福法术。它很奇怪，起初它可能看起来并不特别有用。</p>
+<p>祝福有很多用途，但大多数用途都是秘密的。以下是一些祝福法术的应用：</p>
+<p>移除物品上的诅咒——有些物品，如杠杆和开关，是被诅咒的。你通常可以通过它们周围是否有黑雾来判断。祝福该物品以移除诅咒并使物品安全。</p>
+<p>净化地狱之火——有些生物身上会有一个叫做地狱之火的减益效果。这是一种普通水无法扑灭的火焰。尝试对它们施加祝福，有时火焰会熄灭。其他时候，你需要角色站在血泊中，祝福血液才能治愈他们。</p>
+<p>清理地面/将水变成治疗池塘——如果地面上有被诅咒的表面，使用祝福会净化它们。或者，你可以祝福普通的水面，并将其变成一个池塘，每次你进入时都会治愈你。</p>
+<h3>鸡爪是秘密的最佳攻击</h3>
+<p>《神界》中有很多有用的状态效果。例如，击倒和眩晕是强大的法术，可以在战斗中为你争取时间来应对可怕的情况。</p>
+<p>然而，鸡爪是一个真正的惊喜。一旦敌人没有物理护甲，你就可以对他们使用鸡爪来将他们变成一只鸡！这使得他们很容易被击中，并导致他们在几轮战斗中失误。更好的是，它对许多对其他状态效果免疫或有抗性的Boss也有效。</p>
+<h3>用桶设置陷阱</h3>
+<p>你知道那些你通常在战斗中避免的桶吗？好吧，一个高力量的角色实际上可以捡起它们并四处移动它们！</p>
+<p>如果你发现一场你正在努力应对的艰难战斗，请四处跑动并抓住几个桶。设置一个巨大的陷阱，然后将你的敌人引诱到其中并炸毁桶，造成大量的伤害。在《神界》中，几乎所有东西都可以用足够的力量移动，所以记住要尝试一下！</p>
+<h3>元素可以相互触发不同的效果</h3>
+<p>这是你很早就会学到的东西，但游戏在突出它方面做得并不好。游戏中的各种元素会根据击中它们的内容产生不同的效果！</p>
+<p>火和毒——这两种混合在一起会产生巨大的爆炸，使目标着火并中毒。</p>
+<p>火和水——会产生蒸汽和烟雾，使远程攻击无法击中。</p>
+<p>水和闪电——这会使水带电，电击并击晕水中的任何人。</p>
+<p>祝福和水——创造一个祝福的水池，治愈站在其中的所有人。</p>
+<h3>商家物品会随着时间推移而轮换</h3>
+<p>你可能已经注意到，当你拜访一些商家时，他们会出售新的物品。这是因为当你升级时，会导致商家获得新的物品。记住，这并不总是意味着他们会获得新的物品，因为商家似乎最终会停止储存远远超出其物品范围的物品，但无论何时升级，检查一下仍然值得。</p>
+<p>你知道商家还会无限期地保存你卖给他们的物品吗？如果你需要取回任何物品，请务必检查附近的商家以查找你丢失的物品。</p>
+<h3>伙伴死了？谁需要他们！</h3>
+<p>有时会发生坏事，人们会死。别担心！如果你打完了一场战斗，但没有办法复活你的盟友，你可以让他们死多久都行。只需记下位置，在你购买了复活卷轴后回来找他们。</p>
+<h3>一切都有价值</h3>
+<p>在《神界》中最容易忽略的事情之一是物品的价值。这并非严格地指货币价值，而是物品可能对你的普遍用途。</p>
+<p>游戏对什么值得出售、保留或简单地路过守口如瓶，但我们建议你把所有东西都拿走！书籍、银器和其他小玩意可以卖几枚硬币，非常适合赠送给商人以提高他们对你的好感度。</p>
+<p>食物可以变成各种可以增强你的属性并在战斗中治愈你的熟食。有无数的制作材料可以为将来囤积（相信我们，在游戏后期你会感谢自己的）。</p>
+<p>甚至像墙壁上的画作也可以卖出不错的利润。《神界》对其隐藏的贵重物品也很狡猾。你可能会在旅途中经过100块盘子并开始忽略它们，却错过了放在桌子上售价1000金币的金银镀金勺子。不要留下任何物品！</p>
+        <small class="page-url url "><a href="https://www.ign.com/wikis/divinity-original-sin-2/Tips_for_Playing_Divinity_Original_Sin_2" target="_blank">(https://www.ign.com/wikis/divinity-original-sin-2/Tips_for_Playing_Divinity_Original_Sin_2)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Divinity-Original-Sin-2:-Game-Mechanics-—-Steemit">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📊&nbsp;</span>Divinity Original Sin 2: Game Mechanics — Steemit</h3>
+        <small class="page-url url "><a href="https://steemit.com/gaming/@george-topalov/divinity-original-sin-2-game-mechanics" target="_blank">(https://steemit.com/gaming/@george-topalov/divinity-original-sin-2-game-mechanics)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 重点讲述了角色属性配置及技能点的最佳利用策略，强调角色多元化发展对战斗的影响。<br></small>
+    </div>
+    <div class="page-content content"><h2>角色属性</h2>
+<p>如同任何角色扮演游戏一样，你的角色拥有随着游戏进程提升的属性。你拥有主要属性、战斗能力、民用能力、天赋和标签。你的属性与其他龙与地下城类角色扮演游戏系统中的属性相同。</p>
+<p>力量提升你的物理伤害。</p>
+<p>技巧在盗贼和游侠中取代敏捷。</p>
+<p>智力使你的法术更强大。</p>
+<p>体质增加角色的生命力。</p>
+<p>记忆通常在龙与地下城中被称为智慧——它允许你的角色学习更多法术。</p>
+<p>机智增加你的暴击几率。</p>
+<p>所有这些属性有时都需要在对话中采取某种行动。 你必须选择适合当前情况且你的角色能够做到的行动（例如，如果你的力量足够高，你可以用你的力量威胁某人）。</p>
+<p>你的战斗能力分为三个部分——武器、防御和技能。</p>
+<p>武器提升你使用特定类型武器的输出。</p>
+<p>领导力提升你周围的团队成员属性（给予他们额外的抗性和闪避几率）。</p>
+<p>毅力在你从冰冻或眩晕中恢复后恢复魔法护甲，在你被击倒或石化后恢复物理护甲。（实际上不值得）</p>
+<p>报复是一个技能，可以反射你的魔法和物理护甲所受到的伤害，这很酷。</p>
+<p>你的技能才是真正决定角色的因素。 无论你选择什么职业，这些技能都决定了你角色的实际类型，因为它们允许你学习不同流派的技能并提供不同的被动奖励。成为一名战士并不意味着你只需要选择战争和双手或单手武器技能。相反，学习更多能够提高你的机动性、治疗自己和支援团队成员以及一些控制人群的方法的技能非常有用。我通常为所有角色使用大约 3 个技能。</p>
+<p>民用能力为你提供与战斗无关的奖励（除了潜行……但话又说回来，你试图避免战斗）。</p>
+<p>讨价还价非常重要，因为它可以显著降低你从商人处购买商品的成本，并提高你出售商品的价格。</p>
+<p>幸运符在发现战利品时增加找到额外宝藏的可能性。</p>
+<p>说服力有助于在特定情况下说服角色按照你的吩咐去做。</p>
+<p>传说大师使你能够识别一些未识别的物品，并检查敌人，揭示他们所有的属性和能力。</p>
+<p>心灵感应允许你移动物品而不考虑重量。 更多点数会增加心灵感应的范围。</p>
+<p>潜行不言自明——更多点数会降低 NPC 的视野，以便你更好地隐藏。</p>
+<p>偷窃太棒了！ 这是赚钱机器！ 它提升了开锁和扒窃技能。</p>
+<p>天赋是你为角色选择的特殊能力。 其中 2 个根据你扮演的种族预设，但从那时起，你每升一级都会偶尔获得 1 个天赋，直到 33 级时达到 10 个。有很多天赋，有些是防御性的，有些是进攻性的，有些会给你额外的能力或战斗点数。如果选择正确，它们会提供相当不错的奖励。</p>
+<p>最后，你的角色拥有标签，这在许多对话中为你提供不同的选择。 你会根据你做出的决定来获得一些标签——如果你做了英雄事迹，你会获得英雄标签，或者如果你完成了某些任务，例如击败竞技场等等。某些 NPC 可能会被某个标签中的台词触发。</p>
+<h2>交易和制作</h2>
+<p>交易非常简单，但它有点烦人，因为你可以根据你的讨价还价技能给予商人或多或少的钱，并且只有一个滑块来设置价格。他们真的需要为玩家提供一种方法，或者我只是太笨了，还没有找到它。例如，如果你购买一件花费 1000g 的物品，但你给商人 1020g，这将会给你带来好感。这将进一步增加这位商人对你的未来购买的折扣，并提高你向他出售商品的价格。如果你打算长期使用某个商人，这是一个获得一些折扣的好方法。随着你等级的提升，商人将开始出售适合你等级的物品，因此他们的库存中的装备会不断升级。扒窃商人是游戏中赚钱的最佳方法之一，但如果你明智地购买并使用讨价还价和高好感度，你可以不用这种方法。</p>
+<p>制作系统非常简单明了。你一路走来会发现书籍，当你阅读它们时，它们会教你食谱。或者，你可以尝试组合某些物品以查看它们产生的效果。有些很容易就能想到——将箭头放在装有毒药的桶中，你就会得到一支毒箭……其他的就没那么容易了，需要比常识多一点的东西。 你几乎可以创造任何东西——从药水、魔法符文到盔甲和武器。你也可以使用此工具烹制食物，这会让它在食用时除了恢复你的健康之外，还会给你不同的奖励。不过，你可能需要一个烹饪锅才能烹制大多数食物。</p>
+<h2>战斗系统</h2>
+<p>与《博德之门》或《异域镇魂曲》等其他老式游戏不同，在这些游戏中你每隔几秒钟就要暂停战斗以控制正在发生的事情，神界：原罪的战斗是回合制的。这意味着每个角色和怪物都有决定他们行动速度的行动点数。行动点数越高，越先开始行动，其余的将依次行动，直到战斗中行动点数最低的参与者行动。这完成了一回合的战斗。不同的技能和能力需要一定数量的回合才能重新充能。</p>
+<p>角色有 3 种类型的条形图决定他们的防御——物理护甲、魔法护甲和生命值。所有这些你都可以通过装备或角色属性获得。物理攻击会首先破坏物理护甲，然后影响生命值条，但会忽略魔法护甲。魔法攻击则相反。有些能力会忽略这些直接攻击角色的生命力（通常是刺客技能）。由于这个系统，最好有一个专门进行物理伤害或魔法伤害的团队。2 个魔法角色和 2 个物理角色的混合体也可以。</p>
+<p>一旦战斗开始，你就可以在环境中做很多事情。问题是你的敌人也会利用它，所以你必须谨慎对待周围的环境。例如，如上图所示的潮湿表面可以通过闪电电击或通过冷却法术冻结。</p>
+<p>这些敌人有一些受污染的血液，因此每当你伤害它们时，它们都会使水受污染。</p>
+<p>在最后这张图片中，那朵云是怪物创造的电云。与周围的水结合在一起，会击晕我的角色，并在他们四处移动时对他们造成闪电伤害。这是不可避免的，因为怪物从水中冒出来，并在它们周围创造水池。有些敌人会在你的脚下施放冰，这会使你的角色在移动时滑倒（击倒=跳过一回合）。有很多方法可以利用环境或使用这些策略的法术进行游戏。你可以施放雨，它有很大的范围，然后施放一个在很大区域内冷却目标的法术，因为它们是湿的，所以会冻结它们。请记住，如果目标具有物理护甲或魔法护甲，其中一些可能不起作用，因为它们会抵抗它。</p>
+<p>当然，在你赢得战斗后，是时候获得甜蜜的战利品了。</p>
+<p>战斗结束后，他们通过在游戏中引入睡袋使我们的生活变得轻松多了。当周围没有敌人时，你可以用它来和你所在的小队一起休息——立即治愈你的队伍。这在以前的一些游戏中很痛苦，因为你必须等待你的治疗者治疗所有人，并让法术多次充能。</p>
+<p>我已经玩了不知道多少个小时了，我仍然在第二幕的开头（显然有 4 幕）。一些战斗可能是相当具有挑战性的，我多次重新加载游戏，直到找到一个有效的策略。一旦你完成了第一幕，你就可以根据自己的喜好定制你的角色——改变他们的属性和能力以及他们的外观。这很棒，因为在此之前没有任何撤消选项。我给出的另一个建议是经常使用快速保存按钮！ 你不希望卡在一个你无法逃脱的地方，然后因为你遇到一场太难的战斗而重玩一个小时。也就是说，游戏在艰难的战斗之前会进行一些智能自动保存。今天就到这里……这篇文章很长。希望你发现这个有用！</p>
+        <small class="page-url url "><a href="https://steemit.com/gaming/@george-topalov/divinity-original-sin-2-game-mechanics" target="_blank">(https://steemit.com/gaming/@george-topalov/divinity-original-sin-2-game-mechanics)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="11-Things-Divinity:-Original-Sin-2-Doesn't-Tell-You---IGN">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">⚔&nbsp;</span>11 Things Divinity: Original Sin 2 Doesn't Tell You - IGN</h3>
+        <small class="page-url url "><a href="https://www.ign.com/articles/2017/10/04/11-things-divinity-original-sin-2-doesnt-tell-you" target="_blank">(https://www.ign.com/articles/2017/10/04/11-things-divinity-original-sin-2-doesnt-tell-you)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 探讨了战斗中利用环境和状态效果的先进技巧，展示了策略性思维在战斗中的应用。<br></small>
+    </div>
+    <div class="page-content content"><h2>2. 偷窃有利可图，但只有一次</h2>
+<p>偷窃是致富的好方法。无论你是从货架上偷窃还是从口袋里偷窃，你都能获利，但在你试图从别人那里偷窃之前，请考虑你的技能水平。如果你的偷窃技能不够高，你就无法洗劫一个人的口袋，可能会留下一些非常值钱的战利品。你也无法弥补这个失误！你只能扒窃某人一次——仅此一次！——所以确保你的偷窃技能水平足够高，才能让你有所收获。还要记住，如果有人看到你在扒窃，你就会被打断，无法完成你的掠夺。</p>
+<h2>3. 你可以无限次免费重置属性</h2>
+<p>在第二幕开始，你会发现自己身处复仇女神号船上。甲板下有一面特殊的镜子，允许你从头开始无数次地重建你的整个队伍。既然你可以快速旅行到这里，随意地最大化你的属性并尝试各种奇怪的组合，创造出神界2中最强大的角色吧。</p>
+<h2>4. 随时随地使用传送点</h2>
+<p>说到快速旅行，请记住你可以随时随地使用传送点。点击你的小地图上的锚图标，或从主菜单访问传送点列表。在那里，你会看到你解锁的每个传送点祭坛的列表，你可以选择快速旅行到那里。只要你没有战斗，你就可以无限次地这样做。</p>
+<h2>5. 某些种族拥有独特的技能</h2>
+<p>几乎没有提及到的是，一些神界2种族拥有隐藏的天赋。蜥蜴人无需使用铲子就能挖洞，不死族由于他们的骨头手指可以不用撬锁器就能开锁。精灵可以吃尸体来获取死者的记忆，吃掉身体部位有时会获得新的技能。例如，吃掉你遇到的第一具尸体的碎片会赋予你的精灵肾上腺素技能。如果你队伍里没有蜥蜴人，请确保随时携带一把铲子，以便利用常见的隐藏地块找到下面的埋藏宝藏。考虑提升你的不死族的偷窃技能等级，以充分利用他们提供的无限撬锁器。然后，你可以轻松地将不需要的撬锁器卖个好价钱！</p>
+<h2>6. 祝福比你想象的更有用</h2>
+<p>当使用祝福法术“祝福”一个角色时，它会提高抗性、准确性和闪避，但它也有很多秘密好处。有了它，你可以移除物品上的诅咒，净化地狱之火，并将普通的水变成神圣的治疗池塘。使用祝福，你甚至可以将普通的火变成神圣之火，美丽的蓝色火焰赋予你对火属性伤害的抗性以及对冰冻和其他效果的免疫。如果没有祝福，由于有被诅咒的物品挡路，所以有一些区域是无法进入的，所以在你的旅途中注意任何这样的地方，以便你获得这个神圣的法术后返回。</p>
+<h2>7. 鸡爪技能其实是最好的技能</h2>
+<p>鸡爪是一个变形技能，它可以将你的敌人变成无用的鸡，它们除了逃跑之外什么也做不了，持续两回合战斗——这景象非常滑稽。更好的是，鸡爪技能对许多免疫或抗拒其他状态效果的boss也有效。它还会更好。在将敌人变成鸡之前，对它们施放一个恶棍技能——撕裂肌腱，当它们惊慌失措地逃跑时，它们会对自己造成伤害。</p>
+<h2>8. 你可以用桶设陷阱</h2>
+<p>如果你的力量足够高，你可以捡起和搬运桶，允许你在并非专门为陷阱设计的区域设置复杂的爆炸陷阱。偷偷地将油桶或毒药桶放在敌人旁边，将它们引诱到设置好的陷阱中，然后用火系法术引爆这些致命的桶。如果操作正确，每个桶都会造成爆炸伤害和持续伤害。即使只是一个爆炸桶也能扭转战局。只要确保你站得足够远，以免也被火焰波及！还有另一种方法可以利用桶和箱子。用你能找到的最重的垃圾把它们填满，然后用蛮力或心灵感应将它们扔到敌人身上，造成大量的伤害。玩家称之为“桶术”，它可能会破坏游戏平衡。</p>
+<h2>9. 元素组合会触发不同的效果</h2>
+<p>虽然游戏早期就提到了这一点，但组合不同元素的效果从未真正被强调过。火与毒的组合会造成巨大的爆炸，使目标着火并中毒。火与水的组合会产生蒸汽和烟雾，使远程攻击总是失误。水与闪电会使水带电，击晕和电击水中的一切。</p>
+<h2>10. 商人的库存会在每次升级时更新</h2>
+<p>你可能已经注意到，当你再次拜访一些商人时，他们会出售新的物品。这是因为当你升级时，商人会补充他们的商品。虽然并非所有商人在每次升级时都会获得全新的商品，但仍然值得检查一下。</p>
+<h2>11. 一切都有价值</h2>
+<p>在神界2中最容易忽略的事情之一就是物品的价值。什么值得出售、保留或放弃并不总是显而易见的，但我们建议你拿走所有东西，只要它不会让你负重过载。各种小玩意都可以卖几个金币，或者更好的是，送给商人以获得他们的好感，从而从长远来看节省你的金币。而且不要忘记食物可以煮成各种增强属性和在战斗中治疗你的食物。大多数食物可以通过首先将烹饪锅与火结合来创建一个烹饪站，然后将烹饪站与未煮熟的食物结合来烹饪。即使是最不起眼的物品实际上也是非常有用的制作材料，比如钉子，可以用锤子制作撬锁器。有时，周围普通的餐具不仅仅是普通的银器，偶尔你会遇到一个镀金勺子，售价1000金币。不要留下任何物品！</p>
+        <small class="page-url url "><a href="https://www.ign.com/articles/2017/10/04/11-things-divinity-original-sin-2-doesnt-tell-you" target="_blank">(https://www.ign.com/articles/2017/10/04/11-things-divinity-original-sin-2-doesnt-tell-you)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Basic-Combat-Strategy---Divinity:-Original-Sin-II-Walkthrough-&-Guide---GameFAQs">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🎮&nbsp;</span>Basic Combat Strategy - Divinity: Original Sin II Walkthrough & Guide - GameFAQs</h3>
+        <small class="page-url url "><a href="https://gamefaqs.gamespot.com/pc/179840-divinity-original-sin-ii/faqs/75293/basic-combat-strategy" target="_blank">(https://gamefaqs.gamespot.com/pc/179840-divinity-original-sin-ii/faqs/75293/basic-combat-strategy)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 总结了战斗中基本战术的重要性和应对高难度挑战的策略。<br></small>
+    </div>
+    <div class="page-content content"><h2>基础与高级战斗技巧</h2>
+<p>学习一些基础和高级的战斗技巧，能够极大地帮助你在战斗中取得优势，而战斗往往是许多玩家感到困难的部分。让我们从一些起初可能不太明显的战术开始讲解。有些战术可能看起来有点“取巧”，但请记住——它们是游戏的一部分，不算作弊，而且很多时候你可能会觉得难以应对，正是因为你忽略了这些战术。如果你忽略了它们，并声称游戏太难，那可能只是你强加于自身的“人为难度”。话虽如此，我已经排除了任何漏洞和极其荒谬的取巧战术，这些战术现在或将来都会被修复。</p>
+<h3>核心战斗战术</h3>
+<p>本小节中介绍的战术基本上是一些必知的策略，可以帮助你从最简单的战斗到最困难的战斗中获胜——尤其是在游戏初期挣扎时。因此，这些与<a href="此处应补充链接或章节名">“克服（早期）游戏难度”</a>部分中介绍的战斗技巧/策略相同。随后的“其他基本战术”小节将包含更多技巧，如果你正在寻找更高级和复杂的战斗信息，请查看<a href="此处应补充链接或章节名">高级战斗策略</a>。</p>
+<h4>抢占先机</h4>
+<p>如果你在前方看到敌人（小地图上的红色标记），请使用Shift键查看他们的视野范围，避免贸然开战。然后你可以分散你的队伍，并在交战前有效地安排他们的位置。让远程成员占据高地优势，获得高地加成；如果对手有远程单位，让近战成员躲在掩体后面，迫使他们过来攻击你。如果你已经打过这场战斗，并且知道不会破坏任何开场剧情事件，那么用一个法术甚至只是一个普通攻击开始战斗，也可以让你的队伍一开始就获得一些优势。</p>
+<h4>集中目标</h4>
+<p>集中你的所有力量去击杀和控制一个目标是一个不错的战术。如果你队伍中的伤害类型与推荐的有效队伍配置相同，这一点尤其重要。混合伤害队伍也可以，但是需要更高级的计划和战术才能真正发挥作用。</p>
+<h4>剥离防御+控制</h4>
+<p>如果存在危险目标，有时值得快速剥离他们的物理或魔法护甲，然后开始对他们使用控制技能——即使你的目标一开始是另一个目标。这可能意味着移除几个目标的防御，然后同时控制他们（例如，范围眩晕的奥术师技能或击倒多个目标的战争技能）。这会使他们暂时脱离战斗，并且仅受你拥有的控制技能数量的限制。</p>
+<h4>复活</h4>
+<p>不要只在战斗结束后使用复活技能。在战斗中使用它可以扭转战局，尤其是在你之后能为刚复活的队员进行治疗或增加物理或魔法护甲的情况下。计划的关键是在你将用来复活阵亡队员的角色身上保留行动点，以便你能在复活后立即进行治疗或增益。查看此处了解此方法的行动点管理。（此处应补充链接或章节名）</p>
+<h4>击杀并逃跑</h4>
+<p>在特别艰难的战斗中，考虑先击杀一到两个目标，然后让一名队员与目标拉开距离，选择健康条左侧的“逃跑”选项。当你回来时，你可以从远处复活阵亡的队员，并以全新的队伍和他们已消耗一半兵力的状态重新开始战斗。</p>
+<p>这些是一些关于如何在游戏早期阶段通过各种方式获得战斗优势的快速技巧。要更深入地了解在整个游戏中有效的战斗战术，请查看高级战斗部分，或在所有内容更新后再次查看本节。</p>
+        <small class="page-url url "><a href="https://gamefaqs.gamespot.com/pc/179840-divinity-original-sin-ii/faqs/75293/basic-combat-strategy" target="_blank">(https://gamefaqs.gamespot.com/pc/179840-divinity-original-sin-ii/faqs/75293/basic-combat-strategy)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Divinity:-Original-Sin-2-Expert-Guide---Advanced-Tips-For-Skills,-Combat,-And-More---GameSpot">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📈&nbsp;</span>Divinity: Original Sin 2 Expert Guide - Advanced Tips For Skills, Combat, And More - GameSpot</h3>
+        <small class="page-url url "><a href="https://www.gamespot.com/gallery/divinity-original-sin-2-expert-guide-advanced-tips/2900-1500/" target="_blank">(https://www.gamespot.com/gallery/divinity-original-sin-2-expert-guide-advanced-tips/2900-1500/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 分享了关于游戏技巧和策略的专业建议和深入分析。<br></small>
+    </div>
+    <div class="page-content content"><h2>Divinity: 原罪 2 专家指南 - 技能、战斗及更多高级技巧</h2>
+<p><strong>GameSpot 员工</strong>  2017 年 12 月 22 日</p>
+<p>《Divinity: Original Sin II》是有史以来最好的 RPG 之一。它也是最具挑战性的游戏之一，拥有深刻复杂的故事线、大量的任务和需要玩家全力以赴的策略战斗。点击此处查看一些关于如何应对游戏各种挑战的专家技巧，以及在 Rivellon 的奇幻世界中成为神的所需内容。</p>
+<p>请注意，以下幻灯片中包含一些剧透，如果您不想透露某些特定情况，请小心阅读。如果您不是经验最丰富的玩家，可以查看我们的初学者指南和关于选择正确职业的技巧。</p>
+<p>有关这款广受好评的 RPG 的更多信息，请务必阅读我们的《Divinity: Original Sin II》评测。该游戏现已推出 PC 版本，但在 Steam Early Access 中已经存在近一年时间。它是我们 2014 年年度最佳 PC 游戏《Divinity: Original Sin》的续作，它在 Kickstarter 上从 40,000 名粉丝那里获得了超过 200 万美元的资金。它拥有超过 1200 个角色，所有角色都进行了充分的配音。</p>
+<p>有关如何更好地玩《Divinity: Original Sin II》的更多信息，请查看我们的玻璃指南、技巧和演练汇总。</p>
+<h3>符文强化</h3>
+<p>游戏中战斗的一个更有趣的方面是使用魔法符文来强化武器、盔甲和物品。充分利用这些精巧的小工具，并确保所有具有可用符文槽的装备都已装满，因为它们可以为伤害和防御提供可观的奖励。符文也与游戏中的各种元素相协调，因此您可以使用它们来专门进行不同形式的攻击，并更好地应对具有免疫力的敌人。例如，能够用带有空气加成符文的双手剑替换带有水加成符文的斧头，如果您碰巧遇到具有强烈空气免疫力的歹徒，这将非常方便。</p>
+<h3>更大更好的提升</h3>
+<p>“更大更好”是您应该尽快为所有角色选择的另一个天赋。它会立即提供两个额外的属性点，这当然可以在游戏的早期阶段提供优势，并让您增强关键属性，例如力量和体质。这些额外的点数可以在开场战斗中产生巨大影响，因为成功或失败取决于这些额外点数以及它们如何增强角色的战斗效力。</p>
+<h3>做笔记并标记地图</h3>
+<p>《Divinity: Original Sin II》的几个缺点之一是它如何在游戏中记录任务。向老式角色扮演者学习，在电脑旁放一个记事本，在纸上记录重要内容。此外，务必在访问关键位置时定期检查地图，看看它们是否已被标记。如果没有，请务必放下一个蓝旗和文字来提示您可以在那里找到什么。</p>
+<p>所有这些似乎都是额外的麻烦，但在这么长且复杂的游戏中，仔细记录至关重要。在许多小时之后，当您意识到日志中没有包含足够的信息来完成任务，或者您无法在地图上找到某些东西时，您会感谢您的笔记和地图标记。</p>
+<p>手动追踪事物也会增加游戏的魅力，并增强其纸笔游戏的声誉。而且不要抱怨太多——曾经，RPG 游戏玩家也必须用六边形纸来绘制他们的进度。</p>
+<h3>不要忘记潜行</h3>
+<p>即使《Divinity: Original Sin II》主要关于刀刃对刀刃、火球对火球的战斗，潜行也可能非常重要。记住在困难的战斗中尝试潜行，以试图在对手身上获得优势。它可以将一场艰难的战斗变成轻而易举的事。问问 Doctor Daeva 就知道了。在触发他的对话之前，偷偷潜入像 Sebille 这样的刺客类型角色靠近这个恶魔恶棍，你可能会在即将到来的战斗中获得主动权。如果做得恰到好处，你甚至可以在他有机会变成更强大的恶魔形态之前杀死 Daeva。这使得整个游戏中最具挑战性的战斗之一变得轻而易举。潜行还可以让你足够靠近那些令人毛骨悚然的尖叫者，以便用源力吸血来消灭它们。</p>
+<h3>遇到疑问，就作弊</h3>
+<p>你必须做你必须做的事情才能逃脱《Divinity: Original Sin II》中残酷的战斗。因此，记住在你失败战斗后仔细检查你的周围环境，并在进行第二轮战斗之前重新排列或破坏潜在的致命物品，例如油桶。游戏中相当多的战斗需要这种半作弊的方法，最值得注意的是在 Blackpit 战斗中与火属性虚空生物进行的疯狂战斗，以拯救 Gwydian。仔细重新排列油桶可以限制容易吞噬你队伍的死灵之火的量。未能做出这些改变，你可能会期望整个区域在这个该死的火中爆炸。一些放置得当的箱子也可以围住 Gwydian，他可怜的 AI 使他愚蠢到会自杀。</p>
+        <small class="page-url url "><a href="https://www.gamespot.com/gallery/divinity-original-sin-2-expert-guide-advanced-tips/2900-1500/" target="_blank">(https://www.gamespot.com/gallery/divinity-original-sin-2-expert-guide-advanced-tips/2900-1500/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="10-Best-Divinity:-Original-Sin-2-Tips">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">⚖&nbsp;</span>10 Best Divinity: Original Sin 2 Tips</h3>
+        <small class="page-url url "><a href="https://www.hermitgamer.com/divinity-original-sin-2-tips/" target="_blank">(https://www.hermitgamer.com/divinity-original-sin-2-tips/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 聚焦战斗中的位置管理与角色状态，强调战斗策略与时机把握。<br></small>
+    </div>
+    <div class="page-content content"><h2>保持战斗中的位置</h2>
+<p>在战斗中，远程角色务必站在后方，并方便攻击敌人。寻找敌人够不着但你又能攻击到远程角色的位置。最佳选择是攻击后可以藏身之处。反之，不要害怕让近战角色上前承受并造成伤害。还有一个非常重要的提示，战斗中不要让同伴聚集在一起，保持一定距离。许多敌人拥有范围攻击，可以对整个队伍造成巨大伤害。</p>
+<h2>使用背包整理物品</h2>
+<p>旅途中你会发现几个背包，甚至可以自己制作。它们可以帮助你管理物品，并保持井然有序。例如，你可以将所有物品分成几类，并按不同的背包分类。在游戏后期，你的库存里充满了各种各样的东西，很难找到你需要的东西时，这尤其有用。</p>
+<h2>重置技能</h2>
+<p>如果在游戏中的某个时刻你意识到你选择了错误的技能——没问题。你可以随时免费重置你角色的所有技能并学习新的技能。这非常重要，因为很难从一开始就考虑好你角色的发展方向。在《神界：原罪 2》中，你可以使用位于第二幕的魔法镜子来重置技能。</p>
+<h2>提升角色行动速度</h2>
+<p>许多新手低估了回合制战斗中的行动速度。如果你的英雄的行动速度高于敌人，这意味着你将先行动。这会给你很多机会，可以决定整场战斗的基调。</p>
+<p>你可以：</p>
+<ul>
+<li>在敌人行动前击杀、击晕或削弱敌人</li>
+<li>减缓敌人速度，防止他们靠近你</li>
+<li>加强你的角色</li>
+<li>更好地将你的角色布置在战场上</li>
+</ul>
+<h2>计划你的回合</h2>
+<p>每个角色都有固定数量的行动点，决定着一回合中的行动次数。</p>
+<p>在开始花费行动点之前，计划好你的回合。只有当你确信行动点有用且足够时才花费它们。否则，你可能会浪费行动点而一事无成。如果你不计划你的行动，这种情况经常发生。有时为了攒够行动点并在下一回合使用更高级的技能，最好跳过一回合。此外，你可以借助特殊技能增加行动点数。</p>
+<h2>注意角色行动顺序</h2>
+<p>在战斗过程中，始终检查屏幕顶部的角色行动顺序。这将有助于你优先选择攻击目标。例如，如果你的一个角色行动速度较低，那么快速击杀能够击晕他的敌人是很有意义的。这样可以避免受到伤害，并给该角色创造行动的机会。你还可以更有效地识别并消灭生命值低的敌人，或拯救你即将被杀的角色。</p>
+<h2>记住状态</h2>
+<p>在《神界：原罪 2》中，有很多状态可以造成伤害或使敌人无法动弹。</p>
+<ul>
+<li>燃烧：英雄每回合都会受到一些火焰伤害。</li>
+<li>冷却：英雄行动受阻或完全无法动弹。</li>
+<li>击晕：完全使英雄无法动弹。</li>
+<li>石化：移除其他状态，并使英雄无法动弹。</li>
+<li>中毒：英雄每回合都会受到一些毒药伤害。</li>
+<li>解剖：英雄无法移动，但能够攻击附近的对手。</li>
+<li>流血：英雄会因流血而受到一些伤害。</li>
+<li>击倒：英雄错过一回合，无法攻击，并在下一回合变得脆弱。</li>
+</ul>
+<p>这些状态允许你对敌人造成更多伤害，阻止他们行动或在地图上移动。始终寻找使敌人无法动弹的方法，并将状态用作优势。这将帮助你避免受到伤害并控制战场。</p>
+<h2>利用液体</h2>
+<p>游戏中有一些液体可以倒在地板上并在战斗中使用。最简单的例子是水或油。</p>
+<p>如果你的对手站在水里，那么用电击他并造成额外伤害将会很明智。或者你可以用冷攻击他，并有一定几率冻住他。油的情况类似，它可以被点燃，这会使你的对手燃烧。下面你会找到《神界：原罪 2》中所有液体及其效果的列表：</p>
+<ul>
+<li>水：降低某些属性，并增加对火的抗性。用于冻结敌人或增加电击的伤害。</li>
+<li>油：与火接触时会点燃，并留下火焰痕迹。</li>
+<li>血：变成毒药，对流血的英雄造成额外伤害。拥有“巫妖”天赋的角色在血泊中可以恢复生命值。</li>
+<li>毒药：产生中毒效果，你可以通过燃烧来消除它。拥有“僵尸”天赋的角色可以用毒药治疗。</li>
+</ul>
+<h2>提升你的说服力</h2>
+<p>说服力是你主角的极其重要的技能。这项能力允许你完成一些独特的任务，避免艰难的战斗，获得特殊的奖励，并将其他角色拉拢到你的阵营。有时，说服力低的情况下可能会非常困难。这可能是最重要的《神界：原罪 2》技巧之一。始终优先将它加在你的主角身上，而伤害则可以由你的盟友造成。这项技能会显著简化和加快你的游戏过程，并帮助你解决即使是最棘手的情况。</p>
+<h2>队伍中总是要有一个盗贼</h2>
+<p>盗贼在战斗中不是最有意思的角色（个人观点），但在地图上移动时却非常有用。盗贼有更高的偷窃、开锁和发现隐藏物品的几率。这在旅行过程中非常有用，因为它可以帮助你打开独特的宝箱，发现陷阱和秘密线索。我强烈建议带一个盗贼，并提升他的盗窃技能。如果你面临撬锁器短缺的情况，你可以带一个亡灵进入你的队伍。这个英雄可以用他的手指代替撬锁器。</p>
+        <small class="page-url url "><a href="https://www.hermitgamer.com/divinity-original-sin-2-tips/" target="_blank">(https://www.hermitgamer.com/divinity-original-sin-2-tips/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="What-are-some-good-tips-for-a-Divinity:-Original-Sin-2-beginner?---Quora">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💰&nbsp;</span>What are some good tips for a Divinity: Original Sin 2 beginner? - Quora</h3>
+        <small class="page-url url "><a href="https://www.quora.com/What-are-some-good-tips-for-a-Divinity-Original-Sin-2-beginner" target="_blank">(https://www.quora.com/What-are-some-good-tips-for-a-Divinity-Original-Sin-2-beginner)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 讨论了交易和角色交易能力优化，不同角色的技能如何影响交易效果。<br></small>
+    </div>
+    <div class="page-content content"><h2>交易技巧</h2>
+<p>你可以与几乎所有NPC进行交易，但你需要随着等级提升更换武器，并保持盔甲规格匹配，因此交易很重要。</p>
+<p>寻找几个关键商人：一个军火商（购买）和一个书商（出售）。</p>
+<p>在游戏早期，以12的倍数（例如12、60、120和240）给予他们免费金币，随着等级提升增加金币数量。计算你需要花费多少金币才能将他们的讨价还价态度提升到100。然后去做。你会节省/赚取大量金币。</p>
+<p>只向这些商人出售物品，但不要将你的武器和盔甲卖给军火商；这会使寻找新的装备购买变成一场噩梦。（太多垃圾。）</p>
+<h2>集中攻击物理护甲</h2>
+<p>降低怪物的物理护甲，然后击倒他们。如果对手无法攻击，战斗就会容易得多。</p>
+<p>只针对物理攻击也意味着你不需要任何脆弱的队员。如果你要带4个队员，带一个盗贼、一个坦克和两个游侠。</p>
+<p>击倒他们，并持续压制他们。</p>
+<h2>单狼战术快速且强大</h2>
+<p>DOS2中有大量的队伍微操。如果你扮演两个单狼，你可以大大减少这些微操以及你的购买成本。</p>
+<p>选择两个人类角色。洛丝、伊凡或自定义角色，依此顺序。（我真的很喜欢伊凡，但洛丝的任务线在最后一幕中会有很大的回报。）</p>
+<p>其中一个角色双持武器，另一个角色使用双手武器。尽早将你的属性（智力除外）提升到12，以便可以使用所有盔甲等装备。最终你想要至少14点，但这可以等等。</p>
+<p>为你的盗贼配备开锁和潜行技能，为你的坦克配备劝说（和宠物伙伴！）技能。</p>
+<h2>移动至关重要</h2>
+<p>游戏早期就明确指出传送是一个非常方便的技能。但是，能够在每次战斗中多次传送“自己”要好得多。</p>
+<p>刽子手是一个很棒的天赋，但是，在早期，对于盗贼来说，棋子更重要。一旦你找到一个酷炫的镜子，就可以互换它们。</p>
+<h2>关键技能</h2>
+<p>所有人：</p>
+<ul>
+<li>猎人 - 急救</li>
+<li>猎人 - 战术撤退</li>
+<li>恶棍 - 潜行与匕首</li>
+<li>恶棍 - 肾上腺素</li>
+</ul>
+<p>坦克和盗贼：</p>
+<ul>
+<li>战争 - 猛击</li>
+<li>战争 - 战场践踏</li>
+<li>战争 - 旋风</li>
+<li>战争 - 火凤凰俯冲</li>
+</ul>
+<p>队伍中方便的技能：</p>
+<ul>
+<li>气系 - 传送</li>
+<li>气系 - 涅槃交换</li>
+<li>火系 - 心安理得</li>
+<li>异变 - 鸡爪（！！！）</li>
+<li>地系 - 坚固</li>
+</ul>
+<p>需要保存的卷轴：</p>
+<ul>
+<li>雨</li>
+<li>心安理得</li>
+<li>坚固</li>
+</ul>
+<h2>对付Boss</h2>
+<p>这通常有效：分开你的队伍。让一名队员开始对话。让另一名队员（不在对话中）用传送将Boss传送到远离她的手下数英里远的地方。开始战斗，杀死Boss。</p>
+<p>个人最喜欢的：摧毁Boss的物理护甲。让你的盗贼使用撕裂肌腱然后是鸡爪。看着这只愚蠢的小鸡把自己跑死。（与“走开”不兼容。）</p>
+<h2>管理你的源力</h2>
+<p>消耗大量源力的法术是浪费时间。保护光环非常棒……明智地使用它。</p>
+<p>压制与你的坦克配合得非常好。</p>
+<h2>不要杀死塔尔金</h2>
+<p>你将在船上遇到他。他出售源力球、符文和强力符文框架。</p>
+<p>不要浪费这些框架；保存它们直到你拥有巨型符文。此外——尤其如果你使用的是四个人的队伍——尽早并尽可能频繁地购买它们。</p>
+<h2>细节与技巧</h2>
+<p>即使你有一些经验，你仍然可能会错过很多小细节。游戏有很大的自由度，但任何低于战术难度的都可以通过偶尔重载来获胜。</p>
+<p>F5/F8键是你的朋友（除非你更改了按键配置或正在玩主机版本）。</p>
+<h2>技能缩放</h2>
+<p>一些技能会根据武器伤害进行缩放，另一些技能只会根据你的等级进行缩放，还有一些技能会根据智力/敏捷/力量进行缩放。如果描述中写着“随X缩放并基于武器伤害”，那么如果它是魔杖或法杖，X将变为智力；如果它是剑，X将变为力量；如果它是弓、长矛或匕首，X将变为敏捷。</p>
+<p>例如，战争看起来应该是基于力量的，但是大多数战争技能与匕首或长矛（敏捷）配合得很好，并且会相应地缩放（双手武器或剑盾也很好）。另一方面，异变技能通常直接根据力量进行缩放或根本不缩放。</p>
+<p>通常你只需要一个高智力/敏捷/力量，并且只在真正需要更多装备选择时才偶尔在其他属性上花费一点。</p>
+<h2>召唤</h2>
+<p>召唤不是必需的，但它是一个非常安全的职业。</p>
+<p>召唤能力只随着召唤能力而缩放，所以你可以携带盾牌并提升体质。你可能需要在其他方面增加一些技能点才能从其他法术树中解锁召唤，但仅此而已。在我看来，这有点不平衡，但你不需要火系法术就能让火元素造成最佳伤害或其他任何东西。（我认为这不是很好的游戏设计，但就是这样。）</p>
+<p>召唤在10级时会获得巨大的力量提升，所以尽你所能单修这个技能直到那时。辅助技能也可以，比如来自水系/地系的护甲增益。气系也有一些传送技能也不错。</p>
+<p>记住，创造图腾需要2AP，你每一回合可以这样做一次。只有2AP剩余用于其他任何事情，你没有很多AP用于其他事情——双持魔杖，不值得；额外的记忆槽，不值得。领导力很棒，因为它是固有的被动技能。</p>
+<p>召唤的唯一真正问题是它过于安全且有点枯燥，但这对于四个队员中的一个来说还不错。（Larian工作室——请重新平衡这个技能，使其与其他技能产生更多协同作用！让化身随着你的其他技能进行缩放，以获得更有趣的混合构建！拜托！）</p>
+<h2>早期任务</h2>
+<p>游戏早期的两件装备对早期帮助很大——传送手套和米戈的戒指。</p>
+<p>如果你想扮演一个非常善良的人，你将不得不为了一个支线任务而放弃这个戒指。这是一个可以接受的故意选择，但是，好几个小时没有这个额外的先天技能会让你很痛苦。</p>
+<p>传送手套可以通过探索海滩和杀死一些鳄鱼获得。这个物品非常有用，并且通过其他任何方式在游戏早期获得传送需要大量的投资。</p>
+<p>不要让猫死。这是一个小奖励，但感觉也很好。你有一个最近的存档，对吧？</p>
+<p>如果一个任务区域太危险，可以改变顺序。世界是非线性的，但敌人的等级有时难以应对。</p>
+<h2>生活质量改进</h2>
+<p>交易很痛苦。理想情况下，你希望一个高力量的角色来携带所有物品，但你也希望这个角色具有高交易技能。不幸的是，在购物时，你可以使用队伍的金币，但物品不是共享的。这可能是因为多人游戏，但这很烦人。</p>
+<p>准备一个用于实用工具交换的背包。</p>
+<p>当你拥有三件不同的+讨价还价装备时，将它们全部放入一个背包中，以便你可以装备它们，然后轻松切换回战斗装备。同样的方法也可以用于偷窃、潜行、幸运符、鉴定……</p>
+<p>当你的技能菜单打开（默认情况下为K键）时，你可以将你的背包拖动到你的快捷键栏上，以便更快地交换装备，或为你的弓箭手选择特殊的箭、手榴弹、药水等。</p>
+<p>地面上的物品可以右键单击。</p>
+<p>“拾取并添加到货物”对于金盘、绘画……任何你知道要出售的东西来说都是一个很棒的选择。在购物菜单中，点击“提供所有货物”，该角色会将标记的物品添加到出售堆中。但是，这不会收集你的其他角色持有的货物。</p>
+<p>可以进行非战斗状态的快速传送。只需点击右上角小地图旁边的那个小锚点符号即可。我第一次玩的时候，我认为你只能在一个雕像和另一个雕像之间旅行，而且你必须走到雕像那里！</p>
+<p>在第二幕开始时，你将有一个家园基地，在底层有一个尊敬的镜子。你可以重新分配你花在失败实验上的点数，并在有效的事情上加倍努力。所以如果你能完成第一幕，你就不必担心毁掉你的游戏进程。</p>
+<p>你可能希望你的劝说角色成为你的坦克。</p>
+<p>脚本化事件通常会导致NPC开始与他们首先看到的人交谈，如果情况不妙，这个人通常处于直接的火力线中。计划好这一点。社交技能点不会与属性直接互动，但是你的劝说角色应该具有高耐久性，而潜行与偷窃和心灵感应相辅相成；其余的主要是混搭。</p>
+<p>你可以按住按键查看隐身探测范围和你的弓箭射程。我认为其中一个是Ctrl，另一个是Shift。按C键开始潜行。</p>
+<p>双击肖像可以重新居中摄像头。你有时可能会在滚动时迷路，或者队伍只是为了某些事情而分散了。</p>
+<h2>食谱</h2>
+<p>在游戏早期，随身携带晚餐非常有用。将一口锅放在篝火上，并将烹饪营地与肉或鱼结合起来。晚餐比治疗药剂更容易获得，而且在游戏早期，你在战斗中几乎没有治疗选择。</p>
+<p>钉子 + （任何靴子）使你免疫在冰上滑倒。这种情况并不频繁，但出现时确实很烦人。</p>
+<p>钉子 + （任何锤子）会给你开锁器。你需要一个有一些偷窃技能的角色。</p>
+<p>一些整洁的技能书可以制作，而且在游戏中很少或根本不会出现。</p>
+<h2>偷窃</h2>
+<p>如果你被发现拥有从同一区域偷来的物品，就会有后果。如果你要偷窃，最好立即将偷来的物品存放在你的传送点。偷来的技能书可以立即阅读，以方便起见。</p>
+<h2>利用游戏机制</h2>
+<p>你不需要这个就能获胜，但是如果你开始对话，切换到另一个角色，并在正在说话的角色身上施加增益效果，那么施法者的计时器会前进，但说话者的计时器不会前进。所以你可以刷新你所有的技能，如果对话变成暴力，那么你将有一个完全增益的角色准备好了。</p>
+<p>你也可以通过逃跑然后再加入战斗来重置角色的所有冷却时间。这很卑鄙，有点违反时空逻辑，但它并不总是实际可行的。</p>
+<h2>总结</h2>
+<p>没有一个确定的答案。这一切都取决于你的职业、你的游戏风格、你选择谁作为你的盟友等等。所以，看看你喜欢什么，然后继续吧。如果你最终不喜欢它，那就创建一个新角色。</p>
+        <small class="page-url url "><a href="https://www.quora.com/What-are-some-good-tips-for-a-Divinity-Original-Sin-2-beginner" target="_blank">(https://www.quora.com/What-are-some-good-tips-for-a-Divinity-Original-Sin-2-beginner)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Divinity:-Original-Sin-2-Beginner's-Guide-(Tips,-Tricks,-&-Strategies)">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🧙&nbsp;</span>Divinity: Original Sin 2 Beginner's Guide (Tips, Tricks, & Strategies)</h3>
+        <small class="page-url url "><a href="https://screenrant.com/divinity-original-sin-2-beginners-guide-tips-strategies/" target="_blank">(https://screenrant.com/divinity-original-sin-2-beginners-guide-tips-strategies/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 涵盖了特定技巧和知识，尤其是资源管理和环境利用的重要性。<br></small>
+    </div>
+    <div class="page-content content"><h2>Divinity: 原罪 2 游戏机制指南</h2>
+<p>在开始游玩《Divinity: 原罪 2》时，玩家需要学习一些关于 NPC 交互和战斗的更复杂机制。</p>
+<p>许多人认为它是《博德之门》系列的精神续作，《Divinity: 原罪》系列获得了评论家和玩家的广泛好评。《Divinity》系列对于不熟悉经典 RPG 的玩家来说起初可能看起来令人生畏，但对于那些决定尝试的玩家来说，它可以提供一种令人满意的体验。</p>
+<p>几乎《Divinity: 原罪 2》中的每个 NPC 都可以被杀死，而不会破坏游戏或故事。这是由于游戏能够适应玩家的选择，通常提供多种完成目标的替代方案。同样，大多数角色也可以被扒窃，这就是为什么投资“偷窃”能力非常有益的原因。一个安全扒窃的简单技巧是一个角色与目标进行对话，而另一个角色则进行扒窃。这个技巧也有助于阻止任何其他可能在该区域巡逻并使难以不被发现的 NPC。</p>
+<p>在《Divinity》中潜行可以让角色隐藏在 NPC 的视线之外，只要他们不在 NPC 的视野范围内。除了用于扒窃之外，它在战斗中也可能非常有价值。如果玩家在被发现之前发现了敌人，那么潜行是在战略位置部署队伍伏击敌人的好方法。一些队员也可以在战斗中，而另一些队员仍在潜行。在这种情况下，潜行角色可以自由移动，并执行一个动作，然后就会被发现。</p>
+<p>《Divinity: 原罪 2》充满了各种魔法物品，但有两个常见的物品玩家可能同样重视：铲子和睡袋。除非扮演蜥蜴人（可以自然挖掘），否则拥有铲子对于进入《Divinity》中许多埋藏的宝藏至关重要。游戏开始时，在欢愉堡岛上的一座断桥上可以找到一把铲子，位于红王子和范恩之间大约一半的位置。</p>
+<p>睡袋可以在战斗外使用，以立即恢复队伍的生命值和护甲，并提供一个持续 3 个战斗回合的小型主要属性增益。这是一种保持队伍健康状态的便捷方法，如果在战斗开始前使用，它在战斗中可能会有所帮助。在游戏一开始，在船上，在野兽旁边的一些床上可以找到一些睡袋。</p>
+<p>虽然制作在《Divinity: 原罪 2》中可能会有所帮助，但对于新手玩家来说，它一开始也可能过于复杂。但是，有两种简单且可以直接使用的组合：钉鞋和软泥桶。在战斗中滑倒会立即将角色击倒并结束其回合。将任何鞋类与钉子组合将产生防滑鞋。钉子几乎随处可见，尤其是在工作室里。软泥桶可以与任何武器组合，使其获得额外的毒素伤害。只需要一个桶，因为它在制作过程中永远不会被消耗。在游戏开始时，玩家第一次在欢愉堡岛上遇到范恩的地方可以找到其中一个桶。</p>
+        <small class="page-url url "><a href="https://screenrant.com/divinity-original-sin-2-beginners-guide-tips-strategies/" target="_blank">(https://screenrant.com/divinity-original-sin-2-beginners-guide-tips-strategies/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Tips-for-beginners.---Divinity:-Original-Sin-II---Giant-Bomb">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🛌&nbsp;</span>Tips for beginners. - Divinity: Original Sin II - Giant Bomb</h3>
+        <small class="page-url url "><a href="https://www.giantbomb.com/divinity-original-sin-ii/3030-50803/forums/tips-for-beginners-1814415/" target="_blank">(https://www.giantbomb.com/divinity-original-sin-ii/3030-50803/forums/tips-for-beginners-1814415/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 呈现了游戏技巧与资源管理的建议，对新手玩家尤为重要。<br></small>
+    </div>
+    <div class="page-content content"><h2>一些有用的游戏技巧</h2>
+<ol>
+<li>
+<p><strong>带上睡袋</strong></p>
+<p>游戏中，尤其是前期，治疗药水和法术非常稀缺。虽然可以在床上休息，但有时你会远离任何文明。幸运的是，在前往欢乐堡的船上可以找到一个睡袋。确保拾取并将其放在你的背包里。睡袋允许你在战斗间隙休息，并将完全治愈你的队伍。</p>
+</li>
+<li>
+<p><strong>ALT键显示所有可拾取物品</strong></p>
+<p>周围有很多战利品，但有时不容易看到。按下ALT键即可显示所有物品！需要注意的是，你仍然需要打开箱子等才能看到里面的东西。一定要留意贵重物品，如黄金、白银甚至绘画。当你想要从商人那里购买东西时，你会很高兴自己有很多垃圾可以出售。</p>
+</li>
+<li>
+<p><strong>懂得何时逃跑并利用潜行技能</strong></p>
+<p>有时明智的做法是知道何时自己处于劣势。即使是比你高一级的小怪也能在几分钟内摧毁你的队伍。探索时要小心，并使用你的潜行技能（按C键）避免被发现。</p>
+</li>
+<li>
+<p><strong>利用环境优势</strong></p>
+<p>战斗往往会显得势不可挡。始终寻找利用环境优势的方法。你可以使水或血液带电来击晕敌人；你可以堆叠箱子来创建临时障碍；还要确保将你的远程战士放在高处；并避免将你的角色放在油桶附近或有毒烟雾中。</p>
+</li>
+<li>
+<p><strong>不要样样通，样样松</strong></p>
+<p>升级角色时，一定要提前做好计划。你不会有很多点数可以用来提升技能和属性，所以要明智地使用它们。一个技能属性都只有一点的角色并没有什么用。发挥角色的优势，组建一支多样化的队伍。</p>
+</li>
+<li>
+<p><strong>快速存档是你的朋友！</strong></p>
+<p>游戏中的自动存档比较少。确保在完成每一个重要操作后保存，避免不得不重玩大段内容。</p>
+</li>
+<li>
+<p><strong>做好死亡很多次的准备</strong></p>
+<p>在这个游戏中你会死很多次。有些战斗似乎是不可能的，很容易让人不知所措。记住，除非你面对的是比你等级更高的敌人，否则总是有办法赢得战斗。也许你可以把敌人引诱到更好的位置，或者你可以更好地使用你的法术……我相信还有很多技巧可以帮助新手玩家，所以请随时在下面添加你的经验之谈！</p>
+</li>
+</ol>
+<p><strong>玩家评论：</strong></p>
+<ul>
+<li>你也可以在战斗外随意使用治疗技能，如果你有角色具备治疗技能的话。当我意识到“等等，我该如何睡觉？”时，我就是这么做的。</li>
+<li>谢谢！说实话，我差点就放弃了，睡袋这件事应该完全解释清楚！我相信我会在我的某些角色构建中犯错误，而且我不太确定我什么时候应该购买装备以及如何装备角色，但我计划随着时间的推移学习。请继续提供技巧！</li>
+<li>你也可以在战斗外随意使用其他法术。如果你的队伍在战斗后着火了，最好使用任何你拥有的水系法术来快速扑灭。毒药和其他效果也是如此。然而，你会通过反复试验很快学会这一点。复活很贵，你最不希望看到的是你的队员在你经过一场激烈的战斗后搜刮新的闪亮物品时死亡；)</li>
+<li>
+<p>ALT键并不会像你在冒险游戏中预期的那样显示所有你可以点击的东西。它严格来说是你可以拾取的东西（而不是你可以打开、查看、操作等等的东西），所以你需要拿出你的像素狩猎技能。</p>
+</li>
+<li>
+<p><strong>每个人都有东西可以卖</strong></p>
+<p>确保当你与NPC交谈时，点击交易按钮查看他们是否有有趣的物品出售。而且，如果你没有足够的钱，你也许可以通过“其他方式”得到你想要的东西。</p>
+</li>
+<li>
+<p><strong>有时分开行动是最好的选择</strong></p>
+<p>你可以通过将角色肖像分开来分散你的队伍。这允许你以战术的方式进入战斗情况。或者你可能会遇到一个与某个队员有渊源的NPC，而你不想发生冲突。</p>
+</li>
+<li>
+<p><strong>早起者特权很棒</strong></p>
+<p>在某些等级，你可以为你的角色选择特权。我发现非常有用的是早起者特权。它可以让你的角色满血复活。这意味着你可以在战斗中复活倒下的队员，而不用担心他们会立即被杀死。</p>
+</li>
+<li>
+<p><strong>在你解雇队员之前，一定要先扒光他们的装备</strong></p>
+<p>重要的任务物品会自动传送给你，但你不想让他们带着你花费很多金币购买的闪亮盔甲逃跑。</p>
+</li>
+</ul>
+<p><strong>玩家评论：</strong></p>
+<ul>
+<li>除了：快速存档，快速存档，快速存档！</li>
+<li>下面的提示非常好。不要被你需要将你的整个小组带到某个地方的想法所束缚。我有很多情况，我会将我的主要角色与小组分开，并在一些大型坏蛋（如尖叫者）周围进行传送，以从后面清除它们，或者绕过一些地形来打开地图，然后找到一个传送门让小组重新聚合。这感觉令人兴奋且危险，这是一个非常好的机制。</li>
+<li>除此之外，我想知道这是否会让我感觉像《巫师3》，在这个游戏中，游戏世界如此之大，主线故事非常有用，可以将你推进地图的不同区域，但也很容易陷入隧道视野，过于关注它，它会阻止你四处游荡，享受世界和支线任务，因为你只想完成下一个故事阶段。这个游戏中的主要任务似乎还可以，但到目前为止，对我来说，这个游戏的真正魅力在于探索和陷入糟糕/滑稽的境地。</li>
+<li>即使是单个、荒谬的敌人，也很容易让人感到实力不足，他们会在一个或两个回合内彻底摧毁你的整个队伍。有时，人工智能在游戏中运用规则的熟练程度几乎令人捧腹，他们会一回又一回地使你的整个队伍失去行动能力，直到你看到“你们都死了”的提示。重新加载并去别的地方吧！寻找一些更容易完成的任务，以后再来。坏蛋不会消失，而且至少还有十几件事你可以做来提升你的装备/经验。</li>
+<li>有时，你根本无法完成任务，甚至无法开始取得进展，因为你的队伍没有装备来应对。游戏几乎迫使你处理放手不去体验某些事物的想法和执行。游戏表示，有些事情不适合你。那完全没问题！在你的下一个游戏过程中，用另一个完全不同的角色来体验。</li>
+<li>
+<p>天哪，我爱上了这款游戏，即使它让我很沮丧。</p>
+</li>
+<li>
+<p>保持猫咪活着，因为如果猫咪在你离开要塞时还活着，它会给你一个非常方便的技能。要塞大门附近的一个平台上有一名混蛋游侠守卫，如果猫咪靠得太近，他就会射杀它。</p>
+</li>
+<li>
+<p><strong>确保利用你角色的“民用技能”</strong></p>
+<p>我的意思是，如果一个角色的讨价还价能力很高，你需要在出售窗口中选择他们才能从他们较高的讨价还价能力中获益。这适用于所有民用属性，例如“幸运符”，是的，当你打开任何箱子/盒子/任何东西时，你都应该用拥有最高幸运符属性的角色来打开它们。这样你就会获得大量的稀有物品，因为幸运符会增加在任何可掠夺物品中找到史诗/传奇装备的百分比。</p>
+</li>
+</ul>
+<p><strong>玩家评论：</strong></p>
+<ul>
+<li>对于使用控制器的玩家的提示：<ul>
+<li>如果你使用背包作为子文件夹，将背包标记为“商品”，将所有你想要放入其中的物品标记为商品，转到商品标签将物品放入背包，然后取消标记背包。</li>
+<li>每人携带一个小袋子和一个背包，是区分两个不同子文件夹的好方法。</li>
+</ul>
+</li>
+<li>对于小偷的提示：<ul>
+<li>分散队伍并进行干扰；在拥挤的区域，让你的队伍与NPC交谈以将他们的视野范围从你的目标身上移开。</li>
+<li>在不拥挤的地方，让你的队伍与目标交谈，而你的小偷则去行动。过了一会儿，你抢劫的人会寻找谁抢劫了他们，但只要他们在交谈，他们就不会进入这种状态。</li>
+<li>当你的目标来找你时，不要在那里。然而，只要他们没有被盗的物品，你的队伍在那里是可以的。让目标搜查队伍，只要你的小偷躲藏起来，你就没事了。</li>
+<li>查看哪些角色有东西可以偷的最佳方式是打开交易界面。不过，他们身上也可能藏有一些物品，例如钥匙。</li>
+<li>你可以使用骷髅角色的手指作为开锁工具。</li>
+</ul>
+</li>
+<li>战斗技巧：<ul>
+<li>野兽无法使用梯子。如果你可以将野兽传送到只能用梯子才能到达的地方，它们就无法攻击你或对你进行近战攻击。</li>
+<li>这就是我目前能想到的一切。</li>
+</ul>
+</li>
+<li>我只是想补充一句，对于一个在第一部游戏中涉猎过的人来说，这些都是一些非常好的技巧。</li>
+<li>我在那个守卫杀死猫的时候非常生气。我抓住机会就杀了他，毫无悔意。</li>
+<li>保持猫咪活着，因为如果猫咪在你离开要塞时还活着，它会给你一个非常方便的技能。要塞大门附近的一个平台上有一名混蛋游侠守卫，如果猫咪靠得太近，他就会射杀它。</li>
+<li>此外，带上睡袋也很有创意，我没想到这一点。在合作模式下，这似乎比让一个拥有强大治疗能力的角色坐在那里治疗所有人更有用。</li>
+<li>关于技能点 - 在升级到下一级并且能够提升你想要专注的技能之前，保存技能点是否明智？这让我特别困惑，因为似乎鼓励混合技能，但你不能让你的角色成为太多的混合体。</li>
+<li>我个人不攒技能点。我通过专注于一两件事来构建我的角色。对于大多数时候使用物理武器的角色，大部分点数都用于我想让他们使用的实际武器。其他点数我通常花在一些防御或适合武器的技能上（近战剑或斧使用者使用战争技能，弓箭手使用猎手技能……）。对于法师，我一开始会选择两种法术技能来专注，这样他们就可以尽早使用一些强大的法术。我认为有很多有效的方法来构建角色，并且你可以免费重置角色，所以你永远不会被某个构建所困。主要要避免的是过于分散你的点数，除此之外，你基本上可以进行实验。</li>
+<li>不要过于担心属性和构建，也不要陷入重新创建角色的陷阱，你可以在第二幕开始时重新分配属性。</li>
+<li>除了避免样样通的角色之外，最好也避免样样通的队伍，因为在大多数情况下，如果你能够安全地击破一种防御方式，而不是准备慢慢削弱两种防御方式，你会好得多。</li>
+<li>哇，谢谢。我爱上了这款游戏，所以我将继续进行。</li>
+<li>DOS2 的制作怎么样？我记得在 DOS1 中它非常（而且很棒地）复杂，而且我通常讨厌游戏中的制作。</li>
+<li>有没有人知道双持战斗能力是否会影响魔杖？我已经将法恩设定为双持魔杖使用者，我想知道我应该提升哪些属性才能获得更高的 DPS。顺便说一句，这款游戏很棒！</li>
+<li>它确实会影响，但实际上任何魔法流派在你在担心他的普通攻击之前都会是一个更好的伤害选择。</li>
+<li>我目前正在玩《折磨：努梅内拉的潮汐》，但我肯定很快就会尝试《神界》。只是一个问题；在玩续集之前玩第一部游戏值得吗？</li>
+<li>这不可能说。就我个人而言，我对第一部游戏很快失去了兴趣，但由于第二部游戏的改进机制和更引人入胜的写作，我爱上了它。其他人显然喜欢第一部游戏到最后，但我仍然认为不必以任何顺序或相互关联的方式玩这两个游戏。它们只是你可能会喜欢单独玩的两个好游戏。</li>
+<li>无法足够强调拥有指定“拾取者”和幸运符的价值，你可以从任何随机箱子或桶中获得巨大的好处。</li>
+<li>幸运符非常酷。我现在正在进行一个带有横扫的孤狼双人游戏，并注意到当幸运符激活时，他的头上会出现一个小图标，并播放声音。</li>
+<li>我发现编辑编队以及解散我的队伍来为伏击定位他们，我现在死亡的次数少多了。偷走所有没有钉住的东西也有帮助。</li>
+<li>你需要玩过第一部游戏吗？</li>
+<li>完全不需要，同一个宇宙，时间线上的距离非常遥远。</li>
+<li>这是我第一次玩这样的游戏，所以以下是我作为一个完全白痴所学到的东西——你可以让三个 NPC 角色加入你的队伍。我被打得落花流水，不知道我可以招募另一个角色，一旦我这么做了，它就变得更容易管理了。——你可以在第二幕重新分配角色属性，所以如果你分散了太多的点数或者获得了你没有使用的天赋，则可以在不重新开始的情况下修复它。——阅读书籍、信件和所有内容，有时它只是调味料，但有时你会学到有价值的信息或新的食谱。——在控制器上，点击模拟摇杆会突出显示屏幕上的所有物体。我知道有一个键盘按钮，但我认为控制器上没有等效的按钮。</li>
+</ul>
+        <small class="page-url url "><a href="https://www.giantbomb.com/divinity-original-sin-ii/3030-50803/forums/tips-for-beginners-1814415/" target="_blank">(https://www.giantbomb.com/divinity-original-sin-ii/3030-50803/forums/tips-for-beginners-1814415/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Best-Tips-For-Divinity:-Original-Sin-2">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💡&nbsp;</span>Best Tips For Divinity: Original Sin 2</h3>
+        <small class="page-url url "><a href="https://gamerant.com/pro-tips-divinity-original-sin-2/" target="_blank">(https://gamerant.com/pro-tips-divinity-original-sin-2/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 提供了游戏内的特殊技巧与提示，强调提升游戏效率的要素。<br></small>
+    </div>
+    <div class="page-content content"><h2>不要使用礼包物品，即使很诱人</h2>
+<p>Divinity: Original Sin 2 为玩家提供了其他 RPG 游戏无法比拟的独特体验。游戏本身会定期更新，并且许多更新都包含可选的礼包。在游戏开始时启用这些选项会极大地改变游戏的玩法——从赋予角色随时与动物交谈的能力到能够在任何距离之间在队员之间交换物品，许多礼包都会使游戏更容易。</p>
+<p>然而，如果这是玩家第一次体验 Rivellon 复杂的世界，最好保持这些选项禁用。大多数礼包不仅会禁用成就，而且新玩家也无法获得完整的体验，也无法充分欣赏每个礼包带来的重大改进。先玩到游戏中比较重要的部分，获得一些成就，然后再考虑在下一次游戏中启用这些官方“作弊”功能。</p>
+<h2>事先计划战斗，设置陷阱</h2>
+<p>Divinity: Original Sin 2 最令人满意的事情之一就是其互动性。元素都会与环境互动；例如，火焰会点燃木材，闪电会电击在水中的敌人。然而，并非所有最佳的战斗策略都是在战斗中进行的。通过巧妙地使用潜行和隐身法术的时机，玩家可以在战斗开始前设置复杂的陷阱，从而获得优势。</p>
+<p>例如，一个拥有大量负重能力的角色可以潜行到敌人附近，在隐身状态下在其周围放下许多爆炸桶，然后在其他角色开始战斗前传送到安全的地方。此外，如果角色在战斗开始时潜行，并且敌人看不见他们，他们将保持非战斗状态，直到被发现。这意味着他们不像其他队员那样受限于回合制攻击，并且可以使用额外的时间来帮助队伍，而不必在技术上参与战斗。</p>
+<h2>使用多种技能</h2>
+<p>Divinity: Original Sin 2 是一款拥有大量自定义选项的游戏。游戏中引入了一些非常有创意的角色职业，包括变形者。虽然这些职业看起来像是噱头，但每个职业实际上在游戏中都具有大量的实用性。</p>
+<p>事实上，如果玩家没有特定技能、背景或职业的角色，那么在游戏后期将难以完成某些事情。因此，组建一个拥有各种技能的四人小队，在冒险过程中保护自己——重要的是要以这种方式最大限度地利用游戏的多种元素互动和各种法术。</p>
+<h2>不要混合太多职业</h2>
+<p>这款游戏的优点在于，如果玩家不喜欢任何主要英雄，它允许玩家创建原创角色。在能力和职业方面有无数的选择，混合和匹配来自不同职业的许多酷炫技能可能会非常诱人。</p>
+<p>然而，与大多数游戏一样，Divinity: Original Sin 2 也奖励玩家专注于特定类别。通常最好不要为原创角色混合和匹配超过两种不同的职业类型，这样在升级时属性点就不会被分散得很薄。</p>
+<h2>始终检查战利品</h2>
+<p>使 Divinity: Original Sin 2 特殊的是其整体美感。每个区域都充满了美丽的细节，当游戏在高端电脑上以最佳设置运行时，这些细节看起来更漂亮。也就是说，在光线昏暗的房间里或在各种架子和家具上发现某些物品可能非常困难。</p>
+<p>为此，有一个类似于 Diablo 3 中的快捷键。只需按下左 Alt 键即可检查房间内的战利品，收集物品的名称将显示在屏幕上。请记住，并非所有东西都一定重要。就像在 Skyrim 中一样，Divinity: Original Sin 2 也允许玩家拾取无用的物品。</p>
+<h2>使用快捷栏</h2>
+<p>游戏中首先要注意的是位于屏幕底部的快捷栏。在战斗中，玩家可以随时访问他们的背包；如果将所有东西放在快捷栏上，并在进入战斗模式时准备好，那么这将使事情变得容易得多。</p>
+<p>即使是最无意义的东西也可能出奇地有用，因此值得放入快捷栏，包括橙汁等饮料，甚至是一条面包，它们在战斗中可以提供少量增益。游戏中最好的物品之一是一个简单的睡袋，它可以在战斗后使用，无需浪费消耗性物品即可恢复生命值。</p>
+<h2>不要跳过对话</h2>
+<p>与大多数 RPG 游戏一样，最好放慢速度，关注实际的故事。跳过对话并做出随机选择可能会对游戏玩法产生极大的不利影响。Divinity: Original Sin 2 拥有令人惊叹的背景故事，不容错过，每个角色都有自己的动机和愿望，可以通过对话来了解。</p>
+<p>不仅在错误的时间说错话可能会激怒角色发起攻击，而且也可能错失良机，无法找到推动故事发展的重要提示或信息。因此，最好以开放的心态进入 Divinity: Original Sin 2，并乐于体验故事。</p>
+<h2>选择你的战斗</h2>
+<p>游戏的每个章节都会为玩家介绍一个新区域，该区域包含需要完成的几个子区域。这些子区域也有不同的等级，这意味着完成特定区域时通常需要遵循一定的顺序。</p>
+<p>如果敌人的等级比玩家高出几级，这通常意味着应该在完成另一个区域或完成一些次要任务后再处理该子区域。了解这一点很重要，因为游戏中的战斗非常具有挑战性和耗时长，因此进行一场必败的战斗是在浪费时间。</p>
+<h2>使用自由视角</h2>
+<p>通常情况下，Divinity: Original Sin 2 中的摄像机将以主要角色或玩家当前控制的角色为中心。可以在角色之间自由切换控制，并在战斗之外随时任命新的领导者和新的追随者。</p>
+<p>然而，玩家也可以自由移动摄像机。这样做的目的是在你角色过于靠近区域之前检查区域。这允许玩家在面对敌人或区域较低级别的陷阱之前很久就注意到可能的敌人，因此在进入新区域时要使用自由视角。</p>
+<h2>检查你的敌人</h2>
+<p>Divinity: Original Sin 2 中的战斗如果没有做好准备并且没有战略思维，可能会非常残酷。元素是游戏战斗的核心部分，因此了解哪些元素可以克制哪些元素至关重要。此外，每个敌人都有独特的弱点和抗性。</p>
+<p>一些元素攻击甚至可能会治愈它们，例如对不死生物使用毒药。要了解更多关于敌人的信息，最好的方法是右键单击它们，这会弹出一个包含一些关于它们的信息的小面板。角色的 “传说大师” 技能越高，你将能够在这个面板上获得更多信息，并且你越能有效地在战斗中反击它们。</p>
+<h2>有时单独行动</h2>
+<p>Divinity: Original Sin 2 允许玩家以团队或独狼的方式体验战役。虽然后者带来了巨大的挑战，但与团队一起进行总是更好，因为它带来了多样性。然而，拖着四个人四处走动一段时间后可能会有点乏味。幸运的是，队伍实际上并不总是必须在一起。</p>
+<p>在某些情况下，如果某个角色拥有特定的技能和属性，最好派他们单独执行任务。为此，将他们的图标从队伍领导者处拖动以将其作为追随者分离，然后双击他们的图标以控制他们。一旦获得传送金字塔，事情就会变得更容易和更有趣，并且有大量的谜题需要利用多个人在队伍中。</p>
+<h2>简单思考，跳出框框</h2>
+<p>Divinity: Original Sin 2 最难的部分之一是它种类繁多的谜题和谜语。游戏中会出现非常奇怪的事情，乍一看玩家可能无法解决。然而，一点创造力和跳出框框的思维方式会让你走得很远。</p>
+<p>杠杆通常隐藏在附近，关键物品也是如此。移动盒子和桶有时可能是一个解决方案，或者甚至检查火把和绘画以寻找秘密。有时，答案在于传说，这就是为什么阅读所有内容并倾听每个 NPC 的话对于成功通关这款游戏至关重要。</p>
+        <small class="page-url url "><a href="https://gamerant.com/pro-tips-divinity-original-sin-2/" target="_blank">(https://gamerant.com/pro-tips-divinity-original-sin-2/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Best-character-builds---for-you-(spoilers)---Larian-Studios-forums">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🗡&nbsp;</span>Best character builds - for you (spoilers) - Larian Studios forums</h3>
+        <small class="page-url url "><a href="https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=510187" target="_blank">(https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=510187)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 看似为角色构建历史反馈，实则反映了玩家对战斗和技巧策略的实践与讨论。<br></small>
+    </div>
+    <div class="page-content content"><h2>一些角色build分享</h2>
+<p>OP Hiver老玩家  加入时间：2014年3月</p>
+<p>读过不少关于一些build如何糟糕或一些build“不如其他build好”的帖子后，我认为我们都可以用一个主题来分享每个人正在使用的角色build及其优点。我见过其他玩家使用我从未尝试过的build，他们也报告说这些build表现很棒，所以我对听听其他人在这方面发现了什么很感兴趣。我倾向于广泛分配技能并扮演混合型角色，我发现它们都很好。但是，作为开始，这里有一些简单的build：</p>
+<ol>
+<li>战士型技能（近战专家）+ 风系魔法  潜行者型技能 + 风系魔法 - 或这三种技能的组合。我发现这两种近战技能与风系魔法具有极佳的协同作用。它为你提供了一些远程法术，供你在需要时使用，以及非常方便的传送法术，同时也提供了很多保护，例如化身为空气和闪电攻击等法术用于直接攻击。非常适合近身肉搏。再加一级巫术，就完美了。</li>
+<li>射手技能 + 土系魔法  射手拥有几个治疗和去除状态效果的法术来帮助你的近战角色，强大的进攻能力，以及特殊的箭矢，土系魔法完美地补充了这种远程角色。你能够进一步增强你的前线单位，并用一些方便的远程法术攻击敌人 - 同时你还能在早期获得一个很棒的蜘蛛召唤物。顺便说一句，我真的很喜欢巨石冲撞法术……现在它变成了巨石猛击。为什么我们不能同时拥有两者？……正如你所看到的，所有这些都完美地协同作用，然后进一步补充和增强彼此。你们其他人都在使用什么好的build？写下你实际使用且对你有效的build - 在这里。不是你认为可能有效的，也不是你认为可能无效的。你实际使用并感到满意的游戏内BUILD。然后解释原因。</li>
+</ol>
+<p>最后编辑于：Hiver；2014年7月6日上午11:54</p>
+<p>加入时间：2014年7月  A anesthetize stranger</p>
+<p>我一开始用的是2个施法者（水+火和风+土+巫术，用于第一轮的组合），一个游侠（纯射手）和一个坦克（近战专家，双手武器和工艺/锻造），但过了一会儿我发现游侠玩起来既无聊，而且在特殊箭矢之外非常不可靠。因为我在困难模式下玩，我的普通射击在中最大射程下的失误率太高了（我认为我达到8级，那时甚至有10点感知）。我最终将游侠重新变成了一个纯近战潜行者，她实际上只是随身携带一把弓，只在拉怪时使用特殊箭矢。我还未用这个设置进行太久的游戏，但它玩起来肯定有趣得多，而且一个适当构建/操作的近战潜行者的DPS非常高。我还不太确定她最终会如何应对我知道以后会发生的混乱，但这肯定会很有趣！目前我最大的问题是我是否会将任何点数都投入到武器上，或者我是否应该等待两种潜行者和坦克的暗黑矿石。</p>
+<p>加入时间：2014年7月  地点：澳大利亚 Teknykk stranger</p>
+<p>当我实际拿到我的副本时，我当时想为斯嘉丽做一个暗夜游侠，为罗德里克做一个魔法剑士。暗夜游侠或多或少类似于魔兽世界中的希尔瓦娜斯。大量使用弓和特殊箭矢，有时还会使用匕首，并结合一些专家射手和恶棍技能，但加入一些巫术。她也会是我主要控制的角色，用于与NPC交谈、偷窃等等。魔法剑士或多或少类似于龙与地下城中的概念，他是一个使用剑和盾牌、穿着重型盔甲并具有一些近战专家技能的角色，但加入一些火系和地系技能，他主要会是我的传说大师、工匠和铁匠。这个想法是为了弥补两个主要同伴不会做的事情，并以不同的游戏风格与他们合作，而不会过于通用。我自己不喜欢随从，因为雇佣兵往往会破坏故事，而且通常缺乏活力。我还没有在发行版中测试过它，所以我不确定这些build会如何……但在测试版中，它们看起来不算太难，即使在困难模式下。</p>
+<p>最后编辑于：Teknykk；2014年7月6日上午10:09</p>
+<p>加入时间：2014年6月 Fellgnome 学徒</p>
+<p>回复：最适合你的角色build -  (剧透) Fellgnome #510251 2014年7月6日上午10:54</p>
+<p>FelixDK 学徒 F 加入时间：2014年7月</p>
+<p>似乎人们普遍会创建互相补充的角色。例如，风/水和火/土法师。但当他们这样做时，需要两回合才能获得你想要的效果，而敌人会四处移动。因此，最好让一个角色能够进行设置，另一个角色进行释放。这样你就可以在一回合内完成，例如，一个法师施放油，一个游侠使用火箭。圣誓亵渎也是同样的道理，如果你的战士或潜行者在自己身上施放它，那将浪费整整一回合中的三回合左右。如果另一个角色施加增益效果，则伤害输出者可以充分利用它。使用加速也是如此，你通常希望其他人施加它以便能够在同一回合使用它。</p>
+<p>Starthief stranger S 加入时间：2014年7月</p>
+<p>我现在玩的是：</p>
+<ol>
+<li>5系法术施法者，是主角和物品鉴定者</li>
+<li>近战格斗/坦克，涉猎巫术和恶棍，是工匠</li>
+</ol>
+<p>两者都拥有孤独狼和吸取生命。没有人拥有敏捷。</p>
+<p>运作方式：</p>
+<p>坦克：如果我能重新训练，我会放弃巫术和恶棍。后者对基于力量的格斗家没有多大作用，放血不足以治愈我的施法者以证明其合理性。相反，我可能会选择一点地系魔法或风系魔法，也许两者都有，因为蜘蛛和心灵感应是一点就能掌握的奇迹。总的来说，这个角色非常强壮，打击力也很强。在这个角色身上施放放血可以提供极其有效的治疗（这可能是个bug）。制作似乎主要用于制作箭矢，我甚至不使用而是出售它们；否则很少有回报。</p>
+<p>施法者：我喜欢掌握各种各样的法术。我很难选择一个要放弃的法术系。我认为有了孤独狼的额外点数，学习所有5个法术系是最好的选择。我认为我不会改变任何东西。也就是说，如果没有孤独狼，我可能希望施法者更专注，而且我可能不会选择近战坦克作为我的两个主要角色之一，因为XXX相当强大。</p>
+<p>Starthief stranger S 加入时间：2014年7月</p>
+<p>加入时间：2014年7月 P Peter Ebbesen 学徒</p>
+<p>Peter Ebbesen 学徒 P 加入时间：2014年7月</p>
+<p>最初由Starthief发布</p>
+<p>施法者：我喜欢掌握各种各样的法术。我很难选择一个要放弃的法术系。我认为有了孤独狼的额外点数，学习所有5个法术系是最好的选择。我认为我不会改变任何东西。</p>
+<p>仔细考虑一下，你从每个法术系的5级技能中获得的收益是否比4级技能多很多。你几乎肯定不需要知道所有法术系的所有法术（尽管我想说你做到了可能很有趣），所以你不需要5级知识（在某些法术系中，甚至2级或3级就足够了，取决于你的侧重点），所以所有重要的是你是否愿意为某些法术支付少量AP的附加费，以及你是否对任何5级技能的天赋感兴趣。你只需15点就可以学习近战专家并获得健康画像和抵御风暴的特质，这将使你的施法者更加耐用，这在操作两个角色而不是四个角色时非常重要，因为你的施法者将更频繁地受到攻击。（还有机会主义者和侧击者，但前者无助于你的防御，后者则微不足道）。当我说死战不退时，我的意思是按字母顺序排列。</p>
+        <small class="page-url url "><a href="https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=510187" target="_blank">(https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=510187)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="2-player-Possible-speedrunning-strat---Larian-Studios-forums">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">😂&nbsp;</span>2 player Possible speedrunning strat - Larian Studios forums</h3>
+        <small class="page-url url "><a href="https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=624110" target="_blank">(https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=624110)</a><br></small>
+        <small class="page-rating rating ">评分: 5.5<br></small>
+        <small class="page-annotation annotation ">注释: 介绍了卡通式幽默与设计所带来的游戏互动性和乐趣，间接反映角色交互影响。<br></small>
+    </div>
+    <div class="page-content content"><p>OP EvilKitsune  陌生人 E  加入时间：2017年6月</p>
+<h3>利用箱子进行位移</h3>
+<p>取两桶或两箱。让一名玩家左键点击并按住底部的物品。让另一名玩家拿起顶部的物品，并在其中放置一个传送器金字塔，然后让这名玩家把它移到远处。让按住底部物品左键的玩家旋转它。当顶部的物品放下时，它仍然会与堆叠连接，这意味着当第一名玩家释放左键时，它会根据旋转的方向放置在任何距离的地方。然后你就可以传送到这个物品着陆的任何地方。使用这个漏洞，你可以去任何地方，甚至地图外的虚空中、海底或悬崖峭壁上。玩得开心！不用说，你必须有一套金字塔才能做到这一点，所以你必须完成第一个岛屿。</p>
+<p>最后编辑于：EvilKitsune；2017年9月30日 下午5:29</p>
+        <small class="page-url url "><a href="https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=624110" target="_blank">(https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=624110)</a><br></small>
+    </div>
+
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 获取所有导航链接
+        const navLinks = document.querySelectorAll(".navigate-item");
+        // 将导航链接与目标元素建立映射关系
+        const connections = Array.from(navLinks).map(link => {
+            const targetId = link.getAttribute("href").substring(1); // 去掉 #
+            const targetElement = document.getElementById(targetId);
+            return { link, targetElement };
+        });
+        // 使用 IntersectionObserver 观察目标元素
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const { target, isIntersecting } = entry;
+                    const matchingLink = connections.find(connection => connection.targetElement === target).link;
+                    if (isIntersecting) {
+                        // 目标元素在视野中，添加高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.add("active");
+                    } else {
+                        // 目标元素离开视野，移除高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.remove("active");
+                    }
+                });
+            },
+            {
+                root: null, // 默认视口
+                threshold: 0.02
+            }
+        );
+
+        // 开始观察所有目标元素
+        connections.forEach(({ targetElement }) => observer.observe(targetElement));
+    });
+</script>
+<script>
+    // 获取元素
+    const resizer = document.querySelector('.resizer');
+    const leftColumn = document.querySelector('.left-column');
+    const rightColumn = document.querySelector('.right-column');
+    const navigate = document.querySelector('.navigate')
+
+    let isDragging = false;
+
+    // 鼠标按下事件
+    resizer.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        document.body.style.cursor = 'col-resize';
+        document.body.style.userSelect = 'none';
+    });
+
+    // 鼠标移动事件
+    document.addEventListener('mousemove', (event) => {
+        if (!isDragging) return;
+
+        // 计算新的宽度
+        const newLeftWidth = event.clientX / window.innerWidth * 100; // 转换为百分比
+
+        // 限制宽度范围
+        if (newLeftWidth > 15 && newLeftWidth < 70) {
+            leftColumn.style.flexBasis = `${newLeftWidth}%`;
+            rightColumn.style.flexBasis = `${100 - newLeftWidth}%`;
+            navigate.style.left = `${newLeftWidth + 0.15 * (100 - newLeftWidth)}%`
+            navigate.style.maxWidth = `${0.7 * (100 - newLeftWidth)}%`
+
+            const navigateRect = navigate.getBoundingClientRect();
+            const screenWidth = window.innerWidth;
+
+            // 获取右侧部分宽度
+            const rightColumnWidth = rightColumn.getBoundingClientRect().width;
+
+            // 计算 navigate 的占屏幕宽度比例
+            const navigateWidthPercentage = (navigateRect.width / screenWidth) * 100;
+
+            // 计算 navigate 居中所需的 left 值
+            const rightColumnLeft = rightColumn.getBoundingClientRect().left;
+            const navigateLeft = rightColumnLeft + (rightColumnWidth - navigateRect.width) / 2;
+
+            // 设置 navigate 的宽度和位置
+            navigate.style.left = `${navigateLeft}px`;
+        }
+    });
+
+    // 鼠标松开事件
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        document.body.style.cursor = 'default';
+        document.body.style.userSelect = 'auto';
+    });
+</script>
+</html>

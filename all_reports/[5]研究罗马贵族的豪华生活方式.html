@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>研究罗马贵族的豪华生活方式</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; 
+            background-color: #f4f6f8; 
+            color: #333; 
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        
+        .content {
+            border-radius: 12px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); 
+            background-color: #fff; 
+            padding: 16px; 
+            margin-bottom: 16px; 
+        }
+
+        
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .left-column{
+            flex: 0.47;
+        }
+        .right-column{
+            flex: 0.53;
+        }
+
+        .left-column {
+            background-color: #eef6ff; 
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; 
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Noto Serif", "SimSun", serif; 
+            position: relative;
+        }
+        .resizer {
+            width: 6px;
+            cursor: col-resize;
+            background-color: #d1d1d1;
+        }
+
+
+        
+        .title {
+            font-size: 1.4em; 
+            font-weight: 600; 
+            color: #1a1a1a; 
+            margin-bottom: 12px; 
+        }
+
+        .page-name.title {
+            font-size: 1.8em; 
+            font-weight: bold; 
+            color: #222; 
+            margin: 16px 0; 
+            text-align: left; 
+        }
+
+        .section-title {
+            font-size: 1.4em; 
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; 
+        }
+
+        
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; 
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; 
+            padding: 12px; 
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; 
+            border: 1px solid #dde3ea; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+            margin-bottom: 20px; 
+        }
+
+        
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; 
+            margin: 20px 0; 
+        }
+
+        
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; 
+            color: #666; 
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; 
+            border-radius: 8px; 
+            line-height: 1.4;
+            margin-bottom: 10px; 
+        }
+
+        
+        .page-rating {
+            background-color: #e8f4ff; 
+            color: #0078d7; 
+            font-weight: bold; 
+            border: 1px solid #aad4ff; 
+        }
+
+        
+        .page-annotation {
+            background-color: #fff5e5; 
+            color: #cc8400; 
+            font-style: italic; 
+            border: 1px solid #ffcc66; 
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; 
+        }
+
+        
+        a {
+            color: #0078d7; 
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+        
+        .content > * {
+            margin-bottom: 12px; 
+        }
+
+        
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; 
+            z-index: 300; 
+            background-color: #ffffff; 
+            color: #222; 
+            font-size: 1.1em; 
+            font-weight: 500; 
+            padding: 12px 16px; 
+            border-radius: 8px; 
+            border: 1px solid #d1e4f2; 
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05),  0 2px 4px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 16px; 
+            text-align: left; 
+            line-height: 1.6; 
+            font-family: "Inter", "Noto Sans", sans-serif; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        
+        .section-link-box {
+            display: inline-block; 
+            margin: 4px 2px; 
+        }
+
+        .section-link {
+            display: inline-flex; 
+            align-items: center; 
+            padding: 6px 12px; 
+            background-color: #eef6ff; 
+            color: #0078d7; 
+            font-size: 0.95em; 
+            font-weight: 500; 
+            text-decoration: none; 
+            border: 1px solid #d1e4f2; 
+            border-radius: 20px; 
+            transition: all 0.2s ease; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; 
+            color: #005bb5; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            text-decoration: underline; 
+        }
+
+        
+        .navigate {
+            display: flex; 
+            max-width: 40%;
+            width: fit-content; 
+            flex-wrap: nowrap; 
+            overflow-x: auto; 
+            gap: 4px; 
+            justify-content: center; 
+            padding: 4px 4px; 
+            background-color: #f4f6f8; 
+            border-radius: 12px; 
+
+            position: fixed;
+            top: 0;
+            left: 55%;
+            
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease; 
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        
+        .navigate-item {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            background-color: #ffffff; 
+            padding: 3px 6px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            transition: all 0.3s ease; 
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            transform: translateY(2px); 
+        }
+        .navigate-item.active {
+            box-shadow: 0 0 10px 3px rgba(0, 120, 215, 0.5); 
+            transform: translateY(1px); 
+        }
+        .navigate-item a {
+            text-decoration: none; 
+            color: #0078d7; 
+            font-weight: bold; 
+            font-size: 1em; 
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; 
+            margin-bottom: 1px; 
+        }
+        .navigate-item-id {
+            font-size: 0.9em; 
+            color: #555; 
+        }
+
+        [id] { 
+            scroll-margin-top: 55px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            研究罗马贵族的豪华生活方式
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">罗马贵族的饮食文化</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#The-Social-Hierarchy-of-Ancient-Roman-Housing">
+    🏛饮食文化</a></div><div class="section-link-box"><a class="section-link" href="#EATING-HABITS-AND-CUSTOMS-IN-THE-ROMAN-EMPIRE:-MEALS,-COUCHES,-UTENSILS-|-Facts-and-Details">
+    🍗宴会习俗</a></div><div class="section-link-box"><a class="section-link" href="#The-Roman-Banquet-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History">
+    🍾社交仪式</a></div><div class="section-link-box"><a class="section-link" href="#Theater-and-Amphitheater-in-the-Roman-World-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History">
+    🎭</a></div><div class="section-link-box"><a class="section-link" href="#Social-class-in-ancient-Rome---Wikipedia">
+    ⚖</a></div><div class="section-link-box"><a class="section-link" href="#What-Were-Homes-Like-in-Ancient-Rome?-(4-Types)">
+    🏡</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-cuisine---Wikipedia">
+    🍇</a></div></div>
+    <div class="section-content content"><h2>罗马贵族的饮食文化</h2>
+<p>罗马贵族的饮食奢华程度与其社会地位密切相关，远超平民百姓。其饮食食材涵盖小麦、豆类、奶制品、肉类（尤其猪肉和鱼类，牛肉相对少见）、各种水果（包括进口的异域水果如无花果）和蔬菜（如卷心菜、莴苣、芦笋、甜菜等，但缺乏现代意大利菜常见的西红柿、茄子等），展现了其对食材的丰富选择和获取能力。烹饪方式多样，据《阿皮丘斯》等古籍记载，他们运用复杂的烹饪技法，制作各种菜肴。调味品方面，以鱼露（garum）为代表，不同等级的鱼露也反映了用餐者的经济实力。</p>
+<p>与平民百姓简单的日常饮食形成鲜明对比，罗马贵族的饮食核心是盛大的宴会（convivium），通常分为多个环节：开胃菜（gustatio）、主菜（mensae primae）和甜点（mensae secundae）。主菜中，珍稀的野生动物（野鸡、画眉、鹿肉、野猪等）、海鲜（牡蛎、龙虾、贝类等）以及一些被奢侈法明令禁止但仍被公然食用的食物（如肥家禽、母猪乳房）体现了其高昂的成本和炫耀财富的目的。甜点则以新鲜水果和各种精致糕点为主。宴会不仅注重食物本身，更强调其华丽的呈现方式，正如彼得罗尼乌斯的小说《特里马尔基翁的晚餐》所描绘的，食物甚至会被塑造成十二生肖等形状。  宴会过程中，葡萄酒（通常与水混合）是必不可少的饮品，甚至以加热的热水（authepsae）调制也是罗马宴会的特色。</p>
+<p>宴会所用的餐具更是等级的象征。最富有的贵族使用金银器皿（argentum escarium 和 argentum potorium），包括各种形状和尺寸的餐盘、碗、勺子（cochlear 和 ligula）、酒杯等，许多器皿上装饰着浮雕图案，描绘自然风光、动物、神话故事等，甚至包括色情场景。  较低等级的贵族则可能使用青铜器或高品质的陶器（如Terra sigillata），但依然体现着精湛的工艺和对审美的追求。  考古发现，例如庞贝和赫库兰尼姆遗址出土的大量银器，以及众多壁画和马赛克的描绘，都佐证了这些奢华的宴会场景。  宴会往往伴有音乐（长笛、水管琴、里拉琴等）和舞蹈表演，以及其他娱乐活动，如杂技、哑剧等，进一步提升了宴会的奢华程度，并把其变成了重要的社交和政治仪式。  虽然文献中提到的“炸小鼠”等极端案例可能夸大其辞，但总体而言，罗马贵族的饮食文化无疑是其社会地位和财富的集中体现。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">罗马贵族的住宅设计</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#The-Social-Hierarchy-of-Ancient-Roman-Housing">
+    🏛Domus设计</a></div><div class="section-link-box"><a class="section-link" href="#What-Were-Homes-Like-in-Ancient-Rome?-(4-Types)">
+    🏡Domus与Villa</a></div><div class="section-link-box"><a class="section-link" href="#The-Roman-Banquet-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History">
+    🍾</a></div></div>
+    <div class="section-content content"><h2>罗马贵族住宅设计：Domus与Villa的比较</h2>
+<p>罗马贵族住宅，特别是Domus和Villa，是其社会地位和财富的直观体现。城市住宅Domus的布局，通常以中心庭院（Atrium）为核心，其功能涵盖家庭生活和社交活动。[1, 2]  Atrium的装饰奢华，常见华丽的马赛克、壁画和雕塑，[1]  体现主人的财富和审美品味。Atrium的compluvium（天窗）和impluvium（雨水收集池）的设计，[1,3]  不仅满足采光和储水需求，更体现主人对细节的精益求精以及优越的经济实力（只有最富裕的住宅才配备完整的管道系统）。[3] 私密区域Postica则包含厨房、浴室和仆人居住区。[1]  富裕的贵族还会在Domus中设置Peristylium（柱廊环绕的花园），[3] 提供休闲和社交的场所。其规模大小往往与主人的财富成正比。[4]</p>
+<p>乡村别墅Villa规模更大，功能也更为多元化。[4] Villa Rustica主要用于农业生产，[4] 包括谷仓、鸡舍、蜂箱、磨坊、油和酒榨等设施，以满足自给自足的需求。[3] 而专用于休闲和娱乐的Villa，则拥有更奢华的装饰和设施，例如雕塑、喷泉和精心布置的花园。[4]  其建筑规模和装饰水平，直接反映了主人的财富和社会地位。[4] 壁画和雕塑中常见神话故事和历史场景，[5, 6]  进一步彰显主人的文化素养和社会地位；艺术品的选择，也反映了当时罗马精英文化特色，以及主人对知识和声望的追求。[5, 6]  这些建筑的功能设计和内部装饰，与罗马贵族的社交生活密切相关。通过接待宾客和举办盛大的宴会，如文献记载的convivium（共同生活）、cena（晚餐）和comissatio（酒宴），[7]  巩固其社会地位和影响力。[7]  宴会中使用的精美的银器、金器、玻璃器皿以及陶器，例如Terra sigillata，[7] 也是财富和地位的象征。  从Domus到Villa，空间的组织和装饰，都精心设计以塑造运动模式、互动方式以及社交仪式的预期。[5]</p>
+<p><strong>参考文献</strong>:</p>
+<p>[1]  What Were Homes Like in Ancient Rome? (4 Types)
+[2] The Social Hierarchy of Ancient Roman Housing
+[3]  古罗马住宅的社会等级
+[4]  The Roman Banquet | Essay | The Metropolitan Museum of Art | Heilbrunn Timeline of Art History
+[5]  研究罗马贵族的豪华生活方式 (Report paragraph provided)
+[6]  (Implicit from webpage content on depiction of myths and historical scenes in art)
+[7]  (Implicit from webpage content on Roman banquets and dining practices)</p></div>
+</div><div class="section">
+    <h3 class="section-title title">罗马贵族的社交活动</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#The-Social-Hierarchy-of-Ancient-Roman-Housing">
+    🏛建筑影响</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-cuisine---Wikipedia">
+    🍇饮食文化</a></div><div class="section-link-box"><a class="section-link" href="#EATING-HABITS-AND-CUSTOMS-IN-THE-ROMAN-EMPIRE:-MEALS,-COUCHES,-UTENSILS-|-Facts-and-Details">
+    🍗宴会习俗</a></div><div class="section-link-box"><a class="section-link" href="#Social-class-in-ancient-Rome---Wikipedia">
+    ⚖社会等级</a></div><div class="section-link-box"><a class="section-link" href="#What-Were-Homes-Like-in-Ancient-Rome?-(4-Types)">
+    🏡贵族住宅</a></div><div class="section-link-box"><a class="section-link" href="#The-Roman-Banquet-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History">
+    🍾宴会细节</a></div><div class="section-link-box"><a class="section-link" href="#Theater-and-Amphitheater-in-the-Roman-World-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History">
+    🎭</a></div><div class="section-link-box"><a class="section-link" href="#Athletics,-Leisure,-and-Entertainment-in-Ancient-Rome---World-History-Encyclopedia">
+    ⚽</a></div><div class="section-link-box"><a class="section-link" href="#Patrician-|-Elite-Social-Class,-Wealth-&-Power-|-Britannica">
+    💍</a></div></div>
+    <div class="section-content content"><h2>罗马贵族的社交活动：权力、财富与等级的象征</h2>
+<p>罗马贵族的社交活动并非单纯的娱乐，而是权力、财富和等级的复杂体现，并通过精心设计的仪式和活动来巩固其社会地位和影响力。  其主要特征体现在以下几个方面：</p>
+<p><strong>1. 婚姻策略：巩固权力与传承财富:</strong>  罗马贵族婚姻并非单纯的个人选择，而是家族政治策略的重要组成部分。 如文献所述，婚姻被用来巩固家族之间的联盟，确保权力和财富的传承，并提升家族在社会等级中的位置。  这不仅体现在罗马建国神话中Romulus绑架萨宾妇女的传说（象征着罗马贵族的扩张和权力巩固），更体现在罗马复杂的婚姻制度中，例如 <em>coemptio</em> (买卖婚姻), <em>usus</em> (习惯法婚姻) 和 <em>confarreatio</em> (宗教仪式婚姻) 等，这些制度都与财产继承和社会地位的传承息息相关。(参考维基百科: 古罗马社会阶级)。  贵族家庭通过战略性的联姻，扩张家族影响力并维护其统治地位。</p>
+<p><strong>2. 奢华宴会：财富与地位的炫耀性展示:</strong>  宴会是罗马贵族展示其财富和社会地位的首要场所。《罗马世界的宴会：盛宴与社交仪式》中详细描述了这种社交活动的盛况：精心准备的菜肴，从普通的谷物蔬菜到昂贵的异域食材（如野鸡、画眉、牡蛎、龙虾等，甚至包括被奢侈法明令禁止的食材），都体现了主人的财力和地位。 华丽的银器、金器以及玻璃器皿(参考大都会艺术博物馆文章：罗马宴会)等奢华餐具，搭配音乐、舞蹈、甚至角斗士表演等娱乐活动，共同营造出一个感官盛宴，以震撼宾客，巩固主人的社会地位和影响力。  凯撒大帝的盛大庆祝活动便是这种奢华宴会的典型案例。(参考庞培的茱莉亚食府)。 宴会参与者的座位安排以及服务方式也严格遵循等级制度，进一步强调了社会等级的差异。</p>
+<p><strong>3. 精细的社交礼仪：等级与权力关系的体现:</strong>  罗马贵族的社交活动充满各种细致的礼仪，这些礼仪不仅体现了罗马社会等级制度的森严，也强化了主客之间的权力关系。例如，进门脱鞋、为客人洗脚等细节服务，都并非简单的客套，而是精心设计的仪式，用以维护主人的尊严和地位，并向来宾暗示其在社会等级中的不同地位。(参考《饮食习惯和习俗在罗马帝国：膳食、长沙发、餐具》)。</p>
+<p><strong>4. 公共场合的权力展示：塑造公众形象:</strong> 罗马贵族并非只在私人场合展现其财富和权力。在公共场合，如竞技场、剧院以及凯旋游行等（参考大都会艺术博物馆文章：罗马世界的剧院与圆形剧场），他们也通过赞助公共娱乐活动、参与公众仪式，以及通过奢华的服饰和座驾来吸引公众的注意，从而塑造其公众形象，巩固其社会影响力，并维护统治阶级的权威。</p>
+<p>总之，罗马贵族的社交活动并非简单的私人聚会，而是维护社会等级、展示权力财富，以及巩固其统治地位的策略性行为。  这些活动的设计和执行，都深刻地反映了罗马社会的等级制度和权力结构，其奢华程度与社会地位密切相关。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">罗马贵族的文化与艺术参与</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Culture-of-ancient-Rome---Wikipedia">
+    🎨艺术与建筑</a></div><div class="section-link-box"><a class="section-link" href="#Roman-art---Wikipedia">
+    🖼艺术创作</a></div><div class="section-link-box"><a class="section-link" href="#The-Social-Hierarchy-of-Ancient-Roman-Housing">
+    🏛文化的兴盛</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-philosophy---Wikipedia">
+    📜哲学和教育</a></div><div class="section-link-box"><a class="section-link" href="#What-was-life-of-an-aristocrat-like-in-the-city-of-Rome-during-the-late-republic?---Quora">
+    🏺</a></div></div>
+    <div class="section-content content"><h2>罗马贵族的文化与艺术参与</h2>
+<p>罗马贵族积极参与文化生活，尤其在哲学和艺术领域表现突出。  哲学方面，斯多葛学派和学院派思想在罗马贵族中颇受欢迎，例如哈德良皇帝就热衷于哲学讨论和学习，并积极资助雅典的文化复兴[5]。  这与公元前155年雅典使团在罗马传播哲学思想的事件息息相关[1]，此后希腊化哲学对罗马哲学影响深远，许多罗马哲学家融合了多个学派的教义[2]，甚至如马可·奥勒留皇帝以希腊语撰写其《沉思录》[见古罗马哲学]。  艺术方面，他们热衷于赞助和参与艺术创作，并聘请来自希腊及其他地区的艺术家，体现了对希腊艺术文化的推崇和学习。  大量的雕塑作品从公元前1世纪开始得以保存[见古罗马艺术]，反映了贵族对艺术的投资和收藏。  万神殿及图拉真柱等宏伟建筑[见古罗马文化] 以及大量保存至今的硬币[见古罗马艺术]，则有力地证明了他们的艺术成就和文化繁荣。  帝国时期的肖像画，最初承袭希腊化风格高度理想化[见古罗马艺术]，但逐渐发展出独特的罗马风格，例如  半身像[见古罗马艺术]。  贵族对艺术的巨额投入，不仅提升了自身的文化品位，更直接彰显了他们的显著经济实力和崇高社会地位[见罗马贵族的生活：物质富足与政治动荡]，  并且对罗马艺术风格的形成，以及对平民生活的影响也起到重要作用[见古罗马住宅的社会等级]。  然而，晚期共和国的政治动荡[见罗马贵族的生活：物质富足与政治动荡]也影响了贵族们的文化参与，许多贵族卷入政治斗争或成为清洗的目标[见罗马贵族的生活：物质富足与政治动荡]。</p>
+<p><strong>参考文献：</strong>  (文中[数字]对应此处列出的参考文献)</p>
+<p>[1] Ancient Roman philosophy - Wikipedia
+[2] Ancient Roman philosophy - Wikipedia
+[3] Ancient Roman philosophy - Wikipedia
+[4] Ancient Roman philosophy - Wikipedia
+[5] Ancient Roman philosophy - Wikipedia</p></div>
+</div><div class="section">
+    <h3 class="section-title title">罗马贵族的经济地位</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#The-Social-Hierarchy-of-Ancient-Roman-Housing">
+    🏛叙述罗马建筑与经济状况</a></div><div class="section-link-box"><a class="section-link" href="#What-Were-Homes-Like-in-Ancient-Rome?-(4-Types)">
+    🏡详细描述罗马贵族的家居和生活形式</a></div><div class="section-link-box"><a class="section-link" href="#The-Roman-Banquet-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History">
+    🍾讨论罗马宴会与奢侈品消费</a></div><div class="section-link-box"><a class="section-link" href="#Social-class-in-ancient-Rome---Wikipedia">
+    ⚖分析罗马的社会阶级和经济影响</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-cuisine---Wikipedia">
+    🍇</a></div><div class="section-link-box"><a class="section-link" href="#EATING-HABITS-AND-CUSTOMS-IN-THE-ROMAN-EMPIRE:-MEALS,-COUCHES,-UTENSILS-|-Facts-and-Details">
+    🍗</a></div><div class="section-link-box"><a class="section-link" href="#Patrician-|-Elite-Social-Class,-Wealth-&-Power-|-Britannica">
+    💍</a></div></div>
+    <div class="section-content content"><p>罗马贵族的经济地位源于其对生产资料和贸易网络的控制，体现在以下几个方面：</p>
+<ol>
+<li>
+<p><strong>土地所有制与农业生产:</strong>  罗马贵族拥有大量的土地，构成其财富的主要来源。这些土地不仅用于自给自足的农业生产，更重要的是通过大规模奴隶劳动进行商业化运作。文献记载，即使是简单的农庄也需自给自足，生产粮食和衣物（《居住安排：罗马房屋和公寓》，2001）；而精英阶层的乡村别墅（<em>villa rustica</em>）则规模更大，配备谷仓、鸡舍、蜂箱、磨坊、橄榄油和葡萄酒榨酒厂等设施，形成完整的农业产业链，并提供舒适的居住环境，直接体现其经济实力 (Nardo, 2002)。  据估计，共和国时期罗马大部分土地掌握在少数贵族手中，通过控制土地和农业生产，他们获得了巨额财富。</p>
+</li>
+<li>
+<p><strong>奴隶制度与劳动生产力:</strong> 奴隶制度是罗马贵族经济运作的基石。大规模的奴隶劳动不仅支撑了农业生产，也渗透到家庭生活和所有经济活动中。  奴隶承担了繁重的体力劳动、家庭管理和服务等工作 (Nardo, 2002; 《居住安排：罗马房屋和公寓》，2001)，极大提高了贵族的生产效率和生活质量，并使贵族有更多时间参与政治和社会活动。  文献中多次描述贵族住宅中大量奴隶的存在，例如负责烹饪、清洁和服务等工作 (Bardis, 1963)。</p>
+</li>
+<li>
+<p><strong>奢侈品贸易与财富积累:</strong>  罗马贵族积极参与贸易，尤其是在奢侈品贸易中占据主导地位。通过控制奢侈品的进口、流通和销售，他们巩固并提升了自己的社会地位和经济实力。  他们从帝国各地甚至更远的地方进口珍稀食材、珍禽异兽、昂贵的香料和高档织物等(Ackerman, 1986; Frazer, 1992)，这些物品不仅满足了他们的物质享受，更重要的是成为身份和地位的象征，强化其社会特权。文献记载，罗马贵族饮食中偏爱异国美食和珍稀食材，例如野鸡、画眉、龙虾和孔雀等 (《罗马世界的宴会：盛宴与社交仪式》)，以及高价的进口鱼酱(<em>garum</em>) (《古代罗马烹饪》)，以及来自不同地区的葡萄酒和橄榄油 （《古代罗马烹饪》），这些都充分说明了贸易在维持其经济地位的重要作用。  文献中高档鱼酱（garum）的巨额花费也佐证了这一点（《古代罗马烹饪》）。</p>
+</li>
+</ol></div>
+</div><div class="section">
+    <h3 class="section-title title">罗马贵族的日常生活方式</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#The-Social-Hierarchy-of-Ancient-Roman-Housing">
+    🏛住房文化</a></div><div class="section-link-box"><a class="section-link" href="#EATING-HABITS-AND-CUSTOMS-IN-THE-ROMAN-EMPIRE:-MEALS,-COUCHES,-UTENSILS-|-Facts-and-Details">
+    🍗宴会习俗</a></div><div class="section-link-box"><a class="section-link" href="#Social-class-in-ancient-Rome---Wikipedia">
+    ⚖社会阶层</a></div><div class="section-link-box"><a class="section-link" href="#What-Were-Homes-Like-in-Ancient-Rome?-(4-Types)">
+    🏡</a></div><div class="section-link-box"><a class="section-link" href="#The-Roman-Banquet-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History">
+    🍾</a></div></div>
+    <div class="section-content content"><h2>罗马贵族的日常生活方式</h2>
+<p>罗马贵族的日常生活并非遵循朝九晚五的规律作息，而是更侧重于享乐和社交活动，其奢华优雅的生活方式体现在以下几个方面：</p>
+<p><strong>一、时间安排与休闲活动:</strong>  罗马贵族白天可能处理政务或商业事务，例如参与元老院会议或管理其商业利益。  但他们日常生活并非以工作为主导。下午或傍晚，他们经常参加宴会（<em>convivium</em> 或 <em>cena</em>），这是重要的社交仪式，也是展示财富和权势的场合（《罗马世界的宴会：盛宴与社交仪式》）。  夏季，他们会前往乡间别墅（<em>villa</em>），其中既有用于农业生产的 <em>villa rustica</em>，也有专供休闲娱乐的豪华别墅（《What Were Homes Like in Ancient Rome? (4 Types)》）。 在别墅中，他们可以享受游泳、骑马等体育活动，以及广阔花园提供的宁静环境（《研究罗马贵族的豪华生活方式》）。  这与下层阶级依靠街头小贩购买食物，且多数人只能在拥挤、简陋的 <em>insulae</em>  居住形成鲜明对比（《庞培的茱莉亚食府》）。</p>
+<p><strong>二、教育与文化修养:</strong> 罗马贵族普遍接受良好的教育，熟练掌握拉丁语和希腊语。他们对哲学、艺术和文学有着浓厚的兴趣，积极参与哲学沙龙和文学聚会。这种文化素养不仅体现在其个人生活，也体现在其对艺术和文化的慷慨赞助上（《研究罗马贵族的豪华生活方式》）。  贵族住宅的壁画和雕塑，经常描绘神话故事或历史事件，也反映了他们的文化品味和知识水平（《研究罗马贵族的豪华生活方式》）。  例如，<em>domus</em> 中庭的壁画可能描绘卡斯托和波吕克斯，以营造庄严的氛围并强化主人的地位（《研究罗马贵族的豪华生活方式》）；  而 <em>tablinum</em>  的绘画则可能描绘阿喀琉斯等人物，以强调赞助人与客户之间的互动（《研究罗马贵族的豪华生活方式》）。</p>
+<p><strong>三、体育活动与健康理念:</strong> 罗马贵族重视身体健康，积极参与各种体育活动，例如游泳、骑马、摔跤、拳击和球类游戏等（《研究罗马贵族的豪华生活方式》）。  他们会前往公共浴场 (<em>thermae</em>)，这不仅是清洁身体的场所，也是进行社交和放松的重要场所，体现了他们对身心健康的重视（《研究罗马贵族的豪华生活方式》）。 值得注意的是，下层阶级很少有机会享用公共浴场（《古罗马住宅的社会等级》）。</p>
+<p><strong>四、巩固社会地位的方式:</strong> 罗马贵族通过参与公共事务（例如元老院会议）和各种社交活动来巩固其社会地位。盛大的宴会是他们展示财富和权势的重要方式（《庞培的茱莉亚食府》），  精致的餐饮、奢华的装饰（例如银制餐具、精美马赛克）、以及各种形式的娱乐表演（音乐、舞蹈、戏剧等），都旨在为宾客留下深刻印象，强化其社会影响力（《罗马世界的宴会：盛宴与社交仪式》）。 他们的住宅——宏伟的 <em>domus</em> 和 <em>villa</em>，以及精美的马赛克、壁画和雕塑——也是他们财富和社会地位的象征（《What Were Homes Like in Ancient Rome? (4 Types)》）。 此外，对艺术和文化的赞助也成为他们巩固地位和提升声望的重要手段。  与之相比，下层阶级主要关注生存，食物来源主要依赖街头小贩和简单的烹饪方式（《庞培的茱莉亚食府》），居住环境也极其简陋（《古罗马住宅的社会等级》）。</p>
+<p><strong>五、社会等级的体现:</strong>  罗马的住宅建筑直接反映了社会等级的差异（《古罗马住宅的社会等级》）。  贵族居住于宽敞豪华的 <em>domus</em> 和 <em>villa</em>，而下层阶级则居住于拥挤简陋的 <em>insulae</em> 或农舍，生活条件差距巨大。即使在饮食方面，上层阶级也能获得各种珍稀食材和更为精致的烹饪方式，与下层阶级形成了鲜明的对比（《庞培的茱莉亚食府》）。  这种社会等级制度不仅仅体现在物质条件上，也体现在社会活动和文化参与方面（《古罗马的社会等级》）。  贵族通过参与宴会、政治活动以及对艺术的资助，巩固了自己的社会地位和权力。</p></div>
+</div>
+</div>
+<div class="resizer"></div>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item" href="#The-Social-Hierarchy-of-Ancient-Roman-Housing">
+    <a href="#The-Social-Hierarchy-of-Ancient-Roman-Housing" class="navigate-item-emoji ">🏛</a>
+    <a href="#The-Social-Hierarchy-of-Ancient-Roman-Housing" class="navigate-item-id">1</a>
+</div><div class="navigate-item" href="#The-Roman-Banquet-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History">
+    <a href="#The-Roman-Banquet-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History" class="navigate-item-emoji ">🍾</a>
+    <a href="#The-Roman-Banquet-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History" class="navigate-item-id">2</a>
+</div><div class="navigate-item" href="#Culture-of-ancient-Rome---Wikipedia">
+    <a href="#Culture-of-ancient-Rome---Wikipedia" class="navigate-item-emoji ">🎨</a>
+    <a href="#Culture-of-ancient-Rome---Wikipedia" class="navigate-item-id">3</a>
+</div><div class="navigate-item" href="#Social-class-in-ancient-Rome---Wikipedia">
+    <a href="#Social-class-in-ancient-Rome---Wikipedia" class="navigate-item-emoji ">⚖</a>
+    <a href="#Social-class-in-ancient-Rome---Wikipedia" class="navigate-item-id">4</a>
+</div><div class="navigate-item" href="#Ancient-Roman-Society---World-History-Encyclopedia">
+    <a href="#Ancient-Roman-Society---World-History-Encyclopedia" class="navigate-item-emoji ">🌟</a>
+    <a href="#Ancient-Roman-Society---World-History-Encyclopedia" class="navigate-item-id">5</a>
+</div><div class="navigate-item" href="#Etiquipedia:-Etiquette-of-Roman-Empire-Dining">
+    <a href="#Etiquipedia:-Etiquette-of-Roman-Empire-Dining" class="navigate-item-emoji ">🍽</a>
+    <a href="#Etiquipedia:-Etiquette-of-Roman-Empire-Dining" class="navigate-item-id">6</a>
+</div><div class="navigate-item" href="#What-Were-Homes-Like-in-Ancient-Rome?-(4-Types)">
+    <a href="#What-Were-Homes-Like-in-Ancient-Rome?-(4-Types)" class="navigate-item-emoji ">🏡</a>
+    <a href="#What-Were-Homes-Like-in-Ancient-Rome?-(4-Types)" class="navigate-item-id">7</a>
+</div><div class="navigate-item" href="#EATING-HABITS-AND-CUSTOMS-IN-THE-ROMAN-EMPIRE:-MEALS,-COUCHES,-UTENSILS-|-Facts-and-Details">
+    <a href="#EATING-HABITS-AND-CUSTOMS-IN-THE-ROMAN-EMPIRE:-MEALS,-COUCHES,-UTENSILS-|-Facts-and-Details" class="navigate-item-emoji ">🍗</a>
+    <a href="#EATING-HABITS-AND-CUSTOMS-IN-THE-ROMAN-EMPIRE:-MEALS,-COUCHES,-UTENSILS-|-Facts-and-Details" class="navigate-item-id">8</a>
+</div><div class="navigate-item" href="#The-Food-of-Ancient-Rome">
+    <a href="#The-Food-of-Ancient-Rome" class="navigate-item-emoji ">🍽</a>
+    <a href="#The-Food-of-Ancient-Rome" class="navigate-item-id">9</a>
+</div><div class="navigate-item" href="#Roman-art---Wikipedia">
+    <a href="#Roman-art---Wikipedia" class="navigate-item-emoji ">🖼</a>
+    <a href="#Roman-art---Wikipedia" class="navigate-item-id">10</a>
+</div><div class="navigate-item" href="#Patrician-|-Elite-Social-Class,-Wealth-&-Power-|-Britannica">
+    <a href="#Patrician-|-Elite-Social-Class,-Wealth-&-Power-|-Britannica" class="navigate-item-emoji ">💍</a>
+    <a href="#Patrician-|-Elite-Social-Class,-Wealth-&-Power-|-Britannica" class="navigate-item-id">11</a>
+</div><div class="navigate-item" href="#Roman-economy---Wikipedia">
+    <a href="#Roman-economy---Wikipedia" class="navigate-item-emoji ">💰</a>
+    <a href="#Roman-economy---Wikipedia" class="navigate-item-id">12</a>
+</div><div class="navigate-item" href="#Daily-Life-in-Ancient-Rome-—-MayaIncaAztec.com">
+    <a href="#Daily-Life-in-Ancient-Rome-—-MayaIncaAztec.com" class="navigate-item-emoji ">📚</a>
+    <a href="#Daily-Life-in-Ancient-Rome-—-MayaIncaAztec.com" class="navigate-item-id">13</a>
+</div><div class="navigate-item" href="#Ancient-Roman-cuisine---Wikipedia">
+    <a href="#Ancient-Roman-cuisine---Wikipedia" class="navigate-item-emoji ">🍇</a>
+    <a href="#Ancient-Roman-cuisine---Wikipedia" class="navigate-item-id">14</a>
+</div><div class="navigate-item" href="#Theater-and-Amphitheater-in-the-Roman-World-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History">
+    <a href="#Theater-and-Amphitheater-in-the-Roman-World-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History" class="navigate-item-emoji ">🎭</a>
+    <a href="#Theater-and-Amphitheater-in-the-Roman-World-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History" class="navigate-item-id">15</a>
+</div><div class="navigate-item" href="#Ancient-Roman-philosophy---Wikipedia">
+    <a href="#Ancient-Roman-philosophy---Wikipedia" class="navigate-item-emoji ">📜</a>
+    <a href="#Ancient-Roman-philosophy---Wikipedia" class="navigate-item-id">16</a>
+</div><div class="navigate-item" href="#What-was-life-of-an-aristocrat-like-in-the-city-of-Rome-during-the-late-republic?---Quora">
+    <a href="#What-was-life-of-an-aristocrat-like-in-the-city-of-Rome-during-the-late-republic?---Quora" class="navigate-item-emoji ">🏺</a>
+    <a href="#What-was-life-of-an-aristocrat-like-in-the-city-of-Rome-during-the-late-republic?---Quora" class="navigate-item-id">17</a>
+</div><div class="navigate-item" href="#Clothing-in-ancient-Rome---Wikipedia">
+    <a href="#Clothing-in-ancient-Rome---Wikipedia" class="navigate-item-emoji ">👗</a>
+    <a href="#Clothing-in-ancient-Rome---Wikipedia" class="navigate-item-id">18</a>
+</div><div class="navigate-item" href="#Athletics,-Leisure,-and-Entertainment-in-Ancient-Rome---World-History-Encyclopedia">
+    <a href="#Athletics,-Leisure,-and-Entertainment-in-Ancient-Rome---World-History-Encyclopedia" class="navigate-item-emoji ">⚽</a>
+    <a href="#Athletics,-Leisure,-and-Entertainment-in-Ancient-Rome---World-History-Encyclopedia" class="navigate-item-id">19</a>
+</div>
+    </div>
+    <div class="page"  id="The-Social-Hierarchy-of-Ancient-Roman-Housing">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏛&nbsp;</span>The Social Hierarchy of Ancient Roman Housing</h3>
+        <small class="page-url url "><a href="https://www.byarcadia.org/post/the-social-hierarchy-of-ancient-roman-housing" target="_blank">(https://www.byarcadia.org/post/the-social-hierarchy-of-ancient-roman-housing)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 这篇文章探讨了古罗马的社交等级及其住房的设计，体现了贵族的奢华与社会地位。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马住宅的社会等级</h2>
+<p>古罗马建筑的宏伟是他们工程技术的证明，许多建筑至今仍屹立不倒，经受了几个世纪的人类破坏和环境侵蚀。罗马帝国的建筑构造主要用于满足宗教、政治和公民的需要，其设计精细，旨在模仿当时的文化意识形态和价值观。反过来，它也塑造了日常生活中的社会结构。住宅建筑也不例外——它遵循了文明的基本、社会和智力需求。古罗马的住宅大小和风格各异，很大程度上取决于社会声望、经济地位和职业需求。下层阶级居住在简陋的小住宅里，而富裕的人则可以居住在宽敞、装饰精美的住宅里。</p>
+<p>古罗马人口中的很大一部分是居住在贫困农舍中的下层居民。这类住宅通常是只有一两间房的小屋或棚屋，家具很少，依靠中央壁炉取暖和做饭 (Nardo, 2002)。每个农场的收入各不相同，但无论大小，农舍都必须自给自足；他们自己种植所有食物，饲养牲畜，收获羊毛制作衣服 (《居住安排：罗马房屋和公寓》，2001)。农村居民很少有机会进入城市，这限制了他们进口商品或参与城市生活中所有阶级都能享有的社会仪式，例如公共浴室。在罗马早期，大多数居民居住在类似于下层阶级农舍的棚屋或小型住宅中。然而，到了共和国后期，被称为 <em>insulae</em> 的公寓楼在城市地区变得普遍，可以容纳许多下层公民 (《房屋》，1998)。</p>
+<p><em>insulae</em> 的正面通常长 250-350 英尺，高三到五层。上层楼层有五到十间一两居室的公寓，称为 vernacular，通常是用木头和泥砖建造的 (Nardo, 20020)。<em>insulae</em> 的底层设有一排小型商店、酒馆和食品店，方便租户使用 (《居住安排：罗马房屋和公寓》，2001)。有时，底层的空房可以出租给收入较高的居民。这些房间更贵，但是用石头建造的，提供了更坚固、更安全的选项。尽管古罗马人在水利工程方面非常娴熟，但 <em>insulae</em> 没有自来水，居民需要从城市里的喷泉取水，然后按需将其运送到各自的公寓。也没有厨房，因此需要使用火盆——一种无釉陶罐，带有一个用于烧炭的腔室，用于烹饪 (《房屋》，1998)。随着城市开始发展繁荣，许多 <em>insulae</em> 开始在建筑物内提供公共烹饪设施，尽管许多人更喜欢在小吃店用餐，这是一种社会仪式。</p>
+<p>富有的罗马顾客通常居住在 <em>domus</em>：一个舒适的独户住宅，为居民提供了远离城市喧嚣生活的感觉。大多数私人住宅的布局和风格特征相似，但大小差异很大 (Bardis, 1963)。与 <em>insulae</em> 一样，<em>domus</em> 在共和国后期开始兴起，其特点是 <em>atrium</em>，这成为私人住宅的传统建筑布局。中庭是房屋中最主要的房间，只能通过一个封闭的小院子——<em>vestibulum</em>——进入，这使得 <em>domus</em> 的入口远离街道 (《居住安排：罗马房屋和公寓》，2001)。作为向任何访客展示房主财富地位的一种方式，中庭装饰精美，有雕像、瓷砖、马赛克、壁画和柱子。罗马人经常在中庭设置 <em>lararium</em>，或是一个供奉家庭神灵的小神龛，家人定期在那里祈祷 (Nardo, 2002)。屋顶中央是 <em>compluvium</em>，这是一个可以让光线进入中庭的开口。开口下方是 <em>impluvium</em>，这是一个宽大的盆地，用于收集储存在地下陶罐中的雨水，因为只有最富有的住宅才配备管道系统 (《居住安排：罗马房屋和公寓》，2001)。 <em>domus</em> 中的中庭成为住宅建筑的支柱和家庭生活的中心，所有其他房间都由此展开。</p>
+<p>厨房和盥洗室位于中庭周围的房间，卧室——称为 <em>cubicula</em>，也在其中 (Bardis, 1963)。中庭之外是 <em>tablinum</em>，可以通过走廊从接待大厅进入，它在富裕家庭的家庭生活中扮演着重要的角色。 <em>tablinum</em> 是户主 <em>paterfamilias</em> 接收他的客户或访客的地方，这是一个被称为 <em>salutatio</em> 的日常赞助仪式 (Trimble, 2002)。这些房间是 <em>domus</em> 的组成部分，而且基本保持不变。公元前 100 年代，较大的罗马住宅引进了一种新的建筑元素，称为 <em>peristylium</em>，这是 <em>domus</em> 中一个没有屋顶的花园，包括喷泉、树木和各种环绕柱廊的花朵 (Bardis, 1963)。通常只有精英家庭才有这种新的风格发展，因为它建造和维护成本很高。 <em>peristylium</em> 位于房屋的中心，周围建有房间，就像它们围绕中庭一样。餐厅和接待室通常面向花园，以便在日常社交或专业活动中提供充足的光线和美丽的风景。</p>
+<p>想要逃离城市喧嚣日常生活的罗马贵族可以退回到他们的乡间别墅，称为 <em>villa</em>。罗马别墅的风格和用途各不相同，但在经济上分为两种形式：自给自足的农舍或业主个人和社会享受的休憩场所 (Ackerman, 1986)。乡村的 <em>villa rustica</em> 可以建立一个农业企业，除了作为居住场所外，还可以作为一个工作的农场。由于它是自给自足的，所以 <em>villa rustica</em> 会提供谷仓、鸡舍、蜂箱、磨坊、油和酒榨，以及富裕农业别墅的任何其他农业设施 (Nardo, 2002)。精英阶层的 <em>villa rustica</em> 通常很豪华，通常设有浴室，方便 <em>paterfamilias</em>、他的家人和任何访客使用。</p>
+<p>只有精英才能享有这种特权：贵族通常会购买第二套住宅仅仅是为了娱乐。因此，并非所有乡村别墅都是工作的农舍；相反，由于休憩和娱乐的因素，以及对财富的大量展示，别墅被确立为地位的象征。这些别墅与它们的城市同行具有相同的建筑特征，但规模往往更大。它们包含无数的雕塑、喷泉、精心照料的花园以及装饰有精美绘画和马赛克的优雅内饰。许多罗马人在海边景观中建造他们的别墅，以便在炎热的夏季欣赏海景和感受海风。罗马别墅是“共和国后期和帝国时期罗马统治阶级物质和社会文化的一个决定性特征”（Frazer，1992 年，第 49 页）。第二套住宅的建筑和宏伟装饰直接反映了其所有者的财务状况，并且事实上是他们社会和经济影响力的物质标志。</p>
+<p><em>domus</em>、<em>villa</em> 的建筑实体及其墙壁内的社会活动之间存在着相互关系。罗马贵族的社会地位取决于他们财富的炫耀和在家中进行的社会活动的规模。因此，他必须鼓励款待和接纳访客，以满足这些豪华建筑的要求 (Wallace-Hadrill, 1988)。古罗马的住宅建筑与社会等级的区分密切相关，但它并非完全关乎一处住宅与另一处住宅。相反，它非常关注设计、其影响及其对社会互动的影响之间的社会关系。公共生活和私人生活的交叉点很大程度上是由社会仪式塑造和形成的。</p>
+<p>描绘神话叙事的壁画和绘画广泛地展现在整个罗马帝国，并极大地有助于界定贵族住宅的空间理解。只有地位和教育足够高的客人才能进入庄园，并且旨在被这种财富的宏伟展示所打动。许多住宅的中庭都添加了描绘双胞胎神卡斯托和波吕克斯的壁画。作为道德和神圣的存在，每个人的雕像都贴在入口的两侧，以构成空间内的事件。每位兄弟的目光在进入时都与访客的目光相遇，营造出相互凝视的错觉。这引发了“看”和“被看”的主题，以及反映了富有洞察力和智力的社会互动的意图 (Trimble, 2002)。神话绘画代表社会等级的顶端，出现在最尊贵的形式的墙壁中央，只有令人印象深刻的画框才能照亮——仅仅看到这些图像和精致的住宅本身就是一项重大的社会成就。整个房间中描绘的艺术品都经过精心挑选，以反映一个人对当前精英文化的参与，这标志着他的知识和声望。</p>
+<p><em>tablinum</em> 中的绘画通常描绘阿喀琉斯等人物，以突出赞助人及其客户或访客之间互动的重要性，尤其是在 <em>salutatio</em> 中。 <em>tablinum</em> 的主要作用是意识形态的，并面向访客 (Trimble, 2002)。如果赞助人和客户有幸见面，则他们互动环境中所代表的图像会提高对成功社会仪式的期望，从而有助于定义和履行各自的角色。这些图像的二元性引发了客户与赞助人之间的对抗，这有助于双方利益的进步。在绘画的构图、位置和视觉互动中，住宅中的绘画可能有助于阐明和定义住宅中的社会仪式 (Trimble, 2002)。所描绘的意象也有助于确定空间的功能等级，在重要的社会仪式房间（例如接待客户）中引起人们的注意 (Frederick, 1995)。</p>
+<p>对于许多富有的赞助人来说，住宅建筑的重点很大程度上集中在理论和心理需求以及社会和物质需求上。别墅的花园是罗马住宅的支柱，通常也是视觉焦点。在房屋入口处，人们的目光会被花园吸引，花园位于中庭和 <em>tablinum</em> 之后。花园的空间导向性是别墅的统治力量，罗马人喜欢利用大量的柱廊进行沉思漫步 (Giesecke, 2001)。罗马别墅的建筑形式影响着活动、运动模式和互动——旨在模仿希腊化世界的知识和讲故事文化。作为精英的特权，“在上层住宅散步让身心都动起来，将贵族带出其别墅的物理范围之外”（O&#x27;Sullivan，2006 年，第 134 页）。</p>
+<p>社会地位和经济财富将罗马社会划分为一个看似二元的文化等级制度，这种等级制度奠定了集体居住空间的生活或奢侈和休闲的生活。下层阶级可以获得的住房舒适度低、拥挤且缺乏基本设施，但是，与贵族建筑一样，公寓楼的建筑设计鼓励社会实践，例如集体用餐。别墅的奢华是上层阶级的一种特权，是精英社会地位的自豪展示，它具有仪式、娱乐和职业功能。空间组织和装饰结构了房屋的运动和感知，确立了由建筑设计决定的其他人际交往仪式的期望。从其复杂的建筑到财富和装饰的复杂展示，古罗马生活的文化和社会组织都体现在如今仍然屹立的房屋和别墅的建筑遗迹中。这些建筑实用而美丽，生动地描绘了日常生活，并阐明了共和国后期和帝国时期的家庭习俗。</p>
+        <small class="page-url url "><a href="https://www.byarcadia.org/post/the-social-hierarchy-of-ancient-roman-housing" target="_blank">(https://www.byarcadia.org/post/the-social-hierarchy-of-ancient-roman-housing)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="The-Roman-Banquet-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🍾&nbsp;</span>The Roman Banquet | Essay | The Metropolitan Museum of Art | Heilbrunn Timeline of Art History</h3>
+        <small class="page-url url "><a href="https://www.metmuseum.org/toah/hd/banq/hd_banq.htm" target="_blank">(https://www.metmuseum.org/toah/hd/banq/hd_banq.htm)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 描述了罗马的宴会文化和社交活动，突出了贵族如何通过美食展示财富与地位。<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马世界的宴会：盛宴与社交仪式</h2>
+<p>罗马世界的节日饮食是一项重要的社会仪式。通常被称为 convivium（拉丁语：“共同生活”）或宴会，罗马人也会区分特定类型的聚会，例如 epulum（公共宴会）、cena（晚餐，通常在下午吃）和 comissatio（酒宴）。公共宴会，例如为城市所有居民提供的公民宴会，通常容纳大量用餐者。相比之下，在住宅中举行的私人晚宴则更为私密，主人招待一小群家庭朋友、商业伙伴和客户。</p>
+<p>罗马文学资料将精英阶层的私人宴会描述为一种感官盛宴，主人努力以奢华的食物、豪华的餐具和各种娱乐形式来打动客人，所有这些都在装饰华丽的环境中享用。罗马住宅的考古证据揭示了私人宴会发生的环境和聚会期间使用的物品类型。餐厅是住宅最重要的接待空间之一，因此，它包括高质量的装饰设施，例如地板马赛克、壁画和灰泥浮雕，以及便携式豪华物品，例如艺术品（特别是雕塑）和家具。</p>
+<p>与希腊人一样，罗马人在宴会时也斜躺在沙发上，尽管在罗马语境中，体面的妇女被允许与男人一起斜躺。这种做法使 convivium 有别于希腊的 symposium，或男性贵族的酒宴，女性参加者仅限于笛女、舞女和交际花 (hetaerae)。餐厅通常摆放三张宽大的沙发，每张沙发可容纳三人，因此总共可容纳九位客人。这种类型的房间通常被称为 triclinium（字面意思是“三沙发房间”），尽管考古学上也证明了可以容纳更多沙发的餐厅。在 triclinium 中，沙发呈 U 形排列在房间的三面墙上，中间摆放一张单桌，所有用餐者都可以使用。沙发通常由木材制成，但也有一些更奢华的款式，其配件由象牙和青铜等昂贵材料制成。</p>
+<p>一顿正宗的罗马晚餐包括三道菜：开胃菜 (gustatio)、主菜 (mensae primae) 和甜点 (mensae secundae)。提供的食物和饮料不仅是为了让客人吃饱，也是为了为这顿饭增添一份壮观的元素。异国情调的产品，特别是来自野生动物、鸟类和鱼类的产品，由于其稀有性、难以采购以及随之而来的高成本而受到精英晚宴的青睐，这反映了主人的富有程度。流行但昂贵的菜肴包括野鸡、画眉（或其他鸣禽）、生牡蛎、龙虾、贝类、鹿肉、野猪和孔雀。根据奢侈法禁止的食物，例如肥家禽和母猪的乳房，在最奢华的宴会上被公然食用。此外，还发明了复杂的食谱——现存的一部文学作品，名为《阿皮丘斯》(Apicius)，是罗马晚期烹调食谱汇编。这些通常不仅需要昂贵的食材和制备方法，还需要精心制作，甚至戏剧化的呈现方式。例如，在彼得罗尼乌斯·阿尔比特在尼禄统治时期（公元 54-68 年）创作的小说《特里马尔基翁的晚餐》(Cena Trimalchionis) 中，富有的自由民特里马尔基翁为他的客人提供许多奢华的菜肴，例如用香肠塞满的烤猪、装饰有翅膀以模仿飞马的野兔，以及各种排列成十二生肖形状的食物。</p>
+<p>在罗马宴会期间，葡萄酒贯穿整顿饭作为食物的佐餐酒。这种做法与希腊的 deipnon 或正餐形成对比，后者侧重于食物的消耗；葡萄酒被保留用于随后的 symposium。与希腊人一样，罗马人在饮酒前将葡萄酒与水混合。使用称为 authepsae 的特殊锅炉加热热水似乎是罗马特有的习俗。这种装置（类似于后来的茶炊）在罗马绘画和马赛克中都有描绘，在罗马帝国不同地区的考古环境中也发现了一些例子。冷水，更罕见的是冰或雪，也用于混合。通常，葡萄酒是根据客人的口味和自己杯子中的分量混合的，这与希腊人在大型 krater（混合碗）中为整个聚会进行集体混合的做法不同。葡萄酒是用 simpulum（勺子）倒入酒杯中的，这使得服务员可以测量出特定数量的葡萄酒。</p>
+<p>一顿颓废的饭菜需要一套精美的餐具，包括许多旨在兼具功能性和装饰性的器皿和餐具。最华丽的餐具是由昂贵的材料制成的，例如银、金、青铜或半宝石（例如水晶、玛瑙和缟玛瑙）。然而，即使是中等收入的家庭也可能拥有成套的银餐具，称为 ministerium。庞贝、莫雷吉内（庞贝郊外的一个遗址）、博斯科雷亚莱和蒂沃利等地发现的大量银制餐具收藏，反映了所用器皿和餐具形状和尺寸的多样性。一套完整的餐具包括用于进食的银器 (argentum escarium) 和用于饮酒的银器 (argentum potorium)。食物用银器包括大型托盘和盘子，以及个人的碗和盘子，以及勺子，这是罗马人使用的主要餐具。勺子有两种流行的形式：cochlear，它有一个小的圆形碗和一个尖的柄，用于吃贝类、鸡蛋和蜗牛；以及 ligula，它有一个更大、梨形的碗。刀叉的使用较少，尽管已经发现了例子。在饮酒用的银器中，杯子的形状各不相同，其中最流行的杯子起源于希腊类型，例如 scyphus 和 cantharus，它们都是带有两个把手 的酒杯。在许多情况下，成对发现银制酒杯。它们可能用于欢庆仪式，例如祝酒。</p>
+<p>最华丽的银杯饰有浮雕，经常描绘自然主义的花卉和植物图案、动物、色情场景和神话主题。与酒神狄俄尼索斯相关的意象，这位希腊酒神、陶醉和狂欢之神，经常用于为奉酒和饮酒而设计的物品上。博物馆收藏的一对杯子，两件都描绘了跳舞和演奏乐器的丘比特，尤其适合酒宴，因为它们的主题唤起了狄俄尼索斯的仪式。狄俄尼索斯的意象也用于其他宴会用具，例如一个青铜的 situla（桶形容器）把手附件，其形状为萨提尔或西勒努斯的面具。</p>
+<p>类似类型的餐具是由成本较低的材料制成的，但它们展现出高超的工艺水平。随着公元 1 世纪前半叶罗马玻璃工业的迅速发展，玻璃在罗马世界变得尤其时尚且更容易获得。新的技术使玻璃制造商能够创造各种风格的器皿，例如单色玻璃、多色马赛克玻璃、金带玻璃和无色玻璃，后者模仿昂贵的水晶器皿的外观。浮雕玻璃，它是通过在分层玻璃上雕刻图案制成的，在精英阶层中尤其珍贵，因为它精细雕刻的意象与银器和金器上的图案相似。</p>
+<p>陶器是另一种经济实惠的替代品。Terra sigillata 是一种模制陶器，以其类似漆器的红色釉面而闻名，非常受欢迎。来自阿雷佐（现代意大利阿雷佐）的 Terra sigillata 器皿，被称为阿雷佐陶器，以其浮雕装饰而闻名，这种装饰通常使用不同人物和图案的印章制作。Terra sigillata 工业也在各省蓬勃发展，尤其是在高卢，那里大量生产和出口普通和装饰器皿到帝国的各个地区。</p>
+<p>宴会的最后一个组成部分是它的娱乐活动，旨在愉悦眼睛和耳朵。音乐表演通常包括长笛、水管琴和里拉琴，以及合唱作品。活跃的娱乐形式可以包括杂技演员、舞女、角斗士战斗、哑剧、哑剧，甚至训练有素的动物，例如狮子和豹子。还有一些更为保守的选择，例如朗诵诗歌（特别是新的罗马史诗，维吉尔的《埃涅阿斯纪》）、历史和戏剧表演。甚至房子的工作人员和奴隶也被融入到娱乐中：唱歌的厨师在为客人服务时表演，而年轻、有吸引力、打扮整齐的男性侍酒者则提供了另一种视觉上的分散注意力。总而言之，罗马宴会不仅仅是一顿饭，而是一个精心策划的展示奇观，旨在向客人们展示主人的财富、地位和精致，最好同时胜过其精英朋友和同事的奢华宴会。</p>
+        <small class="page-url url "><a href="https://www.metmuseum.org/toah/hd/banq/hd_banq.htm" target="_blank">(https://www.metmuseum.org/toah/hd/banq/hd_banq.htm)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Culture-of-ancient-Rome---Wikipedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🎨&nbsp;</span>Culture of ancient Rome - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Culture_of_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Culture_of_ancient_Rome)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 概述了古罗马文明的文化背景，强调贵族在文化艺术中的参与和影响。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马文化</h2>
+<p>古罗马文明存在了近 1200 年，其文化贯穿始终。这一术语指的是罗马共和国，后来的罗马帝国的文化，在其鼎盛时期，疆域从今天的低地苏格兰和摩洛哥延伸到幼发拉底河。古罗马的生活围绕着罗马城，其著名的七座山丘及其诸如斗兽场、图拉真广场和万神殿等宏伟的建筑展开。这座城市还有几个剧院和体育馆，以及许多酒馆、浴室和妓院。在古罗马控制下的整个领土上，住宅建筑从非常简朴的房屋到乡村别墅不等，在罗马首都，还有位于优雅的帕拉丁山上的帝国住所，palace一词就源于此。绝大多数罗马人居住在市中心，挤在Insulae（公寓楼）里。罗马城是当时最大的大都市，人口可能超过一百万人，最高估计为 360 万，最低估计为 45 万。在该城市管辖下相当一部分人口居住在无数的城市中心，人口至少 1 万，以及一些军事定居点，按前工业化标准来看，城市化率非常高。帝国中城市化程度最高的部分是意大利，其城市化率估计为 32%，与 1800 年的英格兰相同。大多数罗马城镇都有一个广场、寺庙以及与罗马发现的建筑相同类型的建筑，只是规模较小。庞大的人口需要大量的食物供应，这是一项复杂的物流任务，包括为罗马和其他城市中心获取、运输、储存和分配食物。意大利农场提供蔬菜和水果，但鱼肉是奢侈品。修建了渡槽将水输送到城市中心，葡萄酒和油则从西班牙、高卢和非洲进口。罗马帝国各省之间存在着大量的贸易往来，因为其道路和运输技术非常高效。运输的平均成本和技术与 18 世纪的欧洲相当。后来的罗马城直到 1870 年之后才填满了其古代奥勒良城墙内的空间。古罗马管辖下的大部分人口居住在农村，居住在不足 1 万居民的定居点。地主通常居住在城市，他们的庄园由农场经理照管。农村奴隶的处境通常比在城市贵族家庭工作的奴隶更糟。为了刺激更高的劳动生产率，大多数地主释放了大量奴隶，许多奴隶领到了工资，但在一些农村地区，贫困和过度拥挤极其严重。[1]农村贫困刺激了人口向城市中心的迁移，直到 2 世纪初，城市人口停止增长并开始下降。从公元前 2 世纪中期开始，尽管保守的道德家们对希腊化文化的“软化”影响进行了抨击，但私人的希腊文化日益占据主导地位。到了奥古斯都时期，有文化的希腊家庭奴隶教育罗马青年（有时甚至是女孩）；厨师、装饰师、秘书、医生和理发师都来自希腊东方。希腊雕塑装饰着帕拉丁山或别墅上的希腊化园林景观，或者在罗马雕塑院由希腊奴隶模仿。在这个人文背景下，无论是城市还是农村环境，历史上最有影响力的文明之一都形成了，并留下了部分至今仍存在的文化遗产。</p>
+<p>罗马帝国始于公元前 31 年奥古斯都成为罗马第一位皇帝，在西方于公元 476 年最后一位罗马皇帝罗慕路斯·奥古斯图卢斯被奥多亚克废黜时结束。罗马帝国在其鼎盛时期（约公元 100 年）是西方文明中最广泛的政治和社会结构。到公元 285 年，帝国变得过于庞大，无法由罗马中央政府统治，因此被戴克里先皇帝划分为东西罗马帝国。在东方，帝国作为拜占庭帝国继续存在，直到君士坦丁十一世去世和君士坦丁堡于 1453 年沦为奥斯曼帝国。罗马帝国对西方文明的影响是深远的，它对西方文化的几乎各个方面都做出了持久的贡献。</p>
+<h2>社会结构</h2>
+<p>早期的社会结构，追溯到农业部落城邦时期，其中心是家庭，它不仅以生物学关系为标志，而且以 patria potestas（“父权”）的法律关系为标志。家长是家庭的绝对首脑；他对他的妻子（如果她嫁给他时是 cum manu，否则妻子的父亲保留 patria potestas）、他的孩子、他儿子的妻子（同样如果结婚时是 cum manu，这在共和国末期变得越来越少）、侄子、奴隶和自由民（解放的奴隶，第一代在法律上仍然不如自由民）拥有绝对的权力，随意处置他们及其财产，甚至处死他们。奴隶制和奴隶是社会秩序的一部分。奴隶大多是战俘。有奴隶市场可以买卖他们。罗马法对奴隶的地位并不一致，只是认为他们像任何其他动产一样。许多奴隶因其提供的出色服务而被主人释放；一些奴隶可以攒钱买自由。一般来说，法律禁止对奴隶进行残害和谋杀，[需要引用]尽管残暴的行为仍在继续。公元 4 年，《爱利亚·森提亚法》规定了正式释放奴隶之前主人（20 岁）和奴隶（30 岁）的最低年龄限制。[2]除了这些家庭（称为 gentes）和奴隶（在法律上是物品，mancipia，即“掌握在[主人]手中”）之外，还有平民，从法律角度来看他们并不存在。他们没有法律能力，无法签订合同，尽管他们不是奴隶。为了解决这个问题，创造了所谓的 clientela。通过这一制度，平民加入了一个贵族的家庭（在法律意义上），并可以通过其贵族的家长来签订合同。平民合法拥有或获得的一切都属于 gens。他不允许组建自己的 gens。家长的权力是无限的，无论是在民事权利还是在刑法中。国王的职责是掌管军队，处理外交事务，并裁决 gens 之间的争议。贵族被分为三个部落（Ramnenses、Titientes、Luceres）。在罗马共和国时期（公元前 509 年成立），罗马公民被允许投票。这包括贵族和平民。妇女、奴隶和儿童不被允许投票。有两个议会：centuriata comitia 和 populi tributa comitia，它们由所有罗马公民组成。在 centuriata comitia 中，罗马人根据年龄、财富和居住地划分。每个部落的公民根据财产分为五个等级，然后每个群体又根据年龄细分为两个百人队。总共有 373 个百人队。与部落议会一样，每个百人队有一票。centuriata comitia 选举执政官（司法长官）、监察官和执政官。populi tributa comitia 包括来自罗马和乡村的 35 个部落。每个部落有一票。populi tributa comitia 选举财务官（财务长官）和贵族 curule aedile。随着时间的推移，罗马法以及社会观点都发生了很大的变化，（在越来越大的程度上）解放了家庭成员。正义也大大增加了。罗马人在审议法律和惩罚方面变得更加有效率。</p>
+<p>古罗马城市的生活围绕着广场，即中心商业区展开，大多数罗马人都会去那里进行营销、购物、贸易、银行业务以及参加庆祝活动和仪式。广场也是演说家表达自我、塑造公众舆论以及为他们或他人感兴趣的任何特定问题争取支持的地方。日出前，孩子们会去上学，或者在家接受辅导。长者会穿衣，11 点左右吃早餐，午睡，下午或晚上通常会去广场。大多数罗马公民每天至少去公共浴室一次是一种习惯。男女浴室是分开的。主要区别在于女浴室比男浴室小，而且没有 frigidarium（冷室）或 palaestra（运动区）。[需要引用]古罗马有各种各样的免费户外和室内娱乐活动。根据活动的性质，它们安排在白天、下午、晚上或深夜。成群的人聚集在斗兽场观看角斗士参与的活动，比如男人之间的战斗，或者男人和野兽之间的战斗。最大竞技场用于赛车。乡村生活节奏缓慢但充满活力，有许多当地的节日和社交活动。农场由农场经理经营，但庄园主有时会前往乡村休养，享受大自然的壮丽景色和阳光，包括钓鱼、狩猎和骑马等活动。另一方面，奴隶劳动持续进行，时间很长，而且所有七天都是如此，确保主人的舒适和创造财富。普通的农场主境况较好，他们在村里的市场上度过晚上，进行经济和社交互动。一天以一顿饭结束，通常是中午准备好的剩菜。</p>
+<h3>服装</h3>
+<p>在古罗马，布料和服装区分了不同阶层的人。平民（普通百姓）如牧羊人穿的束腰外衣是用粗糙的深色材料制成的，而贵族穿的束腰外衣则是亚麻或白色羊毛制成的。执政官会穿 tunica angusticlavi；参议员穿有紫色条纹（clavi）的束腰外衣，称为 tunica laticlavi。军用束腰外衣比平民穿的短。也有许多类型的托加被命名。男孩们直到利贝拉利亚节才穿托加 praetexta，这是一种带有深红色或紫色边框的托加，在职的执政官也穿这种托加。托加 virilis（或托加 pura）或男式托加由成年男子穿着，以表示他们在罗马的公民身份。托加 picta 由凯旋的将军穿着，并绣有他们在战场上的技能。托加 pulla 用于丧服。甚至鞋类也表明了一个人的社会地位。贵族穿红色和橙色凉鞋，参议员穿棕色鞋，执政官穿白色鞋，士兵穿厚重的靴子。妇女穿白色、黄色或绿色等颜色的封闭式鞋子。bulla 是孩子们佩戴的一种像锁匙一样的护身符。即将结婚时，妇女会将她的 lunula 捐献给家神，以及她的玩具，以表示成熟和女性气质。男子通常穿托加，妇女穿 stola。妇女的 stola 是一种穿在束腰外衣外的衣服，通常颜色鲜艳。fibula（或胸针）将用作装饰或用来固定 stola。palla，或披肩，通常与 stola 一起穿着。</p>
+<h3>食物</h3>
+<p>从共和国建立到公元前 200 年，古罗马人有着非常简单的饮食习惯。简单的食物通常在 11 点左右食用，包括面包、沙拉、橄榄、奶酪、水果、坚果和前一天晚上晚餐剩下的冷肉。早餐称为ientaculum，午餐称为prandium，晚餐称为cena。开胃菜称为gustatio，甜点称为secunda mensa（“第二桌”）。通常，之后会小睡或休息。家人一起吃饭，坐在凳子上围着一张桌子。后来，设计了一个带餐椅的单独餐厅，称为atriclinium。用手指取食物，食物事先准备好，然后送到用餐者面前。汤匙用于盛汤。在罗马，葡萄酒直到大约公元前 250 年才变得普遍或大规模生产。它在卡托长者时期更为常见，他在他的书《论农业》中提到葡萄园是良好农场的最重要方面。[3]葡萄酒被认为是主食饮料，所有阶层的人在所有餐点和场合都会饮用，而且相当便宜；然而，它总是与水混合。[需要引用]即使在明确的傍晚饮酒活动（comissatio）中也是如此，庆祝活动的一个重要部分是选择 arbiter bibendi（“饮酒法官”），他除了其他事情外，还负责决定饮用葡萄酒中葡萄酒与水的比例。葡萄酒与水的比例通常为 1:2、1:3 或 1:4。也饮用许多种含有葡萄和蜂蜜的饮料。Mulsum 是加蜂蜜的葡萄酒，mustum 是葡萄汁，mulsa 是加蜂蜜的水。罗马城的人均每日葡萄酒消费量估计男性为 0.8 至 1.1 加仑，女性约为 0.5 加仑。即使是臭名昭著的严厉的卡托长者也建议每天向被迫在农场工作的奴隶分配超过 0.5 加仑的劣质葡萄酒。[需要引用]空腹饮用不兑水的葡萄酒被认为是粗鲁的，并且是酗酒的明确标志，古罗马人已经认识到其使人衰弱的身心影响。在以八卦闻名的城市社会中，准确的酗酒指控一定会被曝光并很容易得到证实——这是某些罗马最伟大的演说家（如西塞罗和凯撒）用来诋毁政治对手的一种最受欢迎且具有破坏性的方式。著名的罗马酒鬼包括马克·安东尼、西塞罗自己的儿子马库斯（西塞罗小）和提比略皇帝，他的士兵给他起了个不讨人喜欢的绰号 Biberius Caldius Mero（字面意思是“纯酒醉鬼”，苏埃托尼乌斯《提比略传》42,1）。小卡托也被认为是酒鬼，经常被同胞发现迷迷糊糊地跌跌撞撞地回家，并且在清晨衣衫不整。在帝国时期，下层阶级罗马人（平民）的主食是蔬菜粥和面包，偶尔还有鱼、肉、橄榄和水果。有时，补贴或免费的食物会在城市中分发。贵族的贵族们会举行盛大的宴会，有派对和葡萄酒以及各种各样的食物。有时，舞女会为就餐者表演节目。妇女和儿童分开吃饭，但在后来的帝国时期，随着纵容的蔓延，即使是体面的妇女也会参加这些宴会。</p>
+<h3>教育</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Culture_of_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Culture_of_ancient_Rome)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Social-class-in-ancient-Rome---Wikipedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">⚖&nbsp;</span>Social class in ancient Rome - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Social_class_in_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Social_class_in_ancient_Rome)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 分析了罗马的社会等级制度及其在日常生活中的体现，包括贵族与平民的差异。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马的社会等级</h2>
+<p>古罗马的社会等级制度是等级森严的，存在多个相互重叠的社会等级体系。个人的社会地位在一个等级体系中可能高于或低于另一个等级体系，这使得罗马的社会构成复杂化。[1] 共和时期自由罗马人的地位由以下因素决定：</p>
+<ul>
+<li>血统（贵族或平民）</li>
+<li>人口普查等级（ordo），基于财富和政治特权，元老和骑士等级高于普通公民。</li>
+<li>性别</li>
+<li>公民身份，公民身份有不同的等级，享有不同的权利和特权。</li>
+</ul>
+<p>不同的罗马等级享有不同的权利和特权，包括投票权、婚姻权等等。</p>
+<h2>贵族和平民</h2>
+<p>传统上，贵族指的是上层阶级，而平民指的是下层阶级。[2] 经济差异导致少数家族积累了罗马的大部分财富，从而产生了贵族和平民阶级。[2]然而，在最初的这种区别之后，贵族和平民家族之间的界限是严格世袭的，基于社会地位。[2]在一系列政治冲突和平等化之后，平民构成了罗马公民的大多数。虽然贵族通常被描绘成富有而强大的家族，他们设法获得了对不幸的平民家族的权力，但元老院阶级的平民和贵族往往同样富有。[2]随着罗马共和国中后期平民的公民权利增加，许多平民家庭获得了财富和权力，而一些传统的贵族家庭则陷入贫困和默默无闻。无论平民家庭变得多么富有，他们都不会被提升到贵族的行列。[2]到公元前二世纪，贵族和平民之间的区别已经失去了大部分意义，并开始合并成一个阶级。[3]</p>
+<h3>贵族</h3>
+<p>在早期的罗马社会中，贵族被认为是上层阶级。他们控制着最好的土地，并构成了罗马元老院的大多数。在公元前444年之前，平民成为参议员是罕见的——如果不是不可能的话。[2][需要页面] 在外表上，他们主要通过其染色的装饰鞋（calceus patricius）与平民区分开来。[4][5] 古罗马的一种常见的社会关系是客户关系制度，它涉及一个保护人和一个或多个客户，他们为彼此提供服务，并从事强有力的商业关系。贵族往往是保护人，他们通常会有多个平民客户。[2] 保护人向他们的客户提供许多服务，以换取如果保护人去打仗的承诺。[2] 这种保护制度是将罗马社会紧密联系在一起的阶级关系之一，同时也保护了贵族的社会特权。[2] 客户关系持续到罗马后期社会，几乎贯穿整个古代罗马的存在。[2] 贵族还独家控制着审查官的职位，审查官控制着人口普查，任命参议员，并监督社会和政治生活的其他方面。通过审查官，贵族能够维持其对平民的统治地位。[2]</p>
+<h3>平民</h3>
+<p>平民是罗马的下层阶级，是劳工和农民，他们大多耕种贵族拥有的土地。直到公元前二世纪，一些平民拥有小块土地的情况才变得普遍。[2] 平民通过客户关系制度与贵族联系在一起，在战争中协助他们的贵族保护人，提高他们的社会地位，并增加嫁妆或赎金。[2] 公元前450年，平民被禁止与贵族结婚，但这项法律五年后（公元前445年）被护民官废除了。[2][需要页面]然而，在大多数情况下，平民在整个古代罗马的存在期间仍然依赖于那些社会地位较高的人。[2][需要页面]</p>
+<h2>基于性别的阶级</h2>
+<h3>家庭家长</h3>
+<p>罗马社会在最纯粹的意义上是父权制的；户主的男性是家庭家长，他拥有特殊的法律权力和特权，使他拥有对他的家庭所有成员的管辖权（patria potestas）。[2] 父亲负责教育他们的儿子。此外，成年儿子通常会结婚并继续住在家庭住所，直到他们的父亲去世，他们才接管家庭家长的责任。[2] 家庭家长也可以进行解放仪式——连续三次释放儿子——赋予儿子自己的法律权力，摆脱家庭家长的控制。[2]</p>
+<h3>女性</h3>
+<p>古罗马的自由出生女性是公民（cives），但不能投票或担任公职。妇女受其家庭家长的专属控制，其家庭家长是他们的父亲、丈夫，有时是他们的长兄。[2] 妇女及其子女继承其家庭家长的社会地位。妇女不参与政治领域，她们在家以外的影响力很小。然而，富裕家庭的妇女比贫穷妇女拥有更大的政治权力，因为她们能够在公开的政治行动背后发挥影响力。[7] 有三种早期的婚姻形式，将罗马妇女从一个家庭家长转移到另一个家庭家长。第一个是coemptio，代表购买新娘。[2][8] 这种最古老的婚姻形式需要五位证人和一名官员，并被视为一项商业交易。[8] 第二个是usus，发生在一个男人和一个女人亲密一年之后。[8] 如果女人在一年之后没有离开男人三天晚上，她就成为男人的财产，而他成为她的家庭家长。如果女人在三天晚上结束之前离开，她将回到她的家人。这种关系仍然有效，但男人不会成为她的家庭家长。[8] 最后的婚姻形式confarreatio，与现代婚姻最接近。Confarreatio是一个宗教仪式，包括新娘和新郎在宗教官员和其他证人面前分享面包。[8] 到公元二世纪末，sine manu婚姻成为标准的婚姻形式。[2] 通过sine manu婚姻，妇女不属于新丈夫或其父亲的法律管辖范围。她们在父亲去世后控制自己的财产（通常是她们的嫁妆）。[2] 男人仍然必须代表他们的女人签署任何文件，但现在婚姻中有两个经济单位。此外，离婚可以由男人或女人发起，通常是在证人面前说三次“我跟你离婚”。[2] 母亲作为公民的法律地位影响了她儿子的公民身份。短语ex duobus civibus Romanis natos（“由两位罗马公民所生的孩子”）表明，罗马妇女被认为拥有公民身份，这与peregrina形成特定对比。</p>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Social_class_in_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Social_class_in_ancient_Rome)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Ancient-Roman-Society---World-History-Encyclopedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🌟&nbsp;</span>Ancient Roman Society - World History Encyclopedia</h3>
+        <small class="page-url url "><a href="https://www.worldhistory.org/article/1463/ancient-roman-society/" target="_blank">(https://www.worldhistory.org/article/1463/ancient-roman-society/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 分析了罗马贵族生活的奢华与日常安排，展示了其社会地位的多方面体现。<br></small>
+    </div>
+    <div class="page-content content"><h2>罗慕路斯的故事及其社会背景</h2>
+<p>罗慕路斯的故事部分涉及到&quot;萨宾妇女被劫&quot;，讲述了早期罗马人绑架其他部落妇女的故事，特别是萨宾人。这些部落组织军队夺回妇女，但其中一位妇女——赫西莉亚（成为罗慕路斯妻子）——却团结其他妇女阻止不必要的流血事件，并坚持留在罗马。这个故事被认为以神话的形式，体现了妇女在罗马社会中至关重要的作用：通过婚姻维系家庭，并在敌对派系之间保持和平关系。</p>
+<h3>阶级与冲突</h3>
+<p>家庭是罗马社会的核心，构成每个社群的基础。稳定的家庭造就稳定的社会，是基于性别、公民身份、血统和人口普查等级（居住地和土地拥有量）的严格等级制度中最重要的组成部分。公民最初被定义为任何超过十五岁的男性，是拉丁人最初三个部落成员之一，他们当时在政治和社会上决定着人们的生活。</p>
+<p>政治上，最高统治者（共和国时期的执政官，帝国时期的皇帝）、元老院、法官和议会；社会上，则有家长（pater familias）、他的妻子、子女，以及在某些情况下，他的大家族（未婚姐妹、寡妇母亲、年迈的父亲）。在政治和社会这两个领域，家长制都按照庇护关系的规则运作：当权者有义务照顾其下属。执政官、皇帝或家长为其被保护者提供父母般的关爱和必需品，作为回报，则获得他们的忠诚和服务。</p>
+<h3>贵族阶级</h3>
+<p>骑士阶级（骑兵）最初是王室骑兵，在早期共和国时期，他们被给予一定数额的钱来购买和照料他们的马匹，因此与商业和贸易联系在一起。他们最终成为处理业务的上层阶级的一部分。公元前218年，一项法律禁止参议员从事商业活动，因为这可能会危及他们的立法决策。骑士阶级是贵族阶级的男性，在社会地位上低于参议员阶级，他们经营银行、收税、经营商品进出口，管理贸易公司以及奴隶贸易。</p>
+        <small class="page-url url "><a href="https://www.worldhistory.org/article/1463/ancient-roman-society/" target="_blank">(https://www.worldhistory.org/article/1463/ancient-roman-society/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Etiquipedia:-Etiquette-of-Roman-Empire-Dining">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🍽&nbsp;</span>Etiquipedia: Etiquette of Roman Empire Dining</h3>
+        <small class="page-url url "><a href="https://etiquipedia.blogspot.com/2014/03/dining-etiquette-in-roman-empire.html" target="_blank">(https://etiquipedia.blogspot.com/2014/03/dining-etiquette-in-roman-empire.html)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 展示了罗马宴会的丰富文化与其对社交的影响，适用于理解贵族的宴请礼仪。<br></small>
+    </div>
+    <div class="page-content content"><p>1882年版画，标题为：“庞培遗址修复的罗马面包店”</p>
+<p>罗马宴会图 ~ “古希腊和罗马的菜单是用平板书写的，但在宴会上更为常见的是由某人——主人或专门训练过的奴隶——指明不同的菜肴，偶尔解释每道菜的成分和制作方法，并告知客人食物和酒的产地、新鲜度和陈年时间。现代宴会需要书面菜单，这是正式用餐方式发生重大变化的结果，这种变化大约从19世纪中叶开始传播到欧洲和美国。”——摘自玛格丽特·维瑟的《晚餐仪式》</p>
+<p>古罗马宴会宾客，描绘在宴会床上斜倚……“如果他们吃得太饱而无法吃完食物，他们可以将剩菜用餐巾包起来带回家。”——“第一张餐巾是斯巴达人称之为‘apomagdalie’的一块面团，它是一种切成小块、在桌子上滚动和揉捏的混合物，这一习俗导致人们用切片面包来擦手。在罗马时代，被称为sudaria和mappae的餐巾有大小两种。Sudarium，拉丁语意为‘手帕’，是一种袖珍织物，用于在温暖的地中海气候下用餐时擦拭额头。Mappa是一种较大的布，铺在长椅的边缘，以防食物弄脏斜倚就餐的人。这种布料也用来擦拭嘴唇。虽然每位客人都会自带mappa，但在离开时，mappa里会装满宴会剩下的美味佳肴，这一习俗延续至今，也就是餐馆的‘打包袋’”。</p>
+<h2>什么？！没有图片？！</h2>
+<h2>我们尝试了，但是……</h2>
+<h2>热门文章</h2>
+        <small class="page-url url "><a href="https://etiquipedia.blogspot.com/2014/03/dining-etiquette-in-roman-empire.html" target="_blank">(https://etiquipedia.blogspot.com/2014/03/dining-etiquette-in-roman-empire.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="What-Were-Homes-Like-in-Ancient-Rome?-(4-Types)">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏡&nbsp;</span>What Were Homes Like in Ancient Rome? (4 Types)</h3>
+        <small class="page-url url "><a href="https://www.thecollector.com/what-were-homes-like-in-ancient-rome/" target="_blank">(https://www.thecollector.com/what-were-homes-like-in-ancient-rome/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 介绍了古罗马不同阶层的住宅类型，强调了Domus和Insulae在社会生活中的功能和地位。<br></small>
+    </div>
+    <div class="page-content content"><h2>1. Domus</h2>
+<p>罗马城内，最富有的罗马人，例如皇帝和贵族，居住在称为Domus的单层房屋中。这些房屋非常宏伟，有理石柱、雕像、马赛克和壁画。罗马人设计的Domus建筑有两个主要部分——前面的antica和后面的postica。两者都有一个大的中央庭院区域，其他房间都从这里通向。antica的中心区域是中庭。它有一个浅水池，露天收集雨水。罗马人使用中庭进行社交和娱乐。卧室和起居室都通向中庭。postica则更加私密。它有一个种植草药的中心区域，以及周围房间里的餐厅、厨房和浴室区域。古罗马最富有的人家在postica有住家奴隶。他们负责烹饪和清洁，让房屋保持整洁，以迎接各种隆重的社交活动。虽然大多数罗马人都有自己的床和有限的家具，但一些不幸的奴隶不得不睡在主人的卧室门外！</p>
+<h2>2. Insulae</h2>
+<p>绝大多数居住在城市的普通罗马劳动者住在被称为insulae的多层公寓楼或公寓大楼里。有时公寓楼的底层被商店占用，店主就住在他们上面的空间。住宅区有七层或七层以上，通常危险且不卫生。火灾、倒塌和洪水很常见。收入较高的租户住在前两层，那里房间更大，有窗户、阳台和自来水。相比之下，高层住的是古罗马最穷的人，他们住房条件很差，有时只有一个房间住着全家，没有自然光、供水或浴室设施。</p>
+<h2>3. Country Villas</h2>
+<p>在罗马城外，富有的古罗马公民居住在别墅（villas）里，别墅比Domus更大，因为占地更多。真正富有的人既有Domus也有别墅，他们可以向所有经常来做客的客人炫耀这两处房产。别墅分为三个主要部分：villa urbana，主人家居住的地方；villa rustica，住家奴隶和工人居住的地方，他们负责所有的家务；第三个区域称为villa fructuria，它有充足的农产品空间，有时甚至还有一个私人庙宇。这些房屋周围环绕着广阔的土地，用于耕作、娱乐或私人泳池——真幸运！</p>
+<h2>4. 乡村房屋和工厂</h2>
+<p>不出所料，罗马帝国的乡村对穷人来说并不那么有利，尽管并不总是像城市生活那样糟糕。农场工人、动物饲养员和其他农业劳动者住在村庄或农场里，如果幸运的话，他们住在非常狭小、简陋的原始石结构建筑中。但那些真正不幸的人不得不一年中的部分时间住在他们工作的黑暗、肮脏的工厂和工业综合体里，他们经常被富人残酷地剥削为奴隶劳工。</p>
+        <small class="page-url url "><a href="https://www.thecollector.com/what-were-homes-like-in-ancient-rome/" target="_blank">(https://www.thecollector.com/what-were-homes-like-in-ancient-rome/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="EATING-HABITS-AND-CUSTOMS-IN-THE-ROMAN-EMPIRE:-MEALS,-COUCHES,-UTENSILS-|-Facts-and-Details">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🍗&nbsp;</span>EATING HABITS AND CUSTOMS IN THE ROMAN EMPIRE: MEALS, COUCHES, UTENSILS | Facts and Details</h3>
+        <small class="page-url url "><a href="https://factsanddetails.com/world/cat56/sub369/entry-6311.html" target="_blank">(https://factsanddetails.com/world/cat56/sub369/entry-6311.html)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 讨论了罗马饮食文化的社会礼仪和食物选择，反映贵族在用餐时的奢华与地位。<br></small>
+    </div>
+    <div class="page-content content"><h2>庞培的茱莉亚食府</h2>
+<p>古罗马人获得粮食配给。冬季，一位罗马工人大约能得到35升谷物。许多人从街头小贩那里购买晚餐。</p>
+<p>温尼伯大学考古学教授迈克尔·麦金农说：“晚宴是罗马贵族炫耀财富和声望的方式”。乔尔·舒尔金在insidescience上写道：上层阶级的身份地位通过饭菜的摆盘、珍稀香料和餐具来体现。“你越富有，就越想在向客人展示和宣传上投入更多。炫耀可能比实质更重要，”麦金农说。“整只动物代表着巨大的财富。”</p>
+<p>下层阶级吃饭是为了生存。一些历史学家认为下层阶级主要是素食者，但这并不正确，麦金农和英国谢菲尔德大学的安吉拉·特伦塔科斯特说。他们通常吃的东西和上层阶级一样，但不是同样的部位（比如羊肉和羊排），而且可能数量也不一样。富人吃饭时会斜倚着。下层阶级的罗马人没有精致的餐具，而是使用粗糙的餐具。</p>
+<p>因为只有上层阶级在家中才有厨房，其他罗马人则从街头小贩那里购买食物，就像今天的午餐车一样。麦金农说，他们大多会把食物放在大锅里做炖菜或粥。他们也可能会煮肉。只有富人才能够烧烤。尽管有传说，大多数罗马人或伊特鲁里亚人并不经常定期食用奇异的动物，尽管上层阶级的食客可能会享用整个吞下的鸣禽，罗马的一个垃圾堆里还发现了被屠宰的骆驼的骨头。特伦塔科斯特说，在意大利的一些地区仍然食用鸣禽。麦金农说，有一个传说是真的：食物可能非常多，每个人都想尽情享用。为了腾出空间，他们会离开桌子进行排泄。</p>
+<p>在庞培和其他地方出土的富人的银器表明，丰盛的饭菜包括许多菜肴，而这些菜肴往往由鱼、野味、水果和坚果组成。古代人大多用手吃饭。有时他们会使用刀和勺子。罗马人有勺子、刀子和酒杯，但没有叉子。有时他们左手拿着盘子，右手拿食物。有礼貌的罗马人用三个手指拿食物，以免弄脏无名指和小指。</p>
+<p>社会地位决定了家庭的饮食方式。下层阶级大多吃简单的食物，而富人则经常用盛大的宴会来炫耀自己的地位。面包在早餐和午餐中都占有很大的比重。下层阶级添加橄榄、奶酪和葡萄酒，上层阶级则享用更多种类的肉类、宴会剩菜和新鲜农产品。非常贫穷的人有时只吃粥或施舍的食物。</p>
+<p>饭菜由家中的妇女或奴隶准备，孩子们则负责上菜。没有人使用叉子，所以食物是用手、勺子和刀来食用的。罗马富人的宴会以其奢华和美味而闻名。宴会持续数小时，客人们斜倚在餐椅上，奴隶们则清理他们周围丢弃的残羹剩饭。所有阶级的人都喜欢一种令人作呕的酱汁，叫做鱼露。基本上是发酵的鱼内脏，气味难闻，以至于在城市范围内禁止制作。</p>
+<p>通常每天有三顿饭：早餐（jentaculum），起床后不久；午餐或中午饭（prandium）；以及下午的主要食物或晚餐（cena）。较贫穷阶级的食物包括一种粥或早餐食物（farina），由粗糙的小麦（far）制成，以及普通的蔬菜，如芜菁和洋葱，还有牛奶和橄榄。富裕阶层互相竞争，从意大利和其他世界各地采购最稀有的美味佳肴。</p>
+<p>富人的早餐在主人的卧室享用，通常包括一片面包或小麦煎饼，配上枣子和蜂蜜。也会喝葡萄酒。午餐大约在上午11点吃，包括一些面包、奶酪和可能的一些肉类。在很多方面，一切都围绕着一天的主要食物——cena而展开。这顿饭是在下午晚些时候或傍晚吃的。如果房主没有客人，cena可能需要大约一个小时。如果他确实有客人，那么这顿饭可能需要长达四个小时。罗马人通常在睡觉前吃一顿清淡的晚餐，包括面包和水果。罗马人通常不是大型食肉动物，他们的许多普通食物包括蔬菜、香草和香料，以及看起来像粥的小麦饭。</p>
+<p>习俗或多或少地严格规定了用餐时间，尽管这些时间因时期而异，在较小程度上也因职业甚至个人的喜好而异。在城市早期和所有时期的乡村。在古典时代，罗马的用餐时间与我们现在的大城市差不多，也就是说，cena被推迟到一天的工作结束后，从而挤掉了vesperna，而午餐（prandium）取代了老式的“中午饭”。迟到的晚餐或多或少成为一种社交活动，因为客人出席，食物和服务是房子所能提供的最好的。相比之下，ientaculum和prandium非常简单随意。</p>
+        <small class="page-url url "><a href="https://factsanddetails.com/world/cat56/sub369/entry-6311.html" target="_blank">(https://factsanddetails.com/world/cat56/sub369/entry-6311.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="The-Food-of-Ancient-Rome">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🍽&nbsp;</span>The Food of Ancient Rome</h3>
+        <small class="page-url url "><a href="https://www.crystalking.com/thefoodofancientrome" target="_blank">(https://www.crystalking.com/thefoodofancientrome)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 讨论古罗马饮食的特殊性和奢华，强调贵族的饮食方式与社会地位的关系。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马美食：与现代意大利菜的差异</h2>
+<p>当我们想到意大利菜时，脑海中浮现的可能并非那些源远流长的古罗马美食。古罗马时期并没有披萨、意面、番茄或柠檬，大蒜也只被用于药用。如今，我们对古罗马人的一些食物感到惊奇，许多食物对我们来说显得相当奇特，包括油炸睡鼠、火烈鸟舌（还有孔雀和夜莺的舌头）等等。许多这些食物只有非常富有的人才能享用，而普通罗马市民则吃得比较简单。古罗马人对奇特而稀有的食物的喜爱程度与我们今天一样。还有一些其他类型的古罗马食物至今仍保留下来，包括塔彭纳德、乳蛋饼等等。显然，这些菜肴与我们今天熟悉的意大利菜肴大相径庭！事实上，许多菜肴在其他国家更为著名，例如现在苏格兰的国菜——羊杂碎，以及法国人改良的鹅肝酱。这是因为罗马帝国疆域辽阔，当他们征服其他国家并开始在那里定居时，他们也带去了自己喜爱的食物。继续阅读以了解更多关于这些食物的信息，以及富有的古罗马人如何像我们今天一样热衷于烹饪艺术。一个负责“切割”的奴隶会为客人切肉和食物，客人会用右手从桌子中央取食物。有时他们会使用一个带尖柄的勺子来叉食物或打开贝壳。当然还有酒！但并非像我们今天那样饮用。相反，酒是在饭后饮用的，而且总是兑水。罗马人还会给他们的酒加香料——自带各种香料混合物赴宴是很常见的——他们还会用铅、木炭和海水等难闻的成分来澄清葡萄酒。然而，他们热爱葡萄酒，有数百种葡萄酒，其中一些已有数百年的历史（如果变成沉淀物，他们就会加更多水！）。饭后，Rex Bibendi（狂欢节主持人）会将葡萄酒与适量的水混合。他还负责设定谈话主题（通常与现在一样，不谈宗教或政治！）并确保人们不会喝醉。罗马人认为戴月桂花和其他类型的花环可以帮助他们避免醉酒。不止一个人推测过这种酒的味道。在共和国时期，妇女不允许饮酒，但随着罗马帝国的建立，规定有所放松。最好的葡萄酒被认为是法尔内里亚葡萄酒，而今天人们认为这种古代葡萄酒的葡萄后裔是法兰吉娜葡萄。如果您曾经吃过泰国菜或越南菜，那么您很可能吃过类似鱼露的东西。它是一种鱼露，由凤尾鱼内脏制成，放在阳光下发酵。听起来很好吃，对吧？嗯，古罗马人就是这么认为的。他们把它加到所有东西里，包括他们的甜点。当我第一次开始尝试古罗马食谱时，我担心鱼露，因为我在远离海岸的地区长大，我的家人很少吃鱼。但我发现，少量使用鱼露可以使菜肴具有咸鲜的鲜味。这是有道理的，因为罗马人用盐来保存食物，而不是为了让食物变咸——当他们有鱼露时，他们不需要这样做。</p>
+<h2>静香草 (Silphium)</h2>
+<p>静香草，也叫激光草，是一种罗马人几乎像他们热爱鱼露一样热爱的香草。静香草是一种在利比亚海岸外的昔兰尼加岛种植的香草。问题是，它只在那里种植，几个世纪以来，古罗马人和希腊人试图在其他地方种植它，但收效甚微。最终，他们过度种植它，导致其灭绝。但即使在它变得如此稀有之前，它也如此珍贵，以至于昔兰尼加的居民会在硬币上刻上它的图像。</p>
+        <small class="page-url url "><a href="https://www.crystalking.com/thefoodofancientrome" target="_blank">(https://www.crystalking.com/thefoodofancientrome)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Roman-art---Wikipedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🖼&nbsp;</span>Roman art - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Roman_art" target="_blank">(https://en.wikipedia.org/wiki/Roman_art)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 揭示了古罗马艺术的影响与发展，包括贵族在艺术赞助中的重要角色。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马艺术</h2>
+<p>古罗马及其共和国和后来的帝国领土的艺术包括建筑、绘画、雕塑和马赛克作品。金属制品、宝石雕刻、象牙雕刻和玻璃制成的奢侈品有时被认为是罗马艺术的次要形式[1]，尽管当时并非如此看待。雕塑可能是罗马人认为的最高艺术形式，但人物绘画也受到高度重视。从公元前1世纪开始，大量的雕塑作品得以保存下来，但在此之前流传下来的作品很少，而绘画作品则所剩无几，可能没有任何一件作品会被当代人认为是最高质量的[需要补充来源]。古罗马陶器并非奢侈品，但大量的“精美器皿”terra sigillata以浮雕装饰，反映了当时的最新潮流，并为社会中的广大群体提供了价格显然实惠的时尚物品。罗马硬币是一种重要的宣传工具[需要补充来源]，并且数量极多地保存至今。</p>
+<h2>导论</h2>
+<p>虽然传统观点认为古代罗马艺术家经常借鉴和复制希腊的先例（今天已知的许多希腊雕塑都是罗马大理石复制品的形式），但最近的分析表明，罗马艺术是一种极具创造性的拼贴画，它大量依赖希腊模式，但也包含伊特鲁里亚、意大利本土，甚至埃及的视觉文化。样式折衷主义和实际应用是许多罗马艺术的标志。</p>
+<p>普林尼，古罗马最重要的艺术史学家，记载了几乎所有形式的艺术——雕塑、风景、肖像画，甚至风俗画——在希腊时代都得到了发展，在某些情况下，比罗马更先进。尽管希腊壁画和肖像画几乎没有留存下来，但希腊雕塑和陶器绘画确实证实了这一点。罗马艺术家不太可能在设计或技法上超越这些形式。作为另一个失去的“黄金时代”的例子，他特别指出了佩拉伊科斯，“他的艺术技巧仅次于极少数……他画理发店和鞋匠的摊位、驴子、蔬菜等等，因此被称为‘庸俗题材画家’；然而，这些作品都非常令人赏心悦目，并且售价高于许多其他艺术家的最伟大的绘画作品。”[2]这里的“庸俗”一词是用其原始含义，意思是“普通的”。</p>
+<p>罗马艺术的希腊先例是传奇性的。在公元前5世纪中期，最著名的希腊艺术家是波吕格诺托斯，以其壁画而闻名；还有阿波罗多罗斯，明暗法的创始人。现实主义技术的进步归功于泽克西斯和帕尔哈修斯，根据古希腊传说，据说他们曾经在一次精彩绝伦的才华展示中竞争，这是历史上最早的透视画的描述[3]。在雕塑方面，斯科帕斯、普拉克西特列斯、菲迪亚斯和吕西波斯是最重要的雕塑家。罗马艺术家似乎有很多古希腊艺术可以临摹，因为整个帝国的艺术贸易都很活跃，许多希腊艺术遗产通过书籍和教学进入了罗马艺术。据知，罗马时代存在古希腊艺术论著，但现已失传[4]。许多罗马艺术家来自希腊殖民地和行省[5]。大量罗马复制的希腊艺术也说明了罗马艺术家对希腊艺术的尊重，也许还说明了其稀有性和更高质量[5]。罗马人使用的许多艺术形式和方法——例如高浮雕和低浮雕、独立雕塑、青铜铸造、陶器艺术、马赛克、浮雕、硬币艺术、精美珠宝和金属制品、丧葬雕塑、透视画法、漫画、风俗画和肖像画、风景画、建筑雕塑和错视画——都是由古希腊艺术家发展或完善的[6]。一个例外是罗马半身像，它不包括肩膀。传统的头像半身像可能是伊特鲁里亚或早期罗马的形式[7]。实际上，1900年后文艺复兴时期艺术家使用的每一种艺术技巧和方法都已由古希腊艺术家演示过，但油彩和数学精确的透视法除外[8]。希腊艺术家在他们的社会中受到高度尊敬，而大多数罗马艺术家都是匿名的，被认为是工匠。与古希腊一样，没有记录罗马艺术的大师，实际上也没有署名的作品。希腊人崇拜伟大艺术的美学品质，并广泛地撰写艺术理论，而罗马艺术更具装饰性，并表明地位和财富，显然不是学者或哲学家的研究对象[9]。部分原因是罗马城市的人口规模普遍远大于希腊城邦，而且总体上不那么地方化，因此古罗马的艺术承担了更广泛，有时更实用的目的。罗马文化吸收了许多文化，并且在很大程度上容忍被征服人民的方式[5]。罗马艺术的委托、展示和拥有数量远远大于希腊时代，并且适应了比希腊时代更多的用途。富有的罗马人更加物质化；他们用艺术装饰墙壁，用装饰品装饰家园，用精美的珠宝装饰自己。</p>
+<p>他们身上也装饰着精金和象牙；还有许多战争的景象，以及各种各样的方法和发明，生动地展现了战争本身。因为人们可以看到一个幸福的国家被摧毁，整个敌军被杀；一些人逃跑了，一些人被俘；高大的城墙被机器摧毁；最坚固的防御工事被攻破，位于山顶上人口稠密城市的城墙被攻占，一支军队涌入城墙内；每一个地方都充满了杀戮，以及敌人被杀时的哀求，当他们再也无力反抗的时候。这里还描绘了火焰烧向寺庙，房屋倒塌，压在它们的主人身上；河流从一片广阔而阴郁的沙漠中流出，不是流入耕地，也不是作为人和牲畜的饮用水，而是流经四面环火的土地；犹太人说，他们在战争期间经历了这样的事情。这些图画的制作如此宏伟生动，以至于它向那些没有亲眼看到的人展现了所发生的事情，就好像他们真的在场一样。在每一个这样的彩车上都放置了被俘城市的指挥官，以及他被俘的方式[34]。这些绘画已经消失，但它们很可能影响了军事石棺、提图斯凯旋门和图拉真柱上雕刻的历史浮雕的构成。这一证据强调了风景画的重要性，它有时倾向于成为透视图。</p>
+<p>Ranuccio还描述了在罗马发现的最古老的绘画，位于埃斯奎利纳山的墓穴中：它描述了一个历史场景，在一个清晰的背景上，用四个叠加的部分绘制。一些人被确定，例如马库斯·法尼乌斯和马库斯·法比乌斯。他们比其他人物更大……在第二个区域，左边是一个被城垛环绕的城市，前面是一个装备着椭圆形盾牌和羽毛头盔的大战士；他旁边是一个穿着短袍、手持长矛的人……这两个人的周围是穿着短袍、手持长矛的小士兵……在下层区域，一场战斗正在进行，一个带着椭圆形盾牌和羽毛头盔的战士被描绘得比其他人更大，他们的武器让人可以推测出这些可能是萨姆尼特人。</p>
+<p>这段情节很难确定。Ranuccio的假设之一是它指的是公元前326年执政官法比乌斯·马克西姆斯·鲁里安努斯在对萨姆尼特人的第二次战争中取得的胜利。人物大小与他们重要性成比例的呈现方式是典型的罗马风格，并且出现在平民浮雕中。这幅画处于凯旋画的初期，应该是在公元前3世纪初完成的，用来装饰墓穴。</p>
+<h2>雕塑</h2>
+<p>早期罗马艺术受到希腊艺术和邻国伊特鲁里亚艺术的影响，伊特鲁里亚艺术本身也受到其希腊贸易伙伴的极大影响。伊特鲁里亚的特色是近乎真人大小的粘土墓葬肖像，通常位于石棺盖的顶部，肘部支撑在一个肘部，摆出当时就餐者的姿势。随着扩张中的罗马共和国开始征服希腊领土，起初是在意大利南部，然后是整个希腊世界，除了帕提亚远东地区，官方和贵族雕塑在很大程度上成为了希腊化风格的延伸，从中很难区分出罗马元素，特别是由于如此多的希腊雕塑只在罗马时期的复制品中幸存下来[35]。到公元前2世纪， “在罗马工作的雕塑家大多是希腊人”[36]，他们经常在科林斯（公元前146年）等征服中被奴役，并且雕塑家仍然大多是希腊人，通常是奴隶，他们的名字很少被记录下来。大量的希腊雕塑被进口到罗马，无论是作为战利品还是敲诈勒索或商业的结果，而且寺庙经常用重复使用的希腊作品装饰[37]。在富裕的中产阶级罗马人的墓葬纪念碑中可以看到一种意大利本土风格，这些纪念碑经常以肖像半身像为特色，而肖像画可以说是罗马雕塑的主要优势。祖先面具的传统没有幸存下来，这些面具在伟大家族的葬礼游行中佩戴，并在家中展示，但许多幸存下来的半身像一定代表祖先人物，可能来自大型家族墓葬，如西庇阿墓或后来的城市外陵墓。据说是卢修斯·尤尼乌斯·布鲁图斯的著名青铜头像的年代说法不一，但被认为是共和国时期意大利风格的罕见幸存作品，采用青铜这种首选媒介[38]。类似的严峻而有力的头像出现在执政官的硬币上，以及帝国时期的硬币和半身像上，这些硬币和半身像被送到帝国各地，放置在各行省城市的巴西利卡中，是帝国宣传的主要视觉形式；甚至伦敦也有一尊尼禄的近乎巨型的雕像，尽管远小于罗马现已失传的30米高的尼禄巨像[39]。面包师尤里萨克斯的墓穴，一位成功的解放者（公元前约50-20年）有一个带状装饰，这是“平民”风格的非同寻常的大型例子[40]。帝国肖像画最初是希腊化的，并且高度理想化，就像在布拉卡斯浮雕和其他奥古斯都的肖像中一样。罗马人通常不试图与希腊独立作品竞争，这些作品取材于历史或神话中的英雄壮举，但从早期开始就在浮雕中创作历史作品，最终形成了伟大的罗马凯旋柱，连续的叙事浮雕围绕着它们，其中纪念图拉真（公元113年）和马库斯·奥列留（公元193年之前）的那些幸存在罗马，和平祭坛（公元前13年）代表了官方希腊罗马风格在其最古典和精致的体现，而斯佩隆加雕塑则代表了其最巴洛克的体现。一些后期的罗马公共雕塑发展出了一种巨大的、简化的风格，有时预示着苏联社会主义现实主义。其他主要例子包括早期在君士坦丁凯旋门和安东尼·皮乌斯圆柱基座上重复使用的浮雕（161）[41]，坎帕纳浮雕是更便宜的大理石浮雕陶器版本，从帝国时期开始，对浮雕的品味扩展到了石棺。所有形式的豪华小型雕塑继续受到青睐，而且质量可能非常高，例如银华伦杯、玻璃吕库尔戈斯杯和大型浮雕，如奥古斯都宝石、贡萨加浮雕和“法国大浮雕”[42]。对于更广泛的人口来说，陶器容器和小型雕像的模制浮雕装饰大量生产，而且质量往往相当高[43]。在经历了2世纪后期的“巴洛克”阶段[44]之后，在3世纪，罗马艺术在很大程度上放弃了，或者干脆无法再创作古典传统的雕塑，其原因仍然是人们讨论的焦点。即使是最重要的帝国纪念碑现在也展示了矮胖的、大眼睛的人物，采用严峻的正面风格，以简单的构图强调力量，而牺牲了优雅。这种对比在罗马公元315年的君士坦丁凯旋门中得到了著名的体现，该凯旋门将新风格的部分与从其他地方取来的早期完整的希腊罗马风格的圆形装饰结合在一起，以及来自新的首都君士坦丁堡的四位四帝像（约公元305年），现在位于威尼斯。恩斯特·基辛格在这两个纪念碑中都发现了相同的“矮胖的比例、棱角分明的动作、通过对称性和重复来安排各个部分，以及通过刻痕而不是造型来表现特征和褶皱……无论这种风格出现在哪里，其标志都包括一种强烈的坚硬、沉重和棱角分明——简而言之，是对古典传统的几乎完全摒弃”。[45]</p>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Roman_art" target="_blank">(https://en.wikipedia.org/wiki/Roman_art)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Patrician-|-Elite-Social-Class,-Wealth-&-Power-|-Britannica">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💍&nbsp;</span>Patrician | Elite Social Class, Wealth & Power | Britannica</h3>
+        <small class="page-url url "><a href="https://www.britannica.com/topic/patrician" target="_blank">(https://www.britannica.com/topic/patrician)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 探讨了贵族家庭如何通过婚姻与公共活动维系盟友关系和社会地位。<br></small>
+    </div>
+    <div class="page-content content"><h2>贵族</h2>
+<p>贵族，指在古罗马与平民（q.v.）相对的一类公民家庭组成的特权阶级。</p>
+<p>该阶级的起源尚不清楚，但贵族可能主要是那些更重要的家庭或氏族的领导者，他们构成了原始时期参议院的主要部分（如果不是全部的话），以及早期骑兵中最杰出部分人员的来源。他们构成了早期的世袭贵族。</p>
+<p>他们何时演变成一个明确定义和排外的等级尚不确定，但塞尔维乌斯·图利乌斯国王将所有公民登记在区域部落和按财富划分的等级的做法，有助于将贵族和平民之间的区别编纂成法。同样，从军事机构到政治机构的百人队会议的发展，也使较富有的平民在选举和立法中拥有有影响力的投票权。</p>
+<p>在可能对贵族控制有所制衡的国王被驱逐后，贵族试图独自占有官职、祭司职务以及法律和宗教知识；《十二铜表法》甚至禁止与平民通婚。共和国时期的大斗争是平民不断努力争取政治平等，为其贫困成员争取经济救济，以及打破贵族的政治和宗教垄断。</p>
+<p>平民逐渐取得了相当大的成功。在共和国早期结束时，贵族只保留了某些古老的祭司职务、摄政王（或临时国家元首）的职位，以及也许是元老院领袖的职位。</p>
+<p>在共和国后期（即公元前1世纪），贵族和平民之间的区别失去了政治意义；一些贵族通过收养成为平民。</p>
+<p>在帝国时期（公元前27年以后），贵族身份是登上王位的先决条件，只有皇帝才能册封贵族。作为维持古代祭司职务的必要条件，贵族除了减少的军事义务外，几乎没有其他特权。</p>
+<p>在君士坦丁统治之后（306-337年），贵族成为一种个人的、非世袭的荣誉称号，仅次于皇帝和执政官，排名第三，但该称号并未赋予任何特殊的权力。</p>
+        <small class="page-url url "><a href="https://www.britannica.com/topic/patrician" target="_blank">(https://www.britannica.com/topic/patrician)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Roman-economy---Wikipedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💰&nbsp;</span>Roman economy - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Roman_economy" target="_blank">(https://en.wikipedia.org/wiki/Roman_economy)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 讨论了罗马经济的结构，特别是贵族如何通过农业和贸易维持其经济地位。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马经济研究</h2>
+<p>罗马共和国和帝国时期的古城邦经济研究仍然高度推测性。没有保存下来的商业和政府账户记录，例如税收的详细报告，以及关于经济活动的文学资料也很少。相反，对这种古代经济的研究如今主要基于现存的考古和文学证据，这些证据允许研究人员根据与其他较近的预工业经济的比较来形成推测。</p>
+<h3>早期共和国时期经济</h3>
+<p>在罗马共和国的早期几个世纪，人们推测经济在很大程度上是农业的，其中心是谷物和葡萄酒等商品的贸易。通过这种贸易建立了金融市场，主要由家族财富建立的金融机构为个人使用和公共基础设施提供信贷。在农业和现金短缺时期，罗马官员和铸币者倾向于通过铸造货币来应对，这种情况发生在第一次布匿战争的长期危机期间，并造成了经济扭曲和困难。</p>
+<h3>帝国时期经济</h3>
+<p>在布匿战争之后，在共和国后期和罗马帝国早期，经济变得更加货币化，并出现了一个更加复杂的金融体系。皇帝发行刻有他们肖像的硬币来传播宣传，创造公众好感，并象征他们的财富和权力。罗马帝国货币经济经常遭受通货膨胀的困扰，部分原因是皇帝发行货币来资助备受瞩目的帝国项目，例如公共建筑工程或代价高昂的战争，这些项目提供了宣传机会，但却几乎没有物质收益。罗马行省之间相互贸易，但贸易范围也延伸到国界之外，远至中国和印度。主要商品是谷物。与中国的贸易大多是通过丝绸之路上的中间商陆路进行的；然而，与印度的贸易也通过红海上的埃及港口进行海上运输。其他贸易商品包括橄榄油、各种食品、鱼露、奴隶、矿石和金属制品、纤维和纺织品、木材、陶器、玻璃器皿、大理石、纸莎草、香料和药物、象牙、珍珠和宝石。虽然大多数行省都能生产葡萄酒，但地区品种很受欢迎，葡萄酒是贸易的中心商品。普通葡萄酒的短缺是罕见的。罗马城的主要供应地是意大利西海岸、高卢南部、西班牙的塔拉科内西斯地区和克里特岛。亚历山大港，第二大城市，从叙利亚的拉奥狄西亚和爱琴海进口葡萄酒。在零售层面，小酒馆或专门的葡萄酒商店按罐出售葡萄酒，以便带走，并在店内饮用，价格范围反映了质量。</p>
+<p>早期罗马帝国的贸易使罗马变得如此广阔和伟大。奥古斯都皇帝，尽管他进行了大量的公共和私人支出，但他从政府手中接管了贸易，并通过在不列颠、日耳曼和非洲等海外地区开辟新的贸易市场来扩大罗马的影响力。罗马帝国时代，罗马主导着世界贸易和影响力，但其工业和制造工艺却无法进步。这最终威胁到奥古斯都带来的不断扩张的贸易和商业产业，以及帝国在罗马人和世界人民眼中的强大地位。</p>
+<h3>经济的兴衰</h3>
+<p>罗马经济在公元前几个世纪之所以能够蓬勃发展，这要归功于其先进的贸易和商业，但随着其商业运作方式的急剧变化，这种繁荣有所减弱。由于奥古斯都和贵族掌握着罗马大部分土地和财富，日常必需品的贸易和商业开始下降。贸易开始只针对更奢侈的商品，由于贫困，实际上排除了大多数罗马人。对外贸易对罗马经济的兴起和复杂化也具有极其重要的意义，罗马人主要向西方的国家贸易葡萄酒、油、谷物、盐、武器和铁。当这些国家在大约公元2世纪衰落时，它们与罗马帝国之间的贸易不得不因此停止，这损害了罗马经济的strength，因为对外贸易是资源丰富的帝国经济增长的一个主要因素。加上他们无力进行适当的生产进步以跟上他们日益发展壮大的经济，这些事件阻碍了罗马贸易，限制了他们的商品种类，并损害了经济。</p>
+<h3>收入分配</h3>
+<p>在谢德尔-弗里森罗马国民账户模型中，帝国产生的年度总收入约为200亿塞特提，帝国政府提取了约5%。收入分配最高的1.5%的家庭占收入的约20%。另外20%的收入归属于约10%的人口，这些人可以被描述为非精英中产阶级。“绝大多数”人口创造了超过一半的总收入，但生活水平接近自给自足。所有被引用的经济史学家都强调，鉴于现存的相关数据普遍匮乏，任何估计都只能被视为对古代经济现实的粗略近似。</p>
+<h3>庞贝的例子</h3>
+<p>根据庞贝繁荣的罗马城镇房屋的考古遗迹留下的证据，杰弗里·克朗估计庞贝的平均家庭收入为7900塞特提，远高于整个帝国GDP估计值所暗示的水平。根据这些考古遗迹中房屋大小的分布，他还估计了收入分布，这意味着庞贝的中产阶级比谢德尔-弗里森模型中预期的要大得多。他的估计表明庞贝的生活水平优于19世纪的西欧。他得出结论，应向上修正现有的罗马GDP估计值。</p>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Roman_economy" target="_blank">(https://en.wikipedia.org/wiki/Roman_economy)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Daily-Life-in-Ancient-Rome-—-MayaIncaAztec.com">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📚&nbsp;</span>Daily Life in Ancient Rome — MayaIncaAztec.com</h3>
+        <small class="page-url url "><a href="https://www.mayaincaaztec.com/romanempire/daily-life-in-ancient-rome" target="_blank">(https://www.mayaincaaztec.com/romanempire/daily-life-in-ancient-rome)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 分析了罗马贵族的日常生活背景，包括教育和锻炼，展示他们的社交地位。<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马最富有的阶层</h2>
+<p>罗马最富有的阶层是贵族。许多最富有的罗马人住在城外令人惊叹的山坡别墅里。这些房子非常宽敞，而且通常是经过建筑设计的。非常富有的人拥有不止一栋别墅是很常见的。</p>
+<h3>罗马城内的贵族住宅</h3>
+<p>罗马城内的贵族住宅，中间有一个开放的庭院或中庭。许多这些房屋的建造都考虑到了未来的扩展。所有房间都围绕着庭院，包括厨房、卧室和起居室。这些房子大多不包含大量的家具，它们包含一张床、几张小桌子、一张沙发和一些橱柜。</p>
+<h3>罗马人的浴室</h3>
+<p>罗马人尤其喜欢他们的浴室。浴场随处可见，而且非常便宜。最大的浴场之一占地37英亩。这些浴室非常豪华。它们包含一系列冷水浴、热水浴和汗蒸浴。中央是一个大型游泳池。罗马人使用复杂的系统来制造蒸汽。一些浴场建筑群包括图书馆、公园、诊所和妓院。</p>
+<h3>罗马人的体育运动</h3>
+<p>罗马公民热爱运动，并且热爱参与运动。他们拳击、摔跤、进行体育运动、参加赛跑，并且热爱血腥运动。</p>
+        <small class="page-url url "><a href="https://www.mayaincaaztec.com/romanempire/daily-life-in-ancient-rome" target="_blank">(https://www.mayaincaaztec.com/romanempire/daily-life-in-ancient-rome)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Ancient-Roman-cuisine---Wikipedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🍇&nbsp;</span>Ancient Roman cuisine - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Ancient_Roman_cuisine" target="_blank">(https://en.wikipedia.org/wiki/Ancient_Roman_cuisine)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 考古学分析古罗马的饮食习惯，对于贵族和普通民众的饮食文化进行比较。<br></small>
+    </div>
+    <div class="page-content content"><h2>考古学</h2>
+<p>大多数有机食物在普通情况下都会腐烂，但灰烬和动物骨骼提供了一些关于古罗马饮食的考古细节。</p>
+<p>在西班牙塔拉戈纳的一处墓地发现了植硅体。</p>
+<p>在布狄卡和她的军队烧毁科尔切斯特的一家罗马商店时，保存下来的烧焦食物中包括进口无花果。</p>
+<p>来自赫库兰尼姆的鹰嘴豆和水果碗，自公元79年维苏威火山摧毁该镇以来一直保存至今。</p>
+<p>该城市的污水管道中留下了小型鱼骨、海胆刺和矿化植物的残骸；考古学家们已经鉴定出的植物包括莳萝、芫荽、亚麻、扁豆、卷心菜、鸦片罂粟以及各种其他坚果、水果和豆类，以及各种各样的鱼类和贝类。</p>
+<p>在庞培，葡萄、奶酪、面包和糕点被烧毁并埋在柱廊庭院花园中，作为对家庭拉勒斯的供奉。</p>
+<h2>膳食</h2>
+<p>传统上，黎明时分会供应一顿名为ientaculum的早餐。</p>
+<p>在中午到下午早些时候，罗马人吃cena，这是当天最重要的一餐，晚上则吃一顿名为vesperna的清淡晚餐。</p>
+<p>随着外国食品进口的增加，cena的规模越来越大，所包含的食物种类也越来越广。</p>
+<p>因此，它逐渐转移到晚上，而vesperna则在数年内完全被放弃。</p>
+<p>中午的餐点prandium变成了一顿清淡的餐点，以维持到cena。</p>
+<p>在罗马社会的底层阶级中，这些变化不太明显，因为传统的习惯与体力劳动的日常节奏密切相关。</p>
+<p>然而，在上层阶级中，他们通常不从事体力劳动，安排所有业务义务在上午已成为习俗。</p>
+<p>prandium之后，最后的责任将得到履行，并将前往浴场。</p>
+<p>大约下午2点，cena将开始。</p>
+<p>这顿饭可能会持续到深夜，特别是如果邀请了客人，之后通常还会进行comissatio，一轮酒精饮料（通常是酒）。</p>
+<p>在国王时期和早期共和国时期，也包括在后来的时期（对于工人阶级来说），cena基本上由一种粥状食物puls组成。</p>
+<p>最简单的做法是用埃默小麦、水、盐和脂肪制成。</p>
+<p>更精致的版本是用橄榄油制作的，并搭配各种蔬菜（如果有的情况下）。</p>
+<p>富人通常吃加鸡蛋、奶酪和蜂蜜的puls，偶尔也搭配肉类或鱼类。</p>
+<p>在共和国时期，cena发展为两道菜：主菜和一道带有水果和海鲜（例如软体动物、虾）的甜点。</p>
+<p>到共和国末期，通常这顿饭会分成三部分：开胃菜（gustatio）、主菜（primae mensae）和甜点（secundae mensae）。</p>
+<p>罗马军队的食物主粮是小麦。</p>
+<p>在4世纪，大多数士兵的食物与罗马的任何人一样好。</p>
+<p>他们供应面包和蔬菜，以及牛肉、羊肉或猪肉等肉类。</p>
+<p>口粮还取决于军团驻扎或作战的地点。</p>
+<p>羊肉在高卢北部和不列颠很受欢迎，但猪肉是军团的主要肉类口粮。</p>
+<h2>食物和配料</h2>
+<p>罗马殖民地为罗马提供了许多食物；该城市从比利时获得火腿，从布列塔尼获得牡蛎，从毛里塔尼亚获得鱼露，从突尼斯获得野生动物，从昔兰尼加获得激光草，从埃及获得鲜花，从卡帕多西亚获得莴苣，从庞图斯获得鱼。</p>
+<p>古罗马人的饮食包括许多现代意大利烹饪的主食。</p>
+<p>老普林尼讨论了30多种橄榄、40种梨、无花果（原产于非洲和东部省份的进口无花果）以及各种各样的蔬菜。</p>
+<p>其中一些蔬菜在现代世界中已不复存在，而另一些则发生了重大变化。</p>
+<p>食用不同颜色的胡萝卜，但不是橙色。</p>
+<p>种植和食用了许多种类的蔬菜。</p>
+<p>这些包括芹菜、大蒜、一些花球茎、卷心菜和其他甘蓝类蔬菜（如羽衣甘蓝和西兰花）、莴苣、菊苣、洋葱、韭菜、芦笋、萝卜、芜菁、胡萝卜、甜菜、青豆、甜菜、田野蔬菜、朝鲜蓟、橄榄和黄瓜。</p>
+<p>一些蔬菜在浮雕中得到图解。</p>
+<p>然而，一些被认为是现代意大利菜肴特征的食物并没有被使用。</p>
+<p>特别是菠菜和茄子是从阿拉伯世界后来引入的，西红柿、土豆、辣椒和玉米（现代玉米粥的来源）只在发现新世界和哥伦布交流之后才出现在欧洲。</p>
+<p>法国豆起源于欧洲。</p>
+<p>罗马人知道米饭，但他们很少能买到。</p>
+<p>柑橘类水果也很少。</p>
+<p>柠檬在公元2世纪从意大利为人所知，但没有广泛种植。</p>
+<h3>面包和谷物</h3>
+<p>从公元前123年开始，罗马国家每月向多达20万人分发名为frumentatio的未磨制小麦（多达33公斤）的口粮。</p>
+<p>最初对此收取费用，但从公元前58年起，平民保民官普布利乌斯·克劳狄乌斯·普尔切尔取消了这项费用。</p>
+<p>个人必须是罗马的公民并居住在罗马才能获得frumentatio。</p>
+<p>最初食用的是扁平的圆形面包，由埃默小麦（一种与小麦密切相关的谷物）和少量盐制成；在上层阶级中，还食用鸡蛋、奶酪和蜂蜜，以及牛奶和水果。</p>
+<p>在大约公元1年的帝国时期，用小麦制成的面包被引进；随着时间的推移，越来越多的麦类食品开始取代埃默小麦面包。</p>
+<p>有许多不同质量的面包。</p>
+<p>通常为精英烘焙白面包，为中产阶级烘焙较深色的面包，为贫穷的农民烘焙最深色的面包。</p>
+<p>面包有时蘸葡萄酒食用，并搭配橄榄、奶酪和葡萄。</p>
+<p>在公元79年庞培被摧毁时，该市至少有33家面包店。</p>
+<p>罗马厨师制作了用黑加仑子调味的甜面包和用面粉、蜂蜜、鸡蛋、类似乳清干酪的奶酪和罂粟籽制成的奶酪蛋糕。</p>
+<p>甜葡萄酒蛋糕是用蜂蜜、浓缩红葡萄酒和肉桂制成的。</p>
+<p>水果馅饼在上层阶级很受欢迎，但下层阶级无力自己制作或从市场和摊贩那里购买。</p>
+<p>Juscellum是一种用磨碎的面包、鸡蛋、鼠尾草和藏红花制成的肉汤，记载于阿庇丘斯（Apicius），一本公元4世纪末或5世纪初的罗马食谱。</p>
+<h3>肉类</h3>
+<p>屠夫的肉是一种不常见的奢侈品。</p>
+<p>最受欢迎的肉是猪肉，尤其是香肠。</p>
+<p>牛肉在古罗马并不常见，在古希腊更为常见——尤维纳利斯或贺拉斯都没有提到它。</p>
+<p>海鲜、野味和家禽，包括鸭子和鹅，更为常见。</p>
+<p>例如，凯撒在凯旋时为26万名humiliores（较贫穷的人）举办了一场公共宴会，其中包括这三种食物，但没有屠夫的肉。</p>
+<p>约翰·E·斯坦鲍格写道，肉“除了在祭祀和富人的宴会上，其他时间都很稀少”。</p>
+<p>奶牛因其牛奶而受到珍视；公牛作为犁和役畜。</p>
+<p>役畜的肉很硬而且不好吃。</p>
+<p>偶尔会吃小牛肉。</p>
+<p>阿庇丘斯只提供了四道牛肉菜谱，但同样的菜谱也提供羊肉或猪肉作为选择。</p>
+<p>只有一道牛肉炖菜和另一道小牛肉鲜贝的菜谱。</p>
+<p>鼠类被食用并被认为是一种美味佳肴。</p>
+<p>它是富有的罗马人中的地位象征，有些人甚至会在晚餐客人面前称重鼠类。</p>
+<p>在马库斯·埃米利乌斯·斯卡鲁斯执政期间颁布的奢侈法禁止食用鼠类，但未能阻止这种做法。</p>
+<h3>鱼类和海鲜</h3>
+<p>鱼比肉更常见。</p>
+<p>水产养殖很发达，有专门从事牡蛎养殖的大型产业。</p>
+<p>罗马人还从事蜗牛养殖和橡树幼虫养殖。</p>
+<p>有些鱼类非常珍贵，价格很高，例如在科萨渔场养殖的鲻鱼，“人们发明了巧妙的方法来保证其新鲜度”。</p>
+<h3>水果</h3>
+<p>水果在季节性时新鲜食用，并在冬季干燥或保存。</p>
+<p>受欢迎的水果包括苹果、梨、无花果、葡萄、木瓜、柑橘、草莓、黑莓、接骨木莓、醋栗、李子、枣、甜瓜、玫瑰果和石榴。</p>
+<p>不太常见的水果是更奇特的香料和欧楂。</p>
+<p>樱桃和杏子，均于公元前1世纪引进，很受欢迎。</p>
+<p>桃子于公元1世纪从波斯引进。</p>
+<p>橙子和柠檬为人所知，但更多的是用于药用目的，而不是用于烹饪。</p>
+<p>尽管古罗马人知道柠檬，但在普林西帕特之前，柠檬并没有在意大利种植。</p>
+<p>罗马至少种植了35个梨品种，以及三种苹果。</p>
+<p>卡托描述的梨栽培方法与现代技术类似。</p>
+<p>有梨和桃子奶油以及用蜂蜜、胡椒粉和少量鱼露调味的牛奶布丁的菜谱。</p>
+<p>科鲁梅拉就用茴香、茴香籽、孜然和烤芝麻将无花果压成糊状，然后用无花果叶包裹起来保存无花果的方法提供了建议。</p>
+<h3>蔬菜</h3>
+<p>虽然抱子甘蓝、朝鲜蓟、豌豆、芜菁甘蓝，以及可能是花椰菜的祖先可能存在于罗马时代，但我们认为的现代栽培形式直到中世纪晚期和文艺复兴时期早期才发展起来。</p>
+<p>卷心菜既可以生吃（有时蘸醋），也可以煮熟食用。</p>
+<p>卡托非常重视卷心菜，认为它有利于消化，而且还认为如果病人吃大量的卷心菜并在自己的尿液中沐浴，他就会康复。</p>
+<h3>豆类</h3>
+<p>豆类仅限于干豌豆、蚕豆（蚕豆）、鹰嘴豆、扁豆和羽扇豆。</p>
+<p>罗马人知道几种鹰嘴豆，如维纳斯、公羊和迦太基鹰嘴豆。</p>
+<p>它们要么煮成肉汤，要么烤着作为零食。</p>
+<p>罗马食谱阿庇丘斯提供了几道鹰嘴豆菜谱。</p>
+<h3>坚果</h3>
+<p>古罗马人吃核桃、杏仁、开心果、栗子、榛子（榛子）、松子和芝麻，他们有时会将其研磨成粉末，以增稠辛辣的甜葡萄酒酱，用于烤肉和家禽，作为配菜或浇在肉上作为釉料。</p>
+<p>坚果也用于冷盘的咸味类似于pesto的酱汁。</p>
+<p>坚果用于用蜂蜜甜味的面包、馅饼和布丁。</p>
+<h3>乳制品</h3>
+<p>奶酪被食用，并且在罗马帝国时期其制造业已经成熟。</p>
+<p>它是罗马士兵标准口粮的一部分，在平民中也很受欢迎。</p>
+<p>戴克里先皇帝（公元284-305年）对奶酪设定了最高价格。</p>
+<p>许多罗马作家都提到了奶酪的制作及其质量和烹饪用途：老普林尼在《博物志》第28卷中描述了奶酪的饮食和药用用途，瓦罗在《论农业》中描述了罗马的奶酪制作季节（春季和夏季），并将柔软的新鲜奶酪与干燥的老化奶酪进行了比较。</p>
+<p>对罗马奶酪制作最详尽的描述来自科鲁梅拉，摘自他关于罗马农业的论文《论农业》。</p>
+<h3>调味品</h3>
+<p>鱼露是古罗马独特的鱼酱。</p>
+<p>它被用作调味品，代替盐；作为餐桌调味品；以及作为酱汁。</p>
+<p>有四种主要的鱼露类型：鱼露、liquamen、muria和allec。</p>
+<p>它是用不同的品质制成的，例如金枪鱼、鲻鱼和鲈鱼等鱼。</p>
+<p>它可以调味，例如与葡萄酒混合，或用水稀释（hydrogarum），这是罗马士兵中流行的一种形式，尽管埃拉加巴卢斯皇帝声称他是第一个在罗马的公共宴会上供应它的人。</p>
+<p>最昂贵的鱼露是garum sociorum，它是在西班牙的纽卡萨治渔场用马鲛鱼（scomber）制成的，并且广泛交易。</p>
+<p>普林尼在他的《博物志》中写道，这种酱汁的两congii（7升）要花费1000塞斯特斯。</p>
+<p>早期帝国时期的一千塞斯特斯相当于110克黄金。</p>
+<h2>烹饪</h2>
+<p>古罗马的许多烹饪方式之一是focus，一个壁炉，放置在lararium前面，lararium是家庭祭坛，其中包含家庭神（lares，或守护祖先灵魂，以及penates，被认为是保护地板、食品室）的小雕塑。</p>
+<p>在lararium建入墙体的房屋中，focus有时用凸起的砖块砌成四面，建在一个基板上，在基板上生火。</p>
+<p>更常见的是矩形的便携式focus，它只是由一个可移动的壁炉和石头或青铜脚组成。</p>
+<p>在单独厨房发展起来之后，focus开始只用于宗教祭祀和保暖，而不是用于烹饪。</p>
+<p>罗马人使用便携式炉灶和烤箱，有些炉灶和烤箱上放有水壶和烤架。</p>
+<p>在庞培，大多数房屋都有单独的厨房，大多数都相当小，但也有少数大型厨房；神秘别墅占地九乘十二米。</p>
+<p>庞培的一些厨房没有屋顶，更像院子而不是普通的房间；这使得烟雾能够通风。</p>
+<p>有屋顶的厨房一定非常烟熏，因为唯一的通风只能来自高高的窗户或天花板上的洞；虽然罗马人为他们的面包房和铁匠铺建造了烟囱，但在大约公元12世纪之前，在私人住宅中是未知的，远在罗马文明崩溃之后。</p>
+<p>许多罗马厨房都有一个烤箱（furnus或fornax），有些（如神秘别墅的厨房）有两个。</p>
+<p>这是一个用砖或石头建造的方形或圆顶结构，这些烤箱有一个平坦的地板，通常是花岗岩，有时是熔岩，里面装满了干树枝，然后点燃。</p>
+<p>厨房的墙壁上有挂烹饪设备的钩子和链条，包括各种锅和锅、刀、肉叉、筛子、擦菜板、烤肉叉、钳子、奶酪切片器、核桃夹、量杯和肉酱模具。</p>
+<h2>酒精饮料</h2>
+<p>在古罗马，葡萄酒通常在饮用前立即与水混合，因为发酵不受控制，酒精浓度很高。</p>
+<p>葡萄酒有时会被制造商调整和“改进”：关于用红葡萄酒酿造白葡萄酒，反之亦然，以及关于拯救即将变成醋的葡萄酒的说明仍然存在。</p>
+<p>这些说明以及对罗马葡萄栽培的详细描述可以追溯到公元前160年，这是现存最古老的拉丁文散文文本。</p>
+<p>葡萄酒也有各种各样的风味。</p>
+<p>例如，有一种passum，一种浓烈的甜葡萄干酒，其最早的已知配方是迦太基起源的；mulsum，一种新近制作的葡萄酒和蜂蜜混合物（今天称为蜂蜜酒）；以及conditum，一种预先制作并成熟的葡萄酒、蜂蜜和香料的混合物。</p>
+<p>一个具体的配方，Conditum Paradoxum，是用葡萄酒、蜂蜜、胡椒、月桂叶、枣、乳香和藏红花混合而成的，煮熟后储存备用。</p>
+<p>另一个配方要求在葡萄酒中加入海水、沥青和玫瑰。</p>
+<p>一位希腊旅行者报告说，这种饮料显然是一种后天习得的口味。</p>
+<p>用水和药草混合的酸酒（posca）是下层阶级流行的饮料，也是罗马士兵口粮的主要组成部分。</p>
+<p>啤酒（cerevisia）为人所知，但被认为是粗俗的，并且与野蛮人有关。</p>
+<p>虽然缺乏现代时代常用的甜味剂，如精制糖或适当搅打的黄油，但古罗马有甜点，在他们吃完用葡萄酒提供的正餐后供应。</p>
+<p>最著名的就是各种新鲜采摘的水果的大盘子；一些无法在罗马生长的更奇特的水果甚至从遥远的国家运送给富人。</p>
+<p>由于缺乏糖等甜味剂，人们总是渴望获得最甜的水果。</p>
+<p>Sprias是一种在这个时期很容易买到的甜糕点；总是用薄薄的、蛋糕状的饼皮制成，有时含有水果。</p>
+<p>Enkythoi是另一种常见的罗马糕点，它更柔软，就像现代的海绵蛋糕。</p>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Ancient_Roman_cuisine" target="_blank">(https://en.wikipedia.org/wiki/Ancient_Roman_cuisine)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Theater-and-Amphitheater-in-the-Roman-World-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🎭&nbsp;</span>Theater and Amphitheater in the Roman World | Essay | The Metropolitan Museum of Art | Heilbrunn Timeline of Art History</h3>
+        <small class="page-url url "><a href="https://www.metmuseum.org/toah/hd/tham/hd_tham.htm" target="_blank">(https://www.metmuseum.org/toah/hd/tham/hd_tham.htm)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 讲述了罗马的娱乐文化，强调公共场合的奢华展示与贵族影响力。<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马世界的奇观</h2>
+<p>奇观是罗马世界生活中不可或缺的一部分。某些形式的奇观——例如凯旋游行、贵族葬礼和公共宴会——以城市本身为背景。其他的则在专门建造的观众建筑中举行：剧院用于戏剧和其他风景娱乐，圆形剧场用于角斗士格斗和野兽表演，体育场用于竞技比赛，竞技场用于赛车 (59.11.14)。总的来说，这种普遍存在的奇观文化既是社会政治精英自我宣传的工具，也是加强整个社会共同价值观和制度的一种手段。</p>
+<h3>罗马世界的剧院</h3>
+<p>据古代历史学家李维记载，罗马最早的戏剧活动是伴有音乐伴奏的舞蹈，由伊特鲁里亚人于公元前364年引入罗马。文献记录还表明，阿泰拉纳（一种类似于南意大利弗利亚克斯[24.97.104]的本土意大利滑稽剧）在相当早的时期就在罗马上演。公元前240年，由来自意大利南部塔兰托希腊城市的剧作家李维乌斯·安德罗尼库斯引进了完整的剧本式戏剧。现存完整的最早的拉丁语戏剧是普劳图斯的喜剧（活跃于公元前约205-184年），主要是对希腊新喜剧的改编。拉丁悲剧也在公元前二世纪蓬勃发展。虽然该类型的一些例子处理了希腊神话中的故事，但另一些则关注罗马历史上的著名事件。公元前二世纪以后，罗马的悲剧和喜剧创作急剧下降。在帝国时期，最流行的戏剧娱乐形式是哑剧（带有耸人听闻的情节和性暗示的粗俗喜剧作品）和哑剧表演（由独舞演员和合唱团伴奏的表演，通常重现悲剧神话）。</p>
+<p>罗马世界戏剧表演的主要场合是每年由民选官员组织并由国库资助的宗教节日，或称卢迪。寺庙的奉献、军事胜利和贵族的葬礼也为风景表演提供了机会。直到公元前55年，罗马城都没有永久性的剧院，戏剧是在临时性的木制建筑中上演的，最多只能维持几周。古代资料一致认为，建造永久性剧院的延误是由于元老院的积极反对，尽管这种抵抗的可能原因（对罗马道德的担忧、对民众煽动的恐惧、精英之间的竞争）仍然是一个有待讨论的话题。关于临时剧院的文学记载表明，它们可能相当精致。记载最详细的是公元前58年由行政长官M·埃米利乌斯·斯卡乌鲁斯建造的一个剧院，普林尼报告说，它的舞台建筑由三层柱子组成，并装饰着3000尊青铜雕像。</p>
+<p>罗马城第一个永久性剧院是庞培剧院，由尤利乌斯·凯撒的对手庞培大帝于公元前55年落成。该剧院仅保留了地基，是一座巨大的建筑，高度约45米，可容纳多达20,000名观众。舞台建筑的后面是一个大型带柱廊的走廊，里面收藏着艺术品和花园。庞培剧院建于公元前60年代庞培的壮观军事活动之后，在很大程度上起着胜利纪念碑的作用。观众席（座位区）上矗立着庞培的守护神维纳斯·维克特里克斯神庙，剧院装饰着胜利女神雕像和庞培在战斗中征服的民族的拟人化雕像。</p>
+<p>庞培的奉献有效地规范了罗马剧院的形式，提供了一个原型，将在接下来的近三个世纪里在整个帝国复制。这种新的建筑类型与传统的希腊剧院有显著的不同。后者由两个独立的结构组成：马蹄形的座位区和一个独立的舞台建筑。相比之下，罗马剧院是一座完全封闭的建筑，没有屋顶，但在演出日通常会遮盖遮阳篷。希腊剧院的座位区倚靠天然山坡支撑，而罗马剧院则至少部分由混凝土拱顶支撑，这为从建筑物外部进入观众席提供了通道。在希腊化世界，舞台建筑是一个相对低矮的结构，装饰着彩绘面板，但很少有大型雕塑。另一方面，罗马剧院的特点是高大的宽阔的舞台前幕，有多层楼，由独立的柱子构成，并装饰着神灵和英雄的雕像以及皇室和当地名流的肖像。</p>
+<p>罗马剧院与其希腊前辈之间的建筑差异不能仅仅用光学、声学或舞台需求等功能因素来解释。相反，罗马对希腊剧院的改造似乎很大程度上是由社会和政治力量驱动的。例如，柱状舞台前幕可能是为了容纳罗马将军从希腊和亚洲掠夺并作为其军事实力的证据在凯旋游戏中展出的雕像而发展起来的。罗马剧院的建筑也体现了罗马对社会控制和等级展示的关注。与希腊世界不同，在希腊世界的剧院中，座位基本上是开放的，而罗马观众则根据阶级、性别、国籍、职业和婚姻状况严格隔离。这反映在罗马剧院封闭的形式上，它限制了进入建筑物，以及拱形地下结构系统，它促进了观众前往合适的座位区域。</p>
+<h3>罗马世界的圆形剧场</h3>
+<p>与从希腊模式演变而来的罗马剧院相反，圆形剧场在希腊世界没有建筑先例。同样，在圆形剧场举行的奇观——角斗士格斗和兽类表演——起源于意大利，而不是希腊。角斗比赛最早的确切证据来自意大利南部佩斯图姆一座公元前四世纪陵墓的彩绘装饰。几位古代作家记载，角斗比赛于公元前264年在罗马举行，是为了纪念一位名叫D·尤尼乌斯·布鲁图斯·佩拉的精英公民而举行的军乐（葬礼游戏）。到公元前一世纪中叶，角斗比赛不仅在葬礼上举行，还在国家赞助的节日（卢迪）上举行。在整个帝国时期，它们仍然是皇帝和省级领导人获得民众青睐的重要途径。公元325年，第一位基督教皇帝君士坦丁（26.229）以角斗比赛对和平时期来说过于血腥为由禁止了角斗比赛。然而，文献、题字和考古证据表明，角斗游戏至少持续到公元五世纪中叶。</p>
+<p>与戏剧娱乐一样，罗马最早的角斗比赛场地是临时性的木制建筑。据李维记载，早在公元前218年，角斗比赛就在罗马广场的细长空地上举行，并为观众设置了木制看台。这些临时建筑可能为纪念性圆形剧场提供了原型，这种建筑类型以椭圆形的座位区包围着一个平坦的表演空间为特征。可以确切地追溯日期的第一个石头圆形剧场是庞贝的圆形剧场，建于公元前80-70年。与大多数早期圆形剧场一样，庞贝的圆形剧场外观简朴实用，座位部分由土堆支撑。</p>
+<p>罗马最早的石头圆形剧场建于公元前29年，由皇帝奥古斯都最信任的将军之一T·斯塔蒂利乌斯·陶鲁斯建造。这座建筑在公元64年的大火中烧毁，并由公元80年由皇帝提图斯落成的斗兽场（59.570.426）取代，至今仍是罗马最著名的地标之一。与早期的圆形剧场不同，斗兽场拥有精巧的地下设施，包括动物笼和机械电梯，以及复杂的拱形混凝土地下结构系统。外观由三层叠加的拱廊组成，两侧是托斯卡纳、爱奥尼亚和科林斯式柱式的柱子。古代硬币上对该建筑的描绘表明，巨大的神灵和英雄雕像矗立在上层的拱廊中。包含希腊柱式和希腊雕像的复制品可能反映了人们希望将圆形剧场——一种独特的罗马建筑类型——提升到与剧院相同的建筑层次，而剧院则拥有其古老的希腊先例。</p>
+<p>除了角斗比赛外，圆形剧场还为兽类表演提供了场所，兽类表演包括由被称为猎人或野兽斗士的训练有素的猎人屠杀动物。兽类表演的举办费用很高，因此可以用来宣传赞助它们的官员的财富和慷慨。包含外来物种（狮子、豹子、犀牛、大象等）也证明了罗马统治的巨大范围。在圆形剧场举行的第三种奇观是公开处决。被判处死刑的罪犯被钉死在十字架上、火化或被野兽袭击，有时还会被迫重演可怕的神话。</p>
+        <small class="page-url url "><a href="https://www.metmuseum.org/toah/hd/tham/hd_tham.htm" target="_blank">(https://www.metmuseum.org/toah/hd/tham/hd_tham.htm)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Ancient-Roman-philosophy---Wikipedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📜&nbsp;</span>Ancient Roman philosophy - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Ancient_Roman_philosophy" target="_blank">(https://en.wikipedia.org/wiki/Ancient_Roman_philosophy)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 提供了关于古罗马哲学的背景，展示贵族对智慧与教育的追求。<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马哲学</h2>
+<p>古罗马哲学是指罗马共和国及其继承者罗马帝国时期所实践的哲学。罗马哲学不仅包括用拉丁语撰写的哲学，也包括在共和国后期和罗马帝国时期用希腊语撰写的哲学。重要的早期拉丁语作家包括卢克莱修、西塞罗和小塞内卡。希腊语是撰写哲学的常用语言，以至于罗马皇帝马可·奥勒留选择用希腊语撰写他的《沉思录》。</p>
+<h3>历史</h3>
+<p>公元前155年，一个由学院派怀疑论者卡尔内阿德、斯多葛派人物巴比伦的狄奥根尼斯和逍遥学派克里托劳斯组成的雅典使团，首次在罗马激起了对哲学的兴趣。[1]罗马哲学深受希腊化哲学的影响；然而，在罗马时期，哲学学派也出现了独特的思想发展，许多哲学家融合了多个学派的教义。罗马时期的两个主要法学派，萨比努斯学派和普罗库勒斯学派，分别从斯多葛派和伊壁鸠鲁学派的著作中汲取了他们的伦理观，[2]这使得思想之间的竞争在罗马的法律领域得以体现。</p>
+<p>在弗拉维王朝的专制统治下，一群哲学家公开且政治性地抗议帝国的行为，尤其是在多米蒂安和韦斯巴芗统治时期。这导致韦斯巴芗驱逐了罗马的所有哲学家，除了盖乌斯·穆索尼乌斯·鲁弗斯；尽管他后来也被驱逐了。[3]这一事件后来被称为斯多葛派反对派，因为大多数抗议的哲学家都是斯多葛派。在罗马后期的时期，斯多葛派开始高度重视这场反对；然而，“斯多葛派反对派”一词直到19世纪才被创造出来，它首次出现在加斯顿·博瓦西耶的著作中。[4]</p>
+<p>虽然哲学经常受到法学家和贵族的推崇，但在皇帝中，哈德良对哲学的喜爱尤为突出，这一特点可能因其亲希腊而被放大。据记载，哈德良在他巡游希腊时曾听取埃皮克泰德和法沃里努斯的讲座，并通过他自身的中央计划方法，大量投资试图复兴雅典作为古代世界的文化中心。[5]哈德良高度重视哲学，这对于经常漠视甚至反对哲学实践的罗马皇帝来说是不寻常的。尼禄、朱利安和马可·奥勒留皇帝也持有这种赞同哲学的观点——后两者现在被认为是哲学家。</p>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Ancient_Roman_philosophy" target="_blank">(https://en.wikipedia.org/wiki/Ancient_Roman_philosophy)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="What-was-life-of-an-aristocrat-like-in-the-city-of-Rome-during-the-late-republic?---Quora">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏺&nbsp;</span>What was life of an aristocrat like in the city of Rome during the late republic? - Quora</h3>
+        <small class="page-url url "><a href="https://www.quora.com/What-was-life-of-an-aristocrat-like-in-the-city-of-Rome-during-the-late-republic" target="_blank">(https://www.quora.com/What-was-life-of-an-aristocrat-like-in-the-city-of-Rome-during-the-late-republic)</a><br></small>
+        <small class="page-rating rating ">评分: 6.0<br></small>
+        <small class="page-annotation annotation ">注释: 涉及罗马贵族的物质生活与消费水平的探讨，特别是对奢侈品的需求。<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马贵族的生活：物质富足与政治动荡</h2>
+<p>从物质和经济角度来看，罗马贵族的晚期共和国时期生活相当优渥，至少远超普通民众的生活水平。</p>
+<p>如果你属于元老院阶级或较为富有的骑士阶层（equites）——这两个社会“等级”构成了晚期共和国时期罗马贵族阶层——你很可能居住在罗马较为富裕的街区的一座大型庄园里（或许还有私人浴室或冬季中央供暖）。你可以享用来自罗马世界各地的优质葡萄酒和进口美食，这与普通民众所食用的简单豆类、小麦粥和鱼露（garum）形成了鲜明对比。你可以将住宅直接连接到为城市提供水源的输水道系统，甚至拥有简单的管道和自来水——无需排队取用公共井水。你会有众多家奴为你服务，从烹饪到照顾你的孩子，再到管理你的农业庄园和商业利益的账目。你可能还在意大利乡村或沿海地区拥有一座或多座豪华别墅，以便在炎热的夏季逃离城市。</p>
+<p>然而，晚期罗马共和国也是一个政治动荡的时期，充满了政治暴力、内战和随之而来的清洗。大多数年轻贵族都期望尝试着攀登“cursus honorum”（荣誉之路）——这是一条获得越来越重要的政治职位的途径，是通往公共生活中权力和影响力的主要途径。这意味着你很可能深度参与政治，因此容易成为派系斗争的受害者。即使你完全避开公共事务，巨额财富也可能使你成为目标。随着共和国向帝国过渡，这种趋势越来越明显，传统的罗马贵族受到了历代皇帝一波又一波的清洗。到朱利奥-克劳狄王朝结束时，晚期共和国的罗马贵族大大减少，到3世纪危机时期，几乎完全消失了。</p>
+<p>共和国末期，罗马国家已经拥有了一个帝国。财富从地中海的各个角落流向罗马，而罗马贵族获得了其中最大一部分。庄园规模扩大，奴隶数量增加，人们忘记了像节俭这样的古老罗马美德，开始采用财富和奢华的装饰。大部分时间，贵族们过着美好的生活。</p>
+<h2>罗马贵族的荣誉之路 (Cursus Honorum)</h2>
+<p>罗马贵族的生命主要由cursus honorum决定，这是一个预定的政治仕途，一系列的职位和官职，一个男子必须担任这些职位和官职，才能完成他作为罗马贵族的生命使命，并成功地追随其祖先的脚步。</p>
+        <small class="page-url url "><a href="https://www.quora.com/What-was-life-of-an-aristocrat-like-in-the-city-of-Rome-during-the-late-republic" target="_blank">(https://www.quora.com/What-was-life-of-an-aristocrat-like-in-the-city-of-Rome-during-the-late-republic)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Clothing-in-ancient-Rome---Wikipedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">👗&nbsp;</span>Clothing in ancient Rome - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Clothing_in_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Clothing_in_ancient_Rome)</a><br></small>
+        <small class="page-rating rating ">评分: 5.5<br></small>
+        <small class="page-annotation annotation ">注释: 描述古罗马的服装文化，以体现等级与社会身份的重要性。<br></small>
+    </div>
+    <div class="page-content content"><p>古罗马的服装：</p>
+<h3>古罗马公民的正式服装</h3>
+<p>男子和男孩通常穿着短袖或无袖及膝的短袍（tunic），女子和女孩则穿着较长，通常有袖的短袍。在正式场合，成年男性公民会在短袍外披一件羊毛托加（toga），已婚女公民则在斯托拉（stola）——一件简单的、长袖的、宽松的、能遮住脚的服装——外面披一件羊毛披肩（palla）。服装、鞋履和配饰体现了性别、地位、等级和社会阶层。这在法官、祭司和军队的独特而显赫的官方服装中尤为明显。托加被认为是罗马的“民族服装”，罗马公民享有这种特权，但在日常生活中，大多数罗马人更喜欢更休闲、更实用、更舒适的服装；各种形式的短袍是所有阶层、男女和大多数职业的基本服装。它通常由亚麻制成，并根据需要增加内衣或各种防寒或防雨的衣物，例如男子的及膝裤、斗篷、外套和帽子。在帝国较寒冷的地区，人们穿着长裤。大多数城市罗马人穿着各种类型的鞋子、拖鞋、靴子或凉鞋；在农村，有些人穿着木屐。大多数服装结构简单，形式基本，其生产所需的剪裁和缝纫最少，但所有服装都是手工制作的，每个过程都需要技巧、知识和时间。纺纱和织布被认为是所有阶层罗马妇女的德行、节俭的职业。包括奥古斯都的妻子莉维亚在内的富有的贵妇人可能会通过生产家纺服装来展示她们的传统价值观，但大多数能够负担得起服装的男女都从专业工匠那里购买服装。服装的制造和贸易及其原材料的供应对罗马经济做出了重要贡献。相对于整体基本生活成本而言，即使是简单的服装也很昂贵，并且会在社会阶层中多次循环使用。罗马的统治精英制定了旨在限制个人财富和奢侈品公开展示的法律。这些法律都没有特别成功，因为同样的富裕精英对奢华和时尚的服装有着强烈的需求。奇异的织物是有价的；丝绸提花、半透明的薄纱、金线织物和复杂的刺绣；以及鲜艳昂贵的染料，如藏红花黄或提尔紫。然而，并非所有染料都昂贵，大多数罗马人都穿着色彩鲜艳的服装。干净、鲜艳的服装是所有社会阶层都尊贵和地位的标志。用于固定斗篷等服装的扣子和胸针为个人装饰和展示提供了进一步的机会。</p>
+<h3>斯托拉和帕拉</h3>
+<p>除了短袍外，已婚女公民还穿一种被称为斯托拉（stola）的简单服装，它与传统的罗马女性美德，尤其是贞洁有关。在罗马共和国早期，斯托拉是贵妇专用的。在第二次布匿战争之前不久，穿戴斯托拉的权利扩展到平民妇女，以及通过与公民结婚而获得妇女身份的自由女奴。斯托拉通常由两块矩形的布料组成，侧面用纤维和纽扣连接，这种方式能让服装优雅地遮盖身体，包括脚部。在斯托拉外面，女公民通常会穿着帕拉（palla），这是一种长达 11 英尺，宽 5 英尺的矩形披肩。它可以作为外套，也可以披在左肩上，穿过右臂，然后搭在左臂上。在户外和公共场合，贞洁的妇女会用羊毛带（发带或维塔）将头发高高地盘起，这种发型被称为图图卢斯。为了遮挡公众，尤其是男性的视线，她的脸被面纱遮住；她的帕拉也可以作为带帽斗篷。两种古代文学资料提到了妇女“披风”或她们短袍下摆上的彩色条带或镶边（alimbus）；这可能是她们高地位的标志，很可能是紫色的。在住所外，妇女们被期望戴面纱；不戴面纱的妇女被认为拒绝了婚姻。被判通奸的高种姓妇女和高级女性妓女（meretrices）不仅被禁止公开使用斯托拉，而且可能被要求穿托加穆利布里斯（toga muliebris）（“妇女的托加”）作为她们恶名的标志。</p>
+<h3>短袍 (Tunic)</h3>
+<p>男女和所有阶层的基层服装都是短袍（tunica）。最简单的形式，短袍是由一块织物缝制而成，最初是羊毛，但从共和国中期开始，越来越多地使用亚麻。它被缝成一个宽松的、无袖的管状形状，并像希腊基顿一样在肩上别住，形成颈部和手臂的开口。在帝国东部的一些例子中，颈部开口是在编织中形成的。可以添加袖子，或从多余的宽度就地形成。大多数劳动男子穿着及膝的短袖短袍，腰间系着腰带。一些传统主义者认为长袖短袍只适合妇女穿着，男子穿得很长的短袍是柔弱的象征，而短的或不系腰带的短袍是奴性的标志；然而，非常长袖的、松散系带的短袍也是时尚的非常规服装，被一些罗马男子所采用；例如，凯撒。妇女的短袍通常是及踝或及地的，长袖的，可以松散地穿着或系上腰带。为了舒适和防寒，男女都可以在外短袍下穿柔软的内短袍或背心（subucula）；在冬天，皇帝奥古斯都，他的体格和体质从来都不是特别健壮，会在背心上穿多达四件短袍。虽然基本设计上很简单，但短袍在面料、颜色和细节上也可以很奢华。裹身布，被称为苏布利加库拉或苏布利加里亚，可以穿在短袍下。它们也可以单独穿着，特别是从事炎热、出汗或肮脏工作的奴隶。妇女在短袍下穿着裹身布和胸布（strophium）；有些妇女穿着定制的内衣工作或休闲。罗马妇女还可以穿佩克托拉利斯带（fascia pectoralis），这是一种类似于现代女性胸罩的胸带。公元 4 世纪的西西里镶嵌画展示了几位穿着“比基尼”的女孩进行体育运动；1953 年，在伦敦一口井中发掘出一件罗马皮革比基尼底裤。</p>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Clothing_in_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Clothing_in_ancient_Rome)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Athletics,-Leisure,-and-Entertainment-in-Ancient-Rome---World-History-Encyclopedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">⚽&nbsp;</span>Athletics, Leisure, and Entertainment in Ancient Rome - World History Encyclopedia</h3>
+        <small class="page-url url "><a href="https://www.worldhistory.org/article/98/athletics-leisure-and-entertainment-in-ancient-rom/" target="_blank">(https://www.worldhistory.org/article/98/athletics-leisure-and-entertainment-in-ancient-rom/)</a><br></small>
+        <small class="page-rating rating ">评分: 4.5<br></small>
+        <small class="page-annotation annotation ">注释: 关于古罗马的运动与娱乐，突出贵族儿童的活动与社会习俗。<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马的休闲活动</h2>
+<p>罗马最受欢迎的休闲区之一是火星广场（Campus Martius），这是一个广阔的泛滥平原，是罗马青年们的游乐场。在那里，他们从事各种体育活动，包括跳跃、摔跤、拳击、赛跑和投掷。罗马女孩和妇女通常不参加这些活动。</p>
+<h3>马术运动头盔</h3>
+<p>尼美根罗马骑兵头盔，一个铁面具，包裹着青铜和银，于公元1915年在尼美根（荷兰）附近被发现，公元一世纪下半叶。（尼美根瓦尔克霍夫博物馆）根据尼科米底亚的阿利安的说法，面具头盔被用于骑兵阅兵和被称为“hippika gymnasia”的体育模拟战斗。</p>
+<h3>游泳</h3>
+<p>游泳是罗马男孩最喜欢的活动之一，在台伯河和火星广场附近广泛开展。大多数罗马浴室也配备了跳水池，人们在那里享受游泳。有一些记载表明古代妇女会游泳。</p>
+<h3>骑马</h3>
+<p>每个罗马人都被期望成为一名优秀的骑手，因此骑马从很小的时候就是罗马男孩们喜欢的活动。</p>
+<h3>摔跤和拳击</h3>
+<p>摔跤和拳击是流行的运动，通常在罗马浴室的 palestra（中央场地）进行。两者都有助于改善整体健康状况，增强力量和耐力，并且普遍受到许多罗马人的喜爱。因为没有拳击手套，运动员会用多层布紧紧包裹他们的手。</p>
+<h3>赛跑</h3>
+<p>赛跑是古罗马另一项受欢迎的活动。男孩们在火星广场互相进行跑步比赛，那里是这项活动的理想场所。</p>
+<h3>狩猎和捕鱼</h3>
+<p>狩猎是罗马精英中最古老和最受欢迎的运动之一，男孩们经常陪同他们的父亲进行狩猎探险，以学习射击技巧。在乡下，钓鱼是最受欢迎的消遣活动之一。</p>
+<h3>球类游戏</h3>
+<p>在运动过程中，罗马人还参加了各种涉及球类的体育活动，包括手球、足球、曲棍球、接球游戏，甚至可能是躲避球。这些通常发生在 palestra 或 sphaerista（球场）。有一些记载表明女性也参与了球类游戏。</p>
+<h3>罗马骰子</h3>
+<p>罗马骰子，由骨头和象牙制成。较大的三面骰子是未完成的作品。罗马帝国时期。（罗马马西莫宫）</p>
+<h3>棋盘游戏</h3>
+<p>古罗马人玩各种各样的棋盘游戏，包括骰子（Tesserae）、指骨（Talior Tropa）、罗马象棋（Latrunculi）、罗马跳棋（Calculi）、井字棋（Terni Lapilli）和罗马西洋双陆棋（Tabula）。</p>
+<h3>公共娱乐</h3>
+<p>还有其他一些活动来使罗马人民保持快乐并防止起义，例如在最大竞技场（Circus Maximus）举办的战车比赛、音乐和戏剧表演、公开处决、兽类狩猎和角斗士战斗。罗马最著名的圆形剧场——斗兽场，最多可容纳 50,000 名观众。还有记载表明，竞技场被淹没以举行海战（称为 Naumachia），供公众观看。这些娱乐形式，都是大型公共景观，是古罗马文化中一个独特而重要的组成部分。</p>
+        <small class="page-url url "><a href="https://www.worldhistory.org/article/98/athletics-leisure-and-entertainment-in-ancient-rom/" target="_blank">(https://www.worldhistory.org/article/98/athletics-leisure-and-entertainment-in-ancient-rom/)</a><br></small>
+    </div>
+
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 获取所有导航链接
+        const navLinks = document.querySelectorAll(".navigate-item");
+        // 将导航链接与目标元素建立映射关系
+        const connections = Array.from(navLinks).map(link => {
+            const targetId = link.getAttribute("href").substring(1); // 去掉 #
+            const targetElement = document.getElementById(targetId);
+            return { link, targetElement };
+        });
+        // 使用 IntersectionObserver 观察目标元素
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const { target, isIntersecting } = entry;
+                    const matchingLink = connections.find(connection => connection.targetElement === target).link;
+                    if (isIntersecting) {
+                        // 目标元素在视野中，添加高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.add("active");
+                    } else {
+                        // 目标元素离开视野，移除高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.remove("active");
+                    }
+                });
+            },
+            {
+                root: null, // 默认视口
+                threshold: 0.02
+            }
+        );
+
+        // 开始观察所有目标元素
+        connections.forEach(({ targetElement }) => observer.observe(targetElement));
+    });
+</script>
+<script>
+    // 获取元素
+    const resizer = document.querySelector('.resizer');
+    const leftColumn = document.querySelector('.left-column');
+    const rightColumn = document.querySelector('.right-column');
+    const navigate = document.querySelector('.navigate')
+
+    let isDragging = false;
+
+    // 鼠标按下事件
+    resizer.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        document.body.style.cursor = 'col-resize';
+        document.body.style.userSelect = 'none';
+    });
+
+    // 鼠标移动事件
+    document.addEventListener('mousemove', (event) => {
+        if (!isDragging) return;
+
+        // 计算新的宽度
+        const newLeftWidth = event.clientX / window.innerWidth * 100; // 转换为百分比
+
+        // 限制宽度范围
+        if (newLeftWidth > 15 && newLeftWidth < 70) {
+            leftColumn.style.flexBasis = `${newLeftWidth}%`;
+            rightColumn.style.flexBasis = `${100 - newLeftWidth}%`;
+            navigate.style.left = `${newLeftWidth + 0.15 * (100 - newLeftWidth)}%`
+            navigate.style.maxWidth = `${0.7 * (100 - newLeftWidth)}%`
+
+            const navigateRect = navigate.getBoundingClientRect();
+            const screenWidth = window.innerWidth;
+
+            // 获取右侧部分宽度
+            const rightColumnWidth = rightColumn.getBoundingClientRect().width;
+
+            // 计算 navigate 的占屏幕宽度比例
+            const navigateWidthPercentage = (navigateRect.width / screenWidth) * 100;
+
+            // 计算 navigate 居中所需的 left 值
+            const rightColumnLeft = rightColumn.getBoundingClientRect().left;
+            const navigateLeft = rightColumnLeft + (rightColumnWidth - navigateRect.width) / 2;
+
+            // 设置 navigate 的宽度和位置
+            navigate.style.left = `${navigateLeft}px`;
+        }
+    });
+
+    // 鼠标松开事件
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        document.body.style.cursor = 'default';
+        document.body.style.userSelect = 'auto';
+    });
+</script>
+</html>

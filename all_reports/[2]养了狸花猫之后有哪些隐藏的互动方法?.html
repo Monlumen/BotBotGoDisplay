@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>养了狸花猫之后有哪些隐藏的互动方法?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; 
+            background-color: #f4f6f8; 
+            color: #333; 
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        
+        .content {
+            border-radius: 12px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); 
+            background-color: #fff; 
+            padding: 16px; 
+            margin-bottom: 16px; 
+        }
+
+        
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .left-column{
+            flex: 0.47;
+        }
+        .right-column{
+            flex: 0.53;
+        }
+
+        .left-column {
+            background-color: #eef6ff; 
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; 
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Noto Serif", "SimSun", serif; 
+            position: relative;
+        }
+        .resizer {
+            width: 6px;
+            cursor: col-resize;
+            background-color: #d1d1d1;
+        }
+
+
+        
+        .title {
+            font-size: 1.4em; 
+            font-weight: 600; 
+            color: #1a1a1a; 
+            margin-bottom: 12px; 
+        }
+
+        .page-name.title {
+            font-size: 1.8em; 
+            font-weight: bold; 
+            color: #222; 
+            margin: 16px 0; 
+            text-align: left; 
+        }
+
+        .section-title {
+            font-size: 1.4em; 
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; 
+        }
+
+        
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; 
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; 
+            padding: 12px; 
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; 
+            border: 1px solid #dde3ea; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+            margin-bottom: 20px; 
+        }
+
+        
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; 
+            margin: 20px 0; 
+        }
+
+        
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; 
+            color: #666; 
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; 
+            border-radius: 8px; 
+            line-height: 1.4;
+            margin-bottom: 10px; 
+        }
+
+        
+        .page-rating {
+            background-color: #e8f4ff; 
+            color: #0078d7; 
+            font-weight: bold; 
+            border: 1px solid #aad4ff; 
+        }
+
+        
+        .page-annotation {
+            background-color: #fff5e5; 
+            color: #cc8400; 
+            font-style: italic; 
+            border: 1px solid #ffcc66; 
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; 
+        }
+
+        
+        a {
+            color: #0078d7; 
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+        
+        .content > * {
+            margin-bottom: 12px; 
+        }
+
+        
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; 
+            z-index: 300; 
+            background-color: #ffffff; 
+            color: #222; 
+            font-size: 1.1em; 
+            font-weight: 500; 
+            padding: 12px 16px; 
+            border-radius: 8px; 
+            border: 1px solid #d1e4f2; 
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05),  0 2px 4px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 16px; 
+            text-align: left; 
+            line-height: 1.6; 
+            font-family: "Inter", "Noto Sans", sans-serif; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        
+        .section-link-box {
+            display: inline-block; 
+            margin: 4px 2px; 
+        }
+
+        .section-link {
+            display: inline-flex; 
+            align-items: center; 
+            padding: 6px 12px; 
+            background-color: #eef6ff; 
+            color: #0078d7; 
+            font-size: 0.95em; 
+            font-weight: 500; 
+            text-decoration: none; 
+            border: 1px solid #d1e4f2; 
+            border-radius: 20px; 
+            transition: all 0.2s ease; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; 
+            color: #005bb5; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            text-decoration: underline; 
+        }
+
+        
+        .navigate {
+            display: flex; 
+            max-width: 40%;
+            width: fit-content; 
+            flex-wrap: nowrap; 
+            overflow-x: auto; 
+            gap: 4px; 
+            justify-content: center; 
+            padding: 4px 4px; 
+            background-color: #f4f6f8; 
+            border-radius: 12px; 
+
+            position: fixed;
+            top: 0;
+            left: 55%;
+            
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease; 
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        
+        .navigate-item {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            background-color: #ffffff; 
+            padding: 3px 6px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            transition: all 0.3s ease; 
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            transform: translateY(2px); 
+        }
+        .navigate-item.active {
+            box-shadow: 0 0 10px 3px rgba(0, 120, 215, 0.5); 
+            transform: translateY(1px); 
+        }
+        .navigate-item a {
+            text-decoration: none; 
+            color: #0078d7; 
+            font-weight: bold; 
+            font-size: 1em; 
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; 
+            margin-bottom: 1px; 
+        }
+        .navigate-item-id {
+            font-size: 0.9em; 
+            color: #555; 
+        }
+
+        [id] { 
+            scroll-margin-top: 55px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            养了狸花猫之后有哪些隐藏的互动方法?
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">狸花猫的行为特点</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Tabby-Cat:-Breed-Profile,-Characteristics-&-Care">
+    品种特征</a></div><div class="section-link-box"><a class="section-link" href="#Tabby:-traits,-characteristics,-health">
+    🌿个性</a></div><div class="section-link-box"><a class="section-link" href="#Understanding-Tabby-Cat-Behavior:-What-You-Need-to-Know">
+    🤝沟通</a></div><div class="section-link-box"><a class="section-link" href="#32-ways-to-bond-with-your-cat-|-PetsRadar">
+    互动</a></div><div class="section-link-box"><a class="section-link" href="#Trick-Training-Tabby:-How-to-Teach-Cats-to-Sit,-Come-&-Wave,-and-More!">
+    </a></div><div class="section-link-box"><a class="section-link" href="#10-Ways-Your-Cat-Is-Communicating-With-You---Cats.com">
+    </a></div></div>
+    <div class="section-content content"><h2>狸花猫的行为特点</h2>
+<p>狸花猫的行为特征兼具野性与温顺，呈现出独特的互动模式。根据多篇研究和猫行为学家的观察，其主要行为特征具体如下：</p>
+<p><strong>社交性与依恋:</strong> 狸花猫表现出高度的社交性 (如[网页1, 网页2]所述)， 它们通常友好且外向（网页1, 网页2），喜欢与人互动，并能与主人建立牢固的情感联系（网页1, 网页2）。一项关于猫科动物行为的研究显示，狸花猫比某些品种更倾向于寻求与人的互动 (网页2)。这种亲近人类的特性，部分源于其起源于古埃及的驯化历史 (网页1)。</p>
+<p><strong>好奇心与探索:</strong>  狸花猫对周围环境抱有强烈的好奇心（网页2），喜欢探索新的物品和空间（网页2）。这种探索行为与其狩猎本能相关，即使在家养环境中，也保留着这种天性 (网页2)。</p>
+<p><strong>沟通方式的多样性:</strong> 狸花猫善于运用多种方式进行沟通（网页3，网页10）。这包括：</p>
+<ul>
+<li><strong>肢体语言:</strong>  尾巴的位置、耳朵的姿态以及身体的姿势，都能传达它们的情绪状态（网页3）。例如，竖起的尾巴表示快乐或好奇，而蓬松的尾巴则可能表示恐惧或攻击性（网页3）。</li>
+<li><strong>声音:</strong>  除了喵叫 (网页10) 来表达需求和寻求关注外，咕噜声表示满足和喜爱 (本段)，啁啾声和颤音也用于与人互动 (网页10)。一些狸花猫甚至能对人类的言语做出回应（本段），形成独特的互动模式 (网页2)。成年狸花猫会对人类，而非同类，进行喵叫 (网页10)，这体现了其对人类的特殊依恋。嘶嘶声和咆哮则表示负面情绪，例如恐惧或愤怒（网页10）。</li>
+<li><strong>气味:</strong>  狸花猫利用信息素进行气味标记，以宣示领地或表达自身状态（网页10）。它们会通过头部和身体摩擦来释放信息素，将信任的人标记为安全成员（网页10）。</li>
+</ul>
+<p><strong>游戏与玩耍:</strong>  成年狸花猫依然保有强烈的好玩天性（本段），互动游戏对维持其身心健康和智力发育至关重要 (本段，网页2，网页32)。  提供各种玩具，如球、猫抓板和益智玩具，能有效预防无聊和行为问题 (网页3)，并满足其狩猎本能 (网页32)。  积极的强化训练，如奖励和爱抚，能有效地教会它们各种技巧 (网页2)。 点击器训练法 (网页7) 也能有效提升训练效率。</p>
+<p><strong>个体差异:</strong>  需要注意的是，虽然上述特征是狸花猫的普遍行为倾向，但个体之间存在差异 (网页1, 网页3)。  社会化和早期经历会显著影响其性格和行为 (网页3)。  部分狸花猫可能表现得更为内向或独立 (网页3)。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">互动活动与游戏推荐</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#toys-for-tabby-cats-at-DuckDuckGo">
+    🐱玩具推荐</a></div><div class="section-link-box"><a class="section-link" href="#32-ways-to-bond-with-your-cat-|-PetsRadar">
+    </a></div><div class="section-link-box"><a class="section-link" href="#Trick-Training-Tabby:-How-to-Teach-Cats-to-Sit,-Come-&-Wave,-and-More!">
+    </a></div></div>
+    <div class="section-content content"><h2>互动活动与游戏推荐</h2>
+<p>本报告着重推荐适合狸花猫的玩具和游戏，并阐述如何通过互动增强与猫咪的情感联系。  以下信息根据用户关注度进行排序，优先呈现玩具及游戏的具体细节和益处：</p>
+<p><strong>一、  玩具推荐 (按吸引力及互动性排序):</strong></p>
+<ol>
+<li>
+<p><strong>Yeowww! Catnip Toy:</strong>  猫薄荷玩具，利用猫薄荷的天然吸引力，刺激猫咪玩耍，释放天性。(来源: Tabby Manor的假日礼品指南：2022年十大猫玩具)</p>
+</li>
+<li>
+<p><strong>Boca Pet Tabby Tinsel Puff Cat Toy (中号，1.5英寸):</strong>  饰有亮片的蓬蓬球，兼具娱乐性和刺激性，满足猫咪拍打和追逐的本能。(来源: DuckDuckGo搜索结果)</p>
+</li>
+<li>
+<p><strong>Savvy Tabby Cat Toys (12件套):</strong>  包含多种创意玩具，材质结实耐用，色彩鲜艳，设计多样化，满足猫咪拍打、咬玩、狩猎等多种需求。(来源: DuckDuckGo搜索结果)</p>
+</li>
+<li>
+<p><strong>Tabby Cat Coffee Cat Toy Plushie:</strong> 咖啡袋形状毛绒玩具，内含猫薄荷，古怪独特，能激发猫咪的好奇心和玩耍兴趣。(来源: DuckDuckGo搜索结果)</p>
+</li>
+<li>
+<p><strong>KittyWhip Cat Toy:</strong>  设计类似猎物，适合进行抓捕游戏，锻炼猫咪的狩猎本能和运动能力。(来源: Tabby Manor的假日礼品指南：2022年十大猫玩具)</p>
+</li>
+<li>
+<p><strong>Ripple Rug:</strong>  互动毯子，独特的纹理和材质能刺激猫咪的触觉和探索欲，促进其活动。(来源: Tabby Manor的假日礼品指南：2022年十大猫玩具)</p>
+</li>
+</ol>
+<p><strong>(其他玩具，信息不足，建议补充详细描述及来源):</strong>  Motion Activated Butterfly Toy</p>
+<p><strong>二、 游戏建议 (按互动程度及益处排序):</strong></p>
+<ol>
+<li>
+<p><strong>10-Minute Games:</strong> 包括抓捕、追逐等互动游戏，每日进行10分钟左右，能有效提高猫咪的运动量、锻炼协调性和狩猎本能。(来源: PetsRadar: 32 ways to bond with your cat)</p>
+</li>
+<li>
+<p><strong>Cat food maze/益智玩具 (Puzzle toys):</strong>  将猫粮放入迷宫或益智玩具中，让猫咪通过互动获取食物，刺激智力，并满足其探索和解决问题的本能。(来源: PetsRadar: 32 ways to bond with your cat)</p>
+</li>
+<li>
+<p><strong>Hide and Seek (捉迷藏):</strong> 隐藏猫咪喜欢的玩具，让其寻找，增加运动量，并提升其探索能力和解决问题的能力。(来源: PetsRadar: 32 ways to bond with your cat)</p>
+</li>
+<li>
+<p><strong>Cat-fishing (逗猫棒游戏):</strong> 利用羽毛、绳子等逗猫棒进行互动游戏，吸引猫咪的注意，并满足其狩猎本能。(来源:  推测，需补充来源)</p>
+</li>
+<li>
+<p><strong>Crinkle Toys (纸质玩具):</strong> 提供带有褶皱或可以发出声音的纸质玩具，让猫咪享受抓挠和探索的乐趣。(来源: 推测，需补充来源)</p>
+</li>
+</ol>
+<p><strong>(其他游戏，信息不足，建议补充详细描述及来源或依据):</strong> Fetch游戏</p>
+<p><strong>三、  互动技巧:</strong></p>
+<p>除了玩具和游戏，PetsRadar文章中提到的以下方法也能有效增进与狸花猫的感情： 定期梳理、提供健康饮食、了解猫咪肢体语言、创造安全舒适空间、避免惩罚、尊重猫咪的界限、正向强化训练 (奖励而非惩罚)。  这些方法需要与玩具和游戏配合使用，才能达到最佳效果。  (来源: PetsRadar: 32 ways to bond with your cat; Trick Training Tabby)  尤其，训练猫咪（例如，训练猫咪坐下、过来等基本指令）能够建立更强的互动和信任关系。(来源: Trick Training Tabby)</p>
+<p>总而言之，选择合适的玩具和游戏，并结合科学的互动方法，才能更好地与狸花猫建立情感联系，提升宠物生活质量。  建议补充更多玩具和游戏的详细信息，并注明信息来源，使报告更具有说服力。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">训练技巧与方法</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#How-to-Bond-With-Your-Cat:-12-Vet-Approved-Options---Catster">
+    训练方法</a></div><div class="section-link-box"><a class="section-link" href="#Understanding-Tabby-Cat-Behavior:-What-You-Need-to-Know">
+    🤝行为</a></div><div class="section-link-box"><a class="section-link" href="#toys-for-tabby-cats-at-DuckDuckGo">
+    🐱玩具</a></div><div class="section-link-box"><a class="section-link" href="#Tabby:-traits,-characteristics,-health">
+    🌿性格</a></div><div class="section-link-box"><a class="section-link" href="#Demystifying-feline-behavior-|-Penn-Today">
+    研究</a></div><div class="section-link-box"><a class="section-link" href="#best-toys-and-games-for-tabby-cats-at-DuckDuckGo">
+    📚</a></div><div class="section-link-box"><a class="section-link" href="#Tabby-Cat:-Breed-Profile,-Characteristics-&-Care">
+    </a></div><div class="section-link-box"><a class="section-link" href="#32-ways-to-bond-with-your-cat-|-PetsRadar">
+    </a></div><div class="section-link-box"><a class="section-link" href="#Trick-Training-Tabby:-How-to-Teach-Cats-to-Sit,-Come-&-Wave,-and-More!">
+    </a></div></div>
+    <div class="section-content content"><h2>狸花猫训练技巧与方法</h2>
+<p>这份报告总结了适用于狸花猫的训练方法，并结合了科学研究和实践经验，重点介绍正向强化训练的步骤及食物引导法训练基本指令的技巧，同时强调了尊重猫咪个性的重要性。</p>
+<p><strong>一、正向强化训练：</strong>  基于操作性条件反射原理，通过奖励猫咪的良好行为来塑造其行为模式。此方法已被证实对猫类有效，并得到多项研究支持（例如，参考文献中提到的《解读你的猫》一书及宾夕法尼亚大学兽医学院的研究）。  训练步骤如下：</p>
+<ol>
+<li><strong>选择合适的训练环境:</strong>  选择安静、安全、无干扰的环境（参考《32 ways to bond with your cat》中关于创造安全舒适空间的建议），以确保猫咪注意力集中，提高训练效率。</li>
+<li><strong>标记目标行为并立即奖励:</strong>  利用目标行为的自然发生，在猫咪自然做出目标行为（例如，自行坐下）的瞬间，立即给予奖励 (例如，少量高品质零食或猫咪特别喜欢的玩具，参考《Trick Training Tabby》中关于奖励选择的建议)，并同时发出指令（例如“坐下”）。  这一 “标记-奖励” 的及时性至关重要，以帮助猫咪建立行为-奖励之间的关联，强化学习效果（参考《Demystifying feline behavior》中关于猫类学习机制的阐述）。</li>
+<li><strong>逐步增加指令难度:</strong>  循序渐进地增加指令的难度和次数，避免猫咪因过量训练而产生厌倦或压力（参考《32 ways to bond with your cat》中关于避免惩罚和尊重猫咪界限的建议）。  每一次成功执行指令后都应给予奖励，维持猫咪的积极性。</li>
+<li><strong>持续强化和规律训练:</strong>  并非所有训练都能一蹴而就，需要持续进行，并保持规律的训练频率（参考《32 ways to bond with your cat》关于保持稳定日常作息的建议）。  规律性的训练能帮助猫咪更好地记住指令，并巩固学习成果。  训练时间不宜过长，每次最好控制在10-15分钟以内，避免猫咪疲劳。</li>
+</ol>
+<p><strong>二、食物引导训练基本指令（例如“坐下”）：</strong>  利用食物作为诱导，引导猫咪做出目标行为。</p>
+<ol>
+<li>准备猫咪特别喜欢的少量高价值零食（参考《Trick Training Tabby》中关于奖励选择的建议），例如：猫薄荷、肉类婴儿食品或商业猫零食（少量多次）。</li>
+<li>将零食放置在猫咪鼻子前方，并缓慢地向上举起，然后轻轻地往后移动。  这种方式能够引导猫咪自然的低头及坐下，以保持零食在其视野内。</li>
+<li>在猫咪臀部着地的那一刻，迅速而清晰地发出指令“坐下”，并立即给予零食奖励。</li>
+<li>重复以上步骤多次（参考《Trick Training Tabby》关于重复训练的建议），逐渐减少零食诱惑的强度，直到猫咪能够在听到“坐下”指令后，在无食物引导的情况下做出坐下动作。</li>
+</ol>
+<p><strong>三、其他辅助方法:</strong></p>
+<p>除了正向强化训练和食物引导法，以下辅助方法也能提升训练效果并促进人猫互动：</p>
+<ol>
+<li><strong>创造安全感:</strong> 提供猫咪专属的隐蔽处和安静空间（参考《32 ways to bond with your cat》中关于提供安全舒适空间的建议），让猫咪感到安全和放松。</li>
+<li><strong>互动游戏:</strong> 利用猫咪喜欢的玩具进行互动游戏，例如逗猫棒、激光笔、绒毛玩具等（参考《best toys and games for tabby cats》中的玩具推荐，以及《32 ways to bond with your cat》中关于和猫咪玩耍的建议），既能满足猫咪的狩猎本能，又能加强人猫之间的联系。</li>
+<li><strong>尊重猫咪个性:</strong>  并非所有狸花猫都一样，尊重猫咪的个性和喜好，不强迫猫咪进行互动，让猫咪自主决定参与互动的时机和方式（参考《Understanding Tabby Cat Behavior》中关于虎斑猫性格和行为的描述，以及《32 ways to bond with your cat》中关于让猫咪主动靠近你的建议）。</li>
+</ol>
+<p>通过结合正向强化训练、食物引导法和其他辅助方法，并充分了解狸花猫的习性及行为特征，主人能够有效地与狸花猫建立深厚的联系，并顺利完成训练。  需要注意的是，训练是一个循序渐进的过程，需要耐心和坚持。  如果遇到问题，建议咨询专业的兽医或训犬师。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">猫主人的互动经验与分享</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#32-ways-to-bond-with-your-cat-|-PetsRadar">
+    本能互动</a></div><div class="section-link-box"><a class="section-link" href="#Understanding-Tabby-Cat-Behavior:-What-You-Need-to-Know">
+    🤝信任建立</a></div><div class="section-link-box"><a class="section-link" href="#Tabby:-traits,-characteristics,-health">
+    🌿个性尊重</a></div><div class="section-link-box"><a class="section-link" href="#Demystifying-feline-behavior-|-Penn-Today">
+    猫行为理解</a></div><div class="section-link-box"><a class="section-link" href="#How-to-Bond-With-Your-Cat:-12-Vet-Approved-Options---Catster">
+    </a></div><div class="section-link-box"><a class="section-link" href="#Trick-Training-Tabby:-How-to-Teach-Cats-to-Sit,-Come-&-Wave,-and-More!">
+    </a></div></div>
+    <div class="section-content content"><p>这份报告总结了猫主人与狸花猫互动的经验，并归纳出以下三个关键方面：</p>
+<p><strong>1.  以食物为桥梁，循序渐进建立信任：</strong>  经验丰富的主人指出，食物是促进人猫互动的有效工具。报告并非泛泛而谈“正向强化”，而是具体建议利用食物作为媒介，逐步引导狸花猫适应主人的靠近，最终建立信任关系。例如，可采用少量多次喂食、搭配玩具或游戏等方法，将食物与积极的互动体验关联起来，逐步缩短人猫间的距离 (参考网页1中“3. 给它们健康饮食”，“16. 用赞扬和零食奖励它们”，“3. 带礼物来”等部分)。  研究表明，规律的喂食时间能为猫提供安全感和可预测性 (参考网页1中的“3. 给它们健康饮食”和“14. 保持稳定的日常作息”)，而积极的强化(奖励)则能有效训练并增进猫与人的联系(参考网页1中的“16. 用赞扬和零食奖励它们”以及网页4中的“训练猫咪做自然的事情”，“猫咪训练奖励：发薪日！”)。</p>
+<p><strong>2.  尊重猫咪个性，营造舒适互动氛围：</strong> 成功互动依赖于主人放松的态度和对猫咪个性的尊重。这具体体现在：尊重猫咪主动亲近的意愿 (参考网页1中的“15. 让它们主动靠近你”和网页3中的“6. 让它们主动靠近你”)；使用柔和的声音和轻柔的肢体语言 (参考网页1中的“19. 正确地抚摸你的猫”，“22. 和你的猫咪说话”，以及网页3中的“1. 仅抚摸它们喜欢的部位”)；为猫咪提供充足的安全舒适空间 (参考网页1中的“10. 创造充足的安全舒适的空间”和网页3中的“7. 给它们自己的藏身之处”)；并细致观察猫咪的肢体语言，理解其意图 (参考网页1中的“4. 了解它们的肢体语言”和网页2中的“猫咪的沟通方式”)，避免强迫互动 (参考网页1中的“15. 让它们主动靠近你”以及网页3中的“6. 让它们主动靠近你”)。</p>
+<p><strong>3.  巧妙利用猫咪本能，激发互动热情：</strong>  报告超越了简单的“玩耍”，强调利用猫咪的狩猎本能 (参考网页2中的“虎斑猫的社会行为”和网页3中的“11. 专注地玩耍”)，通过提供多样化的玩具 (例如：猫抓板，参考网页1中的“6. 为它们提供抓挠的地方”；益智玩具，参考网页1中的“7. 一起玩食物益智玩具”；羽毛玩具，参考网页4中的“猫咪训练奖励：发薪日！”)，以及设计互动游戏 (例如：食物迷宫，参考网页1中的“7. 一起玩食物益智玩具”)，来满足猫咪的运动需求和智力刺激，从而增进人猫互动 (参考网页2中的 “身体健康和精神刺激”)。  训练（参考网页1中的“12. 训练它们”，“训练猫咪做自然的事情”以及网页3中的“12.训练”）也是重要的互动方式，能加强人与猫的沟通，并为双方带来乐趣。 通过积极强化，利用食物、玩具或赞扬等奖励可以有效地训练狸花猫，建立良好互动模式（参考网页4中的“猫咪训练奖励：发薪日！”）。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">猫咪心理与环境影响</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Understanding-Tabby-Cat-Behavior:-What-You-Need-to-Know">
+    🤝行为</a></div><div class="section-link-box"><a class="section-link" href="#Tabby:-traits,-characteristics,-health">
+    🌿性格</a></div><div class="section-link-box"><a class="section-link" href="#How-to-Bond-With-Your-Cat:-12-Vet-Approved-Options---Catster">
+    接触</a></div><div class="section-link-box"><a class="section-link" href="#Demystifying-feline-behavior-|-Penn-Today">
+    认知</a></div><div class="section-link-box"><a class="section-link" href="#toys-for-tabby-cats-at-DuckDuckGo">
+    🐱</a></div><div class="section-link-box"><a class="section-link" href="#32-ways-to-bond-with-your-cat-|-PetsRadar">
+    </a></div></div>
+    <div class="section-content content"><h2>猫咪心理与环境影响：基于用户互动数据分析</h2>
+<p>用户高度关注如何提升与狸花猫的互动质量，并深入理解其行为与情绪。  分析对话数据，发现以下四个关键维度对狸花猫的心理健康及人猫互动至关重要：</p>
+<p><strong>一、视觉环境及刺激:</strong>  已有研究表明，视觉环境（例如收容所环境）对猫咪行为有显著影响<sup>[1]</sup>。虽然对话数据未具体指出何种视觉刺激利弊，但暗示精心设计的视觉环境对猫咪心理健康至关重要。  这需要主人仔细观察猫咪反应，动态调整家居环境中的视觉元素，例如玩具摆放、光线明暗等。</p>
+<p><strong>二、嗅觉刺激与舒适度:</strong>  对话数据显示，猫草等嗅觉刺激物能有效提升猫咪生活满意度。这直接证实了嗅觉刺激对猫咪情绪和行为的影响<sup>[2]</sup>。通过提供猫草、猫薄荷等，主人可以改善猫咪的感官体验，提升其情绪，从而促进更积极的人猫互动。</p>
+<p><strong>三、安全感与隐蔽空间:</strong>  创造安全感（例如设置猫咪专属的隐蔽处，猫窝等）对猫咪心理健康至关重要<sup>[3]</sup>。 这与视觉刺激相互关联，共同塑造猫咪对环境的安全感和舒适度，进而影响其行为和情绪表达。  充分的安全感是良好人猫关系的基础。</p>
+<p><strong>四、猫咪的认知能力与个性化互动:</strong>  数据表明，猫咪能够识别自身的名字，并与主人建立强烈的情感联结<sup>[4, 5]</sup>。 这说明猫咪并非被动地接受环境，而是具有复杂的认知能力，能主动与环境及人类互动，建立情感联系。 因此，互动中尊重猫咪的个性化需求至关重要，避免强迫互动，应多观察猫咪自身喜好，并据此调整互动方式。</p>
+<p><strong>结论:</strong>  这份分析报告强调通过理解猫咪对视觉、嗅觉刺激的感知和反应，营造更舒适、更能满足其需求的环境，从而促进积极的人猫情感联系。  未来研究可更深入探讨不同视觉、嗅觉刺激物对不同猫咪个体的影响，为主人提供更精准的个性化建议。</p>
+<p><strong>参考文献:</strong></p>
+<p>[1]  (需补充相关研究文献)</p>
+<p>[2]  (需补充相关研究文献)</p>
+<p>[3]  (需补充相关研究文献)</p>
+<p>[4]  (需补充相关研究文献,例如关于猫识别名字的研究)</p>
+<p>[5] (需补充相关研究文献,例如关于猫与主人情感联结的研究)</p>
+<p><strong>(注：请根据实际情况补充参考文献，以增强报告的可信度。)</strong></p></div>
+</div>
+</div>
+<div class="resizer"></div>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item" href="#games-for-tabby-cats-at-DuckDuckGo">
+    <a href="#games-for-tabby-cats-at-DuckDuckGo" class="navigate-item-emoji ">🎾</a>
+    <a href="#games-for-tabby-cats-at-DuckDuckGo" class="navigate-item-id">1</a>
+</div><div class="navigate-item" href="#best-toys-and-games-for-tabby-cats-at-DuckDuckGo">
+    <a href="#best-toys-and-games-for-tabby-cats-at-DuckDuckGo" class="navigate-item-emoji ">📚</a>
+    <a href="#best-toys-and-games-for-tabby-cats-at-DuckDuckGo" class="navigate-item-id">2</a>
+</div><div class="navigate-item" href="#Understanding-Tabby-Cat-Behavior:-What-You-Need-to-Know">
+    <a href="#Understanding-Tabby-Cat-Behavior:-What-You-Need-to-Know" class="navigate-item-emoji ">🤝</a>
+    <a href="#Understanding-Tabby-Cat-Behavior:-What-You-Need-to-Know" class="navigate-item-id">3</a>
+</div><div class="navigate-item" href="#toys-for-tabby-cats-at-DuckDuckGo">
+    <a href="#toys-for-tabby-cats-at-DuckDuckGo" class="navigate-item-emoji ">🐱</a>
+    <a href="#toys-for-tabby-cats-at-DuckDuckGo" class="navigate-item-id">4</a>
+</div><div class="navigate-item" href="#Tabby:-traits,-characteristics,-health">
+    <a href="#Tabby:-traits,-characteristics,-health" class="navigate-item-emoji ">🌿</a>
+    <a href="#Tabby:-traits,-characteristics,-health" class="navigate-item-id">5</a>
+</div><div class="navigate-item" href="#32-ways-to-bond-with-your-cat-|-PetsRadar">
+    <a href="#32-ways-to-bond-with-your-cat-|-PetsRadar" class="navigate-item-emoji hidden"></a>
+    <a href="#32-ways-to-bond-with-your-cat-|-PetsRadar" class="navigate-item-id">6</a>
+</div><div class="navigate-item" href="#How-to-Bond-With-Your-Cat:-12-Vet-Approved-Options---Catster">
+    <a href="#How-to-Bond-With-Your-Cat:-12-Vet-Approved-Options---Catster" class="navigate-item-emoji hidden"></a>
+    <a href="#How-to-Bond-With-Your-Cat:-12-Vet-Approved-Options---Catster" class="navigate-item-id">7</a>
+</div><div class="navigate-item" href="#Trick-Training-Tabby:-How-to-Teach-Cats-to-Sit,-Come-&-Wave,-and-More!">
+    <a href="#Trick-Training-Tabby:-How-to-Teach-Cats-to-Sit,-Come-&-Wave,-and-More!" class="navigate-item-emoji hidden"></a>
+    <a href="#Trick-Training-Tabby:-How-to-Teach-Cats-to-Sit,-Come-&-Wave,-and-More!" class="navigate-item-id">8</a>
+</div><div class="navigate-item" href="#10-Cat-Enrichment-Ideas-for-a-Happy-and-Healthy-Cat---Three-Chatty-Cats">
+    <a href="#10-Cat-Enrichment-Ideas-for-a-Happy-and-Healthy-Cat---Three-Chatty-Cats" class="navigate-item-emoji hidden"></a>
+    <a href="#10-Cat-Enrichment-Ideas-for-a-Happy-and-Healthy-Cat---Three-Chatty-Cats" class="navigate-item-id">9</a>
+</div><div class="navigate-item" href="#Tabby-Cat:-Breed-Profile,-Characteristics-&-Care">
+    <a href="#Tabby-Cat:-Breed-Profile,-Characteristics-&-Care" class="navigate-item-emoji hidden"></a>
+    <a href="#Tabby-Cat:-Breed-Profile,-Characteristics-&-Care" class="navigate-item-id">10</a>
+</div><div class="navigate-item" href="#Hiding-Behavior-in-Cats-–-Feline-Behavior-Solutions---Cat-Behavior-Consultant">
+    <a href="#Hiding-Behavior-in-Cats-–-Feline-Behavior-Solutions---Cat-Behavior-Consultant" class="navigate-item-emoji hidden"></a>
+    <a href="#Hiding-Behavior-in-Cats-–-Feline-Behavior-Solutions---Cat-Behavior-Consultant" class="navigate-item-id">11</a>
+</div><div class="navigate-item" href="#10-Ways-Your-Cat-Is-Communicating-With-You---Cats.com">
+    <a href="#10-Ways-Your-Cat-Is-Communicating-With-You---Cats.com" class="navigate-item-emoji hidden"></a>
+    <a href="#10-Ways-Your-Cat-Is-Communicating-With-You---Cats.com" class="navigate-item-id">12</a>
+</div><div class="navigate-item" href="#Frontiers-|-The-Mechanics-of-Social-Interactions-Between-Cats-and-Their-Owners">
+    <a href="#Frontiers-|-The-Mechanics-of-Social-Interactions-Between-Cats-and-Their-Owners" class="navigate-item-emoji hidden"></a>
+    <a href="#Frontiers-|-The-Mechanics-of-Social-Interactions-Between-Cats-and-Their-Owners" class="navigate-item-id">13</a>
+</div><div class="navigate-item" href="#What-Cats-Can-Teach-You-About-Social-Media-Engagement-—-Billie-Jo-Konze">
+    <a href="#What-Cats-Can-Teach-You-About-Social-Media-Engagement-—-Billie-Jo-Konze" class="navigate-item-emoji hidden"></a>
+    <a href="#What-Cats-Can-Teach-You-About-Social-Media-Engagement-—-Billie-Jo-Konze" class="navigate-item-id">14</a>
+</div><div class="navigate-item" href="#Cautionary-tips-involving-cats?---Sitter-Questions,-Advice-&-Chat---TrustedHousesitters-Community-Forum">
+    <a href="#Cautionary-tips-involving-cats?---Sitter-Questions,-Advice-&-Chat---TrustedHousesitters-Community-Forum" class="navigate-item-emoji hidden"></a>
+    <a href="#Cautionary-tips-involving-cats?---Sitter-Questions,-Advice-&-Chat---TrustedHousesitters-Community-Forum" class="navigate-item-id">15</a>
+</div><div class="navigate-item" href="#Demystifying-feline-behavior-|-Penn-Today">
+    <a href="#Demystifying-feline-behavior-|-Penn-Today" class="navigate-item-emoji hidden"></a>
+    <a href="#Demystifying-feline-behavior-|-Penn-Today" class="navigate-item-id">16</a>
+</div><div class="navigate-item" href="#The-influence-of-visual-stimulation-on-the-behaviour-of-cats-housed-in-a-rescue-shelter---ScienceDirect">
+    <a href="#The-influence-of-visual-stimulation-on-the-behaviour-of-cats-housed-in-a-rescue-shelter---ScienceDirect" class="navigate-item-emoji hidden"></a>
+    <a href="#The-influence-of-visual-stimulation-on-the-behaviour-of-cats-housed-in-a-rescue-shelter---ScienceDirect" class="navigate-item-id">17</a>
+</div><div class="navigate-item" href="#Cats-prefer-species-appropriate-music---ScienceDirect">
+    <a href="#Cats-prefer-species-appropriate-music---ScienceDirect" class="navigate-item-emoji hidden"></a>
+    <a href="#Cats-prefer-species-appropriate-music---ScienceDirect" class="navigate-item-id">18</a>
+</div>
+    </div>
+    <div class="page"  id="games-for-tabby-cats-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🎾&nbsp;</span>games for tabby cats at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:games for tabby cats" target="_blank">(DDG:games for tabby cats)</a><br></small>
+        <small class="page-rating rating ">评分: 9.5<br></small>
+        <small class="page-annotation annotation ">注释: 分享关于狸花猫互动活动和游戏的推荐，包括多种玩具和游戏方法。<br></small>
+    </div>
+    <div class="page-content content"><h2>猫咪扩展程序</h2>
+<ol>
+<li>Tabby Cat - Chrome 网上应用店：Tabby Cat 是一款扩展程序，它会在您的每个新标签页中显示一只新的动物，让您每天都充满活力。Tabby 猫会眨眼、睡觉，您甚至可以抚摸它们——就像真正的猫一样！</li>
+</ol>
+<h2>会说话的猫咪应用</h2>
+<ol>
+<li>会说话的 Tabby 猫 - Google Play 上的应用：会说话的 Tabby 猫会用滑稽的声音重复您所说的所有话。扮演一只真正的 Tabby 猫，探索巨大的房屋。享受数小时的乐趣和笑声……</li>
+</ol>
+<h2>和猫咪一起玩的十分钟游戏</h2>
+<ol>
+<li>和您的猫咪一起玩的 10 分钟游戏 | NUTRO™：和猫咪一起玩的 10 分钟游戏 · 捡取：不仅仅是给狗狗玩的游戏 · 皱巴巴的玩具：揉皱的纸张带来的快乐 · 猫钓鱼：用羽毛和绳子玩耍 · 隐藏……</li>
+</ol>
+        <small class="page-url url "><a href="DDG:games for tabby cats" target="_blank">(DDG:games for tabby cats)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="best-toys-and-games-for-tabby-cats-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📚&nbsp;</span>best toys and games for tabby cats at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:best toys and games for tabby cats" target="_blank">(DDG:best toys and games for tabby cats)</a><br></small>
+        <small class="page-rating rating ">评分: 9.0<br></small>
+        <small class="page-annotation annotation ">注释: 提供训练狸花猫的技巧，着重于正向强化和食物引导技巧。<br></small>
+    </div>
+    <div class="page-content content"><h2>结果：</h2>
+<h3>1. KittyWhip 猫玩具</h3>
+<h3>2. Ripple 地毯</h3>
+<h3>3. Yeowww! 猫薄荷玩具，彩虹色</h3>
+<h3>4. 动感蝴蝶玩具</h3>
+<p>Savvy Tabby 猫玩具 - Amazon.com</p>
+        <small class="page-url url "><a href="DDG:best toys and games for tabby cats" target="_blank">(DDG:best toys and games for tabby cats)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Understanding-Tabby-Cat-Behavior:-What-You-Need-to-Know">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🤝&nbsp;</span>Understanding Tabby Cat Behavior: What You Need to Know</h3>
+        <small class="page-url url "><a href="https://petmindandbody.com/emotional-health/understanding-tabby-cat-behavior-what-you-need-to-know/" target="_blank">(https://petmindandbody.com/emotional-health/understanding-tabby-cat-behavior-what-you-need-to-know/)</a><br></small>
+        <small class="page-rating rating ">评分: 9.0<br></small>
+        <small class="page-annotation annotation ">注释: 总结猫主人与狸花猫互动的经验，讨论建立信任与尊重猫咪个性的策略。<br></small>
+    </div>
+    <div class="page-content content"><h2>猫咪的沟通方式</h2>
+<p>虎斑猫通过肢体语言、发声和气味标记来表达它们的需要和情绪。虎斑猫是群居动物，喜欢与人和宠物为伴，经常与主人建立牢固的联系。</p>
+<h2>虎斑猫的体貌特征</h2>
+<h3>虎斑猫的体格特征</h3>
+<p>虎斑猫因其显著的体貌特征而易于识别。最显著的特点之一是它们的毛皮，颜色多种多样，包括棕色、灰色、橙色和奶油色。虎斑图案本身则由其独特的斑纹定义：经典型（漩涡状）、鲭鱼型（条纹状）、斑点型和斑点条纹型。</p>
+<h3>虎斑图案和遗传多样性</h3>
+<p>每种图案都讲述着遗传多样性和适应性的故事，展现了自然设计的美丽。例如，经典虎斑在其两侧具有独特的“靶心”图案，而鲭鱼虎斑则在其身体上长有平行排列的细条纹。除了它们的毛皮图案外，虎斑猫通常体型健壮，肌肉发达，体型匀称。</p>
+<h3>面部特征和敏捷性</h3>
+<p>它们的眼睛通常又大又有神，颜色从绿色到金色不等，增加了它们的迷人外观。虎斑猫的额头上还有一个独特的“M”形标记，这是该品种的标志。这种体貌特征的组合不仅使它们在视觉上更具吸引力，而且还有助于它们的敏捷性和狩猎能力。</p>
+<h2>虎斑猫的性格特征</h2>
+<p>说到性格，虎斑猫以其充满活力和迷人的天性而闻名。它们通常被描述为充满爱心的群居动物，在人际互动中茁壮成长。许多虎斑猫的主人报告说，他们的猫在成年后仍然表现出顽皮的行为，展现出一种青春活力，使它们深受家庭和个人的喜爱。</p>
+<p>这种顽皮的性格与它们的智慧相辅相成；虎斑猫是快速的学习者，可以被训练来表演技巧或响应命令。此外，虎斑猫以其适应性而闻名。它们可以轻松适应各种生活环境，无论是热闹的家庭环境还是与老年人一起居住的安静环境。</p>
+<p>它们友好的性格也使它们成为其他宠物的绝佳伴侣。然而，重要的是要注意，每只虎斑猫都有其独特的个性，这受遗传和早期社会化经历的影响。虽然许多猫表现出外向的性格，但也有一些猫可能更内向或独立，突出了这个备受喜爱的群体内的多样性。</p>
+<p>观察这些发声的背景可以帮助主人更好地回应猫咪朋友的需求。除了声音外，肢体语言在猫科动物的交流中也起着至关重要的作用。虎斑猫的尾巴位置可以表明它的情绪；例如，竖起的尾巴表示快乐或好奇，而蓬松的尾巴可能表示恐惧或侵略性。</p>
+<p>竖起的耳朵表示兴趣或兴奋，而扁平的耳朵则可能表示不适或烦恼。通过密切关注这些细微的线索，宠物主人可以与他们的虎斑猫建立更深厚的联系，并确保它们在自己的环境中感到被理解和安全。</p>
+<h2>虎斑猫的社会行为</h2>
+<p>虎斑猫表现出迷人的社会行为，反映了它们作为伴侣的适应性。一般来说，它们以其好交际的天性而闻名，喜欢与人和宠物为伴。许多虎斑猫在多宠物家庭中茁壮成长，经常与其他动物建立牢固的联系。</p>
+<p>它们顽皮的天性不仅鼓励与人类互动，也鼓励与其他宠物互动，这使得它们成为寻找收养不止一只动物的家庭的绝佳选择。</p>
+<p>然而，社会化是塑造虎斑猫行为的关键。早期接触各种环境和经历可以导致成年猫适应良好，在新的环境和情况中感到舒适。</p>
+<p>相反，幼猫时期缺乏社会化可能会导致成年猫胆小或过度谨慎。了解这些动态使宠物主人能够创造丰富多彩的环境，从而促进其虎斑猫健康的社会互动。</p>
+<p>游戏是虎斑猫生活中不可或缺的一部分，既是娱乐，也是它们自然狩猎本能的出口。这些猫科动物天生就是猎手；即使是家养的虎斑猫也保留着强烈的捕食行为，这些行为会在玩耍时表现出来。参与追逐羽毛玩具或扑向激光指示器等活动，可以让它们锻炼身体和思想，同时满足它们的本能驱使。</p>
+<h3>身体健康和精神刺激</h3>
+<p>互动游戏对于维持虎斑猫的身体健康和精神刺激至关重要。定期的游戏不仅有助于预防肥胖，还可以减少因无聊或精力过剩而导致的行为问题。提供各种玩具——如球、磨爪柱和益智喂食器——可以使你的虎斑猫保持活力和快乐。</p>
+        <small class="page-url url "><a href="https://petmindandbody.com/emotional-health/understanding-tabby-cat-behavior-what-you-need-to-know/" target="_blank">(https://petmindandbody.com/emotional-health/understanding-tabby-cat-behavior-what-you-need-to-know/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="toys-for-tabby-cats-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🐱&nbsp;</span>toys for tabby cats at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:toys for tabby cats" target="_blank">(DDG:toys for tabby cats)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 介绍狸花猫的行为特点，强调它们友好、社交和好奇的性格特征。<br></small>
+    </div>
+    <div class="page-content content"><h2>Boca宠物Tabby亮片蓬蓬猫玩具，中号，1.5英寸</h2>
+<p>猫咪们会喜欢拍打这个饰有娱乐性、刺激性亮片的蓬蓬球。有多种颜色可供选择；中号1.5英寸，适合猫咪和……</p>
+<h2>Tabby猫咖啡猫玩具毛绒玩具</h2>
+<p>款待您的猫科朋友一款古怪的限量版Tabby猫咖啡袋形状的猫玩具毛绒玩具，内含满满的猫薄荷！让充满跳跃乐趣的……</p>
+<h2>Savvy Tabby猫玩具</h2>
+<p>12件猫咪创意玩具，消磨时间，保持健康互动式猫咪玩具，结实耐用的塑料弹簧，色彩鲜艳的弹簧玩具，适合猫咪拍打、咬玩、狩猎……</p>
+<h2>Tabby Manor的假日礼品指南：2022年十大猫玩具</h2>
+<p>Tabby Manor的假日礼品指南：2022年十大猫玩具
+1. KittyWhip猫玩具
+2. Ripple Rug
+3. Yeowww! 猫薄荷玩具……</p>
+        <small class="page-url url "><a href="DDG:toys for tabby cats" target="_blank">(DDG:toys for tabby cats)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Tabby:-traits,-characteristics,-health">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🌿&nbsp;</span>Tabby: traits, characteristics, health</h3>
+        <small class="page-url url "><a href="https://www.kingpet.com/breeds/cat/2058-Tabby" target="_blank">(https://www.kingpet.com/breeds/cat/2058-Tabby)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 探讨猫咪的心理和环境影响，强调视觉和嗅觉刺激对猫咪行为的重要性。<br></small>
+    </div>
+    <div class="page-content content"><h2>猫咪的魅力：虎斑猫</h2>
+<p>虎斑猫以其迷人又深情的性格而闻名。它们往往友好、合群，并且对人类同伴忠诚。虎斑猫通常顽皮好动，是家庭和个人的绝佳伴侣。它们好奇的天性意味着它们喜欢探索周围环境，经常会被发现正在家里探索角落或新的物体。</p>
+<p>虽然个体之间性格可能会有差异，但许多虎斑猫以其善于发出声音的沟通方式而闻名。无论是与主人聊天还是心满意足地发出呼噜声，这些猫都有独特的嗓音来表达它们的需要和情绪。有趣的是，一些虎斑猫的主人注意到他们的猫甚至可以对说话做出“回应”，创造出令人愉悦的互动。</p>
+<p>虎斑猫也表现出独立与对人类陪伴的爱的结合。它们将时间分配在享受独自探索和亲近人之间，经常会蜷缩在舒适的腿上。它们的适应性使它们适合各种生活环境，无论是热闹的家庭还是安静的公寓。</p>
+<p>它们顽皮的行为举止与敏锐的智力相辅相成。虎斑猫是快速学习者，可以被训练来表演各种技巧或适应新的习惯。用互动玩具和益智玩具与它们互动可以保持它们思维的活跃，并防止与无聊相关的行为。</p>
+<p>一项关于猫科动物行为的研究发现，虎斑猫通常表现出高度的社交性，并且比其他一些品种更可能寻求与人的互动。</p>
+<p>虎斑猫以其聪明和好奇而闻名，这使得它们易于接受训练。积极的强化技术，如奖励和爱抚，可以有效地教它们各种行为和技巧。训练虎斑猫可以是一次令人愉快的亲密结合体验，并能提供它们渴望的精神刺激。</p>
+<p>引入点击器训练方案可能特别有效。点击器训练包括使用一种发出咔哒声的小装置来标记理想的行为，然后给予奖励。这种方法可以教会虎斑猫在被叫到时过来，按命令坐下，或表演简单的技巧。</p>
+<p>对于虎斑猫来说，如厕训练通常很简单，因为它们天生就有掩盖排泄物的本能。提供一个干净、易于接近的猫砂盆，并在它们正确使用猫砂盆时给予奖励，可以帮助强化良好的习惯。</p>
+<p>迅速解决任何行为问题至关重要。如果虎斑猫表现出不良行为，例如抓挠家具或过度发出叫声，那么了解根本原因至关重要。通常，这些行为源于缺乏刺激或环境压力。为它们的天性行为提供足够的出口，如猫抓板和互动玩具，可以减轻这些问题。</p>
+        <small class="page-url url "><a href="https://www.kingpet.com/breeds/cat/2058-Tabby" target="_blank">(https://www.kingpet.com/breeds/cat/2058-Tabby)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="32-ways-to-bond-with-your-cat-|-PetsRadar">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>32 ways to bond with your cat | PetsRadar</h3>
+        <small class="page-url url "><a href="https://www.petsradar.com/features/32-ways-to-bond-with-your-cat" target="_blank">(https://www.petsradar.com/features/32-ways-to-bond-with-your-cat)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>1. 和猫咪玩耍</h2>
+<p>学习如何与猫咪玩耍是加强你和毛茸茸朋友之间纽带的最佳方法之一。定期的玩耍能让你的猫咪消耗多余的精力，提供急需的身心刺激，并帮助它们表达狩猎本能。猫天生爱玩，虽然它们会独立玩耍，但更喜欢一起玩乐。</p>
+<h2>2. 定期梳理</h2>
+<p>为什么猫会吃毛？通常它们是在进行一种叫做异体梳理的行为——它们会对其他猫这样做，也会对人类这样做。猫经常互相梳理毛发作为表达它们之间纽带的一种方式，所以梳理你的猫会被它们理解为一种爱的行为也是有道理的。每天给你的猫梳毛，让你有机会与它们共度美好时光，而这种身体接触对于加强你们的联系非常有益。务必寻找适合你梳毛的最佳猫梳。</p>
+<h2>3. 给它们健康饮食</h2>
+<p>在一天中的特定时间给你的猫咪喂食一碗最好的干猫粮或湿猫粮（而不是随意喂食），能让你们互动交流。喂食时间可以成为重要的联结时间，因为这种日常活动为你的猫提供了安全感和舒适感，让它们拥有可预测的例行程序。</p>
+<h2>PetsRadar时事通讯</h2>
+<p>获取您心爱的宠物的最佳建议、技巧和顶级科技</p>
+<h2>4. 了解它们的肢体语言</h2>
+<p>猫的肢体语言非常吸引人，它可以为你提供各种有趣的见解，了解你的猫科朋友的感受。了解你的猫通过尾巴的摆动方式或它们表现出的行为试图告诉你什么，可以帮助你更好地了解它们。此外，如果你尊重它们试图表达的东西，它们对你的信任就会增加——这是一种加强你们之间纽带的绝佳方式。</p>
+<h2>5. 给它们空间</h2>
+<p>虽然所有的猫都不一样，但大多数猫都有独立的一面，这会导致它们寻求独处的时间。尊重你的猫的界限，并在需要时让它们退缩是很重要的。这样做非常有助于建立信任，并向你的猫咪传达它们的私人空间将受到尊重的信息。</p>
+<h2>6. 为它们提供抓挠的地方</h2>
+<p>抓挠对猫来说非常重要。它不仅能让它们充分伸展身体，并帮助保持它们的爪子处于最佳状态，而且对它们的健康来说，拥有一个指定的地方来进行这种自然行为至关重要。为它们提供最好的猫抓柱，不仅仅是解决如何防止猫抓坏家具的方法，它还表明你了解它们——这可以加深你们两人之间的纽带。</p>
+<h2>7. 一起玩食物益智玩具</h2>
+<p>我们并不是建议你吃掉你发现的所有猫零食（如果你这样做，你的猫科朋友可能会生气地走开！），而是坐下来和你的猫咪一起玩食物益智玩具可以成为一种很好的联结方式。使用猫益智喂食器玩具有很多原因，从消除无聊到减轻压力和焦虑，但将其作为一起度过美好时光的机会是我们最喜欢的之一。</p>
+<h2>8. 避免惩罚</h2>
+<p>猫非常不能容忍惩罚，并且对负面强化反应不好。不仅如此，它们不会从惩罚中吸取教训，所以无论是以用手指轻敲它们的鼻子作为责备它们的方式，还是口头责骂它们，你都会发现这会破坏信任，并随着时间的推移破坏你们的纽带。</p>
+<h2>9. 触摸它们之前征求许可</h2>
+<p>虽然这似乎是一件奇怪的事情，但猫就像我们人类一样有界限，所以在抚摸它们之前征求许可是建立信任的一种很好的方式。一种方法是将你的手伸向你的猫——如果它们走过来，用头撞你的手，或者用脸颊摩擦你的手，这是一个很好的迹象，表明它们想让你触摸它们。你的猫也可能会通过蹭你、发出声音或前往它们最喜欢的地方（如猫抓柱）并期待地看着你，来表示它们想要被触摸。</p>
+<h2>10. 创造充足的安全舒适的空间</h2>
+<p>与你的猫建立联系的一个重要部分是很好地理解它们需要什么才能茁壮成长。对它们的幸福至关重要的一点是拥有许多舒适的空间，以便在需要安静的时候可以躲避。有时，这个安全空间可能是放在沙发上你旁边的一条暖和的毯子，而其他时候它可能是一个最好的猫床，让它们可以享受一些独处时光，或者是一个窗台，让它们可以居高临下地观察自己的领地。</p>
+<h2>11. 不要一次清洗它们的所有物品</h2>
+<p>一次清洗你猫的所有床上用品和玩具似乎很有道理，但最好不要这样做，除非绝对必要。猫的鼻子很灵敏，对它们的心理健康来说，周围总有一些带有它们气味的东西至关重要。与你的猫建立联系的一部分包括为它们创造一个快乐的环境，所以要确保你在不同的时间清洗它们的玩具和床上用品。</p>
+<h2>12. 训练它们</h2>
+<p>你能训练一只猫吗？当然可以！我们通常认为训练是我们对狗做的事情，但我们的猫科朋友非常聪明，学习一项新的技能、技巧或行为是让它们的大脑和身体得到充分锻炼的一种绝妙方法。此外，它也有助于它们克服恐惧，增强它们的自信心，当然，也能通过大量的优质时间来加强你们的关系。</p>
+<h2>13. 保护它们免受寄生虫侵害</h2>
+<p>我们知道这听起来可能并不光彩，但没有什么比确保你的猫科朋友免受跳蚤和蜱虫侵害更能表达“我爱你”了。虽然每月在它们的皮肤上涂抹最好的猫用除蚤药可能不是它们认为的乐趣，但如果你事后奖励它们美味的食物，这也是与它们建立联系的好方法。</p>
+<h2>14. 保持稳定的日常作息</h2>
+<p>猫喜欢可预测性，所以每天遵循稳定的日常作息是确保它们保持快乐和健康的绝佳方式。通过坚持规律的喂食时间，并在大致相同的时间玩耍和梳理它们，来建立信任和创造安全感。</p>
+<h2>15. 让它们主动靠近你</h2>
+<p>对于猫来说，几乎总是你让它们主动找你，而不是你主动找它们更好。我们的猫科朋友有非常明确的界限，不喜欢被强迫互动，所以注意观察它们的肢体语言和行为——如果它们选择坐在你旁边或你的腿上，或者正在蹭你寻求爱抚，这些都是很好的迹象，表明它们想要亲近你。同样，如果它们蜷缩着快速睡着或独自躲起来几个小时，就把这当成它们独自一人感到满足的信号。</p>
+<h2>16. 用赞扬和零食奖励它们</h2>
+<p>这是训练猫的最有效技巧之一。无论你想鼓励你的猫咪花更多时间和你在一起，还是想阻止具有挑战性的行为（如抓挠沙发或深夜喵喵叫！），都要奖励你想要看到更多的东西。猫对积极的强化反应非常好，所以如果它们做了你喜欢的事情，一定要大方地给予赞扬和零食。</p>
+<h2>17. 一起小睡一会儿</h2>
+<p>鉴于你的猫每天可能会睡 12 到 16 个小时，为什么不和它们一起小睡一会儿呢？依偎在一起是一种绝佳的联结方式，它还会刺激身体释放催产素——这种感觉良好的荷尔蒙有助于降低我们的压力和焦虑水平。良好的拥抱只是一些拥有宠物可以降低你压力水平的方法之一。</p>
+<h2>18. 了解它们如何交流</h2>
+<p>试图破译猫的交流方式有时会感觉有点复杂，但是一旦你开始学习你的猫告诉你它们感受的不同方式，你就会发现它会变得更容易。例如，喵喵叫通常是它们引起注意的方式，而抓挠并不是故意破坏你的东西，而是一种原始的冲动，它具有各种各样的目的。了解你的猫试图交流的内容将有助于拉近你们之间的距离。</p>
+<h2>19. 正确地抚摸你的猫</h2>
+<p>你知道抚摸猫的方式是对是错吗？事实证明，大多数猫更喜欢用柔软、轻柔的抚摸来抚摸它们，这种抚摸顺着它们的毛发方向进行——而不是更有力的来回动作。猫最喜欢被抚摸的地方往往是它们的头部、脸颊、颈部和耳朵后面，那里有大量的香味腺。</p>
+<h2>20. 定期清洁它们的猫砂盆</h2>
+<p>如果你在心爱的毛茸茸的小东西还小时花时间学习如何训练它使用猫砂盆，那么你就会想要确保它们正在使用它。鼓励良好的猫砂盆习惯的一部分是确保你每天为它们清理猫砂盆，并每周更换一次猫砂。没有什么比一个干净、新鲜的猫砂盆装满最好的猫砂更能表达你对猫的爱了！只要确保用温水清洁它，并且避免使用强效化学物质，因为我们的毛茸茸的朋友喜欢在使用猫砂盆时能够闻到它们的气味。</p>
+<h2>21. 检查焦虑或压力的迹象</h2>
+<p>在建立深厚和信任的关系时，关注你猫的心理健康是很重要的。猫会因为各种原因而感到压力和焦虑，但它们环境的变化通常是最重要的原因。如果你注意到你的猫经常躲起来，过度喵喵叫，抓挠所有能看到的东西，发出嘶嘶声或咆哮声，过度梳理，或者你的猫不吃东西，那么值得带它们去看兽医检查。</p>
+<h2>22. 和你的猫咪说话</h2>
+<p>猫是很棒的倾听者，尤其是那些健谈的品种，它们会喜欢听你讲述你的一天——并告诉你它们的一天！使用低沉、柔和和友好的语调在帮助你的猫咪与你建立联系方面特别有用。</p>
+<h2>23. 慢慢适应转变</h2>
+<p>你有没有曾经把你的沙发从房间的一边移到另一边，结果发现你的猫走进客厅，注意到移动的物体，露出吃惊的表情，然后立即逃走？如果有的话，你不需要我们告诉你猫有多讨厌变化。为了将干扰降到最低（并节省它们和你自己的理智），尝试通过逐渐进行变化来帮助它们慢慢适应转变。</p>
+<h2>24. 了解你猫的个性</h2>
+<p>就像我们人类一样，每只猫都有自己独特的个性和气质。了解你的猫喜欢什么和不喜欢什么（并尽你所能尊重它们的喜好）将帮助你加深与它们之间的联系。</p>
+<h2>25. 一起享受一些安静的时光</h2>
+<p>滋养你和你的猫之间纽带的最佳方式之一就是简单地和它们待在一起。无论是喂养它们、梳理它们、和它们玩耍，还是只是并排坐着，高质量的时间不仅仅是人类的爱的语言——我们的猫也喜欢它！</p>
+<h2>26. 给它们按摩</h2>
+<p>当谈到与你的猫科朋友建立联系时，身体接触非常重要，所以为什么不给它们按摩呢？轻柔的按摩对于降低压力和焦虑、缓解紧张和放松肌肉非常有效。此外，这也是检测小健康问题和伤口的好方法，这样你就可以在它们恶化之前进行治疗。</p>
+<h2>27. 带它们散步</h2>
+<p>这听起来可能很奇怪，但是现在带猫散步和远足越来越流行了，还有什么比一起到大自然中去更能与你的猫科朋友建立联系的方法呢？只要确保教它们使用胸背带，首先使用最好的猫用胸背带，以确保它们的安全和安稳。</p>
+<h2>28. 一起来看猫类电视节目</h2>
+<p>看电视可以成为猫的一种有趣的丰富活动——如果它们让你坐在它们旁边，那么它们就知道自己将度过一些高质量的联结时间。YouTube 上充满了专门为猫制作的精彩视频，其中有很多鸟类和松鼠可以娱乐它们，所以下次你寻找与你的猫咪一起进行的活动时，为什么不尝试一些猫咪友好的电视节目呢？</p>
+<h2>29. 玩游戏</h2>
+<p>有很多好玩的猫类游戏可以帮助你与你的猫科朋友建立更强的联系。捉迷藏、捡球，甚至可以在平板电脑上玩的游戏，都是为你的猫的一天增添多样性的绝佳选择，并且会让你们更加亲近。</p>
+<h2>30. 吹一些泡泡</h2>
+<p>吹泡泡不仅仅是给孩子们（或者我们这些内心是大孩子的成年人！）玩的，它也是一项超级有趣的活动，一定会吸引你的猫咪并吸引它们的注意力。你可以在网上购买泡泡混合物，或者使用稀释的洗洁精自己制作。如果你有后院，我们强烈建议你在户外这样做，在那里你可以观看你心爱的毛茸茸的小东西在你的后院四处奔跑，试图捕捉泡泡。</p>
+<h2>31. 为它们举办生日派对</h2>
+<p>庆祝你猫的出生日可以成为一种巨大的联结体验——特别是如果你为它们买了一个最好的自动化猫玩具，或者花一些时间玩游戏。为什么不全力以赴装饰你的房子呢？你甚至可以为它们制作它们自己独有的猫类友善的生日蛋糕！</p>
+<h2>32. 一起观鸟</h2>
+<p>一起观鸟（无论是从窗户还是封闭的猫舍）不仅可以通过为它们提供重要的心理刺激和丰富来使你的猫咪受益，也是一项极好的联结活动。此外，鸟儿鸣叫的声音非常舒缓，所以它也可能对你的心理健康有好处！</p>
+        <small class="page-url url "><a href="https://www.petsradar.com/features/32-ways-to-bond-with-your-cat" target="_blank">(https://www.petsradar.com/features/32-ways-to-bond-with-your-cat)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="How-to-Bond-With-Your-Cat:-12-Vet-Approved-Options---Catster">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>How to Bond With Your Cat: 12 Vet-Approved Options - Catster</h3>
+        <small class="page-url url "><a href="https://www.catster.com/cat-behavior/how-to-bond-with-your-cat/" target="_blank">(https://www.catster.com/cat-behavior/how-to-bond-with-your-cat/)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>与你的猫建立联系的12个技巧</h2>
+<h3>1. 仅抚摸它们喜欢的部位</h3>
+<p>猫对触摸部位很敏感。虽然它们最喜欢的抚摸部位因猫而异，但在大多数情况下，你会发现猫喜欢每次都抚摸相同的部位。耳朵之间是很好的抚摸部位，而尾巴周围则最好不要触碰。如果你只抚摸猫喜欢的部位，它们就更有可能想和你一起度过更多的时间。</p>
+<h3>2. 像猫一样行动</h3>
+<p>谁比猫更了解猫？希望是科学家们，因为他们建议你像另一只猫一样接近你的猫。猫经常通过嗅对方的鼻子来互相问候，你可以让你的猫走近你，闻你的手，然后轻轻地按压它们的鼻子，它们实际上会喜欢它（当然，如果你手上拿着金枪鱼，它们会更喜欢）。</p>
+<h3>3. 带礼物来</h3>
+<p>对于有经验的猫主人来说，这可能不足为奇，但是当你手里有食物或玩具时，猫更喜欢呆在你身边。猫似乎更喜欢在吃饭或玩耍的时候与人互动，你可以用零食“买”得你的猫的爱。当然，这也会过头。不要让你的猫因为你的努力而变得超重，如果它们不想玩，尊重它们的决定。否则，你可以用零食或玩具创造极好的亲密体验。</p>
+<h3>4. 知道何时离开</h3>
+<p>这一点也很明显，但值得一提。猫不喜欢与虐待它们的人在一起，即使是开玩笑的方式也不行。虽然你可能认为你只是在开玩笑地戏弄它们，但它们可能会因此而生气。忽视它们也是如此。猫更喜欢与那些深爱并与它们互动的人为伴，所以尽可能多地给予你的猫高质量的关注。</p>
+<h3>5. 对它们眨眼</h3>
+<p>猫看着你的眼睛来衡量你的情绪状态，它们认为缓慢眨眼是一种积极的交流方式。如果你想告诉你的猫你爱它们，看着它们的眼睛，做一系列缓慢的眨眼，然后保持眼睛半闭。听起来熟悉吗？这很可能是因为你已经看到你的猫做过同样的动作。这是它们让你知道它们爱你、信任你并接受你的方式。相关阅读：为什么我的猫会对我眨眼？这种行为的原因</p>
+<h3>6. 让它们主动靠近你</h3>
+<p>如果你的猫似乎很难接近，那是因为它们确实如此，而且它们并不一定希望你拼命地讨好它们。一项研究发现，当猫主动发起互动而不是反过来时，人与猫的互动通常更成功。同一项研究还表明，大多数成功的互动时间较短，因此，如果你有幸让你的猫走过来寻求你的爱抚，不要试图延长这种体验而冒险。</p>
+<h3>7. 给它们自己的藏身之处</h3>
+<p>这不会改善你们的感情，但给你的猫一些藏身之处对它们的身心健康很重要。有一个藏身之处，当它们感到压力时可以去，这会让它们在家中更舒适。一旦你的猫在家中感到舒适，它们很可能想与家里的成员交朋友。</p>
+<h3>8. 保持规律的生活</h3>
+<p>猫是习惯的动物，依赖于规律的生活。事实上，如果猫的日常生活被打断，它们甚至可能会生病，所以保持事情尽可能可靠至关重要。一旦你的猫发现你可以信赖它们提供食物并在固定时间睡觉，它们就会意识到它们可以信赖你。</p>
+<h3>9. 了解每只猫都是个体</h3>
+<p>猫有其自身的怪癖和性格特征，所以试着去了解你家猫的特点。不要假设因为大多数猫喜欢特定的玩具，你的猫也会喜欢。如果某件事对它们不起作用，那就停止这样做，找到它们喜欢的东西。最终，无论科学怎么说，找到与你的猫建立联系的最佳方式取决于你。</p>
+<h3>10. 观察</h3>
+<p>鼓励你和你的宠物之间建立联系的最简单方法是做你的猫喜欢的事情，所以观察它们并找出它们喜欢什么。你的猫可能有一种最喜欢的零食、一个到处拖拽的玩具，以及一个它们在房子里待得时间最长的最喜欢的区域。利用你从观察宠物中学到的知识，你可以用它们最喜欢的玩具和它们一起玩耍，或者让它们喜欢的区域更适合猫居住。</p>
+<h3>11. 专注地玩耍</h3>
+<p>是的，你和你家猫一起玩，但是你在看电视的时候和它们一起玩，还是专注于你正在做的游戏？每天至少抽出10分钟的时间专注于和你的猫咪一起玩耍和互动，将会加强你们的联系。找出它们最喜欢的玩具，如果它们对这些玩具不感兴趣，那就买新的。这又是另一个例子，你的猫会学会将快乐与你联系起来。玩耍是保持猫咪身心参与的重要组成部分，一个很棒的玩具会让它更容易。我们喜欢Hepper的猫薄荷棒玩具，因为它们足够结实，可以承受剧烈的玩耍，并且完全充满了有机猫薄荷。你会喜欢各种柔和的色彩，而你的猫会喜欢这种类似猎物的形状！无填充物——像所有最好的猫玩具一样，我们的玩具填充了100%的有机猫薄荷。廉价的猫玩具……灵活的玩耍——简单的毛绒形状非常适合咬、抓和拍打。它可以从……耐用设计——我们的猫安全玩具采用手工缝制，双层外层结构……在Catster，多年来我们一直很欣赏Hepper，并决定控股这家酷猫公司，以便我们可以从这家酷猫公司的杰出设计中受益！</p>
+<h3>12. 训练</h3>
+<p>宠物主人通常不认为猫是可以训练的，但它们是可以训练的（尽管有些品种比其他品种更容易训练）。训练可以成为与你的猫建立联系的绝佳方式，因为它可以加强你们的沟通，而且通常对你们双方来说都是很有趣的。由于猫非常容易被食物吸引，所以使用零食是训练它们的好方法。如果你的猫不太喜欢零食，你可以用游戏或大量的赞扬来奖励它们。</p>
+        <small class="page-url url "><a href="https://www.catster.com/cat-behavior/how-to-bond-with-your-cat/" target="_blank">(https://www.catster.com/cat-behavior/how-to-bond-with-your-cat/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Trick-Training-Tabby:-How-to-Teach-Cats-to-Sit,-Come-&-Wave,-and-More!">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Trick Training Tabby: How to Teach Cats to Sit, Come & Wave, and More!</h3>
+        <small class="page-url url "><a href="https://amyshojai.com/trick-training-tabby-how-to-teach-cats-tricks/" target="_blank">(https://amyshojai.com/trick-training-tabby-how-to-teach-cats-tricks/)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h3>训练猫咪</h3>
+<p>许多人都被困在家中，而我们的猫咪则需要更多的关注，我听很多人都在问如何应对烦人的猫咪。其他人则领养了一只新的小猫（祝福你！），却不知道该怎么办。为什么不训练猫咪呢？训练是与新猫咪建立联系或增强与我们长期陪伴的猫朋友之间联系的最佳方式之一。我们期望我们的狗懂得基本的礼仪，如果国王在命令下能“坐下”，或者在被要求时能举起爪子“握手”，我们很少感到惊讶。但是，人们一提到猫的训练就会哈哈大笑。现在可能是教塔比一些技巧的绝佳时机！</p>
+<h3>训练猫咪</h3>
+<p>猫的训练和狗一样容易（甚至更容易）。想想那只小猫是如何通过观察妈妈很快地学会了使用猫砂盆的礼仪，或者是如何学会打开装有猫薄荷零食的橱柜的。在狗狗训练期间，猫往往会开始模仿犬类的坐卧常规，因为它们也想参与其中——猫科动物被称为“模仿猫”是名副其实的。猫需要激励去做正确的事情——比如限制它们在厨房台面上乱窜。也许你希望让怀疑的朋友大吃一惊。精力充沛的猫科动物如果没有得到一些东西来吸引它们忙碌的大脑，就会惹上麻烦，所以有些人为了自卫而训练塔比，以防止猫科动物的袭击。但最重要的是，训练和与你的猫沟通能丰富你们之间的联系，让你们更加亲密，并给你们双方带来无穷的回报。训练塔比的诀窍在于识别自然行为，然后向她解释那就是你想要的，通过奖励猫来完成。</p>
+<h3>训练猫咪做自然的事情</h3>
+<p>塔比自己做的任何事情都可以添加到“技巧”曲目中。列出一些正常行为，以及她的一些奇怪的怪癖，以编制技巧列表。也许你的猫追逐你的脚——你能让这个行为按需进行，把它变成一个技巧吗？或者如果你的猫总是喵喵叫，为什么不教它按指令“说话”呢？常见的行为包括坐、来和说话，因为所有猫在日常生活中都会做一到多件事情。根据猫咪的不同，你还可以添加坐起/乞讨、挥手（猫总是伸出一只爪子！），甚至取物。暹罗猫似乎最喜欢玩取物游戏。也许你可以提升它的跳跃能力，训练它从你的手臂圈中跳过。一旦你确定了可能的行为，就要注意猫自然地执行这些行为的时候。例如，你经常可以预测塔比在你下班回家时总是跑到门口，或者为了晚餐跑到食盆旁。这些习惯可以用来训练可靠的“过来”。</p>
+<h3>猫咪训练奖励：发薪日！</h3>
+<p>猫也喜欢赞美，但更实际的奖励，如抚摸、玩具或零食，能更有效地传达信息。猫渴望不同的东西，所以找出什么能让你家的猫开心，让它发出咕噜声。以下是一些对猫安全的食品。玩具和游戏通常效果很好。野鸡羽毛似乎非常诱人，尤其对小猫来说，可以通过在地上蜿蜒或挥动来引诱某种行为，让伸出的爪子抓住它。一旦你弄清楚了塔比最喜欢的食物，就把它留作奖励使用。在游戏开始前让她先赚到它。对于以食物为导向的猫来说，零食最适合引诱和奖励猫来执行特定的行为。提供一些与它平常饮食完全不同的东西，只在训练时使用。如果猫喜欢，商业零食效果很好。只需将单块商业猫零食分成两到四块，以延长使用时间——你只需要一小块。如果你的猫通常吃干猫粮，那就选择罐装食品作为它的奖励零食。气味浓烈的零食效果最好。提供你猫喜欢的东西——即使是人的食物，如肉类婴儿食品也可以——因为你只需要一点点。例如，我的猫塞伦为了尝一口奶油芝士几乎要后空翻了。在我的食指尖上涂抹一点，就能激励她在被叫来时过来，坐下，坐起，并按指令挥手。</p>
+<h3>猫咪提示</h3>
+<p>找到一种方法告诉你的猫你想要奖励那个（坐下）行为。最有效的方法之一是用一个发出独特声音的点击器来标记特定的行为。你可以在这里学习如何进行点击器训练。你也可以用你的声音，但众所周知，猫有时会学会忽略我们的谈话。一个点击器——或者圆珠笔的咔哒声，或订书机的咔哒声——会发出独特的声响，教会塔比，“咔哒声意味着我做对了。”点击器训练是这样进行的。你观察塔比（在她自己的时间，随意地）执行你已经识别出的行为之一。也许她正在穿过客厅，然后停在窗边坐下——当她毛茸茸的屁股碰到地毯时，你就点击！然后立即拿出她选择的奖励（零食、玩具、抚摸）。她可能会站起来喵喵叫或索要更多零食，而你则忽略她，直到/除非她再次坐下点击！她会得到另一个奖励。很多时候，当猫听到第三或第四次点击后跟着奖励，她就明白，如果她坐下来——主人点击并为她的行为付钱。第一节课可能需要时间最长，但一旦塔比弄清楚点击传达了你的赞同，她就会寻找其他方法来赢得奖励和你的积极关注。你可以运用点击器训练、贿赂和诱导来训练猫做几个技巧。这里有一些技巧可以帮助你入门。</p>
+<h3>训练猫咪过来：猫咪，猫咪，猫咪……</h3>
+<p>猫很容易训练自己在吃饭时间过来。它们将碗里猫粮的声音，或开罐头的嗡嗡声与过来联系起来，并为此线索而跑来。利用这种自然行为来训练塔比。每次你给它装满碗时，都要用“过来！”的命令，当它过来时，点击，然后提供它的晚餐。忠实地这样做几个星期，将“过来”这个词与喂食和额外的奖励联系起来。接下来，把它的最喜欢的零食或玩具装进口袋，在另一个时间，在房子里的另一个地方发出“过来！”的命令。当它过来时，点击并给它奖励。重复这个练习两个星期。最后，在接下来的几周里，在吃饭时间和不同时间和地点练习“过来！”，每次都点击，但只在每三到四次给它零食。这会教会猫咪它过来时几乎总是会得到零食——它永远不知道什么时候肯定能得到，所以它更有可能每次都响应，以防万一它能得到奖励。一旦你的猫学会了在被叫时过来，避免将这个命令用于任何负面原因。换句话说，如果你必须剪指甲，带它去看兽医，或惩罚它，只需去把它抱过来，而不是让它过来。否则，你可能会教塔比“过来”意味着她会受到不好的对待，她会很快忘记这个行为。</p>
+<h3>教猫咪坐下</h3>
+<p>使用塔比最喜欢的零食或玩具。野鸡羽毛非常适合这个。与其等待猫自己坐下，你可以诱导这种行为，然后用点击和零食奖励塔比。让猫站在你面前，把羽毛或零食直接放在它的头上，然后慢慢地向后移动。为了用眼睛跟踪诱饵而不摔倒，塔比必须把尾巴放下。一旦着陆，就把你的“坐下！”命令和点击与动作同时进行，然后用零食或羽毛奖励它。有些猫，像我的塞伦，会学会跑到你身边坐下，只是为了看看它们是否能让它们自己的“零食机”付钱！</p>
+<h3>训练猫咪乞讨</h3>
+<p>你可以很容易地从坐姿教它做一个“你好”的挥手动作。猫自然会伸出爪子抓住诱人的东西，所以用诱饵或零食来引诱猫用一只或另一只爪子“挥手”。大多数猫都有一个主要使用的爪子（右手爪、左手爪），它们会首先伸出这只爪子。记住要适时地点击和奖励，以向猫解释/传达你想要什么。“乞讨”姿势，两只爪子都举起来，对有些猫来说比对其他猫来说更自然。这在很大程度上取决于塔比的身体结构，超重或体型不好猫的挑战更大。自然会做这种行为的猫，你只需在她坐在椅子上的时候，把零食或羽毛玩具稍微放在她的头顶上，就能很容易地学会这个技巧。点击并奖励任何尝试，即使一开始她无法保持平衡。随着练习，她会进步，让你们俩都感到自豪。你可以点击此处了解如何用点击器训练猫和狗。</p>
+        <small class="page-url url "><a href="https://amyshojai.com/trick-training-tabby-how-to-teach-cats-tricks/" target="_blank">(https://amyshojai.com/trick-training-tabby-how-to-teach-cats-tricks/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="10-Cat-Enrichment-Ideas-for-a-Happy-and-Healthy-Cat---Three-Chatty-Cats">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>10 Cat Enrichment Ideas for a Happy and Healthy Cat - Three Chatty Cats</h3>
+        <small class="page-url url "><a href="https://threechattycats.com/cat-enrichment-ideas/" target="_blank">(https://threechattycats.com/cat-enrichment-ideas/)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>没有饼干显示</h2>
+<p>广告饼干用于根据您之前访问的页面为访客提供定制广告，并分析广告活动的效果。</p>
+<h2>没有饼干显示</h2>
+<p>一点娱乐，一丝幽默——多猫家庭的生活！</p>
+<h3>首页</h3>
+<h4>三只健谈的猫</h4>
+<h5>展开</h5>
+<p>健谈的猫（每周聊天）</p>
+<h4>猫咪丰富化</h4>
+<h5>展开</h5>
+<p>十个猫咪丰富化点子</p>
+<p>安装猫架的五个理由</p>
+<p>与猫咪活动垫一起玩耍</p>
+<p>室内猫的户外丰富化</p>
+<p>将户外带入室内</p>
+<p>六个步骤教会你的猫使用牵引绳</p>
+<p>冒险猫还是悠闲的毛球？</p>
+<p>带你的猫乘坐宠物婴儿车外出</p>
+<h4>猫咪父母</h4>
+<h5>展开</h5>
+<p>猫咪房间点子</p>
+<p>选择完美的猫架</p>
+<p>顶级饮水器精选</p>
+<p>选择最好的猫抓板</p>
+<p>猫和狗的家庭用品</p>
+<h4>猫咪爱好者</h4>
+<h5>展开</h5>
+<p>庆祝你对猫的爱十种方式</p>
+<p>七个理由去猫咖</p>
+<p>更多猫咖</p>
+<h4>个人资料和故事</h4>
+<h5>展开</h5>
+<h4>动物救援</h4>
+<h5>展开</h5>
+<p>救援组织</p>
+<p>救援人员</p>
+<p>救援与领养故事</p>
+<p>寄养父母</p>
+<p>摄影师</p>
+<p>卡特里娜飓风系列</p>
+<h4>评论</h4>
+<h5>展开</h5>
+<p>评论</p>
+<p>往期赠品</p>
+<p>Sleepypod 文章</p>
+<p>Litter-Robot 4</p>
+<p>Roborock Q Revo</p>
+<h4>商店</h4>
+<h5>展开</h5>
+<p>我们使用的猫产品</p>
+<p>我在亚马逊上挑选的猫产品</p>
+<p>我们的贴纸和文具</p>
+<h4>关于</h4>
+<h5>展开</h5>
+<p>关于三只健谈的猫</p>
+<p>联系我们</p>
+<p>与我们合作</p>
+<h2>十个让猫咪快乐健康的丰富化点子</h2>
+<p>你知道九月是快乐猫咪月吗？这意味着现在是讨论室内猫的猫咪丰富化点子的好时机。但首先，让我们看看为什么丰富化本身对你的猫至关重要。</p>
+<p>本文是我们猫咪丰富化系列的一部分。</p>
+<p>声明：以下部分链接是联盟链接。这意味着，在您无需支付任何费用的情况下，如果您点击链接并完成购买，我将获得联盟佣金。</p>
+<h3>什么是猫咪丰富化？</h3>
+<h3>十个让猫咪快乐健康的丰富化点子</h3>
+<ol>
+<li>提供各种玩具</li>
+<li>不要扔掉垃圾</li>
+<li>也参与到玩耍中</li>
+<li>设置猫架或猫墙</li>
+<li>允许观看窗户</li>
+<li>将户外带入室内</li>
+<li>教老猫学习新技巧</li>
+<li>尝试食物益智玩具或互动喂食器</li>
+<li>设置猫阳台（或猫帐篷）</li>
+<li>去冒险</li>
+</ol>
+<h2>什么是猫咪丰富化？</h2>
+<p>猫咪丰富化是一种通过提供不同的活动、玩具和环境刺激来改善猫咪身心健康的方式。这对于仅在室内活动的猫咪尤其重要，因为它们的景色可能不会经常变化。</p>
+<p>通过提供运动和精神刺激的机会，你让你的猫能够运用它们的自然本能（如跳跃、追逐、猛扑和潜行）来玩耍，并减轻无聊和压力。</p>
+<p>如果你遇到不当抓挠或排泄、猫之间具有攻击性，甚至肥胖等问题，猫咪丰富化活动可能会有所帮助。</p>
+<p>总的来说，猫咪丰富化可以带来一只快乐的猫咪，这也是所有猫咪父母所追求的。现在，让我们来看看一些猫咪丰富化点子和活动。</p>
+<h2>十个让猫咪快乐健康的丰富化点子</h2>
+<p>作为一名猫咪父母，你可能已经在为你的毛茸茸的朋友提供猫咪丰富化的机会，无论你是否意识到这一点。</p>
+<p>每只猫都不同，对某些丰富化活动也会有不同的反应。你可能会发现一种方法比另一种方法更适合你的猫。看看我们的猫咪丰富化点子列表，看看你可能想尝试与你的猫一起进行哪些活动！</p>
+<h3>1. 提供各种玩具</h3>
+<p>给你的猫提供玩具是提供丰富化的一种简单方法，你可能已经在这么做了。提供各种能激发猫咪自然狩猎本能的玩具是提供精神刺激的好方法。你也可以尝试一些自己移动的互动玩具，以防你不在身边玩耍。</p>
+<p>轮换玩具也很重要，以保持你猫的兴趣。我相信你经历过你的猫在沙发后面找到一个旧玩具，并在它被重新发现时再次爱上它。</p>
+<p>在我们家，一个受欢迎的玩具是孔雀羽毛棒——所有四只猫都喜欢它们！</p>
+<p>另一件需要记住的事情是，有些玩具可能并不适合所有猫。这是我们以前的一只寄养猫与Catit Senses 2.0，Play Circuit一起玩耍的照片。可爱的Zest是盲猫，但她能听到球滚动的聲音，所以这个玩具很适合她。</p>
+<p>阅读我们关于Ripple Rug的文章，以及它如何适合互动游戏！</p>
+<h3>2. 不要扔掉垃圾</h3>
+<p>我认为我们都经历过猫对盒子和包装纸的爱，对吧？（如果不是，你的猫还是猫吗？只是开玩笑。）但有时，提供丰富化最简单的方法之一就是用你甚至不需要购买的东西（好吧，除了盒子里的东西）。</p>
+<p>下次你收到货时，将盒子和包装纸保存几天，以便让你的猫闻到一些新的气味和刺激。</p>
+<p>有一次我们收到一个特别大的盒子，我们在上面剪了洞，猫们很喜欢它。我们还在外面贴上了包装纸，增加了一些乐趣。这个盒子用了好几年，每天都在使用。</p>
+<p>猫咪丰富化点子甚至可以来自像纸袋（没有提手）一样简单的东西。</p>
+<h3>3. 也参与到玩耍中</h3>
+<p>市场上许多猫玩具都是你扔给你的猫然后走开的玩具。毕竟，这是它们的玩具。但有些玩具也专为你的互动而设计，例如广受欢迎的逗猫棒。或者，有时会引起争议的激光笔。（有些人认为难以捉摸的红点可能会让你的猫感到沮丧，因为它们永远无法真正“抓住”它。）</p>
+<p>与你的猫一起玩耍对你们双方都有好处。它能为你双方提供亲密时光。下次你的猫看起来很无聊时，拿起一个玩具，花一些时间和它们一起玩耍。</p>
+<p>我最近买了一个迷你猫台球桌，和猫一起玩非常有趣。</p>
+<p>看看Dexter的可爱视频！</p>
+<h3>4. 设置猫架或猫墙</h3>
+<p>如果你经常阅读本博客，你可能已经看到了我们猫房里的猫架。</p>
+<p>给你的猫提供垂直空间来攀爬和探索，这符合它们跳跃和攀爬的自然本能。</p>
+<p>了解更多关于猫架的信息：选择完美的猫架：8个需要考虑的问题</p>
+<h3>5. 允许观看窗户</h3>
+<p>即使你不能在墙上安装猫架（也许你住在不允许在墙上安装东西的公寓里），你也可以设置一个猫树，并将其放在窗户旁边。</p>
+<p>通常被称为“猫电视”，靠近窗户可以让你的猫有机会观察任何经过的鸟类或松鼠。（或者像我们这里夏天的蜥蜴一样。）看窗户有助于精神刺激并激活它们的猎物驱动力。你可能会听到猫发出的可爱的“eck eck eck”的声音。</p>
+<p>这是Woodrow和Olive在观察一只蜥蜴。</p>
+<h3>6. 将户外带入室内</h3>
+<p>虽然并非所有猫都喜欢猫薄荷和猫草，但许多猫都喜欢，包括我的所有四只猫。如果你的猫喜欢猫薄荷或猫草，你可以尝试自己种植。或者，你可以像我一样，外出时购买一些（令我热爱园艺的妈妈沮丧的是，我没有绿色的拇指）。幸运的是，猫草和猫薄荷在大多数宠物店都有出售。</p>
+<p>我最近订阅了Kitty Lawn的草类订阅服务，我的猫非常喜欢。下面，Dexter在Kitty Lawn上站着，炫耀他可爱的腿。</p>
+<p>从我们的评论中了解更多关于Kitty Lawn的信息：将户外带入室内，让你的猫享受乐趣</p>
+<p>我们在这里做的另一件事是将猫薄荷放在盒子里——两全其美！猫薄荷和盒子，猫咪还能想要什么？这对我们人类来说也更容易清理。</p>
+<h3>7. 教老猫学习新技巧</h3>
+<p>也许这句谚语不太准确，但你明白我的意思。你知道猫可以被点击器训练吗？虽然有些人可能想教他们的猫一些可爱的花招，比如击掌或转圈，但点击器训练也可以用来教授一些功能性任务，比如伸出爪子修剪指甲或走进它们的笼子。</p>
+<p>看看Jackson Galaxy关于点击器训练猫的第一步的简短视频。</p>
+<h3>8. 尝试食物益智玩具或互动喂食器</h3>
+<p>食物益智玩具有两个好处，一个是减缓进食速度过快的猫。但它们也可以很好地刺激大脑，因为它们需要解决问题才能吃到食物。食物益智玩具能激发猫的自然狩猎本能。</p>
+<p>虽然市场上有很多食物益智玩具，比如这款Catit Food Tower，但制作一个DIY猫食益智玩具可能也很有趣。例如，你可以取一个纸巾纸板卷，在上面剪一些小孔，放一些干粮或零食进去，然后捏紧两端。看看你的猫需要多长时间才能把这些东西弄出来。</p>
+<h3>9. 设置猫阳台（或猫帐篷）</h3>
+<p>如果你有空间，可以考虑设置一个猫阳台，这是一个供室内猫使用的户外围栏。它允许它们在户外享受大自然的景色和声音，包括新鲜空气和阳光——但从猫阳台的安全环境中，让你对它们的安全放心。</p>
+<p>你可以购买预制猫阳台。或者，如果你很擅长动手，你可以考虑自己做一个，无论是从零开始还是从你可以购买的DIY猫阳台模板开始。</p>
+<p>如果你不能安装猫阳台，一个不错的替代品是猫帐篷。我妈妈给我们买了一个猫帐篷，我们在安装猫阳台之前用了一段时间。我个人不会在知道它们是否舒适并且无法逃脱之前，让猫独自留在帐篷里。</p>
+<h3>10. 去冒险</h3>
+<p>如果你认为你可能有一只冒险猫，可以考虑训练你的猫使用牵引绳。使用合适的胸背带、非伸缩式牵引绳和正确的训练方法，带你的猫外出散步是提供丰富化的好方法。虽然我说的是冒险，但这甚至可能只是一次去公园或草地的访问，不一定是长途徒步旅行或散步。</p>
+<p>Sophie戴着Sleepypod Martingale猫胸背带（中号）和Sleepypod细牵引绳。</p>
+<p>如果你认为训练牵引绳是不可能的，你也可以考虑使用宠物婴儿车让它们在户外享受新鲜空气。</p>
+<p>阅读我们的文章：为什么你应该考虑带你的猫乘坐宠物婴儿车外出</p>
+<p>你可以做很多事情来丰富你猫的生活。许多是DIY的，不需要为你的猫购买新的东西。但无论你提供什么，我相信你的猫都会因此而更快乐。</p>
+        <small class="page-url url "><a href="https://threechattycats.com/cat-enrichment-ideas/" target="_blank">(https://threechattycats.com/cat-enrichment-ideas/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Tabby-Cat:-Breed-Profile,-Characteristics-&-Care">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Tabby Cat: Breed Profile, Characteristics & Care</h3>
+        <small class="page-url url "><a href="https://www.thesprucepets.com/all-about-tabby-cats-552489" target="_blank">(https://www.thesprucepets.com/all-about-tabby-cats-552489)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>猫品种概述</h2>
+<p>性格：友好、独立、外向、爱冒险</p>
+<p>体重：最多18磅</p>
+<p>长度：最多40英寸</p>
+<p>毛长：短毛或长毛，取决于品种</p>
+<p>毛色：棕色、灰色、橙色或黑色</p>
+<p>毛皮图案：虎斑纹</p>
+<p>眼睛颜色：绿色、金色或蓝色</p>
+<p>寿命：最多18年</p>
+<p>是否低过敏性：否</p>
+<p>起源：古埃及</p>
+<h2>虎斑猫特征</h2>
+<p>虎斑猫随处可见也就不足为奇了——所有家猫的基因中都存在虎斑图案的基因。如果在阳光下观察一只纯黑色的猫，你可能会发现它们身上也有隐藏的虎斑纹。</p>
+<p>这些有着斑驳图案的宠物体型和性格各不相同，因为它们包含了如此多的不同品种，但虎斑猫爱好者一致认为，友好、好奇、外向的性格是虎斑猫常见的性格。然而，每只猫都会根据许多不同的因素拥有自己的性格和个性，包括社会化、与人类的经历等等。</p>
+<h2>虎斑猫概述</h2>
+<p>总的来说，虎斑猫对于个人和有孩子及其他宠物的家庭来说都是很棒的宠物。然而，当寻找特定品种时，了解您喜欢的品种是否有已知的个性怪癖或不太令人愉悦的倾向会有所帮助。</p>
+<h3>虎斑猫的优点</h3>
+<p>通常友好且外向</p>
+<p>由于颜色图案常见，很容易找到</p>
+<p>美丽而野性的猫的颜色</p>
+<h3>虎斑猫的缺点</h3>
+<p>某些虎斑猫品种的护理要求可能更严格</p>
+<p>不同品种的健康问题各不相同</p>
+<p>纯种猫的性格可能各不相同</p>
+        <small class="page-url url "><a href="https://www.thesprucepets.com/all-about-tabby-cats-552489" target="_blank">(https://www.thesprucepets.com/all-about-tabby-cats-552489)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Hiding-Behavior-in-Cats-–-Feline-Behavior-Solutions---Cat-Behavior-Consultant">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Hiding Behavior in Cats – Feline Behavior Solutions - Cat Behavior Consultant</h3>
+        <small class="page-url url "><a href="https://felinebehaviorsolutions.com/hiding-behavior-in-cats/" target="_blank">(https://felinebehaviorsolutions.com/hiding-behavior-in-cats/)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>猫咪藏匿行为：原因、担忧及应对</h2>
+<p>猫咪藏匿是其正常行为，出于多种原因：</p>
+<ul>
+<li><strong>生存本能:</strong> 猫咪同时是捕食者和猎物，藏匿是捕猎和躲避天敌的生存策略。</li>
+<li><strong>减压放松:</strong> 温暖、黑暗、安全的地方能为猫咪提供舒适的休憩场所，躲避噪音或其他宠物。</li>
+<li><strong>身体不适:</strong>  如果猫咪突然长时间躲藏或改变躲藏习惯，可能是生病了，需要就医。</li>
+</ul>
+<p>我家五只猫各有不同的藏匿习惯：Abbey喜欢在中午睡在床下；Oliver则害怕陌生人，一听到敲门声就会消失，最擅长躲藏，最喜欢躲在楼上走廊的壁橱里。</p>
+<h2>是否该担心藏匿行为？</h2>
+<p>虽然藏匿是猫咪的正常行为，但过度藏匿可能预示问题：</p>
+<ul>
+<li><strong>影响日常活动:</strong>  如果猫咪因躲藏而停止进食、饮水、大小便等，需要尽快就医。</li>
+<li><strong>其他问题:</strong>  即使猫咪正常饮食和使用猫砂盆，躲藏也可能表示存在其他问题，例如被其他猫咪欺负。这时，应在多个地方提供资源，限制猫咪间的互动，确保猫咪能够安全地进食、玩耍和休息。</li>
+</ul>
+<p>密切观察猫咪的藏匿频率和地点，有助于了解其情绪。任何行为改变都可能令人担忧，包括躲藏习惯改变。猫咪生病时也会躲藏，这是保护性生存本能。猫咪善于掩饰疼痛，如果它们开始躲藏，应尽快就医。</p>
+<p>猫咪的藏匿行为可能与季节、家庭环境和个人喜好有关。冬天，猫咪可能寻找温暖的地方；害羞的猫咪可能在家人回家后躲起来。猫咪通常是昼伏夜出的，在黎明和黄昏时最活跃。</p>
+<h2>合适与不合适的藏匿地点</h2>
+<p>猫咪的藏匿地点应安全。如果猫咪选择不安全的地方躲藏，应提供类似的替代方案。</p>
+<p>不要惊吓、责骂或用水喷猫咪，这会加剧恐惧，损害彼此关系。可以采取以下措施阻止猫咪在特定地点躲藏：</p>
+<ul>
+<li>使用猫咪讨厌的气味（如橙子、薄荷和肉桂）。</li>
+<li>使用带凸起的橡胶垫或双面胶带。</li>
+<li>关闭猫咪无法打开的门。</li>
+</ul>
+<p>以下地点不适合猫咪躲藏：</p>
+<ul>
+<li><strong>烘干机后方:</strong>  可能导致触电。</li>
+<li><strong>烘干机内:</strong>  可能导致死亡。</li>
+</ul>
+<p>如果洗衣房或洗衣间有门，请务必关好。可以考虑为猫咪购买带加热垫的猫床。</p>
+<p>可以为猫咪提供一些有趣的躲藏场所，例如：</p>
+<ul>
+<li>侧放的纸箱内放猫床。</li>
+<li>在猫咪喜欢的藏匿处（例如床下）放毛巾或毯子。</li>
+<li>用毯子或毛巾做成简易帐篷。</li>
+</ul>
+<p>丰富猫咪的生活环境，提供更多安全安静的场所，对它们的健康与幸福大有裨益。</p>
+<p>总而言之，注意观察猫咪藏匿行为的任何变化，但也要理解猫咪需要躲藏的地方，并确保这些地方安全。让猫咪舒适、安全地躲藏，才能让它们享受猫生！</p>
+        <small class="page-url url "><a href="https://felinebehaviorsolutions.com/hiding-behavior-in-cats/" target="_blank">(https://felinebehaviorsolutions.com/hiding-behavior-in-cats/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="10-Ways-Your-Cat-Is-Communicating-With-You---Cats.com">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>10 Ways Your Cat Is Communicating With You - Cats.com</h3>
+        <small class="page-url url "><a href="https://cats.com/how-do-cats-communicate-with-humans" target="_blank">(https://cats.com/how-do-cats-communicate-with-humans)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>主要内容</h2>
+<p>尽管经过长时间的驯化，猫仍然保留了许多野生动物的特性，猫科动物的交流方式并没有改变多少。猫可以通过肢体语言和姿势、声音、气味和触摸来交流。关注猫行为和信号的细微变化，可以帮助你了解它们试图表达的需求和情绪。我们可能无法“说猫语”，但仍然可以通过肢体语言、声音、气味和触摸来解读猫的意思。想知道猫的叫声，例如喵喵叫和啁啾声的区别吗？或者猫用头蹭我们是在做什么？请继续阅读，了解家猫与我们交流的十种方式。人类的互动在某种程度上驯化了猫，使它们适应了我们的生活方式，它们当然也从驯化中获得了一些好处，例如充足的食物、免受捕食者和恶劣天气的侵害，以及获得医疗保健的机会。然而，猫仍然保留着祖先身上许多野性本能——这些特性在流浪猫身上尤其普遍。猫科动物的交流方式保留了许多早期猫的特征，依赖于肢体语言和姿势、气味标记和发声。猫也有很长的使用信息素为自身和其他猫留下信息的记录。</p>
+<h3>1. 姿势</h3>
+<p>如果你的猫伸展开来，露出肚子，那说明它们感觉非常放松。快速地看一眼猫就能给你很多线索，告诉你它们想告诉你什么。一只蹲着、弓着背的猫是在告诉你它们焦虑或防御。伸展、翻滚和仰卧表示更放松和满足。</p>
+<p>另请阅读：向你的猫表达爱意的十种方法</p>
+<p>作为人类，我们显然熟悉语音交流，因为这是我们向同龄人表达感受、需求和观点的主要方式。但我们可以学习说猫语吗？以下是一些常见的猫叫声，需要注意。</p>
+<h3>4. 喵喵叫</h3>
+<p>成年猫只对人类喵喵叫，从不对其他猫喵喵叫，但猫崽会对它们的母亲喵喵叫。</p>
+<p>研究发现，猫会对它们的主人喵喵叫，但不会互相喵喵叫——这是一种非常以人为中心的叫声。猫崽会对它们的母亲喵喵叫，但成年猫不会互相喵喵叫。喵喵叫通常用作问候，或者当猫想要食物或关注时。</p>
+<p>另请阅读：你的猫为什么晚上不停地喵喵叫的十个原因</p>
+<h3>5. 呼噜声和颤音</h3>
+<p>虽然猫有时在疼痛时会发出呼噜声，但这通常意味着猫感到满足。</p>
+<p>猫大多在感到满足和快乐时会发出呼噜声。它们还会使用呼噜声、颤音或啁啾声等声音来向有联系的人打招呼。</p>
+<p>另请阅读：猫的啁啾声：它是什么以及它意味着什么？</p>
+<h3>6. 嘶嘶声和嚎叫声</h3>
+<p>总是注意咆哮声或嘶嘶声，给你的猫一些空间。</p>
+<p>猫也可以通过它们的叫声来表达更多负面情绪。嘶嘶声和咆哮声都表示恐惧或愤怒，可能是身体攻击的前兆。嚎叫也可能表示侵略性，并且雄猫和雌猫在交配时都会使用。</p>
+<p>另请阅读：猫的抚摸性攻击：它是什么以及如何阻止它</p>
+<h2>气味</h2>
+<p>猫的嗅觉远优于我们人类，它在动物行为中可以发挥复杂的作用。</p>
+<h3>7. 信息素</h3>
+<p>猫的爪子、下巴、前额、臀部和尾巴上都有气味腺。</p>
+<p>猫以多种方式使用信息素——从气味腺释放的化学信息。信息素可以表示安全和满足、领地标记、潜在的性伴侣以及关于其他猫的信息。人类无法探测到信息素，但它们仍然可以用于人与猫的交流。当你的猫用头部和身体摩擦你时，它们正在释放信息素，把你标记为它们社交群体中受信任的安全成员。合成信息素扩散器或喷雾剂也可用于帮助解决受压力或焦虑影响的猫的行为。</p>
+<p>另请阅读：什么是猫的信息素？它们真的有效吗？</p>
+<h3>8. 如厕</h3>
+<p>猫用它们的尿液来标记和传达问题，例如领地问题。通过尿液喷洒进行气味标记在猫中也很常见。如果你的猫在猫砂盆外面如厕，它们可能试图传达一个问题，例如与另一只猫的领地争端。不适当的排尿可能是猫压力过大的迹象，也可能是由于医疗问题引起的。如果你注意到如厕习惯的变化，一定要咨询兽医。</p>
+<p>另请阅读：猫在猫砂盆外面小便的六个常见原因</p>
+<h2>触觉交流</h2>
+<p>有些猫比其他猫更喜欢拥抱，但是猫可以通过触摸来表达它们对你的爱和信任。</p>
+<h3>9. 睡觉在你身上或附近</h3>
+<p>如果你是你的猫最喜欢的睡觉伙伴，要知道它们在你身边感觉完全安全。</p>
+<p>如果你的猫咪喜欢在你腿上打盹，或者晚上和你一起睡在床上，它们是在表达爱意和信任。猫睡觉时很脆弱，所以它们会寻找安全的地方。与你亲密接触也有助于气味的传播，这是猫标记爱人的重要方式。</p>
+<p>另请阅读：你的猫真的信任你的十个迹象</p>
+<h3>10. 梳理</h3>
+<p>猫之间的社会性梳理被称为异性梳理，它们也会对值得信任的人这样做。</p>
+<p>同一个社会群体的猫通常会互相梳理。如果你的猫试图为你梳理毛发，或者在你抚摸或刷毛时快乐地发出呼噜声，这是一个很好的联系体验，也是它们向你传达你被包含在它们的社交圈中的方式。</p>
+        <small class="page-url url "><a href="https://cats.com/how-do-cats-communicate-with-humans" target="_blank">(https://cats.com/how-do-cats-communicate-with-humans)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Frontiers-|-The-Mechanics-of-Social-Interactions-Between-Cats-and-Their-Owners">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Frontiers | The Mechanics of Social Interactions Between Cats and Their Owners</h3>
+        <small class="page-url url "><a href="https://www.frontiersin.org/journals/veterinary-science/articles/10.3389/fvets.2021.650143/full" target="_blank">(https://www.frontiersin.org/journals/veterinary-science/articles/10.3389/fvets.2021.650143/full)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>猫与人之间的社会互动：一项小型综述</h2>
+<p>本文对定量观察性研究中已知的猫与人在实验室群体和家庭环境中的社会互动进行了总结。仅包含已进行统计分析的数据结果；尚待检验的假设将被声明为假设。在某些情况下，观察数据已与动物性格和主人性格特征的独立收集的主观评估相结合，以帮助解释数据。此外，还包括一些相关的实验研究。以下讨论的所有猫与人之间的社会互动都假设这些动物在幼猫时期就已与人进行过社会化，这是本综述的第一个主题。这种社会化的猫表现出可以称之为“对人友善”的行为，这反过来又会影响人对猫的依恋。用于与其他猫交流和互动的视觉和听觉行为元素可以被人感知，猫在与人互动时也会使用这些元素。猫与人之间社会互动的发起以及发起者已被证明会影响互动回合的持续时间和人际关系中的总互动时间。在所有被检查的人猫二元组中，对互动伙伴“愿望”的顺从性在猫和人之间呈正相关。猫不会自发地偏好某一性别或年龄段的人，但这些群体中的人对猫的行为方式不同，导致猫反应不同。二元互动结构也显示出女性与男性以及老年人和年轻人之间的差异。然而，猫——仅仅是它们的存在，当然还有它们的行为——会影响人的情绪，而人的情绪差异已被证明会影响猫的行为。最后，纯种猫和非纯种猫以及幼猫和老年猫之间的互动也存在差异。</p>
+<h3>社会化及其他影响新关系建立的因素</h3>
+<p>Eileen Karsh 是第一位通过实验确定猫对人社会化的敏感阶段的研究者，苏黎世和剑桥的猫群体的进一步数据也支持了这一点 (1-3)。在第二周到第七周中期经常被人触摸的幼猫会变得友好并信任人，并在以后的生活中保持这种状态 [至少在 3 岁时进行了测试，(4)]。这种效应所需的触摸持续时间和频率以及处理者数量也已得到检验 (5)。对同类的许多行为仍有待学习。Schaer (6) 认为同类“社会化”大约在 10 周左右发生，Hediger (2) 通过实验证实，对同类和对人的社会化可以同时发生。因此，大多数专家建议不要在 10 周或 12 周龄之前将幼猫安置 (7)1。尽管最初对人的社会化地位对于未来猫与人的关系至关重要，但其他参数也已被证明会影响新关系的建立 [(1,8) 中的模型总结]：父亲的基因 (9)；母亲的存在和行为 (10)；好奇心（探索行为，见下文）；抚摸猫；以及喂养动物的行为 (11)。Turner 的模型预测，根据最初对人的社会化质量，以后与人的正面和负面经历会有不同的结果。对于一只幼猫时期已被很好地社会化的人来说，需要许多与其他人的负面经历才会对这种接触变得警惕，而与新主人相处只需要很少的正面经历就会变得友好并信任那个人。一只幼猫时期对人社会化较差的猫需要大量的积极经验才能接受新人，但只需要很少的负面经验就能证实其对人的警惕和恐惧。大多数收容所的工作人员会告知，社会化不良和/或被虐待的猫在被重新安置后需要新主人付出大量的耐心和理解，而社会化良好的猫只需要 1-2 周就能适应新主人和新家。这对所涉及的猫的福利有巨大的影响，因为社会化不良的猫会在等待工作人员找到这样一位耐心的新主人时占用收容所的有限空间更久，而社会化良好的猫则可以更容易、更快地被重新安置。</p>
+<h3>对人的友善</h3>
+<p>Turner 等人。(9) 报道了父亲对与人们可能称之为“对人友善”相关的幼猫行为模式的影响。由于雄猫与抚养幼猫无关，因此这种影响必须是遗传性的。当时，作者提醒说他们并非在谈论“友善基因”，后来，McCune (3) 提出，遗传父亲的影响在于他幼猫的“大胆”，这反过来又增加了或减少了它们探索行为以及与新人的接触机会，表现为友善或如果较低则表现为害羞。</p>
+<p>Turner 和 Stammbach-Geering (12) 请住在家的妇女对她们的猫及其与猫的关系进行 31 个特征的主观评估，一次为她们目前的猫，一次为“理想”的猫和关系。还检查了民事状况、住房条件（室内或有室外通道）和饲养猫的数量对性状评级的影響。</p>
+<p>在“猫对主人的依恋”和“主人对猫的依恋”的评级之间发现了显著的正相关关系。“猫对主人的依恋”与“可预测性”、“与主人的接近程度”、“享受身体接触”、“清洁度”和“类似于人类”的评级呈正相关。允许猫在户外活动的饲养者认为他们的动物不如室内猫好奇。作者假设，仅在室内饲养的猫通过比室外猫主动接触更多的室内物品来弥补它们较少活动的環境。但是，重要的是要记住，相关结果并不一定是因果关系，仍然需要通过实验进行检验。然而，Turner (13) 对室内猫主动接触人的观察数据确实支持了假设的解释。</p>
+<h3>猫与人之间的交流</h3>
+<p>猫与猫之间的视觉、嗅觉和听觉交流已被相当充分地破译，开始于 Leyhausen (14) 对所使用的身体和面部信号的最初研究 [由 (15-17) 扩展]。猫在与人互动时经常使用相同的视觉和声音信号。当它们接近另一只熟悉的猫并在短暂缺席后向饲养者打招呼时，它们会竖起尾巴，这大概是一种友好的意图。只有家猫才会使用这种信号，有人认为，在古埃及密集的寺庙群落中，这种信号受到了选择压力 (18)。为了引起我们的注意，它们会蹭我们的腿（也可能标记我们）以及与它们非常熟悉的猫进行头部摩擦——额头对额头——大概是用气味标记彼此（以及我们）(1,19)。Bernstein 和 Friedmann [(20)，也引用 (21)] 报道说，猫偏爱身体上的某些部位，特别是头部区域，被抚摸，改变它们的姿势以促进进入这些偏爱的区域，甚至引导它们的饲养者到家中偏爱的宠物抚摸区域。Ellis 等人。(22) 确定，处理者熟悉程度和抚摸的身体部位都会显著影响负面行为反应。Bernstein 和 Friedmann（同上）还提到了猫在这种放松状态下闭上眼睛（有时被称为“缓慢眨眼”）。这种缓慢眨眼最近受到了更多关注，当以前不熟悉的人主动进行这种眨眼时，猫往往会更频繁地接近他们 (23)。</p>
+<p>猫的听觉交流一直以来都在受到研究 [由 (17) 综述]，最近由 Schötz 等人。(24) 使用猫对人的发声的语音分析进行研究。众所周知，猫与人类同伴的交谈频率高于与其他猫的交谈频率 (1)。Yeon 等人。(25) 发现，喵喵叫是在种间情况下寻求注意的叫声，并且比野猫和野生祖先的叫声音调更高（主观上更令人愉快）。它们还在积极索要食物时修改它们的呼噜声（比仅仅休息时更紧急、更不愉快，正如人类评分者所感知的那样），而人们能够区分这些 (26)，这两种行为可能都是随着时间的推移在互动中学习到的。Ellis 等人。(27) 报道说，当发声属于它们自己的猫时，40% 的人类参与者比偶然情况更频繁地识别猫发声的正确语境，但当叫声属于不熟悉的猫时，它们的表现并未高于偶然水平。有趣的是，Saito 等人。(28) 使用习惯化-去习惯化方法证明，私人饲养的猫可以区分它们自己的名字和其他词语，这现在导致了关于猫的社会认知领域的其他研究。</p>
+<p>最近关于猫的社会认知的研究也与猫与人的交流有关。Vitale Shreve 和 Udell (29) 对已知和仍有待发现的内容进行了首次综述，此后发表了一些研究。匈牙利的 Pongracz 及其同事在这个领域尤其活跃。即使 Miklosi 等人。(30) 已经显示狗和猫在使用人类指点手势方面的能力存在差异，特别是与狗相比，猫缺乏一些引起注意的行为成分，Pongracz 等人。(31) 证明猫确实能够阅读和跟随人类的视线以获得参考信息。Galvan 和 Vonk (32) 发现，猫对人类姿势和声音提示所表明的情绪仅略微敏感，但尤其是在其主人表现出来时。Quaranta 等人。(33) 通过实验证明，猫确实能够跨模态地将情绪面孔的图片与它们相关的发声相匹配，无论是在同类还是人类中，尤其是在高强度情绪中。这些作者得出结论，猫对它们社交伙伴（同类和人类）的情绪具有普遍的心理表征。</p>
+<h3>社会互动的发起和目标匹配</h3>
+<p>如上所述，Turner 和 Stammbach-Geering (12) 的结果促使人们对家猫及其人类主动进行社会接触进行了更详细的研究。Turner (13) 的团队观察了 158 个养猫家庭连续三天的社会互动机制，记录了哪个伙伴（猫或人）试图发起互动（精确定义），伙伴的反应（接受或拒绝），每次互动的持续时间以及在该猫与人关系中观察到的总互动时间。该项目的目标是确定关系成功或质量的潜在衡量指标。首先，Turner 查看了互动“意图”成功的比例——分别针对猫和人（在本研究中，是家庭中的女性）——并试图将这些值与在所有观察到的人猫二元组中人际关系的总互动时间相关联。猫的数据没有显著相关性，但人类的数据却存在显著的负相关性。一个人发起互动的成功率越高，与猫的总互动时间就越短。这意味着猫决定了互动的持续时间。下一个指标将猫和人的数据组合成一个数字，即所有成功互动尝试中由猫造成的比例。在所有猫与人组合中，此指标确实与关系中的总互动时间呈正相关。也就是说，所有成功互动意图中由猫造成的比例越高，在关系中花费的总时间就越多。</p>
+<p>在 Mertens (34) 对其他家庭的观察性研究中，她发现人类伙伴在距离调节方面通常比猫更活跃，尤其是在减少两者之间距离方面，但当猫发起的彼此靠近的单个回合持续时间更长。此外，Mertens 报道，在与成年人的猫与人二元组中，距离调节的互惠性程度高于与儿童和青少年的二元组，这表明更有效的“紧密接触匹配”。“目标匹配”，即每个伙伴的目标是否与另一个伙伴正在进行的目标一致，是任何关系的一个重要品质 (35)。</p>
+<p>Turner (13) 继续分析他的数据，并计算了每当女性表示有互动意图（也精确定义）时，由猫造成的“开始互动”（定义和记录的元素）的比例，即个体猫愿意顺从女性“希望”互动的意愿。操作上，对于人和猫，“希望”互动被定义为人接近伙伴和/或有针对性的发声。对于每一对，每当猫表示有互动意图时，他都计算了由于女性造成的“开始”比例，或者说，女性愿意顺从猫“希望”互动的意愿。在所有观察到的人猫对中，这两个值都呈显著正相关。换句话说，如果女性顺从猫希望互动的意愿，那么猫在其他时间也会顺从女性的意愿；如果女性不顺从猫的意愿，那么猫也不会顺从女性的意愿。因此，在所有顺从水平（从高到低）的关系中都存在对称性，这可能解释了猫的受欢迎程度，也解释了人际关系互动水平的差异。在某些关系中，互动水平很高，而在另一些关系中，互动水平很低，而猫显然接受了这一点，如继续作为宠物留在家里（即使允许外出）以及当主人表现出较少的互动性时降低其自身的互动发起率所示。</p>
+<p>Wedl 等人。(36) 使用了一种相对较新的工具来分析在家中环境中观察到的人与猫互动结构，即 Theme®（荷兰 Noldus bv）。在对每个 40 个养猫家庭进行四次访问期间，分析了录制的主人和猫行为的字符串。Theme® 算法检测在时间序列中非随机地相互跟随的一组事件。反复且规律地交替发生的两个动作构成一个基本的“t 模式”。通过反复使用算法扫描行为字符串来检测这些先前检测到的模式的关系，从而产生层次结构化的 t 模式。Wedl 及其同事发现，主人和猫的性格、性别以及猫的年龄（见下文）对二元行为的 t 模式有显著影响。在有女性主人的二元组中，每分钟的模式数量往往高于有男性主人的二元组。此外，猫的性别对二元行为的时间模式没有任何影响。这些结果与 Mertens [(34)，见上文] 和 Turner (1) 的结果一致。</p>
+<h3>与人类性别和年龄相关的差异</h3>
+<p>Mertens 和 Turner (37) 在一项对他们群体猫的实验研究中，报道了男性、女性、男孩和女孩行为之间的差异。当不允许志愿者以任何方式与他们在相遇室第一次见面的猫互动时（他们必须在最初的 5 分钟内看一本适合年龄的书），进入房间的猫在接近行为中对伴侣的性别或年龄没有偏好。然而，在接下来的 5 分钟中，当允许这些人随意与猫互动，并且作者记录了人的行为时，猫对男性、女性和儿童之间行为的差异做出了反应。男性往往坐着不动，而妇女和女孩则走到地板上，到猫的水平。儿童，尤其是男孩，试图立即接近猫，猫通常会通过逃离它们来做出负面反应，尽管它们都已充分社会化。妇女和女孩更频繁地与猫交谈，猫比与男性或男孩交谈时更频繁地与她们交谈。</p>
+<p>Mertens (34) 在 51 个养猫家庭中 504 小时的后续观察结果支持了这些结果，这些家庭共有 162 人和 72 只猫。在家时，女性与猫交谈和互动的频率高于男性。儿童在运动活动方面特别活跃，而成年人则更频繁地与猫交谈。她还发现，与女性的互动具有更高的互惠性，因此人和猫都可能享有高质量的关系。在一项较新的研究中，Wedl 等人。(36) 发现，女性主人与猫进行的互动比男性主人更有条理，而性格外向的主人与宠物的互动模式相对多样化。根据对匈牙利养猫主人问卷的答案进行的 PCA 分析，Pongracz 和 Szapu (38) 报道，女性认为她们的猫比男性认为的更善于沟通和更有同理心，并且老年主人比年轻主人更频繁地报告猫的情绪匹配。</p>
+<p>Turner (39) 比较了年轻人和老年人 (65+) 与猫的互动，发现两组之间的总互动时间没有差异，但在这些互动的结构上存在两个差异：年轻人与猫的互动频率明显更高，但老年人互动时，互动时间明显更长（大概老年人会等到猫过来与他们互动，但这并没有经过检验）。年轻的主人也更频繁地与猫保持距离互动，并比老年人更频繁地与猫交谈。</p>
+<p>上述所有发现都允许为与猫一起工作的心理治疗师和教育工作者提供建议，以帮助人们撰写文本 (40,41) 和动物辅助干预课程，以及帮助公众促进人与猫之间和谐的关系。</p>
+<h3>猫对人类情绪的影响</h3>
+<p>Rieger 和 Turner (42) 以及 Turner 和 Rieger (43) 发现，不仅仅是猫在家中存在，而且与猫互动也会减少人的可衡量的负面情绪，例如焦虑、抑郁和内向。抑郁的主人很少与猫互动，但当猫接近那个人时，他/她会接受猫希望互动的意图，这会影响人的情绪。当猫靠近人（而不是距离较远）时，猫也会改变其行为以应对人的抑郁情绪，与人交谈更频繁，并且在该人身上更频繁地进行头部和侧腹摩擦。女性受猫影响的情绪量表比男性多，并且比男性受影响更强烈。Turner 等人。(44) 得出结论，只有伴侣，而不是猫，才会增强积极情绪，而猫会减轻负面情绪。这种效果与人类伴侣的效果相当。</p>
+<h3>猫的品种和年龄对猫的行为和猫与人互动的影响</h3>
+<p>令人惊讶的是，鉴于大量流行的猫品种书籍，关于猫在行为或对人的行为方面的品种差异的研究相对较少。Turner (8,39) 报道了唯一一项比较两种最古老的纯种猫（波斯猫和暹罗猫）和非纯种猫的动物学研究，并将观察数据与主人的主观特征评级相结合。他发现这两个品种之间几乎没有差异——据报道，它们位于猫性格的极端——这可能是由于趋同的人工选择，但这些差异符合流行文献中的预期：波斯猫不如暹罗猫活跃和健谈，而后者则更爱玩耍，但对主人要求更多。相对于非纯种猫，纯种猫经常更靠近它们的主人，并且对陌生人更友好，这可能与抚养过程中的处理（娇惯）差异或人工选择（遗传差异）有关。</p>
+<p>Hart 和 Hart (45) 采访了大约 80 位被认为是猫品种差异公正权威人士的美国兽医，这些兽医在猫科动物诊所工作。他们在 15 个猫品种中对随机选择的五个品种和国内短毛猫和长毛猫进行了 12 个行为特征的排名。三个特征具有很高的预测价值来区分品种，七个特征具有中等预测价值，两个特征具有低预测价值。然而，Turner (46) 指出，仍然需要从比较动物学观察中证实这些主观排名。对最近的两项更有前景的研究，即 Wilhelmy 等人 (47) 和 Salonen 等人 (48) 的研究，也可以提出同样的批评。使用众所周知的问卷生成标准化的行为概况，前一项研究发现了与纯种猫的品种、毛色和毛皮图案相关的行为特征。后一项研究还根据主人完成的健康和行为问卷收集了大量数据集，并确定了 19 个品种和品种组之间在 10 个不同行为特征方面的行为差异。在三个品种的七个性状中发现中等水平的遗传力，但作者报告说，品种群体内部存在大量的遗传变异。</p>
+<p>关于猫的年龄对猫与人互动影响的研究就更少了。Wedl 等人。(36) 将 Theme® 算法应用于他们的观察数据，确定猫的年龄越大，二元事件类型复杂性就越低，这意味着老年猫与主人互动时猫行为的字符串比年轻猫短。这可能反映了猫随着年龄增长活动水平和好动性下降。</p>
+<h3>总结</h3>
+<p>这份小型综述表明，我们已经发现了许多关于猫与其主人之间社会互动机制的信息，但是当研究人员应用新的技术（例如，猫发声的语音分析）或应用 Theme® 算法分析这种互动时，还有更多有待发现。欢迎进行更多比较不同猫品种和不同毛皮特征动物行为的观察性研究，以证实和补充主人对个性特征的定性评估。此外，希望能够找到一种在伦理上可接受的方法来检验 Turner (1,8) 模型对以后与人的正面和负面经历对对人友善的影响的预测。</p>
+        <small class="page-url url "><a href="https://www.frontiersin.org/journals/veterinary-science/articles/10.3389/fvets.2021.650143/full" target="_blank">(https://www.frontiersin.org/journals/veterinary-science/articles/10.3389/fvets.2021.650143/full)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="What-Cats-Can-Teach-You-About-Social-Media-Engagement-—-Billie-Jo-Konze">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>What Cats Can Teach You About Social Media Engagement — Billie Jo Konze</h3>
+        <small class="page-url url "><a href="https://www.billiejokonze.com/blog/2021/7/25/what-cats-can-teach-you-about-social-media-engagement" target="_blank">(https://www.billiejokonze.com/blog/2021/7/25/what-cats-can-teach-you-about-social-media-engagement)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>猫咪社交媒体策略</h2>
+<p>许多人不知道如何与猫相处，同样，很多人不喜欢社交媒体，因为他们不知道如何参与其中。他们采取咄咄逼人的方式，不断炫耀自己的成就，或在私信中纠缠新联系，基本上是在喊：“我很有能力！请雇用我！！！”</p>
+<h3>不那么懂猫的人看到猫，会尝试各种事情：</h3>
+<p>抚摸
+摸肚子
+追逐猫咪
+对还不认识的猫过于主动</p>
+<p>猫咪是具有领地意识和警惕性的生物。必须哄它们，吸引它们。</p>
+<p>吸引猫咪注意力的最佳方法是假装它不存在。别那么努力。欲擒故纵。</p>
+<h3>做一些对猫来说有趣的事情，但假装它们不在那里。</h3>
+<p>和别人打电话。
+录制一些时间紧迫的配音试镜。
+做饭。或者午餐。或者只是站在厨房里。
+坐下来。打开你的电脑。尝试写一篇博文。
+哦，看，它奏效了。（那是我的猫泰迪帮我写这篇博文）</p>
+<p>许多LinkedIn营销课程都讲解如何建立联系，然后直接提出你的请求，如果你的方法有效，那就很好。(我个人喜欢把我的直接请求放在我的电子邮件营销中，因为那样对我来说更舒服)</p>
+<h3>但是你如何提出直接要求非常重要。</h3>
+<p>我听过太多人在LinkedIn上抱怨，他们对那些仅仅发送好友请求就立即向他们发送“我看到你是一位企业主——请雇用我！”的人感到反感。</p>
+<p>那甚至不是狗狗的能量。</p>
+<p>那是7个月大的圣伯纳犬在松鼠公园里遇到热狗摊贩的能量。</p>
+<p>暴风雨前的宁静</p>
+<p>你不想表现出那种绝望、流口水、过度热情的状态，无论你有多可爱和毛茸茸。</p>
+<p>我们这些爱猫的人欣赏到我们必须赢得猫的注意。这与赢得社交媒体上的参与度相同。</p>
+<h2>如何获得社交媒体参与度：</h2>
+<p><strong>坚持:</strong> 不要在一两次尝试之后就放弃！与猫交朋友或在社交媒体上获得参与需要付出努力和时间。继续努力。</p>
+<p><strong>一致性:</strong> 如果你不可预测，猫不会信任你。如果你有一天说婴儿语，第二天却朝它们扔鞋（大惊喜），它们就不会那么热衷于靠近你。通过保持一致来保持可预测性。在社交媒体上，这意味着定期发布（每天最好）以及发布与你的行业相关的有意义的内容。</p>
+<p><strong>关心他们关心的事情:</strong> 猫不在乎你的最新成就。向它们展示你关心它们的需要。</p>
+<p>挠挠它们的下巴。（点赞、评论）
+给它们零食。（推荐他人，分享职位发布，发送你认为联系人可能喜欢的有帮助或有趣的內容）
+如果它们不想被抱，那就放下它们！</p>
+<p><strong>有趣:</strong> 猫很好奇。做一些有趣的事情，它们就会注意。在社交媒体上，这可以意味着分享成就，但更多时候意味着用你自己的话分享想法。</p>
+<p><strong>并且感兴趣:</strong> 真正忽视猫的人无法维持猫的注意力。猫会感到无聊然后离开。</p>
+<p>如果你感到尴尬，不知道如何与新的联系互动，最好的办法是保持好奇——问对方关于他们自己、他们的经历和他们的业务的问题。这些问题也不需要很深刻，只要真诚即可。</p>
+<p>今天，我联系了一位我一直看到名字的配音演员，因为我想知道如何发音——我不知道这件事一直困扰着我！就这么简单。（谢谢你澄清这一点，Mark Harrietha！）</p>
+<p><strong>个性化:</strong> 我的猫喜欢肚子按摩。如果我离我男朋友的猫的肚子只有六英寸远，我可能会毁容。猫有不同的个性和喜好。</p>
+<p>就像每只猫都不一样，每个新的联系都不一样，每个社交媒体渠道也不一样，所以一定要注意场合。</p>
+<p>此外，请注意，Instagram的算法与LinkedIn的算法偏好不同，所以不要试图以同样的方式对待它们。如果你想尝试使用几个不同的平台来提高参与度，那么学习如何让努力变得有价值的基础知识是值得的。</p>
+<p><strong>不要让不可预测性让你抓狂:</strong> 猫和社交媒体的参与度有时都无法解释。它们的行为是可预测的……直到它们不再可预测。</p>
+<p>不要让它影响你。我的猫经常会停止喜欢它以前喜欢的食物或玩具。这并不意味着我不再给他食物或玩具！我前几天发布的一篇文章只有8次观看和零评论。我打算删除它，并在一天中的不同时间重新发布它。尝试新事物，进行调整，看看什么有效。</p>
+<p>这整篇博文只是借口分享猫的照片吗？也许吧……</p>
+<p>在我们离开之前，我想与你们分享一些资源，包括我刚了解到的一个：</p>
+<h2>LinkedIn社交销售指数</h2>
+<p>感谢Gravy for the Brain的Jay提供的这些惊人的知识！我已经参加了另外两门LinkedIn课程，但从未提到过SSI。</p>
+<p>最近，我通过演员基金会参加了三门免费的LinkedIn课程，我强烈推荐它们……我提到过它们对娱乐行业的任何人都是免费的吗？说真的。免费的。</p>
+<p>他们还有各种各样的其他免费课程和资源可用。许多演员从未听说过它们，这简直是犯罪！</p>
+<p>所以，在Jay提到SSI之后，我去查看了……我的分数是100分中的76分，这让我进入了我行业和网络中前1%的人群。</p>
+<p>这很酷，但我希望在我参加演员基金会LinkedIn挑战赛之前就知道我的分数，因为我敢打赌它绝对达不到这个分数。我还敢打赌，正是这次挑战赛导致我本周的一篇帖子获得了近6000次观看。</p>
+<p>但是如何提高你的SSI呢？</p>
+<p>这个网站有一些我发现非常有用的技巧。</p>
+<p>但我认为LinkedIn挑战赛确实是一个提高我的参与度和养成定期关注LinkedIn习惯的好方法。</p>
+<h2>所以，如果你想提高你的LinkedIn参与度：</h2>
+<p>查看你的LinkedIn SSI分数。
+注册演员基金会的免费课程。
+查看这个其他网站，它提供了更多关于提高SSI的细节
+如果你还没有关注Gravy for the Brain，那就看看吧——他们是很棒的人，拥有很棒的资源。
+然后撸猫。
+为了你自己的安全，远离猫的肚子……</p>
+<h3>评论 (3)</h3>
+        <small class="page-url url "><a href="https://www.billiejokonze.com/blog/2021/7/25/what-cats-can-teach-you-about-social-media-engagement" target="_blank">(https://www.billiejokonze.com/blog/2021/7/25/what-cats-can-teach-you-about-social-media-engagement)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Cautionary-tips-involving-cats?---Sitter-Questions,-Advice-&-Chat---TrustedHousesitters-Community-Forum">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Cautionary tips involving cats? - Sitter Questions, Advice & Chat - TrustedHousesitters Community Forum</h3>
+        <small class="page-url url "><a href="https://forum.trustedhousesitters.com/t/cautionary-tips-involving-cats/48622" target="_blank">(https://forum.trustedhousesitters.com/t/cautionary-tips-involving-cats/48622)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>关于避免被猫抓伤或咬伤的技巧</h2>
+<p>我创建这个主题是为了收集关于猫咪的知识，因为之前有一个主题讨论了有人被猫咬伤，结果很痛苦。你们有什么技巧可以分享，以避免被猫抓伤或咬伤吗？</p>
+<p>我的经验：我照看过许多猫，结果都很好，但我自己从未养过猫。我倾向于非常小心，因为我害怕被抓伤或咬伤。虽然还没有发生过这种情况，但我非常谨慎，让猫按照自己的节奏放松下来，因为每只猫的性格都不同。</p>
+<p>在我们相处几天，它们变得非常合群，并且它们的主人明确表示它们喜欢被抱起来，以及它们喜欢被抱的方式之后，我才尝试抱起它们。例如，到目前为止，我已经像婴儿一样抱着两只猫，因为它们的主人说它们喜欢这样。即使那样做了，在我们相处几天后，我也密切关注猫咪的行为，寻找它们想下来的迹象。</p>
+<p>在不同的情况下，我照看过一些胆小的猫，它们的主人对猫有多么喜欢我感到惊讶。当这种情况发生时真是太好了，但我一开始就认为猫会决定我们互动的程度、时间和方式。它们不像大多数狗那样明显或可预测。</p>
+<p>当我晚上起床时，如果猫没有和我一起睡觉，我会宣布我要去洗手间。这是为了给猫足够的预先通知，以免惊吓到它们。</p>
+<p>如果我到达寄宿地点时主人已经离开了，即使猫躲起来了，我也会用舒缓的声音和它们说话。这是为了确保它们知道我在那里，但我并不构成威胁。我从不试图强迫猫从藏身处出来或做任何其他事情。</p>
+<p>顺便说一句，当寄宿开始时，我会把我的物品保管好，以避免意外的小便或其他情况。例如，我不把东西放在外面，我把我的行李箱拉上拉链并收起来。这是因为我在各种社交媒体上看到过猫因为不高兴而小便或便便，有时甚至是它们经常相处的主人。</p>
+<h2>2024年3月——论坛总结！</h2>
+<h3>猫咪寄养员的角色和责任</h3>
+<p>你的帖子中有很多常识。让动物（包括狗）习惯陌生人，不要太早就把自己强加给它们。</p>
+<p>我的经验：养猫17年，迄今为止收养了85只猫（从新生儿到老年猫，从友好的到害怕的），每天与流浪猫/野猫一起工作，还照看过许多其他猫。即使有了这些经验，我仍在学习，我希望我没有表现得自以为是和自鸣得意。</p>
+<h3>猫咪的社交化</h3>
+<p>猫会在它们准备好时接近人类，通常是在人类忽视它们的时候。这就是为什么猫经常会对房间里最不喜欢猫的人产生好感！除非我正在积极地尝试让一只猫社交（例如一只害怕的寄养猫），否则我会让它们慢慢来。在与非常害羞的猫进行短期寄宿时，我不会强迫互动。这会吓到猫，而且仅仅几天的时间不值得让猫承受这种创伤。</p>
+<p>对于我害怕的寄养猫，我用食物作为激励。除非我在房间里，否则我从不喂食，而且当它们越来越舒适时，我会越来越靠近食物。对于小猫，我最终会让它们不得不爬到我的腿上才能拿到食盆。</p>
+<h3>猫砂盆（不是自动猫砂盆或其他自动猫砂盆）</h3>
+<p>猫非常讲究卫生，通常会拒绝没有定期铲除的猫砂盆。我至少每天铲一次，或者根据猫的数量和它们的“生产力”更频繁地铲除。</p>
+<p>猫砂盆需要根据使用情况经常彻底清空和擦洗。最终，塑料猫砂盆会老化，无法彻底清洁，因此需要更换。</p>
+<p>如果猫在猫砂盆外面小便/大便，可能有许多原因：</p>
+<ul>
+<li>它们不喜欢猫砂</li>
+<li>它们不喜欢猫砂盆</li>
+<li>它们有医疗问题</li>
+<li>它们感到压力/恼怒</li>
+</ul>
+<h3>猫咪肢体语言</h3>
+<p>猫尾巴抽搐意味着“立即停止你正在做的事情”！</p>
+<p>缓慢眨眼是爱的标志。人类也可以对猫这样做，但在你确信猫对你感到自在之前，不要直视猫的眼睛。</p>
+<p>尽量不要从后面或高处接近猫。猫喜欢位于危险之上。</p>
+<p>猫的胡须、耳朵、眼睛和尾巴都会传达情绪：</p>
+<p><a href="https://pethelpful.com/cats/cat-body-language-pictures">https://pethelpful.com/cats/cat-body-language-pictures</a></p>
+<h3>猫咪的呼噜声</h3>
+<p>表示喜爱，但也可能意味着猫疼痛或压力。</p>
+<h3>玩具/狩猎</h3>
+<p>猫是本能的猎手，即使它们不饿。户外猫通常会捕猎并杀死（或只是玩弄）它的猎物，即使它有商品猫粮可用。商品猫粮更容易吃，这就是为什么猫通常不会吃它们捕获的鸟或老鼠，而只会玩弄它。</p>
+<p>狩猎本能也是猫喜欢追逐和捕捉玩具的原因。我发现对猫来说最好的玩具是这个：</p>
+<p><a href="https://www.petco.com/shop/en/petcostore/product/cat-dancer-original-action-cat-toy-37311">https://www.petco.com/shop/en/petcostore/product/cat-dancer-original-action-cat-toy-37311</a> 。我把它作为礼物带到我所有的猫寄养地点。</p>
+<p>激光指示器很好，但要将光线指向零食来结束游戏，这样猫才能在游戏结束时“捕捉”到东西。否则它们会感到沮丧。</p>
+<p>一些很棒的技巧。作为曾经养过或照看过100多只猫并在几家猫救助组织做过志愿者的人，我还没有被咬伤或抓伤过。像你一样，我有一些规则，那就是我总是和害怕或胆小的猫说话，即使它们在躲避我。我做过一次寄养，其中一只猫从来没有接近过任何人，除了房主，但在和它说了10天话后，它开始在我办公桌旁或我身上坐着。</p>
+<p>我总是让猫决定它们什么时候愿意被抚摸等等。</p>
+<p>我同意永远不要抱起猫（许多猫讨厌这样）。</p>
+<p>当你第一次遇到一只猫时，伸出一根手指。这比一只手不那么吓人，当猫准备好时，它会用它喜欢的地方蹭你的手指——头顶、左脸颊或右脸颊。</p>
+<p>总是给猫足够的活动空间，永远不要把它逼到角落里。</p>
+<p>我从我的第一只家猫山姆那里学到了很多东西。它是一只RSPCA救助的猫，但有一点野性。一切都按它的条件来，如果你不想被咬或抓伤的话。</p>
+<p>更多很棒的技巧。你说得对，猫有习惯性地走向那些忽视它们的人，包括那些不喜欢猫的人，因为他们对猫的能量很平静。</p>
+<p>最后，感谢你做寄养。</p>
+<p>所有上述内容以及……</p>
+<p>尽量不要睁大眼睛看猫——它们认为这是威胁。相反，用眼角看或半闭着眼睛看（它们认为这是顺从）。</p>
+<p>最后，感谢你做寄养。</p>
+<p>谢谢。我明天要带一只两周大的奶猫来一天，因为它的寄养人要去上班❤️</p>
+<p>对于猫来说，忽视它并不一定意味着它会来找你。当猫意识到有人在盯着它或试图引起它的注意时，猫通常会把这种“注视”和关注视为威胁。当有人忽视一只猫时，它通常会认为这种行为不再构成威胁，如果它感到安全，它会去找那个人。猫的感官非常灵敏，它们乐意去找那些它们认为没有危险的人。在所有情况下，都应该让它们独自待着，直到它们决定友好为止。</p>
+<p>绝对同意上述所有内容。我们有一只“救援”猫和它的幼猫。它们已经和我们生活在一起一年多了。这只幼猫（现在是猫了）很胆小，不会让你抱它，但在家它很好，从来没有抓伤或咬伤我。莱迪，它的妈妈，仍然因为在伦敦街头的生活而受到创伤，它现在会跳到我们身边让我们抚摸它，但我永远不会抱起它，除非要带它去看兽医，然后把它小心翼翼地塞进提笼里。它从来没有咬过人、抓过人或有过攻击性，但这是一只猫（动物）；这是它的天性，它们会抓是因为它们可以，至于猫咬，它们可能会很糟糕，但如果你养了一只猫，你很可能会在某个时候被咬或抓伤。我们的幼猫会猎捕、杀死并留下猎物，尽管它去年夏天确实带了一只大老鼠进屋……最后，如果我不认识一只猫，我永远不会马上抱起它。</p>
+<p>感谢你发布这个帖子。我所有的猫的经验都是通过宠物寄养获得的。我照看过大约35只猫。它们和狗大相径庭，我发现狗很容易相处。我总是尽量给猫留出空间，让它们来找我。</p>
+<p>我连续几个夏天，几个月都照料过一只猫，它很害羞，讨厌男人（我的室友丈夫，甚至是拥有它的那对夫妇中的男性成员）。它整天都躲在床底下。我会躺在地上，拉起床罩，和它说话。它会发出呼噜声——我一直以为这是好事，直到我了解到猫也会因为压力而发出呼噜声。但最终，当我们看电视时，它会在晚上过来和我一起坐。所以也许我的说话起了作用。</p>
+<p>我不太了解猫，但我通过房屋寄养开始喜欢它们了。我了解到，即使那些看起来讨厌你的猫，似乎也喜欢你靠近它们。最终，它们可能会来找你，也可能不会。</p>
+<p>做得好！我只在动物收容所照看过那个年龄的弃婴小猫。全程喂奶或清理它们的排泄物。</p>
+<p>每个人都提出了如此精彩的建议，Lassie 对此做了完美的概述，并提出了许多好的观点。正如一些人所说：对猫和狗来说，“温柔”的眼神和“温柔”的声音方法至关重要。避免长时间的直接眼神接触，并允许大量眨眼。当猫不再有那种呆滞的眼神，并且很高兴地在你身边“温柔地眨眼”时，你就知道情况不错了！在我最近的一次寄宿中，主人确保猫第一次和我一起吃东西不是通过它们的自动喂食器，而是由我喂的。这样猫就会把我与它们最喜欢的东西联系起来！这很有帮助，我非常感谢！</p>
+<p>作为一个真正的猫爱好者，并且一直与猫生活在一起的人，我有时会觉得某些寄养员选择照看猫是因为他们认为猫不需要太多关注，很容易照顾，基本上可以被忽视。这让我有点难过，因为许多猫（即使那些不会坐在你身边的那只）都喜欢与一个声音柔和、总是眨眼的人类同伴分享空间。</p>
+<p>我从18岁离开家开始就养猫了，所以已经有50多年了。我还为当地动物收容所收养了许多野猫。我永远不会试图抱起一只不是我自己的猫。如果它们愿意，我会让它们过来坐在我旁边或我身上。无论何时看向它们，我都完全同意对它们眨眼。如果它们开始回眨眼，你就知道它们越来越舒适了。</p>
+<p>作为一个真正的猫爱好者，并且一直与猫生活在一起的人，我有时会觉得某些寄养员选择照看猫是因为他们认为猫不需要太多关注，很容易照顾，基本上可以被忽视。这让我有点难过，因为许多猫（即使那些不会坐在你身边的那只）都喜欢与一个声音柔和、总是眨眼的人类同伴分享空间。</p>
+<p>哦，多么真实！</p>
+<p>我在论坛上看到一些帖子，建议那些不想经常在家的寄养员去照看猫。这对猫来说是不公平的！它们是很合群的动物。</p>
+<p>我不记得我曾经睁大眼睛盯着任何一只猫。即使猫不介意，想象这样做也很奇怪。</p>
+<p>我特别记得一件事情，那是我第一次寄宿的晚上。其中一只猫很胆小，正如描述的那样。我躺在床上，猫离我房间的另一边，看起来好像它很高兴在我睡觉时杀了我。</p>
+<p>无论如何，我睡着了，第二天早上醒来时，它在我床上蹭我。也许我只是幸运地眯着眼睛，哈哈。我抚摸了几下它，并没有一开始就冒险。在我寄宿期间，它变得越来越温柔。</p>
+<p>我喜欢THS的各种原因之一：寄宿让我变成了一个猫迷。这并不是说我以前不关心它们——我只是接触狗更多。但我对猫有了足够的了解，了解它们的独特个性，我现在发现它们非常可爱。如果我没有一只疯狂的救援犬会让它们的生活变得悲惨，我现在就会养几只猫，因为我有可爱的猫寄养经历。</p>
+<p>我认为值得注意的是，你不必养猫多年或几十年才能爱它们或照顾它们。我说这话是为了鼓励那些可能对猫的经验有限的其他寄养员。只要仔细考虑你与它们互动的方式。这是非常有意义的。</p>
+<p>多么优秀的信息@Lassie感谢你！我以前养过猫，但在这里学到了很多东西。</p>
+<p>作为一名宠物主人，我的主要担心是寄养员会观察我的猫的行为，看看是否有任何实际疾病的迹象。猫会很快恶化。所以，如果我的任何一只猫决定不吃东西，我希望收到短信，因为这对它们来说并不正常。如果呕吐，我想知道。这不是过分谨慎，而是基于我的经验。我也是一名寄养员，如果一只猫经常呕吐是因为它们吃得太快或其他什么原因，通常宠物主人会告诉寄养员。但我认为寄养员在健康问题上不应该想当然，所以我会在寄宿开始前详细讨论猫的正常情况和异常情况。</p>
+<p>我还认为，寄养员真的必须非常认真地对待宠物主人关于喂食桌边食物和分享食物的警告。许多猫都吃特殊饮食，或者对人类食物反应不好——它们不是狗。寄养员了解对猫（和其他宠物）来说令人惊讶的有毒物质（如杀虫剂）是很好的。当然，猫吃有毒物质的可能性比狗要小得多，但可能会发生。</p>
+<p>有些猫真的，真的，真的不喜欢被抱起来——即使是被它们最喜欢的人！所以这是一个值得询问的另一个问题。（当我寄宿时，我永远不会抱起猫，除非猫明确表示这就是它们想要的，或者这是一个紧急情况。）</p>
+<p>我避免给寄养宠物喂食“未经批准”的食物。它们不仅可能会生病，寄养员还必须清理任何脏乱。</p>
+<p>我照看过一只猫，它一年前差点死于结肠炎，所以我密切关注它。我照看的另一只猫呕吐了，所以我立即与它的主人核实。他们并不在意，说它有时会呕吐，耸耸肩。另一只寄养猫患有哮喘，所以我准备好给它使用吸入器。</p>
+<p>如果发生任何健康问题，我总是会与它们的主人联系。如果那是我的宠物，我会想知道。</p>
+<p>我刚刚照料了一只年迈、体弱的狗——它服用多种药物——结果它癫痫发作，行动不便。在我深夜匆忙带它去看兽医时，我和它的主人进行了交谈。他们最终缩短了他们的海外旅行，在安乐死之前向它告别。我们都抚摸并拥抱了它，可爱的小狗。我仍然想念它。这令人心碎。</p>
+<p>他们在评价中写道：“我们找不到比Maggie更好的寄养员来照顾XX了……Maggie做了我们会在宠物紧急情况下所做的一切。我们感觉XX在她和Maggie在一起的时候非常安全。”</p>
+<p>作为一名养猫超过30年的猫主人，我的主要建议是与房主核实他们的猫的正常情况——包括行为、食物、厕所等——并以此为基础开展工作。猫都不同——就像人类一样。</p>
+<p>我从未见过或听说过猫只是走近某人并咬他们。（不像悲惨的无缘无故的狗攻击——我说这话是因为我爱狗，但周围有愤怒的狗吠叫时会感到紧张！）</p>
+<p>猫的大多数抓伤或咬伤发生在：</p>
+<p>a) 人类正在做猫不想做的事情（给药/把它们放在航空箱里）——如果你接受了一只需要服药的猫的寄宿，请询问猫的主人他们通常是如何服药的。我们有一只非常喜欢的猫，它不喜欢把药丸放在嘴里，但如果我把药丸放在它旁边，然后敲敲它，它就会吃掉它！它的一个雌性同伴（也很喜欢）很难喂药，当它需要定期服药时，我们的兽医为我们换成了液体药。</p>
+<p>b) 人类试图紧紧抓住它们，而它们想下来——这通常是意外的抓伤，因为它们用那些带有爪子的强壮的后脚推开。——建议：如果你抱着猫，一旦它们做出要下来的动作，就让它们下来。如果在无法让它们下来时，尽量避免抱猫。</p>
+<p>c) 猫过度兴奋（小心邀请抚摸肚子！）——同样，这通常不是愤怒，而是过度兴奋。玩耍时，猫自然会使用牙齿和爪子，因为它们模仿狩猎时的行为。用可以让你手指远离的玩具玩耍！</p>
+<p>虽然个体有自己的个性，但也有一些品种特征——我们养挪威森林猫已经有20多年了。它们很大，喜欢关注，会直视你的眼睛，“说话”很多，而且我们的猫都很爱拥抱。我们现在有两只有挪威的小猫，它们在我们的寄养员到达时迎接了他。我们离开的第一天，他告诉我们，他很高兴大部分时间都和它们一起玩。</p>
+<p>希望这有帮助。作为一名猫主人的请求——如果你真的害怕猫，请不要让房屋/地点诱使你申请猫的寄宿。它们会和你一样痛苦，我不想认为这种情况发生在我的家里。</p>
+<p>绝佳的建议。给猫服药尤其困难。这是一个有趣的看法：</p>
+<p><a href="THE FUNNY FILE - PMC">有趣的文件-PMC</a></p>
+        <small class="page-url url "><a href="https://forum.trustedhousesitters.com/t/cautionary-tips-involving-cats/48622" target="_blank">(https://forum.trustedhousesitters.com/t/cautionary-tips-involving-cats/48622)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Demystifying-feline-behavior-|-Penn-Today">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Demystifying feline behavior | Penn Today</h3>
+        <small class="page-url url "><a href="https://penntoday.upenn.edu/news/demystifying-feline-behavior" target="_blank">(https://penntoday.upenn.edu/news/demystifying-feline-behavior)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>解开猫行为的奥秘</h2>
+<p>卡洛·西拉库萨和詹姆斯·瑟佩尔，来自兽医学院，对猫行为科学的最新发现进行了阐述，揭穿了一些关于猫的迷信，并解释了为什么我们的猫咪不仅仅是“低维护的狗”。</p>
+<p>它们知道自己的名字。我们多少能读懂它们的面部表情。有些猫真的喜欢我们陪伴在它们身边。这些都是近期旨在破译我们最神秘却又无处不在的伙伴——宠物猫行为的一些科学研究的所谓发现。</p>
+<p>然而，对猫行为的研究极其有限，根据兽医行为专家卡洛·西拉库萨和宾夕法尼亚大学兽医学院的动物伦理与福利教授詹姆斯·瑟佩尔的说法，主流媒体——有时甚至是科学家自己——都习惯于过度解读这些研究。</p>
+<p>那么，我们对猫的行为了解多少呢？为了纪念全国猫健康月，以及即将出版的西拉库萨合编的《解读你的猫》一书（旨在为猫主人提供易于理解的、基于科学的信息），《宾夕法尼亚今日》采访了西拉库萨和瑟佩尔，了解他们自己对猫行为的研究以及他们对该领域的看法。</p>
+<p>这次谈话，由西拉库萨和瑟佩尔的科学和临床专业知识驱动，并穿插着他们作为猫主人的亲身经历的轶事，有助于阐明猫行为科学的最新发现，强调了为什么猫远非“低维护的狗”，并为猫主人提供了指导。</p>
+<p>一项关于猫行为的研究表明，猫能认出自己的名字，另一项研究表明它们可以和主人建立安全依恋。然而，总的来说，关于狗行为的研究似乎要多得多。这是为什么呢？</p>
+<p>西拉库萨：即使我认为自己是一个爱猫人士，但我所做的工作大部分都是关于狗的，因为那里的资金更多。在我们的行为诊所，我们看到的猫比狗少得多，我说的是95%的狗和5%的猫。我认为这部分与人们对猫行为的期望较低有关。如果你家的狗对着来你公寓的每个人咆哮和吠叫，这是一个大问题，但如果你的猫发出嘶嘶声然后逃跑躲起来，没有人会在乎。</p>
+<p>瑟佩尔：研究表明，人们平均而言对猫的依恋程度较低，在猫身上花的钱也较少。在美国，猫的数量比狗多，但养猫的家庭比养狗的家庭少，这意味着人们可能养不止一只猫，因此每个猫身上花的钱就更少了。</p>
+<p>但最近，莫里斯动物基金会向全国各地的兽医发放了一份调查问卷，询问他们认为需要帮助的主要领域是什么。几乎排在首位的是猫的行为问题。</p>
+<p>所以，我认为人们正慢慢接受这样一个观点：宠物主人越来越依恋他们的猫，猫也正成为人们社交群体中越来越重要的成员。</p>
+<p>是否有猫本身的一些内在因素可以解释为什么与狗相比，人们对猫的行为科学关注较少？</p>
+<p>西拉库萨：狗进化自一种群居物种，而猫则起源于一种独居的祖先。我认为它们的社会行为并没有进化得像狗的社会行为那样复杂。也许因此，人们更难以理解猫的社会行为，因为它主要基于距离和非长时间的接触。这就是为什么当你把猫放在一个狭小的环境中，比如城市公寓，尤其是有其他猫的情况下，你可能会遇到问题。</p>
+<p>瑟佩尔：但猫与人类生活在一起已经有大约9500年了。这是一段很长的时间，它们已经进化到更能容忍与人和其它猫近距离生活。</p>
+<p>现在有越来越多的证据表明，狗有一种与人类威廉姆斯综合征等效的基因突变，会导致过度社交。我怀疑我们也可能在家猫身上发现一些类似的情况。这些动物比它们的野生祖先更合群。</p>
+<p>你们从Fe-BARQ（瑟佩尔开发的猫行为评估和研究问卷）中获得了大量关于猫行为的数据。这些数据告诉你们关于猫及其与人之间关系的哪些信息？</p>
+<p>瑟佩尔：从我们的Fe-BARQ数据中，我们发现，令人惊讶的是，许多主人报告说，当猫与主人分开时，猫会出现中度到重度的行为问题。关于猫并不真正关心它们的主人，它们只是为了食物而存在的理论，很多这样的猫真的似乎因为离开它们的人类伙伴而感到痛苦。</p>
+<p>西拉库萨：我们在诊所也看到了这种情况。例如，如果猫单独待的时间比平时长，它们可能会排泄或呕吐。所以，我认为它们肯定依恋人类。但它们表达依恋的方式与狗非常不同。狗会进行大量的长时间的身体接触，而猫可能会待在它们喜欢的人附近，但它们并不一定会主动互动。有些猫可能会稍微互动一下——我的其中一只猫会和我玩捡球游戏——但只是很短的时间，然后它就会说，“哦，我玩够了。”</p>
+<p>关于猫行为的一些主要的迷信或误解是什么？</p>
+<p>西拉库萨：许多人都希望猫能替代狗，就像一只低维护的狗一样，但事实并非如此。</p>
+<p>另一个误解是，因为猫毛茸茸的、软乎乎的，人们喜欢经常触摸它们，但这并不一定符合猫的喜好。有些猫喜欢——我养过的一些猫总是喜欢待在我身上——但其他的猫则认为，“好吧，我们是朋友，但你待在那里，我待在这里。”所以，在这种情况下，尊重它们对距离的渴望很重要。</p>
+<p>此外，人们常常未能为猫提供足够的刺激。例如，重要的是要给它们机会展现其自然的觅食行为。因此，不要仅仅把食物放在碗里，要让它们有机会潜伏、抛掷食物并扑向食物，并重现它们捕猎时会进行的整个事件序列。</p>
+<p>你们是如何尝试纠正客户对猫的错误印象的？</p>
+        <small class="page-url url "><a href="https://penntoday.upenn.edu/news/demystifying-feline-behavior" target="_blank">(https://penntoday.upenn.edu/news/demystifying-feline-behavior)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="The-influence-of-visual-stimulation-on-the-behaviour-of-cats-housed-in-a-rescue-shelter---ScienceDirect">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>The influence of visual stimulation on the behaviour of cats housed in a rescue shelter - ScienceDirect</h3>
+        <small class="page-url url "><a href="https://www.sciencedirect.com/science/article/abs/pii/S0168159107003619" target="_blank">(https://www.sciencedirect.com/science/article/abs/pii/S0168159107003619)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>视觉刺激对收容所猫行为的影响</h2>
+<h3>摘要</h3>
+<h3>讨论</h3>
+<h3>结论</h3>
+        <small class="page-url url "><a href="https://www.sciencedirect.com/science/article/abs/pii/S0168159107003619" target="_blank">(https://www.sciencedirect.com/science/article/abs/pii/S0168159107003619)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Cats-prefer-species-appropriate-music---ScienceDirect">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Cats prefer species-appropriate music - ScienceDirect</h3>
+        <small class="page-url url "><a href="https://www.sciencedirect.com/science/article/abs/pii/S016815911500060X" target="_blank">(https://www.sciencedirect.com/science/article/abs/pii/S016815911500060X)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>猫更喜欢物种专属音乐</h2>
+<h3>亮点</h3>
+<ul>
+<li>音乐通常用于动物的丰富化，但结果相互矛盾。</li>
+<li>我们提出了物种专属音乐的理论，并用家猫进行了测试。</li>
+<li>猫对物种专属音乐的反应比对人类音乐的反应更大。</li>
+<li>物种专属音乐比人类音乐更有可能使动物受益。</li>
+</ul>
+        <small class="page-url url "><a href="https://www.sciencedirect.com/science/article/abs/pii/S016815911500060X" target="_blank">(https://www.sciencedirect.com/science/article/abs/pii/S016815911500060X)</a><br></small>
+    </div>
+
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 获取所有导航链接
+        const navLinks = document.querySelectorAll(".navigate-item");
+        // 将导航链接与目标元素建立映射关系
+        const connections = Array.from(navLinks).map(link => {
+            const targetId = link.getAttribute("href").substring(1); // 去掉 #
+            const targetElement = document.getElementById(targetId);
+            return { link, targetElement };
+        });
+        // 使用 IntersectionObserver 观察目标元素
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const { target, isIntersecting } = entry;
+                    const matchingLink = connections.find(connection => connection.targetElement === target).link;
+                    if (isIntersecting) {
+                        // 目标元素在视野中，添加高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.add("active");
+                    } else {
+                        // 目标元素离开视野，移除高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.remove("active");
+                    }
+                });
+            },
+            {
+                root: null, // 默认视口
+                threshold: 0.02
+            }
+        );
+
+        // 开始观察所有目标元素
+        connections.forEach(({ targetElement }) => observer.observe(targetElement));
+    });
+</script>
+<script>
+    // 获取元素
+    const resizer = document.querySelector('.resizer');
+    const leftColumn = document.querySelector('.left-column');
+    const rightColumn = document.querySelector('.right-column');
+    const navigate = document.querySelector('.navigate')
+
+    let isDragging = false;
+
+    // 鼠标按下事件
+    resizer.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        document.body.style.cursor = 'col-resize';
+        document.body.style.userSelect = 'none';
+    });
+
+    // 鼠标移动事件
+    document.addEventListener('mousemove', (event) => {
+        if (!isDragging) return;
+
+        // 计算新的宽度
+        const newLeftWidth = event.clientX / window.innerWidth * 100; // 转换为百分比
+
+        // 限制宽度范围
+        if (newLeftWidth > 15 && newLeftWidth < 70) {
+            leftColumn.style.flexBasis = `${newLeftWidth}%`;
+            rightColumn.style.flexBasis = `${100 - newLeftWidth}%`;
+            navigate.style.left = `${newLeftWidth + 0.15 * (100 - newLeftWidth)}%`
+            navigate.style.maxWidth = `${0.7 * (100 - newLeftWidth)}%`
+
+            const navigateRect = navigate.getBoundingClientRect();
+            const screenWidth = window.innerWidth;
+
+            // 获取右侧部分宽度
+            const rightColumnWidth = rightColumn.getBoundingClientRect().width;
+
+            // 计算 navigate 的占屏幕宽度比例
+            const navigateWidthPercentage = (navigateRect.width / screenWidth) * 100;
+
+            // 计算 navigate 居中所需的 left 值
+            const rightColumnLeft = rightColumn.getBoundingClientRect().left;
+            const navigateLeft = rightColumnLeft + (rightColumnWidth - navigateRect.width) / 2;
+
+            // 设置 navigate 的宽度和位置
+            navigate.style.left = `${navigateLeft}px`;
+        }
+    });
+
+    // 鼠标松开事件
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        document.body.style.cursor = 'default';
+        document.body.style.userSelect = 'auto';
+    });
+</script>
+</html>

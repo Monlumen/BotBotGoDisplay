@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>美国历史上陨落的大公司和它们的历史</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; /* 更现代、更通用的字体 */
+            background-color: #f4f6f8; /* 更柔和的整体背景色 */
+            color: #333; /* 默认字体颜色 */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* 主内容区样式 */
+        .content {
+            border-radius: 12px; /* 圆角边界 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* 柔和的阴影 */
+            background-color: #fff; /* 明亮背景色 */
+            padding: 16px; /* 增加内边距 */
+            margin-bottom: 16px; /* 间隔 */
+        }
+
+        /* 左右分栏样式 */
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .left-column{
+            flex: 3;
+        }
+        .right-column{
+            flex: 4;
+        }
+
+        .left-column {
+            background-color: #eef6ff; /* 更亮的浅蓝背景 */
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); /* 内阴影 */
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; /* 明亮的背景色 */
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); /* 内阴影 */
+            font-family: "Noto Serif", "SimSun", serif; /* 更适合长文本阅读的字体 */
+            position: relative;
+        }
+
+        /* 标题样式 */
+        .title {
+            font-size: 1.4em; /* 增大标题字体 */
+            font-weight: 600; /* 半粗体 */
+            color: #1a1a1a; /* 深灰色标题 */
+            margin-bottom: 12px; /* 增加下方间距 */
+        }
+
+        .page-name.title {
+            font-size: 1.8em; /* 更大的字体 */
+            font-weight: bold; /* 加粗标题 */
+            color: #222; /* 更深的灰色 */
+            margin: 16px 0; /* 增加上下间距 */
+            text-align: left; /* 左对齐 */
+        }
+
+        .section-title {
+            font-size: 1.4em; /* 调整大小 */
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; /* 中灰色标题 */
+        }
+
+        /* 段落样式 */
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; /* 更现代的中英双语字体 */
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; /* 柔和的深灰色 */
+            padding: 12px; /* 内边距 */
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; /* 更清新的背景色 */
+            border: 1px solid #dde3ea; /* 添加边框 */
+            border-radius: 12px; /* 圆角 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 轻微阴影 */
+            margin-bottom: 20px; /* 增加间距 */
+        }
+
+        /* 分割线样式 */
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; /* 更柔和的分割线 */
+            margin: 20px 0; /* 增加上下间距 */
+        }
+
+        /* 元数据样式 */
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; /* 更小的字体 */
+            color: #666; /* 浅灰色 */
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; /* 更深的字体颜色 */
+            border-radius: 8px; /* 圆角 */
+            line-height: 1.4;
+            margin-bottom: 10px; /* 增加间距 */
+        }
+
+        /* 评分样式 */
+        .page-rating {
+            background-color: #e8f4ff; /* 浅蓝背景 */
+            color: #0078d7; /* 蓝色文字 */
+            font-weight: bold; /* 加粗文字 */
+            border: 1px solid #aad4ff; /* 边框 */
+        }
+
+        /* 评价样式 */
+        .page-annotation {
+            background-color: #fff5e5; /* 浅黄背景 */
+            color: #cc8400; /* 深黄色文字 */
+            font-style: italic; /* 斜体文字 */
+            border: 1px solid #ffcc66; /* 边框 */
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; /* 隐藏部分 */
+        }
+
+        /* 链接样式 */
+        a {
+            color: #0078d7; /* 蓝色 */
+            text-decoration: none; /* 移除下划线 */
+        }
+
+        a:hover {
+            text-decoration: underline; /* 鼠标悬停时显示下划线 */
+        }
+
+        /* 提高整体间距 */
+        .content > * {
+            margin-bottom: 12px; /* 增加内容之间的间距 */
+        }
+
+        /* query */
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; /* 紧贴页面顶部 */
+            z-index: 300; /* 确保在其他元素之上 */
+            background-color: #ffffff; /* 纯白背景，模拟输入框 */
+            color: #222; /* 深灰色文字 */
+            font-size: 1.1em; /* 略大的字体，提升可读性 */
+            font-weight: 500; /* 中等字体权重，轻松而非刻板 */
+            padding: 12px 16px; /* 内边距，增强舒适感 */
+            border-radius: 8px; /* 圆角设计，柔和外观 */
+            border: 1px solid #d1e4f2; /* 浅蓝边框 */
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05), /* 内阴影，模拟输入框的凹陷效果 */ 0 2px 4px rgba(0, 0, 0, 0.1); /* 外阴影，提升立体感 */
+            margin-bottom: 16px; /* 与下面内容留出空间 */
+            text-align: left; /* 左对齐，模拟自然输入 */
+            line-height: 1.6; /* 提高行间距，增强舒适性 */
+            font-family: "Inter", "Noto Sans", sans-serif; /* 与 sections 不同的字体，轻松现代 */
+            display: flex; /* 使用 flexbox 布局 */
+            align-items: center; /* 确保表情和文字垂直居中 */
+            gap: 10px; /* 表情和文字之间的间距 */
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        /* Section Link */
+        .section-link-box {
+            display: inline-block; /* 让链接保持块状但不独占一行 */
+            margin: 8px 4px; /* 控制胶囊之间的间距 */
+        }
+
+        .section-link {
+            display: inline-flex; /* 使用 flex 布局对齐内容 */
+            align-items: center; /* 垂直居中对齐 */
+            padding: 6px 12px; /* 增加内边距，增强胶囊感 */
+            background-color: #eef6ff; /* 胶囊的背景色 */
+            color: #0078d7; /* 文字颜色 */
+            font-size: 0.95em; /* 调整字体大小 */
+            font-weight: 500; /* 适度加粗 */
+            text-decoration: none; /* 去掉下划线 */
+            border: 1px solid #d1e4f2; /* 胶囊的浅色边框 */
+            border-radius: 20px; /* 胶囊效果 */
+            transition: all 0.2s ease; /* 添加动画过渡效果 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; /* 悬停时更深的背景色 */
+            color: #005bb5; /* 更深的文字颜色 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 加强阴影效果 */
+            text-decoration: underline; /* 可选：添加下划线 */
+        }
+
+        /* Navigate 样式 */
+        .navigate {
+            display: flex; /* 使用 flex 布局 */
+            max-width: 40%;
+            width: fit-content; /* 宽度由内容决定 */
+            flex-wrap: nowrap; /* 禁止换行 */
+            overflow-x: auto; /* 水平方向开启滚动 */
+            gap: 4px; /* 子元素之间的间距 */
+            justify-content: center; /* 主轴居中对齐 */
+            padding: 4px 4px; /* 增加内边距 */
+            background-color: #f4f6f8; /* 柔和背景色 */
+            border-radius: 12px; /* 圆角设计 */
+
+            position: fixed;
+            top: 0;
+            right: 4%;
+            /*transform: translateX(-50%);*/
+            z-index: 1000; /* 确保层级在前 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+            transition: transform 0.3s ease; /* 平滑过渡效果 */
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        /* Navigate 静态内容 */
+        .navigate-item {
+            display: flex; /* 使用 flex 布局 */
+            flex-direction: column; /* 垂直排列子元素 */
+            align-items: center; /* 水平居中 */
+            justify-content: center; /* 垂直居中 */
+            background-color: #ffffff; /* 背景色 */
+            padding: 2px 4px; /* 增加内边距 */
+            border-radius: 12px; /* 圆角设计 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+            transition: all 0.3s ease; /* 平滑的交互效果 */
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; /* 悬停时更浅的背景色 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 增强阴影效果 */
+            transform: translateY(-2px); /* 悬停时微微上浮 */
+        }
+        .navigate-item a {
+            text-decoration: none; /* 移除下划线 */
+            color: #0078d7; /* 蓝色字体 */
+            font-weight: bold; /* 加粗文字 */
+            font-size: 1em; /* 增大字体 */
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; /* 放大 emoji */
+            margin-bottom: 1px; /* 与文字保持间距 */
+        }
+        .navigate-item-id {
+            font-size: 0.9em; /* 稍小的 ID 字体 */
+            color: #555; /* 中灰色字体 */
+        }
+
+        [id] { /* 导航后不要触顶, 不好看 */
+            scroll-margin-top: 40px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            美国历史上陨落的大公司和它们的历史
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">陨落公司的背景信息</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#List-of-corporate-collapses-and-scandals---Wikipedia">
+    📉公司破产</a></div><div class="section-link-box"><a class="section-link" href="#Enron-scandal---Wikipedia">
+    🧾安然丑闻</a></div><div class="section-link-box"><a class="section-link" href="#WorldCom-scandal---Wikipedia">
+    📞世界通信丑闻</a></div></div>
+    <div class="section-content content"><ol>
+<li><strong>Enron</strong>:</li>
+<li><strong>成立年份</strong>: 1985年</li>
+<li><strong>行业类型</strong>: 能源</li>
+<li>
+<p><strong>市场地位</strong>: 曾是美国大型能源公司，股价一度高达90.75美元。</p>
+</li>
+<li>
+<p><strong>WorldCom</strong>:</p>
+</li>
+<li><strong>成立年份</strong>: 1983年</li>
+<li><strong>行业类型</strong>: 电信</li>
+<li>
+<p><strong>市场地位</strong>: 曾是美国第二大长途电话公司，在1990年代及2000年代初市场占有率高。</p>
+</li>
+<li>
+<p><strong>Kodak</strong>:</p>
+</li>
+<li><strong>成立年份</strong>: 1888年</li>
+<li><strong>行业类型</strong>: 摄影</li>
+<li>
+<p><strong>市场地位</strong>: 曾是胶卷和摄像设备的领导者，1970年代拥有90%的市场份额。</p>
+</li>
+<li>
+<p><strong>General Motors (GM)</strong>:</p>
+</li>
+<li><strong>成立年份</strong>: 1908年</li>
+<li><strong>行业类型</strong>: 汽车制造</li>
+<li>
+<p><strong>市场地位</strong>: 1950年代控制超过50%的市场份额，曾是全球最大的汽车制造商。</p>
+</li>
+<li>
+<p><strong>Pan Am</strong>:</p>
+</li>
+<li><strong>成立年份</strong>: 1927年</li>
+<li><strong>行业类型</strong>: 航空</li>
+<li><strong>市场地位</strong>: 曾是最大的国际航空公司，1980年代市场占有率高。 </li>
+</ol>
+<h3>用户可能最关心的部分</h3>
+<ul>
+<li>这些公司的成立年份、行业类型以及它们在各自行业中的市场地位，尤其是它们的辉煌时期和在行业内的影响力。这些信息帮助理解公司在曾经的成就和市场定位。</li>
+</ul></div>
+</div><div class="section">
+    <h3 class="section-title title">辉煌时期的表现</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#10-Companies-That-Failed-To-Innovate,-Resulting-In-Business-Failure">
+    💔Kodak市场份额</a></div><div class="section-link-box"><a class="section-link" href="#The-rise-and-fall-of-General-Motors-|-The-Week">
+    🚗General Motors控制</a></div><div class="section-link-box"><a class="section-link" href="#Enron-scandal---Wikipedia">
+    🧾Enron能力</a></div></div>
+    <div class="section-content content"><ol>
+<li><strong>Enron</strong></li>
+<li><strong>辉煌时期</strong>: 1990年代</li>
+<li>
+<p><strong>市场表现</strong>: 股价一度高达90.75美元。</p>
+</li>
+<li>
+<p><strong>WorldCom</strong></p>
+</li>
+<li><strong>辉煌时期</strong>: 1990年代及2000年代初</li>
+<li>
+<p><strong>市场占有率</strong>: 曾是美国第二大长途电话公司，市场地位显著。</p>
+</li>
+<li>
+<p><strong>Kodak</strong></p>
+</li>
+<li><strong>辉煌时期</strong>: 1970年代</li>
+<li><strong>市场占有率</strong>: 拥有90%的市场份额。</li>
+<li>
+<p><strong>主要产品</strong>: 胶卷和摄像设备。</p>
+</li>
+<li>
+<p><strong>General Motors (GM)</strong></p>
+</li>
+<li><strong>辉煌时期</strong>: 1950年代</li>
+<li><strong>市场占有率</strong>: 控制超过50%的市场份额。</li>
+<li>
+<p><strong>主要产品</strong>: 汽车，拥有多条品牌线。</p>
+</li>
+<li>
+<p><strong>Pan Am</strong></p>
+</li>
+<li><strong>辉煌时期</strong>: 1980年代</li>
+<li><strong>市场表现</strong>: 最大的国际航空公司，市场占有率高。</li>
+</ol>
+<h3>用户关注的部分</h3>
+<ul>
+<li>确切年份和市场占有率如“1970年代，拥有90%的市场份额”，以及“1950年代，控制超过50%的市场份额”是用户可能最关心的信息，表明这些公司在其行业中的主导地位和影响力。</li>
+</ul></div>
+</div><div class="section">
+    <h3 class="section-title title">导致陨落的具体原因</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Enron-scandal---Wikipedia">
+    🧾Enron Scandal</a></div><div class="section-link-box"><a class="section-link" href="#WorldCom-scandal---Wikipedia">
+    📞WorldCom Fraud</a></div><div class="section-link-box"><a class="section-link" href="#The-rise-and-fall-of-General-Motors-|-The-Week">
+    🚗GM Management Issues</a></div></div>
+    <div class="section-content content"><p>在这一维度中，导致陨落的具体原因包括公司自身的管理失误、财务问题、外部经济环境的变化，以及未能跟上技术革新的相关示例。以下是从对话记录中提取的信息：</p>
+<ol>
+<li><strong>Enron</strong></li>
+<li>管理失误：公司高层通过财务造假和会计丑闻来阻止损失的暴露，最终导致其崩溃。财务审计失败使公司资产被高估。</li>
+<li>
+<p>财务问题：内部的会计丑闻引发了投资者的不信任，导致股价暴跌。</p>
+</li>
+<li>
+<p><strong>WorldCom</strong></p>
+</li>
+<li>管理失误：高管采用虚报财务数据以维护公司的表面繁荣，最终在2002年申请破产。</li>
+<li>
+<p>财务问题：公司在1999-2002年间隐藏了超过11亿美元的亏损，导致投资者蒙受巨大损失。</p>
+</li>
+<li>
+<p><strong>Kodak</strong></p>
+</li>
+<li>管理失误：虽然公司拥有数字摄影技术，但管理层未能预见其对胶卷业务的潜在威胁，导致错失转型机遇。</li>
+<li>
+<p>技术革新未能跟上：未能适应数字摄影的变化，导致胶卷业务崩溃。</p>
+</li>
+<li>
+<p><strong>General Motors (GM)</strong></p>
+</li>
+<li>管理失误：公司结构效率低下，未能及时 adapt to market changes，尤其是小型汽车的需求增加。</li>
+<li>
+<p>财务问题：高劳动力成本和工会问题削弱了公司的竞争力。</p>
+</li>
+<li>
+<p><strong>Pan Am</strong></p>
+</li>
+<li>管理失误：公司的管理失误和监管缺陷导致其失去市场占有率。</li>
+<li>外部经济环境变化：911事件及随后的经济环境变化加速了公司衰退。</li>
+</ol>
+<p>用户可能最关心的部分是具体的管理失误与财务问题如何相互作用，加剧这些公司的陨落，例如Enron和WorldCom在领导层的腐败和欺诈行为造成重大财务损失的同时，也直接导致了公众和投资者的失去信任。与此同时，Kodak的未能跟上数字技术的转型，以及GM在市场变革中未能响应的事例，结合外部环境的经济变化，使得这些公司的衰退显得愈加明显和急迫。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">公司的衰退过程及影响</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#How-Kodak-Failed">
+    📸柯达的失败</a></div><div class="section-link-box"><a class="section-link" href="#Westinghouse:-Origins-and-Effects-of-the-Downfall-of-a-Nuclear-Giant">
+    ⚛西屋的破产</a></div><div class="section-link-box"><a class="section-link" href="#List-of-corporate-collapses-and-scandals---Wikipedia">
+    📉公司倒闭案例</a></div></div>
+    <div class="section-content content"><h3>公司衰退过程及影响</h3>
+<ol>
+<li><strong>柯达（Kodak）</strong></li>
+<li>衰退过程：柯达未能及时适应数字摄影的发展，导致其核心的胶卷业务受到重创。其在数字领域的投资失败，未能利用自身的技术优势，导致公司逐步崩溃。2012年申请破产，最终在2013年以较小规模重新出现在市场上。</li>
+<li>
+<p>行业影响：柯达的失败突显了传统影像行业向数字化转型的困难，促使其他影像公司加速数字技术的研发和应用。</p>
+</li>
+<li>
+<p><strong>西屋电气（Westinghouse Electric）</strong></p>
+</li>
+<li>衰退过程：西屋因对未来核能市场需求的过分乐观以及管理失误，最终在2017年申请破产保护。公司在实施核反应堆项目时，由于预计的成本超支和建设时间延误，最终使其财务状况每日恶化。</li>
+<li>
+<p>行业影响：其破产对核能行业造成重创，导致相关项目停滞，其他核能公司对西屋的合作伙伴关系产生质疑，引发了对核能安全和成本的再审视。</p>
+</li>
+<li>
+<p><strong>通用汽车（General Motors）</strong></p>
+</li>
+<li>衰退过程：通用汽车因组织结构低效、未能及时适应市场变化，尤其是小型汽车需求的上升，导致在2009年申请破产。劳动力成本高以及工会问题加重了公司的财务负担，最终影响了公司的生存。</li>
+<li>
+<p>行业影响：GM的破产引起了对整个汽车制造业的深刻反思，其他汽车制造商开始审视并改革自己的运营模式与市场策略，特别是在燃油经济性和成本控制方面。</p>
+</li>
+<li>
+<p><strong>世界通信（WorldCom）</strong></p>
+</li>
+<li>衰退过程：在经历了巨额会计欺诈之后，世界通信于2002年申请破产。在此之前，该公司面临着持续的财务危机，逐步失去了市场的信任和投资者的支持。</li>
+<li>行业影响：世界通信的倒闭加重了公众对企业内部审计和透明度的关注，促发了对企业治理以及会计法规的深入改革，如《萨班斯-奥克斯利法案》的通过。</li>
+</ol>
+<h3>用户可能最关心的部分：</h3>
+<ul>
+<li>柯达的衰退过程直接反映了传统影像行业的困境，进一步影响了整个市场对数字技术的转型。</li>
+<li>西屋电气的破产不仅影响了企业自身，还引发了对核能行业的信任危机。</li>
+<li>通用汽车的崩溃是对汽车产业的重大冲击，重新定义了市场竞争的规则。</li>
+<li>世界通信的案例则展示了企业治理失效如何导致行业信任度的危机，对后续的法规改革产生深远影响。</li>
+</ul></div>
+</div><div class="section">
+    <h3 class="section-title title">行业的反应及后续影响</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Enron-scandal---Wikipedia">
+    🧾公司丑闻</a></div><div class="section-link-box"><a class="section-link" href="#WorldCom-scandal---Wikipedia">
+    📞会计诈骗</a></div><div class="section-link-box"><a class="section-link" href="#The-Rise-and-Fall-of-WorldCom:-Story-of-a-Scandal">
+    🔍欺诈案例</a></div></div>
+    <div class="section-content content"><p>从对话记录中提取的关于行业的反应及后续影响的内容如下：</p>
+<ol>
+<li>
+<p><strong>监管及法规的加强</strong>：大量公司陨落引发了对企业治理和会计规范的重大关注，促使了《萨班斯-奥克斯利法案》的出台。这项法规加强了财务透明性和公司治理，旨在防止类似的企业丑闻再次发生。</p>
+</li>
+<li>
+<p><strong>行业结构的变化</strong>：大公司的陨落导致了市场结构改变，竞争对手的崛起。例如，WorldCom的破产为其他小型和中型通信公司提供了机会，使它们能够在市场上占据更大的份额。</p>
+</li>
+<li>
+<p><strong>对消费者的潜在影响</strong>：企业破产往往使消费者面临服务中断和产品降级的风险，尤其是像WorldCom和General Motors等公司，消费者在使用服务和产品的稳定性上感受到巨大波动。</p>
+</li>
+</ol>
+<p>用户可能最关心的部分是法规的出台对未来企业的影响，尤其是如何通过加强监管来保护消费者和提高企业透明度，以防止再次出现大规模的企业倒闭事件。</p></div>
+</div>
+</div>
+<hr>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item">
+    <a href="#List-of-corporate-collapses-and-scandals---Wikipedia" class="navigate-item-emoji ">📉</a>
+    <a href="#List-of-corporate-collapses-and-scandals---Wikipedia" class="navigate-item-id">1</a>
+</div><div class="navigate-item">
+    <a href="#Enron-scandal---Wikipedia" class="navigate-item-emoji ">🧾</a>
+    <a href="#Enron-scandal---Wikipedia" class="navigate-item-id">2</a>
+</div><div class="navigate-item">
+    <a href="#WorldCom-scandal---Wikipedia" class="navigate-item-emoji ">📞</a>
+    <a href="#WorldCom-scandal---Wikipedia" class="navigate-item-id">3</a>
+</div><div class="navigate-item">
+    <a href="#America’s-iconic-companies-that-disappeared" class="navigate-item-emoji ">🏭</a>
+    <a href="#America’s-iconic-companies-that-disappeared" class="navigate-item-id">4</a>
+</div><div class="navigate-item">
+    <a href="#10-Companies-That-Failed-To-Innovate,-Resulting-In-Business-Failure" class="navigate-item-emoji ">💔</a>
+    <a href="#10-Companies-That-Failed-To-Innovate,-Resulting-In-Business-Failure" class="navigate-item-id">5</a>
+</div><div class="navigate-item">
+    <a href="#Amoco---Wikipedia" class="navigate-item-emoji ">🔄</a>
+    <a href="#Amoco---Wikipedia" class="navigate-item-id">6</a>
+</div><div class="navigate-item">
+    <a href="#Bethlehem-Steel---Wikipedia" class="navigate-item-emoji ">🛠</a>
+    <a href="#Bethlehem-Steel---Wikipedia" class="navigate-item-id">7</a>
+</div><div class="navigate-item">
+    <a href="#Circuit-City---Wikipedia" class="navigate-item-emoji ">🛒</a>
+    <a href="#Circuit-City---Wikipedia" class="navigate-item-id">8</a>
+</div><div class="navigate-item">
+    <a href="#The-25-Biggest-Bankruptcies-in-American-History---24/7-Wall-St." class="navigate-item-emoji ">📊</a>
+    <a href="#The-25-Biggest-Bankruptcies-in-American-History---24/7-Wall-St." class="navigate-item-id">9</a>
+</div><div class="navigate-item">
+    <a href="#How-Kodak-Failed" class="navigate-item-emoji ">📸</a>
+    <a href="#How-Kodak-Failed" class="navigate-item-id">10</a>
+</div><div class="navigate-item">
+    <a href="#Westinghouse:-Origins-and-Effects-of-the-Downfall-of-a-Nuclear-Giant" class="navigate-item-emoji ">⚛</a>
+    <a href="#Westinghouse:-Origins-and-Effects-of-the-Downfall-of-a-Nuclear-Giant" class="navigate-item-id">11</a>
+</div><div class="navigate-item">
+    <a href="#The-rise-and-fall-of-General-Motors-|-The-Week" class="navigate-item-emoji ">🚗</a>
+    <a href="#The-rise-and-fall-of-General-Motors-|-The-Week" class="navigate-item-id">12</a>
+</div><div class="navigate-item">
+    <a href="#The-Rise-and-Fall-of-WorldCom:-Story-of-a-Scandal" class="navigate-item-emoji ">🔍</a>
+    <a href="#The-Rise-and-Fall-of-WorldCom:-Story-of-a-Scandal" class="navigate-item-id">13</a>
+</div>
+    </div>
+    <div class="page">
+    <div class="page-meta" id="List-of-corporate-collapses-and-scandals---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">📉&nbsp;</span>List of corporate collapses and scandals - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/List_of_corporate_collapses_and_scandals" target="_blank">(https://en.wikipedia.org/wiki/List_of_corporate_collapses_and_scandals)</a><br></small>
+        <small class="page-rating rating ">评分: 9.0<br></small>
+        <small class="page-annotation annotation ">注释: 该页面列出了多个重大企业崩溃的例子及其背景，反映了企业经营中的风险和挑战。<br></small>
+    </div>
+    <div class="page-content content"><h2>主要公司倒闭列表</h2>
+<p>以下列出的公司都经历了严重的倒闭事件，这些事件造成了严重的失业风险或对企业规模的影响，并导致公司进入破产或破产状态，或被国有化，或需要政府提供非市场贷款。</p>
+<h3>Medici银行</h3>
+<ul>
+<li><strong>总部:</strong> 佛罗伦萨</li>
+<li><strong>日期:</strong> 1494年</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong>  由美第奇家族所有，由于家族的挥霍无度、奢侈的生活方式以及未能控制管理人员，导致债台高筑。</li>
+</ul>
+<h3>密西西比公司</h3>
+<ul>
+<li><strong>总部:</strong> 法国</li>
+<li><strong>日期:</strong> 1720年9月</li>
+<li><strong>业务:</strong> 殖民主义</li>
+<li><strong>原因:</strong> 苏格兰经济学家约翰·劳说服法国政府支持在路易斯安那州的垄断贸易企业。他根据巨大的财富推销股票，而这种财富被严重夸大了。投机泡沫膨胀后破裂，劳被驱逐出境。</li>
+</ul>
+<h3>南海公司</h3>
+<ul>
+<li><strong>总部:</strong> 大不列颠</li>
+<li><strong>日期:</strong> 1720年9月</li>
+<li><strong>业务:</strong> 奴隶贸易和殖民主义</li>
+<li><strong>原因:</strong>  继西班牙王位继承战争之后，大不列颠与西班牙签订了1713年的乌得勒支条约，表面上允许其在南美洲附近海域进行贸易。事实上，由于西班牙否定了该条约，几乎没有进行任何贸易，但这在英国股市上被隐瞒了。投机泡沫导致股价在1720年8月飙升至1000英镑以上，但在9月暴跌。议会调查揭露了政府成员（包括保守党财政大臣约翰·艾斯莱比）之间的欺诈行为，艾斯莱比被送进了监狱。</li>
+</ul>
+<h3>荷兰东印度公司</h3>
+<ul>
+<li><strong>总部:</strong> 巴达维亚共和国</li>
+<li><strong>日期:</strong> 1799年12月31日</li>
+<li><strong>业务:</strong> 殖民主义</li>
+<li><strong>原因:</strong> 这家成立于1602年的庞大早期上市跨国公司在18世纪后期成为市场衰退、内部腐败和过度派发股息（超过其利润）的受害者，最终还受到了英荷战争的影响。它于1796年被巴达维亚共和国国有化，但在1799年底关闭。</li>
+</ul>
+<h3>Overend, Gurney &amp; Co公司</h3>
+<ul>
+<li><strong>总部:</strong> 英国</li>
+<li><strong>日期:</strong> 1866年6月</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong>  塞缪尔·格尼退休后，该银行大量投资铁路股票。它于1865年上市，但受到股票价格普遍下跌的严重影响。英格兰银行拒绝提供资金，导致其倒闭。董事们被起诉，但被免除了欺诈罪。</li>
+</ul>
+<h3>克虏伯公司</h3>
+<ul>
+<li><strong>总部:</strong> 德国</li>
+<li><strong>日期:</strong> 1873年</li>
+<li><strong>业务:</strong> 钢铁、金属</li>
+<li><strong>原因:</strong> 克虏伯公司的业务过度扩张，不得不向普鲁士银行（普鲁士银行）贷款3000万马克。</li>
+</ul>
+<h3>达纳特银行</h3>
+<ul>
+<li><strong>总部:</strong> 德国</li>
+<li><strong>日期:</strong> 1931年7月13日</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong>  在大萧条初期，在关于北德意志羊毛梳理和精纺厂偿付能力的谣言出现后，发生了挤兑事件，达纳特银行被迫破产。</li>
+</ul>
+<h3>Allied Crude Vegetable Oil Refining Corp公司</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 1963年11月16日</li>
+<li><strong>业务:</strong> 商品</li>
+<li><strong>原因:</strong>  商品交易员蒂诺·德·安杰利斯欺骗客户，包括美国银行，让他们相信他在交易植物油。他利用这种油作为抵押品获得贷款并赚钱。他向检查员展示了装有少量油的储水罐。当欺诈行为曝光后，公司倒闭。</li>
+</ul>
+<h3>Herstatt银行</h3>
+<ul>
+<li><strong>总部:</strong> 西德</li>
+<li><strong>日期:</strong> 1974年6月26日</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong> 结算风险。对方银行没有收到其美元付款，而Herstatt银行此前已经收到了德国马克，这发生在政府强制清算之前。</li>
+</ul>
+<h3>嘉利安集团</h3>
+<ul>
+<li><strong>总部:</strong> 香港</li>
+<li><strong>日期:</strong> 1983年</li>
+<li><strong>业务:</strong> 房地产</li>
+<li><strong>原因:</strong> 会计欺诈。一名审计师被谋杀，一名顾问自杀。这是香港历史上最大规模的倒闭事件。</li>
+</ul>
+<h3>德士古公司</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 1987年4月13日</li>
+<li><strong>业务:</strong> 石油</li>
+<li><strong>原因:</strong>  在与宾州油公司的一场法律诉讼中，德士古公司被判欠105亿美元债务，随后申请破产。它后来被复活并被雪佛龙收购。</li>
+</ul>
+<h3>金泰克斯公司</h3>
+<ul>
+<li><strong>总部:</strong> 澳大利亚</li>
+<li><strong>日期:</strong> 1989年</li>
+<li><strong>业务:</strong> 房地产</li>
+<li><strong>原因:</strong> 金泰克斯公司首席执行官克里斯托弗·斯卡斯被发现滥用职权，在金泰克斯公司15亿美元倒闭（包括7亿美元未偿债务）之前获得管理费。斯卡斯逃往西班牙马略卡岛度假胜地。西班牙拒绝引渡他10年，在此期间，斯卡斯成为多米尼加公民。</li>
+</ul>
+<h3>林肯储蓄与贷款协会</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 1989年</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong>  在基廷五人丑闻后破产的金融机构。</li>
+</ul>
+<h3>宝利百克公司</h3>
+<ul>
+<li><strong>总部:</strong> 英国</li>
+<li><strong>日期:</strong> 1990年10月30日</li>
+<li><strong>业务:</strong> 电子产品、食品、纺织品</li>
+<li><strong>原因:</strong>  1990年9月英国严重欺诈办公室突击搜查后，股价暴跌。首席执行官阿西尔·纳迪尔被判犯有盗窃公司资金罪。</li>
+</ul>
+<h3>贷记与商业国际银行</h3>
+<ul>
+<li><strong>总部:</strong> 英国</li>
+<li><strong>日期:</strong> 1991年7月5日</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong> 违反美国法律，拥有另一家银行。欺诈、洗钱和盗窃。更广为人知的名字是BCCI。</li>
+</ul>
+<h3>北银行</h3>
+<ul>
+<li><strong>总部:</strong> 瑞典</li>
+<li><strong>日期:</strong> 1991年</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong>  市场放松管制后，出现了房地产价格泡沫，随后破裂。作为瑞典银行危机爆发期间普遍救援的一部分，北银行以640亿瑞典克朗的价格被国有化。它后来与哥德堡银行合并，哥德堡银行本身不得不注销37.3%的债权人，现在被称为北欧银行。</li>
+</ul>
+<h3>巴林银行</h3>
+<ul>
+<li><strong>总部:</strong> 英国</li>
+<li><strong>日期:</strong> 1995年2月26日</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong>  新加坡的一名员工尼克·李森进行期货交易，签署了自己的账户，并越来越负债累累。伦敦董事随后被取消资格，原因是在巴林有限公司重组案（第5号）中被认为不适合经营公司。</li>
+</ul>
+<h3>Bre-X公司</h3>
+<ul>
+<li><strong>总部:</strong> 加拿大</li>
+<li><strong>日期:</strong> 1997年</li>
+<li><strong>业务:</strong> 采矿业</li>
+<li><strong>原因:</strong>  在广泛报道称Bre-X公司在印度尼西亚发现了一个金矿后，这些报道被发现是欺诈性的。</li>
+</ul>
+<h3>Livent公司</h3>
+<ul>
+<li><strong>总部:</strong> 加拿大</li>
+<li><strong>日期:</strong> 1998年11月</li>
+<li><strong>业务:</strong> 娱乐业</li>
+<li><strong>原因:</strong>  1998年11月，Livent公司在美国和加拿大寻求破产保护，声称债务为3.34亿美元。Livent公司的联合创始人加思·德拉宾斯基因欺诈和伪造罪被判刑入狱。关于德勤会计师事务所就其在对Livent公司1997财年进行审计中的过失问题已获得判决。</li>
+</ul>
+<h3>长期资本管理公司</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 1998年9月23日</li>
+<li><strong>业务:</strong> 对冲基金</li>
+<li><strong>原因:</strong>  在声称已经发现了一种计算衍生品价格的科学方法后，LTCM在1998年前几个月损失了46亿美元，并由一个私营部门财团进行了救援。</li>
+</ul>
+<h3>FlowTex公司</h3>
+<ul>
+<li><strong>总部:</strong> 德国</li>
+<li><strong>日期:</strong> 2000年2月</li>
+<li><strong>业务:</strong> 机械</li>
+<li><strong>原因:</strong> FlowTex公司实施了一个庞氏骗局，向投资者出售不存在的建筑设备，以便立即由FlowTex公司回租。这需要指数级增长的投资者数量来支付租金。这起欺诈案是德国历史上最大的公司丑闻，造成的经济损失约为49亿德国马克（约合33亿欧元）。</li>
+</ul>
+<h3>均衡人寿保险协会</h3>
+<ul>
+<li><strong>总部:</strong> 英国</li>
+<li><strong>日期:</strong> 2000年12月8日</li>
+<li><strong>业务:</strong> 保险业</li>
+<li><strong>原因:</strong>  该保险公司的董事非法动用持有固定年金利率保单的人的资金来补贴持有当前年金利率保单的人。在均衡人寿保险协会诉海曼案的众议院判决后，该协会关闭。尽管从未名义上破产，但英国政府根据2010年《均衡人寿（付款）法案》为保单持有人设立了一个赔偿计划。</li>
+</ul>
+<h3>CINAR公司</h3>
+<ul>
+<li><strong>总部:</strong> 加拿大</li>
+<li><strong>日期:</strong> 2001年3月</li>
+<li><strong>业务:</strong> 动画制作</li>
+<li><strong>原因:</strong>  这家动画工作室的联合创始人米歇琳·沙雷斯特和罗纳德·温伯格被指控未经董事会批准将超过1.2亿美元转移到巴哈马群岛。该公司后来在2004年被一个财团收购，该财团包括Nelvana创始人迈克尔·希尔斯，随后更名为Cookie Jar Group。Cookie Jar公司又被2012年被现在的WildBrain收购。2016年，温伯格被判处8年零11个月监禁，目前正在假释中。</li>
+</ul>
+<h3>HIH保险公司</h3>
+<ul>
+<li><strong>总部:</strong> 澳大利亚</li>
+<li><strong>日期:</strong> 2001年3月15日</li>
+<li><strong>业务:</strong> 保险业</li>
+<li><strong>原因:</strong>  2000年初，在公司规模扩大后，确定该保险公司的偿付能力很低，资产价格的微小变化就可能导致保险公司破产。事实的确如此。董事罗德尼·阿德勒、首席执行官雷·威廉姆斯及其他人员因欺诈行为被判处监禁。</li>
+</ul>
+<h3>太平洋瓦斯与电力公司</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 2001年4月6日</li>
+<li><strong>业务:</strong> 能源</li>
+<li><strong>原因:</strong>  在加利福尼亚州法规发生变化后，PG&amp;E公司确定无法继续供电，尽管加利福尼亚州公共事业委员会做出了努力，该公司还是申请破产，导致许多家庭断电。它在2004年再次出现。</li>
+</ul>
+<h3>One.Tel公司</h3>
+<ul>
+<li><strong>总部:</strong> 澳大利亚</li>
+<li><strong>日期:</strong> 2001年5月29日</li>
+<li><strong>业务:</strong> 电信</li>
+<li><strong>原因:</strong>  在成为澳大利亚最大的上市公司之一后，报告损失为2.9亿美元，股价暴跌，并进入管理阶段。在ASIC诉里奇案中，董事们被判没有犯有疏忽罪。</li>
+</ul>
+<h3>瑞士航空</h3>
+<ul>
+<li><strong>总部:</strong> 瑞士</li>
+<li><strong>日期:</strong> 2001年10月2日</li>
+<li><strong>业务:</strong> 航空</li>
+<li><strong>原因:</strong>  20世纪90年代末的过度扩张以及9·11袭击事件的后果导致股价暴跌。2007年，几名公司董事会成员因该航空公司的破产而被指控。资产被子公司Crossair接管，后者成为瑞士国际航空公司，最终被德国汉莎航空公司收购。</li>
+</ul>
+<h3>安然公司</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 2001年11月28日</li>
+<li><strong>业务:</strong> 能源</li>
+<li><strong>原因:</strong>  董事和高管欺诈性地隐瞒了安然公司项目中的巨额亏损。许多人被判入狱。</li>
+</ul>
+<h3>奇华达品牌国际公司</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 2001年11月28日</li>
+<li><strong>业务:</strong> 食品</li>
+<li><strong>原因:</strong>  在一系列关于违反劳工和环境标准的指控后，债务累积。它进入预先安排的破产程序，并在2002年以类似的管理层重新出现。</li>
+</ul>
+<h3>Kmart公司</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 2002年1月22日</li>
+<li><strong>业务:</strong> 零售</li>
+<li><strong>原因:</strong>  在激烈的竞争之后，该商店被列入第11章破产程序，但很快又重新出现。</li>
+</ul>
+<h3>阿德菲亚通讯公司</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 2002年2月13日</li>
+<li><strong>业务:</strong> 有线电视</li>
+<li><strong>原因:</strong> 内部腐败。董事们被判入狱。</li>
+</ul>
+<h3>安达信公司</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 2002年6月15日</li>
+<li><strong>业务:</strong> 会计</li>
+<li><strong>原因:</strong>  美国法院判定安达信公司因销毁与安然丑闻相关的文件而犯有妨碍司法公正罪。</li>
+</ul>
+<h3>世通公司</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 2002年7月21日</li>
+<li><strong>业务:</strong> 电信</li>
+<li><strong>原因:</strong>  在股价下跌和失败的股票回购计划之后，发现董事们使用了欺诈性的会计方法来推高股价。更名为MCI，它在2004年摆脱破产，资产被Verizon收购。</li>
+</ul>
+<h3>百佳公司</h3>
+<ul>
+<li><strong>总部:</strong> 意大利</li>
+<li><strong>日期:</strong> 2003年12月24日</li>
+<li><strong>业务:</strong> 食品</li>
+<li><strong>原因:</strong>  该公司的财务主管隐瞒了巨额债务。</li>
+</ul>
+<h3>MG罗孚集团</h3>
+<ul>
+<li><strong>总部:</strong> 英国</li>
+<li><strong>日期:</strong> 2005年4月15日</li>
+<li><strong>业务:</strong> 汽车</li>
+<li><strong>原因:</strong>  在需求下降之后，并于2005年4月从英国政府获得650万英镑的贷款，该公司进入管理阶段。在3万个工作岗位流失后，南京汽车集团收购了该公司的资产。</li>
+</ul>
+<h3>海湾对冲基金集团</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 2005年9月29日</li>
+<li><strong>业务:</strong> 对冲基金</li>
+<li><strong>原因:</strong>  塞缪尔·以色列三世欺骗投资者，让他们认为有更高的回报，并编造了虚假的审计报告。商品期货交易委员会提起诉讼，在董事们试图将1亿美元转移到海外银行账户被抓住后，该公司被关闭。</li>
+</ul>
+<h3>Refco公司</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 2005年10月17日</li>
+<li><strong>业务:</strong> 经纪商</li>
+<li><strong>原因:</strong>  在2005年8月成为上市公司后，该公司首席执行官兼董事长菲利普·R·贝内特隐瞒了4.3亿美元的坏账。其承销商是瑞士信贷第一波士顿银行、高盛和美国银行公司。该公司进入第11章破产程序，贝内特被判处16年监禁。</li>
+</ul>
+<h3>贝氏证券公司</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 2008年3月14日</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong>  在2003年美国政府开始放松消费者保护和衍生品交易管制后，贝氏证券公司投资次级抵押贷款市场。随着越来越多的人无力偿还抵押贷款，该公司倒闭。在股价达到每股172美元的高点后，它于2008年3月16日被摩根大通以每股2美元的价格收购，并获得了美国联邦储备委员会担保的290亿美元贷款额度。</li>
+</ul>
+<h3>北岩银行</h3>
+<ul>
+<li><strong>总部:</strong> 英国</li>
+<li><strong>日期:</strong> 2008年2月22日</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong>  北岩银行投资国际次级抵押贷款债务市场，随着美国越来越多的人无力偿还住房贷款，北岩银行业务倒闭。当它向英国政府寻求援助时，它引发了自1866年Overend, Gurney &amp; Co公司以来英国的第一次银行挤兑。它被国有化，然后在2012年出售给维珍货币。</li>
+</ul>
+<h3>IndyMac银行</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 2008年7月11日</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong> IndyMac银行大量投资Alt-A抵押贷款和反向抵押贷款。在这些贷款中的许多贷款失败且在美国次级抵押贷款危机期间无法出售后，该公司不得不申请第7章破产。</li>
+</ul>
+<h3>雷曼兄弟公司</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 2008年9月15日</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong>  雷曼兄弟公司从2003年的财务战略是大量投资抵押贷款债务，投资美国政府正在放松消费者保护的市场。损失不断增加，在未获得美国政府的贷款后，雷曼兄弟公司被迫申请第11章破产。此次倒闭引发了全球金融市场崩盘。巴克莱、野村和贝恩资本收购了未负债的资产。</li>
+</ul>
+<h3>美国国际集团</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 2008年9月16日</li>
+<li><strong>业务:</strong> 保险业</li>
+<li><strong>原因:</strong>  在最初评级为AAA的4410亿美元证券中，随着美国次级抵押贷款危机的爆发，美国国际集团发现其持有578亿美元的此类产品。它被迫从美国联邦储备委员会获得为期24个月的信贷额度。</li>
+</ul>
+<h3>华盛顿互惠银行</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 2008年9月26日</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong>  在次级抵押贷款危机之后，华盛顿互惠银行发生了挤兑事件，美国联邦存款保险公司施加的压力导致其关闭。</li>
+</ul>
+<h3>苏格兰皇家银行集团</h3>
+<ul>
+<li><strong>总部:</strong> 英国</li>
+<li><strong>日期:</strong> 2008年10月13日</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong>  在收购荷兰银行和雷曼兄弟公司倒闭之后，随着国际信贷市场陷入瘫痪，苏格兰皇家银行发现自己已无力偿债。英国政府收购了58%的股份。</li>
+</ul>
+<h3>荷兰银行</h3>
+<ul>
+<li><strong>总部:</strong> 荷兰</li>
+<li><strong>日期:</strong> 2008年10月</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong>  在桑坦德银行、富通银行和苏格兰皇家银行之间的收购战之后，荷兰银行被拆分并分配给银行财团。由于次级抵押贷款危机，富通银行和苏格兰皇家银行被发现负债累累。富通银行被拆分，富通银行的荷兰部分被荷兰政府所有，从而恢复了荷兰银行。比利时部分被法国巴黎银行收购。苏格兰皇家银行被英国政府所有。</li>
+</ul>
+<h3>伯纳德·麦道夫投资证券公司</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 2008年12月</li>
+<li><strong>业务:</strong> 证券</li>
+<li><strong>原因:</strong>  通过历史上最大的庞氏骗局欺骗投资者648亿美元。投资者从自己的钱或其他投资者的钱中获得回报，而不是从利润中获得回报。伯尼·麦道夫告诉他的儿子们他的计划，他们向证券交易委员会举报了他。他第二天就被逮捕了。</li>
+</ul>
+<h3>银行西</h3>
+<ul>
+<li><strong>总部:</strong> 澳大利亚</li>
+<li><strong>日期:</strong> 2008年</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong>  在联邦银行（CBA）收购银行西之后，人们呼吁对银行的行为进行皇家调查，原因是有人指控联邦银行策划了银行西客户的违约，以便从收购协议下的追索条款中获利。</li>
+</ul>
+<h3>北电网络公司</h3>
+<ul>
+<li><strong>总部:</strong> 加拿大</li>
+<li><strong>日期:</strong> 2009年1月14日</li>
+<li><strong>业务:</strong> 电信</li>
+<li><strong>原因:</strong>  在2007-2008年金融危机之后，以及关于高管过度薪酬的指控，产品需求下降。</li>
+</ul>
+<h3>爱尔兰安格鲁银行</h3>
+<ul>
+<li><strong>总部:</strong> 爱尔兰</li>
+<li><strong>日期:</strong> 2009年1月15日</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong>  在2007-2008年金融危机之后，该银行被迫被爱尔兰政府国有化。</li>
+</ul>
+<h3>阿肯多公司</h3>
+<ul>
+<li><strong>总部:</strong> 德国</li>
+<li><strong>日期:</strong> 2009年6月9日</li>
+<li><strong>业务:</strong> 零售业</li>
+<li><strong>原因:</strong>  在努力维持其卡斯塔特和KaDeWe品牌名称的业务水平后，阿肯多公司寻求德国政府的帮助，然后申请破产。</li>
+</ul>
+<h3>抵押房地产公司</h3>
+<ul>
+<li><strong>总部:</strong> 德国</li>
+<li><strong>日期:</strong> 2009年10月5日</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong>  该公司的一家子公司Depfa由于金融危机在2008年遇到了流动性问题。这加上抵押房地产公司本身报告的巨额亏损，导致德国联邦银行进行救助，后来导致该公司完全被国有化。</li>
+</ul>
+<h3>施莱克公司</h3>
+<ul>
+<li><strong>总部:</strong> 德国</li>
+<li><strong>日期:</strong> 2012年1月23日</li>
+<li><strong>业务:</strong> 零售业</li>
+<li><strong>原因:</strong>  在2011年持续亏损后，拥有52000名员工的施莱克公司被迫破产，但仍在继续运营。</li>
+</ul>
+<h3>达因能源公司</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 2012年7月6日</li>
+<li><strong>业务:</strong> 能源</li>
+<li><strong>原因:</strong>  在一系列收购尝试和发现子公司收购另一家子公司的欺诈行为后，该公司申请第11章破产。它于2012年10月2日摆脱破产。</li>
+</ul>
+<h3>中国医药科技公司</h3>
+<ul>
+<li><strong>总部:</strong> 开曼群岛</li>
+<li><strong>日期:</strong> 2012年7月27日</li>
+<li><strong>业务:</strong> 医疗技术</li>
+<li><strong>原因:</strong>  2009年，一封匿名信指控自2007年以来管理层可能存在非法和欺诈行为，已发送给当时CMED的审计师毕马威香港分公司，并由法律事务所Paul Weiss Rifkind Wharton &amp; Garrison进行调查。自2012年7月27日起，根据开曼群岛大法院的命令，CMED已由联合官方清算人控制。破产申请后，CMED的清算人发现自己正在调查一宗据称3.55亿美元的内部欺诈案。2017年3月，美国司法部对CMED创始人兼首席执行官以及前首席财务官提起刑事指控，指控他们犯有证券欺诈和电汇欺诈共谋罪，指控他们在7年计划中从投资者那里窃取了超过4亿美元。</li>
+</ul>
+<h3>安圭拉国家银行和加勒比商业银行</h3>
+<ul>
+<li><strong>总部:</strong> 安圭拉</li>
+<li><strong>日期:</strong> 2013年8月12日</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong>  2013年，由于涉嫌违规贷款行为，东加勒比中央银行介入安圭拉的两家本土银行。3年后，两家银行都申请破产，成立了一家新的国有银行，并将两家破产银行的资产和当地账户持有人的银行账户转移到这家新银行，并通过窃取约1.8亿美元属于外国存款人的资金来弥补当地存款人的损失，而外国存款人损失了全部储蓄。中央银行被指控剥夺了外国存款人的资金。</li>
+</ul>
+<h3>圣灵银行</h3>
+<ul>
+<li><strong>总部:</strong> 葡萄牙</li>
+<li><strong>日期:</strong> 2014年8月3日</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong>  2013年进行的审计，为2014年5月进行的增资，发现了该银行严重的财务违规行为和岌岌可危的财务状况。2014年7月，萨尔加多被经济学家维托尔·本托取代，后者认为圣灵银行处于不可挽回的境地。其优质资产于8月3日被葡萄牙金融监管机构为此目的成立的一个载体Novo Banco收购，后者聘请本托担任首席执行官，而其不良资产则保留在“旧”圣灵银行，其银行牌照被葡萄牙监管机构撤销。</li>
+</ul>
+<h3>迪克·史密斯公司</h3>
+<ul>
+<li><strong>总部:</strong> 澳大利亚</li>
+<li><strong>日期:</strong> 2016年1月5日</li>
+<li><strong>业务:</strong> 零售业</li>
+<li><strong>原因:</strong>  2016年1月5日，这家零售商倒闭并被置于破产管理之下。McGrathNicol被公司董事会任命为管理人，Ferrier Hodgson被公司主要债权人澳大利亚国民银行（NAB）和汇丰银行澳大利亚分行任命。</li>
+</ul>
+<h3>瑟诺斯公司</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 2018年9月</li>
+<li><strong>业务:</strong> 医疗保健</li>
+<li><strong>原因:</strong>  瑟诺斯公司声称已经开发出使用微量血液体积自动和小型化血液测试的设备。瑟诺斯公司将其血液收集容器称为“纳米容器”，其分析机称为“爱迪生”。据报道，创始人兼首席执行官伊丽莎白·霍姆斯以发明家托马斯·爱迪生命名该设备为“爱迪生”，并说：“我们尝试了其他所有方法，但都失败了，所以让我们称之为爱迪生。”这可能是因为爱迪生的一句名言：“我没有失败。我只是找到了10000种行不通的方法。”</li>
+</ul>
+<h3>Wirecard公司</h3>
+<ul>
+<li><strong>总部:</strong> 德国</li>
+<li><strong>日期:</strong> 2020年6月</li>
+<li><strong>业务:</strong> 银行业，货币转账</li>
+<li><strong>原因:</strong>  在特别审计中发现失踪了19亿欧元，这笔钱显然根本不存在。首席执行官被捕，董事会申请破产，并对失踪的首席运营官发布了逮捕令。</li>
+</ul>
+<h3>FTX公司</h3>
+<ul>
+<li><strong>总部:</strong> 巴哈马</li>
+<li><strong>日期:</strong> 2022年11月</li>
+<li><strong>业务:</strong> 加密货币，加密货币交易所</li>
+<li><strong>原因:</strong>  首席执行官萨姆·班克曼-弗里德辞职，FTX公司申请第11章破产。曾负责安然公司清算的约翰·J·雷三世被任命为首席执行官。</li>
+</ul>
+<h3>硅谷银行</h3>
+<ul>
+<li><strong>总部:</strong> 美国</li>
+<li><strong>日期:</strong> 2023年3月</li>
+<li><strong>业务:</strong> 银行业</li>
+<li><strong>原因:</strong>  硅谷银行在债券上亏损，导致银行挤兑。联邦存款保险公司将该银行置于破产管理之下，其美国资产被第一公民银行股份公司收购，其英国资产被汇丰银行收购。</li>
+</ul></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Enron-scandal---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">🧾&nbsp;</span>Enron scandal - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Enron_scandal" target="_blank">(https://en.wikipedia.org/wiki/Enron_scandal)</a><br></small>
+        <small class="page-rating rating ">评分: 9.5<br></small>
+        <small class="page-annotation annotation ">注释: 该页面详细介绍了安然丑闻的背景及其破产的原因，相关性高。<br></small>
+    </div>
+    <div class="page-content content"><h2>安然丑闻</h2>
+<p>安然丑闻是一起会计丑闻，由美国能源公司安然公司在2001年10月广泛的内部欺诈行为被曝光后申请破产引发，导致其会计师事务所安达信（当时全球五大之一）解散。安然公司当时的破产重组规模是美国历史上最大的，也被认为是最大的审计失败案例之一。[1]: 61</p>
+<p>安然公司成立于1985年，由肯尼斯·莱伊将休斯顿天然气公司和InterNorth合并而成。几年后，杰弗里·斯基林被聘用，莱伊组建了一个高管团队，他们利用会计漏洞、滥用市价会计法、特殊目的实体和糟糕的财务报告，隐藏了数十亿美元的债务，这些债务来自失败的交易和项目。首席财务官安德鲁·法斯托和其他高管误导了安然公司的董事会和审计委员会，采取了高风险的会计行为，并向安达信施压，要求其忽略这些问题。</p>
+<p>股东提起400亿美元的诉讼，最终获得72亿美元的赔偿，此前该公司股价从20世纪90年代中期的每股90.75美元暴跌至2001年11月底的不到1美元。[2]</p>
+<p>美国证券交易委员会(SEC)开始调查，休斯顿的竞争对手Dynegy公司以极低的价格收购该公司。这笔交易失败了，2001年12月2日，安然公司根据《美国破产法》第11章申请破产。安然公司634亿美元的资产使其成为美国历史上最大的公司破产案，直到次年世界通讯丑闻超过它。[3]</p>
+<p>许多安然公司的高管因各种罪名被起诉，一些人后来被判入狱，包括前首席执行官杰弗里·斯基林。当时的首席执行官兼董事长肯尼斯·莱伊被起诉并定罪，但在被判刑前去世。安达信公司被判犯有非法销毁与证券交易委员会调查相关的文件的罪名，这使其审计上市公司的执照失效，并有效地关闭了该公司。最高法院推翻该裁决时，安达信公司已经失去大部分客户，并停止运营。安然公司的员工和股东在诉讼中获得的回报有限，损失了数十亿美元的养老金和股票价格。</p>
+<p>由于丑闻的影响，颁布了新的规章和立法，以提高上市公司财务报告的准确性。[4]</p>
+<p>其中一项立法，萨班斯-奥克斯利法案，提高了在联邦调查中销毁、更改或伪造记录或企图欺骗股东的惩罚。[5] 该法案还提高了审计公司的责任，要求其保持公正和独立性。[4]</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="WorldCom-scandal---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">📞&nbsp;</span>WorldCom scandal - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/WorldCom_scandal" target="_blank">(https://en.wikipedia.org/wiki/WorldCom_scandal)</a><br></small>
+        <small class="page-rating rating ">评分: 9.5<br></small>
+        <small class="page-annotation annotation ">注释: 此页讲述了WorldCom丑闻，其作为企业崩溃的例子，信息密度高且相关信息丰富。<br></small>
+    </div>
+    <div class="page-content content"><h2>世界通公司丑闻</h2>
+<p>世界通公司丑闻是一起重大的会计丑闻，于2002年夏季曝光。世界通公司当时是美国第二大长途电话公司。从1999年到2002年，以创始人兼首席执行官伯纳德·埃伯斯为首的世界通公司高管策划了一项计划，人为夸大收益以维持公司股价。[1] 欺诈行为于2002年6月被发现，当时公司内部审计部门主管辛西娅·库珀发现超过38亿美元的财务报表虚假记录。最终，世界通公司被迫承认其资产被高估超过110亿美元。当时，这是美国历史上最大的会计欺诈案。大约一年后，该公司破产。</p>
+<h2>背景</h2>
+<p>2000年12月，世界通公司财务分析师Kim Emigh被告知，将世界通公司网络系统部门的资本项目劳务费用列为支出，而不是作为资本项目入账。据Emigh估计，这项指令将影响至少3500万美元的资本支出。Emigh认为自己被要求进行逃税，他向上级反映了他的担忧，并通知了世界通公司首席运营官Ron Beaumont的一位助理。24小时内，决定不执行该指令。然而，Emigh受到了直接上级的斥责，并于2001年3月被解雇。[2] Emigh来自1997年世界通公司/MCI合并后的MCI部分，他后来在2002年5月告诉《沃思堡周刊》，多年来他一直对MCI的支出习惯表示担忧。他认为在世界通公司接管后，情况有所好转，但他仍然对供应商向世界通公司开具巨额账单感到不安。[2] 《沃思堡周刊》的文章最终被世界通公司位于密西西比州克林顿总部的一位内部审计经理格林·史密斯读到。在阅读后，他建议他的上司辛西娅·库珀提前几个月开始当年计划的资本支出审计。库珀同意了，审计于5月下旬开始。[3]: 220–221</p>
+<h2>预付费能力</h2>
+<p>在与审计员的一次会议上，公司财务总监Sanjeev Sethi解释说，两项资本支出中的不同金额与“预付费能力”有关，这是库珀从未听说过的。当被追问解释时，Sethi声称自己不知道这个术语的含义，尽管他的部门批准了资本支出申请。他将审计员转介给了公司财务主管大卫·迈尔斯。库珀要求格林·史密斯找一位拥有技术技能的审计员来查找会计系统中的条目。史密斯带回了尤金·莫尔斯，他自1997年以来一直在世界通公司工作，并帮助制作了一些关于无线补贴审计的报告。随后，莫尔斯加入了库珀和其他审计员的行列，试图弄清楚什么是预付费能力。[4][3]: 223–225</p>
+<p>由于Sethi没有提供足够的信息，库珀找到了世界通公司房地产主管马克·阿比德。阿比德声称他不熟悉预付费能力，尽管他在电脑会计系统中为此进行了多次输入。没有新的信息，她要求阿比德提供他已将相关条目记入的账户。他列出了家具、装置和其他、传输设备和通信设备的账户。[3]: 225</p>
+<p>有了起点，库珀告诉她的“技术员”莫尔斯仔细检查会计系统，查找任何关于预付费能力的参考。他最终找到一个并把这个信息告诉了库珀。由于这仅仅代表了条目的其中一面，她要求他通过系统跟踪它。莫尔斯带走了他所能找到的一切给库珀。由于无法有效地将这些条目排列在任何合理的顺序中，库珀和她的团队试图使用基本的T账户来破译它们。然而，金额在账户之间以异常的方式跳动，导致一大笔款项从世界通公司的损益表转移到其资产负债表。库珀对结果并不完全满意，她要求莫尔斯尝试查找另一个以类似方式移动的预付费能力条目。[3]: 225–227</p>
+<p>在继续搜索更多条目时，库珀开始收到大卫·迈尔斯发来的电子邮件，质疑她为什么调查资本支出。他告诉她，她是在浪费时间，而且还占用像Sethi这样的员工，他们需要从事其他项目。尽管受到了这种阻碍，但她告诉他，他需要的员工可以在完成她的其他项目后向他汇报。第二天，库珀收到了迈尔斯发来的另一封电子邮件，比第一封更为直接和正式。它声称资本支出审计是浪费时间。这让库珀很感兴趣，所以她决定不回复，继续她的调查。[3]: 229–230</p>
+<p>与此同时，莫尔斯开始搜索其他条目，但他提取了如此多的数据，以至于经常堵塞会计服务器。库珀担心迈尔斯或她的直接上司、首席财务官斯科特·苏利文最终会注意到服务器活动增加，她决定她和她的团队将开始在晚上工作以避免被发现。最终，在6月10日，他们发现了更多关于“预付费能力”的条目：从2001年第三季度到2002年第一季度，从损益表转移到资产负债表的大量资金。[3]: 231–233</p>
+<h2>疑虑加剧</h2>
+<p>不久之后，苏利文召集库珀参加了一次关于审计项目的会议，并要求内部审计团队向他介绍最近完成的审计情况。轮到史密斯的时候，库珀提到了预付费能力条目。苏利文声称，这指的是与SONET和线路相关的成本，这些线路要么根本没有使用，要么使用率很低。他声称这些成本正在被资本化，因为即使收入下降，与线路租赁相关的成本仍然是固定的。他计划在2002年第二季度进行重组支出，之后世界通公司将把这些成本分配到重组支出和费用之间。他要求库珀将资本支出审计推迟到第三季度，这加剧了库珀的怀疑。[3]: 233–237</p>
+<p>那天晚上，库珀和史密斯打电话给世界通公司董事会成员兼审计委员会主席马克斯·鲍比特，讨论他们的担忧。鲍比特对此足够担忧，以至于告诉库珀与世界通公司外部审计师毕马威的费雷尔·马龙讨论此事。[3]: 237–238</p>
+<p>毕马威在收购安达信的杰克逊业务后继承了世界通公司的账户，安达信因其在安然会计丑闻中的作用而被起诉。[3]: 229</p>
+<p>此时，内部审计团队已经发现了28个追溯到2001年第二季度的预付费能力条目。根据他们的计算，如果不是因为这些条目，世界通公司2002年第一季度的1.3亿美元利润将变成3.95亿美元的亏损。尽管如此，鲍比特认为此时与审计委员会讨论此事还为时尚早。然而，他确实与苏利文讨论了此事，并向库珀保证，他将在下周一之前获得对这些条目的支持。[3]: 240–241</p>
+<h2>欺诈行为败露</h2>
+<p>库珀决定不等待与苏利文讨论此事。她决定自己要求做出这些条目的会计师提供支持。她首先问肯尼·艾弗里，他是毕马威接手之前安达信在世界通公司账户中的首席合伙人，他是否知道预付费能力。艾弗里从未听说过这个术语，也不知道公认会计原则（GAAP）中有什么允许资本化线路成本的规定。事实证明，安达信从未测试过世界通公司的资本支出。[3]</p>
+<p>库珀和史密斯随后询问了做出这些条目的会计总监贝蒂·文森。令他们惊讶的是，文森承认她在不知道这些条目的用途或看到对这些条目的支持的情况下做出了这些条目。她是按照迈尔斯和总会计总监布福德·耶茨的指示这样做的。当库珀和史密斯与耶茨交谈时，耶茨承认他不知道什么是预付费能力。耶茨还声称，向他汇报的会计师是在迈尔斯的指示下记账的。[3]: 243–245</p>
+<p>最后，内部审计员与迈尔斯进行了交谈。他承认这些条目没有支持。事实上，这些条目是“根据我们认为的利润率”记入的，没有任何会计标准支持它们。他承认这些条目本不应该被记入，但一旦开始就很难停止。尽管他对这些条目感到不安，但他从未想过自己需要向监管机构解释它们。[3]: 246–247</p>
+<p>第二天，费雷尔会见了苏利文和迈尔斯，并得出结论：他们对这些条目的理由“从商业角度来看是有道理的，但从会计角度来看则不是”。作为回应，苏利文、迈尔斯、耶茨和阿比德争先恐后地寻找在应该资本化的时期被记为支出的金额，希望能抵消预付费能力条目。他们认为，唯一其他的选择是重新公布收益。[3]</p>
+<p>鲍比特终于在6月20日召开了审计委员会会议。此时，库珀的团队已经发现了2001年至2002年从线路成本支出账户到资产的可疑转账超过30亿美元。在会议上，费雷尔表示，GAAP中没有任何内容允许这些条目。苏利文声称，世界通公司自1999年以来一直在投资扩展电信网络，但预期的客户使用量增长从未发生。他认为，这些条目是基于配比原则的，该原则允许将成本记为支出，以便与从资产中获得的任何未来收益相一致。他还认为，由于资本资产的价值低于账面上应有的价值，他重申了他对2002年第二季度进行重组支出或“减值支出”（他称之为）的建议。他声称迈尔斯可以为这些条目提供支持。委员会给他直到下周一的时间来获得支持。[3]: 256–258</p>
+<p>周末，库珀和她的团队发现了更多可疑的“预付费能力”条目。总而言之，内部审计部门共发现了49个预付费能力条目，详细说明了2001年全年和2002年第一季度总计38亿美元的转账。其中一些条目是由苏利文和迈尔斯在“SS条目”处明确指示键入的。虽然一些可疑条目是由主管和经理做出的，但另一些条目是由不知道自己所做事情严重性的低层会计做出的。[3]: 258–259</p>
+<p>在与另一位会计主管特洛伊·诺曼德会面时，他们了解到更多可能非法的会计行为。根据诺曼德的说法，管理层在2000年和2001年的一部分时间内，分批提取了公司的成本储备，以人为地减少支出。[3]: 261</p>
+<p>同时，审计委员会要求毕马威进行自己的审查。毕马威发现，苏利文已将系统成本转移到多个房地产账户，从而允许将其记为资本支出。这些支出被分散开来，因此最初并不明显。当毕马威向安达信的前世界通公司业务团队询问这些条目时，安达信的会计师表示，如果他们知道这些条目，他们绝不会批准它们。苏利文被要求在下周一之前就其行为提交书面解释。[5]</p>
+<p>在那个周一举行的审计委员会会议上，苏利文提交了一份白皮书，解释了他的理由。审计委员会和毕马威都没有被说服。他们得出结论，这些金额的转账唯一的目的是达到华尔街的目标，唯一可接受的补救措施是对2001年全年和2002年第一季度的公司收益进行重新申报。安达信撤回了其对2001年的审计意见，董事会要求苏利文和迈尔斯辞职。[3]: 262–264</p>
+<h2>美国证券交易委员会开始调查</h2>
+<p>6月25日，在证实非法条目的金额后，董事会接受了迈尔斯的辞职，并在苏利文拒绝辞职时解雇了他。同一天，世界通公司高管向美国证券交易委员会通报情况，透露该公司将不得不重新申报前五个季度的收益。[5][3]: 265</p>
+<p>当天晚些时候，世界通公司公开承认，该公司在前五个季度中夸大了收入超过38亿美元。[6]</p>
+<p>这一披露对世界通公司来说是一个非常糟糕的时机。即使在丑闻爆发之前，该公司的信用评级已被降至垃圾级，其股价已损失了超过94%的价值。它还面临着美国证券交易委员会早些时候开始进行的关于其会计问题的单独调查，并且背负着300亿美元的债务。在破产传闻中，世界通公司表示将裁员1.7万人。[7]</p>
+<p>该公司于2002年7月21日星期日申请破产保护。[8]</p>
+<p>联邦政府早在6月就已开始非正式调查，当时文森、耶茨和诺曼德秘密会见了美国证券交易委员会和司法部官员。[3]: 261</p>
+<p>美国证券交易委员会于6月26日对世界通公司提起民事欺诈指控，推测世界通公司已采取协调一致的努力来操纵其收益，以满足华尔街的目标并支撑其股价。此外，它还声称该计划已“由高级管理人员指示和批准”，暗示比苏利文和迈尔斯职位更高的管理人员知道该计划。[9]</p>
+<h2>审判</h2>
+<p>2005年，陪审团裁定埃伯斯犯有欺诈、共谋和向监管机构提交虚假文件罪。他随后被判处25年监禁。[10]然而，由于健康状况恶化，他于2019年12月获释。埃伯斯于2020年2月2日去世。[11]</p>
+<h2>后续</h2>
+<p>据说萨班斯-奥克斯利法案是由于世界通公司和安然等丑闻而通过的。世界通公司（当时更名为MCI）于2006年1月被Verizon Communications收购。[12]</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="America’s-iconic-companies-that-disappeared">
+        <h3 class="page-name title"><span class="page-emoji ">🏭&nbsp;</span>America’s iconic companies that disappeared</h3>
+        <small class="page-url url "><a href="https://www.cnbc.com/2014/04/29/americas-iconic-companies-that-disappeared.html" target="_blank">(https://www.cnbc.com/2014/04/29/americas-iconic-companies-that-disappeared.html)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 介绍了多家公司的历史与崛起及其最终崩溃，信息密集且具有较强的相关性。<br></small>
+    </div>
+    <div class="page-content content"><h2>阿莫科 (Amoco)</h2>
+<p>1910 年成立的阿莫科石油公司，在 1989 年已成为巨头。它是无铅汽油运动的领导者，并在 90 年代后期成为北美最大的天然气生产商。阿莫科从未遇到过重大的财务问题：1997 年，该公司收入 363 亿美元，盈利 27 亿美元。但在 1998 年，它以 610 亿美元的价格与英国石油公司合并。现有的加油站被重新命名为 BP，而阿莫科品牌则逐渐消失。</p>
+<h2>贝斯利钢铁 (Bethlehem Steel)</h2>
+<p>曾经是美国第二大造船厂和钢铁生产商的贝斯利钢铁公司，在 80 年代后期开始走下坡路，因为美国正从工业制造业转向其他国家（在劳动力成本较低的国家）。但很少有人认为建造金门大桥的公司会彻底消失。它在 1997 年放弃了造船业务，在 2001 年，该公司被迫申请破产，部分原因是随着工人的裁员，养老金和医疗保健成本螺旋式上升。两年后，国际钢铁集团收购了剩下的部分。</p>
+<h2>环球电器 (Circuit City)</h2>
+<p>与百思买一样，这家电子产品零售商在 90 年代的大部分时间里都是购买最新最好的小工具的地方。然而，随着网上购物的兴起，情况开始恶化。糟糕的零售地点和有问题的商业行为（例如放弃其利润丰厚的家用电器销售业务，并与 Verizon 独家合作销售移动电话）导致了破产。官员们试图寻找买家，但未能成功，迫使公司在 2009 年裁员 30,000 人，并清算其门店。</p>
+<h2>康柏 (Compaq)</h2>
+<p>在个人电脑的早期，康柏是一个知名品牌，到 90 年代中期，它是美国最大的个人电脑系统供应商。然而，到该十年结束时，它饱受产品质量问题的困扰，并且无法跟上快速变化的行业。低成本的竞争对手，如戴尔，开始吸引消费者的注意力，而网络泡沫的破裂并没有改善局面，对其高端系统市场的需求蒸发了。2002 年，该公司同意与惠普合并，康柏的名字慢慢消失了。</p>
+<h2>雷曼兄弟 (Lehman Brothers)</h2>
+<p>曾经是美国第四大投资银行的雷曼兄弟公司，其在 2008 年的破产申请是美国历史上规模最大的破产申请，该公司持有超过 6000 亿美元的资产。就在几年前，这似乎是不可想象的事情，但由于受到不良住房资产的拖累，并且无法找到买家，该公司最终在全球金融危机中扮演了重要角色。破产申请后，巴克莱银行以 17.5 亿美元的价格收购了该公司的北美部门，野村控股接管了亚太地区、欧洲和中东的业务。</p>
+<h2>莱维兹家具 (Levitz Furniture)</h2>
+<p>即使这家家具零售商已经倒闭，它的广告词“你会爱上莱维兹”仍然在许多婴儿潮一代的脑海中回荡。莱维兹是第一家在仓库式地点销售家具的公司，这在今天已经成为标准。该公司成立于 1910 年，发展到拥有 72 个仓库展厅和 26 个州的 62 个较小的卫星商店，然后在 1997 年和 2005 年经历了两次破产和两次重组。然而，它未能克服一系列金融危机。它在 2007 年再次申请破产，并在接下来的几年里开始清算其剩余的商店。</p>
+<h2>MCI-WorldCom</h2>
+<p>曾经是美国第二大长途电话公司的 MCI-WorldCom（最后被称为 Worldcom）只因其首席执行官伯尼·埃伯斯 (Bernie Ebbers) 的行为而被人们记住。这位 63 岁的执行官被判犯有策划价值 110 亿美元的会计欺诈罪，并在 2005 年被判处 25 年监禁。衰落始于 2000 年，当时政府阻止了该公司与 Sprint 的拟议合并。然而，由于该公司使用的虚报资产的欺诈性会计方法，投资者直到很久之后才意识到这一点。它在 2002 年申请破产，最终在 2004 年摆脱困境。一年后，Verizon 以 76 亿美元的价格收购了该公司。</p>
+<h2>泛美航空 (Pan Am World Airways)</h2>
+<p>泛美航空在 1989 年并没有处于其权力的顶峰，但它仍然发展势头强劲，当年载客数超过 2900 万客运英里。在 1988 年泛美 103 号航班恐怖袭击事件夺走了 270 条生命之前，扭转世界最大国际航空公司局面已取得好转。在那之后，旅客开始避免乘坐这家航空公司。1989 年，这家航空公司提议与西北航空合并，但最终被击败。当海湾战争期间燃料价格飙升时，该公司的损失成倍增加，以至于它开始出售其航线。1991 年，泛美航空申请破产，称截至当年 3 月 31 日负债为 25.2 亿美元。当年 12 月，它突然关闭，导致数千名旅客争先恐后。</p>
+<h2>塔沃唱片 (Tower Records)</h2>
+<p>1989 年是 CD 的转折点，因为这是这种新的音乐存储格式首次销量超过黑胶唱片的年份。从那时起，总部位于加利福尼亚州萨克拉门托市的零售音乐连锁店塔沃唱片就开始倒计时了。该公司在时代广场拥有旗舰店，并且是第一家在其商店中提供“扫描收听”站（用户可以在其中扫描 CD 并收听音频样本）的公司，努力保持领先地位。它还是第一家提供在线销售的公司。但是，激进的扩张和音乐行业的变革迫使它在 2004 年和 2006 年两次破产，随后被清算，所有剩余商店都被关闭。该网站仍然存在，但现在由另一家公司运营。</p>
+<h2>伍尔沃斯 (F.W. Woolworth)</h2>
+<p>伍尔沃斯是最初的五分钱和一角钱商店，在 19 世纪末为其他零售商铺平了道路。在 20 世纪 60 年代，这里是格林斯伯勒静坐事件的发生地，该事件成为民权运动中的一个关键时刻。这家百货公司连锁店在 1989 年就已经开始衰落，但似乎没有灭绝的危险。1993 年的重组关闭了其 800 家商店中的一半。其余的商店也慢慢地陆续关闭。伍尔沃斯作为一个零售品牌和名称已经消失了，但该公司从技术上讲仍然存在。它在 2001 年将自己更名为 Venator 集团，并开始将其重点转向其鞋类部门。今天，它被称为 Foot Locker。</p>
+<h2>华盛顿互惠银行 (Washington Mutual)</h2>
+<p>WaMu 是金融危机的另一个受害者，它曾经是美国最大的储蓄和贷款机构，2007 年的资产为 3279 亿美元。它的倒闭是美国历史上最大的银行倒闭事件。这家曾经保守的机构在房地产泡沫期间决定向购房者出售风险抵押贷款，导致巨额损失。在 2008 年的九天时间里，该银行的存款人提取了 167 亿美元。这一举动促使政府查封该银行，并将大部分资产出售给摩根大通。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="10-Companies-That-Failed-To-Innovate,-Resulting-In-Business-Failure">
+        <h3 class="page-name title"><span class="page-emoji ">💔&nbsp;</span>10 Companies That Failed To Innovate, Resulting In Business Failure</h3>
+        <small class="page-url url "><a href="https://www.collectivecampus.io/blog/10-companies-that-were-too-slow-to-respond-to-change" target="_blank">(https://www.collectivecampus.io/blog/10-companies-that-were-too-slow-to-respond-to-change)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 分析多家公司的业务脆弱性和未来的教训，描绘了企业如何应对复杂环境。<br></small>
+    </div>
+    <div class="page-content content"><h2>1. Blockbuster (1985 – 2010)</h2>
+<p>百视达影音公司(Blockbuster Video)成立于1985年，是视频租赁领域最具标志性的品牌之一。2004年达到巅峰时期，在全球拥有84,300名员工和9,094家门店。由于未能向数字化模式转型，百视达于2010年申请破产。</p>
+<p>2000年，Netflix曾向百视达提出以5000万美元收购其公司的要约。百视达首席执行官当时认为这只是一家“非常小的利基业务”，并且当时还在亏损，因此拒绝了这一要约。截至2017年7月，Netflix在全球拥有1.0395亿用户，营收达88亿美元。</p>
+<h2>2. Polaroid (1937 – 2001)</h2>
+<p>宝丽来公司(Polaroid)成立于1937年，以其宝丽来拍立得相机和胶卷而闻名。尽管早期在竞争对手较少的市场上取得了成功，但宝丽来未能预料到数码相机对其胶卷业务的影响。宝丽来公司陷入了“成功陷阱”，仅仅利用其（历史上成功的）业务活动，忽视了探索新领域和增强其长期生存能力的必要性。</p>
+<p>原宝丽来公司于2001年宣告破产，其品牌和资产被出售。2017年5月，宝丽来公司品牌和知识产权被Impossible Project的最大股东收购，Impossible Project最初于2008年开始为宝丽来相机生产新的拍立得胶卷。Impossible Project于2017年9月更名为Polaroid Originals。</p>
+<h2>3. Toys R Us (1948 – 2017)</h2>
+<p>玩具反斗城(Toys“R”Us)是近期一个关于全球最大玩具连锁店之一财务困境的故事。事后看来，玩具反斗城在2000年与亚马逊签订为期10年的独家玩具供应商合同可能导致其自身的失败。尽管达成了协议，亚马逊还是开始允许其他玩具供应商在其网站上销售，玩具反斗城于2004年起诉亚马逊以终止协议。结果，玩具反斗城错过了早期发展自身电子商务业务的机会。为时已晚，玩具反斗城于2017年5月宣布，计划对其网站进行改版，作为一项1亿美元、为期三年的投资计划的一部分，以促进其电子商务业务的发展。</p>
+<p>2017年9月，玩具反斗城在10亿美元债务和激烈的在线零售竞争的压力下申请破产，但它继续保持其实体店的开放。</p>
+<h2>4. Pan Am (1927 – 1991)</h2>
+<p>泛美航空公司(Pan American World Airways，简称泛美航空)成立于1927年，是美国最大的国际航空公司。该公司以其行业创新而闻名，是第一家提供计算机预订系统和巨型喷气式飞机的航空公司。</p>
+<p>泛美航空的衰落归因于公司管理不善、政府对保护其主要国际航空公司的冷漠以及有缺陷的监管政策。由于对现有业务模式过度投资，而没有投资未来的第三阶段创新，泛美航空于1991年申请破产。泛美航空仅在其标志性的蓝色标志中得以延续，该标志仍在钱包和T恤衫上印制，并作为ABC电视台由克里斯蒂娜·里奇主演的电视剧的主题。</p>
+<h2>5. Borders (1971 – 2011)</h2>
+<p>博德斯(Borders)是一家国际图书和音乐零售商，由两兄弟在大学期间创立。博德斯在全球各地都有门店，但由于债务缠身，它未能向数字和在线图书的新业务环境过渡。其失误包括负债过多、开设门店过多以及过迟进入电子阅读器业务。</p>
+<p>令人遗憾的是，博德斯关闭了所有零售店，并将包含数百万条记录的客户忠诚度名单以1390万美元的价格卖给了竞争对手Barnes &amp; Noble。博德斯的门店此后已被其他大型零售商收购并重新利用。</p>
+<h2>6. Pets[dot]com (1998 – 2000)</h2>
+<p>Pets.com是一家在线企业，通过万维网直接向消费者销售宠物用品。尽管寿命短暂，但在当时还没有电商/仓库管理和客户服务可扩展的即插即用解决方案的情况下，Pets.com还是取得了一些成功。Pets.com于1998年8月推出，从纳斯达克股票交易所的首次公开募股到清算，仅用了268天。</p>
+<p>在其短暂的存在期间，其高知名度使其成为21世纪初互联网泡沫时期更值得关注的失败案例之一。3亿美元的投资资金随着公司的倒闭而消失。Pets.com是一个令人难忘的警示故事，讲述了一个高调的营销活动与薄弱的基本面（和糟糕的时机）相结合。今天，Pets.com的网址会将用户重定向到PetSmart的网站。</p>
+<h2>7. Tower Records (1960 – 2004)</h2>
+<p>在当时，Tower Records是开创零售音乐巨型商店概念的先驱。Tower Records由罗素·所罗门(Russell Solomon)于1960年创立，销售CD、磁带、DVD、电子产品、电子游戏、配件和玩具。Tower.com于1995年上线，使其成为最早转向在线零售商之一，一度领先于时代。但似乎该公司的远见卓识到此为止，最终因债务过重而于2004年破产。Tower Records无法跟上音乐盗版、iTunes和Spotify、Pandora等流媒体业务等数字化的中断。其遗产以电影《帝国唱片》(Empire Records)的形式被人们铭记，该电影是由前Tower Records员工编剧的。</p>
+<h2>8. Compaq (1982 – 2002)</h2>
+<p>康柏电脑(Compaq)是20世纪80年代和90年代全球最大的个人电脑销售商之一。该公司生产了一些最早的IBM PC兼容电脑，是第一家合法反向工程IBM个人电脑的公司。康柏最终在与戴尔的削价竞争中苦苦挣扎，于2002年被惠普(HP)以250亿美元收购。康柏品牌在惠普用于低端系统，直到2013年停产。</p>
+<h2>9. General Motors (1908 – 2009)</h2>
+<p>通用汽车公司(General Motors)在100多年来一直是全球最重要的汽车制造商之一，也是世界最大的公司之一，但最终也导致了历史上最大的破产案之一。缺乏创新和公然忽视竞争是该公司衰落的主要原因。由于通用汽车主要专注于从金融领域获利，因此该业务忽视了提高产品质量、未能使通用汽车适应客户需求的变化以及未能投资新技术。通过美国政府的大规模救助，目前的通用汽车公司（“新通用汽车”）于2009年成立，并收购了旧通用汽车的大部分资产，包括“通用汽车”品牌。</p>
+<h2>10. Kodak (1889-2012)</h2>
+<p>柯达公司(Kodak)曾是世界上最大的胶卷公司，但由于担心会蚕食其最强的产品线，因此无法跟上数字革命的步伐。这家设计、生产和销售摄影器材的领导者曾多次有机会将公司引向正确的方向，但其犹豫不决地完全拥抱向数字化的过渡导致了其衰落。例如，柯达投资数十亿美元开发使用手机和其他数字设备拍照的技术。然而，由于担心会消灭其极其重要的胶卷业务，它却迟迟未开发面向大众市场的数码相机。竞争对手，如日本佳能公司抓住了这一机会，并因此比这家巨头活得更久。另一个例子是柯达在2001年收购了一个名为Ofoto的图片分享网站。然而，柯达并没有开创可能成为Instagram前身的东西，而是利用Ofoto试图让更多人打印数码图像。柯达于2012年申请破产，并在退出大部分产品线后，于2013年以一家规模较小、业务整合后的公司重新出现，专注于服务商业客户。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Amoco---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">🔄&nbsp;</span>Amoco - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Amoco" target="_blank">(https://en.wikipedia.org/wiki/Amoco)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 页面探讨了Amoco等公司发展的历程及其最终的整合与变迁，相关度较高。<br></small>
+    </div>
+    <div class="page-content content"><h2>关于维基百科的随机文章</h2>
+<h3>前身，标准石油公司</h3>
+<p>该公司的创新包括现代工业的两个重要组成部分：汽油运输车和免下车加油站。[3] 其“Amoco超级优质”无铅汽油在环境问题导致美国各地最终淘汰含铅汽油的几十年之前就已经上市销售。Amoco的总部位于Amoco大楼（也称为标准石油大楼，昵称“大斯坦”，现在是安达信中心）芝加哥，伊利诺伊州。[4]</p>
+<h3>印第安纳标准石油公司</h3>
+<p>印第安纳标准石油公司由约翰·D·洛克菲勒于1889年成立，是标准石油信托的一部分。该公司的业务中心位于密歇根湖畔的怀廷炼油厂，于1890年首次投入运营。[8][9] 1910年，随着汽车使用量的增加，印第安纳标准公司决定专门向消费者提供汽油。1911年，该公司脱离标准石油信托独立运营，当年销售了中西部地区88%的汽油和煤油。1912年，它在明尼苏达州明尼阿波利斯开设了第一家加油站。[5]</p>
+<h3>收购美国石油公司</h3>
+<p>1923年，布劳施泰因家族将其在American Oil公司的一半股权出售给泛美石油和运输公司，以换取有保障的石油供应。在此交易之前，Amoco被迫依赖其竞争对手新泽西标准石油公司来供应石油。印第安纳标准石油公司于1925年收购了泛美石油公司，开始了约翰·D·洛克菲勒与Amoco名称的关联。[18]  “Amoco”无铅汽油在美国东部和南部的American加油站销售，与含铅的American普通汽油一起销售。到1970年，无铅Amoco汽油在1970年被引入印第安纳标准公司的营销区域。[23][25]  母公司标准石油公司（印第安纳）在其1961年前在中西部的主要营销区域销售的红冠普通汽油和白冠优质汽油（后来改名为金冠超级优质汽油）也含有铅。[26] 到1978年，Amoco已经淘汰了优质含铅汽油。[23] 1986年11月，在环保署的压力下，为减少汽油中铅的使用，Amoco成为第一家表示将停止所有含铅汽油零售销售的主要石油公司。取而代之的是，Amoco开始销售中等辛烷值的89号无铅汽油（与含铅普通汽油的辛烷值相同），以及其无铅普通汽油和无铅优质汽油产品。[27]</p>
+<h3>并购与裁员</h3>
+<p>这家新公司努力进一步整合，宣布于1999年4月以268亿美元收购阿特兰大里奇菲尔德公司（ARCO）。[41] 然而，直到BP Amoco同意剥离ARCO在阿拉斯加的资产，联邦贸易委员会才在一年后批准了这笔交易。该公司随后裁员2000人。[42]</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Bethlehem-Steel---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">🛠&nbsp;</span>Bethlehem Steel - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Bethlehem_Steel" target="_blank">(https://en.wikipedia.org/wiki/Bethlehem_Steel)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 讨论Bethlehem Steel的辉煌与衰退，体现了制造业变化的关键因素。<br></small>
+    </div>
+    <div class="page-content content"><h2>伯利恒钢铁公司</h2>
+<p>公司类型：私营</p>
+<p>行业：钢铁、造船、采矿</p>
+<p>成立时间：1857年（发源）1899年（作为伯利恒钢铁公司）1904年（作为伯利恒钢铁公司）</p>
+<p>创始人：奥古斯塔斯·沃勒</p>
+<p>停业时间：2003年；21年前</p>
+<p>最终归宿：破产和清算</p>
+<p>继承公司：克利夫兰-克利夫斯公司 (2020年至今) 阿塞洛米塔尔公司 (2006-2020) 米塔尔钢铁公司 (2005-2006) 国际钢铁集团 (2003-2005)</p>
+<p>总部：宾夕法尼亚州伯利恒市，美国</p>
+<p>子公司：伯利恒钢铁公司；伯利恒造船公司</p>
+<p>伯利恒钢铁公司是一家美国钢铁公司，总部位于宾夕法尼亚州伯利恒市。在2003年关闭之前，它是世界上最大的钢铁生产和造船公司之一。在其成功和生产力的高峰期，该公司是美国在世界制造业领导地位的象征，而其在20世纪末的衰落和最终清算，同样被认为是美国制造业领导地位下降的一个例子。[需要引用]</p>
+<p>从1857年成立到2003年解散，伯利恒钢铁公司的总部都设在美国宾夕法尼亚州利哈伊谷地区的伯利恒市。其主要的钢铁厂最初位于宾夕法尼亚州伯利恒市，后来扩展到包括宾夕法尼亚州伯利恒市的一个主要研究实验室，以及马里兰州斯帕罗斯角、宾夕法尼亚州约翰斯敦、纽约州拉卡瓦纳和其最终也是最大的工厂印第安纳州伯恩斯港的工厂。</p>
+<p>该公司生产的钢铁被用于建造许多美国最大和最著名的建筑物。在主要建筑物中，伯利恒钢铁公司为纽约市的28自由街、帝国大厦、麦迪逊广场花园、洛克菲勒中心和华尔道夫酒店以及芝加哥的梅西百货公司大厦提供了钢铁。在主要桥梁中，伯利恒钢铁用于建造纽约市的乔治·华盛顿大桥和维拉扎诺海峡大桥，旧金山的金门大桥以及布法罗和安大略省伊利堡之间的和平桥。</p>
+<p>伯利恒钢铁公司在美国战争期间扮演了重要的角色，制造了美国军舰和其他军事武器，用于第一次世界大战，后来被盟军用于最终赢得第二次世界大战。为战胜二战中的纳粹德国和轴心国，建造了1100多艘伯利恒钢铁制造的军舰。历史学家认为，伯利恒钢铁公司能够快速制造军舰和其他军事装备是美国在两次世界大战中取得胜利的决定性因素。[1]</p>
+<p>伯利恒钢铁公司的起源可以追溯到1857年在伯利恒成立的一家钢铁公司，后来改名为伯利恒钢铁公司。1899年，钢铁公司的拥有者成立了伯利恒钢铁公司，五年后，伯利恒钢铁公司被创建为钢铁公司的母公司。</p>
+<p>伯利恒钢铁公司挺过了从20世纪70年代开始的美国钢铁工业的早期衰退。然而，在1982年，该公司在亏损15亿美元后暂停了大部分钢铁生产业务，这归因于日益激烈的外国竞争、不断上涨的劳动力和养老金成本以及其他因素。该公司于2001年申请破产，并在2003年最终解散，其剩余资产被出售给国际钢铁集团。</p>
+<h3>20世纪钢铁生产的矿物来源</h3>
+<p>钢铁是由铁和碳组成的合金，根据其用途添加其他矿物。在20世纪，在美国采购必要的矿物比从其他地方供应要贵得多。</p>
+<p>伯利恒钢铁公司只是几家从拉丁美洲采购铁矿石的美国公司之一。伯利恒钢铁公司在拉丁美洲的存在大约持续了一个世纪（1880年代-1980年代）。[12]</p>
+<p>因此，该公司从美国对该地区的经济控制中获益匪浅。“仅在1960年一年，美国钢铁公司和伯利恒钢铁公司从他们在委内瑞拉的铁矿石投资中获得了超过30%的利润，而这笔利润等于自1950年以来十年来支付给委内瑞拉国家的全部税款。”[13]</p>
+<p>伯利恒钢铁公司还依赖拉丁美洲的锰矿，锰是一种增加抗张强度的添加剂。在巴西总统尤里科·杜特拉的总统任期内（1946-1951），伯利恒钢铁公司获得了4000万吨锰，“相当于出口收入的4%”。[14]</p>
+<h3>二战</h3>
+<p>在第二次世界大战期间，伯利恒钢铁公司在美国公司中按战时生产合同价值排名第七。[15]</p>
+<p>伯利恒造船公司的15个船厂共生产了1121艘船只，超过了战争期间任何其他造船厂，几乎占美国海军两洋舰队五分之一。其造船业务雇佣了多达18万人，占公司30万总员工的大部分。</p>
+<p>尤金·格雷斯于1916年至1945年担任伯利恒钢铁公司总裁，并于1945年至1957年退休前担任董事会主席。格雷斯负责协调伯利恒钢铁公司的二战战时工作。1943年，格雷斯向美国总统富兰克林·D·罗斯福承诺，伯利恒钢铁公司将每天制造一艘船，最终他超额完成了15艘船的承诺。[16]</p>
+<p>然而，第二次世界大战使伯利恒钢铁公司损失了大部分男性劳动力。该公司雇佣了女性员工来保护和在工厂车间和公司办公室工作。战后，女性工人很快就被男性工人取代。[17]</p>
+<p>1941年9月27日自由舰日，当时的美国总统富兰克林·D·罗斯福出席了伯利恒钢铁公司在巴尔的摩的伯利恒费尔菲尔德船厂下水的首艘自由轮“帕特里克·亨利”号的仪式。同一天下水的还有伯利恒斯帕罗斯角船厂位于马里兰州斯帕罗斯角的自由轮“詹姆斯·麦凯”号，以及昆西福里弗船厂的紧急船只“辛克莱超级火焰”号。</p>
+<p>1946年，伯利恒钢铁公司与LKAB矿业公司签订了一份合同，以促进二战后瑞典北部铁矿石工业的复苏。[18]</p>
+<p>二战结束后，伯利恒钢铁厂继续为建筑行业提供各种各样的型钢。BETHCON牌镀锌薄钢板被广泛用于制作风管或螺旋管。[19]该公司还为国防、发电和钢铁公司生产锻造产品。[20]</p>
+<p>从1949年到1952年，伯利恒钢铁公司与美国联邦政府签订了一份合同，在伯利恒钢铁公司纽约州拉卡瓦纳工厂轧制用于核反应堆的铀燃料棒。工人们不知道这种危险物质的危害，也没有得到防护设备。一些工人此后试图根据2000年的一部辐射暴露法获得赔偿。该法规定，如果工人在晚年患上癌症，只要他们的工作经历涉及足够的辐射暴露以显着增加他们的癌症风险，美国劳工部将向他们赔偿高达15万美元。伯利恒钢铁公司的工人没有获得这项赔偿，因为加工新鲜铀燃料所涉及的辐射剂量很低，产生的风险相对于基线风险很小。[21][22]</p>
+<p>加工铀的更大危险是重金属的化学中毒，这不会导致癌症。[23]</p>
+<p>美国的钢铁工业在二战期间和之后蓬勃发展，而德国和日本的钢铁工业则被盟军的轰炸摧毁。伯利恒钢铁公司的成功在20世纪50年代末和60年代初达到顶峰，当时该公司开始每年生产2300万吨钢铁。1958年，该公司的总裁阿瑟·B·霍默是薪酬最高的美国企业高管，该公司在1962年至1964年期间建造了其最大工厂的第一个阶段，即印第安纳州伯恩斯港的伯恩斯港工厂。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Circuit-City---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">🛒&nbsp;</span>Circuit City - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Circuit_City" target="_blank">(https://en.wikipedia.org/wiki/Circuit_City)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: Circuit City的起源与陨落展示了零售行业的挑战，与报告高度相关。<br></small>
+    </div>
+    <div class="page-content content"><h2>历史</h2>
+<h3>作为沃兹公司 (1949–1984)</h3>
+<p>1949年初，沃兹尔在弗吉尼亚州里士满度假期间，在一间当地理发店目睹了南方电视的开端。[需要引用]  他设想着其中的商机，于1949年末携家人搬到里士满，开设了第一家沃兹公司零售店。[5] 后来，亚伯拉罕·L·赫希特加入成为他的商业伙伴。[6] 到1959年，沃兹公司在里士满经营着四家电视和家用电器商店。该公司继续发展壮大，并在其他地区收购了商店，包括纽约奥尔巴尼、阿拉巴马州莫比尔、华盛顿特区和加利福尼亚州科斯塔梅萨。在20世纪70年代和80年代初，它还在“Dixie Hi Fi”的名义下销售邮购产品，在高保真杂志上做广告。沃兹公司在里士满尝试了几种零售模式，包括名为“Sight-n-Sound”和“Circuit City”的小型商场门店。塞缪尔·沃兹尔担任公司总裁直至1970年，并一直担任董事长直至1984年。[5] 他的儿子艾伦·沃兹尔于1972年成为沃兹公司的首席执行官，最初专注于消化收购和剥离无利可图的业务。[7][8]  1973年，在制定了公司的长期计划后，公司开始在弗吉尼亚州里士满的2040 Thalbro街（以Thalhimer Bros.百货公司命名）建造配送中心和新的公司办公楼，并在多余的空间里，于1975年5月1日开设了它的第一个仓库展厅“沃兹装卸码头”。[9][10][11] 大型商店深受顾客欢迎。该公司继续沿用“沃兹装卸码头”模式扩张，并在1978年将其更名为Circuit City超级商店；首批以此名称开设的门店于当年6月22日在北卡罗来纳州开业。</p>
+<h3>作为Circuit City商店 (1984–2009)</h3>
+<p>沃兹公司于1984年正式更名为Circuit City商店公司，并在纽约证券交易所上市。[13] 该公司早期的口号之一是“Circuit City——街道铺满实惠”。该公司曾从Zodys折扣店和其他百货公司租赁场地，开始收购零售店并将它们改造成Circuit City超级商店。这些改建的首批门店出现在田纳西州诺克斯维尔、南卡罗来纳州查尔斯顿和弗吉尼亚州汉普顿。[需要引用] 1981年，Circuit City通过收购破产的Lafayette Radio连锁店剩余的六家门店进入纽约市市场。[14] 他们以“Lafayette/Circuit City”的名义运营这些门店，并扩张到15个门店，但这些门店并不盈利，并在1986年关闭，此前该公司斥资2000万美元（2023年约合4720万美元）进入该市场。[15] 1985年，Circuit City通过在以前的Akrondiscount商店开设七家超级商店进入洛杉矶市场。次年，Circuit City在该市场又开设了五家超级商店，并关闭了其在Zodys商店经营的特许电子产品和电器部门。[16][17] 新店采用了最终成为公司标志的“红色塔”入口。这些塔的设计是为了让司机更容易在洛杉矶无休止的商店和购物中心中识别出这家商店。[18] 1988年，Circuit City开始建造新的“插头”设计超级商店模式。该公司还重返纽约市，在联合广场开设了一家4万平方英尺（3700平方米）的超级商店，这是计划中的两个曼哈顿门店中的第一个。1988年末，Circuit City有机会以3000万美元（2023年约合6670万美元）的价格收购当时正在发展壮大的竞争对手百思买。这一报价被Circuit City的首席执行官理查德·夏普拒绝，因为他认为他们可以在百思买的老家明尼阿波利斯开设一家商店，并轻松击败竞争对手。[19] 在这个时代，Circuit City以其卓越的服务而闻名，甚至让许多员工接受了工厂培训。它的口号同样也是“欢迎来到Circuit City，我们的服务是最先进的”。[20] 许多Circuit City商店都过时了，而且地理位置不好，无法与更新的百思买商店竞争。2000年，Circuit City放弃了超级商店展厅模式，推出了一种新的自助式“大盒子”模式，称为“地平线”。新的模式取消了红色塔式入口，并将入口移至商店中央。销售区扩大，视线更低，赛道被移除。[21] 商店前部设有中央收银台，并为小件商品增加了购物篮。[22] 取消了电器，为游戏、电脑外围设备和其他小型电子产品腾出空间。计划是开设独立的大型电器商店，但后来该计划被放弃。[23] 佛罗里达州杰克逊维尔的一家新店采用了新的设计，25家现有的佛罗里达州商店也进行了改建。[23] 2000年7月，Circuit City放弃了所有商店的大型电器业务，为更多小型电子产品腾出空间。这具有争议性，因为在之前的几年里，Circuit City是美国第二大电器零售商，仅次于西尔斯。1999年，该公司的大型电器销售收入近16亿美元。然而，高管们担心家得宝和劳氏的竞争，并认为如果他们退出大型电器业务，仓库储存和交付成本会有大幅节省。后来人们意识到，Circuit City因此错过了2000年代中期住宅建筑的繁荣期，当时新电器销售量大幅增加。在退出大型电器业务后，每家超级商店都进行了改造，利用空间增加了自助式电脑配件和软件的选择。根据与索尼的独家协议，商店里只销售PlayStation游戏。[24] 新的空间使他们能够在协议结束后销售任天堂、世嘉和最终的Xbox游戏。多年以前，大多数商店都增加了音乐和电影销售，但额外的空间使小型商店也能增加选择。仅改造项目就耗资15亿美元。[25][26] 基于进行的研究发现女性和青少年不受Circuit City销售人员的尊重，创建了一种名为“潮汐”的新商店模式。[27] 商店前部设有窗户，顾客可以透过窗户看到里面，并且改善了标牌。电源杆和可移动的固定装置使商店易于重新布置，并降低了改造旧店面的成本，因为不需要开挖地板。2001 年，芝加哥的门店采用部分这种模式进行了改造，所有新建门店都采用了这种设计。[28] 2002年3月，Circuit City收购了800.com的主要资产，其中包括其全部260万客户名单、网站和营销资产。交易的财务条款未披露。[29] 2003年，Circuit City将其所有商店转换为单一小时工资结构，取消了佣金销售。许多先前领取佣金的销售人员被提供新的小时制“产品专家”职位，而3900名销售人员被裁员，每年为公司节省约1.3亿美元。许多公司内部人士后来透露，他们认为这是最终导致公司倒闭的最具影响力的公司决策。[30][31] 2004年，随着无线电话市场的扩张，Circuit City与Verizon Wireless合作，在其每家超级商店中都设立了Verizon Wireless全方位服务中心。这些地点由Verizon Wireless拥有和管理。由于协议的原因，Circuit City停止了与所有其他运营商销售无线电话。[32][33] 2004年4月，Circuit City宣布收购加拿大零售商InterTAN。Circuit City斥资约2.84亿美元收购InterTAN的980家门店，这些门店在加拿大以RadioShack、Rogers Plus和Battery Plus的名称运营。董事长兼首席执行官艾伦·麦考洛认为，这些现有的小型商店为进入加拿大提供了一个便捷的途径，而百思买一直在加拿大扩张。[34][35] 2004年4月，RadioShack就InterTan在加拿大使用RadioShack品牌的问题对其提起诉讼。[36] Circuit City败诉，所有加拿大门店在2005年更名为Circuit City旗下的The Source。[37] 这些商店后来卖给了贝尔加拿大，并继续运营。2007年，推出了一种新的2万平方英尺（1900平方米）的商店模式“The City”，旨在消除以前未充分利用的空间。较小的模式使公司能够更灵活地进入新市场和补充现有市场。2008年大多数新店开张都采用了这种新的商店模式。[38] 2007年2月8日，Circuit City宣布计划关闭七家国内超级商店和一个肯塔基州的配送中心，以降低成本并改善财务业绩。[39] 新闻报道还提到，加拿大有62家商店即将关闭。[40] Circuit City于2007年2月23日宣布，其首席财务官迈克尔·福斯将离开公司。这令投资者不安，分析师也对管理层的更替感到担忧。“这是过去六个月第三位高级管理人员离职，也是过去一个月内第二位高管离职，”高盛分析师马修·法斯勒在一份客户报告中说。首席执行官菲尔·舒努弗“精心挑选的团队正在以比我们希望看到的更快的速度发生变化”。[41] 2007 年，新员工的起薪从每小时 8.75 美元降至每小时 7.40 美元（当时的联邦最低工资为 6.55 美元）。在 2007 年 3 月 28 日的一份新闻稿中，Circuit City 宣布，为了降低成本，它在一个“工资管理”决策中裁掉了大约 3400 名收入较高的员工，并将以较低的市场工资重新配备这些职位。被裁掉的员工获得了遣散费，并在十周后有机会以现行工资被重新雇用。《华盛顿邮报》报道了对管理层关于这些裁员的采访。[42]《邮报》后来在 2007 年 5 月报道说，裁员以及随之而来的经验丰富的销售人员的流失似乎正在“适得其反”，导致销售额下降。[43] 2008年4月，视频租赁公司百视达宣布以10亿美元（2023年约合13.9亿美元）的价格收购Circuit City。[44] 2008年7月，由于市场情况，百视达撤回了报价。[45] 2008年8月，该连锁店的总部要求各门店销毁所有《疯狂》杂志的一期，该杂志将“傻瓜城”描述为一个地点众多的连锁店，所有地点都彼此靠近，并且每个地点都紧邻一家竞争对手百思买商店。[46] Circuit City商店公司首席执行官、总裁兼董事会主席菲利普·J·舒努弗于2008年9月22日宣布立即辞职。前副董事长詹姆斯·A·马库姆被任命为代理首席执行官。艾伦·金被选为董事会主席。[47]据说这次更换是由于平板电视价格迅速下跌导致的一系列损失，也可能是由于激进股东马克·沃特尔斯强烈要求罢免舒努弗。[48]</p>
+<h3>破产和清算</h3>
+<p>2008年11月4日，Circuit City宣布，由于持续难以盈利，该公司将在年底前关闭155家门店，并裁员17%。[49][50] 2008年11月7日，Circuit City将其位于弗吉尼亚州里士满的总部500至800名公司员工裁员。大约1000名剩余的企业员工被合并到一栋楼里，以进一步降低成本并提高盈利能力。[51] 2008年11月10日，Circuit City根据美国破产法第11章在美国弗吉尼亚州东区美国破产法院申请破产保护。[52][53] 当时，Circuit City的股票交易价格远低于每股1美元，并被从纽约证券交易所退市。[54] 在破产法院，Circuit City获准借款11亿美元，用于在重组期间维持运营。[8] 法院文件显示，该公司资产为34亿美元，债务为23.2亿美元，[55]其中包括欠惠普1.19亿美元和欠三星电子1.16亿美元的债务。[56] 首席执行官詹姆斯·A·马库姆承诺，商店将继续营业，连锁店不会被清算。[57][58] 2008年11月18日，据宣布，墨西哥电视台广播公司TV Azteca和电子商店连锁店Elektra的现任所有者里卡多·萨利纳斯·普列戈收购了Circuit City 28%的股份。[59] 2009年1月10日，一位公司发言人宣布，Circuit City需要在2009年1月16日之前找到买家，否则将由于法院和债权人设定的最后期限而关门大吉。[60] 尽管有两家不愿透露姓名的公司有兴趣收购Circuit City，[61]但未能找到买家，[62]因此Circuit City在破产法院的批准下，将其第11章破产转换为第7章，[63]并开始播放“即将倒闭”的广告，因为他们开始关闭所有门店。[62]  加拿大业务（在Circuit City旗下的The Source品牌下运营）最初未受清算的影响，但后来卖给了贝尔加拿大。[64] 根据Circuit City的网站，该公司于2009年1月16日宣布，它打算清算所有门店。据报道，在清算过程中，超过3万名员工失业，[65] 以及Verizon在Circuit City的销售队伍中45%的人被裁员，其余人员辞职或调往其他Verizon地点。[66]所有Circuit City门店的最后营业日是2009年3月8日。[67]除了零售汽车经销商外，2009年Circuit City在美国关闭的零售门店数量超过其他任何零售连锁店。[68] Circuit City选择Great American Group LLC、Hudson Capital Partners LLC、SB Capital Group LLC和Tiger Capital Group LLC[69]负责全国所有门店的清算工作。清算工作于2009年3月9日完成。在全国所有Circuit City门店清算期间，该公司的在线商店被关闭，并替换为以下内容的页面：[70] Circuit City感谢所有在过去60年中光临本店的顾客。不幸的是，我们于2009年1月16日宣布我们即将倒闭。</p>
+<h3>被Systemax收购</h3></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="The-25-Biggest-Bankruptcies-in-American-History---24/7-Wall-St.">
+        <h3 class="page-name title"><span class="page-emoji ">📊&nbsp;</span>The 25 Biggest Bankruptcies in American History - 24/7 Wall St.</h3>
+        <small class="page-url url "><a href="https://247wallst.com/special-report/2023/04/16/the-25-biggest-bankruptcies-in-american-history/" target="_blank">(https://247wallst.com/special-report/2023/04/16/the-25-biggest-bankruptcies-in-american-history/)</a><br></small>
+        <small class="page-rating rating ">评分: 9.5<br></small>
+        <small class="page-annotation annotation ">注释: 讨论菅前最大的倒闭事件，提供数据与分析，展现行业崩溃的全貌。<br></small>
+    </div>
+    <div class="page-content content"><h2>美国历史上25起最大规模的破产案</h2>
+<p>根据标普全球市场情报的数据，今年前三个月申请清算或重组的公司数量是去年同期的两倍多，也是自2010年以来任何一个可比季度公司破产数量最高的时期。</p>
+<p>今年迄今为止，规模最大的上市美国公司破产案包括派对城零售商和企业通信提供商Avaya。投资者正在关注家居用品销售商Bed Bath &amp; Beyond、电影连锁店AMC和药剂师Rite Aid等公司是否很快也会面临同样的命运。</p>
+<p>但到目前为止，今年最引人注目的公司破产案是SVB金融集团，也就是硅谷银行。这家成立40年的加州圣克拉拉银行在3月份破产时是美国第16大银行，也是美国历史上第三大上市公司破产案。</p>
+<p>为了确定美国历史上25起规模最大的上市公司破产案，24/7 Tempo审查了BankruptcyData 2021年破产年鉴、年鉴和名录以及美国法院行政办公室的破产申请数据。根据破产时其总资产对申请第11章或第7章破产的上市公司进行排名。（数据未经通货膨胀调整。）</p>
+<p>这些公司在申请破产时，资产规模介于赫兹公司（2021年10月走出破产）的258亿美元到已倒闭的纽约投资银行雷曼兄弟的惊人的6911亿美元之间。</p>
+<p>本榜单上的八家公司在2008年和2009年美国次级抵押贷款市场崩盘引发的全球信贷危机高峰期申请破产。</p>
+<p>在这些破产案中，只有三起发生在2000年之前，其中两起是由于20世纪80年代大规模储蓄和贷款危机造成的。本榜单上最早的破产案是由德士古公司提出的，该公司曾经是美国主要的全球石油和天然气公司，现在已经缩减为雪佛龙公司拥有的一个燃油品牌和一些加油站。</p>
+<h3>25. 赫兹公司</h3>
+<p>&gt; 破产时资产：258亿美元</p>
+<p>&gt; 申请破产日期：2020年5月22日</p>
+<p>2020年5月，全球新冠病毒疫情导致这家全球最大的汽车租赁公司之一破产，因为这场全球病毒疫情导致商务和旅游出行停滞，加剧了这家位于佛罗里达州埃斯特罗公司的债务问题。该公司还拥有Dollar、Thrifty和Firefly汽车租赁品牌，于2021年10月摆脱破产，当时旅游业强劲复苏，为振兴公司带来了活力。《纽约时报》报道称，由Knighthead Capital Management和Certares Management领导的一组投资者向赫兹公司提供了59亿美元的资金支持。</p>
+<h3>24. 新世纪金融公司</h3>
+<p>&gt; 破产时资产：261亿美元</p>
+<p>&gt; 申请破产日期：2007年4月2日</p>
+<p>这家前位于加利福尼亚州尔湾的次级抵押贷款机构是美国抵押贷款和房地产市场即将出现的麻烦的预兆。它在2007年12月美国陷入大萧条的八个月前申请破产。据《洛杉矶时报》报道，2010年，几名前公司官员同意支付9000万美元以解决该公司倒闭引发的诉讼。</p>
+<h3>23. 卡尔派恩公司</h3>
+<p>&gt; 破产时资产：272亿美元</p>
+<p>&gt; 申请破产日期：2005年12月20日</p>
+<p>卡尔派恩公司在2008年1月摆脱破产，此前该公司在2001年底能源公司和商品交易商安然公司倒闭以及批发能源市场危机之后，债务不断增加。在破产期间，卡尔派恩公司被迫出售其在美国和加拿大的资产，使其总发电能力下降了5000兆瓦以上。如今，卡尔派恩公司的地位更好，是美国天然气和地热发电的领导者。</p>
+<h3>22. 莱昂戴尔化学公司</h3>
+<p>&gt; 破产时资产：274亿美元</p>
+<p>&gt; 申请破产日期：2009年1月6日</p>
+<p>莱昂戴尔巴塞尔是一家总部位于荷兰的全球大型石化公司。由于债务不断增加和需求下降，该公司在美国的业务在大萧条期间申请破产。据路透社报道，在巴塞尔以127亿美元收购莱昂戴尔之后，莱昂戴尔的债务负担加重，此次收购由乌克兰裔美国和英国亿万富翁伦·布拉瓦特尼克领导。莱昂戴尔化学公司是本榜单上八家在2008年和2009年申请破产的公司之一。</p>
+<h3>21. 通用增长地产公司</h3>
+<p>&gt; 破产时资产：296亿美元</p>
+<p>&gt; 申请破产日期：2009年4月16日</p>
+<p>在其破产时，通用增长地产公司是美国第二大购物中心业主。全球经济衰退导致美国消费者支出下降，并摧毁了商业房地产市场，使GGP的破产成为“美国历史上最大的房地产失败”，据路透社报道。这家总部位于芝加哥的公司拥有大量宝贵的房产，例如曼哈顿的南街海港和波士顿的费内尔大厅市场。布鲁克菲尔德房地产合伙公司于2018年以92.5亿美元的价格完成了对GGP的收购。</p>
+<h3>20. 新英格兰银行</h3>
+<p>&gt; 破产时资产：298亿美元</p>
+<p>&gt; 申请破产日期：1991年1月7日</p>
+<p>在其倒闭时，总部位于波士顿的新英格兰银行已在长期董事长兼首席执行官沃尔特·康诺利领导下的积极扩张战略下发展成为一家主要的美国银行控股公司。据《华盛顿邮报》报道，当美国经济于1989年崩溃时，这家银行“拥有最多的不良贷款和最大的损失”。联邦政府接管了这家银行，并申请了第7章破产。需要注意的是，新罕布什尔的New England银行与这家已倒闭的银行没有任何关系。</p>
+<h3>19. 环球跨洋公司</h3>
+<p>&gt; 破产时资产：302亿美元</p>
+<p>&gt; 申请破产日期：2002年1月28日</p>
+<p>环球跨洋公司的破产发生在能源公司和商品交易商安然公司倒闭几周之后，并且正值这家百慕大注册的电信公司因涉嫌证券欺诈而解决众多诉讼的会计丑闻之中，据Investopedia报道。当时，这是美国历史上第四大破产案。2011年，该公司以30亿美元的价格被Level 3 Communications收购。</p>
+<h3>18. IndyMac Bancorp</h3>
+<p>&gt; 破产时资产：327亿美元</p>
+<p>&gt; 申请破产日期：2008年7月31日</p>
+<p>这家位于加利福尼亚州帕萨迪纳的贷款机构在联邦存款保险公司接管该公司的银行部门IndyMac联邦银行FSB以保护储户之后申请破产。路透社报道称，当时这是自20世纪80年代储蓄和贷款危机以来最大的银行倒闭事件。几周后，华盛顿互助银行和雷曼兄弟的倒闭使IndyMac的破产相形见绌，它们是美国历史上规模最大的破产案。</p>
+<h3>17. Refco</h3>
+<p>&gt; 破产时资产：333亿美元</p>
+<p>&gt; 申请破产日期：2005年10月17日</p>
+<p>纽约市的Refco是美国最大的独立商品交易商，当其前董事长兼首席执行官菲利普·贝内特面临欺诈指控时，该公司开始关闭其主要业务。这位英国商人承认犯有共谋犯证券欺诈罪，被判处16年监禁。贝内特从Refco购买不良债务以将其隐藏在季度报告中，然后用来自Refco子公司的钱偿还贷款。</p>
+<h3>16. 美国金融公司</h3>
+<p>&gt; 破产时资产：339亿美元</p>
+<p>&gt; 申请破产日期：1988年9月9日</p>
+<p>1989年2月，在联邦政府在20世纪80年代的储蓄和贷款危机期间花费20亿美元对美国储蓄和贷款协会进行纾困之后，这家银行的母公司、位于加利福尼亚州尔湾的美国金融公司将其1988年的第11章破产申请改为第7章，据《洛杉矶时报》报道。此举意味着这家贷款机构将被清算以偿还债权人，而不是通过未来的收益进行重组以偿还债务。</p>
+<h3>15. 德士古公司</h3>
+<p>&gt; 破产时资产：349亿美元</p>
+<p>&gt; 申请破产日期：1987年4月12日</p>
+<p>德士古公司成立于1902年，德克萨斯州博蒙特的油田，这段旅程漫长而奇特。1928年，它成为第一家在美国全国销售汽油的公司，后来走向全球，成为全球最大的石油公司之一。该公司在1984年不成功的收购Getty石油公司导致其倒闭，之后宾州石油公司因合同干扰对其提起诉讼，导致巨额105亿美元的罚款，最终导致德士古公司破产。如今，德士古已缩减为雪佛龙公司拥有的同名燃油和加油站品牌。</p>
+<h3>14. 太平洋燃气和电力公司</h3>
+<p>&gt; 破产时资产：362亿美元</p>
+<p>&gt; 申请破产日期：2001年4月6日</p>
+<p>2000-2001年加州能源危机导致全州范围内的轮流停电，并导致太平洋燃气和电力公司破产。根本原因是干旱条件、新的发电设施部署缓慢以及安然公司可疑的能源市场操纵行为导致批发能源价格飙升。在一项受到消费者团体批评的举措中，母公司太平洋燃气和电力公司“采取措施确保其其他子公司的资产在太平洋燃气公司破产的情况下不会被扣押”，《纽约时报》报道。</p>
+<h3>13. 松树岭抵押公司</h3>
+<p>&gt; 破产时资产：355亿美元</p>
+<p>&gt; 申请破产日期：2009年5月1日</p>
+<p>这家总部位于新墨西哥州圣达菲的房地产投资信托公司专门从事巨额和超巨额可调利率抵押贷款——为高价房产提供的住房贷款，为信用良好的买家提供一段时间的固定低利率。在大萧条期间，随着房屋销售和价值暴跌，松树岭抵押公司申请破产。2012年，美国证券交易委员会指控该公司的三位高管“在金融危机初期隐瞒了公司不断恶化的财务状况”。</p>
+<h3>12. 克莱斯勒公司</h3>
+<p>&gt; 破产时资产：393亿美元</p>
+<p>&gt; 申请破产日期：2009年4月30日</p>
+<p>与通用汽车（见第5名）一样，这家位于密歇根州奥本山的克莱斯勒公司在全球金融危机期间申请破产保护后，得到了政府的纾困。到意大利汽车制造商菲亚特完成对这家美国制造商（生产Ram皮卡、道奇挑战者和吉普车）的收购时，联邦政府已花费13亿美元将该公司从崩溃中拯救出来。如今，克莱斯勒是总部位于荷兰的意裔美国汽车巨头Stellantis（前身为菲亚特克莱斯勒汽车公司）的美国子公司。</p>
+<h3>11. MF环球控股公司</h3>
+<p>&gt; 破产时资产：405亿美元</p>
+<p>&gt; 申请破产日期：2011年10月31日</p>
+<p>这家位于纽约市的商品期货经纪商是本榜单上2009年之后发生的第一个破产案，尽管它的起源可以追溯到2007年，当时它从Man Financial Group分拆出来，当时全球市场的动荡开始加剧。据Investopedia报道，该公司灭亡的原因归咎于与使用以欧元计价的主权债务作为信用担保相关的“激进甚至过度冒险”。在新泽西州前州长、曾任高盛经理的乔恩·科尔赞被任命为公司首席执行官和董事长19个月后，该公司破产。</p>
+<h3>10. 能源未来控股公司</h3>
+<p>&gt; 破产时资产：410亿美元</p>
+<p>&gt; 申请破产日期：2014年4月29日</p>
+<p>这家总部位于达拉斯的公司负债400亿美元，它是德克萨斯州公用事业领导者Luminant和Oncor Electric的业主，该公司在KKR、高盛和TPG Capital以450亿美元的历史性杠杆收购收购该公司（前身为TXU公司）六年后申请破产，EFH最初试图剥离Luminant并允许债权人接管Oncor，但这笔交易后来被取消，据福布斯报道。2017年，总部位于圣地亚哥的森普拉能源公司以94.5亿美元的价格收购了Oncor，击败了沃伦·巴菲特的伯克希尔·哈撒韦公司以90亿美元收购EFH的出价。</p>
+<h3>9. 康瑟科公司</h3>
+<p>&gt; 破产时资产：614亿美元</p>
+<p>&gt; 申请破产日期：2002年12月17日</p>
+<p>这家位于印第安纳州卡梅尔的金融服务控股公司在一系列激进的收购中积累了无法偿还的60亿美元债务后陷入破产。据《洛杉矶时报》报道，当时，这是继2001年12月安然公司和2002年7月WorldCom公司之后，第三大第11章破产申请。该公司于2003年走出破产，如今运营为CNO金融集团，一家保险公司。</p>
+<h3>8. 安然公司</h3>
+<p>&gt; 破产时资产：655亿美元</p>
+<p>&gt; 申请破产日期：2001年12月2日</p>
+<p>这家总部位于休斯顿的能源和商品交易公司在一场大规模的刑事会计丑闻中倒闭，这场丑闻导致了当时有史以来规模最大的破产案。在内部举报人披露公司高管通过公司控制的有限合伙企业隐瞒债务和亏损之后，安然公司倒闭。高管肯尼斯·莱和杰弗里·斯基林因该计划被判有罪。莱于2006年在判刑前去世。斯基林的刑期后来被减轻。在服刑12年后，他于2019年2月获释。</p>
+<h3>7. PG&amp;E公司（太平洋燃气）</h3>
+<p>&gt; 破产时资产：714亿美元</p>
+<p>&gt; 申请破产日期：2019年1月29日</p>
+<p>2001年，太平洋燃气和电力公司申请破产。这次是其母公司PG&amp;E公司在因公用事业公司维护不善的设备引发的破坏性和致命性野火而累积了300亿美元的债务后，申请了第11章破产保护，据《纽约时报》报道。它仍然是有史以来美国最大的公用事业公司破产案，仅次于近二十年前太平洋燃气和电力公司的破产。</p>
+<h3>6. 美国信贷集团</h3>
+<p>&gt; 破产时资产：804亿美元</p>
+<p>&gt; 申请破产日期：2009年11月1日</p>
+<p>美国信贷集团成立于1908年，最初是圣路易斯的一家地方小型企业贷款机构，后来发展成为加拿大和美国中小企业的主要信贷来源。在大萧条于2009年6月结束四个月后，该公司申请了第11章破产，这对2008年12月批准23.3亿美元的“问题资产救助计划”资金以帮助该公司保持偿付能力的联邦政府来说，这是一次特别令人刺痛的重组。如今，美国信贷集团是总部位于北卡罗来纳州罗利的First Citizens BancShares的子公司。</p>
+<h3>5. 通用汽车公司</h3>
+<p>&gt; 破产时资产：910亿美元</p>
+<p>&gt; 申请破产日期：2009年6月1日</p>
+<p>总部位于底特律的通用汽车公司成为2008-09年金融危机期间“大到不能倒”的纾困的象征。到2013年美国财政部在该公司2009年破产后退出对这家汽车制造商的部分所有权时，联邦政府已花费112亿美元亏本出售其通用汽车股票。如今，这家生产9000磅重悍马电动卡车和19英尺长GMC Yukon XL的制造商已经恢复到通过股息和股票回购向股东返还资本。</p>
+<h3>4. WorldCom公司</h3>
+<p>&gt; 破产时资产：1039亿美元</p>
+<p>&gt; 申请破产日期：2002年7月21日</p>
+<p>两家公司在上世纪之交成为公司渎职的象征：能源和商品公司安然公司和WorldCom公司，后者曾是美国第二大长途电话公司。在公司内部审计副总裁辛西娅·库珀发现虚报的收益报表后，WorldCom公司倒闭。几名高管承认犯有欺诈罪，首席执行官伯纳德·埃伯斯服刑了25年刑期的13年。他于2019年因健康原因获得狱方同情释放。</p>
+<h3>3. SVB金融集团</h3>
+<p>&gt; 破产时资产：2118亿美元</p>
+<p>&gt; 申请破产日期：2023年3月17日</p>
+<p>硅谷银行是美国25起规模最大的上市公司破产案中最新的一起，排名第三。这家成立40年的加州圣克拉拉银行是美国第16大银行，主要专注于风险投资支持的科技和医疗保健初创企业。SVB的倒闭是由于其严重依赖长期债务（如美国国债），而没有预料到旨在抑制通货膨胀的当前高利率环境，再加上科技行业经济低迷导致提款增加。</p>
+<h3>2. 华盛顿互助银行</h3>
+<p>&gt; 破产时资产：3279亿美元</p>
+<p>&gt; 申请破产日期：2008年9月26日</p>
+<p>这家银行成立于1889年的西雅图，发展成为全国最大的储蓄和贷款公司。华盛顿互助银行令人震惊的未能经受住2007-08年美国次级抵押贷款危机，使其获得了令人怀疑的双重荣誉：成为美国历史上第二大破产案和第二大银行倒闭案。在银行挤兑导致10天内提取167亿美元后，政府将WaMu置于联邦存款保险公司的控制之下。</p>
+<h3>1. 雷曼兄弟公司</h3>
+<p>&gt; 破产时资产：6911亿美元</p>
+<p>&gt; 申请破产日期：2008年9月15日</p>
+<p>这家位于纽约市的投资银行的倒闭时间与华盛顿互助银行的倒闭时间非常接近：两家公司都在2009年9月相隔两周内申请破产——这是本榜单上八家在2008年或2009年全球金融危机期间倒闭的公司中的两家。雷曼兄弟在申请破产时的资产总额超过了接下来三家规模最大的美国破产案的资产总和。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="How-Kodak-Failed">
+        <h3 class="page-name title"><span class="page-emoji ">📸&nbsp;</span>How Kodak Failed</h3>
+        <small class="page-url url "><a href="https://www.forbes.com/sites/chunkamui/2012/01/18/how-kodak-failed/" target="_blank">(https://www.forbes.com/sites/chunkamui/2012/01/18/how-kodak-failed/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: Kodak如何错失数字摄影机会的分析，强调技术和管理转型的重要性。<br></small>
+    </div>
+    <div class="page-content content"><h2>柯达的失败</h2>
+<p>(更新于 2012 年 1 月 19 日——柯达已申请破产保护。)</p>
+<p>很少有公司犯下像柯达在数码摄影方面错失良机那样令人震惊的错误，而这项技术正是柯达发明的。这一战略失误是柯达几十年来衰落的直接原因，数码摄影摧毁了其基于胶片的商业模式。</p>
+<p>我的Devil&#x27;s Advocate Group同事、前柯达高管文斯·巴拉巴的新书，对导致柯达走向破产的种种选择提供了见解。巴拉巴的书，《决策织机：组织中交互式决策的设计》，也为其他面临颠覆性技术的组织如何避免自己的“柯达时刻”提供了明智的建议。</p>
+<p>史蒂夫·萨森，1975 年发明第一台数码相机的柯达工程师，这样描述公司对其发明的最初反应：</p>
+<p>但那是无胶卷的摄影，所以管理层的反应是，“这很可爱——但不要告诉任何人。”</p>
+<p>（摘自《纽约时报》，2008 年 5 月 2 日）</p>
+<p>柯达管理层无法将数码摄影视为颠覆性技术，即使其研究人员不断扩展该技术的边界，这种情况持续了几十年。直到 2007 年，柯达的一段营销视频仍然需要大肆宣扬“柯达回来了”以及柯达“不会再在数码领域被动挨打了”。</p>
+<p>为了理解柯达是如何长期处于否认状态的，让我回到文斯·巴拉巴在 1981 年（当时他是柯达市场情报主管）讲述的一个故事。大约在索尼推出第一台电子相机的时候，柯达最大的零售照相冲印商之一问他是否应该担心数码摄影。在柯达首席执行官的支持下，巴拉巴进行了一项非常广泛的研究工作，研究了卤化银胶卷与数码摄影的核心技术和可能的采用曲线。</p>
+<p>该研究的结果既有“坏”消息，也有“好”消息。“坏”消息是，数码摄影有可能取代柯达已建立的基于胶片的业务。“好”消息是，这需要一段时间才能发生，柯达大约有十年时间来为这一转变做准备。</p>
+<p>这项研究的预测基于许多因素，包括：数码摄影设备的成本；图像和打印的质量；以及各种组件（如相机、显示器和打印机）的互操作性。所有这些都指向一个结论，即数码摄影的采用在一段时间内将是微不足道的，不会构成威胁。历史证明，这项研究的结论在短期和长期内都非常准确。</p>
+<p>问题在于，在其 10 年的机遇窗口期内，柯达几乎没有为后来的颠覆做任何准备。事实上，柯达犯了其创始人乔治·伊士曼之前两次都避免犯的错误，即放弃了有利可图的干板业务转向胶卷，以及投资彩色胶卷，即使它明显不如柯达占据主导地位的黑白胶卷。</p>
+<p>巴拉巴于 1985 年离开柯达，但仍与柯达的高级管理层保持密切联系。因此，他密切关注到，柯达并没有像伊士曼对待之前的颠覆性技术那样为数码摄影取代胶卷做好准备，而是选择利用数码技术来提高胶卷的质量。</p>
+<p>即使在 1986 年，柯达的研究实验室开发出第一台百万像素相机（巴拉巴的研究预测这是独立数码摄影生存能力的一个转折点），这种策略仍然持续下去。</p>
+<p>将数码技术作为胶卷业务的支撑的策略最终导致 1996 年推出了 Advantix 预览胶卷和相机系统，柯达为此投入了超过 5 亿美元用于开发和发布。Advantix 系统的一个关键特性是它允许用户预览他们的照片并指示他们想要打印多少张。Advantix 预览之所以能够做到这一点，是因为它是一台数码相机。然而，它仍然使用胶卷并强调打印，因为柯达从事的是照相胶卷、化学品和纸张业务。Advantix 失败了。为什么要购买数码相机，还要为胶卷和打印付费呢？柯达注销了几乎全部的开发成本。</p>
+<p>正如保罗·卡罗尔和我一起在“数十亿美元的教训：从过去 25 年最不可原谅的商业失败中你能学到什么”中所描述的那样，柯达在那些关键的年份里还遭受了其他一些严重的自我伤害：</p>
+<p>1988 年，柯达以 51 亿美元收购了司特灵制药公司，认为它实际上是一家化工公司，其中一部分业务是摄影公司。柯达很快发现，经过化学处理的相纸与荷尔蒙药物和心血管药物并不完全相似，于是它以约一半的原始购买价格将其出售。</p>
+<p>1989 年，柯达董事会有机会在首席执行官科尔比·钱德勒退休时改变路线。选择权落在了菲尔·桑珀和凯·惠特莫尔身上。惠特莫尔代表传统的胶卷业务，他在那里晋升了三十年。桑珀对数码技术有很深的理解。董事会选择了惠特莫尔。正如《纽约时报》当时报道的那样：</p>
+<p>惠特莫尔先生表示，他会确保柯达更贴近其在胶卷和照相化学品的核心业务。</p>
+<p>（摘自《纽约时报》，1989 年 12 月 9 日）</p>
+<p>桑珀辞职了，并在后来担任 Sun Microsystems 总裁和 Cray Research 首席执行官的职位上展示了他对数字世界的掌握。惠特莫尔只持续了一年多一点，在 1993 年被董事会解雇。</p>
+<p>在接下来的十多年里，一系列新的柯达首席执行官都会抱怨前任未能将组织转型为数码公司，宣布自己打算这样做，然后继续在转型中失败。1993 年接替惠特莫尔的乔治·费舍尔（他从摩托罗拉首席执行官的职位被吸引过来）抓住了核心问题，他告诉《纽约时报》，柯达将数码摄影视为敌人，一个邪恶的巨无霸，会扼杀几十年来推动柯达销售和利润的基于化学的胶卷和纸张业务。</p>
+<p>（摘自《纽约时报》，1999 年 12 月 25 日）</p>
+<p>费舍尔监督了 Advantix 的失败，并在 1999 年离职。正如 2007 年柯达的视频所承认的那样，这个故事在接下来的十年里并没有改变。柯达现在的市值是 1.4 亿美元，并且摇摇欲坠地走向破产。它的前景似乎减少到起诉苹果和其他公司侵犯其专利，而这些专利它从未能够转化为成功的产品。</p>
+<p>解决柯达面临的这类战略决策难题是文斯·巴拉巴的书《决策织机》中探讨的主要问题之一。柯达管理层不仅主导了技术突破的创造，而且还获得了关于这种能力的风险和机遇的准确市场评估。然而，柯达未能做出正确的战略选择。</p>
+<p>这对文斯·巴拉巴来说不是一个学术问题，而是他毕生工作的总结。他花了大部分职业生涯向高级管理层提供市场情报。除了在柯达的经历外，他的职业生涯还包括担任美国人口普查局局长（两次）、施乐市场研究主管、通用汽车战略主管（在其最近的一些最佳年份）以及入选市场研究名人堂。</p>
+<p>文斯·巴拉巴</p>
+<p>《决策织机》探讨了如何确保管理层正确使用市场情报。这本书概括了巴拉巴的处方，说明高级管理层如何将市场研究人员提供给他们的所有数据、信息和知识转化为做出正确决策的智慧。这是一个值得考虑的处方。</p>
+<p>巴拉巴认为，要实现有效的企业范围内的决策，需要四种相互关联的能力——在柯达的关键决策中，这些能力都没有得到很好的体现：</p>
+<ol>
+<li>具有开放变化的企业心态。</li>
+</ol>
+<p>除非高层足够开放并愿意考虑所有选择，否则决策过程很快就会变形。与两次采用颠覆性摄影技术的创始人乔治·伊士曼不同，柯达 80 年代和 90 年代的管理层不愿意将数码技术视为胶卷的替代品。这将他们限制在一条根本上有缺陷的道路上。</p>
+<ol>
+<li>全面思考和行动。</li>
+</ol>
+<p>将不同的职能分开然后优化通常会降低整体的有效性。就柯达而言，管理层在了解企业（包括其照相冲印合作伙伴）的各个部分如何在现有技术的框架内进行交互方面做得相当不错。然而，对柯达研究实验室在数码技术方面所做的努力却缺乏认识。</p>
+<ol>
+<li>能够使业务设计适应不断变化的条件。</li>
+</ol>
+<p>巴拉巴提出了三种不同的业务设计，它们沿着机械化到有机化的连续统一体——制造和销售、感知和响应以及预期和领导。正确的选择取决于市场的可预测性。柯达不愿意改变其在发展中的数码技术面前庞大而高效的制造和销售胶卷的能力，这使它失去了采用预期和领导型设计的机会，而这种设计本来可以确保它在数码图像处理领域占据领先地位。</p>
+<ol>
+<li>使用各种方法进行交互式决策。 这指的是在解决复杂的业务问题时能够结合一系列复杂的决策支持工具。柯达实施了一个非常有效的决策支持流程，但却未能有效地利用这些信息。</li>
+</ol>
+<p>虽然《决策织机》在很大程度上解释了柯达对数码摄影的缓慢反应，但它的真正价值在于它是当今管理者应对日益增多的颠覆性变化的指路明灯。鉴于几乎没有哪个行业没有面临颠覆性变化，对于任何高级（或有抱负的）管理人员来说，这是一本值得阅读的书。</p>
+<p>我是未来学家，也是战略和创新顾问。我还是……的作者。
+阅读更多</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Westinghouse:-Origins-and-Effects-of-the-Downfall-of-a-Nuclear-Giant">
+        <h3 class="page-name title"><span class="page-emoji ">⚛&nbsp;</span>Westinghouse: Origins and Effects of the Downfall of a Nuclear Giant</h3>
+        <small class="page-url url "><a href="https://www.worldnuclearreport.org/Westinghouse-Origins-and-Effects-of-the-Downfall-of-a-Nuclear-Giant.html" target="_blank">(https://www.worldnuclearreport.org/Westinghouse-Origins-and-Effects-of-the-Downfall-of-a-Nuclear-Giant.html)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 西屋电气的崛起和衰落为核能行业的未来提出了警示，与报告主题一致。<br></small>
+    </div>
+    <div class="page-content content"><h2>西屋电气：一家核电巨头的衰落及其影响</h2>
+<p>2017年3月29日，西屋电气公司（Westinghouse Electric Company），日本东芝公司的子公司，也是历史上全球最大的核电站建造商，根据美国纽约南区破产法院第11章申请破产保护。破产源于多种因素，最重要的是佐治亚州和南卡罗来纳州的两个项目巨额成本增加和工期延误。正如西屋电气公司网站较为谨慎地解释的那样，“由于美国AP1000核电站项目面临某些财务和施工挑战，公司正在寻求进行战略重组”。</p>
+<p>西屋电气的某些决策也导致了破产，例如收购参与沃格特勒反应堆项目的芝加哥桥梁和铁公司（CBI）。这项旨在解决复杂法律纠纷的收购，导致西屋电气“无法转嫁”与该项目相关的成本超支。</p>
+<p>然而，从根本上来说，导致这次破产的是西屋电气和东芝做出的两个赌注。第一个赌注是核电站市场将持续增长且规模巨大。当东芝于2006年2月从英国核燃料有限公司（BNFL）收购西屋电气时，新闻稿自信地预测：“到2020年，全球核电市场预计将比今天增长50%”。当时，东芝总裁兼首席执行官估计，到2020年，每年将建造10座大型（1吉瓦）核反应堆，新增反应堆容量为130吉瓦。这一估计至少与实际情况相差了一个数量级。当时，许多人对即将到来的核能复兴大肆炒作，包括西屋电气的员工。</p>
+<p>西屋电气和东芝做的第二个赌注是，可以使用其AP1000设计解决众所周知的成本增加和建设周期过长的问题。这些问题困扰着世界各地的核电站。事实上，一项关于建设成本超支的研究表明，在调查的180个核电项目中，有175个项目超过了最初预算，平均超出117%，平均工期比预期延长64%。西屋电气承诺打破这一趋势，因为他们预计，“由于设计的大幅简化，工厂成本和建设进度将直接受益”，并且采用了“模块化施工技术”。基于这些，西屋电气估计“一座双机组工厂每千瓦时的成本约为3.0到3.5美分/千瓦时”。西屋电气预测，AP1000反应堆将“拥有大约36个月的加速建设周期，从浇筑第一块混凝土到装载燃料”。</p>
+<p>所有这些预测在中国（三门和海阳项目）都彻底失败了，尤其是在美国。模块化施工方法只是将部分问题从施工现场转移到了工厂。</p>
+<p>一个重要的技术问题来源（尽管不是唯一一个）是美国制造商柯蒂斯-莱特公司（Curtiss-Wright Corporation）提供的反应堆冷却泵（RCP）。2013年1月，《核情报周刊》（NIW）报道称，柯蒂斯-莱特公司发现泵内的一个“叶片与……铸件分离”，不得不召回已发运的RCP。进行必要的更改和修复花费了两年时间。最近，2017年2月，《核情报周刊》报道称，在预调试测试中，屏蔽块内的材料“体积膨胀并从屏蔽块挤出到喷嘴库”，并且根据西屋电气提交给美国核管理委员会的一份经过大量编辑的报告，“屏蔽块内部增压”，公司被迫承认，“没有充分考虑”屏蔽材料体积膨胀的可能性。从这些报告中可以得到的普遍印象是，西屋电气匆忙推出了一个半成品设计。</p>
+<p>中国核官员过去曾对这些问题表示担忧。例如，2013年，中国核工业集团公司（CNNC）前副总裁兼原子能部副部长向《南华早报》抱怨说：“我们的国家领导人高度重视[核安全]，但执行项目的公司似乎没有同样的认识水平”。西屋电气在中国获得更多建造核反应堆合同的想法，至少可以说是不切实际的。正如厦门大学中国能源经济研究中心主任林伯强告诉彭博社的那样：“西屋电气在中国赢得合同的唯一方法是证明他们比中国的任何其他公司都能更快、更便宜地建造反应堆，并用行动而非言语赢得人心。到目前为止，西屋电气尚未展现出这种能力。”</p>
+<p>西屋电气破产对它参与的核电项目意味着什么，目前还不清楚，尤其是韩国电力公司（KEPCO）——唯一一个有实力的潜在买家——排除了收购该公司。中国国家电力投资集团有限公司发表了乐观的声明：“西屋电气的重组申请不会对三代反应堆的工作产生重大影响，例如AP1000的建设、后续一批CAP1000反应堆的建设或CAP1400示范项目。” 这一声明是基于仔细评估还是仅仅基于“重大”一词的固有含糊性，还有待观察。然而，毫无疑问，过分乐观的假设，甚至可以说是脱离实际的一厢情愿，是该公司衰落的一般原因——就像其法国同行阿海珐公司（AREVA）一样。</p>
+<p>美国AP1000项目的结局更为严峻，放弃是一个明确的选择。就佐治亚州的沃格特勒项目而言，该州公共事业委员会主席斯坦·怀斯指出，“沃格特勒核电站可能根本无法完工。这对我们认为可能是佐治亚州甚至下一个世纪最佳能源选择的事情来说，是一个真正的打击。” 但他还谈到了沃格特勒计划最初获得批准后能源格局的变化，“天然气价格变得非常便宜，太阳能和电池等技术也在改进”，并宣布：“如果十年前我知道这些情况，我们会走另一条路。”</p>
+<p>另一方面，SCANA首席执行官凯文·马什更为乐观：“我们仍然致力于努力完成这些工厂。那将是我的首选方案。我认为现实中最不理想的选择是放弃。” 但他还表示，SCANA将在未来30天内评估各种方案，包括：继续建设两台新机组；专注于建设一台机组，推迟另一台机组的建设；继续建设一台机组，放弃另一台机组；以及放弃两台机组。</p>
+<p>独立分析人士指出，不立即放弃项目可能会导致“破产和重组的混乱，导致项目重组的不确定性长期存在，成本进一步螺旋式上升”。</p>
+<p>如果这两个项目中的任何一个被放弃，它们将加入1977年至1989年间在美国被放弃的40个新建核电项目（包括12个西屋电气反应堆）的行列，这些项目处于建设的不同阶段（详情请参见全球核电数据库）。当时，几家公用事业公司破产。最引人注目的破产发生在1983年8月。在被称为“哎呀”的事件中，华盛顿公共电力供应系统“正式宣布，它无法偿还用于资助华盛顿州两座现已废弃的核电站部分建设的22.5亿美元债券”，这导致了“美国历史上最大的市政债券违约”。该地区的纳税人仍在为这些项目买单。</p>
+<p>2014年，西屋电气第二次未能获得美国能源部小型模块化反应堆（SMR）商业化项目的资金后，“调整了”致力于SMR“开发”的员工，并将他们的工作重点转移到了AP1000。现在，由于AP1000也被证明是商业和工程上的失败，西屋电气可能需要转向B计划，专注于其业务中盈利的部分：退役核电站，西屋电气当时的首席执行官丹尼·罗德里克曾表示：“我们认为这将成为我们每年10亿美元的业务。”</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="The-rise-and-fall-of-General-Motors-|-The-Week">
+        <h3 class="page-name title"><span class="page-emoji ">🚗&nbsp;</span>The rise and fall of General Motors | The Week</h3>
+        <small class="page-url url "><a href="https://theweek.com/articles/504619/rise-fall-general-motors" target="_blank">(https://theweek.com/articles/504619/rise-fall-general-motors)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 通用汽车的历史反映了企业如何管理市场变化的挑战，信息密度良好。<br></small>
+    </div>
+    <div class="page-content content"><h2>通用汽车的兴衰</h2>
+<p>通用汽车公司，曾经是美国工业实力的象征，如今却寻求破产保护。究竟哪里出了问题？</p>
+<p>通用汽车公司存在多久了？</p>
+<p>这似乎是永远的事。该公司由一位名叫威廉·杜兰特的夸夸其谈的推销员于1908年创立，最初唯一的资产是别克汽车。杜兰特在18个月内收购了其他30家汽车制造商，包括奥兹莫比尔、庞蒂克和凯迪拉克。这次收购狂潮使公司背负了无法偿还的债务（听起来很熟悉吗？），1912年，通用汽车的银行家解雇了杜兰特。他最终被阿尔弗雷德·斯隆取代，斯隆是一位古板、冷漠的工程师，但他的创新却与亨利·福特不相上下。但福特及其装配线革命了汽车的制造方式，而斯隆（执掌公司至1956年）则彻底改变了汽车的营销和销售方式。</p>
+<p>他是如何做到这一点的？</p>
+<p>通过细分市场，然后试图吸引每个细分市场。在斯隆的领导下，通用汽车努力为“每个钱包和目的”提供一辆汽车。通用汽车的一位高管表示，雪佛兰是“为平民百姓准备的”，庞蒂克是“为贫穷但自豪的人准备的”，奥兹莫比尔是“为舒适但谨慎的人准备的”，别克是“为奋斗的人准备的”，凯迪拉克是“为富人准备的”。通用汽车还生产了许多现代汽车的创新技术，包括动力转向和动力制动、独立悬架和自动变速器。而且重要的是，通用汽车是第一家几乎每年都改变汽车功能和风格的汽车公司——这使美国人养成了每隔几年更换汽车的习惯。随着通用汽车工厂生产出几乎所有价位的汽车，销量飙升，到20世纪50年代，美国道路上超过一半的车辆都是通用汽车制造的。</p>
+<p>究竟哪里出了问题？</p>
+<p>通用汽车的企业结构，斯隆称之为“分散的运营与协调的控制”，只要通用汽车主导行业，它就能很好地运作。但权力下放造成了十几个内部封地和巨大的低效率，随着竞争的加剧，特别是来自日本丰田的竞争，通用汽车无法适应。一个部门的汽车经常蚕食其他部门的销售额。其内部零部件公司向各个汽车部门收取过高的费用，而这些部门则被禁止向外部寻求更低的价格。各部门也拒绝合并采购和工资等后台业务。通用汽车还饱受劳资纠纷的困扰——1970年的一次罢工使40万工人停工67天，严重减缓了整个美国经济的运行。该公司在20世纪80年代在全球雇佣了80多万人，通过给予工会丰厚的薪酬和福利待遇来换取劳资和谐，从而赢得了“慷慨的通用汽车”的绰号。但这些劳资合同削弱了公司削减成本的能力。</p>
+<p>所以是工会的错吗？</p>
+<p>在某种程度上是的。面对竞争挑战，工会迟迟不愿缓和要求。他们抵制关闭不需要的工厂，并向通用汽车施压，要求创建一个“就业银行”，向下岗工人支付高达95%的工资和福利。但是，你不能责怪工人们管理层的傲慢和自满。1987年因失望而辞职的财务主管南希·罗特林说，总部的工作态度是：“我们是通用汽车。我们什么都知道，我们不需要改变。”高管们实际上被隔离在公司的其他部门之外，他们出入通用汽车底特律总部14楼的双电子门。他们通过私人地下车库进入大楼，并在私人餐厅享用美食。他们很少与顾客甚至他们自己的经销商互动，而经销商却直接了解顾客的喜好。</p>
+<p>管理层孤立的影响是什么？</p>
+<p>它极大地减缓了公司适应变化的市场——甚至认识到市场正在变化的能力。在20世纪70年代后期，飙升的汽油价格刺激了对小型、省油汽车的需求。通用汽车继续生产大型耗油汽车，而日本汽车制造商则向美国大量投放小型、省油的汽车，导致通用汽车在美国市场的份额降至约44%，这是自20世纪30年代以来的最低点。当通用汽车最终开始提供小型汽车时，这些汽车却存在质量问题。款式方面更是灾难：曾经创造出庞蒂克GTO和雪佛兰Camaro等性感、提升身份的汽车的公司，失去了其神奇的触感，开始生产雪佛兰Cobalt等古板、普通的车型。与此同时，宝马和雷克萨斯等外国品牌则成为财富和酷炫的象征。通用汽车的营销人员不知道如何恢复品牌的魅力，甚至还因其无能而加剧了损害。例如，雪佛兰Nova在美国的销量从未达到公司的预期，因为西班牙语中的“no va”的意思是“它不动”。</p>
+<p>通用汽车试图适应吗？</p>
+<p>是的，但是其根深蒂固的文化和庞大的规模妨碍了它。与此同时，联合汽车工人协会抵制了所有旨在缩减公司规模以匹配其下降销量的尝试。它拒绝为其现任成员和37.7万名退休人员重新谈判医疗福利，即使这使通用汽车每辆车的成本增加了约1200美元，这使得该公司在成本方面处于比日本竞争对手显著不利的境地。然而，最终是缺乏吸引力的汽车导致了通用汽车的衰落。这家曾经通过为每位消费者生产汽车而蓬勃发展的公司忘记了如何生产大多数人都想购买的汽车。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="The-Rise-and-Fall-of-WorldCom:-Story-of-a-Scandal">
+        <h3 class="page-name title"><span class="page-emoji ">🔍&nbsp;</span>The Rise and Fall of WorldCom: Story of a Scandal</h3>
+        <small class="page-url url "><a href="https://www.investopedia.com/terms/w/worldcom.asp" target="_blank">(https://www.investopedia.com/terms/w/worldcom.asp)</a><br></small>
+        <small class="page-rating rating ">评分: 9.5<br></small>
+        <small class="page-annotation annotation ">注释: WorldCom的失败讲述了企业内部管理和透明度的重要性，与报告高度吻合。<br></small>
+    </div>
+    <div class="page-content content"><h2>WorldCom 公司概述</h2>
+<p>WorldCom 是一家美国电信公司。在其鼎盛时期，WorldCom 是美国最大的长途电话提供商之一。该公司最出名的是卷入美国历史上最大的会计丑闻之一，紧随 Enron 和 Tyco 丑闻之后。这起丑闻源于该公司被揭露伪造账目。WorldCom 也经历了有史以来最大的破产案之一。该公司走出破产，重新品牌化，其网络资产被 Verizon 收购。</p>
+<h3>关键要点</h3>
+<ul>
+<li>WorldCom 公司由 Murray Waldron、William Rector 和 Bernard Ebbers 于 1983 年创建。</li>
+<li>该公司向客户提供折扣长途电话服务，并采取积极的收购策略，使其成为美国同类公司中规模最大的公司。</li>
+<li>WorldCom 陷入财务困境，并使用欺诈性会计手段向投资者和其他人士隐瞒其损失。</li>
+<li>由于丑闻，该公司申请破产，包括其首席执行官和首席财务官在内的多位关键人物受到惩罚。</li>
+<li>WorldCom 从破产中走出，进行了重组，并被 Verizon 收购。</li>
+</ul>
+<h2>了解 WorldCom</h2>
+<p>WorldCom 现在已经成为会计欺诈的代名词，并告诫投资者：如果事情看起来好得令人难以置信，那么它们很可能就是真的。该公司成立于 1983 年，名为长途折扣服务公司 (Long Distance Discount Service)。它是在 AT&amp;T 分拆后由 Murray Waldron、William Rector、早期投资者 Bernard Ebbers 及其商业伙伴创建的。该集团获得了一笔 65 万美元的贷款，这使他们能够购买用于路由长途电话的技术。由于法院命令 AT&amp;T 以低廉的价格将其电话线路租赁给新公司，Ebbers（公司的首席执行官）可以向他的客户提供非常低的费率。这使他能够通过收购多达 30 家竞争电信公司，将公司发展成为美国领先的长途电话公司之一。在互联网泡沫达到顶峰时，WorldCom 的市值增长到 1860 亿美元。当科技繁荣转向萧条，公司削减对电信服务和设备的支出时，WorldCom 采取会计伎俩来维持持续增长的盈利能力的表象。到那时，许多投资者开始怀疑 Ebbers 的说法——尤其是在 2001 年夏季 Enron 丑闻爆发之后。2002 年，据透露，Ebbers 向 WorldCom 董事会借款 4.08 亿美元，以支付以公司股票为抵押的贷款的保证金电话。与此同时，公司的会计欺诈和真实的财务状况逐渐浮出水面，证券交易委员会 (SEC) 开始进行调查。结果，Ebbers 面临垮台，并于 2002 年 4 月 30 日辞去首席执行官职务。2005 年，他被判犯有证券欺诈、共谋和虚假申报罪，被判处 25 年监禁。Ebbers 是一位传奇人物，他的标志是 10 加仑的帽子和牛仔靴。</p>
+<h2>伪造账目</h2>
+<p>有几个因素导致 WorldCom 亏损。该公司积极寻求收购，收购竞争对手公司以试图获得市场份额。这加上收入和费率的大幅下降，使公司进一步陷入困境。高管需要一种方法来向董事会和股东证明 WorldCom 仍然具有财务可行性。WorldCom 使用一系列有问题的会计手段来掩盖其财务状况，从而夸大了其利润。这相当于数十亿美元的资本支出被不当记录在账簿上。但这绝非一个复杂的欺诈行为。为了掩盖其利润下降，WorldCom 通过将费用记录为投资来夸大净收入和现金流。通过资本化支出，它夸大了 38 亿美元的收入，其中包括 2001 年的 30.55 亿美元和 2002 年第一季度的 7.97 亿美元，报告净利润为 13.8 亿美元，而不是净亏损。为了掩盖其利润下降，WorldCom 通过将费用记录为投资来夸大其净收入和现金流，报告利润为 13.8 亿美元——而不是净亏损。</p>
+<h2>举报人</h2>
+<p>一些个人在揭露 WorldCom 的欺诈行为中发挥了关键作用。这些人包括 WorldCom 内部审计部门副总裁 Cynthia Cooper 和另一位审计员 Gene Morse。他们对公司财务记录中的几个不一致之处表示担忧，包括：</p>
+<ul>
+<li>使用储备来提高公司收入</li>
+<li>公司的资本支出，另一名员工对此提出质疑并因此被解雇</li>
+<li>复杂的会计术语（例如预付能力），用于掩盖资本的流动</li>
+<li>缺乏证据来证实某些财务交易，包括 5 亿美元的资本支出</li>
+</ul>
+<p>Cooper 和 Morse 自己进行了调查以及审计。他们受到了公司首席财务官 Scott Sullivan 的挑战，后者要求推迟该过程。他们联系了取代安达信的外部审计师 KPMG 以及 WorldCom 的审计委员会。由于她的尽职调查，Cooper 被《时代》杂志评为年度人物，并于 2002 年登上该杂志的封面。她现在是一位作家、顾问和国际知名演讲者。</p>
+<h2>WorldCom 破产</h2>
+<p>一旦事情开始败露，该公司就再也无法维持下去。事实上，WorldCom 必须对其 1999 年至 2002 年 10 年期间的收益进行 110 亿美元的调整，据估计，欺诈金额约为 795 亿美元。破产是唯一的选择。WorldCom 于 2002 年 7 月 21 日申请第 11 章破产保护，仅在其前任审计师安达信被法院判决有罪并失去执业会计资格一个月后。到那时，该公司欠债权人的债务高达 77 亿美元。在其申请中，该公司指出资产为 1070 亿美元，债务为 410 亿美元。该申请允许 WorldCom 提供一些赔偿。这样做使现有客户能够继续接收服务。WorldCom 也能够支付员工工资并保留其资产。它还提供了一些急需的时间来进行重组，尽管它在企业市场上的光彩已经消失。</p>
+<h2>后果</h2>
+<p>参与该公司会计丑闻的一些关键人员因其行为而受到严厉惩罚，包括：</p>
+<ul>
+<li>Bernard Ebbers 被判犯有证券欺诈罪一项、共谋罪一项和与虚假 SEC 申报相关的七项欺诈罪。2005 年，他被判处 25 年监禁。</li>
+<li>Ebbers 于 2019 年 12 月 18 日因健康原因提前获释出狱，服刑约 13 年。</li>
+<li>前首席财务官 Scott Sullivan 在认罪并作证指控 Ebbers 后，被判处五年监禁。</li>
+<li>来自花旗集团、摩根大通和通用电气资本的债务人占有融资使该公司得以生存。</li>
+<li>它于 2004 年摆脱破产，并更名为 MCI——WorldCom 于 1997 年收购的一家电信公司。</li>
+<li>Verizon 于 2006 年收购了 MCI 及其资产。</li>
+<li>WorldCom 的前银行在未承认责任的情况下与债权人达成了 60 亿美元的和解协议。约 50 亿美元用于债券持有人，其余部分用于前股东。</li>
+<li>在与证券交易委员会 (SEC) 达成和解后，新成立的 MCI 同意向股东和债券持有人支付 5 亿美元现金和 1000 万股 MCI 股票。</li>
+<li>这系列的公司犯罪导致 2002 年 7 月出台了《萨班斯-奥克斯利法案》，该法案加强了信息披露要求和对欺诈性会计行为的处罚。</li>
+<li>在此之后，WorldCom 在会计公司、投资银行和信用评级机构的声誉上留下了一道污点，这道污点从未完全消除。</li>
+</ul></div>
+
+</div>
+</div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navigate = document.querySelector(".navigate");
+        if (!navigate) {
+            console.error("找不到 .navigate 元素!");
+            return;
+        }
+
+        let lastScrollY = 0; // 初始化滚动位置
+        const scrollContainer = document.querySelector(".right-column");
+        let isNavigating = false;
+        document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                isNavigating = true; // 设置导航状态
+                navigate.classList.add("navigate-hidden"); // 隐藏导航栏
+
+                setTimeout(() => {
+                    isNavigating = false;
+                }, 100);
+            });
+        })
+
+        scrollContainer.addEventListener("scroll", () => {
+            const currentScrollY = scrollContainer.scrollTop; // 获取容器的滚动位置
+
+            // 判断滚动方向
+            if (!isNavigating) {
+                if (currentScrollY > lastScrollY) {
+                    navigate.classList.add("navigate-hidden");
+                } else {
+                    navigate.classList.remove("navigate-hidden");
+                }
+            }
+
+            // 更新上一次的滚动位置
+            lastScrollY = currentScrollY;
+        });
+    });
+</script>
+</html>
