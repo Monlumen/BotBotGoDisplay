@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上海交通大学的校园有哪些隐藏的好地点? 你可能需要用中文搜索</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; 
+            background-color: #f4f6f8; 
+            color: #333; 
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        
+        .content {
+            border-radius: 12px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); 
+            background-color: #fff; 
+            padding: 16px; 
+            margin-bottom: 16px; 
+        }
+
+        
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .left-column{
+            flex: 0.47;
+        }
+        .right-column{
+            flex: 0.53;
+        }
+
+        .left-column {
+            background-color: #eef6ff; 
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; 
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Noto Serif", "SimSun", serif; 
+            position: relative;
+        }
+        .resizer {
+            width: 6px;
+            cursor: col-resize;
+            background-color: #d1d1d1;
+        }
+
+
+        
+        .title {
+            font-size: 1.4em; 
+            font-weight: 600; 
+            color: #1a1a1a; 
+            margin-bottom: 12px; 
+        }
+
+        .page-name.title {
+            font-size: 1.8em; 
+            font-weight: bold; 
+            color: #222; 
+            margin: 16px 0; 
+            text-align: left; 
+        }
+
+        .section-title {
+            font-size: 1.4em; 
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; 
+        }
+
+        
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; 
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; 
+            padding: 12px; 
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; 
+            border: 1px solid #dde3ea; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+            margin-bottom: 20px; 
+        }
+
+        
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; 
+            margin: 20px 0; 
+        }
+
+        
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; 
+            color: #666; 
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; 
+            border-radius: 8px; 
+            line-height: 1.4;
+            margin-bottom: 10px; 
+        }
+
+        
+        .page-rating {
+            background-color: #e8f4ff; 
+            color: #0078d7; 
+            font-weight: bold; 
+            border: 1px solid #aad4ff; 
+        }
+
+        
+        .page-annotation {
+            background-color: #fff5e5; 
+            color: #cc8400; 
+            font-style: italic; 
+            border: 1px solid #ffcc66; 
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; 
+        }
+
+        
+        a {
+            color: #0078d7; 
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+        
+        .content > * {
+            margin-bottom: 12px; 
+        }
+
+        
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; 
+            z-index: 300; 
+            background-color: #ffffff; 
+            color: #222; 
+            font-size: 1.1em; 
+            font-weight: 500; 
+            padding: 12px 16px; 
+            border-radius: 8px; 
+            border: 1px solid #d1e4f2; 
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05),  0 2px 4px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 16px; 
+            text-align: left; 
+            line-height: 1.6; 
+            font-family: "Inter", "Noto Sans", sans-serif; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        
+        .section-link-box {
+            display: inline-block; 
+            margin: 4px 2px; 
+        }
+
+        .section-link {
+            display: inline-flex; 
+            align-items: center; 
+            padding: 6px 12px; 
+            background-color: #eef6ff; 
+            color: #0078d7; 
+            font-size: 0.95em; 
+            font-weight: 500; 
+            text-decoration: none; 
+            border: 1px solid #d1e4f2; 
+            border-radius: 20px; 
+            transition: all 0.2s ease; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; 
+            color: #005bb5; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            text-decoration: underline; 
+        }
+
+        
+        .navigate {
+            display: flex; 
+            max-width: 40%;
+            width: fit-content; 
+            flex-wrap: nowrap; 
+            overflow-x: auto; 
+            gap: 4px; 
+            justify-content: center; 
+            padding: 4px 4px; 
+            background-color: #f4f6f8; 
+            border-radius: 12px; 
+
+            position: fixed;
+            top: 0;
+            left: 55%;
+            
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease; 
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        
+        .navigate-item {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            background-color: #ffffff; 
+            padding: 3px 6px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            transition: all 0.3s ease; 
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            transform: translateY(2px); 
+        }
+        .navigate-item.active {
+            box-shadow: 0 0 10px 3px rgba(0, 120, 215, 0.5); 
+            transform: translateY(1px); 
+        }
+        .navigate-item a {
+            text-decoration: none; 
+            color: #0078d7; 
+            font-weight: bold; 
+            font-size: 1em; 
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; 
+            margin-bottom: 1px; 
+        }
+        .navigate-item-id {
+            font-size: 0.9em; 
+            color: #555; 
+        }
+
+        [id] { 
+            scroll-margin-top: 55px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            上海交通大学的校园有哪些隐藏的好地点? 你可能需要用中文搜索
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">学术与文化场所</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#上海交通大学-历史-at-DuckDuckGo">
+    🏫历史 milestones</a></div><div class="section-link-box"><a class="section-link" href="#藏在上海高校里的秘密好地方-值得你一去">
+    🌱文化传承</a></div><div class="section-link-box"><a class="section-link" href="#藏在上海高校里秘密的好地方-值得你一去_手机新浪网">
+    🏛展览馆</a></div><div class="section-link-box"><a class="section-link" href="#上海交通大学16处老建筑被列入全国第八批文物保护建筑，其中包括邬达克在大学校园的唯一作品">
+    🏢文化遗产</a></div><div class="section-link-box"><a class="section-link" href="#上海交通大学-建筑风格-at-DuckDuckGo">
+    🏛</a></div><div class="section-link-box"><a class="section-link" href="#SJTU新水源社区重磅上线-上海交通大学网络信息中心">
+    💬</a></div><div class="section-link-box"><a class="section-link" href="#40年前大学生活是何样？数百件实物照片述说交大学霸故事_浦江头条_澎湃新闻-The-Paper">
+    📈</a></div><div class="section-link-box"><a class="section-link" href="#魔都100：上海交大盛宅——专属于交大人的秘密基地[图]_媒体聚焦_上海交通大学新闻学术网">
+    🏡</a></div></div>
+    <div class="section-content content"><h2>上海交通大学隐藏好地点：学术与文化场所</h2>
+<p>上海交通大学拥有丰富的学术和文化资源，以下几个地点值得探索：</p>
+<p><strong>1. 思源阁 (闵行校区图书馆内):</strong>  思源阁以交大校训“饮水思源”命名，馆内展出大量珍贵历史文物，例如交通大学创始人盛宣怀120年前的奏稿和电稿、老交大名师著作以及学生手写学位论文等，多数展品为首次公开展示[1, 2]。其古朴雅致的设计风格，融入诸多交大元素，如徐汇老校区的金水桥、牌坊校门等标志性建筑[1, 2]，营造出穿越时空的意境。 免费开放 [2]。</p>
+<p><strong>2. 园林植物标本园 (闵行校区):</strong>  位于闵行校区学森路与思源北路之间[2]，是上海第三大植物园，拥有超过1000种植物资源，其中木本植物800多种，草本植物400多种[1, 2]。涵盖木本植物、耐阴植物、水生植物等[1, 2]，为园艺、植物学、生物、药学、环境等专业提供实践基地[2]。 春季花期景色优美，吸引众多摄影爱好者[2]。（寒暑假闭园） 免费开放 [2]。</p>
+<p><strong>3. 钱学森图书馆 (徐汇校区):</strong>  作为国内首座国家级科学家纪念馆[2]，收藏了76000余份钱学森文献手稿及书籍，1500余张珍贵图片，700余件实物[2]。展览分为“中国航天事业奠基人”、“科学技术前沿的开拓者”、“人民科学家风范”和“战略科学家的成功之道”四个部分[1, 2]，展现钱学森的生平和成就。 免费开放 [2]。</p>
+<p><strong>4. 盛宅 (徐汇校区):</strong>  始建于1923年[3]，是南洋公学创始人盛宣怀夫人为孙子所建的私宅[3]，后曾用作女生宿舍、小学及幼儿园[3]。现为交大校友活动中心[3]，环境优美，开放时间为每日8:30-19:30[3]。该建筑具有鲜明的民国建筑特色，采用青砖、红砖饰边、弧形拱券等元素[3]。</p>
+<p><strong>5.  16处文物保护建筑 (徐汇校区):</strong>  包括老图书馆、新中院、中院等[4]，是近代最早由中国人创办的两所大学之一的校园建筑群[4, 5]，也是国内唯一一所跨越三个世纪、保留发源地与办学地不变的高校[4, 5]。这些建筑融合东西方古典复兴、装饰艺术、现代主义等多种艺术风格[4, 5]，集中展现了邬达克等近现代建筑大师的作品和当时的先进建筑技术[4]，并承载了丰富的历史文化和红色基因[4]。  2014年被列为上海市文物保护单位[4]。</p>
+<p>此外，校园内活跃的学生社团活动以及其他未提及的特色景点，也构成交大独特的校园文化氛围。</p>
+<p>[1] 藏在上海高校里的秘密好地方 值得你一去
+[2] 藏在上海高校里秘密的好地方 值得你一去_手机新浪网
+[3] 魔都100：上海交大盛宅——专属于交大人的秘密基地[图]_媒体聚焦_上海交通大学新闻学术网
+[4] 上海交通大学16处老建筑被列入全国第八批文物保护建筑，其中包括邬达克在大学校园的唯一作品
+[5] 每一所大学都有自己独特的历史，但不是每一所大学都有古老的校园建筑</p></div>
+</div><div class="section">
+    <h3 class="section-title title">历史建筑与文化遗产</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#藏在上海高校里秘密的好地方-值得你一去_手机新浪网">
+    🏛思源阁</a></div><div class="section-link-box"><a class="section-link" href="#上海交通大学-历史-at-DuckDuckGo">
+    🏫历史沿革</a></div><div class="section-link-box"><a class="section-link" href="#藏在上海高校里的秘密好地方-值得你一去">
+    🌱文化遗产</a></div><div class="section-link-box"><a class="section-link" href="#上海交通大学-建筑风格-at-DuckDuckGo">
+    🏛</a></div><div class="section-link-box"><a class="section-link" href="#上海交通大学16处老建筑被列入全国第八批文物保护建筑，其中包括邬达克在大学校园的唯一作品">
+    🏢</a></div></div>
+    <div class="section-content content"><h2>上海交通大学历史建筑与文化遗产</h2>
+<p>上海交通大学拥有丰富的历史文化遗产，其校园内众多建筑被列为文物保护单位，见证了学校百年发展历程，并体现独特的建筑风格和设计理念。  这些遗产可分为以下几类：</p>
+<p><strong>1.  16处市级文物保护建筑 (2014年4月4日被上海市人民政府公布):</strong>  这些建筑包括老图书馆、新中院、中院、新上院、工程馆、科学馆、北四楼、执信西斋、文治堂、总办公厅、体育馆、新建楼、盛宅、华山路校门、史穆烈士墓、五卅纪念柱。它们不仅具有重要的历史价值，也融合了东西方古典复兴、装饰艺术、现代主义等多种建筑风格，集中展现了邬达克等近现代建筑大师的作品以及当时先进的建筑材料和技术。  部分建筑（如图书馆、校门、工程馆）更由校友捐赠或主持修建，体现了深厚的校友情谊。 其中，史穆烈士墓和五卅纪念柱更承载着重要的国家记忆和红色基因，成为上海市革命先烈缅怀基地。  每幢历史建筑门口均设有二维码，扫描后可查看详细介绍。</p>
+<p><strong>2.  思源阁 (闵行校区图书馆内):</strong>  以校训“饮水思源”命名，馆内展出交通大学创始人盛宣怀120年前的奏稿和电稿、老交大名师著作以及学生手写学位论文等珍贵展品，多数为首次公开展示。其古朴雅致的设计风格融入了诸多交大元素，如徐汇老校区的金水桥、牌坊校门等，营造出独特的时空交错感。</p>
+<p><strong>3.  钱学森图书馆 (徐汇校区):</strong>  作为国内首座国家级科学家纪念馆，馆内收藏钱学森同志文献、手稿和书籍76000余份，珍贵图片1500余张，实物700余件。展览分为“中国航天事业奠基人”、“科学技术前沿的开拓者”、“人民科学家风范”和“战略科学家的成功之道”四个部分，全面展示钱学森的生平事迹及学术成就。</p>
+<p><strong>4. 盛宅:</strong>  南洋公学创始人盛宣怀夫人的孙子曾居住于此，现为校友活动中心。其建筑风格体现了民国时期的建筑特色，也承载着学校的历史记忆。</p>
+<p>这些地点构成了上海交通大学宝贵的文化遗产，不仅是美丽的校园风景，更蕴含着学校丰厚历史和文化底蕴，值得师生和游客深入探访和研究。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">特殊景点</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#藏在上海高校里的秘密好地方-值得你一去">
+    🌱思源阁</a></div><div class="section-link-box"><a class="section-link" href="#40年前大学生活是何样？数百件实物照片述说交大学霸故事_浦江头条_澎湃新闻-The-Paper">
+    📈钱学森图书馆</a></div><div class="section-link-box"><a class="section-link" href="#藏在上海高校里秘密的好地方-值得你一去_手机新浪网">
+    🏛</a></div></div>
+    <div class="section-content content"><h2>上海交通大学特殊景点详解</h2>
+<p>上海交通大学除常规教学设施外，拥有诸多独特的景点，深受师生喜爱，并吸引众多校外访客。这些景点或蕴含深厚历史文化底蕴，或具备独特的自然景观，或兼具两者特色，成为校园生活中不可或缺的一部分。  具体如下：</p>
+<ol>
+<li>
+<p><strong>思源阁 (闵行校区图书馆内):</strong>  该馆以校训“饮水思源”命名，设计风格古朴雅致，融入了诸多交大元素，例如徐汇老校区的金水桥、牌坊校门等标志性建筑的元素 (参见新浪网报道)。馆内收藏了包括交大创始人盛宣怀120年前的奏稿和电稿、老交大名师著作以及学生手写学位论文等珍贵展品，多数展品为首次整理并公开展示 (参见新浪网及澎湃新闻报道)。其历史价值极高，是了解学校历史文化的绝佳去处，并于4月5日起向社会免费开放(新浪网报道)。</p>
+</li>
+<li>
+<p><strong>园林植物标本园 (闵行校区):</strong>  位于闵行校区学森路、思源北路之间(D26幢东侧)，是上海第三大植物园(新浪网及“藏在上海高校里的秘密好地方”报道)，拥有超过1000种植物资源，其中木本植物800多种，草本植物400多种 (新浪网及“藏在上海高校里的秘密好地方”报道)，涵盖木本植物、耐阴植物、水生植物等多种类型，堪称“植物王国”。春天百花齐放，樱花、海棠、桃花等竞相烂漫，是摄影爱好者和赏春游客的理想去处 (新浪网报道)。寒暑假闭园养护。(新浪网报道)</p>
+</li>
+<li>
+<p><strong>钱学森图书馆 (徐汇校区):</strong>  作为国内首座国家级科学家纪念馆(新浪网报道)，馆内收藏钱学森同志文献、手稿和书籍76000余份，珍贵图片1500余张，实物700余件(新浪网报道)。展览内容分为“中国航天事业奠基人”、“科学技术前沿的开拓者”、“人民科学家风范”和“战略科学家的成功之道”四个部分(新浪网及“藏在上海高校里的秘密好地方”报道)，馆内还设有巨大的“模拟手稿”现代雕塑，极具视觉冲击力(新浪网及“藏在上海高校里的秘密好地方”报道)，激励着师生对科学的追求。免费开放。</p>
+</li>
+<li>
+<p><strong>天空之境:</strong>  具体位置需进一步确认，但其作为校园内独特的拍照景点，日景和夜景都颇具魅力，深受学生喜爱，是学生们放松和分享美好时光的理想场所。</p>
+</li>
+<li>
+<p><strong>盛宅 (具体位置需进一步确认):</strong>  历史悠久的西式洋房，目前用作校友活动中心，绿树成荫的环境，为师生和校友提供了轻松交流的场所。</p>
+</li>
+<li>
+<p><strong>16处文物保护建筑 (老图书馆、工程馆等，具体位置需进一步确认):</strong>  这些建筑见证了学校悠久的历史和文化积淀，是校园文化的重要组成部分，也为师生提供了学习和了解学校历史的场所。</p>
+</li>
+</ol>
+<p>这些景点不仅风景优美，更与学校的历史文化和自然环境紧密相连，是师生日常生活中重要的休闲、交流和分享的场所。  部分信息需要补充地理位置等细节信息。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">学生社团与活动</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#上海交通大学医学院“月圆人团聚，秋夜梦常安”活动落幕-上海交通大学医学院-新闻网">
+    🥮文化活动</a></div><div class="section-link-box"><a class="section-link" href="#上海交通大学阳光满屋社团---上海交通大学国际与公共事务学院">
+    🌞阳光之家</a></div><div class="section-link-box"><a class="section-link" href="#2018年上海交通大学学生社会实践总结大会举行---新闻动态---上海交通大学党政办公室">
+    🤝社会实践</a></div><div class="section-link-box"><a class="section-link" href="#交大家园网">
+    📚</a></div></div>
+    <div class="section-content content"><p>上海交通大学的学生社团活动与校园“隐藏地点”的探索密切相关。例如，成立于2005年的“阳光满屋”社团，十三年来持续为闵行区五个“阳光之家”（包括江川、莘庄、颛桥、吴泾镇和长桥街道）提供志愿者服务，志愿者活动地点遍布这些机构，部分区域可能不对公众开放。  医学院举办的“月圆人团聚，秋夜梦常安”中秋文化活动，则利用了科教楼207教室和食堂一楼卡罗琳娜门口等相对私密的校园空间进行迎中秋读书心得分享会、月亮灯绘画活动、月饼制作体验、猜灯谜抽奖等活动，参与人数众多，达到数百人。2018年上海交通大学学生社会实践活动覆盖全国各地及部分海外国家和地区，共组建1272个社会实践团，参与人数超过11500人，617位教师参与指导，其中“情系新疆，践行使命”实践团还登上《新闻联播》。这些社会实践活动将学生带出校园，深入基层和社会，接触到平时难以到达或了解的地区和群体，从而发现更多校园内外鲜为人知的“隐藏地点”和独特体验，丰富校园文化认知与个人成长。</p></div>
+</div>
+</div>
+<div class="resizer"></div>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item" href="#藏在上海高校里秘密的好地方-值得你一去_手机新浪网">
+    <a href="#藏在上海高校里秘密的好地方-值得你一去_手机新浪网" class="navigate-item-emoji ">🏛</a>
+    <a href="#藏在上海高校里秘密的好地方-值得你一去_手机新浪网" class="navigate-item-id">1</a>
+</div><div class="navigate-item" href="#上海交通大学-历史-at-DuckDuckGo">
+    <a href="#上海交通大学-历史-at-DuckDuckGo" class="navigate-item-emoji ">🏫</a>
+    <a href="#上海交通大学-历史-at-DuckDuckGo" class="navigate-item-id">2</a>
+</div><div class="navigate-item" href="#上海交通大学16处老建筑被列入全国第八批文物保护建筑，其中包括邬达克在大学校园的唯一作品">
+    <a href="#上海交通大学16处老建筑被列入全国第八批文物保护建筑，其中包括邬达克在大学校园的唯一作品" class="navigate-item-emoji ">🏢</a>
+    <a href="#上海交通大学16处老建筑被列入全国第八批文物保护建筑，其中包括邬达克在大学校园的唯一作品" class="navigate-item-id">3</a>
+</div><div class="navigate-item" href="#交大家园网">
+    <a href="#交大家园网" class="navigate-item-emoji ">📚</a>
+    <a href="#交大家园网" class="navigate-item-id">4</a>
+</div><div class="navigate-item" href="#40年前大学生活是何样？数百件实物照片述说交大学霸故事_浦江头条_澎湃新闻-The-Paper">
+    <a href="#40年前大学生活是何样？数百件实物照片述说交大学霸故事_浦江头条_澎湃新闻-The-Paper" class="navigate-item-emoji ">📈</a>
+    <a href="#40年前大学生活是何样？数百件实物照片述说交大学霸故事_浦江头条_澎湃新闻-The-Paper" class="navigate-item-id">5</a>
+</div><div class="navigate-item" href="#上海交通大学-建筑风格-at-DuckDuckGo">
+    <a href="#上海交通大学-建筑风格-at-DuckDuckGo" class="navigate-item-emoji ">🏛</a>
+    <a href="#上海交通大学-建筑风格-at-DuckDuckGo" class="navigate-item-id">6</a>
+</div><div class="navigate-item" href="#藏在上海高校里的秘密好地方-值得你一去">
+    <a href="#藏在上海高校里的秘密好地方-值得你一去" class="navigate-item-emoji ">🌱</a>
+    <a href="#藏在上海高校里的秘密好地方-值得你一去" class="navigate-item-id">7</a>
+</div><div class="navigate-item" href="#2018年上海交通大学学生社会实践总结大会举行---新闻动态---上海交通大学党政办公室">
+    <a href="#2018年上海交通大学学生社会实践总结大会举行---新闻动态---上海交通大学党政办公室" class="navigate-item-emoji ">🤝</a>
+    <a href="#2018年上海交通大学学生社会实践总结大会举行---新闻动态---上海交通大学党政办公室" class="navigate-item-id">8</a>
+</div><div class="navigate-item" href="#上海交通大学医学院“月圆人团聚，秋夜梦常安”活动落幕-上海交通大学医学院-新闻网">
+    <a href="#上海交通大学医学院“月圆人团聚，秋夜梦常安”活动落幕-上海交通大学医学院-新闻网" class="navigate-item-emoji ">🥮</a>
+    <a href="#上海交通大学医学院“月圆人团聚，秋夜梦常安”活动落幕-上海交通大学医学院-新闻网" class="navigate-item-id">9</a>
+</div><div class="navigate-item" href="#魔都100：上海交大盛宅——专属于交大人的秘密基地[图]_媒体聚焦_上海交通大学新闻学术网">
+    <a href="#魔都100：上海交大盛宅——专属于交大人的秘密基地[图]_媒体聚焦_上海交通大学新闻学术网" class="navigate-item-emoji ">🏡</a>
+    <a href="#魔都100：上海交大盛宅——专属于交大人的秘密基地[图]_媒体聚焦_上海交通大学新闻学术网" class="navigate-item-id">10</a>
+</div><div class="navigate-item" href="#上海交通大学阳光满屋社团---上海交通大学国际与公共事务学院">
+    <a href="#上海交通大学阳光满屋社团---上海交通大学国际与公共事务学院" class="navigate-item-emoji ">🌞</a>
+    <a href="#上海交通大学阳光满屋社团---上海交通大学国际与公共事务学院" class="navigate-item-id">11</a>
+</div><div class="navigate-item" href="#SJTU新水源社区重磅上线-上海交通大学网络信息中心">
+    <a href="#SJTU新水源社区重磅上线-上海交通大学网络信息中心" class="navigate-item-emoji ">💬</a>
+    <a href="#SJTU新水源社区重磅上线-上海交通大学网络信息中心" class="navigate-item-id">12</a>
+</div><div class="navigate-item" href="#交大版“天空之境”网红景点，你打卡了吗？_活力校园_上海交通大学新闻学术网">
+    <a href="#交大版“天空之境”网红景点，你打卡了吗？_活力校园_上海交通大学新闻学术网" class="navigate-item-emoji ">🌤</a>
+    <a href="#交大版“天空之境”网红景点，你打卡了吗？_活力校园_上海交通大学新闻学术网" class="navigate-item-id">13</a>
+</div><div class="navigate-item" href="#创新，不因此终点-博客推荐-上海交通大学生创新实践网">
+    <a href="#创新，不因此终点-博客推荐-上海交通大学生创新实践网" class="navigate-item-emoji ">💡</a>
+    <a href="#创新，不因此终点-博客推荐-上海交通大学生创新实践网" class="navigate-item-id">14</a>
+</div><div class="navigate-item" href="#校园地图-上海交大培训中心-干部培训学院-上海交大马院培训中心">
+    <a href="#校园地图-上海交大培训中心-干部培训学院-上海交大马院培训中心" class="navigate-item-emoji ">🍽</a>
+    <a href="#校园地图-上海交大培训中心-干部培训学院-上海交大马院培训中心" class="navigate-item-id">15</a>
+</div><div class="navigate-item" href="#上海交通大学校园地图---百度">
+    <a href="#上海交通大学校园地图---百度" class="navigate-item-emoji ">🗺</a>
+    <a href="#上海交通大学校园地图---百度" class="navigate-item-id">16</a>
+</div>
+    </div>
+    <div class="page"  id="藏在上海高校里秘密的好地方-值得你一去_手机新浪网">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏛&nbsp;</span>藏在上海高校里秘密的好地方 值得你一去_手机新浪网</h3>
+        <small class="page-url url "><a href="http://sh.sina.cn/news/sh/2016-04-23/detail-ifxrpvcy4291250.d.html" target="_blank">(http://sh.sina.cn/news/sh/2016-04-23/detail-ifxrpvcy4291250.d.html)</a><br></small>
+        <small class="page-rating rating ">评分: 9.5<br></small>
+        <small class="page-annotation annotation ">注释: 思源阁的展览传承了学校历史，是了解交大文化的窗口。<br></small>
+    </div>
+    <div class="page-content content"><h2>上海交通大学思源阁</h2>
+<p>上海交通大学闵行校区图书馆“思源阁”将从4月5日起向社会开放，向公众展示的珍贵展品包括交通大学的创办人盛宣怀120年前的奏稿和电稿、老交大名师的著作以及普通学生手写的学位论文等，多数展品均为首次整理并公开展示。“思源阁”取自于交大的校训“饮水思源”，设计风格古朴雅致，融入了诸多交大元素，如把徐汇老校区的金水桥、牌坊校门等标志性建筑囊括其中，营造出穿越时空，古今交错的意境。</p>
+<p>地址：闵行区东川路800号
+门票：免费</p>
+<h2>园林植物标本园</h2>
+<p>除了辰山植物园和上海植物园，上海第三大的植物园就藏在上海交大闵行校区的校园里。园林植物标本园有木本植物、耐阴植物、水生植物等在内的1000多种植物资源，其中木本植物资源800多种，草本植物400多种，称得上是一个小小的植物王国。园林、园艺、植物、生物、药学、环境等不少相关专业，都能在这儿做专业实践。春日里樱花、海棠、桃花……开得竞相烂漫，因为地处闵行的关系，植物园的春天也没有非常拥挤，还算是个赏春的好地方，所以备受校内外的摄影爱好者的青睐。</p>
+<p>地址：闵行区学森路、思源北路之间(闵行校区学生宿舍D26幢东侧)
+门票：免费(寒暑假闭园养护不开放)</p>
+<h2>钱学森图书馆</h2>
+<p>这幢赭红色建筑是交大徐汇校区的图书馆，也是国内首座国家级科学家纪念馆——钱学森图书馆。走进钱学森图书馆大厅，一件巨大的现代雕塑——火红的“模拟手稿”映入视野，如同一朵蓬勃的蘑菇云向天际升腾，背景是放大的演算公式和钱老的签名。馆内基本展览分为中国航天事业奠基人、科学技术前沿的开拓者、人民科学家风范和战略科学家的成功之道四个部分。馆藏钱学森同志文献、手稿和书籍76000余份，珍贵图片1500余张，实物700余件。</p>
+<p>地址：徐汇区华山路1800号
+门票：免费</p>
+        <small class="page-url url "><a href="http://sh.sina.cn/news/sh/2016-04-23/detail-ifxrpvcy4291250.d.html" target="_blank">(http://sh.sina.cn/news/sh/2016-04-23/detail-ifxrpvcy4291250.d.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="上海交通大学-历史-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏫&nbsp;</span>上海交通大学 历史 at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:上海交通大学 历史" target="_blank">(DDG:上海交通大学 历史)</a><br></small>
+        <small class="page-rating rating ">评分: 9.0<br></small>
+        <small class="page-annotation annotation ">注释: 上海交通大学的历史悠久，从创办南洋公学至今，展现了其深厚的教育文化底蕴。<br></small>
+    </div>
+    <div class="page-content content"><h2>上海交通大学历史沿革</h2>
+<p>上海交大是近代中国历史最为悠久的大学之一，其前身是清末洋务派政治家、实业家和福利事业家盛宣怀于1896年创建的南洋公学，后曾易名南洋大学、上海工业专门学校，中华民国……</p>
+<h3>上海第二医学院</h3>
+<p>1952-1985</p>
+<h3>上海第二医科大学</h3>
+<p>1985-2005</p>
+<h2>上海交通大学</h2>
+<p>学校创建于1896年，原名南洋公学，1911年更名为南洋大学堂，1921年更名为交通大学上海学校，1928年更名为国立交通大学上海本部，1949年更名为交通大学；1956年根据党中央……</p>
+<p>中国近代著名实业家、教育家盛宣怀秉持“自强首在储才，储才必先兴学”的信念，于1896年在上海创办了交通大学的前身——南洋公学。建校伊始，学校即确立“求实学，务实业”的……</p>
+<p>上海交通大学是教育部直属，由教育部和上海市共建的全国重点大学，其前身为创办于1896年的南洋公学，是中国历史最悠久的高校之一。2005年7月18日，上海交通大学与上海第二医科……</p>
+        <small class="page-url url "><a href="DDG:上海交通大学 历史" target="_blank">(DDG:上海交通大学 历史)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="上海交通大学16处老建筑被列入全国第八批文物保护建筑，其中包括邬达克在大学校园的唯一作品">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏢&nbsp;</span>上海交通大学16处老建筑被列入全国第八批文物保护建筑，其中包括邬达克在大学校园的唯一作品</h3>
+        <small class="page-url url "><a href="https://wenhui.whb.cn/third/zaker/201912/08/307511.html" target="_blank">(https://wenhui.whb.cn/third/zaker/201912/08/307511.html)</a><br></small>
+        <small class="page-rating rating ">评分: 9.0<br></small>
+        <small class="page-annotation annotation ">注释: 交大的历史建筑列表展示了校内丰富的文化遗产与教育价值。<br></small>
+    </div>
+    <div class="page-content content"><h2>上海交通大学早期建筑申报</h2>
+<p>老图书馆、新中院、中院、新上院、工程馆、科学馆、北四楼、执信西斋、文治堂、总办公厅、体育馆、新建楼、盛宅、华山路校门、史穆烈士墓、五卅纪念柱，共计16处文物本体。</p>
+<h3>价值与独特性</h3>
+<ul>
+<li>历史悠久，是近代最早由中国人创办的两所大学之一；</li>
+<li>校址从未改变，是目前国内惟一一所跨越三个世纪、保留发源地与办学地不变的高校；</li>
+<li>具有独特的、中西结合的校园布局与建筑；</li>
+<li>集中展示了邬达克等近现代建筑大师的作品，代表了当时先进的建筑思想；</li>
+<li>很多建筑都采用了当时最先进的建造材料和技术手段，表现了在技术上的勇于尝试；</li>
+<li>交大早期建筑的一大独特性来自交大校友对母校的热情和帮助，有一些建筑是由校友捐助建成的，如图书馆、校门、工程馆等，也有些是由交大校友主持修建的，如体育馆和文治堂；</li>
+<li>承载国家记忆，传承红色基因，这里已成为上海市革命先烈缅怀基地，每年都会有很多人前来瞻仰，这是其他高校所少见的。</li>
+</ul>
+<p>2014年4月4日，上海交通大学历史建筑群被上海市人民政府公布为上海市文物保护单位，校园每幢历史建筑门口都有学校制作的二维码，扫描即可看到详细介绍内容。</p>
+        <small class="page-url url "><a href="https://wenhui.whb.cn/third/zaker/201912/08/307511.html" target="_blank">(https://wenhui.whb.cn/third/zaker/201912/08/307511.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="交大家园网">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📚&nbsp;</span>交大家园网</h3>
+        <small class="page-url url "><a href="https://ourhome.sjtu.edu.cn/article/908" target="_blank">(https://ourhome.sjtu.edu.cn/article/908)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 上海交通大学的图书馆和自习室，提供了良好的学习环境与资源。<br></small>
+    </div>
+    <div class="page-content content"><h2>一、图书馆</h2>
+<p>图书馆是大家学习的首选场所，上海交通大学图书馆由闵行校区图书馆主馆（理工生医农科综合馆）、包玉刚图书馆（人文社科综合馆）、徐汇校区图书馆（社科馆）、医学院图书馆（医学馆）以及若干院系分馆和资料室等组成。图书馆的所有通知都可以在图书馆官网（http://www.lib.sjtu.edu.cn）或者官方公众号(上海交通大学图书馆)上进行查看。</p>
+<h3>1. 新图书馆（主馆）</h3>
+<p>位于闵行校区中心位置的新图书馆服务面积约为3.5万平方米，是理工生医农科综合馆，主馆座位近4000席，提供借还书、复印、扫描、打印等自助服务，是大家学习的热门去处，在期末考试周是同学们呼朋引伴必约场所。主馆通过各种形式的创新服务，为全校师生提供安静自习区、小组讨论室、课题研究室、多媒体试验区、多媒体制作室、多媒体演播室，同时提供外语自主学习中心。到交大的第一站，就来尽情享受新图的书香气息吧！</p>
+<h3>2. 包玉刚图书馆</h3>
+<p>包玉刚图书馆位于闵行校区思源湖畔，定位在人文社科综合馆的基础上，扩展了新的功能定位，即：科技引领，智慧布局；空间动感，汇聚枢纽；环境雅酷，激活灵感；人文理工，无缝融合。去年刚装修完成的包图正以全新的面貌，在思源湖畔欢迎每一位萌新的到来。包玉刚图书馆占地面积1.6万平方米，阅览座位约1200席，总藏书量约为93万册。紧邻上中下院教学楼，包图是同学们下课后继续学习的不二选择。结束了一天的课程，就来包图完成作业巩固学习成果吧！</p>
+<h3>3. 李政道图书馆</h3>
+<p>李政道图书馆是兼具科学和艺术气息的图书馆。李政道图书馆实现了包括图书馆、档案馆、博物馆、科技馆和艺术馆在内的“五馆合一”的功能定位。实体图书馆总建筑面积6,500平方米。地下一层为报告厅，可以在这里参加各类学术会议及小型音乐会，地上第一层和第二层的部分区域为展厅，第二层和第三层设有阅览座位，第四层为李政道先生办公室、CUSPEA之家和特藏书库，藏有各类李政道先生捐赠的珍贵档案藏品8万余件，供同学们参观游览，领阅大师风采。丰富多彩的李图，可以同时满足大家学习、逛博物馆、艺术馆的多种需求。</p>
+<p>除了闵行校区，徐汇校区新上院、卢湾校区医学院分馆等图书馆也等待大家解锁打卡！</p>
+<h2>二、小组自习室</h2>
+<p>小组讨论或者集体活动时需要场地怎么办？在包玉刚图书馆和主馆内部，有舒适开放、灵动自由、集思广益的交流共享空间——小组学习室供大家使用。怎么预约使用，快一起往下看。</p>
+<ol>
+<li>在交我办上进行预约：打开“交我办”，点击图书馆，再点击预约小组学习室。
+2.在图书馆公众号上进行预约：打开图书馆官方公众号（上海交通大学图书馆），点击“我的”，再点击“我的空间信息”，最后选择“预约”。</li>
+<li>在图书馆官网上进行预约：进入图书馆官网http://www.lib.sjtu.edu.cn点击“开始在线预约”即可：注：图书馆官网的登录需要在校内登录或者连接vpn。</li>
+</ol>
+<h2>三、教学楼教室</h2>
+<p>图书馆离得远？想跟大家一起学？快来教学楼自习室，感受最原汁原味的学在交大氛围！闵行校区的公共教室分布在东区和西区。东区教学楼分别是：东上院、东中院（东中院1、东中院2、东中院3、东中院4）和蔡翠菊教学楼（东下院）。西区教学楼分别是：上院、中院和下院。值得一提的是2020年装修完成的东中院，配备了插座、休息区沙发、一次性水杯等完备设施，是大家自习的热门去处。只要没有教学任务的安排，同学们都可以前往任何开放的空教室自习。从期末考试的前两周起，会根据学校教务处的安排，开放部分通宵自习室，并配有空调，方便同学在考前进行复习。一般情况下，在东区和西区都会有一个教学楼安排通宵自习室，具体情况可以登陆上海交通大学教务处的网站（http:// www.jwc.sjtu.edu.cn）进行查询或关注上海交通大学教务处的微信公众平台（微信号：SJTUjwc）。部分教室（如东中3-104，105，106）会在特殊时间段开放通宵，具体的教室安排见教务处通知。</p>
+<h2>四、学院公共区</h2>
+<p>除了图书馆、教学楼，各学院也有公共区域可以供同学们学习讨论。各学院的公共区域各有千秋，有需要的同学也可以去学院使用学院公共场所。</p>
+<h2>五、咖啡厅</h2>
+<p>在交大，各种咖啡厅也成为了交大人思想碰撞，学习讨论的地方，一起看看闵行校区的咖啡馆吧。</p>
+<h3>1. 甜魔咖啡</h3>
+<p>位于一餐对面，教学楼旁的甜魔咖啡是大家下课后继续讨论学习的选择之一，这里不仅有多种饮品种类，还有原味芝士、巧克力慕斯等等各种甜品，为学习生活加点甜。</p>
+<h3>2. 时光塔</h3>
+<p>在玉兰苑的时光塔也是一个小组讨论的好去处，店内有咖啡、果茶、酸奶等多种饮品，也有适合多人讨论的长桌，快约上小伙伴一起喝咖啡一起学习吧！</p>
+<h3>3. 瑞幸咖啡</h3>
+<p>位于三餐旁的瑞幸咖啡也受到了交大学子的欢迎与喜爱。夏日午后，拿上饮品，和三五好友一起畅谈，一起欣赏荷花，也不妨是一件美事。</p>
+<h3>4. e＋咖啡餐厅</h3>
+<p>电院二、三号楼之间有这么一个宝藏咖啡餐厅，在这里不仅你可以安静地喝一杯咖啡，享受独处的时光，也可以邀请三五好友聊天讨论，享受相聚时光。</p>
+<h3>5. Tims咖啡</h3>
+<p>文博楼三楼的Tims咖啡也是大家参观休闲和学习活动的绝佳的空间。店内座位数量充足，人流量较少，视野开阔，快来打卡吧！</p>
+<h2>六、宿舍党团活动室</h2>
+<p>为进一步丰富宿舍文化建设，同时为了满足同学们个性化的学习生活需求，生活园区增设了宿舍党团活动室。活动室不仅为楼栋学生自习提供了温馨舒适的空间，也为楼栋学生党团支部、班级例会提供了宽敞方便的交流场所，赶快利用起来吧！学在交大，这么多宝藏学习场所你都记住了吗，快点收藏这份攻略，一起在知识的海洋翱翔！</p>
+        <small class="page-url url "><a href="https://ourhome.sjtu.edu.cn/article/908" target="_blank">(https://ourhome.sjtu.edu.cn/article/908)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="40年前大学生活是何样？数百件实物照片述说交大学霸故事_浦江头条_澎湃新闻-The-Paper">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📈&nbsp;</span>40年前大学生活是何样？数百件实物照片述说交大学霸故事_浦江头条_澎湃新闻-The Paper</h3>
+        <small class="page-url url "><a href="https://m.thepaper.cn/wifiKey_detail.jsp?contid=2183989&from=wifiKey" target="_blank">(https://m.thepaper.cn/wifiKey_detail.jsp?contid=2183989&from=wifiKey)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 展览详细记录了恢复高考后学校发展的历程与成就。<br></small>
+    </div>
+    <div class="page-content content"><h2>展览介绍</h2>
+<p>这些展品大多从交大校友中征集而来。整个展览分为四个篇章：</p>
+<ul>
+<li>
+<h3>机遇·恢复高考春风起</h3>
+</li>
+<li>
+<h3>发展·教学科研雄风振</h3>
+</li>
+<li>
+<h3>奋斗·渴求新知斗志昂</h3>
+</li>
+<li>
+<h3>起航·五湖四海青春扬</h3>
+</li>
+</ul>
+<p>展览通过图片、文献、实物、多媒体等形式，再现了40年前恢复高考的决策前后学校教学科研的发展变化，展现交大77、78级学子刻苦攻读的风貌。</p>
+<p>此次展览还对入学的2800余名交大学子进行了大数据分析。分析显示：</p>
+<ul>
+<li>这些学子男女比例约为7:1；</li>
+<li>77、78级本科生来自全国23个省市自治区；</li>
+<li>年龄最大的32岁，最小的只有15岁；</li>
+<li>来自工厂、农村、部队、学校等各行各业。</li>
+</ul>
+<p>毕业后，他们或是奔赴国家建设的各行各业，或是远渡重洋走向世界。他们改变了自己的命运，也成为了中国四十年改革开放建设事业的见证者、参与者和弄潮儿。</p>
+<p>1982年，作为恢复高考制度后的首批大学毕业生，上海交大77、78级学子从交大毕业，迈出校门、奔向社会。“起航·五湖四海青春扬”篇章展示了两届毕业生的基本情况。他们中大多数进入了六机部系统等国家重点行业，也有部分同学进入社会的其他行业。</p>
+<p>三十多年过去了，有的同学成了独当一面的工程师，有的成为卓有建树的专家学者，有的引领了中国经济的向前发展，有的肩负着中国未来教育的使命，他们是改革开放的见证者与参与者。</p>
+<p>上海交大校长，77、78级船舶及海洋工程系毕业的林忠钦回忆说：“我们77、78级毕业生中的不少人之所以能在后来各自的工作岗位上做出成绩，应该说与当年求学时养成的这种乐学好学的勤奋精神密不可分，对此我深有体会。”</p>
+        <small class="page-url url "><a href="https://m.thepaper.cn/wifiKey_detail.jsp?contid=2183989&from=wifiKey" target="_blank">(https://m.thepaper.cn/wifiKey_detail.jsp?contid=2183989&from=wifiKey)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="上海交通大学-建筑风格-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏛&nbsp;</span>上海交通大学 建筑风格 at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:上海交通大学 建筑风格" target="_blank">(DDG:上海交通大学 建筑风格)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 上海交大徐汇校区的古建筑群，体现了学校近现代建筑风格的演变与校园文化。<br></small>
+    </div>
+    <div class="page-content content"><h2>每一所大学都有自己独特的历史，但不是每一所大学都有古老的校园建筑</h2>
+<p>在徐家汇，有这样一所百年大学，校园里集齐了不同时代、不同风格的优秀历史建筑，这一建筑群，集合了东西方古典复兴、装饰艺术、现代主义等诸多艺术流派，如同一座展现中国近现代建筑风格百年变化的建筑博物馆。</p>
+<h2>上海交大的这三幢&quot;文物级&quot;建筑，它们的故事你知道吗？</h2>
+<p>上海交通大学的前身南洋公学创办之初尚无校舍，暂借徐家汇附近的民宅办学。学校创始人和公学第一任总理（即校长）几经考察，决定在现在交大的位置上购置地皮，兴建校舍。…从建筑风格来看，它采用文艺复兴的巴洛克风格，采用纵向五段式构图，平面…</p>
+<h2>上海交通大学徐汇校区</h2>
+<p>上海交通大学徐汇校区创建于1896年，前身为南洋公学，是近代最早由中国人创办的两所大学之一，也是国内唯一一所跨越3个世纪、保留发源地与办学地不变的早期高等学府所在地。…在建筑风格上融入了西方古典建筑元素，展现着交大独特的文化韵味。</p>
+<h2>位于繁盛地段的上海交通大学的徐家汇校区</h2>
+<p>位于繁盛地段的上海交通大学的徐家汇校区，有着百年的历史，在这漫长的时间中，上海交通大学完整的保留下了多座早期优秀历史建筑。这些建筑集合了东西方古典复兴、装饰艺术、现代主义等艺术流派，就好像是一个集中国近现代百年建筑风格的博物馆。</p>
+        <small class="page-url url "><a href="DDG:上海交通大学 建筑风格" target="_blank">(DDG:上海交通大学 建筑风格)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="藏在上海高校里的秘密好地方-值得你一去">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🌱&nbsp;</span>藏在上海高校里的秘密好地方 值得你一去</h3>
+        <small class="page-url url "><a href="https://wapbaike.baidu.com/theme/%E8%97%8F%E5%9C%A8%E4%B8%8A%E6%B5%B7%E9%AB%98%E6%A0%A1%E9%87%8C%E7%9A%84%E7%A7%98%E5%AF%86%E5%A5%BD%E5%9C%B0%E6%96%B9%20%E5%80%BC%E5%BE%97%E4%BD%A0%E4%B8%80%E5%8E%BB/50467068123?bk_fr=lemma" target="_blank">(https://wapbaike.baidu.com/theme/%E8%97%8F%E5%9C%A8%E4%B8%8A%E6%B5%B7%E9%AB%98%E6%A0%A1%E9%87%8C%E7%9A%84%E7%A7%98%E5%AF%86%E5%A5%BD%E5%9C%B0%E6%96%B9%20%E5%80%BC%E5%BE%97%E4%BD%A0%E4%B8%80%E5%8E%BB/50467068123?bk_fr=lemma)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 交大的饮水思源校训与文化传承，体现了学校对历史与自然的尊重。<br></small>
+    </div>
+    <div class="page-content content"><h2>上海交通大学</h2>
+<h3>饮水思源，古朴雅致</h3>
+<p>上海交通大学，简称“上海交大”，位于中国直辖市上海，是中华人民共和国教育部直属并与上海市共建的“综合性、研究型、国际化”全国重点大学。上海交通大学闵行校区图书馆“思源阁”，多数展品均为首次整理并公开展示。“思源阁”取自于交大的校训“饮水思源”，设计风格古朴雅致，融入了诸多交大元素，营造出穿越时空，古今交错的意境。</p>
+<h3>闵行校区植物王国，竞相烂漫</h3>
+<p>上海交通大学闵行校区是上海交通大学的校区之一，位于上海市闵行区东川路800号。上海第三大的植物园就藏在上海交大闵行校区的校园里。园林植物标本园有木本植物、耐阴植物、水生植物等在内的1000多种植物资源，其中木本植物资源800多种，草本植物400多种，称得上是一个小小的植物王国。园林、园艺、植物、生物、药学、环境等不少相关专业。</p>
+<h2>钱学森图书馆</h2>
+<h3>科学风范，纪念伟人</h3>
+<p>钱学森图书馆坐落在上海交通大学徐汇校区。走进钱学森图书馆大厅，一件巨大的现代雕塑——火红的“模拟手稿”映入视野，如同一朵蓬勃的蘑菇云向天际升腾，背景是放大的演算公式和钱老的签名。馆内基本展览分为中国航天事业奠基人、科学技术前沿的开拓者、人民科学家风范和战略科学家的成功之道四个部分。</p>
+<h2>上海海洋大学</h2>
+<h3>海洋文化，蔚为壮观</h3>
+<p>上海海洋大学，简称“上海海洋”，是上海市人民政府与国家海洋局、国家农业部共建的农林类高等院校，国家首批卓越农林人才教育培养计划改革试点高校。上海海洋大学的鲸鱼馆全称是“水产大学鱼文化博物馆”，不过大家还是习惯叫它“鲸鱼馆”。原来是校园内部仅供研究使用，最终面向社会开放。整个大厅被一条巨大的鲸鱼标本和整套的骨架所占据。</p>
+<h2>同济大学</h2>
+<h3>珍奇生物，海底魅力</h3>
+<p>同济大学简称“同济”，是中华人民共和国教育部直属，由教育部和上海市共建的全国重点大学，是历史悠久、享有盛誉的中国著名高等学府。深海探索馆在同济大学里面，为了营造出“深海”的氛围，整个场馆都处于昏暗中，点点的亮光也是深海蓝色。通过一系列的图片光影，你能欣赏海底热液幻影、活跃在幽暗深海的珍奇生物、多姿多彩的海洋微体生物群等景观。</p>
+<h2>上海戏剧学院</h2>
+<h3>低调奢华有内涵</h3>
+<p>上海戏剧学院坐落在幽静的华山路上，丝毫不张扬。校园幽静，红色砖墙的建筑静静诉说着70年的故事。上戏剧院一边坐落着莎士比亚的塑像，和围墙一侧的一排世界戏剧大师的群像一起把戏剧殿堂的气氛烘托的浓浓的。这里经常会上演一些学生的毕业演出剧目，也会引进一些优质的演出剧目，是上海一大文艺地标。</p>
+<h2>上海中医药大学</h2>
+<h3>大学里的神农百草园</h3>
+<p>上海中医药大学是新中国诞生后国家首批建立的四所中医药高等院校之一，也是上海市属高校中唯一的一所医科类重点特色院校。中医药博物馆由上海中医药大学中华医学会医史博物馆、中药标本陈列馆、校史陈列馆组成，馆外延伸有百草园。这个设计成八卦造型的园区，不单单有丰富的植物可以看，还免费对社会公众开放。</p>
+<h2>上海大学</h2>
+<h3>校园就是动物园</h3>
+<p>上海大学简称“上大”，是上海市属、国家“211工程”重点建设的综合性大学，是国家教育部、国家国防科技工业局与上海市人民政府共建高校。大学里有植物园还不算稀奇，在上海大学，还有一个“动物园”！这里动物的种类，可能是上海各高校之中最多的，有黑天鹅、鸳鸯、鸽子，以及一大群锦鲤。上海大学宝山校区的泮池边。</p>
+        <small class="page-url url "><a href="https://wapbaike.baidu.com/theme/%E8%97%8F%E5%9C%A8%E4%B8%8A%E6%B5%B7%E9%AB%98%E6%A0%A1%E9%87%8C%E7%9A%84%E7%A7%98%E5%AF%86%E5%A5%BD%E5%9C%B0%E6%96%B9%20%E5%80%BC%E5%BE%97%E4%BD%A0%E4%B8%80%E5%8E%BB/50467068123?bk_fr=lemma" target="_blank">(https://wapbaike.baidu.com/theme/%E8%97%8F%E5%9C%A8%E4%B8%8A%E6%B5%B7%E9%AB%98%E6%A0%A1%E9%87%8C%E7%9A%84%E7%A7%98%E5%AF%86%E5%A5%BD%E5%9C%B0%E6%96%B9%20%E5%80%BC%E5%BE%97%E4%BD%A0%E4%B8%80%E5%8E%BB/50467068123?bk_fr=lemma)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="2018年上海交通大学学生社会实践总结大会举行---新闻动态---上海交通大学党政办公室">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🤝&nbsp;</span>2018年上海交通大学学生社会实践总结大会举行 - 新闻动态 - 上海交通大学党政办公室</h3>
+        <small class="page-url url "><a href="https://dzb.sjtu.edu.cn/data/view/3196" target="_blank">(https://dzb.sjtu.edu.cn/data/view/3196)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 上海交通大学重视社会实践与育人工作，促进学生全面发展与社会认知。<br></small>
+    </div>
+    <div class="page-content content"><h2>2018年上海交通大学学生社会实践总结大会举行</h2>
+<p>2018年12月5日</p>
+<p>下午，2018年上海交通大学学生社会实践总结大会在陈瑞球楼举行。校党委书记姜斯宪，团市委副书记戴冰，团市委学校部部长徐速，校党委常委、副校长王伟明，校党委常委、党委组织部部长仰颐，校党委常委、党委宣传部部长胡昊以及学指委、研究生院、教务处、发展联络处、国际合作与交流处、校友总会、地方合作办公室等相关单位负责人、各院系领导、参与社会实践的师生代表等500余人出席了总结大会。会议由学指委副秘书长侯士兵主持。</p>
+<p>姜斯宪代表学校向实践中不断历练成长的同学们表示衷心祝贺，向通力支持实践育人工作的各个部门、各位老师表示感谢。他提到，坚持在社会实践中培养人才，是交大的优良传统，也是学校落实“四位一体”育人理念的具体举措。习近平总书记在今年的全国教育大会上强调，要努力构建德智体美劳全面培养的教育体系，形成更高水平的人才培养体系，明确将劳动教育确定为全面发展教育的重要组成部分，是新时代党和国家对教育工作的重要要求。对高等学校的同学们来说，与劳动教育结合最为紧密的，就是社会实践活动。多年来学校积极鼓励学生投身实践，在亲身参与中认识国情，了解社会，在增长才干和磨炼意志中感受劳动所带来的收获和乐趣，进而形成尊重劳动、勇于实践的真挚情感。未来，学校要继续加强价值引领和合力育人，以“学生健康成长”为中心，通力协作，共同指导学生社会实践，围绕教书育人、立德树人的中心任务，深化实践教学与课堂教学相结合，与科研工作、社会服务相结合，与行业教育、职业规划相结合，提高内涵和质量，不断提升实践育人的科学化水平。姜斯宪希望同学们在参与社会实践活动中，深刻认知国情，把握时代脉搏，树立崇高理想，知行合一，增长才干。他期待同学们在躬行实践中，思源致远，砥砺前行，在实现“两个一百年”的奋斗目标、实现中华民族伟大复兴的道路上，爱国立志，求真力行，做出交大人新的更大的贡献。</p>
+<p>校团委副书记钱文韬介绍了2018年学生社会实践的总体情况：</p>
+<ul>
+<li>学校全年组建社会实践团1272个，超过11500人分赴全国各地及部分海外国家和地区，参与寒暑假社会实践、挂职锻炼等，617位教师参与实践指导。</li>
+<li>在课程建设方面，学指委与马克思主义学院协同，建设《新时代社会认知实践》，并将其纳入“两课”必修学分；在实践板块方面，积极构建“大实践”格局，整合“通识实践”、“党建专项实践”、“就业专项实践”三个板块，引导不同阶段的青年学生深度参与；学生二次实践比例显著提高，阜外实践团队比例超过70%，更多的高年级硕、博士生通过参与实践坚定了理想，主动迈向国民经济主战场；在宣传推广方面，200多支实践团先后受到新华社、中央电视台、人民网等国家级和省市媒体报道，其中“情系新疆，践行使命”实践团登上《新闻联播》。</li>
+<li>下阶段，我校将着力打造行业教育专项社会实践，引导学生多维度了解行业需求和专业匹配，形成对所学专业的全面认知，坚定扎根行业的理想信念。</li>
+</ul>
+<p>国际合作与交流处处长罗鹏、研究生院副院长杨升荣、教务处副处长陈峰、发展联络处副处长黄金贤为2018年上海市社会实践优秀指导教师和先进个人颁奖。设计学院曹永康代表优秀指导教师发言，分享了他指导实践项目的经验。</p>
+<p>今年的学生社会实践，各院系精心谋划，组织得力，涌现出跨年级、跨院系的大型实践团队。他们精心设计实践内容，育人成效显著。船舶海洋与建筑工程学院、电子信息与电气工程学院、生命科学技术学院、交大助飞实践团、大学生“习近平新时代中国特色社会主义思想”学习研究会获2018年上海交通大学学生社会实践优秀组织奖。校友总会副主任桑大伟、地方合作办公室副主任罗金才为获奖单位颁奖。</p>
+<p>今年共评选出上海交通大学学生社会实践特等奖13项、一等奖13项、二等奖14项、三等奖42项。仰颐、胡昊、马克思主义学院党委书记王震为获奖团队代表颁奖。</p>
+<p>船舶海洋与建筑工程学院2017级硕士研究生李凯薇代表“复兴路上的中国速度”实践团发言，分享了实践经验和成果。</p>
+<p>机械动力与工程学院2017级博士研究生么宇辉代表“翼计划”四川实践团队发言，分享了他多次参加“翼计划”就业实践团的体会。</p>
+<p>来自新疆乌鲁木齐的2015级本科生牙里亲·亚力昆代表“情系新疆，践行使命”实践团发言，介绍了团队在新疆开展教育扶贫社会实践活动的情况。</p>
+<p>生命科学技术学院2016级本科生潘政松代表“显微知著”西部中学生命科学实验室援建实践团发言，介绍了团队为西部学校援建实验室的情况。</p>
+<p>今年的“知行杯”上海市大学生社会实践项目大赛，以“改革再出发·青春共奋斗”为主题，得到了全市50多所高校的8000多支实践队伍的积极响应，上海交大学生团队获得特等奖2项、一等奖5项、二等奖1项、三等奖5项，取得历史最好成绩，首次问鼎“知行杯”。在总结会上，戴冰、徐速、王伟明为“知行杯”获奖团队颁奖。</p>
+<p>在2018年全国大中专学生志愿者暑期“三下乡”社会实践活动评比中，共青团上海交通大学委员会获评优秀单位，生命科学技术学院“显微知著”实践团、医学院AED设置现状调研实践团获评优秀团队，赛福鼎･阿力木同志获评先进个人，上海交大成为全国唯一同时获评优秀单位、项目及个人三大荣誉的学校。姜斯宪为“三下乡”社会实践活动获奖团队和个人颁奖。</p>
+<h3>大会总结</h3>
+<p>本次大会为2018年学生社会实践画上圆满句号。交大学子在实践中爱国立志，求真力行，因实践以明理，借实践以精工，明确强国使命，胸怀时代社稷，为实现“两个一百年”奋斗目标、实现中华民族伟大复兴做出新的更大的贡献。</p>
+        <small class="page-url url "><a href="https://dzb.sjtu.edu.cn/data/view/3196" target="_blank">(https://dzb.sjtu.edu.cn/data/view/3196)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="上海交通大学医学院“月圆人团聚，秋夜梦常安”活动落幕-上海交通大学医学院-新闻网">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🥮&nbsp;</span>上海交通大学医学院“月圆人团聚，秋夜梦常安”活动落幕-上海交通大学医学院-新闻网</h3>
+        <small class="page-url url "><a href="https://www.shsmu.edu.cn/news/info/1003/27033.htm" target="_blank">(https://www.shsmu.edu.cn/news/info/1003/27033.htm)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 中秋文化活动展示了医学院对传统文化的传承与校园精神的凝聚。<br></small>
+    </div>
+    <div class="page-content content"><h2>月圆人团聚，秋夜梦常安——上海交通大学医学院中秋文化活动</h2>
+<p>上海交通大学医学院学生工作指导委员会园区办、楼栋管理委员会在校园内科教楼207教室和食堂一楼卡罗琳娜门口举办了主题为“月圆人团聚，秋夜梦常安”的中秋文化活动。</p>
+<p>上海交通大学医学院党委副书记、副院长吴正一，医学院学生工作指导委员会秘书长郁松，医学院学生工作指导委员会副秘书长戴佳颖、裴丰庭（挂职），学生工作指导委员会园区办主任孙军等领导出席活动。</p>
+<h3>活动内容：</h3>
+<p><strong>科教楼207教室：</strong></p>
+<ul>
+<li><strong>迎中秋读书心得分享会:</strong> 安烁羽老师主持，同学们围绕近期阅读书籍展开讨论，分享书中思想内涵，并结合个人经验探讨如何在学习生活中提升自身素质。戴佳颖老师总结，从人工智能赋能教育育人的角度，引导学生反思行为模式及其背后的价值导向，鼓励学生参与人工智能与个人专业课题相关比赛与研究。</li>
+<li><strong>月亮灯绘画活动:</strong> 同学们设计绘制各具特色的“月亮灯”，裴丰庭老师指导并鼓励同学们团队合作。作品将在全校进行公开投票，为期一周。</li>
+</ul>
+<p><strong>食堂卡罗琳娜门口：</strong></p>
+<ul>
+<li><strong>月饼制作体验:</strong>  食堂师傅现场教学传统肉馅月饼制作，学生们亲身体验制作过程。</li>
+<li><strong>免费月饼品尝:</strong>  食堂提供免费月饼。</li>
+<li><strong>猜灯谜和抽奖活动:</strong>  灯谜涵盖中秋传统文化和医学知识。</li>
+<li><strong>吴正一院长致辞:</strong>  祝愿大家中秋快乐，提醒注意台风天气，并与同学们交流。</li>
+<li><strong>郁松秘书长讲话:</strong> 强调活动的重要性及医学院对学生的关怀。</li>
+</ul>
+<h3>活动意义：</h3>
+<p>此次活动是弘扬传统文化、加强师生沟通交流、增进情感联结的良好机会，寓教于乐，促进了校园文化建设和学生全面发展，体现了医学院的人文关怀和教育理念。活动结合现代校园文化与传统节日元素，传承和创新中华优秀文化，增强校园凝聚力和文化认同感，缓解学生学业压力，增强心理健康。</p>
+<h3>未来展望：</h3>
+<p>医学院将继续探索和创新，举办更多元化的活动，促进文化与教育的有机融合，推动校园文化高质量发展；加强人文关怀，提升师生互动与情感纽带，打造和谐美丽的校园环境，营造充满活力和归属感的校园氛围。</p>
+        <small class="page-url url "><a href="https://www.shsmu.edu.cn/news/info/1003/27033.htm" target="_blank">(https://www.shsmu.edu.cn/news/info/1003/27033.htm)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="魔都100：上海交大盛宅——专属于交大人的秘密基地[图]_媒体聚焦_上海交通大学新闻学术网">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏡&nbsp;</span>魔都100：上海交大盛宅——专属于交大人的秘密基地[图]_媒体聚焦_上海交通大学新闻学术网</h3>
+        <small class="page-url url "><a href="https://news.sjtu.edu.cn/mtjj/20200113/119157.html" target="_blank">(https://news.sjtu.edu.cn/mtjj/20200113/119157.html)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 古老的盛宅为交大的校友提供了交流与聚会的理想场所。<br></small>
+    </div>
+    <div class="page-content content"><h2>魔都100：上海交大盛宅——专属于交大人的秘密基地</h2>
+<p>上海热线报道</p>
+<p><strong>导语：</strong> 上海交通大学是近代最早由中国人创办的两所大学之一，上海交通大学早期建筑位于徐汇校区内，是目前国内唯一一所跨越三个世纪、保留发源地与办学地不变的早期高等学府所在地。这一次小编要带大家来看看交大的盛宅……</p>
+<p>走进上海交通大学徐汇校区东门，左侧穿过树荫看到的第一栋建筑便是“盛宅”，在路口还能看到提示牌。</p>
+<p>这幢小楼在树木掩映下，不引人注目，外人罕至。穿过这条小道，便能看到这一栋西式洋房，四周绿树成荫，环境优美。</p>
+<p>据了解，盛宅始建于1923年（民国十二年），是南洋公学创始人盛宣怀的夫人为其孙在公学读书所建的私宅，位于学校的东南角。当时，盛宣怀已逝世，盛宣怀的两个孙子准备到交大附属小学读书。盛宣怀夫人担心两个孙子住宿受苦，向校方接洽，借用学校地皮，出资建造一幢小楼专门给孙子住，学校欣然允诺。大概过了一两年光景，盛氏兄弟向学校请了长假，盛宅于是空闲了一段日子。1927年，交大开始招收女生，第一期只有4名，住在老图书馆北侧教职员住宅的空闲房间里。随着女同学逐渐增多，这座闲置的盛宅便作为女生宿舍使用。由于地处学校的东南角，便借用复旦女生宿舍的别称，亦名“东宫”。</p>
+<p>盛宅整体外立面具有民国建筑的鲜明特色，呈三段式，外墙为青砖砌成，同当时上海的建筑色调一致。</p>
+<p>盛宅的窗框均用了红砖饰边，增添了整体建筑的色彩。另外，红砖砌成的框上部为弧形，这小小几条曲线的运用，打破了建筑立面单一的直线构图，使建筑变得生动。红色调的机平瓦屋顶高低错落，加上弧形拱券外窗，使整个建筑看上去显得端庄而又稳重，很好地诠释了建筑的性格特征。</p>
+<p>经历了动荡的社会变迁，盛宅的功能发生了数次改变。1938年起，小楼被南洋模范小学长期借用。50年代，该楼底层被区教育局借去开办虹桥路幼儿园。被学校收回后，曾作过交大成教学院办公用房。在120周年校庆前夕，学校对其进行修缮，现盛宅成为了校友活动交流中心。</p>
+<p>现在的盛宅是交大校友之家，开放时间为每天8:30-19:30。盛宅内部的装饰也都偏古色古香，装饰摆放了一些书籍、盆栽。在这里，是所有交大人的秘密基地，大家可以在这里谈天说地，回望过去、展望未来。内部的吊灯也非常具有复古特色。</p>
+<p>这里，是交大学子的秘密基地，是属于交大人的回忆……</p>
+        <small class="page-url url "><a href="https://news.sjtu.edu.cn/mtjj/20200113/119157.html" target="_blank">(https://news.sjtu.edu.cn/mtjj/20200113/119157.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="上海交通大学阳光满屋社团---上海交通大学国际与公共事务学院">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🌞&nbsp;</span>上海交通大学阳光满屋社团 - 上海交通大学国际与公共事务学院</h3>
+        <small class="page-url url "><a href="https://www.sipa.sjtu.edu.cn/show/2250" target="_blank">(https://www.sipa.sjtu.edu.cn/show/2250)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 阳光满屋社团致力于志愿服务，促进学生与社区间的互动。<br></small>
+    </div>
+    <div class="page-content content"><h2>社团简介</h2>
+<p>上海交通大学阳光满屋社团成立于2005年，是交大公益服务类社团之一。</p>
+<p>阳光满屋社团以“纵使光阴老去，爱的传承不息”为口号，以“奉献、友爱、互助、进步”的志愿服务精神为核心，旨在服务智力有缺陷的弱势群体。</p>
+<p>社团历时13年的发展壮大，目前志愿服务范围已基本覆盖闵行区所有阳光之家。为了更好的发展，社团同时也在不断丰富其他志愿者活动内容。</p>
+<h2>社团发展</h2>
+<h3>1. “阳光之家”常规志愿者活动</h3>
+<p>阳光满屋社团分别于2009年、2010年、2011年、2014年在闵行区江川、莘庄、颛桥、吴泾镇四个阳光之家建立“上海交通大学志愿者服务基地”，徐汇区长桥街道阳光之家也于2014年10月份挂牌成为第五家“上海交通大学青年志愿者服务基地”。</p>
+<p>“阳光之家”常规志愿者活动由阳光满屋社团牵头组织和负责，每个月2-3次的频率通过上海交通大学青年志愿者服务网站-“交大源源”网络平台向全校师生发布服务信息，招募志愿者积极参加。活动力求在给予阳光之家成员关怀和快乐的同时，提升他们的生活技能。</p>
+<h3>2. “阳光音乐会”、“阳光运动会”主题活动</h3>
+<p>每学期1次的“阳光音乐会”、“阳光运动会”主题活动通过志愿者与阳光之家的学员们进行文化、体育活动的互动方式，拉进学员与学员、学员与志愿者之间的关系，在潜移默化中促使阳光之家的学员们释放自己的内心情感，加深对自我的了解，并与社会有更多的接触和互动。活动举办地点不限。</p>
+<h3>3. “阳光校园行”活动</h3>
+<p>每年1次的“阳光校园行”活动由国务学院青志队与阳光满屋社团共同牵头，与校外知名公益组织合作，在校内招募并培训志愿者一对一带领五家阳光之家的学员们游览校园、感受交大校园生活。同时，主办方为阳光之家的学员们准备了盛大的嘉年华，让他们尽情展现自己的才艺，发现自己的闪光点。活动也会邀请学院师生为阳光之家的大孩子们做体验式培训，让他们与志愿者们一起体验大学课堂。</p>
+<h3>4. 其他活动</h3>
+<p>阳光满屋社团发展至今已有13个年头，交大志愿者们先后举办“阳光”类主题活动近千场，服务人次也近千。为推动社团多元化发展，鼓励志愿们积极参与各类公益志愿活动，深化志愿活动的服务内涵，阳光满屋社团从2014年开始奔赴养老院、敬老院、邻里中心等附近社区民生机构，为需要的群体送去交大学子的关怀。阳光满屋社团也同时在尝试与专业性NGO组织合作，如上海仁渡海洋公益发展中心，招募交大志愿者前往南汇东滩开展“净滩志愿服务”活动，为国家海岸线的环保工作尽一份绵薄之力。</p>
+        <small class="page-url url "><a href="https://www.sipa.sjtu.edu.cn/show/2250" target="_blank">(https://www.sipa.sjtu.edu.cn/show/2250)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="SJTU新水源社区重磅上线-上海交通大学网络信息中心">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💬&nbsp;</span>SJTU新水源社区重磅上线-上海交通大学网络信息中心</h3>
+        <small class="page-url url "><a href="https://net.sjtu.edu.cn/info/1009/2044.htm" target="_blank">(https://net.sjtu.edu.cn/info/1009/2044.htm)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 新水源社交平台提供了学生之间互动和分享的空间，丰富了校园文化氛围。<br></small>
+    </div>
+    <div class="page-content content"><h2>网页版“新水源”社区</h2>
+<p>网页版“新水源”社区分为“学在交大”、“水贴广场”、“社会信息”、“校园生活”、“交大快讯”、“站点反馈”六大板块，同时设置“热门话题”。</p>
+<p>讲座、社团、后勤、校园管理等最新动态；选课、求职、出国等经验分享；租房、实习、兼职、招聘等实用信息；失物招领、二手交易等校园服务一网打尽；更有课程公告、资料下载、教研合作等师生交流专区。</p>
+<p>主题创建操作简单。点击“学在交大”或者其他子版块，如“本科生培养”，进入板块页面；点击右上角“发新主题”按钮，在网页下部弹出的编辑框输入需要发布帖子的标题和正文，点击“创建主题”即可。</p>
+<p>新冠肺炎疫情防控期间，“学在交大”板块搭建网络新媒体端社交讨论新平台，提供网络教与学的互动交流，为交大师生畅所欲言线上讨论提供零距离服务支撑，真正实现“云开学”。</p>
+<p>精彩的小程序版也将在近期推出。</p>
+<h2>小程序版“新水源”社区</h2>
+<p>同名小程序在网页版基础上进行了功能简化，分为“首页”、“热门”、“发布”、“最新”、“我的”五大板块，更方便手机端实时速览，了解热门话题。此外，小程序版开通私信功能，方便师生随时随地随心交流。</p>
+<p>SJTU新水源社区，交大师生温暖有趣的社交桥梁，高效实用的校园网络综合平台。</p>
+        <small class="page-url url "><a href="https://net.sjtu.edu.cn/info/1009/2044.htm" target="_blank">(https://net.sjtu.edu.cn/info/1009/2044.htm)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="交大版“天空之境”网红景点，你打卡了吗？_活力校园_上海交通大学新闻学术网">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🌤&nbsp;</span>交大版“天空之境”网红景点，你打卡了吗？_活力校园_上海交通大学新闻学术网</h3>
+        <small class="page-url url "><a href="https://news.sjtu.edu.cn/hlxy/20201015/132371.html" target="_blank">(https://news.sjtu.edu.cn/hlxy/20201015/132371.html)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 交大校园如同仙境，展现了自然与人文的和谐美融合。<br></small>
+    </div>
+    <div class="page-content content"><h2>天空之境，梦幻美妙</h2>
+<p>绿荫映夏，点亮青春。</p>
+<p>交大校园如一个仙境，空间时间交织，展开一卷独特的画卷对话。</p>
+<h3>你的倒影</h3>
+<p>摄影@周思未</p>
+<p>清晨，云随风散漫，书声伴着阳光洒下，在林间，在石板，在小径，在转角，在百年的岁月大道。</p>
+<h3>盗梦空间</h3>
+<p>摄影@金晓晖</p>
+<p>梦想，是什么形状？也许，就是交大这般模样。晨曦，星辰，途中的每个印记都是你成长前进的脚步。</p>
+<h3>镜像之境，予人以渔侧记</h3>
+<p>摄影@姚章庭</p>
+<p>波光粼粼，清晰倒影，平静如水，却有无穷的力量。交大的每个角落都有多彩的记忆和奋斗的点滴。</p>
+<h3>观想</h3>
+<p>摄影@李俊</p>
+<p>一抹鲜红托起碧瓦飞檐，是百年的风雨与荣耀；点点灯火温暖天空之境，是青春的欢笑泪水，是成长的足迹。</p>
+<p>怎么样？这些隐藏的天空之境你是否打卡过了？最美的风景也许不在远方，就在你触手可及的身边。</p>
+        <small class="page-url url "><a href="https://news.sjtu.edu.cn/hlxy/20201015/132371.html" target="_blank">(https://news.sjtu.edu.cn/hlxy/20201015/132371.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="创新，不因此终点-博客推荐-上海交通大学生创新实践网">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💡&nbsp;</span>创新，不因此终点-博客推荐-上海交通大学生创新实践网</h3>
+        <small class="page-url url "><a href="https://uitp.sjtu.edu.cn/innovation/blog/2009/0531/article_64.html" target="_blank">(https://uitp.sjtu.edu.cn/innovation/blog/2009/0531/article_64.html)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 创新项目研究展现了学生的探索精神与团队合作的效果。<br></small>
+    </div>
+    <div class="page-content content"><h2>徐超创新性项目总结</h2>
+<h3>项目历程与收获</h3>
+<p>创新性项目从立项至今已过一年。能够参与第一届上海大学生创新活动计划，我感到荣幸、压力并存，也深受鼓舞。我们的目标是将此项目打造为大学生活中浓墨重彩的一笔。  在项目进行期间，我与其他组员全力以赴，力求尽善尽美。事实证明，我们尽力了，更重要的是，我们在创新过程中有所收获。虽然项目告一段落，但对我们团队而言，创新才刚刚开始。</p>
+<h3>项目初期：选题与调研</h3>
+<p>大三第一学期，我们在党团活动室和寝室里迸发出创新的火花，最终选定“对上海郊区大学城周边第三产业之辐射作用的比较与研究”作为课题。项目初期，我对上海三个主要郊区的大学城进行了实地考察，了解学校分布和周边第三产业情况。之后，我们着重研究上海交通大学闵行校区对周边第三产业的辐射作用。  我负责整理文献资料，寻找大学城以往的研究，并联系其他高校，了解高校在收费、设施、服务等方面的异同。由于人手不足，我们分工明确，责任重大，但我们都从中学到了很多，并为获得锻炼机会感到高兴。</p>
+<p>在文献阅读方面，我们采用了读书笔记、读后感和小组成员内部读书报告交流会的形式，提升了团队效率，增进了成员间的磨合。</p>
+<h3>项目进展：研究方法与创新</h3>
+<p>我们通过相互讨论和质疑确定研究范围和方向。每周工作内容由小组讨论制定，采用双人相互否定方法，反复推敲，最终形成方案。</p>
+<p>我们推翻了原有的衣食住行四分法，采用交通、饮食、住房、其他消费四个方向进行分类。  每个人负责一个方面，进行调研，我负责研究大学城对周边交通运输的带动作用及交通运输对周边经济的影响，并提出改进意见。</p>
+<p>项目中期，我们暂停工作，分析初步结果，总结整合文献资料，并制定下一步计划。我分析了初期成果和不足，提出了改进方向，并继续完善各项事宜。  我们还制定了向国内其他大型体育场馆延伸调查的方案。</p>
+<p>中期评审后，除了完成公共交通调研外，我还尝试了创新方法。除了实地调查轨道交通外，我们还利用Google地图统计了闵行大学城周边公交站点的区位和数量分布，并与剑川路和颛桥周边进行比较，发现了大学城的集聚效应。</p>
+<h3>项目后期与总结</h3>
+<p>项目后期，我们整理项目报告，小组成员撰写各自负责的部分。  这段时间，虽然理论性较强，但也有许多争论和不同见解，创新的火花不断碰撞。</p>
+<p>在项目报告整理过程中，我深刻体会到团队合作精神的重要性。合理分工可以有效提升团队效率，例如读书报告会，其效率远高于每个人阅读同一篇论文。</p>
+<p>大学学习赋予了我们更广阔的思维空间，也提出了更高的要求，需要明确学习目的，有更强的辨别力和自学能力。本次项目研究巩固和加强了我的知识，拓宽了知识面，也促使我学习更多新知识，丰富了理论知识。</p>
+<p>参与本次创新项目，我收获良多，感受到了团队精神，增进了友谊。创新对我的启发很大，空谈不如头脑风暴，集体的智慧能发挥更大价值。我相信创新会时刻帮助我改变思维定式，攀登事业高峰。</p>
+<p><strong>(徐超，上海交通大学安泰经济与管理学院2006级经济专业；指导教师：史占中教授)</strong></p>
+        <small class="page-url url "><a href="https://uitp.sjtu.edu.cn/innovation/blog/2009/0531/article_64.html" target="_blank">(https://uitp.sjtu.edu.cn/innovation/blog/2009/0531/article_64.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="校园地图-上海交大培训中心-干部培训学院-上海交大马院培训中心">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🍽&nbsp;</span>校园地图-上海交大培训中心-干部培训学院-上海交大马院培训中心</h3>
+        <small class="page-url url "><a href="https://mypeixun.sjtu.edu.cn/campus" target="_blank">(https://mypeixun.sjtu.edu.cn/campus)</a><br></small>
+        <small class="page-rating rating ">评分: 5.0<br></small>
+        <small class="page-annotation annotation ">注释: 餐饮服务地点为师生的日常生活提供了便利与交流空间。<br></small>
+    </div>
+    <div class="page-content content"><h2>上海交通大学闵行校内示意图：为马院培训中心</h2>
+<h3>餐饮信息</h3>
+<p>闵行校区内有学术活动中心，第一大餐饮大楼，第二餐饮大楼及商业街及周边。都提供早餐、中餐及晚餐。</p>
+        <small class="page-url url "><a href="https://mypeixun.sjtu.edu.cn/campus" target="_blank">(https://mypeixun.sjtu.edu.cn/campus)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="上海交通大学校园地图---百度">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🗺&nbsp;</span>上海交通大学校园地图 - 百度</h3>
+        <small class="page-url url "><a href="http://www.baidu.com/from=844b/ssid=0/s?word=%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%9B%AD%E5%9C%B0%E5%9B%BE&sa=re_dl_prs_34689_6&ms=1&rqid=8816264355514857493&rq=%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%86%85%E5%9B%BE%E7%89%87&rsf=1630008&asctag=32472" target="_blank">(http://www.baidu.com/from=844b/ssid=0/s?word=%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%9B%AD%E5%9C%B0%E5%9B%BE&sa=re_dl_prs_34689_6&ms=1&rqid=8816264355514857493&rq=%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%86%85%E5%9B%BE%E7%89%87&rsf=1630008&asctag=32472)</a><br></small>
+        <small class="page-rating rating ">评分: 5.0<br></small>
+        <small class="page-annotation annotation ">注释: 闵行校区的手绘地图指引有助于游客了解校园的学术与文化场所。<br></small>
+    </div>
+    <div class="page-content content"><h2>上海交通大学闵行校区手绘地图</h2>
+<h2>上海交大对外开放后，这份地图你肯定需要！</h2>
+<h2>上海交通大学（徐汇校区）参观攻略</h2>
+<h2>“交大文旅”来上分！这些深度游路线，你打卡了吗？</h2>
+<h2>上海交通大学徐汇校区 | 附游览路线&amp;地图</h2>
+<h2>上海交通大学🌸闵行校区 | 超详攻略</h2>
+<h2>在面积特别大的大学上学是怎样一种体验</h2>
+<h2>上海遛娃 | 上海交通大学预约参观攻略</h2>
+<h2>上海交通大学闵行校区超实用详细攻略</h2>
+<h3>校区简介</h3>
+<p>闵行校区是上海交大的最大的校区，位于上海市闵行区东川路800号，因远离市中心，也被戏称为“闵大荒”。占地面积约4638.75亩，毗邻华东师范大学，有高速公路横穿校区，有规模不小的交大植物园，面积太大，所以也被称为“脚痛大学”。</p>
+<h3>交通攻略</h3>
+<p>地铁15号线紫竹高新区6号口  自己直接导航交大闵行校区（北一门，南大门）即可，北一门、南大门可自驾驶入交大闵行校区。</p>
+<h3>如何预约</h3>
+<p>上海交通大学官方公众号预约，点击菜单栏“校外访客”按提示进行入校填报  选择校区、时间段、准确填写相关信息  预约完成后可在相应时段刷本人身份证原件或随申码进校  临时访客从剑川路（北一门）或东川路（凯旋门）进校</p>
+<h3>打卡路线推荐</h3>
+<ol>
+<li>庙门：来交大必打卡的标志性大门</li>
+<li>行政楼：在行政楼前的草坪上种植着一片郁金香，还有玉兰花，和行政楼的建筑很搭很出片哦～</li>
+<li>思源湖：思源湖畔有很多鸽子，坐在长椅上，望着波光粼粼的湖面，晒晒太阳，很是惬意。</li>
+<li>李政道图书馆 &amp; 包玉刚图书馆：来到一所大学肯定要去大学的图书馆啦，两个图书馆各有特色，环境舒适。</li>
+<li>电院大草坪：草坪上立着ISJTU的牌子，可以合影留念～草坪很大，可在草坪上露营，放风筝～</li>
+<li>美术馆：小而美的一个美术馆，边上还有一家咖啡店，坐在湖边很是享受。</li>
+<li>校史馆：有时间的话还是值得去了解了解交大的历史的。</li>
+<li>植物园：占地面积近400公顷，园内绿树成荫，山水相映，环境幽雅，也有很多，亲近自然的好去处。</li>
+<li>涂鸦墙：沪金高速下面是隧道，两边墙面是涂鸦。打卡拍照很灵。</li>
+<li>涵泽湖：湖面有整片的荷花！边上就是餐厅和瑞幸，可以在湖边的座椅上边喝咖啡边赏荷花。</li>
+</ol>
+<h3>美食推荐</h3>
+<p>玉兰苑：号称校内CBD  二餐教工餐厅，烤鱼，西餐厅，绿园餐厅，麻辣香锅  三餐清真，水饺、麻辣香锅、椒麻鸡、南昌拌粉、黄焖鸡  四餐烧腊烤鸭，热干面，牛肉饭  五餐烤盘、东湖面馆生煎。玉兰苑茶餐厅，吉姆利得，囧烧。</p>
+<p>隐藏美食推荐：南体教超后边的小吃街，各种颜色的煎饼果子（菠菜，紫薯，南瓜），烤串。</p>
+<h3>Tips</h3>
+<p>参观校史馆/美术馆/博物馆，需要提前2天在【上海交大档案文博管理中心】公众号→服务→场馆预约  校园比较大，可以选择步行、共享单车、校园巴士。建议选择共享单车，自驾的建议遵守交规，按规停放车辆。如果想拍照的，强烈建议大家黄昏时刻到达思源湖，夕阳下的湖泊和岸边的垂柳超美！</p>
+        <small class="page-url url "><a href="http://www.baidu.com/from=844b/ssid=0/s?word=%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%9B%AD%E5%9C%B0%E5%9B%BE&sa=re_dl_prs_34689_6&ms=1&rqid=8816264355514857493&rq=%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%86%85%E5%9B%BE%E7%89%87&rsf=1630008&asctag=32472" target="_blank">(http://www.baidu.com/from=844b/ssid=0/s?word=%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%9B%AD%E5%9C%B0%E5%9B%BE&sa=re_dl_prs_34689_6&ms=1&rqid=8816264355514857493&rq=%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%86%85%E5%9B%BE%E7%89%87&rsf=1630008&asctag=32472)</a><br></small>
+    </div>
+
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 获取所有导航链接
+        const navLinks = document.querySelectorAll(".navigate-item");
+        // 将导航链接与目标元素建立映射关系
+        const connections = Array.from(navLinks).map(link => {
+            const targetId = link.getAttribute("href").substring(1); // 去掉 #
+            const targetElement = document.getElementById(targetId);
+            return { link, targetElement };
+        });
+        // 使用 IntersectionObserver 观察目标元素
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const { target, isIntersecting } = entry;
+                    const matchingLink = connections.find(connection => connection.targetElement === target).link;
+                    if (isIntersecting) {
+                        // 目标元素在视野中，添加高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.add("active");
+                    } else {
+                        // 目标元素离开视野，移除高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.remove("active");
+                    }
+                });
+            },
+            {
+                root: null, // 默认视口
+                threshold: 0.02
+            }
+        );
+
+        // 开始观察所有目标元素
+        connections.forEach(({ targetElement }) => observer.observe(targetElement));
+    });
+</script>
+<script>
+    // 获取元素
+    const resizer = document.querySelector('.resizer');
+    const leftColumn = document.querySelector('.left-column');
+    const rightColumn = document.querySelector('.right-column');
+    const navigate = document.querySelector('.navigate')
+
+    let isDragging = false;
+
+    // 鼠标按下事件
+    resizer.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        document.body.style.cursor = 'col-resize';
+        document.body.style.userSelect = 'none';
+    });
+
+    // 鼠标移动事件
+    document.addEventListener('mousemove', (event) => {
+        if (!isDragging) return;
+
+        // 计算新的宽度
+        const newLeftWidth = event.clientX / window.innerWidth * 100; // 转换为百分比
+
+        // 限制宽度范围
+        if (newLeftWidth > 15 && newLeftWidth < 70) {
+            leftColumn.style.flexBasis = `${newLeftWidth}%`;
+            rightColumn.style.flexBasis = `${100 - newLeftWidth}%`;
+            navigate.style.left = `${newLeftWidth + 0.15 * (100 - newLeftWidth)}%`
+            navigate.style.maxWidth = `${0.7 * (100 - newLeftWidth)}%`
+
+            const navigateRect = navigate.getBoundingClientRect();
+            const screenWidth = window.innerWidth;
+
+            // 获取右侧部分宽度
+            const rightColumnWidth = rightColumn.getBoundingClientRect().width;
+
+            // 计算 navigate 的占屏幕宽度比例
+            const navigateWidthPercentage = (navigateRect.width / screenWidth) * 100;
+
+            // 计算 navigate 居中所需的 left 值
+            const rightColumnLeft = rightColumn.getBoundingClientRect().left;
+            const navigateLeft = rightColumnLeft + (rightColumnWidth - navigateRect.width) / 2;
+
+            // 设置 navigate 的宽度和位置
+            navigate.style.left = `${navigateLeft}px`;
+        }
+    });
+
+    // 鼠标松开事件
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        document.body.style.cursor = 'default';
+        document.body.style.userSelect = 'auto';
+    });
+</script>
+</html>

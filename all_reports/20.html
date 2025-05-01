@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>英法百年战争的完整历史</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; /* 更现代、更通用的字体 */
+            background-color: #f4f6f8; /* 更柔和的整体背景色 */
+            color: #333; /* 默认字体颜色 */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* 主内容区样式 */
+        .content {
+            border-radius: 12px; /* 圆角边界 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* 柔和的阴影 */
+            background-color: #fff; /* 明亮背景色 */
+            padding: 16px; /* 增加内边距 */
+            margin-bottom: 16px; /* 间隔 */
+        }
+
+        /* 左右分栏样式 */
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .left-column{
+            flex: 3;
+        }
+        .right-column{
+            flex: 4;
+        }
+
+        .left-column {
+            background-color: #eef6ff; /* 更亮的浅蓝背景 */
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); /* 内阴影 */
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; /* 明亮的背景色 */
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); /* 内阴影 */
+            font-family: "Noto Serif", "SimSun", serif; /* 更适合长文本阅读的字体 */
+            position: relative;
+        }
+
+        /* 标题样式 */
+        .title {
+            font-size: 1.4em; /* 增大标题字体 */
+            font-weight: 600; /* 半粗体 */
+            color: #1a1a1a; /* 深灰色标题 */
+            margin-bottom: 12px; /* 增加下方间距 */
+        }
+
+        .page-name.title {
+            font-size: 1.8em; /* 更大的字体 */
+            font-weight: bold; /* 加粗标题 */
+            color: #222; /* 更深的灰色 */
+            margin: 16px 0; /* 增加上下间距 */
+            text-align: left; /* 左对齐 */
+        }
+
+        .section-title {
+            font-size: 1.4em; /* 调整大小 */
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; /* 中灰色标题 */
+        }
+
+        /* 段落样式 */
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; /* 更现代的中英双语字体 */
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; /* 柔和的深灰色 */
+            padding: 12px; /* 内边距 */
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; /* 更清新的背景色 */
+            border: 1px solid #dde3ea; /* 添加边框 */
+            border-radius: 12px; /* 圆角 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 轻微阴影 */
+            margin-bottom: 20px; /* 增加间距 */
+        }
+
+        /* 分割线样式 */
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; /* 更柔和的分割线 */
+            margin: 20px 0; /* 增加上下间距 */
+        }
+
+        /* 元数据样式 */
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; /* 更小的字体 */
+            color: #666; /* 浅灰色 */
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; /* 更深的字体颜色 */
+            border-radius: 8px; /* 圆角 */
+            line-height: 1.4;
+            margin-bottom: 10px; /* 增加间距 */
+        }
+
+        /* 评分样式 */
+        .page-rating {
+            background-color: #e8f4ff; /* 浅蓝背景 */
+            color: #0078d7; /* 蓝色文字 */
+            font-weight: bold; /* 加粗文字 */
+            border: 1px solid #aad4ff; /* 边框 */
+        }
+
+        /* 评价样式 */
+        .page-annotation {
+            background-color: #fff5e5; /* 浅黄背景 */
+            color: #cc8400; /* 深黄色文字 */
+            font-style: italic; /* 斜体文字 */
+            border: 1px solid #ffcc66; /* 边框 */
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; /* 隐藏部分 */
+        }
+
+        /* 链接样式 */
+        a {
+            color: #0078d7; /* 蓝色 */
+            text-decoration: none; /* 移除下划线 */
+        }
+
+        a:hover {
+            text-decoration: underline; /* 鼠标悬停时显示下划线 */
+        }
+
+        /* 提高整体间距 */
+        .content > * {
+            margin-bottom: 12px; /* 增加内容之间的间距 */
+        }
+
+        /* query */
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; /* 紧贴页面顶部 */
+            z-index: 300; /* 确保在其他元素之上 */
+            background-color: #ffffff; /* 纯白背景，模拟输入框 */
+            color: #222; /* 深灰色文字 */
+            font-size: 1.1em; /* 略大的字体，提升可读性 */
+            font-weight: 500; /* 中等字体权重，轻松而非刻板 */
+            padding: 12px 16px; /* 内边距，增强舒适感 */
+            border-radius: 8px; /* 圆角设计，柔和外观 */
+            border: 1px solid #d1e4f2; /* 浅蓝边框 */
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05), /* 内阴影，模拟输入框的凹陷效果 */ 0 2px 4px rgba(0, 0, 0, 0.1); /* 外阴影，提升立体感 */
+            margin-bottom: 16px; /* 与下面内容留出空间 */
+            text-align: left; /* 左对齐，模拟自然输入 */
+            line-height: 1.6; /* 提高行间距，增强舒适性 */
+            font-family: "Inter", "Noto Sans", sans-serif; /* 与 sections 不同的字体，轻松现代 */
+            display: flex; /* 使用 flexbox 布局 */
+            align-items: center; /* 确保表情和文字垂直居中 */
+            gap: 10px; /* 表情和文字之间的间距 */
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        /* Section Link */
+        .section-link-box {
+            display: inline-block; /* 让链接保持块状但不独占一行 */
+            margin: 8px 4px; /* 控制胶囊之间的间距 */
+        }
+
+        .section-link {
+            display: inline-flex; /* 使用 flex 布局对齐内容 */
+            align-items: center; /* 垂直居中对齐 */
+            padding: 6px 12px; /* 增加内边距，增强胶囊感 */
+            background-color: #eef6ff; /* 胶囊的背景色 */
+            color: #0078d7; /* 文字颜色 */
+            font-size: 0.95em; /* 调整字体大小 */
+            font-weight: 500; /* 适度加粗 */
+            text-decoration: none; /* 去掉下划线 */
+            border: 1px solid #d1e4f2; /* 胶囊的浅色边框 */
+            border-radius: 20px; /* 胶囊效果 */
+            transition: all 0.2s ease; /* 添加动画过渡效果 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; /* 悬停时更深的背景色 */
+            color: #005bb5; /* 更深的文字颜色 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 加强阴影效果 */
+            text-decoration: underline; /* 可选：添加下划线 */
+        }
+
+        /* Navigate 样式 */
+        .navigate {
+            display: flex; /* 使用 flex 布局 */
+            max-width: 40%;
+            width: fit-content; /* 宽度由内容决定 */
+            flex-wrap: nowrap; /* 禁止换行 */
+            overflow-x: auto; /* 水平方向开启滚动 */
+            gap: 4px; /* 子元素之间的间距 */
+            justify-content: center; /* 主轴居中对齐 */
+            padding: 4px 4px; /* 增加内边距 */
+            background-color: #f4f6f8; /* 柔和背景色 */
+            border-radius: 12px; /* 圆角设计 */
+
+            position: fixed;
+            top: 0;
+            right: 4%;
+            /*transform: translateX(-50%);*/
+            z-index: 1000; /* 确保层级在前 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+            transition: transform 0.3s ease; /* 平滑过渡效果 */
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        /* Navigate 静态内容 */
+        .navigate-item {
+            display: flex; /* 使用 flex 布局 */
+            flex-direction: column; /* 垂直排列子元素 */
+            align-items: center; /* 水平居中 */
+            justify-content: center; /* 垂直居中 */
+            background-color: #ffffff; /* 背景色 */
+            padding: 2px 4px; /* 增加内边距 */
+            border-radius: 12px; /* 圆角设计 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+            transition: all 0.3s ease; /* 平滑的交互效果 */
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; /* 悬停时更浅的背景色 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 增强阴影效果 */
+            transform: translateY(-2px); /* 悬停时微微上浮 */
+        }
+        .navigate-item a {
+            text-decoration: none; /* 移除下划线 */
+            color: #0078d7; /* 蓝色字体 */
+            font-weight: bold; /* 加粗文字 */
+            font-size: 1em; /* 增大字体 */
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; /* 放大 emoji */
+            margin-bottom: 1px; /* 与文字保持间距 */
+        }
+        .navigate-item-id {
+            font-size: 0.9em; /* 稍小的 ID 字体 */
+            color: #555; /* 中灰色字体 */
+        }
+
+        [id] { /* 导航后不要触顶, 不好看 */
+            scroll-margin-top: 40px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            英法百年战争的完整历史
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">百年战争的起因</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#The-10-Key-Figures-in-the-Hundred-Years’-War-|-History-Hit">
+    📜王位争夺</a></div><div class="section-link-box"><a class="section-link" href="#Causes-of-the-Hundred-Years'-War---World-History-Encyclopedia">
+    ⚔封建权益</a></div><div class="section-link-box"><a class="section-link" href="#Timeline-of-the-Hundred-Years'-War---Wikipedia">
+    🏰战争事件</a></div></div>
+    <div class="section-content content"><ol>
+<li><strong>争夺王位</strong>：</li>
+<li>
+<p>英国国王爱德华三世宣称自己是法国的合法国王，争夺法国王位。</p>
+</li>
+<li>
+<p><strong>领土诉求</strong>：</p>
+</li>
+<li>
+<p>英国对法国加斯科涅的领土诉求，尤其是加斯科涅的控制权问题。</p>
+</li>
+<li>
+<p><strong>经济和政治矛盾</strong>：</p>
+</li>
+<li>法国国王菲利普六世对英军在法国产生的影响，加剧了双方的紧张关系。</li>
+<li>
+<p>持续的经济和政治矛盾，导致双方关系恶化，为战争爆发埋下伏笔。</p>
+</li>
+<li>
+<p><strong>具体事件</strong>：</p>
+</li>
+<li>1337年，百年战争正式爆发，这一事件标志着长期冲突的开始。</li>
+<li>爱德华三世的声称与法国王位继承的权力斗争直接引发了战争。</li>
+</ol>
+<h3>用户可能关心的部分</h3>
+<ul>
+<li>英国国王爱德华三世主张自己为法国国王，这一争夺王位的行为是导致战争的直接原因。</li>
+<li>英国对加斯科涅的领土声索和持久的经济、政治矛盾是导致战事频发的重要背景。</li>
+<li>1337年战争的正式爆发，反映出双方在争夺权力和资源方面的深层次矛盾。</li>
+</ul></div>
+</div><div class="section">
+    <h3 class="section-title title">主要战役及其影响</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Battle-of-Crécy---Wikipedia">
+    🔫克雷西战役细节</a></div><div class="section-link-box"><a class="section-link" href="#Battle-of-Poitiers---Wikipedia">
+    🚩普瓦捷战役细节</a></div><div class="section-link-box"><a class="section-link" href="#Battle-of-Agincourt---Wikipedia">
+    👑阿金库特战役细节</a></div></div>
+    <div class="section-content content"><p>从对话记录中提取的关于<strong>主要战役及其影响</strong>的内容如下：</p>
+<ol>
+<li><strong>克雷西战役 (1346)</strong>：</li>
+<li>日期：1346年8月26日</li>
+<li>地点：Crécy-en-Ponthieu, France</li>
+<li>主要参战军队：英军（爱德华三世领导）与法军（菲利普六世领导）</li>
+<li>
+<p>结果与影响：英军胜利，确立了长弓在战场上的有效性，巩固了英军的战略地位。战役后，英国的统治能力得到提升，并对后续战斗产生积极影响。</p>
+</li>
+<li>
+<p><strong>普瓦捷战役 (1356)</strong>：</p>
+</li>
+<li>日期：1356年9月19日</li>
+<li>地点：法国普瓦捷附近</li>
+<li>主要参战军队：英军（爱德华王子领导）与法军（约翰二世领导）</li>
+<li>
+<p>结果与影响：法军皇帝约翰二世被俘，这一结果进一步削弱了法国的军事能力，并造成了国内动乱，促成了后续的和平谈判。</p>
+</li>
+<li>
+<p><strong>阿金库特战役 (1415)</strong>：</p>
+</li>
+<li>日期：1415年10月25日</li>
+<li>地点：Azincourt, France</li>
+<li>主要参战军队：英军（亨利五世领导）与法军</li>
+<li>结果与影响：英军在人数劣势的情况下获胜，加强了士气并重振了英军的自信，成为英法战争中的转折点之一。</li>
+</ol>
+<p>用户可能最关心的部分包括各场战役的日期、地点、参战军队以及它们的直接结果和对战争局势的影响，这些信息关键地塑造了百年战争的整体历史脉络。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">战争中的重要人物</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#The-10-Key-Figures-in-the-Hundred-Years’-War-|-History-Hit">
+    📜主要人物</a></div><div class="section-link-box"><a class="section-link" href="#Battle-of-Crécy---Wikipedia">
+    🔫克雷西战役</a></div><div class="section-link-box"><a class="section-link" href="#Battle-of-Poitiers---Wikipedia">
+    🚩普瓦捷战役</a></div></div>
+    <div class="section-content content"><p>在百年战争中，以下是主要参与人物及其在战争中的作用与影响：</p>
+<ol>
+<li><strong>爱德华三世（Edward III of England）</strong>：</li>
+<li>
+<p>作为英格兰国王，爱德华三世宣称自己为法国的合法国王，直接导致了战争的爆发。他的军事策略和指挥能力在克雷西战役和普瓦捷战役中取得了显著胜利，巩固了英格兰的军事实力。</p>
+</li>
+<li>
+<p><strong>菲利普六世（Philip VI of France）</strong>：</p>
+</li>
+<li>
+<p>法国国王，因继承争议而成为战争的另一方。他的统治初期因为对战争局势的错误判断，导致了英军在多个战役中的失败，尤其是在克雷西和普瓦捷战役。</p>
+</li>
+<li>
+<p><strong>黑王子爱德华（Edward of Woodstock, the Black Prince）</strong>：</p>
+</li>
+<li>
+<p>爱德华三世的儿子，他在普瓦捷战役中表现出色，捕获了法王约翰二世，进一步削弱了法国的军事实力。他的胜利增强了英格兰的名声，并为后来的统治奠定了基础。</p>
+</li>
+<li>
+<p><strong>亨利五世（Henry V of England）</strong>：</p>
+</li>
+<li>
+<p>亨利五世以其在阿金库特战役中的领导才能而闻名，该战役在人数劣势的情况下获得决定性胜利。他的胜利有助于重新振兴英格兰的士气，并为后续的外交和军事行动铺平了道路。</p>
+</li>
+<li>
+<p><strong>贞德（Joan of Arc）</strong>：</p>
+</li>
+<li>
+<p>法国的民族英雄，她以神圣的使命感领导军队，帮助法国在奥尔良的围困中取得胜利。这一胜利扭转了战争局势，振奋了人心，并加强了法国的民族认同感。</p>
+</li>
+<li>
+<p><strong>查尔斯五世（Charles V of France）</strong>：</p>
+</li>
+<li>他在战争后期重新夺回了法国失地，提升了法国的军事力量和国家统一，同时他的统治也促进了文化和社会的复兴。</li>
+</ol>
+<p>这些人物在百年战争中的作用与影响直接关联到两国历史的走向，他们的决策、军事才能和个人魅力在很大程度上影响了战争的结果与各自国家的发展。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">战争对政治和经济的影响</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Causes-of-the-Hundred-Years'-War---World-History-Encyclopedia">
+    ⚔政治与经济变化</a></div><div class="section-link-box"><a class="section-link" href="#The-Hundred-Years'-War:-Consequences-&-Effects---World-History-Encyclopedia">
+    📉王权与财政</a></div><div class="section-link-box"><a class="section-link" href="#Hundred-Years'-War---Wikipedia">
+    🤝统治与军事变革</a></div></div>
+    <div class="section-content content"><p>在对话记录中，关于战争对政治和经济的影响，尤其是王权的发展、财富损失和税制变革等方面的信息如下：</p>
+<ol>
+<li><strong>英国的政治与经济变化</strong>：</li>
+<li>
+<p>英国几乎完全破产，仅加莱仍在其控制之下。</p>
+</li>
+<li>
+<p><strong>法国的政治与经济变化</strong>：</p>
+</li>
+<li>法国巩固了王权，推动了绝对君主制的发展。</li>
+<li>制定了新的税收制度以支付战争费用，社会动荡加剧。</li>
+</ol>
+<p>用户可能最关心的部分：
+- 英国几乎完全破产，仅加莱仍在其控制之下，这表明战争对其经济造成了严重冲击。
+- 法国则在战争后期逐步建立了常备军，提升了军队素质和战斗力，同时巩固了王权，走向了绝对主义，这些都是战争结束后对国家政治结构的重大影响。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">文化和社会影响</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#The-Hundred-Years'-War:-Consequences-&-Effects---World-History-Encyclopedia">
+    📉英雄崇拜</a></div><div class="section-link-box"><a class="section-link" href="#Impact-of-Black-Death-and-Hundred-Years'-War-on-Arts-and-Literature">
+    ✍英雄与崇拜</a></div><div class="section-link-box"><a class="section-link" href="#The-10-Key-Figures-in-the-Hundred-Years’-War-|-History-Hit">
+    📜文化影响</a></div></div>
+    <div class="section-content content"><p>在对话中关于文化和社会影响的部分，提取的关键信息如下：</p>
+<ol>
+<li>
+<p><strong>文学影响</strong>：百年战争导致文学主题变得阴暗和以死亡为中心，诗人如吉约姆·德·马绍在此期间创作了许多反映这一主题的作品。</p>
+</li>
+<li>
+<p><strong>艺术影响</strong>：战争的持续使艺术的关注点从培育艺术转向生存，艺术材料的稀缺和赞助的减少对艺术创作造成了影响。</p>
+</li>
+<li>
+<p><strong>民族认同感</strong>：战争增加了民族认同感，消除了对统治者的不满，并促成了国家英雄的形成，如英格兰的亨利五世和法国的贞德。</p>
+</li>
+<li>
+<p><strong>民众心理</strong>：战争不仅增强了人们的民族认同感，还塑造了国家英雄形象，这些英雄成为了民众心理的寄托。</p>
+</li>
+</ol>
+<p>用户可能最关心的部分是：战争如何塑造了国家英雄和民众心理，特别是亨利五世和贞德这两个重要角色，如何在不同的社会背景下成为民族认同与英雄崇拜的象征。这些英雄形象在很大程度上反映了战争给人们带来的心理影响和文化认同。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">军事战略演变</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Causes-of-the-Hundred-Years'-War---World-History-Encyclopedia">
+    ⚔百年战争概述</a></div><div class="section-link-box"><a class="section-link" href="#How-Artillery-Evolved-in-the-100-Years-War-|-War-History-Online">
+    💣火药武器演变</a></div><div class="section-link-box"><a class="section-link" href="#The-Hundred-Years'-War:-Consequences-&-Effects---World-History-Encyclopedia">
+    📉战争后果</a></div></div>
+    <div class="section-content content"><ol>
+<li><strong>战术演变</strong>：</li>
+<li>英军在百年战争中采用了以防御为主的战术，利用弓箭手对敌方进行压制，特别是在克雷西与阿金库尔等战役中。 </li>
+<li>
+<p>法军人数上占优，但往往因缺乏有效的战术安排而陷入被动，未能有效应对英军的战术。</p>
+</li>
+<li>
+<p><strong>武器演变</strong>：</p>
+</li>
+<li>百年战争末期，火药炮兵逐渐成为战争中的核心武器，炮火对城堡和敌军产生了显著的破坏效果。</li>
+<li>
+<p>武器的材料和技术在战争中得到了极大的进步，包括从石制炮弹向铸铁炮弹的转变。</p>
+</li>
+<li>
+<p><strong>军队组织的变化</strong>：</p>
+</li>
+<li>英国军队发展出了相对常规的招募体系，通过雇佣军的方式组织军队，形成了一种类似于常备军的结构。 </li>
+<li>
+<p>法国军队则依赖传统的封建征兵，直到战争后期逐渐形成了一支常备军，提升了整体的战斗力。</p>
+</li>
+<li>
+<p><strong>英军的战术优势与法军应对策略</strong>：</p>
+</li>
+<li>英军在多个战役中展示了其战术优势，通过防御阵型的部署和弓箭手的高效配合，成功战胜法军。</li>
+<li>法军在受到英军战术打击后，虽然有过尝试通过改变兵种配置和战术进行适应，但总体上仍然未能有效破解英军的防御策略。</li>
+</ol>
+<p>这些信息强调了在百年战争中，随着战术和武器的演变，英军获得了战术上的优势，并影响了法军的应对策略，同时火药武器的发展标志着战争形态的重大变化。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">历史遗迹和纪念地点</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Crécy-en-Ponthieu---Monuments---Somme">
+    🗽克雷西战役</a></div><div class="section-link-box"><a class="section-link" href="#The-Battle-of-Agincourt-Museum---Mary-Anne's-France">
+    🏺阿金库尔战役</a></div><div class="section-link-box"><a class="section-link" href="#Hundred-Years-War-|-War-Imperial-War-Museums">
+    🏛纪念碑</a></div></div>
+    <div class="section-content content"><p>在对话中与百年战争相关的重要历史遗迹和纪念地点信息如下：</p>
+<ol>
+<li><strong>All Souls College纪念碑</strong>  </li>
+<li><strong>背景信息</strong>：该纪念碑位于牛津，专门纪念在百年战争中阵亡的灵魂。  </li>
+<li>
+<p><strong>重要性</strong>：纪念碑彰显了战争中牺牲者的历史，提醒人们对历史的追忆和尊重。  </p>
+</li>
+<li>
+<p><strong>Crécy-en-Ponthieu纪念碑</strong>  </p>
+</li>
+<li><strong>背景信息</strong>：此地有多个与1346年克雷西战役相关的纪念碑，包括观察塔和Bohemia十字架。  </li>
+<li>
+<p><strong>重要性</strong>：这些纪念碑不仅标志着战斗发生的地点，还象征着这场战役对法国王国和英军的重大影响，留存了历史记忆。  </p>
+</li>
+<li>
+<p><strong>圣女贞德雕像</strong>  </p>
+</li>
+<li><strong>背景信息</strong>：位于华盛顿DC，是唯一的女性骑马雕像，纪念香农·阿尔克在百年战争中的英雄事迹。  </li>
+<li>
+<p><strong>重要性</strong>：此雕像反映了贞德作为民族英雄在历史和文化中的重要地位，代表着久远的抗争精神。</p>
+</li>
+<li>
+<p><strong>阿金库尔博物馆</strong>  </p>
+</li>
+<li><strong>背景信息</strong>：该博物馆专注于1415年阿金库尔战役，展示了战役及其历史重要性的详细资料。  </li>
+<li><strong>重要性</strong>：博物馆作为展示战斗和历史事件的重要机构，促进了公众对百年战争的了解，增强了文化传承。</li>
+</ol>
+<p>用户可能最关心的部分包括这些遗迹的背景和它们所代表的历史意义，尤其是它们如何反映了当代对这一历史事件的关注与纪念。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">现代学者的看法</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Causes-of-the-Hundred-Years'-War---World-History-Encyclopedia">
+    ⚔国家冲突</a></div><div class="section-link-box"><a class="section-link" href="#The-10-Key-Figures-in-the-Hundred-Years’-War-|-History-Hit">
+    📜国家身份</a></div><div class="section-link-box"><a class="section-link" href="#Hundred-Years’-War-|-Summary,-Causes,-Effects,-Combatants,-Timeline,-&-Facts-|-Britannica">
+    🌍国家塑造</a></div></div>
+    <div class="section-content content"><p>从对话记录中提取的关于“现代学者的看法”维度的内容如下：</p>
+<ol>
+<li>对于百年战争的研究，历史学家们认为这是塑造英法国家身份的重要事件。</li>
+<li>有研究关注普通人民在战争中的经历，但在民族主义视角上存在不足。</li>
+</ol>
+<p>用户可能最关心的部分是“历史学家们认为这是塑造英法国家身份的重要事件”，因为这直接涉及到百年战争对现代国家认同的深远影响。此外，“在民族主义视角上存在不足”的提法也引发了对普通人民生活历史的关切，表明学术界对于当时社会的综合考量仍有待深化。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">战后局势变化</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Causes-of-the-Hundred-Years'-War---World-History-Encyclopedia">
+    ⚔领土损失</a></div><div class="section-link-box"><a class="section-link" href="#The-Hundred-Years'-War:-Consequences-&-Effects---World-History-Encyclopedia">
+    📉经济破产</a></div><div class="section-link-box"><a class="section-link" href="#How-Artillery-Evolved-in-the-100-Years-War-|-War-History-Online">
+    💣民族意识</a></div></div>
+    <div class="section-content content"><ol>
+<li><strong>领土损失影响</strong>：</li>
+<li>
+<p>英国失去了所有法国领土，仅余加莱仍在其控制之下，这对英国造成了几乎完全的破产，这表明了战争对英国经济的重大打击。</p>
+</li>
+<li>
+<p><strong>法国的王权巩固</strong>：</p>
+</li>
+<li>
+<p>在战争的后期，法国逐步建立了常备军，提升了军队素质和战斗力。这使得法国在结构上得以更好地应对之后的挑战，实现了更加集中化的国家控制。</p>
+</li>
+<li>
+<p><strong>民族意识的形成</strong>：</p>
+</li>
+<li>战争的结束不仅导致英国和法国的领土变化，还在两国培养了深远的民族意识。这种民族认同感的增强与百年战争中的英雄事迹（如亨利五世和贞德）密切相关，并且这种民族意识至今仍对两国关系产生影响。</li>
+</ol>
+<p>用户可能最关心的部分：
+- <strong>英国失去领土后的经济破产</strong>：这对英国国家整体带来的冲击，以及如何影响了其未来的财政和政策。
+- <strong>法国建立常备军的意义</strong>：这种军事组织形式的转变如何提高了法国的战斗力，改变了其军事战略的基础。
+- <strong>民族意识的长期影响</strong>：如何通过战争塑造了现代英法两国的民族认同，并对后续的国际关系和文化产生了持续影响。</p></div>
+</div>
+</div>
+<hr>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item">
+    <a href="#The-10-Key-Figures-in-the-Hundred-Years’-War-|-History-Hit" class="navigate-item-emoji ">📜</a>
+    <a href="#The-10-Key-Figures-in-the-Hundred-Years’-War-|-History-Hit" class="navigate-item-id">1</a>
+</div><div class="navigate-item">
+    <a href="#Causes-of-the-Hundred-Years'-War---World-History-Encyclopedia" class="navigate-item-emoji ">⚔</a>
+    <a href="#Causes-of-the-Hundred-Years'-War---World-History-Encyclopedia" class="navigate-item-id">2</a>
+</div><div class="navigate-item">
+    <a href="#Timeline-of-the-Hundred-Years'-War---Wikipedia" class="navigate-item-emoji ">🏰</a>
+    <a href="#Timeline-of-the-Hundred-Years'-War---Wikipedia" class="navigate-item-id">3</a>
+</div><div class="navigate-item">
+    <a href="#Hundred-Years’-War-|-Summary,-Causes,-Effects,-Combatants,-Timeline,-&-Facts-|-Britannica" class="navigate-item-emoji ">🌍</a>
+    <a href="#Hundred-Years’-War-|-Summary,-Causes,-Effects,-Combatants,-Timeline,-&-Facts-|-Britannica" class="navigate-item-id">4</a>
+</div><div class="navigate-item">
+    <a href="#The-Hundred-Years'-War:-Consequences-&-Effects---World-History-Encyclopedia" class="navigate-item-emoji ">📉</a>
+    <a href="#The-Hundred-Years'-War:-Consequences-&-Effects---World-History-Encyclopedia" class="navigate-item-id">5</a>
+</div><div class="navigate-item">
+    <a href="#Hundred-Years'-War---Wikipedia" class="navigate-item-emoji ">🤝</a>
+    <a href="#Hundred-Years'-War---Wikipedia" class="navigate-item-id">6</a>
+</div><div class="navigate-item">
+    <a href="#"The-Social-Impact-of-the-Hundred-Years-War-on-the-Societies-of-England"-by-Kody-E.-Whittington" class="navigate-item-emoji ">🎭</a>
+    <a href="#"The-Social-Impact-of-the-Hundred-Years-War-on-the-Societies-of-England"-by-Kody-E.-Whittington" class="navigate-item-id">7</a>
+</div><div class="navigate-item">
+    <a href="#List-of-Hundred-Years'-War-battles---Wikipedia" class="navigate-item-emoji ">🏅</a>
+    <a href="#List-of-Hundred-Years'-War-battles---Wikipedia" class="navigate-item-id">8</a>
+</div><div class="navigate-item">
+    <a href="#Battle-of-Crécy---Wikipedia" class="navigate-item-emoji ">🔫</a>
+    <a href="#Battle-of-Crécy---Wikipedia" class="navigate-item-id">9</a>
+</div><div class="navigate-item">
+    <a href="#Battle-of-Poitiers---Wikipedia" class="navigate-item-emoji ">🚩</a>
+    <a href="#Battle-of-Poitiers---Wikipedia" class="navigate-item-id">10</a>
+</div><div class="navigate-item">
+    <a href="#Battle-of-Agincourt---Wikipedia" class="navigate-item-emoji ">👑</a>
+    <a href="#Battle-of-Agincourt---Wikipedia" class="navigate-item-id">11</a>
+</div><div class="navigate-item">
+    <a href="#Wit-and-Humour-in-the-Hundred-Years'-War---Medievalists.net" class="navigate-item-emoji ">😂</a>
+    <a href="#Wit-and-Humour-in-the-Hundred-Years'-War---Medievalists.net" class="navigate-item-id">12</a>
+</div><div class="navigate-item">
+    <a href="#Hundred-Years-War-|-War-Imperial-War-Museums" class="navigate-item-emoji ">🏛</a>
+    <a href="#Hundred-Years-War-|-War-Imperial-War-Museums" class="navigate-item-id">13</a>
+</div><div class="navigate-item">
+    <a href="#Crécy-en-Ponthieu---Monuments---Somme" class="navigate-item-emoji ">🗽</a>
+    <a href="#Crécy-en-Ponthieu---Monuments---Somme" class="navigate-item-id">14</a>
+</div><div class="navigate-item">
+    <a href="#Joan-of-Arc-Statue-(U.S.-National-Park-Service)" class="navigate-item-emoji ">👩</a>
+    <a href="#Joan-of-Arc-Statue-(U.S.-National-Park-Service)" class="navigate-item-id">15</a>
+</div><div class="navigate-item">
+    <a href="#The-Battle-of-Agincourt-Museum---Mary-Anne's-France" class="navigate-item-emoji ">🏺</a>
+    <a href="#The-Battle-of-Agincourt-Museum---Mary-Anne's-France" class="navigate-item-id">16</a>
+</div><div class="navigate-item">
+    <a href="#The-Hundred-Years-War-and-Historians-|-SpringerLink" class="navigate-item-emoji ">🍪</a>
+    <a href="#The-Hundred-Years-War-and-Historians-|-SpringerLink" class="navigate-item-id">17</a>
+</div><div class="navigate-item">
+    <a href="#Impact-of-Black-Death-and-Hundred-Years'-War-on-Arts-and-Literature" class="navigate-item-emoji ">✍</a>
+    <a href="#Impact-of-Black-Death-and-Hundred-Years'-War-on-Arts-and-Literature" class="navigate-item-id">18</a>
+</div><div class="navigate-item">
+    <a href="#The-Development-of-Battle-Tactics-in-the-Hundred-Years-War-»-De-Re-Militari" class="navigate-item-emoji ">📊</a>
+    <a href="#The-Development-of-Battle-Tactics-in-the-Hundred-Years-War-»-De-Re-Militari" class="navigate-item-id">19</a>
+</div><div class="navigate-item">
+    <a href="#How-Artillery-Evolved-in-the-100-Years-War-|-War-History-Online" class="navigate-item-emoji ">💣</a>
+    <a href="#How-Artillery-Evolved-in-the-100-Years-War-|-War-History-Online" class="navigate-item-id">20</a>
+</div><div class="navigate-item">
+    <a href="#Recruiting,-Organization,-Tactics" class="navigate-item-emoji ">🗺</a>
+    <a href="#Recruiting,-Organization,-Tactics" class="navigate-item-id">21</a>
+</div>
+    </div>
+    <div class="page">
+    <div class="page-meta" id="The-10-Key-Figures-in-the-Hundred-Years’-War-|-History-Hit">
+        <h3 class="page-name title"><span class="page-emoji ">📜&nbsp;</span>The 10 Key Figures in the Hundred Years’ War | History Hit</h3>
+        <small class="page-url url "><a href="https://www.historyhit.com/key-figures-in-the-hundred-years-war/" target="_blank">(https://www.historyhit.com/key-figures-in-the-hundred-years-war/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 介绍了百年战争的主要人物和重要事件，作为历史背景的概述。<br></small>
+    </div>
+    <div class="page-content content"><ol>
+<li><strong>法国腓力六世 (1293 – 1350)</strong></li>
+</ol>
+<p>被称为“幸运者”的腓力六世是瓦卢瓦王朝的第一位法国国王。他的国王地位源于查理四世于1328年去世后的一场继承权纠纷。王位没有传给查理的侄子，英格兰国王爱德华三世，而是传给了查理的堂兄腓力。这一任命引发了一系列争端，最终导致了百年战争的爆发。</p>
+<ol>
+<li><strong>英格兰爱德华三世 (1312 – 1377)</strong></li>
+</ol>
+<p>爱德华三世与被称为爱德华战争的战争相关联——这是百年战争期间法英之间三次王朝冲突之一——他使英格兰从法国国王和贵族的附庸国转变为军事强国，并在克雷西和普瓦捷战役中取得了对法国的胜利。1346年8月26日的克雷西战役中，英格兰军队面对腓力六世国王的军队并取得了胜利，这归功于英格兰长弓手对腓力十字弓手的优势。</p>
+<ol>
+<li><strong>爱德华·伍德斯托克，黑太子 (1330 – 1376)</strong></li>
+</ol>
+<p>英格兰国王爱德华三世的长子黑太子是百年战争冲突期间最成功的军事指挥官之一。作为爱德华三世的长子，他是英格兰王位的法定继承人。黑太子参加了爱德华国王在百年战争期间对加莱的远征。在英格兰取得胜利后，他谈判达成了布列塔尼条约，该条约批准了爱德华三世国王和法国约翰二世国王之间的协议条款。</p>
+<ol>
+<li><strong>詹姆斯·奥德利爵士 (1318 – 1369)</strong></li>
+</ol>
+<p>詹姆斯·奥德利是最初的嘉德勋章骑士之一，该骑士勋章由英格兰爱德华三世于1348年创立。他参加了克雷西战役 (1346年) 和普瓦捷战役 (1356年)，这是英格兰在百年战争中对法国军队取得的两次重大胜利。在普瓦捷战役中，奥德利身受重伤，被抬离战场。爱德华·伍德斯托克非常钦佩奥德利的勇气，并奖励他600马克的年金。他后来成为阿基坦的总督。</p>
+<ol>
+<li><strong>法国查理五世 (1338 – 1380)</strong></li>
+</ol>
+<p>被称为“哲学之王”的查理五世是腓力六世的孙子。尽管他继承了一个饱受战争、瘟疫和叛乱摧残的法国，但他被视为法国的救世主：他成功地扭转了百年战争的局势，并使王国的文化机构焕发了活力。在他统治结束时，查理几乎收复了在屈辱性失败后丢失给英格兰的所有领土。在他的杰出军事指挥官贝尔特朗·迪·盖斯克兰（被称为“布罗塞利安德的黑犬”）的领导下，法国在一次又一次的战斗中击败了英格兰。尽管查理作为军事领袖取得了成功，并使濒临崩溃的法国复兴，但他也被人们痛恨，因为他加征了压榨人民的税收，尽管这些税收稳定了国家。</p>
+<ol>
+<li><strong>英格兰亨利五世 (1386 – 1422)</strong></li>
+</ol>
+<p>以莎士比亚戏剧《亨利五世》中的战前演讲而闻名的这位英格兰年轻国王，35岁就去世了，被认为是英格兰最伟大的英雄之一。有时被称为蒙茅斯的亨利，他与阿金库尔战役 (1415年) 有关，在该战役中，他在残酷的肉搏战中击败了由查理六世的指挥官查理·达尔布雷元帅率领的法国军队。这场战役以英格兰长弓的优势战胜法国十字弓而闻名。胜利几个月后，亨利和查理六世进行了漫长的谈判，两国最终签署了特鲁瓦条约 (1420年)。亨利娶了查理的女儿瓦卢瓦的凯瑟琳，巩固了英法之间似乎牢固的联盟。不幸的是，亨利两年后去世，由他的婴儿儿子亨利六世继位。</p>
+<ol>
+<li><strong>法国查理六世 (1368 – 1422)</strong></li>
+</ol>
+<p>查理是法国最麻烦的国王之一，经常被称为“疯子”，他患有精神病和心理健康问题，一生都在发疯和清醒之间交替。1392年，他在对英格兰的军事行动中遭受了谵妄发作，并袭击了自己的士兵，杀害了一名骑士。在一个阶段，他患有“玻璃妄想症”，认为自己是玻璃做的。查理与对凯旋的英格兰亨利五世发动的阿金库尔战役有关，之后他被迫签署了特鲁瓦条约，该条约剥夺了法国皇室成员的继承权，而支持英格兰亨利五世成为法国国王。</p>
+<ol>
+<li><strong>勃艮第的安妮 (1404 – 1432)</strong></li>
+</ol>
+<p>安妮是约翰大胆的女儿，是法国王室的后裔。安妮在百年战争中的作用是婚姻联盟，旨在巩固英法之间的关系。她与英格兰王子兰开斯特公爵约翰一世的婚姻是根据1423年《亚眠条约》达成的，被认为对于确保英格兰在法国取得成功以及与安妮的兄弟勃艮第公爵合作至关重要。与英法皇室之间的敌对关系不同，安妮和约翰的婚姻是幸福的，尽管没有孩子。</p>
+<ol>
+<li><strong>圣女贞德 (1412 – 1431)</strong></li>
+</ol>
+<p>圣女贞德是一位声称拥有神圣异象的少女，她被允许率领法国军队对抗英格兰。1429年，贞德率领王储的军队在奥尔良取得了胜利，这使得他加冕为法国查理七世国王，并能够恢复法国的王位。贞德被法国的政治敌人勃艮第人俘虏，被卖给了英格兰人，并被指控为女巫。她于1431年被烧死在火刑柱上。她于1920年被认定为圣徒。</p>
+<ol>
+<li><strong>阿伦德尔伯爵约翰·菲茨艾伦 (1408 – 1435)</strong></li>
+</ol>
+<p>阿伦德尔是一位在百年战争后期作战的英格兰贵族和军事指挥官，他以其在战斗中英勇作战和收复法国丢失的要塞以及镇压当地叛乱而闻名。他在27岁时英年早逝，1435年在热尔博瓦战役中，他的脚部中弹被俘。在他截肢后，阿伦德尔患上了致命的伤口感染，不久后便去世了。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Causes-of-the-Hundred-Years'-War---World-History-Encyclopedia">
+        <h3 class="page-name title"><span class="page-emoji ">⚔&nbsp;</span>Causes of the Hundred Years' War - World History Encyclopedia</h3>
+        <small class="page-url url "><a href="https://www.worldhistory.org/article/1517/causes-of-the-hundred-years-war/" target="_blank">(https://www.worldhistory.org/article/1517/causes-of-the-hundred-years-war/)</a><br></small>
+        <small class="page-rating rating ">评分: 9.0<br></small>
+        <small class="page-annotation annotation ">注释: 提供了百年战争的起因、过程和其历史背景，详细论述了冲突的根源。<br></small>
+    </div>
+    <div class="page-content content"><p>百年战争（1337-1453年）是英格兰和法国之间的一场断断续续的冲突，起因是英格兰国王爱德华三世（在位1327-1377年）与法国国王腓力六世（在位1328-1350年）就加斯科涅地区的封建权利和与低地国家的贸易发生争执。爱德华三世还声称自己是法国的合法国王，并在克雷西战役（1346年）和普瓦捷战役（1356年）中取得巨大胜利来支持这一说法。1360年，爱德华三世放弃了对法国王位的要求，作为交换，他获得了法国四分之一领土的统治权。此后战争继续进行，双方都试图控制法国北部和西南部。在法国国王查理五世（在位1364-1380年）稳步收复战争爆发以来损失的大部分土地之后，英格兰国王理查二世（在位1377-1399年）与法国国王查理六世（在位1380-1422年）的女儿结婚，出现了一段和平时期。英格兰国王亨利五世（在位1413-1422年）渴望赢得荣耀、战利品和对其统治的合法性，于是重新点燃了冲突，他在1415年的阿金库尔战役中取得了惊人的胜利，这使他被提名为法国王位的继承人。在亨利五世英年早逝以及亨利六世（在位1422-1461年 &amp; 1470-1471年）无能的统治之后，法国国王查理七世（在位1422-1461年）重新掌握了主动权。在勃艮第公爵和圣女贞德（1412-1431年）等人的帮助下，查理七世赢得了战争，并设法将英格兰人赶出了除加来以外的所有法国领土。</p>
+<p>百年战争的原因及其持续的原因包括：</p>
+<ul>
+<li>法国国王腓力六世夺取英格兰控制下的加斯科涅（阿基坦，法国西南部）。</li>
+<li>英格兰国王爱德华三世自称是法国的合法国王。</li>
+<li>爱德华三世远征法国，意图武力夺取法国领土，保护国际贸易，并为他的贵族赢得战利品和领地。</li>
+<li>法国国王查理五世雄心勃勃，想要将英格兰人赶出法国的封建领地。</li>
+<li>法国国王查理六世精神错乱，法国贵族之间发生严重的内讧。</li>
+<li>英格兰国王亨利五世雄心勃勃，想要使他在英格兰的统治合法化，并通过征服成为法国国王。</li>
+<li>王太子，未来的法国国王查理七世（在位1422-1461年），决心夺回他的继承权，统一整个法国。</li>
+</ul></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Timeline-of-the-Hundred-Years'-War---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">🏰&nbsp;</span>Timeline of the Hundred Years' War - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Timeline_of_the_Hundred_Years%27_War" target="_blank">(https://en.wikipedia.org/wiki/Timeline_of_the_Hundred_Years%27_War)</a><br></small>
+        <small class="page-rating rating ">评分: 9.5<br></small>
+        <small class="page-annotation annotation ">注释: 详细列出了百年战争各阶段的重要战役及其结果，直接对应报告中对主要战役的描述。<br></small>
+    </div>
+    <div class="page-content content"><p>1337–1360</p>
+<p>1340年：1月26日，爱德华三世在根特市场宣布自己为“法兰西国王”。[1]
+1341年：布列塔尼继承战争爆发。爱德华支持蒙福尔公爵约翰，而腓力支持布卢瓦的查理。
+1346年：爱德华三世在克雷西战役中对腓力六世给予了毁灭性打击。苏格兰入侵英格兰，但在内维尔十字架战役中被击败。
+1347年：加来沦陷于爱德华三世之手。戴维二世被俘。
+1348年：黑死病蔓延至欧洲。
+1350年：腓力六世去世，其子约翰二世继位。
+1351年：三十人战役。
+1356年：爱德华三世的儿子黑太子爱德华在普瓦捷战役中击败约翰二世。约翰二世被俘。
+1358年：法国发生农民起义，称为雅克利起义。
+1359年：约翰二世签署了《伦敦第二条约》，接受了巨大的领土损失和巨额赎金。然而，约翰的儿子和继承人查理拒绝接受。
+1360年：《布雷蒂尼条约》。爱德华三世放弃了他对法国王位的要求，以换取阿基坦的恢复和宗主权。爱德华任命他的儿子黑太子为阿基坦公爵。</p>
+<p>1360–1400</p>
+<p>1360年：黑色星期一——一场异常的冰雹袭击，造成约1000名英国士兵死亡，造成大规模伤亡。
+1364年：布卢瓦的查理在奥雷战役中战败身亡，标志着布列塔尼继承战争的结束。
+1366年：黑太子干预了卡斯提尔内战，卡斯提尔内战的双方是残暴的佩德罗和特拉斯特马拉的亨利。
+1370年：英格兰在普瓦图的行政长官约翰·尚多斯在卢萨克城堡战败身亡。
+1372年：法国指挥官贝特朗·迪·盖斯克兰攻占普瓦捷。
+1376年：爱德华三世的儿子去世。
+1377年：迪·盖斯克兰攻占贝热拉克。
+1377年：爱德华三世去世。他的孙子理查二世成为英格兰国王。
+1380年：白金汉伯爵率领一支远征队前往法国，以援助英格兰的盟友布列塔尼公爵。法国人拒绝作战，因此白金汉的部队继续进行劫掠，并围攻南特。
+1381年：布列塔尼公爵与新任法国国王查理六世的政权和解，向白金汉支付了50,000法郎，以放弃围攻和战役。</p>
+<p>1400–1422</p>
+<p>1415年：英格兰的亨利五世在诺曼底的阿夫勒登陆并攻占该城。他在阿金库尔战役中赢得了对法国人的几乎全胜。
+1417年：亨利五世攻占卡昂。
+1419年：1月19日，鲁昂沦陷于亨利五世之手，诺曼底置于英格兰的控制之下。勃艮第与英格兰结盟。
+1420年：亨利五世和法国的查理六世签署了《特鲁瓦条约》。亨利娶了查理六世的女儿瓦卢瓦的凯瑟琳，他们的继承人将继承两个王国。王储查理七世被宣布为非婚生子。
+1422年：亨利五世于8月31日去世，享年34岁零349天；查理六世于10月21日去世，享年53岁零322天。亨利年幼的儿子，英格兰的亨利六世，当时只有268天大，被加冕为英格兰和法国国王。然而，在法国中部，王储继续战争。</p>
+<p>1422–1453</p>
+<p>1424年：亨利六世的一位摄政王，格洛斯特公爵汉弗莱娶了埃诺女伯爵雅克琳，并入侵荷兰以夺回她的前领地，这使他与勃艮第公爵腓力三世直接冲突。
+1428年：英格兰人围攻奥尔良。
+1429年：圣女贞德解除了对奥尔良的包围。王储在兰斯加冕为法国国王。
+1430年：贞德被勃艮第人俘虏，后来卖给了英格兰人。
+1431年：圣女贞德受审并处决。
+1435年：勃艮第倒戈，签署了《阿拉斯条约》。
+1449年：法国人收复鲁昂。
+1450年：英格兰试图解救卡昂，但在福尔米尼战役中被击败。法国人攻占瑟堡。
+1451年：波尔多和巴约纳沦陷于法国军队之手。
+1453年：什鲁斯伯里伯爵约翰·塔尔博特试图收复加斯科涅，但在卡斯蒂永战役中被让·比罗击败。卡斯蒂永战役通常被认为是百年战争的结束，因为亨利六世的疯狂和玫瑰战争使英格兰无力在法国发动战争。然而，加来仍然是英格兰的领地，直到1558年， “法国国王”的称号直到1801年1月1日才从英国王室称号中删除（卡斯蒂永战役后347年零168天）。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Hundred-Years’-War-|-Summary,-Causes,-Effects,-Combatants,-Timeline,-&-Facts-|-Britannica">
+        <h3 class="page-name title"><span class="page-emoji ">🌍&nbsp;</span>Hundred Years’ War | Summary, Causes, Effects, Combatants, Timeline, & Facts | Britannica</h3>
+        <small class="page-url url "><a href="https://www.britannica.com/event/Hundred-Years-War" target="_blank">(https://www.britannica.com/event/Hundred-Years-War)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 探讨了百年战争前的国际局势，介绍了战争爆发的背景和前因后果。<br></small>
+    </div>
+    <div class="page-content content"><p>14世纪上半叶，法国是西欧最富裕、最大和人口最多的王国。此外，它凭借君主们的声望和功绩，特别是路易九世，获得了巨大的声望，并通过其行政官员和官员的忠诚服务而变得强大。英格兰是组织最完善、融合最紧密的西欧国家，也是最有可能与法国抗衡的国家，因为神圣罗马帝国因严重的分裂而瘫痪。在这种情况下，两国之间发生严重冲突或许不可避免，但其极端的激烈程度和漫长的持续时间却更令人惊讶。然而，冲突的持续时间可以用这样一个事实来解释：一场争取霸权的基本斗争因复杂的难题而加剧，例如英格兰在法国的领土占有和对法国王位的继承权之争；它还因激烈的诉讼、商业竞争和对战利品的贪婪而被延长。在波尔多期间，法国国王与俘虏他的人达成了为期两年的休战协议，并开始讨论以完全放弃阿基坦的全部主权给爱德华三世为基础的和平条款。与此同时，巴黎出现了一种艰难的局面，一群改革者——其中包括让·德·克拉翁、罗贝尔·勒·科克和商人长埃蒂安·马塞尔——已成为三级会议的成员，并且不愿意盲目认可他们被俘虏的统治者的决定。议会成员似乎宁愿继续战争也不愿肢解王国。此外，查理五世被允许从监狱中逃脱（1357年11月）。三级会议希望查理能够平息众多英格兰和纳瓦拉士兵组成的军队，这些士兵自波尔多休战以来一直没有工作，正在蹂躏和掠夺法国西部地区。然而，查理宁愿与他们谈判。尽管法国和英格兰之间的敌对行动在官方上暂停了，但在这一时期，破坏变得比以往任何时候都更加严重。雅克里起义加剧了混乱和苦难，这场农民在塞纳河以北的起义被贵族残酷地镇压。在埃蒂安·马塞尔去世后（1358年7月31日），王太子查理（后来的查理五世），约翰二世的儿子，能够重新进入巴黎，几个月前他被迫撤出巴黎。约翰国王在波尔多开始的和平谈判后，与爱德华三世缔结了第一份伦敦条约（1358年1月）。该条约规定将旧的阿基坦公国完全主权割让给英格兰，并支付4,000,000枚金币作为约翰的赎金，而爱德华则将放弃他对法国王位的要求。收取和支付赎金早期分期付款的延误使这项条约失效，1359年3月，爱德华向他的俘虏强加了更严厉的第二份伦敦条约条款。根据这项条约，人质将被拘留，直到支付部分赎金，并且额外的领土，位于卢瓦尔河和英吉利海峡之间的古老安茹地区，将被割让给英格兰。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="The-Hundred-Years'-War:-Consequences-&-Effects---World-History-Encyclopedia">
+        <h3 class="page-name title"><span class="page-emoji ">📉&nbsp;</span>The Hundred Years' War: Consequences & Effects - World History Encyclopedia</h3>
+        <small class="page-url url "><a href="https://www.worldhistory.org/article/1520/the-hundred-years-war-consequences--effects/" target="_blank">(https://www.worldhistory.org/article/1520/the-hundred-years-war-consequences--effects/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 总结了百年战争的主要后果，对战争后的英国和法国产生了深远影响。<br></small>
+    </div>
+    <div class="page-content content"><p>百年战争在1337年到1453年间断续地于英格兰和法国之间进行，这场冲突带来了许多后果，既有直接的，也有长期的。除了许多战役给士兵和平民带来的明显的死亡和破坏外，战争还使英格兰几乎破产，并使获胜的法国王室完全控制了除加莱以外的整个法国。君主会来来往往，但对他们中的许多人来说，衡量他们统治成功的一个重要标准就是他们在百年战争中的表现。战争在两国的贵族内部造成了分裂，这对谁成为下一个统治君主产生了影响。贸易受到严重影响，农民不断被征税，这导致了几次主要的叛乱，但也有一些积极的发展，例如创建了更有能力和更规范的税务机关，以及国际关系中更专业的外交趋势。这场战争还产生了持久而标志性的民族英雄，特别是英格兰的亨利五世（1413-1422年在位）和法国的圣女贞德（1412-1431年）。最后，与一个明确可识别的敌人进行如此长期的冲突导致双方都形成了更强烈的民族认同感。即使在今天，这两个邻国之间仍然存在竞争，幸运的是，现在主要体现在国际体育赛事中。</p>
+<p>百年战争的后果和影响可概括为：</p>
+<p>除加莱外，英格兰在法国的所有领土全部丧失。
+大量贵族伤亡，尤其是在法国。
+贸易衰退，特别是英格兰羊毛和加斯科涅葡萄酒贸易。
+为支付战争费用而征收的大量税收，导致两国社会动荡。
+税收形式的创新。
+英格兰议会实力的增强。
+战争结束时，英格兰国库几乎完全破产。
+对战争进程及其失败的争议加剧了英格兰国内的王朝冲突，即玫瑰战争（1455-1487年）。
+战役之间，雇佣兵对法国城镇和村庄的破坏。
+武器技术的改进，例如火炮。
+法国君主对整个法国的控制得到巩固。
+国际外交和专业外交官的更多使用。
+两国人民的民族主义情绪增强。
+民族英雄的产生，特别是英格兰的亨利五世和法国的圣女贞德。
+两个国家之间持续至今的明显竞争，尤其体现在足球和橄榄球等运动中。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Hundred-Years'-War---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">🤝&nbsp;</span>Hundred Years' War - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Hundred_Years%27_War" target="_blank">(https://en.wikipedia.org/wiki/Hundred_Years%27_War)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 阐述了百年战争的全局背景及其在中世纪欧洲的影响，强调了冲突如何塑造了国家形成。<br></small>
+    </div>
+    <div class="page-content content"><p>百年战争（法语：Guerre de Cent Ans；1337-1453年）是英格兰王国和法国王国之间的一场冲突，也是法国中世纪后期的一场内战。这场战争源于阿基坦公国（Duchy of Aquitaine）的封建争端，起因是英格兰国王爱德华三世对法国王位的觊觎。这场战争演变成一场更广泛的军事、经济和政治斗争，涉及西欧各派系，并因双方新兴的民族主义而加剧。这场战争的时期通常被描述为持续了116年。然而，这是一场断断续续的冲突，经常被诸如黑死病等外部因素以及数年的休战打断。百年战争是中世纪的一场重大冲突。在战争期间，来自两个敌对王朝的五代国王争夺法国王位，而法国当时是西欧的主导王国。这场战争对欧洲历史产生了持久的影响：双方都在军事技术和战术上取得了创新，包括常备军和火炮，这些都永久地改变了欧洲战争。骑士制度在冲突期间达到顶峰，随后衰落。更强的民族认同感在两个王国扎根，这两个王国变得更加中心化，并逐渐成为世界强国。[1]“百年战争”这一术语是由后来的历史学家作为史学时期划分采用的，以涵盖王朝相关的冲突，构成了欧洲历史上持续时间最长的军事冲突。[2][3]这场战争通常分为三个阶段，由休战隔开：爱德华战争（1337-1360年）、卡洛琳战争（1369-1389年）和兰开斯特战争（1415-1453年）。双方都吸引了许多盟友参与冲突，英军最初占据优势；然而，在瓦卢瓦王朝领导下的法军最终保住了对法国王国的控制。此后，法国和英格兰君主国仍然是分开的，尽管英格兰（后来的不列颠）的君主自称法国国王直到1802年。</p>
+<p>概述</p>
+<p>起源</p>
+<p>冲突的根本原因可以追溯到14世纪欧洲的危机。战争的爆发是由于法国和英格兰国王之间关于领土的紧张关系逐渐加剧；官方的借口是卡佩王朝（Capetian dynasty）的男性直系血统中断。法国和英格兰王冠之间的紧张关系可以追溯到几个世纪前，那时英格兰王室的起源是法国（诺曼底，后来是安茹）的，通过征服者威廉，这位诺曼公爵在1066年成为英格兰国王。因此，英格兰君主历史上在法国拥有爵位和土地，这使他们成为法国国王的臣属。英格兰国王的法国采邑的地位是中世纪这两个君主国之间冲突的重要根源。法国君主系统地试图制衡英格兰势力的增长，抓住机会剥夺土地，主要是在英格兰与法国盟友苏格兰交战时。英格兰在法国的领地规模各不相同，在某些时候甚至超过了法国王室领地；然而，到1337年，只有吉耶纳（Guyenne）和加斯科涅（Gascony）属于英格兰。1328年，法国查理四世去世，没有儿子或兄弟，一个新的原则，萨利克法（Salic law），不允许女性继承。查理最亲近的男性亲属是他的侄子英格兰的爱德华三世，他的母亲伊莎贝拉是查理的姐姐。伊莎贝拉根据血缘接近性原则，为她的儿子索要法国王位，但法国贵族拒绝了这一点，认为伊莎贝拉不能转让她所不拥有的权利。法国男爵们的集会决定，一个法国本土人应该获得王冠，而不是爱德华。[4]王位传给了查理的父系堂兄，瓦卢瓦伯爵菲利普。爱德华抗议，但最终屈服，并向加斯科涅宣誓效忠。法国与爱德华进一步的分歧促使菲利普在1337年5月与他在巴黎的大议会会面。会议决定将加斯科涅收回菲利普手中，这促使爱德华再次提出对法国王位的要求，这次是用武力。[5]</p>
+<p>爱德华时期</p>
+<p>在战争初期，由国王及其子爱德华（黑太子）率领的英格兰人取得了辉煌的胜利，尤其是在克雷西（1346年）和普瓦捷（1356年），法国国王约翰二世被俘。</p>
+<p>卡洛琳时期和黑死病</p>
+<p>到1378年，在英明国王查理五世和贝特朗·迪·格斯克兰（Bertrand du Guesclin）的领导下，法国人收复了根据《布雷蒂尼条约》（1360年签订）割让给爱德华国王的大部分土地，只给英格兰人留下了大陆上的一些城市。</p>
+<p>在接下来的几十年里，王权的削弱，加上1347-1351年黑死病造成的破坏（造成近一半的法国人[6]和20-33%的英格兰人[7]死亡）以及随之而来的严重的经济危机，导致了这两个国家都出现了内乱。这些危机在英格兰比在法国更早得到解决。</p>
+<p>兰开斯特时期及以后</p>
+<p>新加冕的英格兰亨利五世抓住了法国查理六世精神疾病和法国阿马尼亚克派和勃艮第派之间的内战所带来的机会，使冲突重燃。在阿金库尔（1415年）和韦努伊（1424年）的压倒性胜利，以及与勃艮第人的联盟，提高了最终英格兰获胜的可能性，并说服英格兰继续这场持续了几十年的战争。然而，各种因素阻止了这种情况。值得注意的影响包括亨利和查理都在1422年去世，圣女贞德的出现（这提升了法国的士气），以及勃艮第作为盟友的丧失（结束了法国内战）。</p>
+<p>奥尔良围城战（1429年）使英格兰征服的愿望几乎无法实现。尽管圣女贞德被勃艮第人俘虏并随后被处决（1431年），一系列法国的压倒性胜利结束了围城战，有利于瓦卢瓦王朝。值得注意的是，帕泰（1429年）、弗米尼（1450年）和卡斯蒂永（1453年）被证明是结束战争的关键。英格兰永久失去了大部分大陆领地，只有加莱的帕莱（Pale of Calais）在加莱围城战（1558年）之前仍然在其控制之下。</p>
+<p>相关冲突及后果</p>
+<p>邻近地区同时与战争相关的局部冲突，包括布列塔尼继承战争（1341-1364年）、卡斯蒂利亚内战（1366-1369年）、阿拉贡的两次彼得战争（1356-1369年）以及1383-1385年的葡萄牙危机，都被各方用来推进其议程。</p>
+<p>到战争结束时，封建军队主要已被职业军队取代，贵族统治让位于军队人力和武器的民主化。虽然主要是一场王朝冲突，但这场战争激发了法国和英格兰的民族主义。更广泛地引进武器和战术取代了重骑兵占主导地位的封建军队，火炮变得重要起来。这场战争促成了西罗马帝国以来西欧第一个常备军的创建，并帮助改变了它们在战争中的作用。内战、致命流行病、饥荒和雇佣兵的土匪自由佣兵团使法国人口急剧减少。但在战争结束时，由于法国拥有更好的供应，如小型手持火炮、武器等，法国占据了上风。在英格兰，随着时间的推移，政治力量开始反对这项代价高昂的冒险。战争结束后，英格兰无力偿债，让征服的法国人完全控制了除加莱以外的整个法国。英格兰贵族的失望，源于他们失去大陆上的土地所有权，以及在投资如此巨大的战争中失败带来的普遍震惊，有助于导致玫瑰战争（1455-1487年）。百年战争的经济后果不仅导致贸易下滑，而且导致两国都征收了高额税款，这在内乱中起了重要作用。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id=""The-Social-Impact-of-the-Hundred-Years-War-on-the-Societies-of-England"-by-Kody-E.-Whittington">
+        <h3 class="page-name title"><span class="page-emoji ">🎭&nbsp;</span>"The Social Impact of the Hundred Years War on the Societies of England" by Kody E. Whittington</h3>
+        <small class="page-url url "><a href="https://stars.library.ucf.edu/honorstheses/115/" target="_blank">(https://stars.library.ucf.edu/honorstheses/115/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 围绕百年战争的社会变化及其对文化和身份认同的影响，提供了一系列视角。<br></small>
+    </div>
+    <div class="page-content content"><p>百年战争是一系列从1337年到1453年之间发生的冲突，参战双方是英格兰的普兰塔吉内特王朝和法国的瓦卢瓦王朝。本论文将分析百年战争对英格兰和法国社会的影响，并以此论证这场战争是推动英格兰和法国走出中世纪，进入文艺复兴和早期现代时期的一个催化剂。论文将通过考察英法两国社会的三个方面来实现这一目标：指挥战争并可以说是发动战争的王室和贵族；参与战争的士兵和雇佣军；以及那些对战争做出贡献或受到战争正面或负面影响的非战斗人员。论文将分析君主权力和角色的演变，同时分析贵族作为战争期间的领导者，以及他们的社会地位如何受到战争的影响。对那些服役和参战人员的分析同样重要，因为百年战争见证了主要由农民组成的职业付费军队的兴起。论文还将考察雇佣军，尤其是在法国，他们对劫掠和针对人民的暴力行为贡献良多。虽然战斗人员的经历对于理解战争历史至关重要，但那些没有直接参与战争的人的经历对于理解战争如何影响整个社会也很重要。那些农场被侵略军、雇佣军或土匪摧毁的农民，因为战争而遭受了巨大的苦难。然而，一些人，例如商人，则从战争中获利，并因此变得非常富有。本论文还将考察教会及其在试图调解和带来和平方面的作用，以及其他教士作为宣传工具，以支持他们各自王国的行为。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="List-of-Hundred-Years'-War-battles---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">🏅&nbsp;</span>List of Hundred Years' War battles - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/List_of_Hundred_Years%27_War_battles" target="_blank">(https://en.wikipedia.org/wiki/List_of_Hundred_Years%27_War_battles)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 列出了百年战争中发生的主要战役，直接提供了相关信息。<br></small>
+    </div>
+    <div class="page-content content"><p>这是百年战争中主要战役的列表，这场战争发生在法国和英格兰之间，从1337年持续到1453年，共116年，共有62场战役。</p>
+<p>英格兰</p>
+<p>概述：苏格兰独立战争第二阶段（爱德华时期）、布列塔尼继承战争、两位彼得的战争、卡斯蒂利亚内战、（卡洛琳时期）、德斯彭塞十字军东征（1383-1385年危机）、（兰开斯特时期）、阿尔马尼亚克-勃艮第冲突</p>
+<p>英方指挥官：爱德华三世、黑太子爱德华、约翰·冈特、亨利五世、兰开斯特公爵约翰、什鲁斯伯里伯爵约翰·塔尔博特</p>
+<p>法方指挥官：腓力六世、约翰二世、查理五世、查理六世、查理七世、圣女贞德</p>
+<p>概述：战役、军事行动、阿尔马尼亚克派和勃艮第派、雅克利起义、布列塔尼继承战争、卡斯蒂利亚内战</p>
+<p>战役：圣奥梅尔战役、克雷西战役、普瓦捷战役、阿金库尔战役、博热战役、克拉万战役、拉布罗西尼耶尔战役、韦尔努伊战役、鲱鱼战役、帕泰战役、福尔米尼战役、卡斯蒂永战役</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Battle-of-Crécy---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">🔫&nbsp;</span>Battle of Crécy - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Battle_of_Cr%C3%A9cy" target="_blank">(https://en.wikipedia.org/wiki/Battle_of_Cr%C3%A9cy)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 细致描述了克雷西战役的战略背景及其影响，与报告中的战役部分高度相关。<br></small>
+    </div>
+    <div class="page-content content"><p>克雷西战役发生在1346年8月26日，地点在法国北部，交战双方为由腓力六世国王指挥的法国军队和由爱德华三世国王率领的英格兰军队。在百年战争期间，法国军队袭击了正在穿越法国北部的英格兰军队，最终以英格兰的胜利和法国的大量人员伤亡告终。英格兰军队于7月12日登陆科唐坦半岛。他们一路焚烧破坏法国一些最富饶的土地，一直到达巴黎以北2英里（3公里）处，沿途洗劫了许多城镇。然后，英格兰军队向北进军，希望能与一支从佛兰德入侵的盟军佛兰德军队会合。得知佛兰德军队已撤退，并且暂时甩掉了追击的法国军队后，爱德华让他的军队在一个靠近克雷西昂蓬蒂厄的山坡上准备防御阵地。8月26日晚，人数远超英军的法国军队发动了进攻。在短暂的弓箭对射中，一支由法国雇佣兵组成的弩兵部队被威尔士和英格兰长弓手击溃。然后，法国军队发动了一系列由其骑马骑士发动的骑兵冲锋。由于仓促之间，不得不穿过溃逃的弩兵，以及泥泞的地面、向上冲锋以及英军挖掘的坑道，这些冲锋变得杂乱无章。英格兰弓箭手的有效射击进一步瓦解了这些进攻，造成了大量的伤亡。当法国的冲锋到达已下马作战的英格兰步兵时，他们的冲锋势头已大大减弱。随后的肉搏战被描述为“凶残、无情、残酷，极其可怕”。法国的冲锋持续到深夜，结果都一样：激烈的战斗之后是法国的撤退。然后，英格兰人围攻加来港。这场战役削弱了法国军队解围的能力；该镇于次年落入英格兰人之手，并在接下来的两个多世纪里，直到1558年，一直处于英格兰的统治之下。克雷西战役确立了长弓作为西欧战场上主要武器的有效性。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Battle-of-Poitiers---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">🚩&nbsp;</span>Battle of Poitiers - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Battle_of_Poitiers" target="_blank">(https://en.wikipedia.org/wiki/Battle_of_Poitiers)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 描述了普瓦捷战役的经过，揭示了其对战争走向的重大影响。<br></small>
+    </div>
+    <div class="page-content content"><p>普瓦捷战役发生于1356年9月19日，交战双方为由法国国王约翰二世指挥的法国军队和由爱德华黑太子指挥的英格兰-加斯科涅联军，是百年战争的一部分。战役发生在法国西部，距普瓦捷南面5英里（8公里）处，约14000至16000名法国士兵攻击由6000名英格兰-加斯科涅士兵坚守的防御阵地。</p>
+<p>战争爆发十九年后，英格兰国王的长子兼继承人黑太子在法国西南部发动了一场大规模战役。他的军队从贝热拉克行军到卢瓦尔河，但未能渡河。约翰集合了一支庞大且机动性强的军队，追击爱德华的部队。英格兰-加斯科涅联军此时已在普瓦捷附近建立了坚固的防御阵地，双方谈判失败后，遭到法国军队的攻击。</p>
+<p>第一次进攻包括两支重装骑兵部队、一支强大的弩兵部队以及许多步兵和下马的武装人员。他们被完全徒步作战的英格兰-加斯科涅联军击退。随后，约翰的儿子兼继承人查理王储率领4000名步兵武装人员进行了第二次进攻。经过长时间的战斗，这次进攻也被击退。</p>
+<p>当王储的部队撤退时，法国军队阵营中出现了混乱：他们第三支部队中约有一半的人马，由奥尔良公爵菲利普指挥，离开了战场，带走了约翰的四个儿子。一些没有和菲利普一起撤退的人发动了第三次薄弱且失败的进攻。</p>
+<p>剩下的法国人聚集在国王周围，对此时已筋疲力尽的英格兰-加斯科涅联军发动了第四次进攻，所有士兵都以步兵形式作战。法国的圣旗——奥里弗兰姆被展开，这是不俘虏任何人的信号。战斗再次开始，法国人逐渐占据上风。</p>
+<p>然后，一支由160名士兵组成的英格兰-加斯科涅小型骑兵部队（此前曾被派去威胁法国后方）出现在法国军队的后方。法国人认为自己被包围了，一些人逃跑了，这导致其他人惊慌失措，很快整个法国军队崩溃了。</p>
+<p>约翰被俘，他的一个儿子和2000到3000名武装人员也被俘。约有2500名法国武装人员被杀。此外，还有1500或3800名法国普通步兵被杀或被俘。幸存的法国人分散开来，而英格兰-加斯科涅联军继续撤退到加斯科涅。</p>
+<p>次年春天，双方达成了为期两年的休战协议，黑太子护送约翰前往伦敦。法国各地爆发了民众起义。结束战争和赎回约翰的谈判拖延了很久。作为回应，爱德华在1359年发起了进一步的战役。在此期间，双方都作出了妥协，于1360年达成了《布雷蒂尼条约》，法国大片领土割让给英格兰，由黑太子统治，约翰被以300万金币赎回。当时这似乎结束了战争，但法国人在1369年恢复了敌对行动，并夺回了大部分失地。战争最终在1453年以法国的胜利而告终。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Battle-of-Agincourt---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">👑&nbsp;</span>Battle of Agincourt - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Battle_of_Agincourt" target="_blank">(https://en.wikipedia.org/wiki/Battle_of_Agincourt)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 概述了阿金库特战役，强调了其历史性的重要性。<br></small>
+    </div>
+    <div class="page-content content"><p>阿金库尔战役（/ˈædʒɪnkɔːr(t)/AJ-in-kor(t)；[a]法语：Azincourt [azɛ̃kuʁ]）是百年战争中英格兰取得的一场胜利。它发生在1415年10月25日（圣克里斯平节），地点在法国北部的阿金库尔附近。[b]英格兰军队出人意料地战胜了人数占优的法国军队，这鼓舞了英格兰的士气，提高了声望，重创了法国，并开启了英格兰在战争中持续14年的统治地位的新时期，直到1429年英格兰在奥尔良围城战中被法国击败。在几十年的相对和平之后，英格兰在1415年与法国谈判失败后重启了战争。在随后的战役中，许多士兵死于疾病，英格兰士兵人数减少；他们试图撤退到英格兰控制的加莱，却发现他们的道路被一支规模大得多的法国军队封锁了。尽管处于人数劣势，但战斗以英格兰的压倒性胜利告终。英格兰国王亨利五世率领他的军队投入战斗，并参与了肉搏战。法国国王查理六世由于患有精神疾病和相关的精神能力丧失，并没有指挥法国军队。法国军队由元帅查尔斯·达尔布雷和阿尔马尼亚克派的各种著名的法国贵族指挥。这场战役因大量使用英格兰长弓而著称，英格兰和威尔士弓箭手几乎占亨利军队人数的80%。亨利的旗手是威廉·哈灵顿，他是英格兰的官方旗手。阿金库尔战役是英格兰最著名的胜利之一，也是百年战争中最重要的英格兰胜利之一，与克雷西战役（1346年）和普瓦捷战役（1356年）齐名。这场战役至今仍吸引着学者和公众的关注。它构成了著名作品的背景，例如威廉·莎士比亚于1599年创作的戏剧《亨利五世》。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Wit-and-Humour-in-the-Hundred-Years'-War---Medievalists.net">
+        <h3 class="page-name title"><span class="page-emoji ">😂&nbsp;</span>Wit and Humour in the Hundred Years' War - Medievalists.net</h3>
+        <small class="page-url url "><a href="https://www.medievalists.net/2020/07/wit-humour-hundred-years-war/" target="_blank">(https://www.medievalists.net/2020/07/wit-humour-hundred-years-war/)</a><br></small>
+        <small class="page-rating rating ">评分: 4.5<br></small>
+        <small class="page-annotation annotation ">注释: 收集了与百年战争相关的幽默笑话，虽不直接相关但提供了文化视角。<br></small>
+    </div>
+    <div class="page-content content"><p>百年战争中的智慧与幽默</p>
+<p>史蒂文·穆尔伯格</p>
+<p>幽默（及其近亲智慧）可能是普遍的特征，但肯定有许多不同类型。正如你可能不会觉得你邻居的笑话很有趣一样，不同国家和时代的幽默可能难以理解。那句妙语是刻薄的还是赞赏的？</p>
+<p>这里有一些关于百年战争的笑话和妙语。看看你对这些同伴的幽默有什么看法——因为所有这些故事都与军事有关。</p>
+<p>阳光普照的地方</p>
+<p>同伴们仔细倾听指挥官的命令，因此领导人的名言在军队中广为流传。1380年，Puy-Notre-Dame的市民询问法国元帅贝特朗是否愿意前往Chateauneuf-de-Randon（其驻军正在破坏乡村），并将那里从英国人手中解救出来。在他同意后，他对陪同他的同伴们说：</p>
+<p>“我亲爱的同伴们，兄弟们，朋友们，既然我们离那里不远，我恳求你们，陪我去那里，你们将看到我们将做什么。因为，在上帝的保佑下，我们将与他们对抗，伙计们，如果阳光能够照射进去，我们也能。”听到这些话，同伴们哈哈大笑，说他们会满心欢喜地陪他一起去。</p>
+<p>几十年后，这句不太引人注目的台词仍在被重复。它之所以有趣，是因为它在一瞬间就能改变一支精英队伍的情绪。</p>
+<p>美味的马肉</p>
+<p>在另一次场合，英国队长罗伯特·诺尔斯给法国元帅发送了一条古怪的信：“你让我在这里的布雷斯特城堡吃我的马，就像我在雷恩围城战中让你吃你的马一样；这就是战争和命运的变迁。”幽默之处在于，这些队长尽管站在对立阵营作战，却对他们共同的经历有着敏锐的理解。</p>
+<p>听妈妈的话</p>
+<p>当波旁公爵觉得有必要缓和他在Belleperche的围攻时，他的手下是否笑了——因为公爵的攻城武器吓到了他的母亲？波旁公爵日夜向英国守军射击。被英国人囚禁的公爵夫人，看到他们向内射击时非常害怕；所以她命令她儿子公爵不要再射了。让·卡巴雷报道说公爵服从了她的命令。公爵本人可能觉得这种情况一点也不好笑，但他的敌人或许会找到嘲笑他的理由。</p>
+<p>帮助英国人</p>
+<p>然而，有时机智要尖锐得多。波旁公爵在率领远征军前往格拉纳达时，收到消息说布尔戈斯的英国人“正在遭受严重的死亡”。当地领导人征求公爵的意见。波旁公爵站起来回答说：“既然他们正在死去，我们最好去帮他们多死一些。”</p>
+<p>粗鲁的举动</p>
+<p>肢体幽默是最普遍的吗？在其他地方，我已经讲述了弗鲁瓦萨尔讲述的一个故事，关于一个名叫埃尔诺顿的骑士，他在圣诞节感到寒冷，在福瓦伯爵的宫廷里生了一堆不足的火。埃尔诺顿不耐烦地发现了一头驮着柴火的驴子，把它抱起来，把动物和它的货物一起扔进火里。这是一个惊人的力量壮举，但在让·弗鲁瓦萨尔的话里，“一个荒谬的把戏”。人们（包括伯爵）显然是被逗乐了而不是感到恐惧。</p>
+<p>一点文字游戏</p>
+<p>有时中世纪的幽默要复杂得多，针对的是读者而不是听众。让·弗鲁瓦萨尔是长篇故事的大师。其中一个故事讲述了佛兰德伯爵如何在1382年的起义中逃脱布鲁日和根特的城市叛军。伯爵沦落到独自在布鲁日街头游荡，躲在一个贫穷妇女孩子的“破旧床上”。弗鲁瓦萨尔描绘了伯爵恐惧的可怕景象：</p>
+<p>佛兰德伯爵在他蜷缩在小床上时，听到了整个谈话（追捕他的叛军）。他当时处于何种恐惧状态，可想而知。早上还能说“我是基督教世界的大王子之一”的人，在同一天晚上却沦落到如此渺小的境地，他心中会有怎样的想法？</p>
+<p>然后，弗鲁瓦萨尔描写了伯爵恢复精神并逃离城市的过程。语气的转变非常迅速，几乎令人难以置信。当他穿过他不认识的乡村时，他遇到了一位自己的骑士：</p>
+<p>[骑士说]“你在布鲁日四处寻找你，让我费了好大劲。你是怎么逃脱的？”“来吧，罗宾，”伯爵说，“现在不是叙述我们冒险经历的时候。设法帮我找一匹马，我走累了。如果你知道去里尔的道路，就走那条路。”“是的，先生，我知道，”他的骑士回答道。</p>
+<p>我们应该对此完全相信吗？14世纪的观众是怎么想的？</p>
+<p>即使是像弗鲁瓦萨尔这样知名的人物也经常歪曲事实。然而，通过接触在职业军人的独特世界中发生的对话——或至少是对话的影子——我们仍然受益匪浅。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Hundred-Years-War-|-War-Imperial-War-Museums">
+        <h3 class="page-name title"><span class="page-emoji ">🏛&nbsp;</span>Hundred Years War | War Imperial War Museums</h3>
+        <small class="page-url url "><a href="https://www.iwm.org.uk/memorials/item/memorial/59877" target="_blank">(https://www.iwm.org.uk/memorials/item/memorial/59877)</a><br></small>
+        <small class="page-rating rating ">评分: 6.0<br></small>
+        <small class="page-annotation annotation ">注释: 介绍了百年战争相关的纪念地，提升了对历史事件的理解和认知。<br></small>
+    </div>
+    <div class="page-content content"><p>百年战争</p>
+<p>目前尚无此战争纪念碑的图像可供在线展示。如果您有此战争纪念碑的照片，请通过我们的图片上传表格上传，将其纳入登记册。该图像将被署名为您本人，并可在非商业用途下根据 IWM 非商业许可证被他人免费重复使用。</p>
+<p>纪念碑详情</p>
+<p>纪念碑类型：其他建筑
+地区：牛津
+城镇：牛津
+郡：牛津郡
+国家：英格兰
+纪念：百年战争 (1337 - 1453)
+所属机构：全灵学院
+地址：牛津，牛津High St，牛津郡，OX1 4AL，英格兰
+OS 网格参考号：SP 517 063
+教派：未定义
+描述：全灵学院既作为一座祭祀教堂，也是一座旨在为所有死于百年战争的人的灵魂带来福祉的学院而建立的。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Crécy-en-Ponthieu---Monuments---Somme">
+        <h3 class="page-name title"><span class="page-emoji ">🗽&nbsp;</span>Crécy-en-Ponthieu - Monuments - Somme</h3>
+        <small class="page-url url "><a href="https://www.travelfranceonline.com/crecy-en-ponthieu-monuments-somme/" target="_blank">(https://www.travelfranceonline.com/crecy-en-ponthieu-monuments-somme/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 具体探讨了克雷西战役的历史意义及纪念设施，突出了战役的重要性。<br></small>
+    </div>
+    <div class="page-content content"><p>克雷西-昂蓬蒂厄见证了法国历史上最关键时刻之一——1346年8月26日，英格兰爱德华三世和法国腓力六世之间爆发的克雷西战役。这场具有里程碑意义的冲突不仅导致法国军队惨败，也标志着百年战争的开始。昔日的战场就在村庄之外，如今是一片广阔的耕地，掩盖了它动荡的过去。尽管时间流逝，这场遥远冲突的记忆仍然通过散布在风景中的三个令人心酸的纪念碑而流传下来。第一个纪念碑是瞭望塔，庄严地证明了战场的战略意义。它矗立在爱德华三世俯瞰战役展开的风车旧址上，为游客提供该历史遗址的全景视野。波希米亚十字架骄傲地矗立在村庄郊外，这是对卢森堡的让一世（波希米亚国王）的致敬，他挥舞着剑，为法国事业而献出了生命。他的英勇和牺牲在这座庄严的纪念碑中被永垂不朽。最后，村庄内矗立着卢森堡的让纪念碑。这些纪念碑是持久的纪念象征，确保克雷西战役及其英雄的遗产代代相传。这座纪念碑是为了纪念历史上伟大的人物而于1905年在村庄中心广场（即卢森堡让广场）竖立的。为了筹集资金，发起了一项国际认购，得到了法国、波希米亚和卢森堡的支持。著名的雕塑家埃马纽埃尔·方丹（1856-1935）负责将这一致敬栩栩如生地展现出来。方丹在全国享有盛誉，此前曾在索姆省创作过几座纪念碑。纪念碑基座上刻有一段令人心酸的题词：“献给波希米亚国王卢森堡的让及其英勇的战友，他们于1346年8月26日在克雷西为法国而死。”“To Jean of Luxembourg, King of Bohemia, and his valiant companions in arms who died for France at Crécy on August 26, 1346.”</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Joan-of-Arc-Statue-(U.S.-National-Park-Service)">
+        <h3 class="page-name title"><span class="page-emoji ">👩&nbsp;</span>Joan of Arc Statue (U.S. National Park Service)</h3>
+        <small class="page-url url "><a href="https://www.nps.gov/places/000/joan-of-arc-statue.htm" target="_blank">(https://www.nps.gov/places/000/joan-of-arc-statue.htm)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 聚焦贞德的历史地位，展示了其在百年战争中的象征意义。<br></small>
+    </div>
+    <div class="page-content content"><p>圣女贞德雕像是华盛顿特区唯一一座女性骑马雕像。圣女贞德是一位英勇的法国人物，她声称自己受到宗教幻象的指引，要为法国而战，并在百年战争中推翻英国。在她被英格兰俘虏并受审后，她被烧死在火刑柱上，天主教会于1456年承认她为烈士。她于1909年被列为真福品，1920年被封为圣徒。这座雕像是兰斯大教堂原雕像的复制品，建于1922年。这座雕像是纽约流亡法国妇女协会的礼物。该雕像的批准是在1922年3月20日（42 Stat. 468）的国会法案下进行的，其铸造工作由巴黎的艺术部部长监督。</p>
+<p>费用：未知。雕像的建造没有花费美国任何费用。</p>
+<p>落成日期：1922年1月6日</p>
+<p>雕塑家：保罗·杜波依斯</p>
+<p>纪念碑描述</p>
+<p>这座雕像是青铜制成的，随着时间的推移，呈现出绿色的色调。贞德的马前左脚和后右脚悬空，表示运动。马的鬃毛也显示出运动感。贞德的右手拿着马缰绳。她穿着盔甲，头盔面罩向上。她的左臂略微抬起，手里握着一把剑。青铜雕像坐落在花岗岩基座上。</p>
+<p>铭文</p>
+<p>圣女贞德/解放者/1412-1431/致美国妇女/法国妇女</p>
+<p>基座背面的铭文：</p>
+<p>赠送者/“里西昂”/法国妇女协会/位于纽约/1922年1月6日</p>
+<p>更多关于子午线山公园的信息，请访问洛克溪公园网站上的子午线山公园登录页面。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="The-Battle-of-Agincourt-Museum---Mary-Anne's-France">
+        <h3 class="page-name title"><span class="page-emoji ">🏺&nbsp;</span>The Battle of Agincourt Museum - Mary Anne's France</h3>
+        <small class="page-url url "><a href="https://maryannesfrance.com/things-to-do/attractions/museums-art-galleries/the-battle-of-agincourt-museum/" target="_blank">(https://maryannesfrance.com/things-to-do/attractions/museums-art-galleries/the-battle-of-agincourt-museum/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 论述了阿金库特战役及其博物馆的重要性，强调了历史教育的作用。<br></small>
+    </div>
+    <div class="page-content content"><p>阿金库尔战役博物馆</p>
+<p>翻新的阿金库尔战役博物馆（正式名称为1415阿赞库尔中心）旨在讲述这场15世纪伟大战役的真实故事，并且做得非常出色。我们从小就受到莎士比亚英雄剧《亨利五世》的影响，仍然认为英国人是正直的，而法国人是卑鄙的。这场著名的英法大战被提升为一场以少胜多的终极之战。它被描绘成人数少得多的英国人的光荣胜利。谁不会被流传了几个世纪的这些情感和言辞所感动呢？</p>
+<p>亨利激励他的军队：</p>
+<p>“再冲锋一次，亲爱的朋友们，再冲锋一次；或者用我们英国人的尸体堵住城墙。”</p>
+<p>还有：</p>
+<p>“老年人会忘记”</p>
+<p>或者更著名的：</p>
+<p>“我们少数人，我们幸福的少数人，我们兄弟情谊的一群人”</p>
+<p>它继续说道：</p>
+<p>“因为今天与我一起流血的人，将是我的兄弟；即使他卑鄙无比，这一天将使他的身份变得高贵；而现在在英国床上躺着的绅士们，将会认为自己因为没有在这里而感到诅咒，并且只要有人说起在圣克里斯平节那天与我们一起战斗的人，他们就会认为自己的男子气概廉价。”</p>
+<p>战役的真相</p>
+<p>阿金库尔战役发生在1415年10月25日。由亨利五世国王率领的英军人数不足9000人，面对的是约12000人的法军。法军并非由他们的国王查理六世（疯查理）率领，而是由法国元帅（陆军总司令）夏尔·达尔布雷和元帅让二世·勒梅格尔（称作布西科）率领。</p>
+<p>这场战斗可能只持续了三个小时，甚至可能更短，这是一场决定性的英国胜利。它战术精明，但主要得益于长弓箭手。他们的箭在中世纪的杀伤力如同20世纪的机枪子弹一样致命。</p>
+<p>阿金库尔战役巩固了年轻且尚未经过考验的亨利在英国国王地位上的摇摇欲坠的统治。重要的是，它为1430年的《特鲁瓦条约》铺平了道路，该条约将亨利指定为法国王位的继承人。</p>
+<p>博物馆的布局让你可以选择快速参观（一小时）或更长时间的参观（两到三个小时）——两种参观方式你都可以自行规划路线。无论参观时间长短，它都涵盖了从亨利在诺曼底的阿弗勒登陆到伟大战斗本身的主要事件。更长时间的参观会更详细地介绍日常生活、军事生活和百年战争（1337-1453）的背景。</p>
+<p>这是一个有趣的博物馆，由中心主任克里斯托夫·吉洛和南安普顿大学名誉中世纪史教授安妮·库里设计。它充满了可互动的屏幕（显然让孩子们和成年人都很高兴）、模型、视频和一些非常幽默的细节——收听用100秒解释的百年战争。你必须集中注意力才能了解全貌，但别担心，也有时间轴和解释。所有内容都以法语和英语提供，博物馆相当小，所以你可以折返，按照你自己的方式参观。</p>
+<p>你将看到什么</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="The-Hundred-Years-War-and-Historians-|-SpringerLink">
+        <h3 class="page-name title"><span class="page-emoji ">🍪&nbsp;</span>The Hundred Years War and Historians | SpringerLink</h3>
+        <small class="page-url url "><a href="https://link.springer.com/chapter/10.1007/978-1-349-22711-2_2" target="_blank">(https://link.springer.com/chapter/10.1007/978-1-349-22711-2_2)</a><br></small>
+        <small class="page-rating rating ">评分: 2.5<br></small>
+        <small class="page-annotation annotation ">注释: 涉及现代cookie使用及相关隐私权内容，与历史主题关联性不强。<br></small>
+    </div>
+    <div class="page-content content"><p>接受可选Cookie，即表示您同意允许我们和我们的合作伙伴在您的设备上存储和访问个人数据，例如浏览行为和唯一标识符。一些第三方位于欧洲经济区以外，其数据保护标准各不相同。请参阅我们的隐私政策，了解更多关于您个人数据使用情况的信息。您的同意选择适用于springer.com和适用的子域名。您可以通过“管理偏好设置”查找更多信息并更改您的偏好设置。您也可以随时通过每个页面页脚中的“您的隐私选择”更改您的偏好设置或撤回同意。我们出于以下目的使用Cookie和类似技术：</p>
+<h4>存储和/或访问设备上的信息</h4>
+<p>Cookie、设备或类似的在线标识符（例如基于登录的标识符、随机分配的标识符、基于网络的标识符）以及其他信息（例如浏览器类型和信息、语言、屏幕尺寸、支持的技术等）可以存储在您的设备上或从您的设备读取，以便在每次连接到应用程序或网站时识别它，以实现此处介绍的一个或多个目的。</p>
+<h4>个性化广告和内容、广告和内容衡量、受众研究和服务开发</h4>
+<p>广告和内容可以根据您的个人资料进行个性化定制。您在此服务上的活动可用于构建或改进关于您的个人资料，以用于个性化广告和内容。可以衡量广告和内容的绩效。可以根据您的活动以及其他人的活动生成报告。您在此服务上的活动可以帮助开发和改进产品和服务。</p>
+<p>广告</p>
+<p>搜索</p>
+<p>导航</p>
+<p>查找期刊</p>
+<p>与我们一起发表</p>
+<p>追踪您的研究</p>
+<p>首页</p>
+<p>百年战争</p>
+<p>章节# 百年战争与历史学家</p>
+<p>章节页码 6–31</p>
+<p>引用此章节</p>
+<p>安妮·库里</p>
+<p>本书系列的一部分：英国历史视角73</p>
+<p>访问量1</p>
+<p>Altmetric</p>
+<h4>摘要</h4>
+<p>“百年战争”，严格来说，是历史学家的发明。“Guerre de Cent Ans”一词首次出现在1861年的法国印刷品中，很快便在英国广受欢迎。1此后，该术语在学术界和大众层面都得到了普遍接受。在该术语被创造出来之前，人们就已经用大量的墨水来描述中世纪后期的英法冲突了。即使在战争时期本身，战争也是许多叙述的主要主题，而这些叙述又为后世的历史学家提供了主要资料。因此，即使其中一些中世纪和后来的资料明显是衍生或带有偏见的，仍然有很多值得阅读的内容。在本研究中，我们只能概述该主题史学的主题思想。正如我们将看到的，许多影响因素作用于过去那些撰写战争史的人：他们可用的资料；他们的爱国或政治同情；他们的写作目的；他们预期的读者；以及当时流行的“历史”观。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Impact-of-Black-Death-and-Hundred-Years'-War-on-Arts-and-Literature">
+        <h3 class="page-name title"><span class="page-emoji ">✍&nbsp;</span>Impact of Black Death and Hundred Years' War on Arts and Literature</h3>
+        <small class="page-url url "><a href="https://fahadhizam.com/fourteenth-century-europe/" target="_blank">(https://fahadhizam.com/fourteenth-century-europe/)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 分析了黑死病与百年战争对文学和艺术的影响，提供了社会文化背景的深层次视角。<br></small>
+    </div>
+    <div class="page-content content"><p>欧洲十四世纪是一个社会、政治和文化巨变的时期。这段时期见证了黑死病，这场瘟疫发生在1346年到1353年间，夺走了约7500万到2亿人的生命。这场大流行造成了一系列宗教、社会和经济的混乱，从而导致了欧洲历史上巨大的变化。</p>
+<p>这场瘟疫减少了欧洲的人口过剩，从而为人们创造了更多机会。劳动力供应减少导致工资上涨。由于需求减少，土地和食物价格下降，使农民得到增强。黑死病影响了艺术和文学，使其变得黑暗并带有死亡的象征意义。</p>
+<p>纪尧姆·德·马肖是一位中世纪法国诗人和作曲家，他经历了黑死病。马肖以参与阿尔斯诺瓦运动（中世纪拉丁语：“新艺术”）而闻名。</p>
+<p>百年战争是一系列冲突，从1337年持续到1453年，由统治英格兰王国的普朗塔吉内特家族对抗统治法国王国的瓦卢瓦家族。持续不断的战争阻碍了欧洲的进步。增加的税收、租金和商品成本影响了普通民众。</p>
+<p>在战争期间，英语兴起，因为英国人认为法语是敌人的语言。</p>
+<p>杰弗里·乔叟是一位英国作家、哲学家和天文学家。乔叟在百年战争期间被法国人俘虏，并在被俘期间创作了他的著名文学作品。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="The-Development-of-Battle-Tactics-in-the-Hundred-Years-War-»-De-Re-Militari">
+        <h3 class="page-name title"><span class="page-emoji ">📊&nbsp;</span>The Development of Battle Tactics in the Hundred Years War » De Re Militari</h3>
+        <small class="page-url url "><a href="https://deremilitari.org/2013/12/the-development-of-battle-tactics-in-the-hundred-years-war/" target="_blank">(https://deremilitari.org/2013/12/the-development-of-battle-tactics-in-the-hundred-years-war/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 探讨了百年战争中的军事战略与战术演变，展示战事中的重要战术思考。<br></small>
+    </div>
+    <div class="page-content content"><p>战术至关重要，因为在国家领导人亲自冲锋陷阵的时代，战术运用失误可能产生深远的影响。在这种背景下，人们显然花费了大量时间和精力来讨论并试图实施战术变化。然而，对中世纪军队而言，创新是一件棘手的事情。这并非仅仅因为军队由兼职士兵组成；虽然狩猎阶级及其随从也参与战争，但这并非全部。尤其是在英格兰，许多人将战争作为职业，到14世纪中期，出现相当数量的雇佣兵和弓箭手，他们可以被认为是职业军人：他们靠薪水为生，并在国家的军事服务中发展事业。契约制度促进了这种情况。（即通过与个人及其追随者签订合同的方式征兵，从普通的侍从到高级贵族。）这些士兵在一起作战一个季度或几年，学会了快速有效地进行战术部署，以及如何最佳地结合骑兵、步兵和远程武器。这使得英格兰及其（主要是）加斯科尼盟友在百年战争中成为优秀的士兵。即使在查理七世的1440年代改革之后，法国及其盟友也很少达到同样的战场效率。</p>
+<p>重要的是要明确战术的定义。一本最近广为流传且其他方面都很优秀的百年战争教科书，将战术与战略混淆了。“ chevauchee”（长途劫掠）被解释为“法比亚式战术”，即在不冒战斗风险的情况下击败对手的策略。但 chevauchee（字面意思是“骑乘”）是一种袭击战略，它造成经济损失，从而削弱敌人被袭击地区在政治和道德上的权威。对“战术”一词的误用意味着人们没有将其视为一个重要因素进行讨论。结果，法国对英国战术的反应——从1340年代到1450年代，即战争持续期间——的发展过程并未得到考虑。</p>
+<p>对不同级别军事行动的进一步定义，有助于更清晰地说明战术的作用：1. 外交层面，政治策略；2. 部队的组织，如何征募和支付；3. 后勤，即这些部队的调动和供应；4. 战略，整体战略和针对特定战区的战略；5. 作战或战役战略，包括 chevauchee，围城和寻求或避免战斗的行动方针；6. 战术，或近距离机动和部队及其武器的使用；7. 个人的英勇行为（通常由弗洛里萨尔这样的编年史家所歌颂的方面）。</p>
+<p>因此，关于1346年的战役，爱德华三世：宣称拥有法国王位（外交）；通过契约征兵（组织）；将部队运送到诺曼底（后勤）；洗劫卡昂并进军巴黎（袭击战略）；然后退回到克雷西（作战决策）；将他的军队防御性地部署以伏击追击的法国军队（战术）；爱德华王储在随后的交战中“赢得他的马刺”（英勇行为）。</p>
+<p>这只是一个粗略的概述，但它确实将战术放在了正确的角度。如果现在轻视战术的研究，那是因为A.H.伯恩和查尔斯·奥曼爵士将战术提升到战争的其他方面之上，视为决定性因素——有时它是，但更多时候不是。他们的观点多少受到不合时宜的民族主义的影响，并受到他们对英格兰火力“历久弥坚”的优越性的信念的影响。因此，炮兵专家伯恩将英格兰的弓箭手视为一种战场上的火炮（在某种程度上是这样，但这种类比不应过度强调）。查尔斯·奥曼爵士的解释显然受到他阅读半岛战争的著作的影响。这是一种现在普遍接受（但最近受到批评）的观点，即英国的列队步枪射击必然优于法国的纵队攻击，因为可以投入使用的武器数量更多。在伯恩的重建中，英格兰弓箭手编队为他们的雇佣兵提供侧翼掩护，发挥着同样的作用。这也印证了永恒的英法刻板印象：英国人冷漠沉着，纪律严明；法国人易怒失控；至少在维多利亚时代的英国绅士看来是这样！</p>
+<p>对“英式”传统弓箭手战术的简要调查，有助于将这一主题置于背景之中。1066年黑斯廷斯战役中弓箭手的角色众所周知，尽管对当天晚些时候“倾泻火雨”的描述，直到两代人之后亨利·亨廷顿的编年史中才出现。1138年，在诺森伯兰附近，一支北方英格兰军队与入侵的苏格兰军队之间爆发的标准战役的详细描述，将弓箭手和矛兵交替部署在英格兰军队的阵线上。这足以射杀并击退苏格兰人的鲁莽冲锋；英格兰骑兵预备队的一次反冲锋赢得了胜利。1298年福尔柯克战役中，面对苏格兰密集的步兵方阵，爱德华一世的弓箭手为他的重骑兵提供了掩护。也许16年后班诺克本战役第二天也是如此。但“苏格兰之锤”已被其无能的儿子取代，后者误用了他的弓箭手。他们转移到苏格兰主力的侧翼，在过河时陷入混乱，然后被罗伯特·布鲁斯的精锐骑兵预备队反冲锋并四散溃逃。正如J.E.莫里斯所指出的那样，爱德华一世通过招募大量威尔士和英格兰弓箭手来壮大他的远程打击部队。在他的孙子统治下，他们使英格兰的军队成为欧洲最令人恐惧的军队。这是如何实现的呢？</p>
+<p>最重要的短期影响可能是1322年的博罗桥战役和1332年的杜普林沼泽战役。第一次，兰开斯特公爵托马斯叛乱对抗爱德华二世，并向北撤退。安德鲁·哈克莱爵士率领保皇派军队，并用下马的雇佣兵和弓箭手组合来防御乌尔河线。兰开斯特需要突破。他用下马的士兵攻击桥梁，用骑兵攻击渡口，但两次攻击都被守军的弓箭手击溃。发现这场战役的T.F.图特认为，弓箭手分散在雇佣兵之中。</p>
+<p>十年后，爱德华·巴里奥尔（苏格兰王位觊觎者）领导的一支机会主义远征军，通过在两翼部署弓箭手来保卫山口，以类似的方式击败了规模大得多的苏格兰军队（图1.1）。次年，爱德华三世在哈利登山重复了这一战术。他的三个“战斗单位”显然都由弓箭手侧翼掩护。苏格兰人阿奇博尔德·道格拉斯爵士不智地决定在某一天解除对贝里克的围困。他们的攻击是在上坡，以传统的密集的矛兵“方阵”进行，陷入了泥泞的地面（该地区至今仍被称为黑维赛德），被英格兰弓箭手的箭雨射成碎片，然后被英格兰骑兵的反攻屠杀（图1.2）。这是百年战争期间英格兰战术的典范。</p>
+<p>它在法国的首次应用是在1342年布列塔尼的莫尔莱克斯（图1.3）。诺森伯兰伯爵支持蒙福尔家族的公爵候选人。在蒙福尔地区取得初步成功后，他因围攻莫尔莱克斯而贪功冒进。布卢瓦的查尔斯（法国的候选人）率领一支规模大得多的军队（大约有3000名雇佣兵和1500名热那亚雇佣兵）对抗他。诺森伯兰退到几英里以北的一个防御阵地。他的背后是一片树林，他把行李和马匹都放在那里，侧翼是一条小溪，前面还挖了一条隐蔽的壕沟。查尔斯一个接一个地用三个“战斗单位”发动了攻击。首先是步行的布列塔尼当地人，而且可能装备很轻。他们被射杀，然后被击退到雇佣兵那里。第二个战斗单位骑马冲锋，但掉进了壕沟。少数几个成功突围的人被俘。经过一段时间的耽搁，法国发起了第三次攻击，但诺森伯兰已经将他的部队——此时已经箭矢耗尽——撤回到树林里。由于热那亚弩兵的叛逃，法国人无法冲破树林，于是撤退了。诺森伯兰的士兵们缺粮（并忍受了不确定时间的围困，可能持续了好几天），然后他们冲出来，突破了法国包围圈。</p>
+<p>虽然英格兰军队人数远远少于法国军队，但这并不是一场伟大的胜利，但它在许多方面预示了他们在四年和十四年后分别在克雷西和普瓦捷取得的成功。正如伯恩所指出的那样，诺森伯兰在克雷西指挥左翼，他的存在可能影响了当天的战术。个人经验以及当代人甚至世代相传的信息传递，对战术的发展至关重要。</p>
+<p>接下来，英格兰战术证明优越的遭遇战，当然是1346年的克雷西战役。也许这个故事众所周知。爱德华三世在诺曼底试图与法国国王决战。六年前在佛兰德斯，他曾两次未能将菲利普引诱到战斗中，而那次远征的代价——包括与法国对抗的雄心勃勃的政治联盟——已经使英格兰政府倾家荡产。布伊龙福斯（1339年）的僵局不应被遗忘，因为菲利普选择建立一种强化营地，爱德华不敢攻击。</p>
+<p>所以法国指挥官并不总是选择全力进攻。1346年的情况有所不同。爱德华在诺曼底西部登陆，并对卡昂发动了 chevauchee，他攻占并洗劫了卡昂。然后他向巴黎挺进。目前尚不清楚他是否打算让法国人向他进攻。他可能误判了菲利普反应的力度。面对规模远大于己的军队，爱德华开始向索姆河东北方向撤退。英格兰军队在靠近河口的布朗舍塔克渡口战斗着渡河，然后退到蓬蒂厄克雷西的一个坚固的山顶阵地。这是爱德华熟悉的领地。一篇最近发表的论文认为，该地点事先已经过精心准备，包括供应和弹药。此外，该场地至少在弓箭手站立的两翼撒上了坑。</p>
+<p>也许现在是看看关于英格兰弓箭手如何部署的陈词滥调的时候了。近一个世纪前，《英国历史评论》的篇幅充满了关于这个主题的争论。弗洛里萨尔对克雷西战役中英格兰人“i maniere d’une fierce”的描述，引起了关于他真正含义的许多争议。它可以解释为指烛台的枝杈，耙子（最受欢迎的选择），或者可能是指“herrisson”，一种尖刺的栅栏（像刺猬一样）。最受欢迎的一种解释是，弓箭手部署在每个雇佣兵战斗单位的两翼，并略微向前倾斜，以便在主要战线前提供交叉火力。伯恩将其详细阐述为一个具有突出“齿状”空心楔形的编队，两个战斗单位在此连接（图1.4）。这个想法存在一个问题，因为它实际上会在英格兰战线上造成弱点，如果与装备精良的雇佣兵接触，弓箭手将难以自卫。为了回应这一批评，伯恩观点的支持者认为，英格兰弓箭手的冲击将驱散攻击者，并将他们引导到他们自己雇佣兵对面的位置，由于社会地位的原因，雇佣兵更喜欢与他们作战。</p>
+<p>我不相信这个论点。大多数情况下，英格兰人似乎都小心地在前面设置壕沟或坑洼来保护自己，这表明他们不信任仅靠“火力”就能挡住敌人。至少直到他们学会使用便携式木桩作为障碍物之前都是这样。让·德·比厄伊在他的战争论文《勒·朱文塞尔》（少年）中给出的建议进一步证实了我的理论。这是在1466年左右根据个人战争经验撰写的，总结了百年战争的军事教训。德·比厄伊建议将弓箭手部署在主力的两翼，但要通过在这些翼的两端部署雇佣兵来保护他们（“aux deux bouts”）。事实上，这种描述以及我对先前部署的解释，与16世纪核心近战士兵两翼配以远程射击部队的布局很接近（尽管在研究1890年代的辩论时，我发现我不是第一个看到这种相似之处的人）。</p>
+<p>因此，让我们回到克雷西。爱德华似乎以图1.5所示的编队组成了他的三个“战斗单位”，尽管这有待商榷。最近出版的一部关于1347年以前百年战争的巨著，将弓箭手部署在由马车保护的侧翼。我认为这是对爱德华使用马车保护其侧翼和后方免受包围的误读，这是一个古老的策略，最近在1304年蒙斯昂佩韦勒，佛兰德军队曾成功地用它来对抗法国骑兵。英格兰弓箭手必须比这更具机动性才能有效作战。正如J.E.莫里斯所指出的那样，他们不是“活着的木偶”。维奥莱-勒-迪克与拿破仑的“轻步兵”的比较是意味深长的。</p>
+<p>这些步枪轻步兵在营的前面形成一道屏障，用他们的狙击火力扰乱敌人的编队和指挥链。同样，弓箭手可以在雇佣兵面前开始，然后在敌人接近时退到侧翼。他们甚至可以在挖好的任何坑洼之间跳跃，同时被他们击落的骑兵。</p>
+<p>因此，在克雷西，弓箭手似乎是向前和侧翼部署的。他们的交叉火力可能只覆盖了他们自己战斗单位的前方，尽管由于山坡的阶梯状地形，他们可能能够越过他们雇佣兵的头顶射击。</p>
+<p>无论情况如何，由于缺乏协调，法国的攻击失败了。菲利普六世很少得到任何军事才能的认可。但值得指出的是，他在1328年卡塞尔战役中，凭借一次精心策划的骑兵侧翼攻击成功地击败了一支佛兰德军队。此外，他在1339年布伊龙福斯和次年布维内斯避免战斗，证明是成功的策略，因为爱德华的战役因此而崩溃。不过，这种策略需要一些勇气才能贯彻，因为它意味着接受领土遭到破坏而没有还击，并忍受那些年轻的骑士对他的嘲讽，认为这是狐狸而不是狮子的行为。当菲利普在1346年8月26日遇到爱德华的军队时，他可能认为他终于让英格兰人处于劣势（或者巴黎郊外的耻辱难以忍受）。我也怀疑他是否还是18年前在卡塞尔时的同一个人。</p>
+<p>他的部署，如果他有任何部署的话，包括在前面部署热那亚弩兵，而骑乘的雇佣兵则组成传统的三个战斗单位在中央，任何步兵都在侧翼。但这可能只是对从行军队列匆忙部署的部队过于简洁的描述。当然，热那亚弩兵缺乏他们的“pavises”（高大的盾牌，在他们装填时保护他们），因为这些盾牌在行李队的车上。他们受到了很多批评，因此被误解了。我对弗洛里萨尔的解读表明，他们是在指挥下列队，并伴着三声大喊前进以保持队形。他们之所以被射败，是因为他们人数较少，而弓箭手的射击速度更快，这两种情况都可以通过pavises来弥补。但真正造成灾难的是法国骑士急于与英格兰人作战。许多不协调的正面冲锋，并不能解决战术问题，尽管显然爱德华王储的战斗单位的英格兰弓箭手有一些突破。菲利普无法控制战局，只有当英格兰人骑兵追击时才参与战斗。</p>
+<p>克雷西战役证明了英格兰战术体系的优越性。法国人做了哪些努力来反击呢？早在1340年圣奥梅尔郊外，侧翼攻击就被用来扭转罗贝尔·达尔图瓦指挥的部队的阵地。但那天逃跑的部队是他缺乏经验的佛兰德盟军，而罗贝尔凭借一次果断的反击赢得了那一天的胜利（至少在那个战场上），他将弓箭手和下马的雇佣兵结合起来。</p>
+<p>在图特的论文集中，他提请人们注意“克雷西和普瓦捷之间的一些被忽视的战斗”。在1349年的普瓦图的卢纳隆热，一支由布什的卡普塔尔领导的英格兰军队遭到普瓦图的执政官让·德·利斯尔和让·德·布西考的攻击（图1.6）。法国人派出一部分骑兵部队对抗下马的英格兰人，而另一部分则绕过英格兰人的后方去捕捉他们的马匹。对法国人来说不幸的是，他们的部队被逐个击溃，但他们确实赶走了英格兰人的马匹，迫使胜利者在夜间步行撤退到附近的堡垒。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="How-Artillery-Evolved-in-the-100-Years-War-|-War-History-Online">
+        <h3 class="page-name title"><span class="page-emoji ">💣&nbsp;</span>How Artillery Evolved in the 100 Years War | War History Online</h3>
+        <small class="page-url url "><a href="https://www.warhistoryonline.com/medieval/artillery-100-years-war.html" target="_blank">(https://www.warhistoryonline.com/medieval/artillery-100-years-war.html)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 讨论了火药武器的演变及其影响，阐释了战争技术变革。<br></small>
+    </div>
+    <div class="page-content content"><p>百年战争（1337-1453年）见证了火药炮在英法战争中的首次出现。这些在西欧冲突中基本上未被使用的可怕武器，被双方用于围攻和战场。虽然并非具有变革性，但它们的存在意义重大，使这场战争成为火炮发展中的一个重要阶段。</p>
+<p>早期火炮</p>
+<p>尽管火药在东亚早已存在，但它直到13世纪才传入欧洲。在那里，它与欧洲相对先进的金属铸造技术相结合，制造出能够引导强大的黑火药爆炸的火炮，发射出巨大的抛射物。</p>
+<p>爱德华三世在位期间，英国采用了火炮。我们在爱德华三世导师沃尔特·德·米勒梅特为他准备的手稿中看到了其中一种武器的第一个插图。1333年，我们在对伯威克的围攻中第一次提到这些武器的行动。但直到爱德华1346年远征法国，它们才变得重要起来。在那里，他在克雷西战役中使用了他的火炮，并在对那个重要港口的围攻中用它们轰炸加莱。</p>
+<p>接下来的并非我们所知的火炮的立即采用。其中一些武器对现代观察者来说看起来会很奇怪——爱德华手稿中的插图显示了一种瓶状的枪，发射着一支大箭。尽管它们的使用很快增加，但它们与旧的攻城武器并肩作战了一代人。但如今，火炮已经出现在战场上，并在百年战争中始终保持重要地位。</p>
+<p>攻城中的火炮</p>
+<p>1375年，法军围攻圣索沃尔-勒维孔特，他们首次部署了一个大型火炮连。在30年前遭受过英军的火力打击后，法国王室很快就意识到了这些武器的重要性，并开始自行购置。城墙前部署了32门火炮，弹药沿着土路运来，驮马和手推车在麻袋装的石弹下吃力地前进。</p>
+<p>将大量火炮和大量弹药运送到战区对英国人来说更为棘手，但这并没有阻止他们。亨利五世在1415年的围攻中使用火炮向阿夫勒尔倾泻恐惧和破坏。两年后，《布鲁特编年史》提到他带来了适合国王的火炮，此类火炮已成为王室地位的象征。它们被部署在对卡昂、法莱斯和后来的鲁昂的成功占领中。</p>
+<p>火炮在这些围城中如此具有决定性作用的部分原因是，防御工事的城墙是为早期攻城技术设计的。它们又高又薄，以阻止人们翻越它们。但这使得它们很容易受到火炮射击的攻击，火炮可以击穿这些薄弱的障碍。只有当防御工事发生变化后，它们才能再次抵御攻击性火炮。</p>
+<p>防御中的火炮</p>
+<p>这并不意味着由于这项新技术，城镇和城堡突然变得毫无防御能力。火炮的研制需要时间，早期型号远未达到其全部潜力。由于这些响亮、喷火的武器带来的冲击，它们的影响可能在心理上与在物理上一样多。重要的是，它们也可以用于防御。</p>
+<p>正如围攻者可以用火炮向城墙射击一样，防御者也可以从城墙上向暴露的攻击者射击。在英格兰或法国，最早将火炮纳入城镇的例子来自康布雷，在那里，早在1339年——在爱德华三世展示其可怕的攻击力之前——防御系统就已纳入火炮。到1378年，它们已被纳入英国相对安全的坎特伯雷和南安普顿的防御工事中。</p>
+<p>到15世纪初，在防御中使用火炮被认为不仅是正常的，而且是必要的。法国各地城镇和城堡都有火炮。火药被储备起来以备不时之需，许多城镇还任命了一名炮兵来监督在围攻中有效使用武器。</p>
+<p>战场上的火炮</p>
+<p>在围攻中使用火炮最为容易。在这些静态对抗中，它们可以在相对平静的环境中设置好，并保持在一个地方，而不必担心被敌人超越。鉴于其笨重的体积、巨大的重量和爆炸性弹药，这是迄今为止最安全、最简单的方法。将它们用于英国人的快速行军袭击或法国人的反击行动有时是不可能的。</p>
+<p>但这并没有阻止它们在决战中发挥作用。在著名的克雷西战役中，英国取得了胜利，火炮的射击有助于让法国士兵和为他们服务的热那亚雇佣军感到害怕。在这个早期阶段，许多人可能以前从未听到过火炮的轰鸣声，这使得它们的影响力比几年后更大。</p>
+<p>从开始到结束，快速发展的火药武器在百年战争中发挥了作用。1453年卡斯蒂永战役，战争的最后一次战役中，法国人打败了英国人，部分原因是枪炮对他们前进的敌人的毁灭性打击。</p>
+<p>火炮和炮弹的变化</p>
+<p>在战争期间，火炮和弹药发生了巨大的变化，这占据了火炮发展的前一百五十年的大部分时间。雕刻的石弹和大型箭矢被铸造的金属炮弹所取代，后者在撞击时不会像石弹那样经常破碎，而是携带巨大的力量。火炮铸造技术得到改进，允许使用更强的装药，而不会由于力量而使火炮自毁。</p>
+<p>所有这一切都促进了中央政府在管理军队方面的重要性日益提高。昂贵的火炮很少能被其他人大量供应。火炮日益增长的重要性增加了国家武装力量的重要性，战争结束时，两者都比战争开始时重要得多。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Recruiting,-Organization,-Tactics">
+        <h3 class="page-name title"><span class="page-emoji ">🗺&nbsp;</span>Recruiting, Organization, Tactics</h3>
+        <small class="page-url url "><a href="http://www.hundredyearswar.com/Books/History/Recruiti.htm" target="_blank">(http://www.hundredyearswar.com/Books/History/Recruiti.htm)</a><br></small>
+        <small class="page-rating rating ">评分: 9.0<br></small>
+        <small class="page-annotation annotation ">注释: 分析了战后各国政治和军事结构的变化，体现了战争的长期影响。<br></small>
+    </div>
+    <div class="page-content content"><p>百年战争期间的征募</p>
+<p>战争初期（1337年），法国和英格兰的军事服务理论基础仍然是封建义务：一个人由于持有国王的土地或持有国王土地之人的土地而负有服役的义务。一个特别富裕的人可能需要许多武装人员和步兵。一个相对贫穷的人可能必须与其他几个人合伙才能提供一名武装人员或步兵。然而，如果这仍然是军事服务的理论基础，那么在大多数情况下，例如对外征服，它绝非实用。因此，它在英格兰实际上已被废弃。</p>
+<p>几代以来，英格兰一直参与针对爱尔兰、苏格兰、威尔士和法国的征服战争。在这些战争中，传统的40天义务（对国防很有用）被证明不切实际。战役才刚刚开始，部队的义务就已到期。因此，一种被称为盾牌税的做法被发明出来。一个负有军事义务的人向国王支付少量费用，就可以免除当年的义务。由于有些人并不觉得服兵役特别繁重，国王就可以与他们签订合同——“契约”——长期服役于王室工资单上，用盾牌税的收入支付他们的工资。因此，英格兰发展出某种常备军，由数百名私人承包商组成，他们愿意在国王的意愿和费用下随时随地提供服务。正是这些人构成了百年战争期间英格兰军队的骨干。</p>
+<p>现在，盾牌税也存在于法国法律中，但法国幅员辽阔，军事阶级庞大，即使依靠封建义务，通常也不难招募一支大型军队。如果国王真的需要他们超出传统义务的服役时间，他总能找到一些钱来维持一些人的活动。因此，在克雷西、普瓦捷、阿金库尔以及许多其他场合与英格兰人交战的军队基本上是由封建征召组成的；大量的预备役人员和少量职业军人。这些人中许多人并不特别熟练，也没有经验，许多人的头脑里充满了骑士式的胡言乱语。而且，由于他们并非一定在王室工资单上，他们也不一定会服从命令。</p>
+<p>法国逐渐改进，尽管并非没有痛苦的灾难。杜盖克林在14世纪后期的成功部分归功于建立了类似于英格兰契约制度的东西。当然，非正规战争和火药的引入帮助很大，但——除了日益有利的政治局势之外——法国的真正突破发生在1445年，当时组建了法兰西常备军（Compagnies de l&#x27;Ordonnance），这是自罗马帝国灭亡以来欧洲第一个有组织的、全职的、有薪水的常备军。这使得法国在技术上优于英格兰，这成为法国在战争最后阶段（1449-1453年）取得成功的显著因素。</p>
+<p>组织</p>
+<p>两军的组织差异出奇地小。事实上，整个战争期间几乎没有任何变化。野战部队主要由骑兵和步兵组成。</p>
+<p>骑兵主要是重装骑兵——武装人员（骑士和“侍从”），还有一小部分轻骑兵。这些骑兵组成“骑枪”，基本的作战小组包括两到三名身穿盔甲的人（通常是一个骑士或侍从，一到两个侍从）和通常一到两名装备简陋的骑兵（侍从或弓箭手）。几支骑枪组成了由高级武装人员指挥的“哨所”，几个哨所组成一个“旗帜”，通常由一位被称为“旗手”的老兵骑士指挥。即使是法国常备军也是在这种基础上组织起来的，每个连队实际上都由一个旗帜组成。</p>
+<p>步兵通常由弓箭手和几种类型的近战步兵组成。随着时间的推移，弓箭手（无论是长弓手、短弓手还是弩手）的数量以牺牲其他类型的步兵（矛兵、标枪兵、匕首兵、斧兵）为代价而增加。在英格兰军队中，可能也在法国军队中，步兵组成20人的排，由一名双倍工资的人（“ventenar”或“twentier”）指挥。五个这样的排将组成一个“centenar”（“百人队长”）的指挥，通常是一个侍从，他获得更多的报酬。几个这样的指挥组成一个营，我们听说在13世纪期间有特定的千人指挥部。这些指挥部通常由经验丰富的骑士指挥，他们因为领导这么多士兵所需的责任而获得骑士的薪水，通常还会多一些。</p>
+<p>最后，当然还有炮兵。英格兰和法国都有机械炮兵，各种类型的弹射器和投石机，这些弹射器和投石机可能非常有效。但是化学炮兵——火药炮兵——正是在百年战争期间出现的：有一些轻微的证据表明，在克雷西可能有一些原始的大炮，而法国人在阿金库尔肯定有几门大炮，尽管他们只造成了一名英格兰人死亡。法国在炮兵发展方面处于领先地位，仅仅是因为他们在战争的大部分时间里都处于失败的一方。他们在杜盖克林领导下以及战争结束阶段的许多成功，都是由于他们拥有更优越的炮兵：法国大炮无疑是他们在福米尼战役中获胜的决定性因素。</p>
+<p>战术</p>
+<p>在百年战争的大部分时间里，英格兰人是战术大师。他们在威尔士、苏格兰和爱尔兰的战争给他们带来了许多独特的战斗经验，这些经验在法国对他们很有帮助。他们的基本战术非常简单。他们总是试图采取防御姿态，使用下马的武装人员组成方阵，方阵的后方和侧翼由大量的弓箭手组成，所有这些弓箭手前面都有狼坑或尖桩，侧翼倚靠安全的自然障碍物。这种防御姿态将迫使进攻的敌人——无论是骑马还是步行——从正面进攻。在此过程中，进攻者将遭受大量箭雨的巨大损失。</p>
+<p>与罗宾汉相反，造成进攻者问题的是箭雨的数量，而不是准确性。考虑一下，6000名弓箭手携带25万支箭，可以在大约一小时内轻松地以相当悠闲的方式射出这些箭。如果匆忙，他们理论上可以在几分钟内射出，对任何进攻者都会造成毁灭性的影响。因此，当进攻者能够与下马的英格兰武装人员进行肉搏时，他们已经被打得相当惨，而且可能非常混乱。当然，为了使这个系统正常运作，敌人必须发起进攻。这通常不是问题，因为法国人往往过于咄咄逼人。在他们比较不那么咄咄逼人的情况下，几轮远距离箭雨通常足以刺痛他们的荣誉，从而迫使他们采取行动。</p>
+<p>法国人本来应该能够相对轻松地应对英格兰的战术。事实上，他们有一些与稳定的步兵作战的经验，在1302年的库特雷战役中，他们被佛兰德公民步兵彻底击败。但他们将失败归咎于地面的沼泽性质，这只是部分正确。此外，在接下来的20年中，他们多次给坚强的佛兰德市民带来严重的挫折，并且没有理解他们获胜的原因，这些原因很容易通过引用独特的环境来解释，就像他们在1302年的失败一样容易解释。更糟糕的是，法国军事领导人中几乎没有什么所谓的“制度记忆”，他们自己也只不过是预备役人员。</p>
+<p>因此，法国人继续相信正面冲突是胜利的关键，即使没有必要。在克雷西，他们骑马尝试。他们在那里将失败归咎于英格兰人让他们的武装人员下马的诡计，法国人在普瓦捷和阿金库尔再次尝试了徒步作战。他们从未意识到英格兰的技术只在防御中有效。也就是说，直到福米尼，他们的两门大炮给了他们迫使英格兰人发动进攻的机会，这基本上是英格兰人一个多世纪以来一直在对他们做的事情。</p>
+<p>战略</p>
+<p>有时很难判断百年战争期间的一些领导人是否有战略远见。对一些人来说，战略可能只不过是将一支军队指向特定方向并将其释放。但显然，爱德华三世、黑太子、贝特朗·杜盖克林和亨利五世等人都对战略有更清晰的概念。行动通常是在考虑到其政治影响的情况下进行的，例如亨利五世在诺曼底的战役，这将同时夺回历史上属于英格兰国王的省份，并威胁巴黎本身。亨利对军队行为的严格——甚至是严酷的——纪律的执行强烈表明，他清楚地知道最终获胜意味着赢得诺曼人的“民心”。</p></div>
+
+</div>
+</div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navigate = document.querySelector(".navigate");
+        if (!navigate) {
+            console.error("找不到 .navigate 元素!");
+            return;
+        }
+
+        let lastScrollY = 0; // 初始化滚动位置
+        const scrollContainer = document.querySelector(".right-column");
+        let isNavigating = false;
+        document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                isNavigating = true; // 设置导航状态
+                navigate.classList.add("navigate-hidden"); // 隐藏导航栏
+
+                setTimeout(() => {
+                    isNavigating = false;
+                }, 100);
+            });
+        })
+
+        scrollContainer.addEventListener("scroll", () => {
+            const currentScrollY = scrollContainer.scrollTop; // 获取容器的滚动位置
+
+            // 判断滚动方向
+            if (!isNavigating) {
+                if (currentScrollY > lastScrollY) {
+                    navigate.classList.add("navigate-hidden");
+                } else {
+                    navigate.classList.remove("navigate-hidden");
+                }
+            }
+
+            // 更新上一次的滚动位置
+            lastScrollY = currentScrollY;
+        });
+    });
+</script>
+</html>

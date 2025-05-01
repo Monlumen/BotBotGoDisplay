@@ -1,0 +1,1924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一次去新加坡旅行, 一共3天, 3人总预算6000人民币, 如何攻略?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; 
+            background-color: #f4f6f8; 
+            color: #333; 
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        
+        .content {
+            border-radius: 12px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); 
+            background-color: #fff; 
+            padding: 16px; 
+            margin-bottom: 16px; 
+        }
+
+        
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .left-column{
+            flex: 0.47;
+        }
+        .right-column{
+            flex: 0.53;
+        }
+
+        .left-column {
+            background-color: #eef6ff; 
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; 
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Noto Serif", "SimSun", serif; 
+            position: relative;
+        }
+        .resizer {
+            width: 6px;
+            cursor: col-resize;
+            background-color: #d1d1d1;
+        }
+
+
+        
+        .title {
+            font-size: 1.4em; 
+            font-weight: 600; 
+            color: #1a1a1a; 
+            margin-bottom: 12px; 
+        }
+
+        .page-name.title {
+            font-size: 1.8em; 
+            font-weight: bold; 
+            color: #222; 
+            margin: 16px 0; 
+            text-align: left; 
+        }
+
+        .section-title {
+            font-size: 1.4em; 
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; 
+        }
+
+        
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; 
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; 
+            padding: 12px; 
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; 
+            border: 1px solid #dde3ea; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+            margin-bottom: 20px; 
+        }
+
+        
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; 
+            margin: 20px 0; 
+        }
+
+        
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; 
+            color: #666; 
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; 
+            border-radius: 8px; 
+            line-height: 1.4;
+            margin-bottom: 10px; 
+        }
+
+        
+        .page-rating {
+            background-color: #e8f4ff; 
+            color: #0078d7; 
+            font-weight: bold; 
+            border: 1px solid #aad4ff; 
+        }
+
+        
+        .page-annotation {
+            background-color: #fff5e5; 
+            color: #cc8400; 
+            font-style: italic; 
+            border: 1px solid #ffcc66; 
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; 
+        }
+
+        
+        a {
+            color: #0078d7; 
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+        
+        .content > * {
+            margin-bottom: 12px; 
+        }
+
+        
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; 
+            z-index: 300; 
+            background-color: #ffffff; 
+            color: #222; 
+            font-size: 1.1em; 
+            font-weight: 500; 
+            padding: 12px 16px; 
+            border-radius: 8px; 
+            border: 1px solid #d1e4f2; 
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05),  0 2px 4px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 16px; 
+            text-align: left; 
+            line-height: 1.6; 
+            font-family: "Inter", "Noto Sans", sans-serif; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        
+        .section-link-box {
+            display: inline-block; 
+            margin: 4px 2px; 
+        }
+
+        .section-link {
+            display: inline-flex; 
+            align-items: center; 
+            padding: 6px 12px; 
+            background-color: #eef6ff; 
+            color: #0078d7; 
+            font-size: 0.95em; 
+            font-weight: 500; 
+            text-decoration: none; 
+            border: 1px solid #d1e4f2; 
+            border-radius: 20px; 
+            transition: all 0.2s ease; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; 
+            color: #005bb5; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            text-decoration: underline; 
+        }
+
+        
+        .navigate {
+            display: flex; 
+            max-width: 40%;
+            width: fit-content; 
+            flex-wrap: nowrap; 
+            overflow-x: auto; 
+            gap: 4px; 
+            justify-content: center; 
+            padding: 4px 4px; 
+            background-color: #f4f6f8; 
+            border-radius: 12px; 
+
+            position: fixed;
+            top: 0;
+            left: 55%;
+            
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease; 
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        
+        .navigate-item {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            background-color: #ffffff; 
+            padding: 3px 6px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            transition: all 0.3s ease; 
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            transform: translateY(2px); 
+        }
+        .navigate-item.active {
+            box-shadow: 0 0 10px 3px rgba(0, 120, 215, 0.5); 
+            transform: translateY(1px); 
+        }
+        .navigate-item a {
+            text-decoration: none; 
+            color: #0078d7; 
+            font-weight: bold; 
+            font-size: 1em; 
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; 
+            margin-bottom: 1px; 
+        }
+        .navigate-item-id {
+            font-size: 0.9em; 
+            color: #555; 
+        }
+
+        [id] { 
+            scroll-margin-top: 55px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            第一次去新加坡旅行, 一共3天, 3人总预算6000人民币, 如何攻略?
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">住宿推荐</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#TOP-Hostels-in-Singapore-City-2024---Comparison-from-$6">
+    🏨宿舍推荐</a></div><div class="section-link-box"><a class="section-link" href="#Singapore-accommodation-prices-at-DuckDuckGo">
+    🏨酒店价格信息</a></div><div class="section-link-box"><a class="section-link" href="#The-Perfect-3-Day-Singapore-Itinerary-for-First-Time-Visitors">
+    📅旅游行程建议</a></div></div>
+    <div class="section-content content"><ol>
+<li><strong>Atelier Hostel</strong></li>
+<li><strong>特点</strong>：适合多人的宿舍，提供舒适的设置和友好的服务。</li>
+<li><strong>价格</strong>：每晚约17美元。</li>
+<li>
+<p><strong>优势</strong>：氛围友好，方便交友，适合背包客和年轻旅客。</p>
+</li>
+<li>
+<p><strong>Dream Lodge</strong></p>
+</li>
+<li><strong>特点</strong>：位置便利，靠近公共交通，提供基本的设施。</li>
+<li><strong>价格</strong>：中等价位，具体价格未提供。</li>
+<li>
+<p><strong>优势</strong>：便于出行，适合希望近距离到达主要景点的游客。</p>
+</li>
+<li>
+<p><strong>Hipstercity Hostel</strong></p>
+</li>
+<li><strong>特点</strong>：提供带窗帘的私人床位，非常适合想要安静休息的旅客。</li>
+<li><strong>价格</strong>：具体价格未提供。</li>
+<li>
+<p><strong>优势</strong>：为入住客人提供较高的隐私性，适合需要安静环境的顾客。</p>
+</li>
+<li>
+<p><strong>Betel Box Backpackers Hostel</strong></p>
+</li>
+<li><strong>特点</strong>：被称为最实惠的旅舍，环境友好。</li>
+<li><strong>价格</strong>：每晚价格为17美元。</li>
+<li><strong>优势</strong>：经济实惠，适合预算有限的旅行者。</li>
+</ol>
+<p>这些住宿选择都在新加坡的预算范围内，可以满足第一次旅行者的需求。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">餐饮建议</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Where-to-Eat-in-Singapore:-25-Places-for-Shiok-(Delicious)-Food!">
+    🍽Top restaurant listing</a></div><div class="section-link-box"><a class="section-link" href="#Singapore-dining-prices-at-DuckDuckGo">
+    🍜Restaurant meal prices</a></div><div class="section-link-box"><a class="section-link" href="#Singapore-Food-Guide:-25-Must-Eat-Dishes-(&-Where-to-Try-Them)">
+    🥢Detailed food guide</a></div><div class="section-link-box"><a class="section-link" href="#TOP-Hostels-in-Singapore-City-2024---Comparison-from-$6">
+    🏨</a></div></div>
+    <div class="section-content content"><h4>主要美食推荐：</h4>
+<ol>
+<li><strong>Laksa</strong></li>
+<li><strong>价格</strong>：$3 SGD</li>
+<li><strong>推荐地点</strong>：Sungei Road Laksa</li>
+<li>
+<p><strong>特色</strong>：一种香辣的米粉汤，通常由椰奶、虾、鱼等食材制成。</p>
+</li>
+<li>
+<p><strong>Bak Kut Teh</strong></p>
+</li>
+<li><strong>价格</strong>：$7 SGD</li>
+<li><strong>推荐地点</strong>：Outram Park Yahua Rou Gu Cha</li>
+<li>
+<p><strong>特色</strong>：一道炖猪骨汤，适合与米饭搭配，通常与茶同食。</p>
+</li>
+<li>
+<p><strong>Hokkien Mee</strong></p>
+</li>
+<li><strong>价格</strong>：$4 SGD</li>
+<li><strong>推荐地点</strong>：Nam Sing Fried Hokkien Mee</li>
+<li>
+<p><strong>特色</strong>：混合的卤面，通常配有多种海鲜和豆芽。</p>
+</li>
+<li>
+<p><strong>Chicken Rice</strong></p>
+</li>
+<li><strong>价格</strong>：$12 SGD（半只鸡）</li>
+<li><strong>推荐地点</strong>：Tian Tian Chicken Rice</li>
+<li>
+<p><strong>特色</strong>：新加坡国菜，搭配香喷喷的米饭和多种调味酱。</p>
+</li>
+<li>
+<p><strong>Char Kway Teow</strong></p>
+</li>
+<li><strong>价格</strong>：$4 SGD</li>
+<li><strong>推荐地点</strong>：Hill Street Char Kway Teow</li>
+<li>
+<p><strong>特色</strong>：炒宽米粉，通常加入海鲜、香肠和血蛤。</p>
+</li>
+<li>
+<p><strong>Nasi Lemak</strong></p>
+</li>
+<li><strong>价格</strong>：$3.50 SGD</li>
+<li><strong>推荐地点</strong>：常见于不同的食阁</li>
+<li>
+<p><strong>特色</strong>：椰浆饭，搭配各种配料如鱼、鸡蛋和沙爹。</p>
+</li>
+<li>
+<p><strong>周边小吃</strong>：</p>
+</li>
+<li><strong>价格</strong>：空气在$3-6 SGD（食阁），$20-32 SGD（餐馆）</li>
+<li><strong>特色</strong>：提供多种当地特色小吃，价格实惠。</li>
+</ol>
+<h3>用户关注的部分：</h3>
+<p>用户可能会最关心的部分包括各个推荐菜品的具体价格、推荐地点及特色，尤其是在旅行预算有限的情况下，这些信息可以帮助他们更好地规划餐饮选择。具体背景和独特之处，如Laksa的传统制作方式和Bak Kut Teh的饮用习惯，可能会提升他们在当地的美食体验。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">交通系统</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Ultimate-Guide-to-Transportation-Around-Singapore">
+    🗺公共交通指引</a></div><div class="section-link-box"><a class="section-link" href="#Singapore-transportation-costs-at-DuckDuckGo">
+    🚆公共交通费用</a></div><div class="section-link-box"><a class="section-link" href="#Taxi-Singapore---Prices-and-Useful-Tips-for-Taxis-in-Singapore">
+    🚖出租车费用说明</a></div><div class="section-link-box"><a class="section-link" href="#Guide-to-Singapore-Metro-Tickets,-MRT-Fare-&-Card-Price">
+    🚉</a></div><div class="section-link-box"><a class="section-link" href="#The-Singapore-Tourist-Pass---EZ-Link-card-for-Tourists">
+    🎟</a></div></div>
+    <div class="section-content content"><h3>交通系统信息汇总</h3>
+<ol>
+<li><strong>地铁 (MRT)</strong>：</li>
+<li>票价：根据旅行距离，通常在S$1到S$2.37之间。</li>
+<li>使用方法：推荐使用EZ-Link卡或Singapore Tourist Pass，可以享受更便宜的票价。</li>
+<li>
+<p>高峰时段：周一至周五的8:00到9:00和17:00到19:00，避免乘坐地铁。</p>
+</li>
+<li>
+<p><strong>巴士</strong>：</p>
+</li>
+<li>票价：根据旅行距离，从S$1.90到S$3.00不等，使用EZ-Link卡会更便宜。</li>
+<li>提供现金购票，但成本较高，建议使用EZ-Link卡支付。</li>
+<li>
+<p>注意：上下车时需按下摇杆，以确保正确收费。</p>
+</li>
+<li>
+<p><strong>出租车</strong>：</p>
+</li>
+<li>起步价：S$4.10，之后每公里收费S$0.60，超过10公里后每公里S$0.70。</li>
+<li>高峰时段加收：高峰时间加25%，深夜加50%。</li>
+<li>乘车方式：可以在指定的出租车站、使用 APP、或拨打出口公司电话叫车。</li>
+</ol>
+<hr />
+<h3>用户关注重点</h3>
+<ul>
+<li>使用EZ-Link卡或Singapore Tourist Pass：这将有效降低地铁和巴士的乘车费用，并且方便旅行者在新加坡内灵活出行。</li>
+<li>高峰时段：避免在特定的时间段乘坐地铁，以减少人流拥挤，提升出行体验。</li>
+<li>出租车的费用和时间：明确的起步价及高峰时段的附加费用让用户能更好地预算出行成本。</li>
+</ul></div>
+</div><div class="section">
+    <h3 class="section-title title">景点与活动安排</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Singapore-attraction-ticket-prices-at-DuckDuckGo">
+    🎢景点票价</a></div><div class="section-link-box"><a class="section-link" href="#The-Perfect-3-Day-Singapore-Itinerary-for-First-Time-Visitors">
+    📅行程安排</a></div><div class="section-link-box"><a class="section-link" href="#3-Days-in-Singapore-Itinerary-By-A-Local-–-WildJunket-Travel">
+    📍行程建议</a></div><div class="section-link-box"><a class="section-link" href="#Singapore-accommodation-prices-at-DuckDuckGo">
+    🏨酒店</a></div><div class="section-link-box"><a class="section-link" href="#The-Singapore-Tourist-Pass---EZ-Link-card-for-Tourists">
+    🎟交通通行证</a></div><div class="section-link-box"><a class="section-link" href="#Guide-to-Singapore-Metro-Tickets,-MRT-Fare-&-Card-Price">
+    🚉公交通行券</a></div><div class="section-link-box"><a class="section-link" href="#Where-to-Eat-in-Singapore:-25-Places-for-Shiok-(Delicious)-Food!">
+    🍽当地美食</a></div><div class="section-link-box"><a class="section-link" href="#TOP-Hostels-in-Singapore-City-2024---Comparison-from-$6">
+    🏨</a></div></div>
+    <div class="section-content content"><ol>
+<li><strong>滨海湾花园</strong></li>
+<li>开放时间：每天 9:00 AM – 9:00 PM（最后入园时间：8:00 PM）</li>
+<li>门票价格：儿童从 $8 新币起。</li>
+<li>
+<p>推荐游玩顺序：建议在晚上访问，观赏美丽的灯光秀。</p>
+</li>
+<li>
+<p><strong>圣淘沙岛</strong></p>
+</li>
+<li>开放时间：每天 10:00 AM - 9:30 PM。</li>
+<li>入岛费用：每人 $11，新加坡。</li>
+<li>额外交通费用：单程 $7，每日往返 $11。</li>
+<li>
+<p>推荐游玩顺序：建议游玩环球影城和海洋馆。</p>
+</li>
+<li>
+<p><strong>鱼尾狮公园</strong></p>
+</li>
+<li>开放时间：24小时开放。</li>
+<li>门票价格：免费入园。</li>
+<li>推荐游玩顺序：建议晚上前来观赏美丽的夜景。</li>
+</ol>
+<h3>建议的游玩顺序：</h3>
+<ol>
+<li><strong>第一天</strong></li>
+<li>上午：参观滨海湾花园。</li>
+<li>下午：前往圣淘沙岛进行游玩。</li>
+<li>
+<p>晚上：访问鱼尾狮公园，欣赏夜景。</p>
+</li>
+<li>
+<p><strong>第二天</strong></p>
+</li>
+<li>早餐：选择去 Sungei Road Laksa 或 Tian Tian Chicken Rice。</li>
+<li>上午：游玩殖民区，参观国立博物馆和艺术科学博物馆。</li>
+<li>
+<p>下午：深入小印度和牛车水体验当地文化与美食。</p>
+</li>
+<li>
+<p><strong>第三天</strong></p>
+</li>
+<li>全天：Sentosa之旅，选择参加环球影城、海洋馆等活动。</li>
+<li>晚上：在 Newton Food Centre 尝试当地美食，如辣椒螃蟹。</li>
+</ol>
+<p>总结：此行程安排基于游玩顺序和开放时间的科学配置，旨在最大限度地提升旅行体验并节省时间。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">预算分配</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Ultimate-Guide-to-Transportation-Around-Singapore">
+    🗺交通信息</a></div><div class="section-link-box"><a class="section-link" href="#TOP-Hostels-in-Singapore-City-2024---Comparison-from-$6">
+    🏨住宿</a></div><div class="section-link-box"><a class="section-link" href="#Singapore-transportation-costs-at-DuckDuckGo">
+    🚆交通信息</a></div><div class="section-link-box"><a class="section-link" href="#Singapore-dining-prices-at-DuckDuckGo">
+    🍜</a></div><div class="section-link-box"><a class="section-link" href="#Singapore-attraction-ticket-prices-at-DuckDuckGo">
+    🎢</a></div></div>
+    <div class="section-content content"><p>在此次新加坡旅行的预算分配中，6000人民币（约合1200新币）被合理划分为以下几个主要部分：</p>
+<ol>
+<li><strong>住宿</strong>：</li>
+<li>每晚约298人民币，3天共计894人民币。</li>
+<li>
+<p>为3人选择经济型酒店或民宿，确保舒适性与预算的平衡。</p>
+</li>
+<li>
+<p><strong>餐饮</strong>：</p>
+</li>
+<li>每餐约65人民币（3餐/天），3天共计585人民币。</li>
+<li>
+<p>餐饮选择包括当地小吃和餐馆，确保能够体验到正宗的新加坡美食。</p>
+</li>
+<li>
+<p><strong>交通</strong>：</p>
+</li>
+<li>每次出行约4-6人民币，假设每天3次出行，3天共计90-180人民币。</li>
+<li>
+<p>借助公共交通计划的灵活性，尽量控制这一部分的支出。</p>
+</li>
+<li>
+<p><strong>景点门票</strong>：</p>
+</li>
+<li>选择2-3个主要景点，每个门票价格约138-208人民币，总计约414-624人民币。</li>
+<li>关键是根据主要景点的开放时间与游客反馈，确保所选景点的价值与体验最大化。</li>
+</ol>
+<h3>用户可能关心的部分：</h3>
+<ul>
+<li><strong>整体预算控制</strong>：最终预算分配为：</li>
+<li>住宿: 894元</li>
+<li>餐饮: 585元</li>
+<li>交通: 90元-180元</li>
+<li>景点: 414元-624元</li>
+<li>这样的分配方案不仅保障了旅行的舒适性，还能在不超支的情况下充分享受新加坡的各大重点景点和美食，确保旅行者的良好体验。</li>
+</ul></div>
+</div>
+</div>
+<div class="resizer"></div>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item" href="#3-Days-in-Singapore-Itinerary-By-A-Local-–-WildJunket-Travel">
+    <a href="#3-Days-in-Singapore-Itinerary-By-A-Local-–-WildJunket-Travel" class="navigate-item-emoji ">📍</a>
+    <a href="#3-Days-in-Singapore-Itinerary-By-A-Local-–-WildJunket-Travel" class="navigate-item-id">1</a>
+</div><div class="navigate-item" href="#TOP-Hostels-in-Singapore-City-2024---Comparison-from-$6">
+    <a href="#TOP-Hostels-in-Singapore-City-2024---Comparison-from-$6" class="navigate-item-emoji ">🏨</a>
+    <a href="#TOP-Hostels-in-Singapore-City-2024---Comparison-from-$6" class="navigate-item-id">2</a>
+</div><div class="navigate-item" href="#Ultimate-Guide-to-Transportation-Around-Singapore">
+    <a href="#Ultimate-Guide-to-Transportation-Around-Singapore" class="navigate-item-emoji ">🗺</a>
+    <a href="#Ultimate-Guide-to-Transportation-Around-Singapore" class="navigate-item-id">3</a>
+</div><div class="navigate-item" href="#Itinerary-for-Singapore---3-days-Of-Exotic-Exploration---Tia-Does-Travel">
+    <a href="#Itinerary-for-Singapore---3-days-Of-Exotic-Exploration---Tia-Does-Travel" class="navigate-item-emoji ">✈</a>
+    <a href="#Itinerary-for-Singapore---3-days-Of-Exotic-Exploration---Tia-Does-Travel" class="navigate-item-id">4</a>
+</div><div class="navigate-item" href="#Where-to-Eat-in-Singapore:-25-Places-for-Shiok-(Delicious)-Food!">
+    <a href="#Where-to-Eat-in-Singapore:-25-Places-for-Shiok-(Delicious)-Food!" class="navigate-item-emoji ">🍽</a>
+    <a href="#Where-to-Eat-in-Singapore:-25-Places-for-Shiok-(Delicious)-Food!" class="navigate-item-id">5</a>
+</div><div class="navigate-item" href="#Singapore-transportation-costs-at-DuckDuckGo">
+    <a href="#Singapore-transportation-costs-at-DuckDuckGo" class="navigate-item-emoji ">🚆</a>
+    <a href="#Singapore-transportation-costs-at-DuckDuckGo" class="navigate-item-id">6</a>
+</div><div class="navigate-item" href="#Singapore-attraction-ticket-prices-at-DuckDuckGo">
+    <a href="#Singapore-attraction-ticket-prices-at-DuckDuckGo" class="navigate-item-emoji ">🎢</a>
+    <a href="#Singapore-attraction-ticket-prices-at-DuckDuckGo" class="navigate-item-id">7</a>
+</div><div class="navigate-item" href="#Gardens-by-the-Bay-Singapore-opening-hours-and-ticket-prices-at-DuckDuckGo">
+    <a href="#Gardens-by-the-Bay-Singapore-opening-hours-and-ticket-prices-at-DuckDuckGo" class="navigate-item-emoji ">🕒</a>
+    <a href="#Gardens-by-the-Bay-Singapore-opening-hours-and-ticket-prices-at-DuckDuckGo" class="navigate-item-id">8</a>
+</div><div class="navigate-item" href="#Guide-to-Singapore-Metro-Tickets,-MRT-Fare-&-Card-Price">
+    <a href="#Guide-to-Singapore-Metro-Tickets,-MRT-Fare-&-Card-Price" class="navigate-item-emoji ">🚉</a>
+    <a href="#Guide-to-Singapore-Metro-Tickets,-MRT-Fare-&-Card-Price" class="navigate-item-id">9</a>
+</div><div class="navigate-item" href="#The-Perfect-3-Day-Singapore-Itinerary-for-First-Time-Visitors">
+    <a href="#The-Perfect-3-Day-Singapore-Itinerary-for-First-Time-Visitors" class="navigate-item-emoji ">📅</a>
+    <a href="#The-Perfect-3-Day-Singapore-Itinerary-for-First-Time-Visitors" class="navigate-item-id">10</a>
+</div><div class="navigate-item" href="#Singapore-Food-Guide:-25-Must-Eat-Dishes-(&-Where-to-Try-Them)">
+    <a href="#Singapore-Food-Guide:-25-Must-Eat-Dishes-(&-Where-to-Try-Them)" class="navigate-item-emoji ">🥢</a>
+    <a href="#Singapore-Food-Guide:-25-Must-Eat-Dishes-(&-Where-to-Try-Them)" class="navigate-item-id">11</a>
+</div><div class="navigate-item" href="#Combo-Tickets-For-Singapore-Attractions-|-Book-Now!">
+    <a href="#Combo-Tickets-For-Singapore-Attractions-|-Book-Now!" class="navigate-item-emoji ">🗺</a>
+    <a href="#Combo-Tickets-For-Singapore-Attractions-|-Book-Now!" class="navigate-item-id">12</a>
+</div><div class="navigate-item" href="#Singapore-dining-prices-at-DuckDuckGo">
+    <a href="#Singapore-dining-prices-at-DuckDuckGo" class="navigate-item-emoji ">🍜</a>
+    <a href="#Singapore-dining-prices-at-DuckDuckGo" class="navigate-item-id">13</a>
+</div><div class="navigate-item" href="#Merlion-Park-Singapore-opening-hours-and-ticket-prices-at-DuckDuckGo">
+    <a href="#Merlion-Park-Singapore-opening-hours-and-ticket-prices-at-DuckDuckGo" class="navigate-item-emoji ">🦁</a>
+    <a href="#Merlion-Park-Singapore-opening-hours-and-ticket-prices-at-DuckDuckGo" class="navigate-item-id">14</a>
+</div><div class="navigate-item" href="#Sentosa-Island-opening-hours-ticket-prices-detailed-at-DuckDuckGo">
+    <a href="#Sentosa-Island-opening-hours-ticket-prices-detailed-at-DuckDuckGo" class="navigate-item-emoji ">🌅</a>
+    <a href="#Sentosa-Island-opening-hours-ticket-prices-detailed-at-DuckDuckGo" class="navigate-item-id">15</a>
+</div><div class="navigate-item" href="#The-Singapore-Tourist-Pass---EZ-Link-card-for-Tourists">
+    <a href="#The-Singapore-Tourist-Pass---EZ-Link-card-for-Tourists" class="navigate-item-emoji ">🎟</a>
+    <a href="#The-Singapore-Tourist-Pass---EZ-Link-card-for-Tourists" class="navigate-item-id">16</a>
+</div><div class="navigate-item" href="#SimplyGo-|-Public-Transport-Fares-in-Singapore">
+    <a href="#SimplyGo-|-Public-Transport-Fares-in-Singapore" class="navigate-item-emoji ">🔄</a>
+    <a href="#SimplyGo-|-Public-Transport-Fares-in-Singapore" class="navigate-item-id">17</a>
+</div><div class="navigate-item" href="#Taxi-Singapore---Prices-and-Useful-Tips-for-Taxis-in-Singapore">
+    <a href="#Taxi-Singapore---Prices-and-Useful-Tips-for-Taxis-in-Singapore" class="navigate-item-emoji ">🚖</a>
+    <a href="#Taxi-Singapore---Prices-and-Useful-Tips-for-Taxis-in-Singapore" class="navigate-item-id">18</a>
+</div><div class="navigate-item" href="#Singapore-accommodation-prices-at-DuckDuckGo">
+    <a href="#Singapore-accommodation-prices-at-DuckDuckGo" class="navigate-item-emoji ">🏨</a>
+    <a href="#Singapore-accommodation-prices-at-DuckDuckGo" class="navigate-item-id">19</a>
+</div><div class="navigate-item" href="#Sentosa-Island-Singapore-opening-hours-and-ticket-prices-at-DuckDuckGo">
+    <a href="#Sentosa-Island-Singapore-opening-hours-and-ticket-prices-at-DuckDuckGo" class="navigate-item-emoji ">🚌</a>
+    <a href="#Sentosa-Island-Singapore-opening-hours-and-ticket-prices-at-DuckDuckGo" class="navigate-item-id">20</a>
+</div>
+    </div>
+    <div class="page"  id="3-Days-in-Singapore-Itinerary-By-A-Local-–-WildJunket-Travel">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📍&nbsp;</span>3 Days in Singapore Itinerary By A Local – WildJunket Travel</h3>
+        <small class="page-url url "><a href="https://www.wildjunket.com/3-days-in-singapore-itinerary/" target="_blank">(https://www.wildjunket.com/3-days-in-singapore-itinerary/)</a><br></small>
+        <small class="page-rating rating ">评分: 9.0<br></small>
+        <small class="page-annotation annotation ">注释: 提供了详细的3天旅行计划，确保覆盖主要景点和活动。<br></small>
+    </div>
+    <div class="page-content content"><h2>新加坡三日游行程</h2>
+<h3>新加坡行程第一天：抵达新加坡</h3>
+<h4>在新加坡珠宝坊消遣</h4>
+<p>如果您从新加坡的航班上下来后不太疲惫，请在机场直接开始您的旅程！樟宜机场珠宝坊是新加坡最新娱乐区，也是最热门的景点。该建筑群包括花园、博物馆、零售店、餐饮场所、酒店等等。其标志性的中心部分被称为“雨漩涡”，这是一个巨大的室内瀑布，周围环绕着梯田式的森林环境。从顶层欣赏由钢和玻璃构成的环形外观，那里您可以找到郁郁葱葱的花园和有趣的儿童游乐区。几乎所有珠宝坊都是免费参观的，除了顶层的空中花园。凭入场券，您可以进入所有四个不同的区域：在探索滑梯上玩耍，在雾蒙蒙的碗中嬉戏；欣赏盆景步道上的艺术技巧，并在花瓣花园中欣赏来自世界各地的花卉。</p>
+<h4>探索滨海湾花园</h4>
+<p>乘坐地铁（地铁）或预订机场接送服务前往酒店。我们建议您入住地标性酒店和新加坡的皇冠瑰宝——滨海湾金沙酒店，因为它地理位置优越，大多数地方都在步行距离之内。穿过高架桥，您会发现标志性的滨海湾花园，这里拥有超过16000种植物和花卉展示，所有这些都以自然的方式巧妙地组合在一起。在公园周围散步不会花您一分钱，但如果您想进入气候控制的温室，则需要付费。标志性的超级树林是大多数人的第一站。您也可以付费在空中步道上行走，这是一个悬挂在花园上方的走道网络。花穹是世界上两个最大的无柱温室之一，而云雾森林则拥有世界上最高的室内瀑布。</p>
+<h4>在沙嗲湾享用当地美食</h4>
+<p>在沙嗲湾享用晚餐，这是一个位于花园内的大型露天美食广场。它可能看起来很像游客景点，但这里的食物和任何新加坡小贩中心一样好，您可以在此找到所有最好的新加坡菜肴。品尝沙嗲（淋上花生酱的烤肉串）、烤魔鬼鱼和福建面，体验地道的新加坡风味。</p>
+<h4>观看交响乐灯光和声音表演</h4>
+<p>晚餐后，返回超级树林观看灯光秀。每天晚上，超级树都会以彩色光线照亮，背景音乐响起。我的女儿对这场交响乐灯光秀印象特别深刻——感觉就像大自然在演奏音乐。演出每天晚上7:45和8:45举行。最棒的是，这场15分钟的演出完全免费。请提前到达，抢占一个好位置欣赏演出！</p>
+<h4>观看滨海湾金沙灯光秀</h4>
+<p>之后，步行返回滨海湾金沙酒店，观看其滨水区的另一场壮观的灯光和水秀。这场名为“光谱”的灯光秀是一项免费的夜间活动，您可以在木板路上观看。木板路和台阶上有很多座位。15分钟的演出每晚8点和9点举行（周五和周六晚上10点还加一场）。</p>
+<h4>从滨海湾金沙屋顶观赏景色</h4>
+<p>为了以轰动的方式结束您在新加坡的第一个晚上，前往滨海湾金沙酒店57层的顶层。在这里，您可以找到标志性的无边泳池（仅限酒店住客）和3家屋顶酒吧，它们将为您提供新加坡天际线的360度全景视野。在由名厨沃尔夫冈·帕克掌舵的Spago酒吧和酒廊享用泳池和天际线的景色，然后在午夜之后变成热闹夜总会的CÉ LA VI享用更浓郁的鸡尾酒。在此预订一张桌子。💡提示：如果您入住酒店或前往屋顶酒吧或餐厅，则可以免费前往滨海湾金沙酒店的顶层。否则，SkyPark观景台的门票价格为19.90新元。</p>
+<h3>第二天：探索新加坡殖民区</h3>
+<h4>参观艺术科学博物馆</h4>
+<p>在滨海湾金沙酒店正对面的博物馆开始您的一天。新加坡最令人印象深刻的建筑之一——艺术科学博物馆，拥有同样令人印象深刻的展览系列。它位于滨海湾金沙酒店旁边，是一座独特的建筑，仿佛是从新加坡河中升起的睡莲。艺术科学这个名字在这里确实很贴切，因为不同的画廊突出了艺术和科学之间的关系。它与东京森大厦数字艺术博物馆拥有相同的展览，为儿童和成人提供引人入胜的数字艺术品和互动展品。不同的展览价格不同，但我建议购买一张打折的全票。</p>
+<h4>参观新加坡国家美术馆</h4>
+<p>步行10分钟即可到达新开张的新加坡国家美术馆，它位于两座令人印象深刻的殖民时期建筑内，俯瞰着绿色的巴当广场。美术馆拥有世界上最大的新加坡和东南亚公共艺术收藏，包括8000多件艺术品。这里有一个很酷的屋顶区域，可以免费参观，甚至还有一个名为“烟与镜”的性感屋顶酒吧，拥有迷人的景色。</p>
+<h4>在时尚的哈芝巷闲逛</h4>
+<p>大约步行15分钟即可到达哈芝巷，它最近已从传统的马来街区转变为时尚的潮人街区。由于色彩鲜艳的咖啡馆和博物馆，这里非常有趣，非常适合沉迷于Instagram的青少年。首先，在马来文化中心了解新加坡的马来文化，并参观美丽的金色苏丹清真寺或苏丹清真寺。然后参观地道的新加坡“儿童小博物馆”，这是一个展示新加坡复古收藏品、古董玩具和老式留声机的场所。走进商店几乎相当于您乘坐时光机回到过去。</p>
+<h4>体验小印度文化</h4>
+<p>乘坐优步前往小印度（费用不超过10美元或15新元）。在新加坡的所有种族聚居区中，小印度可能是我最喜欢的。让您的孩子了解历史悠久的印度教寺庙，沉浸在正宗的新加坡印度美食中，并参观印度小饰品的著名商店。该地区最好的寺庙是斯里维拉马卡里亚曼庙，供奉卡里女神。德卡市场是一个充满感官刺激的地方，有香料摊位和出售纱丽和珠宝的商店。不要错过穆斯塔法中心，这是一个24小时营业的商场，销售从印度配料到电子产品和家用电器的各种商品。还要确保在彩虹色的陈振亚故居（该地区唯一幸存的中国别墅）停下来拍照。对于那些有兴趣前往印度旅行的人来说，这将让您的孩子先睹为快。</p>
+<h4>探索唐人街</h4>
+<p>乘坐地铁（地铁）只需几站即可到达唐人街，让您的孩子快速了解新加坡的中国文化。您不仅可以在此找到最好的新加坡美食，还可以找到充满活力的市场、古董店和令人印象深刻的佛教寺庙。农历新年是参观唐人街的最佳时间，因为这里的一些街道会关闭，以便为大型户外节日市场让路。直接前往唐人街文化中心，这是一个互动式博物馆，展示新加坡的中国历史。继续沿着宝塔街的露天市场散步，您会发现色彩鲜艳的旗袍（传统服装）、舞狮木偶和新加坡纪念品。不要错过佛牙寺，体验一下精神之旅。</p>
+<h4>在麦克斯韦美食中心享用晚餐</h4>
+<p>在一天的探索之后，在麦克斯韦美食中心享用一些健康、正宗的当地美食，它就在佛牙寺对面。麦克斯韦美食中心在当地人中被称为新加坡最好的美食场所之一。它以拥有新加坡最好的海南鸡饭、米粥和黄面而闻名。查看我的新加坡美食指南，了解在新加坡尝试的最佳菜肴。</p>
+<h4>在俱乐部街享用饮品</h4>
+<p>距离麦克斯韦美食中心只有几个街区就是俱乐部街和安详山。该地区遍布酒吧和俱乐部，周末非常繁忙。宝石酒吧是观赏人群的最佳酒吧之一，但如果您在周末来，请务必提前预订桌子。您不会错过它，因为大量的人通常会溢出到酒吧外面的街道上。然后前往放映室，体验电影和酒水的独特组合。在三楼的大屏幕上观看经典电影，然后前往四楼的La Terraza屋顶酒吧享用饮品（以及令人惊叹的城市景观）。</p>
+<h3>第三天：探访市中心以外的地方</h3>
+<h4>圣淘沙岛一日游</h4>
+<p>在您在新加坡的最后一天，我们建议您前往新加坡自己的热带游乐场——圣淘沙岛。带孩子一起旅行的新加坡游客会很高兴知道，这里挤满了主题公园和海滩。要到达那里，只需乘坐地铁（地铁）到港湾站，然后换乘圣淘沙快线电车、缆车或123路公共汽车即可。如果您想要更舒适的体验并节省时间，还可以从新加坡乘坐出租车到圣淘沙岛。这里真的有很多事情可以做，还有家庭度假村可以让你住上一夜。如果您想参观一些景点，我建议您预订套票，这样可以节省一些钱。以下是圣淘沙岛上适合儿童的景点清单：丹戎海滩俱乐部——凉爽的海滩酒吧，设有许多小屋和一个俯瞰大海的无边泳池；Mega Adventure Park——滑索、攀岩和户外蹦床；S.E.A. 海洋馆——世界上最大的水族馆之一；新加坡环球影城——非常适合年轻人的巨型主题公园；海洋探险水世界——一个水上乐园，设有大型滑梯和一个您可以与鱼类浮潜的彩虹礁；Skyline Luge and Chairlift——乘坐缆车激动人心地登上山丘，然后乘坐小型汽车飞驰而下；Fly Singapore——在室内体验“跳伞”。</p>
+<h4>或乌宾岛一日游</h4>
+<p>或者，如果圣淘沙岛过于商业化，不妨远离喧嚣，探索相对未经开发的小岛——乌宾岛。到达那里是一半的乐趣：乘坐地铁到丹那美拉地铁站，然后乘坐2路公共汽车到樟宜村公共汽车枢纽站。樟宜角码头距离公共汽车枢纽站不远。从码头乘坐小船（每位成人单程2新元）前往乌宾岛。岛屿本身就是田园诗般的快乐——租一辆自行车去探索。这个小型、相对平坦的岛屿是骑自行车和探索的理想场所。骑自行车穿过感官小径和仄爪哇湿地，两者都充满了丰富的动植物。</p>
+<h4>享用新加坡盛宴</h4>
+<p>为了圆满结束您在新加坡的3天旅程，请在滨海湾的滨海艺术中心（拥有独特的建筑风格的音乐厅）的无招牌海鲜餐厅享用丰盛的新加坡盛宴。新加坡有很多著名海鲜餐厅——包括珍宝海鲜和棕榈滩海鲜——但无招牌是我的最爱。它在新加坡有几家餐厅，但滨海艺术中心这家餐厅地理位置最优越，并且可以欣赏到美丽的景色。一定要尝尝他们的招牌辣椒螃蟹（用浓郁厚实的辣椒汁烹制）或黑胡椒螃蟹，它们在当地都很受欢迎。其他值得尝试的新加坡菜肴包括麦片虾、咸鱼炒饭和咖啡排骨。</p>
+<h4>在克拉码头享受夜生活</h4>
+<p>如果您不太疲惫，可以沿着新加坡河步行前往驳船码和克拉码头的殖民区。步行大约需要20分钟，但您也可以乘坐小船游览新加坡河（40分钟，25新元）。您可以从新的角度欣赏这座城市，尤其是在晚上特别令人愉快。提前预订河游以节省开支。这个地区历史悠久：您会看到成排的修复后的殖民时期店屋，以及创始人莱佛士爵士的雕像。到了晚上，克拉码头变成了新加坡最繁华的夜生活中心，到处都是无数的餐厅、酒吧和夜总会。我最喜欢的饮酒场所之一是位于克拉码头中心的威士忌酒吧高地人。其他很棒的地方包括日本风格酒吧La Terre和现场音乐酒吧The Crazy Elephant。查看这份新加坡夜生活指南。提示：直接前往克拉码头，避开挤满了讨厌的旅游招揽者的驳船码！</p>
+<h2>新加坡旅游指南</h2>
+<h3>如何前往新加坡</h3>
+<p>新加坡的机场是东南亚的一个大型枢纽，服务于世界各地的许多主要城市。新加坡航空公司是世界上最好的航空公司之一，拥有优秀的航空公司和客户服务。您可以乘坐从纽约到新加坡的航班，往返价格约为800美元（在东京或香港转机）。从洛杉矶到新加坡的航班稍短一些（约20小时），往返费用为700美元。从伦敦飞往新加坡非常实惠，通常只需不到16小时。我一直乘坐卡塔尔航空公司或英国航空公司的航班，因为这两家航空公司都拥有良好的记录和优惠的价格。如果您从曼谷前往新加坡，航班快捷方便，通常只需2-3小时。泰国亚航或捷星亚洲等航空公司为此航线提供了大量选择。搜索前往新加坡的航班。</p>
+<h3>新加坡最佳旅游时间</h3>
+<p>由于新加坡靠近赤道，因此全年都很热。全年的平均气温在26到30摄氏度（或78到86华氏度）之间。查看这些水上活动，让您和您的孩子一起凉爽一下！最佳游览时间可能是在旱季（6月至8月）。通常，这段时间降雨量最少、湿度最低、阳光最多。另一个参观新加坡的好时机是在节日期间，例如农历新年、开斋节和屠妖节。在这些时期，有很多庆祝活动、文化表演和游行。请注意：新加坡会下很多雷阵雨。季风季节（11月至1月）新加坡的降雨量最多。幸运的是，它们通常不会持续很长时间，阳光就会重新出现，提高湿度。</p>
+<h3>如何在新加坡四处走动</h3>
+<h4>通过公共交通工具</h4>
+<p>高效的地铁系统是游览新加坡的一种简便且廉价的方式。每次乘坐的费用通常在1.50美元到2美元之间。城市几乎每个地方都通过地铁连接。它配有空调，非常舒适，尽管在高峰时段会很拥挤（尽量避免在早上7-9点和下午6-8点左右）。我强烈建议购买EZ-Link卡，这是一种预付费智能卡，允许您在新使用公共交通工具（地铁和公共汽车）。您可以在任何地铁站购买。身高低于90厘米的儿童可免费乘坐火车和公共汽车。</p>
+<h4>通过出租车/优步</h4>
+<p>新加坡的出租车价格合理，特别是如果您只是在市中心区域旅行。优步也是在城市岛屿上四处走动的简便方法。但是，如果您从机场乘坐出租车到市中心，费用可能超过30新元。机场设有地铁站，到达市中心大约需要45分钟。您还可以预订机场接送服务，让您以低于25美元的价格到达任何市中心的酒店。</p>
+<h4>通过汽车</h4>
+<p>如果您带着婴儿或蹒跚学步的孩子旅行，可以考虑租一辆车，因为这可能是四处走动的最便捷方式。您可以在新加坡预订3天的租车服务，价格为250美元或350新元。我一直使用DiscoverCars.com，因为他们始终提供最好的价格和客户服务。新加坡的驾驶很容易，因为道路宽阔，路标清晰。此外，新加坡是一个小岛，从一端到另一端开车只需不到1小时。但请注意，高峰时段交通可能会很拥堵，而且停车费很高。预订您的租车服务！</p>
+<h3>新加坡的住宿地点</h3>
+<p>新加坡的酒店价格并不便宜，因为房地产价格很高。也就是说，还有许多高档的五星级酒店和家庭度假村可以使您在新加坡的3天变得特别。预算有限的人也可以选择住在唐人街或哈芝巷地区的旅馆。</p>
+<h4>新加坡最佳居住区域</h4>
+<p>选择合适的居住区域将有助于您充分利用在新加坡的3天时间。对于这份新加坡行程，如果预算允许，我建议您住在滨海湾地区。否则，您可以考虑以下区域：滨海湾——市中心，拥有美丽的河滨区域，靠近滨海湾花园。武吉士——步行即可到达滨海湾，酒店价格更实惠。哈芝巷——一个时尚的潮人区，步行即可到达市中心，拥有不错的旅馆。唐人街——一个更具文化气息的区域，拥有繁华的市场、美食和经济型酒店。</p>
+<p>豪华酒店：滨海湾金沙酒店</p>
+<p>滨海湾金沙酒店是这座城市标志性的地标性建筑，也是新加坡最好的酒店之一。我们在这里住了3次，它从未令人失望。屋顶泳池仅限酒店住客使用，因此如果您想在无边泳池游泳，您必须入住这里。在此查看价格。</p>
+<p>豪华酒店：新加坡卡佩拉酒店</p>
+<p>这家酒店位于圣淘沙岛，是一家位于殖民地建筑群中的高级度假村。新加坡卡佩拉酒店拥有美丽的三个码头游泳池和高档餐厅，供应丰盛的早餐。我们在她只有6个月大的时候和她一起住在这里，印象非常深刻。阅读我的评论并查看价格。</p>
+<p>中档酒店：新加坡氏族酒店</p>
+<p>我们最近入住新加坡氏族酒店，对其位置和现代化设计印象深刻。我特别喜欢酒店通过迎宾茶道、现代中式装饰和早餐菜单上的当地菜肴来诠释新加坡传统的方式。阅读我的完整评论并在此查看价格。</p>
+<p>中档酒店：富丽敦河景酒店</p>
+<p>富丽敦河景酒店靠近唐人街，设有专门为儿童设计的主题卧室。客房甚至包括豆袋椅、儿童尺寸的桌子/椅子和PlayStation游戏机。这绝对适合幼儿和青少年。在此查看价格。</p>
+<h3>新加坡的餐饮场所</h3>
+<p>新加坡最好的餐饮场所是小贩中心：开放式美食广场，但本身就是一种机构。它们供应您可以称之为新加坡街头美食的食物，每个小贩摊位都专门供应一道菜。其中一些小贩摊位甚至获得了享有盛誉的米其林星级！价格非常实惠：一盘面条的价格约为3新元（或2美元），而每人一顿丰盛的海鲜餐的价格不到30新元（21美元）。它们干净整洁，供应商必须遵守法律规定的某些卫生标准。查看新加坡最好的餐饮场所。</p>
+<p>还有美食广场，它们通常位于购物中心，是带空调的餐厅。如果您的孩子不是喜欢冒险的食客，那么这里有很多快餐店和国际餐厅，例如汉堡王、Shake Shack和Black Angus Steakhouse。</p>
+<h4>新加坡最佳小贩中心</h4>
+<p>牛车水熟食中心；麦克斯韦美食中心；黄金坊美食中心；牛车水熟食中心；老巴刹。</p>
+<h4>新加坡最佳餐厅</h4>
+<p>无招牌海鲜餐厅（我最喜欢的辣椒蟹餐厅）；美伦海鲜（另一家受欢迎的螃蟹餐厅）；Violet Oon（以娘惹菜而闻名）；The Banana Leaf Apolo（美味的印度香料饭）；文东记（著名海南鸡饭连锁店）。</p>
+<h3>新加坡的网络和数据</h3>
+<p>在新加坡很容易找到免费WiFi。大多数商场和公共场所都有免费的WiFi网络。您只需在任何Wireless@SG热点处使用您的外国手机号码注册，即可通过短信接收您的登录详细信息。我建议您获得一张带有数据计划的eSIM卡，因为它的速度比酒店的WiFi更快。如今，无论我去哪里旅行，我个人都会使用eSIM，因为它们 SO 方便——您可以在网上购买，无需去商店或通过商店激活您的eSIM。在此查看Airalo的eSIM。我从Airalo购买了来自泰国、越南、新加坡、厄瓜多尔和秘鲁的eSIM，从未遇到任何问题。或者，如果您更喜欢实体SIM卡，您可以很容易地在抵达机场时获得一张15美元的5天旅游SIM卡数据卡。为了获得更便宜的交易，请提前购买预付费SIM卡（100GB数据，价格为8.50美元），并在机场领取。一个更简单的选择是这个eSIM数据计划。您可以有多种选择，可以在您在新加坡旅行的任何时间激活您的eSIM。</p>
+<h3>新加坡的旅行费用</h3>
+<p>新加坡比曼谷或吉隆坡等邻国首都更贵，但仍然相当实惠。食物、门票和交通实际上价格合理。在新加坡待3天，预计每人花费约250美元，包括三星级住宿和门票。住宿可能会很贵，不过新加坡有各种各样的旅馆和Airbnb。新加坡美食非常美味且便宜。您可以在当地小贩中心（每个街区都有）以5美元的价格用餐，或在餐厅以30-40美元的价格用餐。乘坐公共交通工具在新加坡四处走动很便宜。乘坐地铁或公共汽车，单程费用不会超过3美元。</p>
+<h3>计划您前往新加坡的旅行</h3>
+<p>前往新加坡的旅行既有趣又有见地，特别是如果您是第一次来亚洲。它让您慢慢适应东南亚，而不是让您陷入文化冲击之中。新加坡可能是现代化的，但您也可以在城市内和城市外找到古老而传统的东南亚文化和绿色空间。在新加坡待3天，您应该能够对这个城市国家有很好的了解，并体验它所能提供的一切。我希望我的新加坡行程能帮助您在城市中找到方向，同时品尝最好的美食，体验城里最好的景点。</p>
+        <small class="page-url url "><a href="https://www.wildjunket.com/3-days-in-singapore-itinerary/" target="_blank">(https://www.wildjunket.com/3-days-in-singapore-itinerary/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="TOP-Hostels-in-Singapore-City-2024---Comparison-from-$6">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏨&nbsp;</span>TOP Hostels in Singapore City 2024 - Comparison from $6</h3>
+        <small class="page-url url "><a href="https://www.hostelz.com/hostels/Singapore/Singapore-City" target="_blank">(https://www.hostelz.com/hostels/Singapore/Singapore-City)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 提供了新加坡经济型住宿的推荐，帮助背包客和预算有限的旅行者选择合适的地点。<br></small>
+    </div>
+    <div class="page-content content"><h2>Atelier 旅舍</h2>
+<p>您可以轻松地与我们友好的工作人员一起规划您的行程和交通需求。我们的工作人员可以帮助预订娱乐和探险的票务和预订。</p>
+<h2>Dream Lodge 旅舍</h2>
+<p>这使得它很容易从机场和滨海湾地区到达。虽然有路边停车位，但在新加坡租车非常昂贵，而且公共…</p>
+<h2>Hipstercity 旅舍</h2>
+<p>Hipstercity 是一家时尚的旅舍，提供宿舍式房间，房间里的床都配有窗帘以保证额外的隐私。还提供带独立书桌的阁楼床位。</p>
+<h3>寻找特定区域？</h3>
+<p>查看以下地标附近的旅舍：樟宜机场，新加坡国立大学，小印度</p>
+<h2>Coller Boutique 旅舍</h2>
+<p>酒店内提供免费无线网络，并确保24小时保安。所有房间均配备空调，并提供套间或共用浴室和卫生间。每个…</p>
+<h2>Dream Lodge @ Farrer Park 旅舍</h2>
+<h2>Bohemian Chic 旅舍</h2>
+<p>玉米片早餐和定量咖啡。干净整洁 - 位置优越。玉米片早餐和定量咖啡。干净整洁…我们拥有理想的地理位置。我们拥有最快的Wi-Fi速度。</p>
+<h2>Cube 旅舍</h2>
+<p>想要拥有深度而清爽的睡眠？CUBE 旅舍提供一系列舒适的胶囊房，位于共享房间或私人房间内，每个房间都是一个隐藏于世外的舒适茧。每个…</p>
+<h2>Betel Box 背包客旅舍</h2>
+<p>我于 2006 年 8 月 9 日至 14 日入住。不错的场所，友好的工作人员，总是乐于助人。一切都是免费的，例如互联网、早餐、健身房、旅游、食物、步行、骑自行车。世界上谁会提供免费服务？只有 Betel…</p>
+<h2>Wink 胶囊旅舍</h2>
+<p>新加坡市旅舍的价格低至每晚 17 美元。根据我们最新的数据，Betel Box 背包客旅舍目前是新加坡市最经济实惠的旅舍。新加坡市旅舍的平均价格约为每张宿舍床位 12 美元，每间私人房间每晚 119 美元。在 Hostelz.com 上一次比较所有主要预订网站的价格，始终获得最优惠的价格。无论您是学生、背包客，还是正在寻找经济实惠的私人房间，新加坡市都能满足各种预算的需求。</p>
+        <small class="page-url url "><a href="https://www.hostelz.com/hostels/Singapore/Singapore-City" target="_blank">(https://www.hostelz.com/hostels/Singapore/Singapore-City)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Ultimate-Guide-to-Transportation-Around-Singapore">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🗺&nbsp;</span>Ultimate Guide to Transportation Around Singapore</h3>
+        <small class="page-url url "><a href="https://thetourguy.com/travel-blog/singapore/how-to-get-around-singapore-this-year/" target="_blank">(https://thetourguy.com/travel-blog/singapore/how-to-get-around-singapore-this-year/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 概述了新加坡便利的交通网络，为游客的出行提供指南。<br></small>
+    </div>
+    <div class="page-content content"><h2>新加坡交通指南：地铁、巴士、自行车和出租车</h2>
+<p>规划新加坡之旅，需要了解如何出行？狮城有多种交通方式可供选择。本快速指南将概述新加坡交通网络的所有相关信息。</p>
+<p><strong>专业提示：</strong> 将此页面保存到您的浏览器书签中，以便在度假期间随时查看。</p>
+<h3>新加坡地铁和巴士出行</h3>
+<p>新加坡的地铁系统被称为大众捷运系统 (MRT)，相当于您所在国家的火车/地铁。与自行车和出租车相比，大多数当地人和游客都会使用地铁和巴士到达目的地，除非您有更大的预算租用私人租赁车 (PHC) 或出租车。</p>
+<p>首先，如果您打算使用我们的地铁和巴士网络在新加坡四处走动，您无疑需要一张易通卡 (EZ-Link Card) 或新加坡旅游通行证 (Singapore Tourist Pass)。您可以毫无疑问地使用现金支付巴士车费（仅限巴士，不包括地铁），尽管这比使用易通卡的成本更高。因此，如果您想省钱并让您的假期更轻松，请考虑购买其中一张卡。</p>
+<p>新加坡的地铁系统被称为大众捷运系统 (MRT)，相当于您所在国家的火车/地铁。与自行车和出租车相比，大多数当地人和游客都会使用地铁和巴士到达目的地，除非您有更大的预算租用私人租赁车 (PHC) 或出租车。</p>
+<p>首先，如果您打算使用我们的地铁和巴士网络在新加坡四处走动，您无疑需要一张易通卡 (EZ-Link Card) 或新加坡旅游通行证 (Singapore Tourist Pass)（实际上是为游客提供的特殊易通卡）。您可以毫无疑问地使用现金支付巴士车费（仅限巴士，不包括地铁），尽管这比使用易通卡的成本更高。因此，如果您想省钱并让您的假期更轻松，请考虑购买其中一张卡。</p>
+<p>您需要注意的是，高峰时段的交通时间为上午 8-9 点和下午 5-7 点。因此，在规划行程时，请避开这些时间。这对于像您这样的旅行者来说肯定是一个有用的建议。</p>
+<p>在这些时间之外，您可以随意探索新加坡。地铁站、巴士枢纽和大型书店均出售交通指南。有了这些实用手册之一，您就不会在地铁或巴士路线中迷路。</p>
+<h3>新加坡旅游通行证与易通卡</h3>
+<p>前面我提到您可以获得任一张卡在新加坡四处走动，但我尚未简要说明哪张卡更可取。总而言之，如果您访问新加坡少于三天，并想将公共交通作为主要的通勤方式（这很可能），那么新加坡旅游通行证是您的最佳选择。</p>
+<p>如果您访问新加坡超过三天，并打算使用公共交通工具，则应购买易通卡。它也非常经济实惠，您不必担心在离开前归还卡片。因此，您可以选择。</p>
+<h3>从樟宜机场</h3>
+<p>位于岛屿东部的樟宜机场是新加坡的主要机场。您会欣慰地知道它拥有自己的车站，并与机场相连。您可以从 2 号航站楼或 3 号航站楼进入。因此，抵达和离开樟宜机场都将非常轻松。我认为大多数人会使用地铁从樟宜机场进入市区，因为如果这是您第一次来新加坡，这是最简单的。</p>
+<h3>地铁地图和巴士应用程序</h3>
+<p>以下是可以保存在手机上的地铁互动地图，以及在您想探索新加坡时可以派上用场的移动巴士应用程序。</p>
+<p>在线地铁互动地图
+静态地铁地图
+TransitLink 的 TL SimplyGo
+苹果商店
+谷歌应用商店
+陆路交通管理局 (LTA) 的 MyTransport.SG
+苹果商店
+谷歌应用商店</p>
+<p>此外，您可能会发现这个地铁/巴士票价计算器很方便。</p>
+<p>我们有七条地铁线路，具体取决于您想去哪里：</p>
+<p>武吉班让轻轨
+环线：滨海湾和滨海湾花园地铁站位于此处，参观滨海湾花园和滨海湾金沙。
+市区线
+东西线：从市政厅到丹戎巴葛地铁站，新加坡的中央商务区位于此处，包括一些最棒的地方美食！
+东北线：小印度和唐人街地铁站位于此处，在此享用一些当地风味！
+南北线：乌节地铁站位于此处，因此您可以前往新加坡的中央购物区。
+盛港榜鹅轻轨
+汤申－东海岸线</p>
+<h3>自行车</h3>
+<p>在新加坡骑自行车不仅更健康，而且更环保。以新的视角探索新加坡，并规划您自己的自行车之旅！通过我们为您创建的自行车路线，您一定会有一次很棒的自行车探险，探索这个小小的红色国家，同时保持健康。这些路线提供令人惊叹的美景，带您经过新加坡的经典地标，其中一些您甚至可能不知道存在！</p>
+<p>如果您喜欢大自然，可以考虑在我们的榜鹅-盛港路线中探索科尼岛作为您在新加坡最热门的活动之一。或者，选择滨海湾-惹兰勿刹路线，在骑车时体验新加坡壮丽的天际线！</p>
+<p>以下是自行车路线：</p>
+<p>宏茂桥 - 罗尼
+勿洛 - 淡滨尼
+武吉甘巴 - 武吉班让
+芽笼 - 海军部
+裕廊
+滨海湾 - 惹兰勿刹
+巴西立 - 樟宜
+榜鹅 - 盛港：科尼岛位于此处！
+兀兰
+义顺</p>
+<h3>Uber 和出租车</h3>
+<p>新加坡的出租车很多，尽管它们有点贵。要乘坐出租车，请寻找清晰标明的出租车等候点或使用其应用程序请求一辆出租车。Comfort DelGro是最受欢迎的出租车应用程序。</p>
+<p>在新加坡，我们过去有Uber。然而，Uber于2018年3月退出东南亚市场，但它保留了其新加坡办事处，在那里它运营其亚太地区业务，至少直到2022年底。Grab现在是新加坡最受欢迎的叫车应用程序，其他应用程序包括Gojek和Ryde。如果您需要快速到达某个地方，您可以使用该应用程序（Google或Apple）请求Grab车辆或出租车来接送您。</p>
+<p>出租车无疑是随时随地到达新加坡任何地点最快捷的交通工具。当一群人一起旅行并且旅行距离较短时，它始终是一个极好的选择。</p>
+<p>如果您在高峰时段、午夜后或前往中央商务区 (CBD) 通过电话/应用程序预订出租车，则预计会额外花费。</p>
+        <small class="page-url url "><a href="https://thetourguy.com/travel-blog/singapore/how-to-get-around-singapore-this-year/" target="_blank">(https://thetourguy.com/travel-blog/singapore/how-to-get-around-singapore-this-year/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Itinerary-for-Singapore---3-days-Of-Exotic-Exploration---Tia-Does-Travel">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">✈&nbsp;</span>Itinerary for Singapore - 3 days Of Exotic Exploration - Tia Does Travel</h3>
+        <small class="page-url url "><a href="https://www.tiadoestravel.com/travel/itinerary-for-singapore-3-days/" target="_blank">(https://www.tiadoestravel.com/travel/itinerary-for-singapore-3-days/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 概述了新加坡3天的旅行行程建议，让游客充分利用在新加坡的时间。<br></small>
+    </div>
+    <div class="page-content content"><h2>新加坡三日游行程</h2>
+<p>准备好开启一场东南亚之旅了吗？我曾担心三天时间游览新加坡是否足够。我知道这个国家很小，但也知道它非常多元化。我的研究表明，这里有数十个令人惊叹的景点。</p>
+<p>查看飞往新加坡的航班：[此处添加链接]</p>
+<p>我计划在三天内尽可能多地游览这些景点，让我告诉你，我的新加坡三日游行程绝对没有让我失望！短短三天内，你也可以沉浸在这个充满活力的城市国家的景色、声音和风味中。按照我的指南，在短短三天内，开启难忘的新加坡之旅。</p>
+<h3>第一天：文化与遗产之旅</h3>
+<h4>10:00：鱼尾狮公园</h4>
+<p>从标志性的鱼尾狮公园开始你的新加坡探险之旅，这里的神话生物在滨海湾的背景下喷水。在滨海湾滨水步道漫步之前，拍一些值得在Instagram上分享的照片。</p>
+<h4>12:00：游览唐人街</h4>
+<p>接下来，深入探索新加坡唐人街丰富的文化底蕴。迷失在蜿蜒的街道中，两旁是色彩缤纷的店屋、热闹的市场和装饰华丽的寺庙。不要错过佛牙寺，这是一个喧嚣都市中宁静的圣地。</p>
+<h4>14:30：小贩中心美食市场</h4>
+<p>午餐时，在小贩中心享受一次美食探险。小贩中心是一个美食市场，供应来自世界各地的美食。品尝当地美食，如海南鸡饭、叻沙和炒粿条，价格都很实惠。</p>
+<p>新加坡有很多小贩中心，你可以在[此处添加链接]找到它们。</p>
+<p>我强烈建议你在你的新加坡三日游行程中至少添加一个美食市场！</p>
+<h4>16:00：阿拉伯街—甘榜格南区</h4>
+<p>之后，探索充满活力的甘榜格南区，这里有历史悠久的苏丹清真寺和时尚的精品店。漫步在阿拉伯街繁华的街道上，你可以挑选独特的纪念品和手工艺品。</p>
+<h4>20:00：别具一格的越南晚餐</h4>
+<p>晚餐，前往Ăn Là Ghiền (ahn-la-gi-hn)。这是一家正宗的越南餐厅，致力于将越南美食带到新加坡。Ăn Là Ghiền提供各种正宗的越南菜肴，以及丰富的烧烤和火锅菜品。这里的食物真的很好，我强烈推荐！</p>
+<p>在一个有着（小巧）木桌椅的可爱氛围中，享受轻松的氛围，品尝用当地食材烹制的丰盛菜肴。</p>
+<p>额外加分：我们是那里唯一游客，其余都是当地人——这对任何餐厅来说都是个好兆头！</p>
+<h3>第二天：都市绿洲与现代奇迹</h3>
+<p>这是你在新加坡的第二天！早起吃一顿丰盛的早餐。你需要补充足够的能量！</p>
+<p>顺便说一句，新加坡的酒店很贵！而且很多酒店都不提供早餐，相信我，在这个城市，你需要足够的能量！</p>
+<p>查看新加坡的酒店：[此处添加链接]</p>
+<h4>10:00：艺术科学博物馆</h4>
+<p>我们今天的行程从参观令人惊叹的艺术科学博物馆开始。在前往博物馆的路上，随意欣赏新加坡令人难以置信的建筑——它真的非常漂亮！</p>
+<p>现在，让我明确一点，我不是那种喜欢博物馆的旅行者。但这一个非常吸引人，它融合了艺术、科学和技术的创新展览。</p>
+<p>我还观看了一场VR（虚拟现实）演出，真是太不可思议了。VR画廊配备最先进的VR头显和控制器，呈现来自世界一些最著名的艺术家、科学家、博物馆和电影节的沉浸式体验。</p>
+<p>点击此处获取艺术科学博物馆门票：[此处添加链接]</p>
+<p>开放时间：上午10点到下午7点，成人票价为每人14欧元。VR表演需要另外购票，你可以在线或现场购买。</p>
+<h4>12:00：滨海湾花园</h4>
+<p>滨海湾花园是一个未来主义的植物园，展示了新加坡最好的绿色科技。你将在这里度过大部分时间——这绝对值得。即使你只在新加坡待一天，也值得一去！</p>
+<p>点击此处获取滨海湾花园门票：[此处添加链接]</p>
+<p>这个巨大的公园由各个部分组成：花穹、云雾林、梦幻花园、OCBC空中步道和超级树天文台。</p>
+<p>惊叹于高耸的超级树，漫步在花穹和云雾林中，沉浸在大自然的美丽之中。</p>
+<p>这里有太多东西可以看，可以惊叹——你的一天将就这样过去了！在任何新加坡三日游行程中都是绝对的必游之地。</p>
+<p>它与你以前见过的任何东西都不一样，在你的新加坡三日游行程中绝对是必游之地。</p>
+<p>附：准备好步行数小时，而且为了上帝的爱；穿舒适的鞋子，随身携带水。</p>
+<h4>15:00：《阿凡达》体验</h4>
+<p>这也在同一个公园内，所以无需浪费时间移动！我很幸运地在滨海湾花园内观看了《阿凡达》体验的特别展览。我是《阿凡达》电影的超级粉丝，所以我非常兴奋！</p>
+<p>新加坡《阿凡达》体验将带领游客踏上潘多拉郁郁葱葱的景观和充满活力的生态系统之旅，让他们近距离接触它的奇异动植物。</p>
+<p>一进入，我就通过最先进的技术瞬间沉浸在潘多拉的奇幻世界中。3D投影、特技和互动展览令人难以置信！</p>
+<p>从高耸的哈利路亚山到生物发光的森林，潘多拉令人叹为观止的美丽每一个方面都被忠实地再现，将游客带到另一个世界。</p>
+<p>10/10的体验，我强烈推荐！无论你是否喜欢“阿凡达”电影系列，或者只是寻找独特而引人入胜的体验，新加坡阿凡达都将令各个年龄段的游客眼花缭乱、惊喜连连。</p>
+<p>所以一定要把它添加到你的新加坡三日游行程中！</p>
+<h4>17:00：盛开的朵花穹</h4>
+<p>位于滨海湾花园的花穹是新加坡最著名的植物园。这是一个巨大的玻璃温室，展示了来自世界各地的各种植物。</p>
+<p>以下是花穹的一些重点和特色：</p>
+<p>气候控制环境：花穹是一个气候受控的温室，让游客体验到类似地中海气候的凉爽干燥条件。这种环境有利于各种植物的生长。</p>
+<p>花卉展示：花穹定期举办令人惊叹的花卉展览，全年变化，让游客有机会欣赏季节性花卉和主题展览。从春季鲜艳的郁金香到节日季喜庆的圣诞红，总有新的令人兴奋的东西可看。</p>
+<p>猴面包树和多肉植物：花穹的主要景点之一是猴面包树和多肉植物的收藏。这些标志性物种原产于干旱地区，展示了它们在恶劣环境中生存的独特适应性。</p>
+<p>教育展览：除了美丽的鲜花展示外，花穹还提供教育展览和互动展示，深入了解植物保护、生物多样性和可持续园艺实践。</p>
+<p>全景：花穹宽敞的内部设有全景窗户，可欣赏滨海湾和新加坡天际线的壮丽景色，为您的植物探索创造了令人惊叹的背景。</p>
+<h4>18:30：令人叹为观止的日落景色</h4>
+<p>有两个令人难以置信的地方，在那里你可以看到城市天际线最令人惊叹的全景。在下面找到它们：</p>
+<h5>选项A：空中花园观景台</h5>
+<p>大多数人会告诉你前往滨海湾金沙酒店，购买空中花园观景台的门票。</p>
+<p>它位于距离地面200米的高处，为游客提供城市天际线、繁华的滨海湾地区及其他景点的全景。</p>
+<p>从这个有利位置，你可以拍摄令人惊叹的照片，欣赏滨海艺术中心、新加坡摩天轮和滨海湾花园等地标。</p>
+<p>我拼命尝试预订观景台的门票，但一张也没有（在新加坡经常发生这种情况，所以一定要提前预订）。巨大的错误时刻，但好吧，旅行时会发生这样的事，所以我们必须处理它！</p>
+<h5>选项B（我的选择）：超级树天文台</h5>
+<p>为了获得同样令人难以置信的景色，前往超级树天文台。这个景点是滨海湾花园最高点的天文台，高16层（我告诉过你，你会在这里待一整天！）。</p>
+<p>入场费约为15欧元——因此它比选项A便宜！</p>
+<p>天文台提供新加坡城市景观、滨海湾金沙、新加坡摩天轮、艺术科学博物馆、花穹、云雾林和其他花园景点的壮丽景色。</p>
+<p>免责声明：观景台有安全栏杆，适合轮椅使用者，并设有电梯通道，因此无论您的年龄和身体状况如何，您都可以参观。</p>
+<p>蒂亚的提示：超级树天文台有两层。电梯将你送至主甲板，你可以在同一层进入观景台。但是，如果你走楼梯到下一层，你将从屋顶甲板欣赏到城市下方华丽、一览无余的景色。稍后感谢我！</p>
+<p>时间：每天上午9点至晚上9点，最后入场时间为晚上8点30分。我建议你在晚上6点30分排队以获得一个好位置！这样，你就可以拍摄日落的精美照片，并在晚上7点45分和8点45分的灯光秀中获得一个绝佳的观赏位置。（更多信息见下文）</p>
+<h4>19:45或20:45——花园交响乐灯光秀</h4>
+<p>准备好惊叹吧。68个独立音响扬声器驱动的花园交响乐秀怎么能让你不惊叹呢？你一定不要错过超级树的这场“现场表演”！</p>
+<p>当这些巨大的灯塔与为花园特别编排的精选音轨完美同步亮起时，你会被它们迷住。</p>
+<p>什么时候？每天晚上7点45分和8点45分。免费。</p>
+<p>这是一次非常酷的体验，而且完全免费，因为它在滨海湾花园内举行。确切位置在超级树丛（上面提到）。</p>
+<p>你可以免费从下面观看演出（数百人在演出期间躺在地上）——这太神奇了。</p>
+<p>或者，如果你购买了观景台的门票，你可以在上面观看演出。我既看了，又在那上面看的，我都一样着迷！</p>
+<p>每月灯光秀都有一个新主题，你可以在[此处添加链接]详细了解。主题从音乐剧到歌剧、圣诞节等等！</p>
+<h4>21:00：在著名名厨餐厅享用晚餐</h4>
+<p>在新加坡著名的名厨餐厅享用丰盛的晚餐，或在俯瞰海湾的海滨餐厅享用露天晚餐。一些优秀的五星级餐厅（都需要提前预订）包括：</p>
+<p>Jaan by Kirk Westaway：位于瑞士酒店史丹福酒店，Jaan提供现代英式菜肴，选用最新鲜的季节性食材。令人惊叹的新加坡天际线景色与Kirk Westaway厨师的创新菜肴相得益彰。</p>
+<p>Waku Ghin by Tetsuya Wakuda：位于滨海湾金沙酒店，Waku Ghin是由著名厨师Tetsuya Wakuda策划的奢华用餐体验。宾客们将在私密的氛围中享用以最新鲜的食材烹制的多次品尝菜单。</p>
+<p>Les Amis：这家位于邵氏中心的屡获殊荣的法式餐厅以其精致的菜肴和无可挑剔的服务而闻名。由Sebastien Lepinoy大厨掌勺，Les Amis提供优雅的用餐体验，菜单上庆祝法国美食。</p>
+<p>CUT by Wolfgang Puck：位于滨海湾金沙酒店，CUT是Wolfgang Puck大厨著名的牛排馆概念。食客们可以在时尚别致的环境中享用优质牛肉和其他美食，俯瞰滨海湾海滨。</p>
+<p>Artemis Grill：位于CapitalGreen，Artemis Grill提供地中海风味菜肴，采用可持续和有机食材。餐厅的屋顶位置可欣赏城市天际线和滨海湾的壮丽景色，是露天用餐的理想场所。</p>
+<p>Lantern：位于富丽敦海湾酒店顶层，Lantern是一家别致的屋顶酒吧和餐厅，提供滨海湾的全景。客人可以在闪闪发光的城市天际线背景下享用特色鸡尾酒和现代亚洲菜肴。</p>
+<p>Lavo：位于滨海湾金沙酒店，Lavo将餐厅、酒廊和屋顶酒吧融合在一个充满活力的场所。食客们可以在欣赏滨海湾和周边城市景观的全景的同时，品尝意式美式菜肴。</p>
+<h3>第三天：圣淘沙岛的岛屿之旅</h3>
+<p>没有参观圣淘沙岛，新加坡之旅就不算完整。非常值得去这个岛上进行一日游，你还可以乘坐缆车！</p>
+<h4>8:00：乘坐缆车</h4>
+<p>从乘坐出租车到 Faber 山，然后乘坐缆车到圣淘沙岛（19 欧元）开始新的一天。</p>
+<p>从Faber山到圣淘沙岛的缆车行程大约需要15分钟，可以欣赏到新加坡天际线和周围岛屿的壮丽景色。这也很有趣，因为它们是动漫主题的缆车！</p>
+<p>点击此处获取缆车票：[此处添加链接]</p>
+<h4>9:00：开始探索圣淘沙岛</h4>
+<p>这里有很多事情可以做！</p>
+<p>您可以选择环球影城主题公园、S.E.A海洋馆、在原始海滩上享受阳光、在茂密的雨林中滑索，甚至还有令人惊叹的灯光和声音表演！更多信息，请查看我关于圣淘沙岛所有精彩活动的这篇文章：[此处添加链接]</p>
+<p>21:30——缆车返回Faber山。通常缆车每天约上午8:45至晚上10:00运行，最后登车时间为晚上9:30。</p>
+<h4>22:00：在牛顿美食中心享用晚餐</h4>
+<p>从Faber山乘坐出租车到牛顿美食中心，因为这是一种你想要拥有的体验！</p>
+<p>位于牛顿环岛的牛顿美食中心是新加坡著名的美食中心，以其种类繁多的当地美食和街头小吃而闻名。这是一个美食热点，融合了各种文化的诱人风味！</p>
+<p>在牛顿美食中心，你可以尽情享受各种新加坡特色菜，例如沙爹、辣椒螃蟹、海南鸡饭、烤魔鬼鱼、蚝仔煎等等。热闹的氛围、香气扑鼻的味道和食物的滋滋作响更增添了兴奋感！</p>
+<p>牛顿美食中心的食摊通常从下午晚些时候一直营业到深夜，使其成为当地人和游客享用美味佳肴或深夜小吃的理想场所。</p>
+<p>蒂亚的贴士：牛顿美食中心可能会非常拥挤，尤其是在高峰时段，所以准备好排队等候受欢迎的菜肴。</p>
+<h3>新加坡夜间活动</h3>
+<p>日落时分，新加坡在夜晚的众多娱乐选择中真正活跃起来。这取决于你在整天探索后有多少精力！</p>
+<h4>光谱灯光秀</h4>
+<p>你必须做的一件事是参观滨海湾金沙酒店的光谱灯光秀。</p>
+<p>与迪拜的喷泉相似，这是一场免费的夜间户外15分钟盛会，在活动广场的水面上展示。</p>
+<p>在光谱中，你可以看到新加坡的国际化四部分故事在你眼前展开。通过喷泉喷射、五彩缤纷的视觉投影、激光、熔岩和雾效的惊人编排以及最宏伟的管弦乐团配乐讲述。在你的新加坡三日游行程中是一个绝佳的补充。</p>
+<p>漫步并欣赏景色</p>
+<p>另一件事是四处走走，拍照！当然还有观赏人群，这是我最喜欢的旅行活动之一！我喜欢晚上四处走走——顺便说一句，即使在晚上，即使作为女性旅行者，我也感觉非常安全。这座城市在夜晚活跃起来！</p>
+<p>你可以体验克拉克码头的令人兴奋的能量，那里的河边酒吧和俱乐部充满音乐和狂欢。我们在那里喝了美味的鸡尾酒。</p>
+<p>或者，探索安详山和俱乐部街的时尚酒吧和地下酒吧，在那里你可以啜饮手工鸡尾酒，并与当地人交流。</p>
+<h4>《时光之翼》表演</h4>
+<p>为了获得独特的夜间体验，请在圣淘沙岛观看壮观的灯光和声音表演《时光之翼》。惊叹于激光、喷水和烟花照亮夜空，展现出令人着迷的艺术性。</p>
+<p>点击此处获取《时光之翼》表演门票：[此处添加链接]</p>
+<p>晚上8点40分或7点40分。持续20分钟。15欧元</p>
+<h3>总结</h3>
+<p>新加坡以其迷人的传统与现代的融合，为各个年龄段的游客提供真正难忘的体验。</p>
+<p>按照我的新加坡三日游行程，探索这个充满活力的城市国家所能提供的最佳体验。</p>
+        <small class="page-url url "><a href="https://www.tiadoestravel.com/travel/itinerary-for-singapore-3-days/" target="_blank">(https://www.tiadoestravel.com/travel/itinerary-for-singapore-3-days/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Where-to-Eat-in-Singapore:-25-Places-for-Shiok-(Delicious)-Food!">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🍽&nbsp;</span>Where to Eat in Singapore: 25 Places for Shiok (Delicious) Food!</h3>
+        <small class="page-url url "><a href="https://www.willflyforfood.net/best-singapore-restaurants/" target="_blank">(https://www.willflyforfood.net/best-singapore-restaurants/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 列举了新加坡各类餐饮选择，针对美食爱好者提供了丰富的推荐。<br></small>
+    </div>
+    <div class="page-content content"><h2>新加坡最佳餐厅</h2>
+<p>在新加坡外出就餐时，人们经常光顾小贩中心和美食广场，因为它们价格实惠，并提供更广泛的选择。这份新加坡餐厅指南包括各种小贩摊位、食品摊位、连锁店和正规的正餐餐厅。</p>
+<h3>1.樟宜椰浆饭 – 已关闭</h3>
+<p>还有什么比从一家专门经营椰浆饭的餐厅开始这份新加坡最佳餐厅名单更好的方式呢？它是新加坡最受欢迎的美食，在我看来，也是最令人满足的亚洲早餐之一。</p>
+<p>椰浆饭是源自马来西亚的菜肴，在新加坡也很受欢迎。它包括用椰奶和班兰叶烹制的香米，配以叁巴酱和许多配菜，如小鱼干、花生、黄瓜和煎蛋或荷包蛋。它通常作为早餐食用，但全天都可以享用。</p>
+<p>在谷歌搜索“新加坡最好的椰浆饭”，这家餐厅会出现在许多列表的顶部。他们自 20 世纪 70 年代开业以来，已经为三代人提供这座城市最好的椰浆饭。</p>
+<p>下图是他们最畅销的辣鸡腿肉套餐。它包含餐厅的传奇樟宜辣椒和一款以麦当劳麦辣鸡腿堡为灵感的鸡肉炸肉排。</p>
+<p>我曾经问过一位马来西亚厨师这道菜的秘诀是什么，他告诉我，这一切都关乎叁巴酱。这道深受喜爱的菜肴只能与其叁巴酱一样好，而樟宜的传奇樟宜辣椒则以其最佳和最独特而闻名。</p>
+<p>这款传奇的叁巴酱由追溯到餐厅创始人的秘方制成，正是它将樟宜与其他餐厅区分开来。</p>
+<h4>樟宜椰浆饭</h4>
+<p>地址：183 Upper Thomson Road, #01-04, Singapore 574429</p>
+<p>营业时间：上午 11 点至晚上 9 点，周二至周日（周一休息）</p>
+<p>最近的地铁站：Upper Thomson</p>
+<h3>2. 巴厘岛椰浆饭</h3>
+<p>巴厘岛是新加坡另一家受欢迎的椰浆饭餐厅。我从 KF Seetoh 和 Makansutra 了解到这家餐厅。像樟宜一样，它被描述为在新加坡享用这道受欢迎菜肴的好餐厅。</p>
+<p>巴厘岛以其黑甜酱油炸鸡而闻名，鸡肉裹在甜咸的深色酱汁中。</p>
+<p>我读到这家餐厅的老板是著名榜鹅连锁店老板的妹妹。看起来制作这道菜是家族传承，所以在我们下次访问新加坡时，我们一定会尝试榜鹅。</p>
+<h4>巴厘岛椰浆饭</h4>
+<p>地址：2 Lor 15 Geylang Road, Singapore 388596</p>
+<p>营业时间：下午 5:30 至凌晨 4 点，周一至周六（周日休息）</p>
+<p>最近的地铁站：Aljunied</p>
+<h3>3. 雅坤咖椰吐司</h3>
+<p>顾名思义，雅坤专门经营咖椰吐司，这是一种流行的早餐或零食，做法是用咖椰（一种用椰奶、鸡蛋和糖制成的果酱）涂在木炭烤制或烤制的吐司片之间。</p>
+<p>它配以咖啡或茶，通常还配以两个煮软的鸡蛋，撒上一些黑酱油和白胡椒粉。</p>
+<p>雅坤是新加坡一家享用这种流行早餐的好咖啡店。他们在全市设有许多分店，但我们在前往新加坡动物园的途中去了他们在宏茂桥地铁站的分店。</p>
+<p>如果您计划去动物园，那么这是一个享用早餐和品尝这款经典新加坡式早餐的好地方。</p>
+<h4>雅坤</h4>
+<p>地址：雅坤在新加坡拥有超过 40 家分店。</p>
+<p>营业时间：各分店有所不同</p>
+<h3>4. Fatimah 摊位 Ar Rahman 皇家薄饼</h3>
+<p>这家名为 Fatimah 摊位 Ar Rahman 皇家薄饼的摊位专门经营另一种受欢迎的新加坡早餐或街头小吃，名为薄饼。</p>
+<p>在印度南部被称为 Parotta，在马来西亚被称为 Roti Canai，它指的是一种在烤架上烹制的油炸面粉基亚洲薄饼，配以咖喱蘸酱。</p>
+<p>下图是一盘酥脆有嚼劲的黄油薄饼。它上面涂有黄油和糖，因此在蘸咖喱酱时，甜味和咸味达到了很好的平衡。</p>
+<p>说实话，Fatimah 摊位 Ar Rahman 皇家薄饼并不是我们的首选。我们想去 Prata Saga Sambal Berlada，这是一个在搜索新加坡尝试薄饼的最佳场所时经常出现的摊位。</p>
+<p>Prata Saga Sambal Berlada 由于斋月而关闭，但我们很幸运地在几步之遥的地方找到了 Fatimah 摊位 Ar Rahman 皇家薄饼。</p>
+<p>我们在德加美食中心吃了几次饭，Fatimah 摊位 Ar Rahman 皇家薄饼总是排着长队的人在等待购买他们的薄饼。在尝试确定在新加坡哪里吃饭时，这始终是一个好兆头。</p>
+<h4>Fatimah 摊位 Ar Rahman 皇家薄饼</h4>
+<p>地址：#01-248，德加美食中心，665 Buffalo Rd，新加坡 210665</p>
+<p>营业时间：上午 7 点至晚上 10 点，周二至周日（周一休息）</p>
+<p>最近的地铁站：小印度</p>
+<h3>5. 建波水粿</h3>
+<p>建波水粿专门经营我们目前在新加坡吃过最有趣的街头小吃之一——水粿。它指的是一种用切碎的腌萝卜做成的蒸米糕，配以辣椒酱。</p>
+<p>建波水粿位于历史悠久的 Tiong Bahru 市场内。在谷歌搜索“新加坡最好的水粿餐厅”，许多新加坡美食博主会将您引向建波。这个小摊位已经卖了 50 多年的这种美味佳肴！</p>
+<p>我们一大早就到那里，络绎不绝的人们都在买外卖的米糕。像咖椰吐司一样，它是新加坡流行的早餐。</p>
+<h4>建波水粿</h4>
+<p>地址：Tiong Bahru 市场，Seng Poh 路，30 号 #02-05 邮政编码，新加坡 168898</p>
+<p>营业时间：每天上午 6:30 至晚上 9 点</p>
+<p>最近的地铁站：Tiong Bahru</p>
+<h3>6. 1A 酥脆咖喱角</h3>
+<p>1A 酥脆咖喱角以其美味的街头小吃咖喱角而闻名。它们在整个东南亚都很受欢迎，基本上是小巧的半圆形馅饼，馅料种类繁多，例如鸡肉咖喱和土豆、牛肉仁当和辣椒蟹，包裹在油炸或烤制的糕点壳中。</p>
+<p>我在谷歌搜索“新加坡最好的咖喱角餐厅”，流行的美食博客 ethlui.com 将我引向了 1A 酥脆咖喱角。他们在新加坡设有许多分店，但我们去了乌节路高岛屋购物中心的摊位。</p>
+<p>他们经常被认为是新加坡最好的咖喱角之一，我们尝试了其他一些，但我们确实发现他们的咖喱角最美味。对我们来说，区别在于糕点壳。</p>
+<h4>1A 酥脆咖喱角</h4>
+<p>地址：1A 酥脆咖喱角在新加坡设有多家分店。</p>
+<p>营业时间：各分店有所不同</p>
+<h3>7. 赞赞餐厅</h3>
+<p>如果您喜欢薄饼，那么您可能也会喜欢 Murtabak。它基本上是薄饼的填充版本，可以用咸味或甜味配料填充。</p>
+<p>Murtabak 在阿拉伯半岛和东南亚很常见，其具体做法因地区而异。在新加坡，它通常用加香料的牛肉、鸡肉或羊肉填充，并配以咖喱酱、甜腌洋葱或番茄酱黄瓜。填充马苏里拉奶酪的版本也很受欢迎。</p>
+<p>下图是传奇的赞赞餐厅的羊肉 Murtabak，这是一家自 1908 年以来一直供应这种街头美食的传统餐厅。那就是一百多年了！</p>
+<p>赞赞是一家老字号，以其为在新加坡尝试 Murtabak 的最佳餐厅之一而闻名。如果您透过下面的窗户看，您会看到一位 Murtabak 制作大师将面团球变成美味的 Murtabak。</p>
+<h4>赞赞餐厅</h4>
+<p>地址：697-699 North Bridge Road, Singapore 198675</p>
+<p>营业时间：每天上午 7 点至晚上 11 点</p>
+<p>最近的地铁站：武吉士</p>
+<h3>8. 实龙岗路叻沙</h3>
+<p>叻沙是新加坡最受欢迎的菜肴之一，而受欢迎的老字号实龙岗路叻沙则以其为在新加坡尝试叻沙的最佳餐厅之一而闻名。</p>
+<p>如果您从未吃过，叻沙是一种娘惹风味的辣面汤，由米粉或用鸡肉、虾或鱼制成的细面组成。它的汤底可以是浓郁咸香的椰奶、清新酸爽的阿参（罗望子、格鲁古或科库姆）或两者的组合。</p>
+<p>在新加坡，最受欢迎的版本是椰奶咖喱叻沙，这是我更喜欢的版本。这就是您在实龙岗路找到的那种叻沙。</p>
+<p>我读到，实龙岗路是为数不多的仍然使用木炭炉制作叻沙的地方之一。咖喱一开始很奶油，相当温和，直到你混合了辣辣的叁巴酱，这会让它更上一层楼。</p>
+<p>上面铺着鱼饼片、血蛤和一些越南香菜，这是我一生中尝过的最好的叻沙之一。真的很好吃。</p>
+<p>新加坡有许多受欢迎的叻沙餐厅，每个人似乎都有自己最喜欢的餐厅。甚至送我们去实龙岗路的 Grab 司机也有自己的推荐。</p>
+<p>我们根据 KF Seetoh 对 CNN 旅游的推荐选择了实龙岗路。毕竟，他们已经供应了 40 多年的同样的咖喱叻沙！</p>
+<p>有趣的是，这个地方还有一点民间传说。传说中，一位神秘的顾客给他们提供了秘方，他想帮助他们苦苦挣扎的食品车业务。</p>
+<p>顾客很快开始蜂拥而至，这位仁慈的顾客再也没有出现过。真是人间美味的叻沙！</p>
+<h4>实龙岗路叻沙</h4>
+<p>地址：#01, 27 Jln Berseh, 100, Singapore 200027</p>
+<p>营业时间：上午 9:30 至下午 5 点，周四至周二（周三休息）</p>
+<p>最近的地铁站：Lavender</p>
+<h3>9. 黄亚细肉骨茶</h3>
+<p>黄亚细以其肉骨茶而闻名，这是一种深受喜爱的菜肴，由用不同香草和香料的肉汤烹制的肉质猪排制成。</p>
+<p>肉骨茶的名称字面意思是“肉骨茶”，但实际上并没有用茶来制作这道菜。它的名称指的是通常与汤和猪骨一起供应的浓香型乌龙茶，有助于冲淡脂肪。</p>
+<p>根据肉骨茶的描述，它对许多新加坡人来说似乎是一道令人欣慰的菜肴，是他们不能长时间不吃的东西。我们享受了我们的肉骨茶，配上一碗米饭和一份焖蘑菇。</p>
+<p>许多美食博主，包括 sethlui.com 和 Leslie Tay 博士，都推荐黄亚细为新加坡尝试肉骨茶的最佳餐厅之一。他们在 1977 年在 Rangoon 路开业，现在在新加坡设有多家分店。</p>
+<p>如果您想提前购买餐券，则可以通过 Klook 购买。他们提供 Rangoon 路和 Chui Huay Lim 俱乐部黄亚细分店的优惠券。</p>
+<h4>黄亚细</h4>
+<p>地址：黄亚细在新加坡设有四家分店。</p>
+<p>营业时间：各分店有所不同</p>
+<h3>10. 恒记鹅肉鸭饭</h3>
+<p>顾名思义，恒记摊位以其鹅肉和鸭饭而闻名。正如 Leslie Tay 博士所说：</p>
+<p>“当你谈论焖鸭时，这家摊位在新加坡有点传奇色彩。”</p>
+<p>考虑到恒记背后的男人已经卖了 60 多年的焖鸭，这就不难理解了！</p>
+<p>我们尝试了混合拼盘，其中包含焖鸭、鹅肉、猪脸肉和猪腩肉。酱汁非常美味，肉质多汁味美。盘子上的所有东西都非常棒，但我最喜欢的是猪脸肉。</p>
+<p>如果您从未吃过，猪脸肉有一种独特的质地，有点耐嚼和粘稠，但又很脆。我爱它。</p>
+<p>开这家摊位的老人现在已经退休了，但他已经将缰绳交给了家族的年轻一代，以延续这一传统。</p>
+<p>品尝了他们的食物后，很难不同意 Tay 博士的观点。这家餐厅一定是新加坡尝试焖鸭的最佳餐厅之一。</p>
+<h4>恒记</h4>
+<p>地址：德加美食中心，665 Buffalo Road，新加坡 210665</p>
+<p>营业时间：上午 8 点至下午 3 点，周二至周日（周一休息）</p>
+<p>最近的地铁站：小印度</p>
+<h3>11. 禧街 Tai Hwa 猪肉面</h3>
+<p>您听说过天天文莱鱼片米粉吗？2016 年获得米其林星级的街头小吃摊位？许多人不知道的是，当年有两家小贩摊位获得了米其林星级，另一家是禧街 Tai Hwa 猪肉面。</p>
+<p>我认为天天文莱鱼片米粉获得了所有关注，因为他们的食物更便宜，而且这成了一个更好的故事，但禧街 Tai Hwa 可能是更好点的小贩摊位。</p>
+<p>我们去新加坡的大多数小贩摊位都很受欢迎，因此正如预期的那样，许多摊位都排着长队。这家位于克劳福德巷的传奇面店有最长的队伍。</p>
+<p>我等了一个多小时才拿到这碗肉脞面。这是一种醋味和辛辣的面条，用猪油使之更加美味。</p>
+<p>干拌，配以清汤，上面放有各种配料，如猪肉片、肉丸、肝脏、饺子、肉末和一条晒干的鱼片。</p>
+<p>我说的那条队伍可不是开玩笑的。虽然看起来不算很长，但它移动得非常慢，但似乎没有人介意。我们在他们获得米其林星级之前就在这里吃饭，所以我只能想象现在队伍会有多长！</p>
+<p>如果您是一位行程满满的短期游客，那么您可能需要考虑一下等待时间。为了安全起见，计划一个或两个小时的午餐时间。</p>
+<p>禧街 Tai Hwa 是一个自 1935 年以来一直营业的老字号摊位。即使在获得米其林星级之前，它长期以来都被认为是新加坡最好的小贩摊位之一。那些猪肉面真是太好吃了！</p>
+<h4>禧街 Tai Hwa 猪肉面</h4>
+<p>地址：66 Crawford Lane, #01-12, Singapore 190466</p>
+<p>营业时间：上午 9:30 至晚上 9 点，周二至周日（周一休息）</p>
+<p>最近的地铁站：Lavender</p>
+<h3>12. 五星海南鸡饭</h3>
+<p>五星专门经营海南鸡饭，这道菜是新加坡的国菜。您不能不至少尝试一次才离开新加坡。</p>
+<p>鸡饭是通过在低于沸腾的温度下将整鸡浸烫制成的。然后撇去所得的汤，并使用一些脂肪和液体以及姜和大蒜来烹制米饭。结果是一种油腻味美的米饭，有时被称为“油饭”。</p>
+<p>这道受欢迎的菜肴通常配以三种蘸酱，包括姜泥、黑甜酱油和辣椒酱。非常美味，也是我最喜欢的新加坡菜肴之一。</p>
+<p>五星使用Kampong鸡，这是一种原产于印度尼西亚和马来西亚的鸡种。</p>
+<p>似乎每个新加坡人对哪家餐厅能做这道菜的最佳版本都有自己的看法。我们根据朋友的推荐去了五星。他多年来一直住在新加坡，而且他喜欢吃东西，所以我相信他的判断。</p>
+<p>根据他的说法，五星海南鸡饭是新加坡尝试这道菜的最佳餐厅之一。他可能是对的。这道菜非常美味。</p>
+<h4>五星海南鸡饭</h4>
+<p>地址：419 River Valley Road, Singapore 248318</p>
+<p>营业时间：每天上午 11 点至凌晨 2 点</p>
+<p>最近的地铁站：乌节</p>
+<h3>13. 天天海南鸡饭</h3>
+<p>和许多人一样，我们是已故伟大的安东尼·波登的粉丝。他在节目中介绍的任何地方肯定都会出现在我们的行程中。</p>
+<p>天天就是其中之一。根据他的说法，天天饭店的米饭香味浓郁，味道鲜美，即使单独吃也很美味。</p>
+<p>我们以前吃过很多次鸡饭了，这确实是我吃过的最好的鸡饭之一。我比五星更喜欢它。</p>
+<p>除了美味的米饭外，老板们说他们的秘诀在于酱汁（确实非常好吃），但让我印象最深刻的是鸡肉的质地。它很完美——柔软、多汁、非常鲜嫩。</p>
+<p>天天位于麦士威熟食中心，自 1987 年开业以来，已经赢得了新加坡最佳鸡饭餐厅之一的美誉。它是一家米其林必比登推介餐厅，深受当地人和游客的喜爱。</p>
+<p>2013 年，戈登·拉姆齐厨师傲慢地向天天发起了一场烹饪对决，看看谁能做出更好的鸡饭。天天赢了，发出了一个明确的信息，即它显然是新加坡最好的餐厅之一。</p>
+<h4>天天</h4>
+<p>地址：1 Kadayanallur Street, #01-10/11 Maxwell Food Centre, Singapore 069184</p>
+<p>营业时间：每天上午 10 点至下午 5:30 点</p>
+<p>最近的地铁站：牛车水</p>
+<h3>14. 545 文礼虾面</h3>
+<p>虾面也称为 hae mee，是新加坡用蛋面制作的一种受欢迎的汤菜。据说 545 文礼是新加坡享用这道著名小贩菜肴的最佳场所之一。据 Leslie Tay 博士说，店主是第三代小贩，他的祖父从 20 世纪 20 年代开始用推车卖虾面。</p>
+<p>您可以选择干捞或汤底版本。我认为干捞版本是一种名为福建面的炒菜。Tay 博士推荐了这两种，但我们根据他的略高评分（4.25 对 4.5）选择了后者。汤浓郁可口，汤底鲜美，虾味浓郁。</p>
+<p>像 Fatimah 摊位 Ar Rahman 皇家薄饼和恒记鹅肉鸭饭一样，545 文礼也位于德加美食中心。</p>
+<p>在新加坡寻找便宜但美味的食物的人们一定应该看看这个小贩中心。从这份名单中可以看出，这里有许多摊位提供美味佳肴。</p>
+<h4>545 文礼虾面</h4>
+<p>地址：#01-326 德加美食中心，665 Buffalo Road，新加坡 210665</p>
+<p>营业时间：周一至周五上午 6:30 至下午 2 点（周六和周日休息）</p>
+<p>最近的地铁站：小印度</p>
+<h3>15. 发发烧烤鸡翅</h3>
+<p>我们在滨海湾金沙的 Rasapura Masters 美食广场偶然发现了发发和他们的烧烤鸡翅。它们很好吃，所以我考虑将它们添加到这份列表中，作为您可能想在新加坡尝试的非当地菜肴。</p>
+<p>只有当我看到这份城市最佳烧烤鸡翅列表时，我才了解到它们实际上是新加坡小贩美食！太酷了！</p>
+<p>与我习惯的鸡翅不同，这些鸡翅的皮很脆，但非常薄。事实上，薄如纸。感觉像是被拉紧在鸡翅上然后烤脆的！</p>
+<p>没有厚厚的炸粉或浓重的酱汁，只有美味的腌制鸡翅用木炭烹制而成，配以酸橙汁和辣辣椒酱。它们出奇地好，而且非常容易上瘾。</p>
+<p>正如所述，我们在滨海湾金沙的 Rasapura Masters 美食广场分店吃过饭，但发发在全市设有多家分店。</p>
+<h4>发发</h4>
+<p>地址：发发在新加坡设有多家分店。</p>
+<p>营业时间：各分店有所不同</p>
+<h3>16. 红楼海鲜餐厅</h3>
+<p>红楼海鲜餐厅是新加坡众多尝试辣椒螃蟹的地方之一。辣椒螃蟹通常被称为该国的国菜，是新加坡的代名词。它被认为是新加坡最伟大的烹饪发明之一，可以说是最重要的菜肴。</p>
+<p>制作辣椒螃蟹时，厨师将螃蟹（通常是泥蟹）在浓厚的番茄和辣椒酱中翻炒。尽管它叫辣椒蟹，但它并不辣。它尝起来甜味和酸味，只带有一丝辣味。</p>
+<p>如果您在新加坡只吃一道菜，代表整个菜系，那么它绝对应该是辣椒蟹。</p>
+<p>任何螃蟹最好的部分是什么？它壳中的罪恶的蟹黄，我们的蟹黄很多（下图）。红楼不是使用普通的斯里兰卡泥蟹，而是使用苏格兰棕蟹，据说这种蟹肉更多，气味也更少。</p>
+<p>根据向我们推荐红楼的朋友的说法，辣椒螃蟹在新加坡几乎任何地方都很美味，所以去哪里都无关紧要。</p>
+<p>他特别推荐这家餐厅，因为他们同样以他们的黑胡椒蟹而闻名，我们下次来新加坡时一定会尝试。</p>
+<h4>红楼海鲜餐厅</h4>
+<p>地址：红楼海鲜餐厅在新加坡设有多家分店。</p>
+<p>营业时间：各分店有所不同</p>
+<h3>17. Don Signature 蟹</h3>
+<p>Don Signature 蟹以其蟹米粉而闻名，这道菜是新加坡的一种流行的米粉菜肴，用整个泥蟹在海鲜汤中烹制而成。</p>
+<p>在安东尼·波登在信发饮食店试过蟹米粉并将其列入他“13 个死前必吃的地方”的名单后，蟹米粉声名远播。</p>
+<p>有了这样的推荐，我想在信发饮食店尝试一下，但我被它许多负面评价劝退了，这些评价称该场所价格过高，性价比低。</p>
+<p>谢天谢地，我从这篇文章中了解到了 Don Signature 蟹，这篇文章列出了新加坡 15 家最佳蟹米粉餐厅。</p>
+<p>由于这道菜是用整蟹制作的，因此它可能很贵，这就是我选择 Don Signature 蟹的原因。我独自一人在新加坡旅行，所以不想为此花大价钱。</p>
+<p>在 Don Signature 蟹，最小的蟹米粉订单足以供两人食用。</p>
+<h4>Don Signature 蟹</h4>
+<p>地址：Block 206, Toa Payoh North 1, #01-1197, Singapore 310206</p>
+<p>营业时间：每天中午 12 点至晚上 8:30 点</p>
+<p>最近的地铁站：Braddell</p>
+<h3>18. 香蕉叶阿波罗餐厅</h3>
+<p>在谷歌搜索“新加坡最好的餐厅”，香蕉叶阿波罗餐厅肯定会出现。这家传奇的餐厅自 1974 年开业以来，以供应许多美味佳肴而闻名，其中最受欢迎的是他们的鱼头咖喱。</p>
+<p>鱼头咖喱是一款新加坡菜，起源于南印度和中国，是将一条整条鲷鱼的头在克里拉风格的咖喱中与各种蔬菜和 18 种香料的秘密混合物一起炖制而成。</p>
+<p>阿波罗的咖喱盛在香蕉叶上，有小、中、大三种尺寸。我们点了中份，对两个人来说已经足够了。</p>
+<p>我相信这是鱼的舌头。一定要搭配大量米饭和/或印度烤饼。咖喱的味道酸甜可口，真是太棒了。</p>
+<h4>香蕉叶阿波罗餐厅</h4>
+<p>地址：54 Race Course Road, Singapore 218564</p>
+<p>营业时间：每天上午 10:30 至晚上 10:30</p>
+<p>最近的地铁站：小印度</p>
+<h3>19. 印尼炸鸡饭店</h3>
+<p>印尼炸鸡饭店是一个供应印尼菜的连锁餐厅。他们的招牌菜——印尼炸鸡——字面意思是“压碎的炸鸡”。</p>
+<p>印尼炸鸡的做法是用研钵和杵（或榔头）轻轻地敲打鸡肉，使其变软。然后油炸，上面放上 kremes（脆辣的调味片），配以米饭、叁巴酱、黄瓜片、油炸豆腐和tempeh（大豆饼）。</p>
+<p>我在寻找乌节路附近的好吃饭的地方时，了解到了这家餐厅。印尼炸鸡饭店非常合适。</p>
+<p>鸡肉味道很棒，但我不知道它是否比“未压碎的”鸡肉更软。我们的鸡肉也显得有点干。我喜欢配菜和那些脆片的质地。</p>
+<h4>印尼炸鸡饭店</h4>
+<p>地址：印尼炸鸡饭店在新加坡设有多家分店。</p>
+<p>营业时间：各分店有所不同</p>
+<h3>20. MA Deen Biasa</h3>
+<p>从我们读到关于它的一刻起，骨髓汤就一直是我们必吃清单的首位。它指的是用番茄酱和香料烹制的、外观最诱人的骨髓菜肴。</p>
+<p>当 KF Seetoh 将 MA Deen Biasa 的骨髓汤描述为新加坡“最令人绝望的美味”时，我知道我找到了尝试它的正确地方。</p>
+<p>它配以用来擦拭咸甜酱汁的面包片，带有骨髓的大块牛肉骨与番茄酱和各种香料一起烹制而成，创造出这道外观诱人的菜。我们犯了错误，点了巴斯马蒂米饭，但别麻烦了。搭配面包是完美的。</p>
+<p>酱汁和牛肉很棒，但这道菜的真正主角是骨髓。MA Deen Biasa 会给你吸管，这样你就可以像蚊子一样吸出骨髓。太棒了！</p>
+<p>MA Deen Biasa 是一家简单的餐厅，但不要让它简朴的外观欺骗了你。对我们来说，它是新加坡最好的餐厅之一。这道菜太棒了。</p>
+<h4>MA Deen Biasa</h4>
+<p>地址：95/97 Jln Sultan Road, Singapore 198999</p>
+<p>营业时间：24 小时营业</p>
+<p>最近的地铁站：Lavender</p>
+<h3>21. Candlenut</h3>
+<p>Candlenut 提供高档娘惹菜。娘惹是 15 世纪至 17 世纪定居在槟城、马六甲、新加坡和印度尼西亚的中国移民的后裔。</p>
+<p>他们与当地马来人通婚，形成了多种文化的融合，主要体现在他们的食物中。中国配料与当地香料和烹饪技术一起使用，创造出娘惹对马来西亚菜肴的诠释，其特点是酸味、芳香、辛辣和草药味。如果您喜欢浓郁的味道，那么您会喜欢娘惹菜。</p>
+<p>新加坡有很多地方可以吃到娘惹菜，但我相信 Candlenut 是这座城市唯一一家获得米其林星级的娘惹餐厅。如果您想在新加坡享受特别的用餐体验，那么 Candlenut 是一个绝佳的选择。</p>
+<p>即使在获得米其林星级之前，Candlenut 已享有新加坡最佳餐厅之一的美誉。</p>
+<p>Candlenut 最有趣的地方在于它没有点菜晚餐菜单。厨师 Malcolm Lee 受到日本怀石料理的启发，每周创作新菜，以他喜欢称之为“阿嫲家宴”的家庭式品尝方式供应。阿嫲意思是“祖母”。</p>
+<p>下图是一道菜，烤章鱼配虾酱（发酵虾）、黄瓜和菠萝阿参（腌制）以及烤花生。</p>
+<p>这里有一道用嫩菠萝蜜和脆白虾制成的木薯叶罗惹（蔬菜汤）。您可以在我的 Candlenut 文章中查看更多我们阿嫲家宴菜单中所有菜肴的照片。</p>
+<p>我们喝的是啤酒，但我相信 Candlenut 也可能有一家酒吧。将您获得米其林星级的娘惹菜肴与好酒搭配是一种极佳的方式，可以进一步提升用餐体验。</p>
+<h4>Candlenut</h4>
+<p>地址：Block 17A Dempsey Road, Singapore 249676</p>
+<p>营业时间：每天中午 12 点至下午 3 点/周日至周四下午 6 点至晚上 10 点/周五至周六、公众假期下午 6 点至晚上 11 点</p>
+<p>最近的地铁站：Commonwealth</p>
+<h3>22. 3S 豆腐城 – 已关闭</h3>
+<p>我们在寻找新加坡的亚洲早餐餐厅时，发现了 3S 豆腐城。他们以豆腐配油条而闻名。</p>
+<p>根据 Leslie Tay 博士的说法，它“可能是新加坡最好的豆腐了”。</p>
+<p>除了 Tay 博士之外，sethlui.com 也对 3S 豆腐城给予了高度评价。他们将其列入他们列出的新加坡 15 家最佳早餐餐厅的名单中。</p>
+<h4>3S 豆腐城 – 已关闭</h4>
+<p>地址：133 Jln Besar Road, Singapore 208851</p>
+<p>营业时间：每天中午 12 点至晚上 8 点</p>
+<p>最近的地铁站：Rochor</p>
+<h3>23. Simple Delite</h3>
+<p>糕点是一个总称，指的是这些用米制成的亚洲小吃。它们有很多不同的形式，可以是甜的，比如下面的 kuih lopis，也可以是咸的。</p>
+<p>我在阅读了 Leslie Tay 博士的博客上关于他们的 kuih lopis 的文章后，将 Simple Delite 添加到了我的新加坡行程中。它用糯米、古拉马拉卡和椰丝制成，他称其具有“极佳的质地[具有]甜、咸和鲜味之间极佳的平衡”。他是对的——太棒了。</p>
+<p>我们还尝试了其他类型的 kuih，叫做 kueh salat 和 kueh bingka jagung（如果我没记错的话）。Kueh salat 用班兰和木薯制成，而 kueh bingka jagung 用玉米布丁和棕榈糖制成。两者都同样好。</p>
+<p>像这份清单上的一些地方一样，Simple Delite 也位于德加美食中心。根据 Tay 博士的说法，他们通常在中午就卖完了，所以一定要早点来。</p>
+<h4>Simple Delite</h4>
+<p>地址：德加美食中心，水牛路，新加坡，665 号邮政编码：210665</p>
+<p>营业时间：每天上午 8 点至下午 3 点</p>
+<p>最近的地铁站：小印度</p>
+<h3>24. Tiong Bahru 面包店</h3>
+<p>我知道你在想什么。对于新加坡餐厅指南来说，羊角面包似乎是一个奇怪的选择，但这些是个例外。</p>
+<p>Tiong Bahru 面包店和咖啡店与巴黎厨师 Gontran Cherrier 合作开业，其羊角面包令人垂涎。事实上，有些人说它们甚至比巴黎的羊角面包还要好！我们吃了抹茶杏仁羊角面包，真是太棒了。</p>
+<p>这是前面提到的抹茶杏仁羊角面包和 kouign-amann。kouign-amann 平平无奇，但羊角面包确实很棒。</p>
+<p>如果您想提前购买 Tiong Bahru 面包店餐券，则可以通过 Klook 购买。他们提供类似于您下面看到的套餐的餐券。</p>
+<p>这家面包店位于时尚的 Tiong Bahru 的一家时尚咖啡店，距离市场仅一箭之遥。这是一个时尚的街区，如果您有时间，我建议您在这里吃早餐并探索该地区。</p>
+<h4>Tiong Bahru 面包店</h4>
+<p>地址：56 Eng Hoon Street, #01-70, Singapore 160056</p>
+<p>营业时间：每天上午 8 点至晚上 8 点</p>
+<p>最近的地铁站：Tiong Bahru</p>
+<h3>25. 与厨师之旅一起走出常轨</h3>
+<p>最后一项不是新加坡餐厅或小贩中心摊位。这是一次美食之旅，由厨师之旅举办的一场精彩的街头美食之旅，其中包含我一生中尝过的最美味的叉烧饭。看看那东西！</p>
+<p>叉烧（或叉烧肉）是广东菜，是烤制的有调味的无骨猪肉。它是香港流行的一系列烤肉中最著名的菜肴。我从小就一直在吃叉烧，这是我吃过的最好的叉烧。</p>
+<p>这款叉烧肉质嫩滑，肥而不腻，多汁，皮质超脆，并配以美味浓郁的咸甜酱汁。事先向我在香港的朋友们道歉，但我只是为了这道菜就会飞回新加坡！</p>
+<p>如果您没有时间自己一家一家小贩摊位地去，那么我建议您参加厨师之旅的这次美食之旅。它将让您品尝这座城市提供的一些最佳菜肴。</p>
+<p>查看我关于这次“走出常轨”美食之旅的文章，以获取更多图片和信息。</p>
+        <small class="page-url url "><a href="https://www.willflyforfood.net/best-singapore-restaurants/" target="_blank">(https://www.willflyforfood.net/best-singapore-restaurants/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Singapore-transportation-costs-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🚆&nbsp;</span>Singapore transportation costs at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Singapore transportation costs" target="_blank">(DDG:Singapore transportation costs)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 介绍了新加坡公共交通的费用和操作方式，便利旅行者选择出行方式。<br></small>
+    </div>
+    <div class="page-content content"><h2>车费和优惠 - 新加坡公共交通 - 火车和基本巴士服务车费</h2>
+<p>学生优惠：0.02 新加坡元</p>
+<p>老年人优惠：0.19 新加坡元</p>
+<h2>新加坡交通出行 - 新加坡交通 - Go Guides</h2>
+<p>成人每次行程费用从9 新加坡元起。您也可以乘坐16路或16E路公共汽车，大约每10分钟一趟，行程大约需要半小时……</p>
+<h2>新加坡公共交通，价格，描述 - tripmydream</h2>
+<p>(本段落无标题，内容已包含在翻译中)</p>
+        <small class="page-url url "><a href="DDG:Singapore transportation costs" target="_blank">(DDG:Singapore transportation costs)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Singapore-attraction-ticket-prices-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🎢&nbsp;</span>Singapore attraction ticket prices at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Singapore attraction ticket prices" target="_blank">(DDG:Singapore attraction ticket prices)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 提供了主要景点的票价信息，方便游客根据预算进行游玩安排。<br></small>
+    </div>
+    <div class="page-content content"><h2>花园环抱湾 - 花穹与云雾林</h2>
+<p>2至3小时；免费取消；42美元</p>
+<h2>新加坡滨海湾金沙观景台电子票</h2>
+<p>1至2小时；27.2美元</p>
+<h3>新加坡门票：景点与活动 | 来自 Headout</h3>
+<p>夜间野生动物园  50.40新元
+河川生态园 43新元
+新加坡环球影城 83新元
+滨海湾花园 24新元
+滨海湾金沙空中花园 15.26新元</p>
+        <small class="page-url url "><a href="DDG:Singapore attraction ticket prices" target="_blank">(DDG:Singapore attraction ticket prices)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Gardens-by-the-Bay-Singapore-opening-hours-and-ticket-prices-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🕒&nbsp;</span>Gardens by the Bay Singapore opening hours and ticket prices at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Gardens by the Bay Singapore opening hours and ticket prices" target="_blank">(DDG:Gardens by the Bay Singapore opening hours and ticket prices)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 提供了新加坡某些景点的具体开放时间和票价，辅助旅行规划。<br></small>
+    </div>
+    <div class="page-content content"><p>开放时间：每日上午9:00至晚上9:00（最后入场时间为晚上8:00）。建议游览时长：1小时；门票价格：8美元（儿童票）起；最近的停车场。</p>
+<p>开放时间：每日上午9:00至晚上9:00（最后入场时间为晚上8:30）。每月关闭一次进行维护。点击此处查看关闭日期。</p>
+<p>开放时间：每日上午9:00至晚上9:00。最后售票和入场时间：晚上8:00。景点包括：花穹：一个展示各种……的大型温室。</p>
+        <small class="page-url url "><a href="DDG:Gardens by the Bay Singapore opening hours and ticket prices" target="_blank">(DDG:Gardens by the Bay Singapore opening hours and ticket prices)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Guide-to-Singapore-Metro-Tickets,-MRT-Fare-&-Card-Price">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🚉&nbsp;</span>Guide to Singapore Metro Tickets, MRT Fare & Card Price</h3>
+        <small class="page-url url "><a href="https://thaiest.com/singapore/travel/singapore-transport-tickets-best-ticket-type-for-you" target="_blank">(https://thaiest.com/singapore/travel/singapore-transport-tickets-best-ticket-type-for-you)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 介绍了新加坡交通工具的票价信息，辅助游客合理安排行程。<br></small>
+    </div>
+    <div class="page-content content"><h2>新加坡地铁票务指南</h2>
+<p>使用公共交通工具是游览新加坡的一种经济实惠的方式。新加坡的公共交通系统由9条地铁（MRT，LRT）线路和许多公共汽车线路组成。本指南将详细介绍新加坡地铁票务，包括易通卡 (EZ-Link Card)、新加坡旅游通行证 (Singapore Tourist Pass)、非接触式银行卡等，并阐述新加坡地铁票价和地铁卡价格。</p>
+<h3>新加坡地铁票</h3>
+<p>作为游客，您以前可以选择三种类型的新加坡地铁票：</p>
+<ul>
+<li>单程票/往返票 - 用于单程或往返行程</li>
+<li>易通卡 (EZ-Link Card) - 用于多次行程</li>
+<li>新加坡旅游通行证 (Singapore Tourist Pass) - 用于无限次旅行</li>
+</ul>
+<p>您可以通过购买此二合一旅游SIM卡和易通卡，享受100GB的数据和公共交通服务！获得价值38新元的优惠及更多，包括3新元的易通卡储值用于火车/巴士乘车。</p>
+<p>但是，自2022年3月10日起，随着非接触式银行卡作为一种新加坡地铁票种的推出，单程票和往返票已不再适用于新加坡地铁。因此，目前乘坐新加坡地铁单程旅行的唯一合理选择是非接触式银行卡或移动支付。</p>
+<p>在新加坡巴士上，您仍然可以通过车载现金购买单程票，因此如果您没有合适的卡并且只想乘坐一次单程，您可以考虑乘坐巴士而不是地铁。但是，此类新加坡巴士票比新加坡地铁卡票价贵0.70-1.00新元。</p>
+<h2>新加坡地铁票选项</h2>
+<p>让我们详细了解可用的新加坡地铁票选项，以及哪种地铁票类型最适合您的旅行计划，因为所有新加坡公共交通票都有其自身的优缺点。</p>
+<h3>新加坡地铁标准票</h3>
+<p>如前所述，自2022年3月10日起，可在一般售票机 (GTM) 使用现金购买的单程或往返新加坡地铁（MRT和LRT列车）的标准票已不再可用。</p>
+<p>您仍然可以在车上购买新加坡公共汽车单程标准票。从2023年12月23日起，新加坡单程基本巴士票价为1.90-3.00新元不等，具体取决于距离。新加坡快速巴士服务价格更高，车载现金支付价格为2.70-3.50新元。</p>
+<h3>新加坡易通卡 (EZ-Link Card)</h3>
+<p>新加坡易通卡 (EZ-Link Card) 可用于地铁（MRT和LRT列车）和公共汽车的多次行程。</p>
+<p>这张新加坡地铁卡的价格为每张10新元——5新元为不可退还的卡费（有效期为5年），另外5新元可用于支付车费。</p>
+<p>在新加坡地铁站售票处购买易通卡时，仅接受现金支付。如果您将在樟宜机场地铁站购买易通卡，请务必仔细检查找零，因为我们上次在那里购买新加坡地铁卡时被骗了。</p>
+<p>实际上，您可以通过网上购买新加坡易通卡，避免使用现金和在火车站售票处被骗的风险。您可以在此处在线购买新加坡易通卡：[新加坡易通卡链接]。</p>
+<p>要增加更多行程充值，您可以稍后使用现金或信用卡/借记卡为易通卡充值。</p>
+<p>如果您将从曼谷前往新加坡，您可以在线预订新加坡NETS闪付旅行卡，这是一张公共交通卡，让您像使用易通卡一样轻松地游览新加坡。您将在抵达新加坡之前领取您的卡（已预先充值），从而避免在火车站排队。</p>
+<h3>新加坡旅游通行证 (Singapore Tourist Pass)</h3>
+<p>新加坡旅游通行证 (Singapore Tourist Pass) 是一张特别通行证，提供新加坡公共交通工具（基本公共汽车、MRT和LRT列车服务）的无限次旅行，有效期为一、二或三天。</p>
+<p>一日新加坡旅游通行证从首次使用之日起至午夜有效。二日或三日新加坡旅游通行证的使用必须连续进行。通行证的有效期基于公共交通系统的运营时间。</p>
+<p>无限次旅行仅适用于公共汽车和火车服务。该通行证不包括圣淘沙特快专列、RWS8、快速前进、夜行和夜猫巴士等高级服务。</p>
+<p>新加坡旅游通行证价格如下：</p>
+<ul>
+<li>一日通行证 – 22新元</li>
+<li>二日通行证 – 29新元</li>
+<li>三日通行证 – 34新元</li>
+</ul>
+<p>上述新加坡地铁票价包含10新元的押金。在包括樟宜机场在内的任何SimplyGo售票处退还卡片时，押金将全额退还。</p>
+<p>SG旅游通行证是另一张旅行卡，提供新加坡基本巴士服务、MRT和LRT列车3天的无限次旅行。它售价29新元，无需租赁押金。</p>
+<p>您可以通过新加坡旅游通行证Plus探索更多新加坡，它不仅包括连续三天新加坡巴士、MRT和LRT列车服务的无限次旅行，还包含优惠套餐，让您在最大限度地提高旅行体验的同时节省开支。当前套餐的详细信息可在以下网址找到：[新加坡旅游通行证Plus链接]。</p>
+<h3>非接触式银行卡/移动支付</h3>
+<p>您现在还可以使用您的非接触式银行卡或移动支付作为新加坡地铁票，使用SimplyGo。</p>
+<p>SimplyGo于2019年4月推出，让您可以通过扫描非接触式银行卡、手机或智能手表来支付新加坡地铁票价。票价将自动从关联的移动钱包或非接触式银行卡中扣除。</p>
+<p>对于新加坡地铁票价支付，您可以使用非接触式银行卡（万事达卡、NETS和VISA）或添加到移动支付钱包（Apple Pay、Fitbit Pay、Garmin Pay、Google Pay和Samsung Pay）的万事达卡/Visa卡，无需充值或携带单独的旅行卡。无需注册或申请，因为巴士和火车的票价将直接处理并计入银行账户或信用卡/借记卡账单。但是，并非所有信用卡或借记卡都可能被系统接受。</p>
+<p>使用国外发行的非接触式卡时，将收取每天0.60新元的管理费。</p>
+<p>我们上次成功使用Wise卡支付从樟宜机场到市区的Singapore MRT费用，因为它比使用欧洲银行发行的卡或在机场兑换货币和为易通卡充值便宜得多。对于这笔交易，我们获得了中间市场汇率，兑换费用仅为0.01欧元。</p>
+<h2>新加坡地铁票价</h2>
+<p>新加坡地铁卡的行程价格取决于距离和进站时间。</p>
+<p>从您当前的地铁站到网络上的任何其他站点的MRT票价显示在车载“票价”上。</p>
+<p>从2023年12月23日起，使用卡支付的单程新加坡地铁票价为1.09-2.37新元。如果您在工作日上午7:45之前进站（公共假日除外），标准新加坡地铁票价将打折0.50新元。由于不再有比卡价更贵的标准单程新加坡地铁票，现在所有类型的旅行卡用作车票的票价完全相同。</p>
+<p>您可以在此处找到当前新加坡地铁和巴士票价的详细列表：[新加坡巴士和火车票价链接]。</p>
+<p>您还可以使用官方新加坡地铁票价计算器计算新加坡地铁/轻轨列车站之间的确切票价。请注意，官方票价计算器仅计算标准新加坡交通卡票价。</p>
+<h2>使用新加坡地铁票</h2>
+<p>主要的Singapore MRT卡是EZ-Link卡。如上所述，您可以在MRT站售票处购买（仅接受现金）或在此处在线预订：[新加坡EZ-Link卡链接]。</p>
+<p>这张新加坡地铁卡附带一些可用于支付车费的金额，之后您可以使用现金或信用卡/借记卡为EZ-Link卡充值，以增加更多行程充值。要充值，您可以使用其中一个售票服务亭。</p>
+<p>请注意，目前售票服务亭不销售新加坡地铁车票，只能用于为卡充值或检查交易历史记录和其他卡信息。</p>
+<p>虽然大多数售票机只接受信用卡支付，但通常有一台接受现金支付的机器（大多数情况下是1号机）。</p>
+<p>要访问卡信息或为卡充值，您需要将卡放在机器的指定区域。存储在卡上的当前价值将显示在左侧。使用NETS卡或信用卡/借记卡时，新加坡地铁卡的最低充值金额为10新元。</p>
+<p>如果您想以较低的金额为新加坡地铁卡充值，请选择现金支付选项（注意屏幕上的小按钮“现金”）。</p>
+<p>可以添加到卡中的最低现金值为2新元。机器只接受2新元、5新元、10新元和50新元面值的纸币，并且不找零。</p>
+<p>插入钱后，您需要确认插入的金额。</p>
+<p>确认后，存储在您的新加坡地铁卡上的新价值将显示在屏幕上。</p>
+<p>如果存储价值低于3新元，请确保为您的EZ-Link卡充值，否则闸门将拒绝进入。</p>
+<p>您可以随时使用售票服务亭查看存储在新加坡EZ-Link卡上的价值。当您刷卡离开地铁站时，也会显示卡的价值。</p>
+<h2>最佳新加坡地铁卡</h2>
+<p>如何知道哪张新加坡地铁票最适合您？</p>
+<p>请参阅以下我们的地铁票提示，它们应该会有所帮助。</p>
+<p>如果您：</p>
+<ul>
+<li>拥有新加坡签发的银行卡；</li>
+<li>在5年内将在新加坡使用公共交通工具少于9天，因为管理费将比购买任何卡片都便宜；</li>
+<li>想避免在售票机上浪费时间充值；</li>
+<li>使用的银行卡对国际交易适用良好的汇率，因为您的卡将以新加坡元计费（要获得最佳汇率，强烈推荐Wise卡）。</li>
+</ul>
+<p>那么非接触式银行卡/移动支付是最佳选择。</p>
+<p>如果您：</p>
+<ul>
+<li>将使用公共交通工具9天或9天以上，因为在这种情况下，这张新加坡地铁卡的价格（5新元）将低于您境外发行的卡的管理费，后者为每天0.60新元；</li>
+<li>将在新加坡停留3天以上；</li>
+<li>计划在5年内返回新加坡并再次使用这张卡；</li>
+<li>将在线预订并在抵达机场时领取，以避免现金支付费用。</li>
+</ul>
+<p>那么易通卡是最佳选择。</p>
+<p>如果您：</p>
+<ul>
+<li>将在新加坡停留3天或3天以下；</li>
+<li>没有计划在5年内返回新加坡；</li>
+<li>将经常使用公共交通工具——至少每天7次、两天12次、三天17次；</li>
+<li>不介意留下10新元作为押金，并在离开新加坡之前才能获得退款（尽管在樟宜机场用这么多钱买东西并不多）；</li>
+<li>对新加坡旅游通行证Plus附带的额外优势感兴趣。</li>
+</ul>
+<p>那么新加坡旅游通行证是最佳选择。</p>
+<h2>提示</h2>
+<p>在线预订一张打折的新加坡SIM卡，并在抵达机场时领取：[新加坡SIM卡（SG领取）优惠链接]。否则，如果您的手机兼容eSIM，您可以通过即时电子邮件获得eSIM新加坡，并在抵达新加坡后立即使用它。</p>
+<p>如果您将乘坐地铁（MRT）从新加坡樟宜机场前往市中心，并且不打算使用您的非接触式卡或移动钱包付款，您将必须在机场直接取款，因为易通卡只能用现金购买。在这种情况下，您将不得不使用ATM机或找到其中一个樟宜机场货币兑换处。</p>
+        <small class="page-url url "><a href="https://thaiest.com/singapore/travel/singapore-transport-tickets-best-ticket-type-for-you" target="_blank">(https://thaiest.com/singapore/travel/singapore-transport-tickets-best-ticket-type-for-you)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="The-Perfect-3-Day-Singapore-Itinerary-for-First-Time-Visitors">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📅&nbsp;</span>The Perfect 3 Day Singapore Itinerary for First Time Visitors</h3>
+        <small class="page-url url "><a href="https://www.neverendingvoyage.com/singapore-itinerary/" target="_blank">(https://www.neverendingvoyage.com/singapore-itinerary/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 推荐了新加坡的多日游行程安排，适合初次来访的游客。<br></small>
+    </div>
+    <div class="page-content content"><h2>新加坡三日游行程</h2>
+<h3>新加坡值得一游吗？</h3>
+<p>更多新加坡游记</p>
+<h2>新加坡住宿推荐</h2>
+<h3>新加坡最佳住宿区域</h3>
+<p>选择市中心区域住宿，可以充分利用您的时间。我建议您选择以下几个交通便利的区域之一的酒店：</p>
+<p>滨海湾——景色优美，美丽的河滨区，靠近滨海湾花园等新加坡顶级景点，价格昂贵。</p>
+<p>武吉士——位于滨海湾、甘榜格南和印度街区之间的便利位置。我们最近一次访问时就住在这里，可以步行到行程中的大多数地方。提供经济型和豪华型住宿。</p>
+<p>唐人街——靠近滨海湾，酒店性价比高。</p>
+<p>乌节路——如果您想靠近购物中心和大使馆，这是一个不错的选择（我们在这里办理过泰国和印度尼西亚的签证）。新加坡植物园就在附近，但对于此次行程中的其他区域来说不太方便。</p>
+<h3>新加坡推荐酒店</h3>
+<p>新加坡安达仕酒店，武吉士</p>
+<p>新加坡安达仕酒店是我们最喜欢的几家新加坡酒店之一。这家时尚的酒店地理位置优越，距离时尚的哈芝巷和甘榜格南的传统建筑仅几分钟路程。印度街区和殖民区也可步行到达，滨海湾步行30分钟或乘坐MRT两站即可到达（酒店与武吉士站相连）。</p>
+<p>我们非常喜欢宽敞、时尚的客房，落地窗可欣赏到迷人的城市景观，免费迷你酒吧，以及奈斯派索咖啡机等所有现代化设施。床非常舒适，让人难以离开。</p>
+<p>无边泳池和屋顶酒吧（设有酷炫的帐篷）的景色也令人惊叹。您全天可以随时享用阳光房提供的免费冷热非酒精饮料和小吃。</p>
+<p>我们的房价不包括早餐，但我们更喜欢点客房服务，或者附近有很多咖啡馆。</p>
+<p>查看新加坡安达仕酒店的最新价格。</p>
+<p>树顶行政公寓，乌节路</p>
+<p>我们入住树顶行政公寓是为了参加家庭聚会，并且非常喜欢这里。一居室和两居室公寓最少入住四晚，因此非常适合较长时间的旅行，尤其适合家庭。</p>
+<p>公寓宽敞舒适，拥有您所需的一切自助设施，但房价包含自助早餐。这里有一个可爱的超大型泳池，周围环绕着热带植被。</p>
+<p>滨海湾金沙酒店</p>
+<p>滨海湾金沙酒店是终极奢华之选——新加坡最著名的酒店，拥有世界上最大的屋顶无边泳池。人多且价格高，但景色或许值得。我们还没住过这里，但我们很心动。</p>
+<p>经济型住宿</p>
+<p>武吉士和甘榜格南地区有很多旅馆和胶囊酒店，例如Beary Best和The Hive Singapore Hostel。唐人街是寻找经济型酒店的好地方。波西米亚时尚旅舍是一家评价良好的时尚旅舍，Hotel Mono提供迷人的带独立浴室的双人房。</p>
+<h2>新加坡交通</h2>
+<p>新加坡交通便利。这是一个适宜步行的城市，我们总是在步行时发现一些珍宝，但白天的炎热天气会让人筋疲力尽（而且汗流浃背）。</p>
+<p>乘坐干净、高效、廉价的MRT地铁节省体力。单程票已不再提供。</p>
+<p>您可以购买SimplyGo EZ-Link卡，售价10新元，其中包含5新元的信用额度。下载EZ-Link应用程序可以更轻松地为您的卡充值。</p>
+<p>您也可以考虑购买新加坡旅游通行证，三天无限次乘车费用为29新元（10新元的可退还押金）。</p>
+<p>另一种轻松的出行方式是Grab应用程序（这里没有Uber），可以轻松叫出租车。短途车费约为10新元。</p>
+<p>我们使用谷歌地图进行步行或公共交通路线规划。</p>
+<p>新加坡樟宜机场是世界上最好的机场之一，因此请在航班起飞前留出时间探索各种花园和景点。您可以乘坐MRT往返机场，但我们发现乘坐出租车更容易，到武吉士的费用约为15-20新元。</p>
+<h2>新加坡最佳游览时间</h2>
+<p>一年中的任何时候都可以游览新加坡。</p>
+<p>我们在许多不同的月份都去过新加坡，天气总是相同的——炎热、非常潮湿、多云，而且经常有阵雨（通常非常清爽）。</p>
+<p>它比我们去过的任何地方的季节变化都少，所以我不会让天气影响您决定何时游览。</p>
+<p>在计划新加坡之旅时，请查看当地的节日和节庆活动。通常会有一个热闹的活动可以参加，例如一月份或二月份的农历新年，或者十月份或十一月份在印度街区的排灯节。</p>
+<h2>新加坡三日游行程地图</h2>
+<h2>新加坡一日游行程：殖民区和滨海湾花园</h2>
+<h3>新加坡国家博物馆</h3>
+<p>新加坡国家博物馆是了解这座城市历史的绝佳起点，它将让您了解其多元文化的根源。它坐落在一座优雅的新帕拉第式建筑中，可追溯到1887年，外面有一棵高耸的印度橡胶树。</p>
+<p>我建议您从二楼的玻璃圆形大厅开始。森林的故事展览是由日本数字艺术集体teamLab创作的，它将马来半岛丛林和野生动物的图画栩栩如生地展现出来。</p>
+<p>这是一个独特的展览，它将引导您来到一楼，在那里您可以一路了解新加坡的历史。我们在这里待了大约两个小时，但仍然没有看到所有的展览。</p>
+<p>交通：我们从武吉士的新加坡安达仕酒店步行前往（20分钟）。最近的地铁站是武吉士地铁站（Downtown 线）。</p>
+<p>建议游览：如果您更喜欢从导游而不是博物馆了解这座城市的历史，您可以参加此导游带领的新加坡殖民地步行游，其中包括午餐。</p>
+<h3>探索殖民区</h3>
+<p>国家博物馆位于新加坡的殖民区，因此在参观后，您可以漫步在这个区域，参观拥有150年历史的圣安德烈大教堂和福康宁公园。</p>
+<p>附近还有一个新加坡顶级旅游景点。历史悠久的莱佛士酒店的Long Bar是新加坡司令鸡尾酒的发源地，花生壳洒落在地板上。我们还没去过，因为它既昂贵又游客众多，但如果它在您的愿望清单上，就去吧！</p>
+<p>午餐您可以前往莱佛士城购物中心的美食广场（这些在新加坡始终是物美价廉的选择），或者步行至驳船码头（约20分钟），在河边享用美食。</p>
+<p>我们喜欢Servus的汉堡（有多种素食选择）和My Little Spanish Place的塔帕斯，或者有很多海鲜可供选择。</p>
+<p>以下是一些有关驳船码头餐饮选择的更多建议。</p>
+<h3>滨海湾花园</h3>
+<p>滨海湾花园是新加坡最好的景点之一，也是我任何新加坡之旅中必看的景点。如果可能的话，尽量避免在周末参观，因为这里人很多。</p>
+<p>您需要安排好参观花园的时间，以便在日落前结束，因为这个区域在晚上很吸引人。如果您在下午2点或3点左右到达，您应该有很多时间。</p>
+<p>广阔的户外花园是免费的，但在一天中的这个时候，您可能渴望进入室内，而付费温室非常棒。</p>
+<p>两个主要的温室——花穹和云雾林——值得一游，但如果您时间有限，请选择云雾林，它最独特，并设有一个大型瀑布。联票成人59新元/儿童45新元。</p>
+<p>自从我们上次来访以来，一个新的景点——梦幻花卉世界——已经开放，这里有悬挂的花卉展示、一个动物园和一个4D游乐设施。门票成人20新元/儿童12新元。</p>
+<p>交通：滨海湾花园距离殖民区步行30分钟，最近的地铁站是滨海湾站（Downtown 线和环线）。</p>
+<p>建议游览：如果您想在导游的带领下探索壮观的景点，那么这次滨海湾花园导览游看起来非常理想。</p>
+<h3>滨海湾金沙日落鸡尾酒</h3>
+<p>滨海湾金沙是新加坡最具标志性的建筑。三座55层高的塔楼顶部是一个船形结构，设有著名的无边泳池、花园和观景台。该建筑内设有酒店和许多商店和餐厅。</p>
+<p>日落前，我建议您前往滨海湾金沙，从顶部欣赏日落和城市摩天大楼亮起时的壮丽景色。</p>
+<p>我认为在CÉ LA VI SkyBar买一杯酒（最低消费30新元）比支付滨海湾金沙空中花园观景台的32新元/成人及28新元/儿童的门票更划算。</p>
+<p>根据一年中的时间，日落时间从下午6:50到7:20不等。</p>
+<p>上次我们星期天去的时候，排队等候的时间很长，所以请留出时间，如果您想要一个座位（站立式桌子是先到先得），请考虑预订。</p>
+<p>请注意，该酒吧从下午6点开始实行着装要求——男士不允许穿泳衣、汗衫、无袖衬衫和人字拖。星期一、星期二和星期天没有着装要求。</p>
+<p>如果您想在著名的无边泳池游泳，您必须入住滨海湾金沙酒店。</p>
+<p>交通：从滨海湾花园到滨海湾金沙酒店约步行10分钟。</p>
+<p>建议游览：在此处预订滨海湾金沙观景台的免排队门票。</p>
+<h3>超级树灯光秀</h3>
+<p>夜幕降临后，回到滨海湾花园欣赏我最喜欢的部分——超级树丛林。这些未来派树木高25至50米，钢制树干上覆盖着兰花、蕨类植物和攀援热带花卉。许多树木都发电并收集雨水。</p>
+<p>超级树在晚上被照亮时最美，免费的花园狂想曲灯光和音响秀每天晚上7:45和8:45举行。</p>
+<p>您也可以在22米高的OCBC空中步道上近距离接触大型树冠（费用为成人14新元/儿童10新元，最后入场时间为晚上8点）。</p>
+<p>湾畔沙爹是该地区享用快速、廉价晚餐的最佳场所。这个大型露天美食广场提供当地特色菜，例如沙爹、鸡肉饭和烧烤海鲜。</p>
+<p>作为素食者，我们去印度小吃摊吃玛萨拉煎饼（用土豆咖喱馅的脆米粉薄饼），只需3新元。它距离超级树丛林步行10分钟。</p>
+<p>晚上在滨海湾地区还有很多事情可以做。我已经把它放在第二天行程中了，但如果您感觉很好，您可以继续探索该地区更多的地方，包括克拉克码头和新加坡摩天轮。</p>
+<p>交通：最近的地铁站是滨海湾站（Downtown 线和环线）。</p>
+<h2>第二天：探索新加坡多元文化遗产和滨海湾夜景</h2>
+<p>新加坡是一个多元文化的城市，三大民族群体是华人、马来人和印度人。</p>
+<p>在新加坡的第二天，探索新加坡三个独特的民族社区。如果您时间有限，可以选择这条唐人街、印度街区、阿拉伯街步行游览路线。</p>
+<h3>印度街区</h3>
+<p>印度街区是新加坡印度社群的所在地，这是一个充满活力、热闹的地方，它确实让我想起了印度，这里有熏香的气味和宝莱坞音乐的声音。</p>
+<p>在印度街区，您可以：</p>
+<p>探索色彩缤纷的木制店屋。</p>
+<p>参观奢华的斯里维拉马卡里亚曼兴都庙。</p>
+<p>拍摄1900年建造的充满活力的中国别墅丹登尼亚的照片。</p>
+<p>在热闹的德卡中心和穆斯塔法中心购物（24小时营业）。</p>
+<p>在许多素食餐厅（例如Komala Vilas）享用廉价的南印度菜。尝试玛萨拉煎饼（用咖喱馅的米粉薄饼）或塔利饭，在香蕉叶上盛放大量的米饭和咖喱。</p>
+<p>如果您在一月份或二月份的泰普萨姆兴都教节日期间来访，则可以目睹色彩缤纷的卡瓦迪游行。一些信徒用尖刺刺穿他们的身体和舌头。</p>
+<p>交通：从武吉士（我们住的地方）步行即可到达印度街区，或者乘坐Downtown 线或东北线MRT到印度街区站。</p>
+<p>建议游览：在这条印度街区、德卡中心和寺庙步行游中，在专业导游的带领下深入体验。</p>
+<h3>甘榜格南</h3>
+<p>甘榜格南是新加坡的穆斯林和阿拉伯区。它是新加坡最古老的城市街区——1822年，它被斯坦福·莱佛士爵士（这座城市的奠基人）分配给马来人和阿拉伯人社区。</p>
+<p>这里有一些美丽的彩色店屋、清真寺和时尚的咖啡馆和酒吧组成的时尚场景。</p>
+<p>在甘榜格南，您可以：</p>
+<p>参观苏丹清真寺的金顶。</p>
+<p>在马来遗产中心了解马来社区（目前由于装修而关闭至2026年）。</p>
+<p>在哈芝巷的时髦精品店购物，欣赏街景艺术。</p>
+<p>晚上在哈芝巷的露天酒吧之一欣赏现场音乐。</p>
+<p>交通：印度街区和甘榜格南之间步行约15分钟，或乘坐MRT Downtown 线到武吉士站。</p>
+<p>建议游览：为什么不参加这次甘榜格南隐藏的宝石私人步行游来探索这个区域呢？</p>
+<h3>唐人街</h3>
+<p>唐人街曾经是新加坡华人移民社区的所在地，但现在它是一个融合了历史寺庙和时尚咖啡馆的多种文化交汇的地方。它是世界上唯一一个在同一条街上拥有佛教寺庙、清真寺和兴都庙的唐人街。</p>
+<p>在唐人街，您可以：</p>
+<p>参观美丽的佛牙舍利寺（佛教）。</p>
+<p>将其与天福宫（道教）进行比较。</p>
+<p>参观新加坡最古老的兴都庙——斯里玛利亚曼庙。</p>
+<p>在唐人街文化中心了解新加坡最早的移民（暂时关闭）。</p>
+<p>在唐人街美食街（上午11点至晚上11点）或麦士威熟食中心的一家露天餐馆享用美食。</p>
+<p>在附近的Whole Earth品尝素食娘惹菜肴。</p>
+<p>如果您在合适的时间（通常是一月/二月）来访，可以体验热闹的农历新年庆祝活动。</p>
+<p>交通：从武吉士乘坐MRT Downtown 线到唐人街站。</p>
+<p>建议游览：参加这次历史悠久的唐人街步行游，包括午餐，了解更多信息。</p>
+<h3>河滨和滨海湾步行</h3>
+<p>值得在滨海湾地区住两个晚上，因为这里有很多东西可以看。</p>
+<p>在第二天晚上，我建议您沿着新加坡河散步，这是我在新加坡晚上最喜欢做的事情之一，因为天气比较凉爽，且天际线景色非常棒。</p>
+<p>这段步行大约需要40分钟加上停留时间（有很多拍照机会）。</p>
+<p>如果您不想步行，您可以从克拉克码头乘坐bumboat新加坡河游轮（40分钟，18.99新元）。</p>
+<p>从克拉克码头开始步行，然后穿过驳船码头——两者都有许多酒吧和餐厅可以俯瞰水面。它有点像旅游景点，但很有趣，而且景色优美。</p>
+<p>沿着河边继续走过费尔南多·博特罗的鸟类雕塑和宏伟的富丽敦酒店，到达鱼尾狮喷泉。</p>
+<p>这座标志性雕像拥有鱼的身体和狮子的头部，从嘴里喷出水。身体象征着新加坡作为渔村的卑微起源，而头部代表着它的原始名称“新加坡”或马来语中的“狮城”。</p>
+<p>从这个区域，您可以看到光谱，这是一个每天晚上8点和9点（星期五和星期六晚上10点也举行）举行的免费灯光和水秀。</p>
+<p>海湾的这一侧将让您欣赏从滨海湾金沙投射出的彩色激光束。</p>
+<p>您也可以尝试在滨海湾金沙前面的海湾另一侧观看稍后的演出，以获得不同的视角。</p>
+<p>您可以从滨海湾金沙购物中心（滨海湾金沙的购物中心）外面的座位区看到投射在水上的投影。</p>
+<p>从鱼尾狮穿过滨海艺术中心大桥到滨海艺术中心户外剧场，那里经常有免费的表演。</p>
+<p>如果您饿了，滨海艺术中心旁边有美食街麦士威熟食中心。</p>
+<p>再沿着河边走一点，就是令人印象深刻的螺旋桥，它连接着滨海湾金沙，所以如果您想从那边观看灯光秀，可以穿过这里。</p>
+<p>或者继续沿着河边走一点，到达新加坡摩天轮，让您的新加坡观光之旅更上一层楼。</p>
+<p>交通：从唐人街步行15分钟即可到达克拉克码头，或者乘坐MRT Downtown 线到福康宁站或东北线到克拉克码头站。</p>
+<p>建议游览：为什么不在这次滨海湾夜间自行车游中，在轮子上探索这片灯火通明的滨水区呢？</p>
+<h3>新加坡摩天轮</h3>
+<p>乘坐这个巨大的摩天轮需要30分钟。起初我不确定它是否值得，但当我们到达顶部（165米）并开始下降时，景色真是壮观。</p>
+<p>您可以看到滨海湾金沙、滨海湾花园、市中心摩天大楼和整个海湾。</p>
+<p>交通：我建议沿着河边步行到这里，但要返回酒店，最近的地铁站是滨海地铁站（Downtown 线和环线）。</p>
+<p>建议游览：在此处预订您的新加坡摩天轮门票，包括时光胶囊展览入场券。</p>
+<h2>第三天：新加坡环球影城或购物和花园</h2>
+        <small class="page-url url "><a href="https://www.neverendingvoyage.com/singapore-itinerary/" target="_blank">(https://www.neverendingvoyage.com/singapore-itinerary/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Singapore-Food-Guide:-25-Must-Eat-Dishes-(&-Where-to-Try-Them)">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🥢&nbsp;</span>Singapore Food Guide: 25 Must-Eat Dishes (& Where to Try Them)</h3>
+        <small class="page-url url "><a href="https://migrationology.com/singapore-food/" target="_blank">(https://migrationology.com/singapore-food/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 探讨了新加坡特色菜品的市场情况和就餐推荐，帮助游客找到美食场所。<br></small>
+    </div>
+    <div class="page-content content"><h2>1. 加叻沙</h2>
+<p>地址：27 Jalan Berseh
+营业时间：周四至周二上午9:30 – 下午5:00（周三休息）
+价格：每碗叻沙3新元
+交通方式：您可以从武吉士或薰衣草地铁站步行前往，该地铁站位于Jalan Berseh附近的一处综合楼内</p>
+<h2>2. 肉骨茶</h2>
+<p>肉骨茶，字面意思是猪骨茶，是一道源自中国，在马来西亚和新加坡广受欢迎的菜肴。虽然人们可能会认为猪肉是用茶烹制的，但实际上食谱中并没有茶，但根据维基百科，它之所以得名是因为人们会喝浓茶来冲走猪肉汤的油腻。肉骨茶的基本食谱包括猪排骨，用白胡椒、大量大蒜和盐在水中煮沸，直到猪肉变嫩，胡椒和大蒜的所有风味都融入猪骨中，形成一道令人舒适的美味汤。肉骨茶通常与米饭一起食用，还经常搭配一些其他的中国小菜，如腌制芥菜或红烧豆腐。当然，吃肉骨茶的时候，需要用热茶送服。</p>
+<h3>欧南园亚华肉骨茶</h3>
+<p>新加坡有很多肉骨茶餐馆，但我因为位置和营业时间的关系，决定去欧南园亚华肉骨茶试试。这家餐馆是露天式的，位于一个综合楼的庭院里，我很喜欢它宽敞舒适的环境。我点了一碗瘦肉肉骨茶和一碗猪腰汤，两道菜都很好吃。肉骨茶的汤底香辣可口，但并不太辣，只是喉咙里有一点微微的辣味，感觉非常舒服。肉也很嫩，蘸一点黑酱油，再配上米饭，非常美味。</p>
+<p>地址：7 Keppel Rd, PSA丹戎巴葛综合楼, 089053
+营业时间：周二至周日上午7:00 – 次日凌晨4:00（周一休息）
+价格：排骨每碗7新元，两人一共消费36新元
+交通方式：它位于沿海公路旁，您可以选择乘坐出租车，或乘坐地铁到丹戎巴葛站，步行约10分钟即可到达。</p>
+<h2>3. 福建面</h2>
+<p>福建面与福建炒粿条（很快就会介绍）一起，是新加坡最受欢迎的炒面小吃之一。这道菜起源于中国的福建省（福建人最初的故乡），现已传入马来西亚和新加坡。福建面包括黄色的鸡蛋面和白色的米粉，用炒锅与鸡蛋、海鲜（通常是鱿鱼和虾）和豆芽一起翻炒。不同的摊贩做法略有不同，有的炒得比较干，有的会加入卤汁。福建面通常会搭配一些辣椒酱，再加上一个酸柑挤在上面，增加额外的柑橘酸味。</p>
+<h3>南兴福建炒面</h3>
+<p>说到福建面，老机场路熟食中心的南兴福建炒面是新加坡小吃界的传奇之一。我看着面条的烹饪过程，大量的面条和配料在一个大锅里烹制，每一次翻炒后，都会盖上一个大的木盖，这样面条既可以翻炒，也可以蒸。面条有咸味，我认为是盐而不是酱油的味道。我最喜欢这里福建面的地方在于它尝起来像炒面和卤汁面的结合——它相当浓郁，有很多美味的汤汁，所以面条不会干。而且，在我看来，酸柑可以让整盘福建面焕然一新，酸柑的柑橘风味与咸味的面条形成对比，使整道菜都变得清爽可口。虽然看起来像一大盘面条，但你开始吃后，你就会发现，不知不觉中，你的盘子就空了。</p>
+<p>地址：老机场熟食中心，51 Old Airport Rd
+营业时间：周二至周日上午10:30 – 下午3:00左右（周一休息）
+价格：每盘4新元
+交通方式：熟食中心靠近达科塔地铁站</p>
+<h2>4. 鸡饭</h2>
+<p>鸡饭只是将白斩鸡与美味的米饭和酱汁搭配，这道海南风味菜肴，是新加坡最受欢迎和最受喜爱的菜肴之一（在泰国也很受欢迎，被称为“カオマンガイ”）。我认为几乎每个新加坡人都对鸡饭有自己最喜欢的版本或餐馆，每个版本的鸡肉味道、质地、米饭的油腻程度以及酱汁的风格各不相同——有的更辣，有的更姜味或咸味。</p>
+<p>对我来说，我更喜欢不太油腻的鸡饭，鸡肉也不要太软，要有嚼劲。对于酱汁，我有点辣椒和姜的瘾君子，所以我的鸡饭里能放多少辣椒和姜，我就有多开心。</p>
+<h3>天天鸡饭</h3>
+<p>天天鸡饭可能是新加坡最著名的熟食摊位之一，深受当地人和游客喜爱。虽然我猜想它已经成为一个更受游客欢迎的吃鸡饭的地方，《我吃我拍我发帖》的黎志伟医生进行了一项关于最佳鸡饭摊位的调查，我假设大部分是当地人投票，而天天鸡饭仍然获胜——所以它也深受许多当地人的喜爱。这是安东尼·波登也大力推荐的摊位，尤其赞扬了米饭的美味香味。</p>
+<p>对我来说，我觉得总的来说鸡肉有点太油腻，太软了——我喜欢有点嚼劲的鸡肉。然而，米饭确实很好吃——它带有大蒜和鸡汤的香味，粘稠，几乎达到了糯米鸡（在点心餐厅用荷叶蒸的糯米饭）的程度。酱汁也很好吃，有很好的姜泥味道。</p>
+<p>地址：麦克斯韦熟食中心，1 Kadayanallur St
+营业时间：上午11:00 – 下午8:00（周一休息）
+价格：我吃了半只鸡，花了12新元，但你也可以只点一份鸡肉盖饭，价格便宜得多
+交通方式：最简单的方法是乘坐地铁到唐人街站，然后步行到麦克斯韦熟食中心</p>
+<h3>裕华鸡饭</h3>
+<p>这家位于裕华村市场和熟食中心的餐厅以其烤鸡饭而闻名于邻里之间。鸡肉质地结实丝滑，酱汁香浓可口。感谢丹尼尔带我来这里。</p>
+<p>地址：裕华村市场和熟食中心，254 Jurong East Street 24
+营业时间：上午
+价格：每份配额外鸡胗的鸡饭3新元
+交通方式：从中国花园地铁站步行约10分钟即可到达</p>
+<h3>Yet Con</h3>
+<p>Yet Con是一家老式海南鸡饭餐厅，提供美味的白斩鸡，配以姜泥和酸辣酱。这可能是我在新加坡吃过的最好吃的白斩鸡了，简单不油腻，味道鲜美。我们只点了鸡饭，但看起来他们也供应其他类似我在槟城喜欢的那家店的传统海南菜。</p>
+<p>地址：新加坡珀维斯街25号
+营业时间：每天上午11:00 – 下午9:30
+价格：半只鸡18新元
+交通方式：您可以轻松地从市政厅或武吉士地铁站步行前往</p>
+<h2>5. 炒粿条</h2>
+<p>说到新加坡的炒面，当地最受欢迎的菜肴之一就是炒粿条，这是一道用宽扁米粉、鸡蛋、黑酱油酱汁、虾酱、少许辣椒，以及中国香肠和血蛤等配料炒制而成的菜肴。</p>
+<p>炒粿条需要一定的技巧……我以前试过炒粘稠的宽米粉，结果最后变成了一大团糊状物——所以，要想炒出一盘好的炒粿条，真的需要炒锅和火候的技巧，以及对配料的了解。</p>
+<p>我自己并不是炒粿条的超级爱好者，主要是因为它对我来说通常有点甜，不够辣，而且质地太软（我认为总的来说我更喜欢福建面）。然而，炒粿条是新加坡标准且深受喜爱的街头小吃之一。</p>
+<h3>山街炒粿条</h3>
+<p>您可以在新加坡的许多熟食中心找到炒粿条，但包括黎志伟医生在内的许多炒粿条的忠实粉丝都强烈推荐山街炒粿条是全城最好吃的炒粿条之一，所以我必须去那里尝试一下。</p>
+<p>这家店位于一个邻里美食广场，周围环绕着一些巨大的公寓，美食广场环境轻松愉快，尤其在午餐时间很受欢迎。我加入了持续不断的午餐队伍，尽管前面大约有20个人，但我大约在15分钟内就收到了我的炒粿条。</p>
+<p>面条粘稠湿润，有点粘稠，但不粘在一起，豆芽清脆多汁。面条略带虾酱和黑酱油的味道，有点甜（这是炒粿条的典型特征），同时又带点咸味。再说一次，我自己并不是炒粿条的铁杆粉丝，但它很好吃，特别是如果你喜欢吃炒粿条的话。</p>
+<p>地址：#01-41,16 Bedok South Rd
+营业时间：周二至周日上午10:30 – 下午5:30（周一休息）
+价格：每盘4新元
+交通方式：它位于勿洛南市场和熟食中心，距离勿洛地铁站约10分钟步行路程</p>
+<h2>6. 萝卜糕</h2>
+<p>在新加坡的几乎每个熟食中心，都能找到另一道标准的新加坡菜——萝卜糕，它通常被称为胡萝卜糕。</p>
+<p>这是一种在泰国和越南等东南亚地区也很受欢迎的小吃。与西式甜胡萝卜糕（用橙色胡萝卜制成）不同，新加坡的胡萝卜糕实际上根本不含胡萝卜，之所以得名是因为它用的是白萝卜，在某些汉语方言中，白萝卜和胡萝卜指的是同一种东西。</p>
+<p>萝卜糕是用米粉和白萝卜丝制成的，制成米糕，用大量的猪油和鸡蛋煎炸。结果是一种油腻咸香的小吃，既粘稠又酥脆。对我来说，我不总是喜欢吃这种东西，因为它有点油腻，但它确实很好吃。</p>
+<h3>松洲萝卜糕</h3>
+<p>松洲萝卜糕位于勿洛交通枢纽熟食中心，这是一个大型交通枢纽，为许多在旅途中的人们提供服务，它以供应新加坡萝卜糕而闻名。</p>
+<p>他们有黑色和白色两种版本，我更喜欢白色版本，因为它甜味较淡，而且更脆。白色的萝卜糕柔软略带颗粒感，里面混合着许多松脆的部分，加上鸡蛋，使它更浓郁，更美味。</p>
+<p>地址：#01-18, 勿洛交通枢纽熟食中心，207 New Upper Changi Road
+营业时间：周一至周六上午6:30 – 下午8:00
+价格：每盘3新元
+交通方式：乘坐地铁到勿洛站，交通枢纽熟食中心就在车站外面</p>
+<h2>7. 云吞面</h2>
+<p>云吞面是广东的一种流行的中国菜，几乎在新加坡所有的熟食中心都能找到，它是由黄色的鸡蛋面、云吞、一些煮熟的小蔬菜，以及一些叉烧肉组成的熟悉的组合。</p>
+<p>如果可以选择面条的话，鸡蛋面是我的最爱之一。我喜欢新鲜制作的鸡蛋面的质地和韧性。对于云吞，通常将猪肉末，有时还有一些虾、芝麻油和其他调味料混合在一起，加入云吞皮的中心，包成一口大小的小包，然后焯水，与鸡蛋面一起食用。</p>
+<h3>广州面世云吞面</h3>
+<p>广州面世云吞面位于丹林苑熟食中心，是一家家庭经营的云吞面摊位，供应优质的、家常式的鸡蛋面和汤云吞。卢卡斯和他的家人联系了英和我，邀请我们一个晚上去摊位，去尝试他们长期以来在新加坡最喜欢的云吞面地方之一。当卢卡斯点额外辣椒酱的时候，我知道我马上就会喜欢上它，我强烈建议你去那里的时候也这样做。</p>
+<p>面条很细，很筋道，但有很好的嚼劲，上面还有一些瘦叉烧肉片，很像你在泰国吃到的叉烧肉，还有一些菜心，最后还有一大勺辣椒酱。在咬一口之前，我把所有的辣椒酱都拌进面条里，把它们都裹在略带油性、香味浓郁的辣椒酱里，还有一丝烟熏味，还有一丝虾酱味。太棒了，无论是面条还是辣椒酱。</p>
+<p>地址：丹林苑熟食中心。48A丹林苑路，01-04号摊位
+营业时间：周二至周六下午5:30 – 次日凌晨3:00（周日和周一休息）
+价格：3新元
+交通方式：从康门地铁站步行即可到达</p>
+<h2>8. 鱼米粉</h2>
+<p>鱼米粉是新加坡常见的另一种受欢迎的面条菜肴。</p>
+<p>米粉是一种米粉，当我吃的时候，它让我想起了我在中国广西省吃的一些米粉……我上网查了一下，它们是同一个版本，最初来自中国桂林，在新加坡的熟食摊位上也很常见。</p>
+<p>汤是用鱼和鱼骨、各种蔬菜和清淡的香草制成的，虽然新加坡有些餐馆供应清汤鱼米粉，但大多数时候会加入牛奶来加浓汤，使其更浓郁更美味。</p>
+<h3>景华鱼片米粉</h3>
+<p>景华鱼片米粉与天天鸡饭一样，是麦克斯韦熟食中心另一家重量级的熟食摊位，以其鱼米粉汤而闻名。我点了菜单上的5号，鱼片米粉。当我等待我的订单时，我可以看到后厨的厨师在切鱼，几乎就像他是在切生鱼片一样。在一个单独的锅里，他煮了一锅牛奶汤的各种配料，一旦准备好了，汤就会倒在一碗面条上，上面撒上酥脆的炸葱花，然后端上来。</p>
+<p>这里的鱼米粉纯正、简单、新鲜、非常好吃。汤有一种坚果味，也许是芝麻油的香味。这里的队伍可能非常长，需要相当长的时间才能拿到你的订单，但如果你像我一样在上午11:15左右来，几乎没有队伍，所以我只需要等大约2分钟就能拿到我的碗。</p>
+<p>地址：麦克斯韦熟食中心77号摊位，1 Kadayanallur St
+营业时间：上午11:00 – 下午8:30（周四休息）
+价格：5新元
+交通方式：从唐人街地铁站步行即可到达</p>
+<h2>9. 肉脞面</h2>
+<p>虽然在中国和整个东南亚都有类似的菜肴，但根据雅虎上的这篇文章，肉脞面是一道真正的新加坡菜。肉脞面，意思是猪肉末面，通常包括鸡蛋面，上面浇上猪肉末、其他猪肉配料，以及用醋、辣椒和酱油制成的酱汁。</p>
+<p>这道面条是干的（只是裹着辣椒油和酱汁的所有味道），但旁边有一碗清汤。我对新加坡肉脞面的酱汁非常满意——它略带油性，带有令人愉悦的醋酸味和辣椒香味。有很多传奇的小贩卖肉脞面，这是必须尝试的新加坡美食。</p>
+<h3>山街大华猪肉面</h3>
+<p>大华肉脞面最初创立于1935年（虽然在不同的地点），它是新加坡最著名的肉脞面摊位之一。虽然我读到几乎所有的时候摊位前都排着长队，有时需要等待长达1-2小时，但我去的那个周中的下午，前面只有五个人排队。</p>
+<p>面条略带嚼劲，辣椒油调味料有令人愉悦的烤味，几乎是辣椒酱的味道。整盘面条都很好吃，虽然我不能保证你也会像我一样幸运，只需要等五分钟，但这绝对是一碗值得排队等候的面条。</p>
+<p>地址：克劳福德巷466号#01-12 新加坡190465
+营业时间：每天上午9:30 – 下午9:00（每月第一个和第三个星期一休息）
+价格：您可以选择5新元、6新元、8新元或10新元。我点了6新元的碗
+交通方式：乘坐地铁到薰衣草站</p>
+        <small class="page-url url "><a href="https://migrationology.com/singapore-food/" target="_blank">(https://migrationology.com/singapore-food/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Combo-Tickets-For-Singapore-Attractions-|-Book-Now!">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🗺&nbsp;</span>Combo Tickets For Singapore Attractions | Book Now!</h3>
+        <small class="page-url url "><a href="https://www.mysingaporepass.com/combo-tickets-for-singapore-attractions" target="_blank">(https://www.mysingaporepass.com/combo-tickets-for-singapore-attractions)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 讨论了景点组合票的优势，帮助游客节省时间和费用。<br></small>
+    </div>
+    <div class="page-content content"><h2>新加坡景点联票</h2>
+<p>通过购买新加坡景点联票，您可以享受两种或多种景点的优惠价格，从而节省资金。这些联票还可以帮助您节省时间和精力，因为您无需为各个景点购买门票并在售票窗口排队。大多数此类门票还允许您跳过队伍，立即进入景点。</p>
+<p>选择裕廊飞禽公园和夜间野生动物园、新加坡动物园和夜间野生动物园或河川野生动物园和夜间野生动物园的任意组合，享受难忘的夜晚动物邂逅。或者，使用联票，您可以在环球影城和海洋馆体验惊险刺激的体验。</p>
+<p>选择Trick Eye和新加坡缆车的组合，享受一些独特的体验；或者探索滨海湾花园和滨海湾金沙，欣赏美丽的周边环境。无论您选择哪种门票，这些新加坡联票优惠都能保证您享受价格合理且值得的旅程。</p>
+<h2>新加坡动物园</h2>
+<p>新加坡动物园是体验难忘野生动物探险，沉浸于各种动物和鸟类中的理想场所。通过新加坡联票优惠，您可以一张门票探索新加坡动物园和夜间野生动物园、裕廊飞禽公园和夜间野生动物园或河川野生动物园和夜间野生动物园。</p>
+<h2>环球影城</h2>
+<p>东南亚首个也是唯一一个环球影城主题公园，为所有年龄段的人提供趣味十足的游乐设施和景点。您可以找到各种新加坡景点的环球影城联票，例如海洋馆、圣淘沙单轨列车等。</p>
+<h3>三天时间游览新加坡够吗？</h3>
+<p>是的，三天时间可以让您体验新加坡的主要景点和活动。预订新加坡景点的联票，节省时间和金钱，并拥有难忘的旅程。但是，如果您能在这座城市多待几天，将使您的旅程更加美好。</p>
+        <small class="page-url url "><a href="https://www.mysingaporepass.com/combo-tickets-for-singapore-attractions" target="_blank">(https://www.mysingaporepass.com/combo-tickets-for-singapore-attractions)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Singapore-dining-prices-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🍜&nbsp;</span>Singapore dining prices at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Singapore dining prices" target="_blank">(DDG:Singapore dining prices)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 整理了新加坡餐饮的平均价格，帮助旅客安排餐饮预算。<br></small>
+    </div>
+    <div class="page-content content"><h2>新加坡餐饮费用</h2>
+<ol>
+<li>
+<p>新加坡购物中心普通餐厅的平均消费在20-30新元左右（包括……）。</p>
+</li>
+<li>
+<p>新加坡大多数餐食（不含饮料）约3.50-5新元，饮料1新元（茶）到1.50新元（软饮）到2新元不等。</p>
+<ul>
+<li>廉价餐厅餐食：14.50新元</li>
+<li>中档餐厅两人餐（三道菜）：90.00新元</li>
+<li>麦当劳套餐（或同等组合餐）：10.00新元</li>
+</ul>
+</li>
+<li>
+<p>鉴于通货膨胀，如今每人餐费预算应为5-10新元。非酒精饮料通常低于2新元。</p>
+</li>
+</ol>
+        <small class="page-url url "><a href="DDG:Singapore dining prices" target="_blank">(DDG:Singapore dining prices)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Merlion-Park-Singapore-opening-hours-and-ticket-prices-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🦁&nbsp;</span>Merlion Park Singapore opening hours and ticket prices at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Merlion Park Singapore opening hours and ticket prices" target="_blank">(DDG:Merlion Park Singapore opening hours and ticket prices)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 介绍了自由开放的鱼尾狮公园，为用户提供观景建议。<br></small>
+    </div>
+    <div class="page-content content"><h2>鱼尾狮公园</h2>
+<p>鱼尾狮公园全天24小时开放。免费入场参观28英尺（9米）高的鱼尾狮雕像，该雕像喷水进入滨海湾……</p>
+<h3>参观信息</h3>
+<ul>
+<li><strong>门票：</strong> 免费</li>
+<li><strong>地址：</strong> 新加坡富勒顿路1号，邮编049213</li>
+<li><strong>开放时间：</strong> 每日，24小时</li>
+</ul>
+        <small class="page-url url "><a href="DDG:Merlion Park Singapore opening hours and ticket prices" target="_blank">(DDG:Merlion Park Singapore opening hours and ticket prices)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Sentosa-Island-opening-hours-ticket-prices-detailed-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🌅&nbsp;</span>Sentosa Island opening hours ticket prices detailed at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Sentosa Island opening hours ticket prices detailed" target="_blank">(DDG:Sentosa Island opening hours ticket prices detailed)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 列出了一些新加坡早上的游览建议，适合初次游客。<br></small>
+    </div>
+    <div class="page-content content"><h2>动物园早晨之旅 (含接送)</h2>
+<p>1,862 条评论 · 63.3 美元</p>
+<h2>新加坡市区早晨游</h2>
+<p>1,273 条评论 · 35.9 美元</p>
+<h2>夜间野生动物园之旅 (含接送)</h2>
+<p>1,180 条评论 · 77.4 美元</p>
+<p>景点门票：每人 11 新元。</p>
+<p>空中缆车：单程每人 7 新元，双程每人 11 新元。</p>
+<p>开放时间：上午 10:00 至晚上 9:30</p>
+        <small class="page-url url "><a href="DDG:Sentosa Island opening hours ticket prices detailed" target="_blank">(DDG:Sentosa Island opening hours ticket prices detailed)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="The-Singapore-Tourist-Pass---EZ-Link-card-for-Tourists">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🎟&nbsp;</span>The Singapore Tourist Pass - EZ-Link card for Tourists</h3>
+        <small class="page-url url "><a href="https://thesingaporetouristpass.com.sg/" target="_blank">(https://thesingaporetouristpass.com.sg/)</a><br></small>
+        <small class="page-rating rating ">评分: 6.0<br></small>
+        <small class="page-annotation annotation ">注释: 介绍了新加坡游客通行证的优势，有助于游客节省交通费用。<br></small>
+    </div>
+    <div class="page-content content"><h2>新加坡旅游通行证</h2>
+<p>这是唯一一张让你无限次乘坐公共交通工具的通行证*</p>
+<h3>为什么选择新加坡旅游通行证？</h3>
+<h4>节省交通费用</h4>
+<p>凭借无限次*乘坐公共交通工具，免费游览新加坡</p>
+<h4>享受优惠和折扣</h4>
+<p>凭借您的新加坡旅游通行证，节省景点门票等费用</p>
+<h4>无隐藏费用</h4>
+<p>无须担心汇率或兑换费用，轻松出行</p>
+<h4>无需充值</h4>
+<p>只需轻触通行证即可通行，无限次乘坐公共交通工具</p>
+        <small class="page-url url "><a href="https://thesingaporetouristpass.com.sg/" target="_blank">(https://thesingaporetouristpass.com.sg/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="SimplyGo-|-Public-Transport-Fares-in-Singapore">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🔄&nbsp;</span>SimplyGo | Public Transport Fares in Singapore</h3>
+        <small class="page-url url "><a href="https://www.simplygo.com.sg/travel-fares/" target="_blank">(https://www.simplygo.com.sg/travel-fares/)</a><br></small>
+        <small class="page-rating rating ">评分: 6.0<br></small>
+        <small class="page-annotation annotation ">注释: 对新加坡公共交通的转车规则进行了详细解释，帮助游客更好地利用交通工具。<br></small>
+    </div>
+    <div class="page-content content"><p>新加坡的巴士和火车（地铁和轻轨）车费是根据旅程中总共的行程距离收取的，这被称为里程计费系统。 它允许您在旅途中每次上车时无需支付额外费用即可换乘巴士或火车。</p>
+<h3>里程计费系统</h3>
+<p>在里程计费下，规则如下：</p>
+<p>旅程中第一次和最后一次上车（并非下车）之间最长持续时间为两小时。</p>
+<p>如果您超过此持续时间，您的储值卡将被验票闸门拒绝。 您需要在乘客服务中心支付 2 新元的管理费才能离开验票闸门。如果您在无人值守的轻轨站，可以通过对讲机联系运营控制中心寻求帮助。</p>
+<p>时间限制也适用于持有有效优惠乘车证的优惠卡持有人。</p>
+<p>旅程中最多可以进行五次换乘。</p>
+<p>允许多次地铁换乘，无需支付额外上车费。</p>
+<p>在火车站和巴士服务之间或不同巴士服务之间换乘，收费前最长持续时间为 45 分钟。</p>
+<p>在不同火车站之间换乘，收费前最长持续时间为 15 分钟。</p>
+<p>当前巴士服务编号不能与之前的巴士服务编号相同。</p>
+<p>不得在同一个火车站进站和出站。</p>
+<p>如果您在武吉班让、纽顿或淡滨尼地铁换乘站换乘地铁，则需要从您乘坐的第一条地铁线路刷卡出站，并在 15 分钟内再次刷卡进入连接线路才能继续旅程。在地铁换乘站 15 分钟后进行的换乘将被视为新的旅程。</p>
+<h4>何为换乘？</h4>
+<p>换乘可以是从地铁/轻轨到巴士服务，地铁/轻轨到另一条地铁/轻轨，巴士服务到另一条巴士服务，巴士服务到地铁/轻轨。</p>
+<h4>哪些不符合有效换乘的条件？</h4>
+<p>两次地铁站之间的换乘时间超过 15 分钟；从一辆巴士换乘到同一线路编号的另一辆巴士或往返子线路（例如，98、98A 和 98B 巴士线路之间的换乘）；往返圣淘沙巴士、夜间巴士和唐人街直达巴士的换乘；使用巴士优惠乘车证、火车优惠乘车证或混合优惠乘车证时；旅程换乘次数超过五次。</p>
+<h3>不符合换乘规则的场景示例：</h3>
+<h4>乘客超过了换乘之间的 45 分钟限额</h4>
+<p>莱奇米女士乘坐 197 路巴士，并于上午 7:51 在北桥路沿线的一个巴士站下车。上午 9:00，她在维多利亚街乘坐 63 路巴士。当她在上车时刷卡时，读卡器显示“新乘车”。她很困惑，为什么她乘坐 63 路巴士的行程被视为新的旅程。</p>
+<p>里程计费的规则规定，换乘之间的时间限制为 45 分钟。当莱奇米女士乘坐 63 路巴士时，她已经超过了连续换乘之间的 45 分钟限额。因此，她乘坐 63 路巴士的行程被正确地计费为新的旅程。</p>
+<h4>乘客超过了第一次和最后一次上车之间最长两小时的持续时间</h4>
+<p>陈女士于上午 10:03 在实龙岗路乘坐她通常乘坐的 131 路巴士，并在上午 10:30 在海港地铁站附近的巴士站下车。然后她在附近快速办事，之后在上午 11:05 在海港地铁站乘坐火车。她的火车行程在换乘之间的 45 分钟限额内。之后，陈女士在裕地地铁站下车，随后在下午 12:15 转乘 302 路巴士。陈女士被收取了 302 路巴士行程的 0.71 新元的全额车费。她觉得她这趟旅程被多收了钱，因为她通常的车费是 0.05 新元。</p>
+<p>里程计费的规则规定，旅程中第一次和最后一次上车（并非下车）之间最长持续时间为两小时。当陈女士乘坐 302 路巴士时，距她第一次在实龙岗路开始乘坐 131 路巴士旅程已经超过两小时了。因此，她乘坐 302 路巴士的行程被视为新的旅程，并且 0.71 新元的票价被正确地收取了。</p>
+<h4>乘客在一次旅程中多次乘坐同一路巴士</h4>
+<p>阿里先生乘坐 19 路巴士并在 CIAS 货运中心下车。他后来又乘坐了同一线路的 19 路巴士，并意识到他没有享受到他第二次巴士行程的换乘优惠车费。他觉得自己被多收了钱。</p>
+<p>里程计费的规则规定，乘客在一次旅程中不能多次乘坐同一路巴士。由于阿里先生第二次乘坐了同一路巴士，因此这并不符合有效换乘的条件。因此，他两次乘坐 19 路巴士的行程被视为两次独立的旅程。</p>
+<h3>成人及优惠车费</h3>
+        <small class="page-url url "><a href="https://www.simplygo.com.sg/travel-fares/" target="_blank">(https://www.simplygo.com.sg/travel-fares/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Taxi-Singapore---Prices-and-Useful-Tips-for-Taxis-in-Singapore">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🚖&nbsp;</span>Taxi Singapore - Prices and Useful Tips for Taxis in Singapore</h3>
+        <small class="page-url url "><a href="https://www.welcomepickups.com/singapore/taxi/" target="_blank">(https://www.welcomepickups.com/singapore/taxi/)</a><br></small>
+        <small class="page-rating rating ">评分: 6.0<br></small>
+        <small class="page-annotation annotation ">注释: 提供了出租车费用和使用方式的信息，便于游客预算乘车开支。<br></small>
+    </div>
+    <div class="page-content content"><h2>出租车费用是多少？</h2>
+<p>出租车价格，白天 (05:00 - 24:00)，夜间 (00:00 - 05:00)，时长</p>
+<p>从机场到市区 | 15 欧元 | 22.50 欧元 | 23 分钟
+从机场到滨海湾 | 12 欧元 | 18 欧元 | 17 分钟
+从中央商务区到滨海湾 | 4 欧元 | 6 欧元 | 5 分钟
+从市中心到新山 | 40 欧元 | 60 欧元 | 35 分钟
+从怡丰城到城市广场购物中心 | 12 欧元 | 18 欧元 | 17 分钟</p>
+<h2>新加坡出租车平均价格</h2>
+<p>与世界许多其他主要城市相比，新加坡的出租车价格相对便宜。所有价格都受到政府的严格管制，并根据行驶距离由计价器强制执行。根据您选择的新加坡出租车类型，基本费用和每公里价格会有所不同。高级和豪华轿车出租车可以根据更高的计价器系统选择其票价，但标准出租车必须按以下方式计算其价格：</p>
+<p>基本费用：2.80 欧元 (4.10 新元)
+每公里价格 (前 10 公里)：0.40 欧元 (0.60 新元)
+每公里价格 (超过 10 公里)：0.50 欧元 (0.70 新元)</p>
+<p>额外费用：</p>
+<p>虽然基本费率很便宜，但新加坡出租车费之外的额外费用可能会累加。如果您在工作日的 06:00 至 09:30 或周末的 18:00 至 00:00 的高峰时段出行，您将需要支付最终车费的额外 25%。如果您在每周任何一天的午夜 00:00 至凌晨 06:00 之间乘坐出租车，您的车费将增加 50%。白天滨海湾、中央商务区 (CBD) 和新加坡机场的接机附加费为 4.10 欧元 (6 新元)，17:00 至午夜 00:00 为 5.50 欧元 (8 新元)。</p>
+<p>我们从澳大利亚悉尼飞往雅典，这是一次艰难的旅程。在新加坡转机期间，我决定预订 Welcome Pickups。这个过程很容易……约翰来接我们，他立刻让我们感到非常受欢迎。他非常专业和尊重，英语说得很好，我相信他……</p>
+<h2>如何在新家坡乘坐出租车</h2>
+<p>在新家坡乘坐出租车再容易不过了。有很多不同的预订方式，让各种类型的旅行者和团体都能轻松地在新家坡乘坐出租车。您可以轻松地在街上拦一辆标准出租车，走到出租车候车点，致电出租车调度公司，通过新加坡出租车应用程序预订，或与私人公司预订您的行程。如果您选择在街上拦出租车，请确保出租车是空的，并且您没有站在双锯齿线或公共汽车站附近，因为出租车不允许停在那里。</p>
+<p>新加坡的出租车候车点都可以找到高级和标准出租车。城市周围、主要酒店外面、购物中心、中央商务区 (CBD) 的高级写字楼、新加坡机场、一些主要地铁站和滨海湾都有许多指定的出租车候车点。</p>
+<h2>如何从新加坡机场乘坐出租车</h2>
+<p>新加坡机场有四座航站楼，每座航站楼都有自己指定的出租车候车点。这些候车点的出租车全天候提供服务，并将使用计价器来计算它们的新加坡出租车价格。您可以预期白天从新加坡机场到市中心的出租车费用约为 15 欧元 (22 新元)，晚上为 22.50 欧元 (33 新元)。</p>
+<h2>如何从滨海湾乘坐出租车</h2>
+<p>滨海湾是亚洲最具标志性的度假和娱乐目的地之一。该建筑群有多个出租车候车点：2 号塔出口处的海滨大道、滨海湾花园外、滨海湾金沙酒店的购物中心、金沙展览中心和会议中心、赌场、1 号塔的谢尔雷斯连接出口以及通往金沙空中花园的入口。所有从滨海湾出租车候车点出发的出租车都将使用计价器来计算您的行程费用。</p>
+<h2>使用新加坡出租车应用程序</h2>
+<p>在选择新加坡出租车应用程序时，有无数的选择。从您可能已经在手机上下载的国际公司，到能为您带来最佳票价的本地出租车应用程序，您将有丰富的选择。如果您在新加坡频繁的雷暴天气或深夜出行，您可以使用新加坡出租车、CDG Zig、Ryde 或 TADA 出租车等应用程序。</p>
+<p>需要注意的是，在恶劣天气或高峰时段，您在新家坡的出租车服务可能会遇到长时间等待。为了避免等待可用出租车的烦恼，您可以与私人公司预订您的行程。</p>
+<h2>致电新加坡出租车号码</h2>
+<p>为了避免在手机上下载另一个应用程序，您始终可以致电新加坡的电话调度出租车。许多不同的公司提供这项服务，大多数公司会收取 1.95 欧元 (3 新元) 的便利费。新加坡一些最信誉良好的出租车号码是：</p>
+<p>Comfort CityCab：+65 6552 1111
+Prime Taxi：+65 6778 0808
+SMRT Taxi：+65 6555 8888
+Trans-Cab：+65 6555 3333
+Premier Taxis：+65 6363 6888</p>
+<p>但是，由于并非所有运营商都会说英语，因此建议您请您的酒店或餐厅代表您叫出租车。</p>
+<h2>新加坡提前预订出租车</h2>
+<p>能够轻松地预算和规划您的行程，因为您已经提前预订了交通工具，没有什么比这更好的了。当您提前预订新加坡出租车服务时，您不必担心在深夜或恶劣天气下四处游荡。相反，您可以享受安心，因为您的司机将始终准时将您直接送到目的地。</p>
+        <small class="page-url url "><a href="https://www.welcomepickups.com/singapore/taxi/" target="_blank">(https://www.welcomepickups.com/singapore/taxi/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Singapore-accommodation-prices-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏨&nbsp;</span>Singapore accommodation prices at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Singapore accommodation prices" target="_blank">(DDG:Singapore accommodation prices)</a><br></small>
+        <small class="page-rating rating ">评分: 5.5<br></small>
+        <small class="page-annotation annotation ">注释: 概述了新加坡各类酒店的价格信息，为寻找住宿的游客提供参考。<br></small>
+    </div>
+    <div class="page-content content"><h2>新加坡酒店</h2>
+<p>寻找新加坡酒店？二星级酒店每晚低至 34 美元，三星级酒店每晚低至 47 美元，四星级及以上酒店每晚低至 75 美元。入住阿里安娜酒店，每晚 49 美元起……</p>
+<h2>新加坡酒店</h2>
+<p>新加坡酒店每晚 17 美元起 – 通过 momondo 查找廉价酒店</p>
+<p>一般来说，酒店的平均费用约为每晚 298 美元。预订新加坡酒店的最佳时间是什么时候？</p>
+        <small class="page-url url "><a href="DDG:Singapore accommodation prices" target="_blank">(DDG:Singapore accommodation prices)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Sentosa-Island-Singapore-opening-hours-and-ticket-prices-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🚌&nbsp;</span>Sentosa Island Singapore opening hours and ticket prices at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Sentosa Island Singapore opening hours and ticket prices" target="_blank">(DDG:Sentosa Island Singapore opening hours and ticket prices)</a><br></small>
+        <small class="page-rating rating ">评分: 4.5<br></small>
+        <small class="page-annotation annotation ">注释: 简要介绍了一些交通相关的具体信息，补充了公共交通的知识。<br></small>
+    </div>
+    <div class="page-content content"><h2>货物及服务车辆通行规定</h2>
+<p>货物及服务车辆可在周一至周五（公众假期除外）上午 8 点至下午 6 点免费进入。每辆车将收取 10 美元的入场费……</p>
+        <small class="page-url url "><a href="DDG:Sentosa Island Singapore opening hours and ticket prices" target="_blank">(DDG:Sentosa Island Singapore opening hours and ticket prices)</a><br></small>
+    </div>
+
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 获取所有导航链接
+        const navLinks = document.querySelectorAll(".navigate-item");
+        // 将导航链接与目标元素建立映射关系
+        const connections = Array.from(navLinks).map(link => {
+            const targetId = link.getAttribute("href").substring(1); // 去掉 #
+            const targetElement = document.getElementById(targetId);
+            return { link, targetElement };
+        });
+        // 使用 IntersectionObserver 观察目标元素
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const { target, isIntersecting } = entry;
+                    const matchingLink = connections.find(connection => connection.targetElement === target).link;
+                    if (isIntersecting) {
+                        // 目标元素在视野中，添加高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.add("active");
+                    } else {
+                        // 目标元素离开视野，移除高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.remove("active");
+                    }
+                });
+            },
+            {
+                root: null, // 默认视口
+                threshold: 0.02
+            }
+        );
+
+        // 开始观察所有目标元素
+        connections.forEach(({ targetElement }) => observer.observe(targetElement));
+    });
+</script>
+<script>
+    // 获取元素
+    const resizer = document.querySelector('.resizer');
+    const leftColumn = document.querySelector('.left-column');
+    const rightColumn = document.querySelector('.right-column');
+    const navigate = document.querySelector('.navigate')
+
+    let isDragging = false;
+
+    // 鼠标按下事件
+    resizer.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        document.body.style.cursor = 'col-resize';
+        document.body.style.userSelect = 'none';
+    });
+
+    // 鼠标移动事件
+    document.addEventListener('mousemove', (event) => {
+        if (!isDragging) return;
+
+        // 计算新的宽度
+        const newLeftWidth = event.clientX / window.innerWidth * 100; // 转换为百分比
+
+        // 限制宽度范围
+        if (newLeftWidth > 15 && newLeftWidth < 70) {
+            leftColumn.style.flexBasis = `${newLeftWidth}%`;
+            rightColumn.style.flexBasis = `${100 - newLeftWidth}%`;
+            navigate.style.left = `${newLeftWidth + 0.15 * (100 - newLeftWidth)}%`
+            navigate.style.maxWidth = `${0.7 * (100 - newLeftWidth)}%`
+
+            const navigateRect = navigate.getBoundingClientRect();
+            const screenWidth = window.innerWidth;
+
+            // 获取右侧部分宽度
+            const rightColumnWidth = rightColumn.getBoundingClientRect().width;
+
+            // 计算 navigate 的占屏幕宽度比例
+            const navigateWidthPercentage = (navigateRect.width / screenWidth) * 100;
+
+            // 计算 navigate 居中所需的 left 值
+            const rightColumnLeft = rightColumn.getBoundingClientRect().left;
+            const navigateLeft = rightColumnLeft + (rightColumnWidth - navigateRect.width) / 2;
+
+            // 设置 navigate 的宽度和位置
+            navigate.style.left = `${navigateLeft}px`;
+        }
+    });
+
+    // 鼠标松开事件
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        document.body.style.cursor = 'default';
+        document.body.style.userSelect = 'auto';
+    });
+</script>
+</html>

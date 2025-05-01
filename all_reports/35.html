@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Agent将会在哪些领域落地?将会是多大的市场?已经有哪些初创企业盈利?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; 
+            background-color: #f4f6f8; 
+            color: #333; 
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        
+        .content {
+            border-radius: 12px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); 
+            background-color: #fff; 
+            padding: 16px; 
+            margin-bottom: 16px; 
+        }
+
+        
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .left-column{
+            flex: 0.47;
+        }
+        .right-column{
+            flex: 0.53;
+        }
+
+        .left-column {
+            background-color: #eef6ff; 
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; 
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Noto Serif", "SimSun", serif; 
+            position: relative;
+        }
+
+        
+        .title {
+            font-size: 1.4em; 
+            font-weight: 600; 
+            color: #1a1a1a; 
+            margin-bottom: 12px; 
+        }
+
+        .page-name.title {
+            font-size: 1.8em; 
+            font-weight: bold; 
+            color: #222; 
+            margin: 16px 0; 
+            text-align: left; 
+        }
+
+        .section-title {
+            font-size: 1.4em; 
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; 
+        }
+
+        
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; 
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; 
+            padding: 12px; 
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; 
+            border: 1px solid #dde3ea; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+            margin-bottom: 20px; 
+        }
+
+        
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; 
+            margin: 20px 0; 
+        }
+
+        
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; 
+            color: #666; 
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; 
+            border-radius: 8px; 
+            line-height: 1.4;
+            margin-bottom: 10px; 
+        }
+
+        
+        .page-rating {
+            background-color: #e8f4ff; 
+            color: #0078d7; 
+            font-weight: bold; 
+            border: 1px solid #aad4ff; 
+        }
+
+        
+        .page-annotation {
+            background-color: #fff5e5; 
+            color: #cc8400; 
+            font-style: italic; 
+            border: 1px solid #ffcc66; 
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; 
+        }
+
+        
+        a {
+            color: #0078d7; 
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+        
+        .content > * {
+            margin-bottom: 12px; 
+        }
+
+        
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; 
+            z-index: 300; 
+            background-color: #ffffff; 
+            color: #222; 
+            font-size: 1.1em; 
+            font-weight: 500; 
+            padding: 12px 16px; 
+            border-radius: 8px; 
+            border: 1px solid #d1e4f2; 
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05),  0 2px 4px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 16px; 
+            text-align: left; 
+            line-height: 1.6; 
+            font-family: "Inter", "Noto Sans", sans-serif; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        
+        .section-link-box {
+            display: inline-block; 
+            margin: 4px 2px; 
+        }
+
+        .section-link {
+            display: inline-flex; 
+            align-items: center; 
+            padding: 6px 12px; 
+            background-color: #eef6ff; 
+            color: #0078d7; 
+            font-size: 0.95em; 
+            font-weight: 500; 
+            text-decoration: none; 
+            border: 1px solid #d1e4f2; 
+            border-radius: 20px; 
+            transition: all 0.2s ease; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; 
+            color: #005bb5; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            text-decoration: underline; 
+        }
+
+        
+        .navigate {
+            display: flex; 
+            max-width: 40%;
+            width: fit-content; 
+            flex-wrap: nowrap; 
+            overflow-x: auto; 
+            gap: 4px; 
+            justify-content: center; 
+            padding: 4px 4px; 
+            background-color: #f4f6f8; 
+            border-radius: 12px; 
+
+            position: fixed;
+            top: 0;
+            left: 55%;
+            
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease; 
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        
+        .navigate-item {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            background-color: #ffffff; 
+            padding: 3px 6px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            transition: all 0.3s ease; 
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            transform: translateY(2px); 
+        }
+        .navigate-item.active {
+            box-shadow: 0 0 10px 3px rgba(0, 120, 215, 0.5); 
+            transform: translateY(1px); 
+        }
+        .navigate-item a {
+            text-decoration: none; 
+            color: #0078d7; 
+            font-weight: bold; 
+            font-size: 1em; 
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; 
+            margin-bottom: 1px; 
+        }
+        .navigate-item-id {
+            font-size: 0.9em; 
+            color: #555; 
+        }
+
+        [id] { 
+            scroll-margin-top: 55px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            AI Agent将会在哪些领域落地?将会是多大的市场?已经有哪些初创企业盈利?
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">医疗行业中的AI Agent应用</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#AI-Agent-applications-in-healthcare-at-DuckDuckGo">
+    🏥患者参与</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agent-market-size-in-healthcare-at-DuckDuckGo">
+    📈市场规模</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agents-Market-Size,-Share,-Trends-&-Insights-Report,-2035">
+    🎓市场增长</a></div><div class="section-link-box"><a class="section-link" href="#successful-AI-agent-startups-in-healthcare-at-DuckDuckGo">
+    💡</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agents-Market-Size,-Share-and-Global-Forecast-to-2030-|-MarketsandMarkets">
+    </a></div></div>
+    <div class="section-content content"><p>从对话中收集到的医疗行业中AI Agent应用的相关信息如下：</p>
+<ol>
+<li><strong>应用案例</strong>：</li>
+<li>AI代理通过虚拟助手、个性化健康应用和远程医疗平台与患者互动，提升患者参与度和满意度。</li>
+<li>AI代理简化了预约安排，优化了预约调度，提高了效率，减少了等待时间。</li>
+<li>
+<p>AI代理在疾病预测方面表现出色，能够识别遗传倾向和预测药物反应。</p>
+</li>
+<li>
+<p><strong>市场规模</strong>：</p>
+</li>
+<li>
+<p>预计全球AI代理市场将在2024年达到52.9亿美元，到2035年将增长至2168亿美元，年复合增长率为40.15%。</p>
+</li>
+<li>
+<p><strong>成功的初创企业</strong>：</p>
+</li>
+<li><strong>Kairo Health</strong>：利用AI代理帮助提供患者护理，以更低的成本解决护理人员短缺问题。</li>
+</ol>
+<p>用户可能最关心的部分是：
+- AI代理在患者参与、预约调度和疾病预测等具体应用上如何直接提升医疗服务的效率和质量。
+- 未来市场规模的增长潜力，尤其是在医疗行业面临技术需求和市场机会日益增加的背景下，投资于相关初创企业是否具备良好前景。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">金融行业中的AI Agent应用</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#AI-Agents-in-Finance:-Applications-And-Examples">
+    实时欺诈检测</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agent-applications-in-healthcare-at-DuckDuckGo">
+    🏥客户服务自动化</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agent-market-size-in-healthcare-at-DuckDuckGo">
+    📈市场规模增长</a></div><div class="section-link-box"><a class="section-link" href="#AI-In-Education-Market-Size-&-Share-|-Industry-Report,-2030">
+    📊</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agents-Market-Size,-Share,-Trends-&-Insights-Report,-2035">
+    🎓</a></div></div>
+    <div class="section-content content"><p>在金融行业中，AI Agent的应用涉及多个关键功能，具体信息如下：</p>
+<ol>
+<li><strong>实时欺诈检测</strong>：</li>
+<li>
+<p>AI代理利用机器学习和异常检测算法实时监控交易活动，识别潜在的欺诈性活动。其能力在于快速处理大量数据，能够发现微妙的异常，从而提升交易安全性。</p>
+</li>
+<li>
+<p><strong>风险管理</strong>：</p>
+</li>
+<li>
+<p>AI代理采用预测分析和深度学习评估金融风险，执行压力测试和情景分析。这些代理可以分析海量数据集，识别风险因素，提高决策的准确性和可靠性。</p>
+</li>
+<li>
+<p><strong>财务报告自动生成</strong>：</p>
+</li>
+<li>
+<p>AI能够自动从海量文档中提取必要数据，生成财务报告，提升工作效率，减少人工错误。</p>
+</li>
+<li>
+<p><strong>个性化客户服务</strong>：</p>
+</li>
+<li>
+<p>使用聊天机器人和虚拟助手提供个性化的24/7客户服务，提升客户体验。</p>
+</li>
+<li>
+<p><strong>市场规模与增长</strong>：</p>
+</li>
+<li>
+<p>据预测，AI代理市场规模将从2024年的51亿美元增长到2030年的471亿美元，年均增长率为44.8%。这一惊人的增长潜力凸显了该行业对AI技术的强劲需求。</p>
+</li>
+<li>
+<p><strong>成功的初创企业</strong>：</p>
+</li>
+<li>成功的初创公司包括ZestFinance，它提供公平透明的信用接入，推动了信用评分和借款人违约预测的进步。</li>
+</ol>
+<p>用户可能最关心的部分是AI在金融行业如何通过实时欺诈检测和风险管理，大幅提高决策效率和降低风险，并且市场需求和发展机遇巨大。尤其是AI代理在提升客户服务方面的应用，可以为金融机构带来更好的业绩与客户满意度。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">教育行业中的AI Agent应用</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#AI-Agents-Will-Shape-Every-Aspect-Of-Education-In-2025">
+    💳教育创新</a></div><div class="section-link-box"><a class="section-link" href="#AI-In-Education-Market-Size-&-Share-|-Industry-Report,-2030">
+    📊AI推动学习</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agent-market-size-in-healthcare-at-DuckDuckGo">
+    📈市场规模</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agents-Market-Size,-Share,-Trends-&-Insights-Report,-2035">
+    🎓AI市场预测</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agents-Market-Size,-Share-and-Global-Forecast-to-2030-|-MarketsandMarkets">
+    AI代理市场</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agent-applications-in-healthcare-at-DuckDuckGo">
+    🏥</a></div><div class="section-link-box"><a class="section-link" href="#successful-AI-agent-startups-in-healthcare-at-DuckDuckGo">
+    💡</a></div></div>
+    <div class="section-content content"><p>在教育行业中的AI Agent应用，该维度包含以下关键信息：</p>
+<ol>
+<li><strong>应用场景</strong>：</li>
+<li>
+<p>AI Agent在教育领域主要应用于<strong>个性化学习</strong>和<strong>智能辅导</strong>。这些技术能够根据学生的学习习惯、知识水平和反馈，提供定制化的学习资源和指导，从而提升学生的学习体验和效果。</p>
+</li>
+<li>
+<p><strong>市场规模</strong>：</p>
+</li>
+<li>
+<p>全球AI在教育市场的预估数据显示，预计到<strong>2030年市场规模可达322亿美元</strong>，并且将以<strong>31.2%的复合年增长率增长</strong>。这一数据表明，AI技术在教育领域具备巨大的增长潜力。</p>
+</li>
+<li>
+<p><strong>具体案例</strong>：</p>
+</li>
+<li>在个性化学习方面，AI Agent能够分析学生的学习数据，及时调整教学内容，以适应每个学生的学习进度和能力。</li>
+<li>例如，学校和教育机构越来越多地利用AI分析来监测学生表现和设计干预策略，目的在于提升学生的学习效果与参与度。</li>
+</ol>
+<p>用户可能最关心的部分集中在以下几点：
+- AI Agent如何通过个性化学习和智能辅导提升学生的学习效果。
+- 市场规模的增长预期反映出了教育领域对AI技术的需求。
+- 具体如何利用AI技术分析学生的学习数据，以便更好地进行个性化干预。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">制造行业中的AI Agent应用</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#AI-agent-for-manufacturing:-Applications-and-use-cases,-components,-capabilities,-implementation-and-benefits">
+    📚生产优化</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agents-Market-Size,-Share,-Trends-&-Insights-Report,-2035">
+    🎓市场预测</a></div><div class="section-link-box"><a class="section-link" href="#AI-Agent-market-size-in-healthcare-at-DuckDuckGo">
+    📈市场规模</a></div></div>
+    <div class="section-content content"><p>在制造行业中的AI Agent应用中，相关信息主要集中在以下几个方面：</p>
+<ol>
+<li><strong>应用案例</strong>：</li>
+<li>AI代理被用于<strong>预测性维护</strong>。它们能够分析和合成大量的技术文档和维护记录，以识别潜在设备故障的模式，从而帮助制造公司减少停机时间和维护成本，提高设备的使用寿命。</li>
+<li>
+<p>在<strong>质量控制</strong>方面，AI代理通过分析大量的检查报告和技术文档，识别常见的缺陷模式，并生成改进产品质量的见解。</p>
+</li>
+<li>
+<p><strong>市场规模与趋势</strong>：</p>
+</li>
+<li>AI代理市场预计将从2024年的52.9亿美元增长至2035年的2168亿美元，年均增长率为40.15%。</li>
+<li>
+<p>这一增长主要受到生产流程效率提升的驱动，企业通过AI代理的引入，能够实现数据分析的自动化，从而有效应对市场变化，优化资源分配。</p>
+</li>
+<li>
+<p><strong>成功案例</strong>：</p>
+</li>
+<li>AI代理在制造领域的成功应用，如通过自动化和优化操作流程来提升生产效率，实现高效的资源配置和降低运营成本，促使制造业企业在竞争激烈的市场中保持优势。</li>
+</ol>
+<p>用户可能最关心的部分包括：
+- AI代理在制造业中具体的<strong>成本降低</strong>和<strong>效率提升</strong>的表现。
+- 该行业<strong>市场规模</strong>及其<strong>未来增长潜力</strong>，尤其是针对预测性维护与质量控制的具体数据和分析。
+- 实际应用中的<strong>成功案例</strong>，如企业如何通过AI代理技术解决具体问题，提升整体绩效。</p>
+<p>这些内容针对制造行业中的AI Agent应用的独特维度，具体而富有信息量。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">零售行业中的AI Agent应用</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#successful-AI-agent-startups-in-healthcare-at-DuckDuckGo">
+    💡产品推荐</a></div><div class="section-link-box"><a class="section-link" href="#Artificial-Intelligence-(AI)-in-Retail-Market-Growth,-Trends-and-Industry-Analysis-|-MarketsandMarkets">
+    市场规模</a></div><div class="section-link-box"><a class="section-link" href="#AI-agents-for-retail-and-e-commerce:-Capabilities,-use-cases,-benefits-and-implementation">
+    智能库存管理</a></div><div class="section-link-box"><a class="section-link" href="#AI-Driven-Business-Models:-4-Characteristics-|-HBS-Online">
+    市场机会</a></div></div>
+    <div class="section-content content"><ol>
+<li><strong>应用案例</strong>：</li>
+<li><strong>个性化产品推荐</strong>：如SHEIN利用AI为用户提供个性化的产品推荐，增强购物体验。</li>
+<li><strong>智能库存管理</strong>：Levi Strauss通过数据分析，预测需求并优化库存，以确保客户到店时能够找到所需产品。</li>
+<li>
+<p><strong>动态定价策略</strong>：AI可以根据市场变化和需求实时调整商品价格，提高销售效率。</p>
+</li>
+<li>
+<p><strong>市场规模</strong>：</p>
+</li>
+<li>
+<p>零售行业的AI市场预计到2030年将达到164.74亿美元，年复合增长率为32%。</p>
+</li>
+<li>
+<p><strong>成功的初创企业</strong>：</p>
+</li>
+<li><strong>Contentful</strong>：提供个性化产品推荐的平台，帮助品牌优化电商体验。</li>
+<li><strong>Route</strong>：通过智能分析增强用户交互，提升购物体验。</li>
+</ol>
+<h3>用户关注的部分：</h3>
+<ul>
+<li>AI Agent通过个性化产品推荐和智能库存管理，提高了消费者的购物体验，满足了不同消费者的需求和偏好。</li>
+<li>市场机会明显，预计到2030年的市场规模将达到164.74亿美元，展现出巨大的增长潜力。</li>
+<li>成功的初创企业如SHEIN和Levi Strauss正在利用AI技术提升客户满意度和运营效果，显示出该技术在零售行业的实际应用与前景。</li>
+</ul></div>
+</div>
+</div>
+<hr>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item" href="#AI-Agent-applications-in-healthcare-at-DuckDuckGo">
+    <a href="#AI-Agent-applications-in-healthcare-at-DuckDuckGo" class="navigate-item-emoji ">🏥</a>
+    <a href="#AI-Agent-applications-in-healthcare-at-DuckDuckGo" class="navigate-item-id">1</a>
+</div><div class="navigate-item" href="#AI-Agents-Will-Shape-Every-Aspect-Of-Education-In-2025">
+    <a href="#AI-Agents-Will-Shape-Every-Aspect-Of-Education-In-2025" class="navigate-item-emoji ">💳</a>
+    <a href="#AI-Agents-Will-Shape-Every-Aspect-Of-Education-In-2025" class="navigate-item-id">2</a>
+</div><div class="navigate-item" href="#AI-agent-for-manufacturing:-Applications-and-use-cases,-components,-capabilities,-implementation-and-benefits">
+    <a href="#AI-agent-for-manufacturing:-Applications-and-use-cases,-components,-capabilities,-implementation-and-benefits" class="navigate-item-emoji ">📚</a>
+    <a href="#AI-agent-for-manufacturing:-Applications-and-use-cases,-components,-capabilities,-implementation-and-benefits" class="navigate-item-id">3</a>
+</div><div class="navigate-item" href="#AI-Agent-Startups-to-Watch">
+    <a href="#AI-Agent-Startups-to-Watch" class="navigate-item-emoji ">🏭</a>
+    <a href="#AI-Agent-Startups-to-Watch" class="navigate-item-id">4</a>
+</div><div class="navigate-item" href="#AI-Agents-Show-Huge-Promise,-But-Face-Technical-Barriers-to-Wide-Adoption-|-by-Ardent-Venture-Partners-|-Medium">
+    <a href="#AI-Agents-Show-Huge-Promise,-But-Face-Technical-Barriers-to-Wide-Adoption-|-by-Ardent-Venture-Partners-|-Medium" class="navigate-item-emoji ">🛍</a>
+    <a href="#AI-Agents-Show-Huge-Promise,-But-Face-Technical-Barriers-to-Wide-Adoption-|-by-Ardent-Venture-Partners-|-Medium" class="navigate-item-id">5</a>
+</div><div class="navigate-item" href="#successful-AI-agent-startups-in-healthcare-at-DuckDuckGo">
+    <a href="#successful-AI-agent-startups-in-healthcare-at-DuckDuckGo" class="navigate-item-emoji ">💡</a>
+    <a href="#successful-AI-agent-startups-in-healthcare-at-DuckDuckGo" class="navigate-item-id">6</a>
+</div><div class="navigate-item" href="#AI-In-Education-Market-Size-&-Share-|-Industry-Report,-2030">
+    <a href="#AI-In-Education-Market-Size-&-Share-|-Industry-Report,-2030" class="navigate-item-emoji ">📊</a>
+    <a href="#AI-In-Education-Market-Size-&-Share-|-Industry-Report,-2030" class="navigate-item-id">7</a>
+</div><div class="navigate-item" href="#AI-Agents:-Who-Profits-and-What-Are-They?-|-by-Stewart-Townsend-|-AI-for-the-next-century-|-Medium">
+    <a href="#AI-Agents:-Who-Profits-and-What-Are-They?-|-by-Stewart-Townsend-|-AI-for-the-next-century-|-Medium" class="navigate-item-emoji ">🔧</a>
+    <a href="#AI-Agents:-Who-Profits-and-What-Are-They?-|-by-Stewart-Townsend-|-AI-for-the-next-century-|-Medium" class="navigate-item-id">8</a>
+</div><div class="navigate-item" href="#AI-Agents-Market-Size,-Share,-Trends-&-Insights-Report,-2035">
+    <a href="#AI-Agents-Market-Size,-Share,-Trends-&-Insights-Report,-2035" class="navigate-item-emoji ">🎓</a>
+    <a href="#AI-Agents-Market-Size,-Share,-Trends-&-Insights-Report,-2035" class="navigate-item-id">9</a>
+</div><div class="navigate-item" href="#AI-Regulations-and-Ethics:-What-Executives-Need-to-Know">
+    <a href="#AI-Regulations-and-Ethics:-What-Executives-Need-to-Know" class="navigate-item-emoji ">💵</a>
+    <a href="#AI-Regulations-and-Ethics:-What-Executives-Need-to-Know" class="navigate-item-id">10</a>
+</div><div class="navigate-item" href="#AI-Compliance:-Top-6-challenges-&-case-studies">
+    <a href="#AI-Compliance:-Top-6-challenges-&-case-studies" class="navigate-item-emoji ">🚀</a>
+    <a href="#AI-Compliance:-Top-6-challenges-&-case-studies" class="navigate-item-id">11</a>
+</div><div class="navigate-item" href="#AI-Agent-market-size-in-healthcare-at-DuckDuckGo">
+    <a href="#AI-Agent-market-size-in-healthcare-at-DuckDuckGo" class="navigate-item-emoji ">📈</a>
+    <a href="#AI-Agent-market-size-in-healthcare-at-DuckDuckGo" class="navigate-item-id">12</a>
+</div><div class="navigate-item" href="#AI-Agents-in-Finance:-Applications-And-Examples">
+    <a href="#AI-Agents-in-Finance:-Applications-And-Examples" class="navigate-item-emoji hidden"></a>
+    <a href="#AI-Agents-in-Finance:-Applications-And-Examples" class="navigate-item-id">13</a>
+</div><div class="navigate-item" href="#AI-Agents-Market-Size,-Share-and-Global-Forecast-to-2030-|-MarketsandMarkets">
+    <a href="#AI-Agents-Market-Size,-Share-and-Global-Forecast-to-2030-|-MarketsandMarkets" class="navigate-item-emoji hidden"></a>
+    <a href="#AI-Agents-Market-Size,-Share-and-Global-Forecast-to-2030-|-MarketsandMarkets" class="navigate-item-id">14</a>
+</div><div class="navigate-item" href="#AI-in-FinTech:-Meet-the-Top-10-Startups-Powered-by-AI">
+    <a href="#AI-in-FinTech:-Meet-the-Top-10-Startups-Powered-by-AI" class="navigate-item-emoji hidden"></a>
+    <a href="#AI-in-FinTech:-Meet-the-Top-10-Startups-Powered-by-AI" class="navigate-item-id">15</a>
+</div><div class="navigate-item" href="#金融-AI：应用、示例和优势-|-Google-Cloud">
+    <a href="#金融-AI：应用、示例和优势-|-Google-Cloud" class="navigate-item-emoji hidden"></a>
+    <a href="#金融-AI：应用、示例和优势-|-Google-Cloud" class="navigate-item-id">16</a>
+</div><div class="navigate-item" href="#AI-agents-for-retail-and-e-commerce:-Capabilities,-use-cases,-benefits-and-implementation">
+    <a href="#AI-agents-for-retail-and-e-commerce:-Capabilities,-use-cases,-benefits-and-implementation" class="navigate-item-emoji hidden"></a>
+    <a href="#AI-agents-for-retail-and-e-commerce:-Capabilities,-use-cases,-benefits-and-implementation" class="navigate-item-id">17</a>
+</div><div class="navigate-item" href="#Artificial-Intelligence-(AI)-in-Retail-Market-Growth,-Trends-and-Industry-Analysis-|-MarketsandMarkets">
+    <a href="#Artificial-Intelligence-(AI)-in-Retail-Market-Growth,-Trends-and-Industry-Analysis-|-MarketsandMarkets" class="navigate-item-emoji hidden"></a>
+    <a href="#Artificial-Intelligence-(AI)-in-Retail-Market-Growth,-Trends-and-Industry-Analysis-|-MarketsandMarkets" class="navigate-item-id">18</a>
+</div><div class="navigate-item" href="#AI-in-Retail-and-E-Commerce:-30-Examples-to-Know-|-Built-In">
+    <a href="#AI-in-Retail-and-E-Commerce:-30-Examples-to-Know-|-Built-In" class="navigate-item-emoji hidden"></a>
+    <a href="#AI-in-Retail-and-E-Commerce:-30-Examples-to-Know-|-Built-In" class="navigate-item-id">19</a>
+</div><div class="navigate-item" href="#AI-Driven-Business-Models:-4-Characteristics-|-HBS-Online">
+    <a href="#AI-Driven-Business-Models:-4-Characteristics-|-HBS-Online" class="navigate-item-emoji hidden"></a>
+    <a href="#AI-Driven-Business-Models:-4-Characteristics-|-HBS-Online" class="navigate-item-id">20</a>
+</div><div class="navigate-item" href="#5-AI-Case-Studies-in-Retail-|-VKTR">
+    <a href="#5-AI-Case-Studies-in-Retail-|-VKTR" class="navigate-item-emoji hidden"></a>
+    <a href="#5-AI-Case-Studies-in-Retail-|-VKTR" class="navigate-item-id">21</a>
+</div>
+    </div>
+    <div class="page"  id="AI-Agent-applications-in-healthcare-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏥&nbsp;</span>AI Agent applications in healthcare at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:AI Agent applications in healthcare" target="_blank">(DDG:AI Agent applications in healthcare)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: AI代理在医疗行业提升患者互动与服务效率，专注于预约管理和疾病预测。<br></small>
+    </div>
+    <div class="page-content content"><h2>提升患者参与度和满意度</h2>
+<p>AI 代理通过虚拟助手、个性化健康应用程序和远程医疗平台与患者互动……</p>
+<h2>AI 代理简化流程</h2>
+<p>AI 代理简化预约安排，即时解答患者疑问，并管理处方续签，从而减少等待时间并改善……</p>
+<h2>AI 代理显著增强患者体验</h2>
+<p>AI 代理通过提供高质量的医疗服务、即时、准确的响应和全天候支持，显著增强患者体验……</p>
+<h3>AI 代理在医疗保健中的应用</h3>
+<p>在医疗保健领域，AI 代理可以处理以下任务：索赔处理：AI 代理自主审核索赔、验证文件……</p>
+<p>AI 代理已被用于识别遗传易感性、预测药物反应以及根据患者数据定制治疗方案。这……</p>
+        <small class="page-url url "><a href="DDG:AI Agent applications in healthcare" target="_blank">(DDG:AI Agent applications in healthcare)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="AI-Agents-Will-Shape-Every-Aspect-Of-Education-In-2025">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💳&nbsp;</span>AI Agents Will Shape Every Aspect Of Education In 2025</h3>
+        <small class="page-url url "><a href="https://www.forbes.com/sites/rayravaglia/2024/12/26/ai-agents-will-shape-every-aspect-of-education-in-2025/" target="_blank">(https://www.forbes.com/sites/rayravaglia/2024/12/26/ai-agents-will-shape-every-aspect-of-education-in-2025/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: AI在金融行业里实时监控交易，提升决策效率和客户体验。<br></small>
+    </div>
+    <div class="page-content content"><p>2025 年，人工智能将越来越多地以人工智能代理的形式出现……学生和其他人与其互动，而不仅仅是一个可以使用的工具。过去两年，人工智能一直是教育技术和创新讨论的焦点，并且在可预见的未来，它也可能继续如此。为了辨别 2025 年可能出现的情况，我采访了几位在 2024 年塑造了故事的教育创新者，请他们谈谈他们认为即将出现的情况。一个突出的主题是人工智能代理的兴起。</p>
+<h2>人工智能代理的兴起</h2>
+<p>在这种情况下，“代理”的概念区别在于：自己使用工具完成某件事与请别人为你做事。想象一下，你正在尝试解决一个数学问题。工具方法是使用搜索引擎查找问题或找到解决方案，之后你必须筛选结果。代理方法是要求它为你解决问题。这样做时，你需要提供的上下文信息越少，这个过程就感觉越自然。如果人工智能代理清楚地了解你是谁、你了解什么以及你更喜欢如何学习，那么很容易将其视为你正在与之互动的实体，而不是你正在使用的工具。</p>
+<p>Brainly 的首席技术官 Bill Salak 预计，2025 年将出现能够根据简单的用户指令执行复杂任务的人工智能代理。“用户无需浏览多个平台，只需将他们的目标告知代理，代理将代表他们采取行动，聚合数据、做出决策并无缝地执行操作。这一发展将从根本上改变我们体验和使用网络的方式，优先考虑效率和个性化。为人类互动而设计的网站将转变为针对代理的 API，以查找和利用 API 背后的业务能力。”</p>
+<p>YouScience 的首席技术官 Brad Barton 同意这种观点，他指出，随着“人工智能变得越来越复杂，它们正迅速成为学生最喜欢的互动式个性化支持工具。随着教育工作者接受这种引人入胜的学习工具，我们可以预期它们将越来越多地集成到课堂、辅导平台和教育应用程序中。”</p>
+<p>HMH 首席执行官 Jack Lynch 也认为，人工智能代理将在 K-12 教育中扮演更重要的角色。“今年，我们将看到在使用技术（特别是 GenAI）方面取得真正的进展，从而节省教师的时间。这将使他们能够专注于他们最擅长的事情：直接与学生合作，并培养对学生成长和成就至关重要的深厚联系。”</p>
+<h3>微软警告数百万 Windows 用户——请勿在您的电脑上安装此更新</h3>
+<h3>今日纽约时报迷你填字游戏线索及答案，12 月 28 日星期六</h3>
+<h3>NFL 选秀、道具和第 17 周赔率：包装工-维京人和猎鹰-指挥官</h3>
+<p>互动和个性化的体验对学生来说极具吸引力，因为人工智能与学生互动的方式就像老师与学生互动一样。一个优秀的人工智能代理就像一位优秀的老师，当被问到问题时，也能理解学生的当前知识水平，并给出经过优化的答案以促进理解。有时，这可能是用一个问题来回答问题，或者回答另一个问题来解决导致最初问题出现的潜在困惑。</p>
+<h2>课堂内外的人工智能代理</h2>
+<p>代理的角色不仅仅是教师的角色。Bill Salak 观察到，“人工智能代理将承担传统上由人类员工处理的许多责任，从行政任务到更复杂、更具分析性的角色。这种转变将导致对人类如何为教育体验做出贡献进行大规模的重新定义。” 人类必须专注于独特的技能——创造力、战略思维、情商和适应能力。角色将越来越多地围绕监督、与人工智能代理合作或增强人工智能代理的能力展开。</p>
+<p>思科 Webex 客户体验解决方案高级副总裁兼总经理 Jay Patel 同意人工智能代理将无处不在。它们不仅会改变学生和教师的课堂体验，还会深刻影响所有领域。他指出，这些人工智能模型（包括小型语言模型）“足够复杂，可以在单个设备上运行，使用户能够拥有高度个性化的虚拟助手。” 这些代理将更高效，更能满足个人的需求，因此似乎更智能。</p>
+<p>Jay Patel 预测，“被采用的代理将体现组织独特的价值观、个性和目标。这将确保人工智能以一种深度品牌一致的方式进行互动。” 这将推动良性循环，因为人工智能代理的互动不会让人感觉像是被交给了一个未经培训的实习生，而更像是交给了一个了解所有应该了解的事物的人。</p>
+<h2>直视人工智能代理</h2>
+<p>为了让人工智能代理发挥其全部潜力，与它们互动的体验必须感觉自然。随意的口语互动将非常重要，代理能够理解提问的上下文也同样重要。</p>
+<p>Tavus 首席执行官 Hassaan Raza 认为，“人类层面”将使人工智能代理能够发挥其作为教师的全部潜力。代理需要能够与学生建立联系，并以一种不仅展现学科知识而且展现同理心的方式与学生互动。这些代理的强大界面将包括视频，允许学生直视人工智能的眼睛。</p>
+<p>Tavus 在去年 12 月发布了一个数字圣诞老人时提供了一个此类界面的病毒式示例。几周内，超过一百万人与数字圣诞老人见面，主张他们有权在好人名单上。Tavus 发现，为人工智能提供正确类型的人机界面会极大地提高人们进行令人满意互动的能力。</p>
+<p>使这一切成为可能的部分原因是转向在视频环境中与分布式团队合作。一旦我们习惯了通过视频与我们从未见过面的老师或学生合作，那么与人工智能代理合作就会容易得多，尤其是在这些代理具有强大的视频呈现能力的情况下。</p>
+<p>人工智能伙伴的成功提供了另一种可能性。虽然这些公司的重点并非在于创造支持性的学习伙伴，但这种潜力仍然很大，并说明了人工智能代理可能发展的其他方向。</p>
+<h2>人工智能代理将无处不在</h2>
+<p>代理在教育方面的潜力巨大。正如思科协作高级副总裁兼总经理 Anurag Dhingra 所说，“你将在 2025 年的一天醒来，意识到你一直在使用生成式人工智能。无论你是在工作、上学、在家、度假还是只是使用手机——人工智能都会巧妙地融入我们所做的几乎所有事情中。”</p>
+<p>人工智能进入我们日常生活的方式将以人工智能代理的形式出现。随着我们越来越习惯使用它们，公司将越来越乐于将其部署到其组织的各个方面。这在教育领域尤其如此，因为几十年来对个性化的追求已经为此奠定了基础。预计人工智能代理将在 2025 年塑造教育的各个方面。</p>
+        <small class="page-url url "><a href="https://www.forbes.com/sites/rayravaglia/2024/12/26/ai-agents-will-shape-every-aspect-of-education-in-2025/" target="_blank">(https://www.forbes.com/sites/rayravaglia/2024/12/26/ai-agents-will-shape-every-aspect-of-education-in-2025/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="AI-agent-for-manufacturing:-Applications-and-use-cases,-components,-capabilities,-implementation-and-benefits">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📚&nbsp;</span>AI agent for manufacturing: Applications and use cases, components, capabilities, implementation and benefits</h3>
+        <small class="page-url url "><a href="https://www.leewayhertz.com/ai-agent-for-manufacturing/" target="_blank">(https://www.leewayhertz.com/ai-agent-for-manufacturing/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: AI在教育中提升个性化学习，并推动未来市场增长。<br></small>
+    </div>
+    <div class="page-content content"><h2>现代制造业中人工智能代理的应用</h2>
+<p>在现代制造业中，企业持续面临着诸多挑战：优化生产流程、最大限度地减少停机时间、保持严格的质量控制以及有效地管理成本。传统的模式往往难以应对这些需求，导致效率低下、成本增加以及错失创新机会。而人工智能的出现，提供了一种变革性的解决方案，重新定义了制造流程。</p>
+<p>利用人工智能的能力，使制造企业能够应对故障检测、减少错误和优化维护等挑战。人工智能从海量数据集中学习的能力，提高了生产周期精度和效率，减少了对人工干预的依赖。此外，人工智能驱动的分析为组织提供了制定重要决策、优化资源配置和改进库存管理的工具。根据Precedence Research的数据，2022年全球制造业人工智能市场规模达到38亿美元，预计到2032年将增长至约683.6亿美元。这一增长是由2023年至2032年33.5%的显著复合年增长率（CAGR）驱动的。</p>
+<p>随着人工智能代理的出现，制造业领域正在经历一场重大变革。这些代理通过简化决策过程、提高尽职调查效率以及通过高级数据分析和预测建模提供深刻的见解来改变制造业。人工智能代理快速分析海量数据集，并提供关于运营效率、风险缓解和整体绩效的关键见解，从而以前所未有的速度和准确性改变制造策略。</p>
+<p>此外，人工智能代理可以通过简化流程和最大限度地减少浪费来显著降低运营成本。通过利用人工智能的力量，制造商可以实现前所未有的生产力水平，确保卓越的产品质量，并敏捷快速地应对市场变化。</p>
+<p>在当今竞争激烈的环境中，将人工智能代理整合到制造业中不仅仅是一种选择，而是一项战略性需求。这些智能系统为一个更高效和创新的新时代铺平了道路，使制造商能够保持竞争力并满足行业不断变化的需求。</p>
+<p>人工智能代理在制造业中通过自动化从日常运营任务到复杂决策过程的广泛活动，提供了变革性的益处。这种自动化提高了决策质量并加快了执行速度，从而提高了整体生产力并最大限度地减少了制造环境中的运营错误。</p>
+<h3>人工智能代理在制造业中的能力：</h3>
+<p><strong>数据收集和分析：</strong>人工智能代理熟练地从各种来源（例如生产系统、物联网传感器、供应链数据库和质量控制指标）收集、清理和整合数据。它们充当数据处理器和高级分析师，提供对运营决策至关重要的预测和战略见解。例如，它们可以分析生产历史和设备性能以优化制造流程。</p>
+<p><strong>流程自动化和优化：</strong>人工智能代理在制造业中的作用不仅仅是自动化库存管理和生产调度等日常任务；它们还通过管理例外情况、错误和异常来优化这些流程。通过持续学习和适应，这些代理擅长自动化复杂的制造流程，例如预测性维护、质量控制和供应链管理。</p>
+<p><strong>决策和执行：</strong>人工智能代理在制造业中充当复杂的决策者，处理与生产计划、资源分配、设备维护和质量保证相关的关键决策。这些决策基于强大的数据驱动模型，以确保效率和最大限度地减少风险。人工智能代理还以透明的方式解释其决策，从而提高制造运营中的问责制和信任度。</p>
+<p><strong>协作和沟通：</strong>人工智能代理促进制造组织内部不同部门以及与外部合作伙伴之间的无缝沟通和协作。它们作为集中的交互平台，增强了整个制造生态系统中的集体智慧，确保了一致性和知情的决策。对话式代理通过促进团队之间有效的信息和见解交流来增强内部沟通，从而提高运营效率和响应能力。</p>
+<p>人工智能代理对于转变制造运营和准备组织有效应对当前挑战和未来机遇至关重要，方法是自动化复杂的制造流程，增强决策能力，并促进团队和合作伙伴之间的协作。</p>
+<h4>利用人工智能代理优化您的运营</h4>
+<p>使用 ZBrain 人工智能代理优化您的工作流程，实现自动化任务并做出更明智的数据驱动型决策。探索我们的人工智能代理。</p>
+<h2>人工智能代理在制造业中的关键组件</h2>
+<p>用于制造业的人工智能代理的关键组件包括：</p>
+<p><strong>输入：</strong>此组件捕获并处理来自传感器、机器和操作员的各种输入，包括各种格式的数据，例如传感器读数、操作日志和生产指标。这些输入指导代理的行为和决策，提供对制造过程的实时见解。</p>
+<p><strong>大脑：</strong>对于制造运营中的认知功能至关重要，“大脑”包含多个模块：</p>
+<ul>
+<li><strong>分析：</strong>定义代理在制造环境中的角色和功能，指定任务和目标。</li>
+<li><strong>记忆：</strong>存储历史数据和过去的交互，使代理能够从以前的生产周期和操作场景中学习。</li>
+<li><strong>知识：</strong>包含特定领域的知识，包括制造协议、质量标准和设备规格，对规划和决策至关重要。</li>
+<li><strong>规划：</strong>根据当前需求、库存水平和运营限制，确定最佳的生产计划、资源分配和工作流程优化。</li>
+<li><strong>行动：</strong>此组件执行计划中的操作，利用大脑的模块来自动化和优化制造流程。通过将复杂的任务分解成可操作的步骤，人工智能代理确保高效的生产运营，根据需要利用专业的工具和设备。</li>
+</ul>
+<p>在制造业中，人工智能代理对于通过智能数据分析和决策能力来提高运营效率、最大限度地减少停机时间和优化生产成果至关重要。</p>
+<h2>人工智能代理在制造业中的应用和用例</h2>
+<p>人工智能代理正在通过提高生产过程各个方面的效率、准确性和创新性来改变制造业。以下是人工智能代理在制造业中的主要应用：</p>
+<h3>预测性维护</h3>
+<p>大型语言模型 (LLM) 代理可以分析和综合大量的技术文档和维护记录，以识别潜在的设备故障模式并为预防性维护生成见解。</p>
+<p>通过对这些预测性维护方面的贡献，大型语言模型可以帮助组织：</p>
+<ul>
+<li>减少停机时间和生产中断</li>
+<li>降低维护成本</li>
+<li>提高设备寿命</li>
+<li>增强安全性和可靠性</li>
+</ul>
+<h3>质量控制</h3>
+<p>通过分析大量的检验报告和技术文档，大型语言模型代理可以识别常见的缺陷模式，深入了解根本原因，并创建一个全面的知识库，以提高产品质量并防止未来的缺陷。</p>
+<h3>生产计划和调度</h3>
+<p>用于制造业的人工智能代理利用来自市场预测、订单安排、库存水平、延迟和生产成本的数据来创建最佳的生产计划。他们的目标是降低成本并加快交付速度。人工智能制造代理可以分析各种场景，并确定最有效的生产计划，从而优化制造环境内的流程。性能通过成本效率、吞吐量、生产周期持续时间和交付及时性来衡量。</p>
+<h3>供应链优化</h3>
+<p>人工智能代理通过实时洞察、快速故障排除、简化的沟通和精确的需求预测来优化供应链。大型语言模型驱动的生成式人工智能代理通过考虑需求动态、库存水平、运输路线和供应商能力来分析和优化供应链网络。这些代理使用高级自然语言处理 (NLP) 能力来解释非结构化数据，促进复杂的决策制定，并改善供应链各个环节之间的沟通。它们模拟各种场景并提出最佳的供应链配置，使制造商能够降低成本、提高交付速度并提高整体供应链效率。</p>
+<h3>流程自动化</h3>
+<p>大型语言模型代理擅长基于语言的任务，并且可以简化各种操作。它们可以分析现有的手册和程序以识别不一致之处并生成标准化、清晰的说明，从而提高培训效率。大型语言模型还可以创建交互式培训材料，使学习更具吸引力和有效性。通过从制造文档中提取关键信息并生成自动报告，大型语言模型简化了数据分析和报告流程，识别趋势并突出潜在问题。此外，大型语言模型可以作为技术人员的智能助手，访问相关信息并在故障排除期间提出解决方案。它们还可以通过翻译技术信息和汇总报告来促进沟通，从而改进团队协作。总而言之，大型语言模型自动化各种基于语言的任务，最终提高了制造过程中的效率、准确性和沟通能力。</p>
+<h3>能源管理</h3>
+<p>人工智能代理监控和管理整个制造工厂的能源消耗。它们分析来自能源计量器的数据，并优化电力、燃气和其他资源的使用，从而降低成本并减少对环境的影响。</p>
+<h3>库存管理</h3>
+<p>人工智能代理实时跟踪库存水平并预测未来的库存需求。通过分析销售数据、交货时间和生产计划，他们保持合适的库存量，减少库存过剩和缺货。</p>
+<h3>风险管理</h3>
+<p>人工智能代理分析地缘政治事件、天气模式和市场波动，以识别供应链中的潜在风险，并提供建议以减轻这些风险，确保供应链具有弹性和可靠性。</p>
+        <small class="page-url url "><a href="https://www.leewayhertz.com/ai-agent-for-manufacturing/" target="_blank">(https://www.leewayhertz.com/ai-agent-for-manufacturing/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="AI-Agent-Startups-to-Watch">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏭&nbsp;</span>AI Agent Startups to Watch</h3>
+        <small class="page-url url "><a href="https://blog.mlq.ai/ai-agent-startups-to-watch/" target="_blank">(https://blog.mlq.ai/ai-agent-startups-to-watch/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 制造行业通过AI代理提升操作效率和质量控制，展现显著的市场价值。<br></small>
+    </div>
+    <div class="page-content content"><h2>AutoGPT</h2>
+<p>正如所提到的，AutoGPT 成为历史上增长最快的 GitHub 项目。虽然热度有所消退，但该公司已筹集到 1200 万美元的资金，以将其开源项目提升到一个新的水平。在其官网上，我们可以看到 AutoGPT 的图形用户界面即将推出，因此我们将密切关注。</p>
+<h2>Relevance AI</h2>
+<p>Relevance AI 是另一个无需代码的 AI 代理构建器，其自身定义为：</p>
+<p>以下是 Relevance AI 平台的一些关键用例：</p>
+<p>允许您使用自然语言训练代理，并将它们作为您的同事加入
+使用无需代码的构建器将专业知识提炼成 AI 工具
+连接其他系统
+协调和委托多个代理
+监控和管理任务输出</p>
+<p>Relevance AI 在两轮融资中总共筹集了 1800 万美元，最新一轮融资是 1000 万美元的 A 轮融资，由 Insight Partners 领投，Galileo Ventures 和 Archangel Ventures 参投。</p>
+<h2>LangChain</h2>
+<p>LangChain 是另一家创业公司，它最初也是增长最快的 GitHub 项目之一，现在已从 Benchmark 筹集了 1000 万美元的资金。</p>
+<p>LangChain 将自己描述为一个平台，用于……</p>
+<p>LangChain 的平台支持各种模型类型、提示管理、内存、索引、链和代理，以帮助开发人员构建以大型语言模型为中心的应用程序。</p>
+<h2>Cohere</h2>
+<p>Cohere 是一家专注于企业的 AI 初创公司，它提供一套自然语言处理 (NLP) 工具，包括用于构建对话代理的大型语言模型工具包。</p>
+<p>Cohere 的工具套件包括：</p>
+<p>Command 模型，用于为对话代理、内容摘要和文案撰写提供动力。
+其检索增强生成 (RAG) 工具包增强了 Command 模型的功能，使其能够使用企业数据生成准确的响应。
+Coral 允许使用 RAG 创建聊天机器人和知识助手，用于数据驱动的精确对话。
+Cohere 的 Embed 模型允许使用其嵌入模型进行语义搜索，适用于 100 多种语言。
+Rerank 工具通过改进现有搜索系统中搜索结果的相关性来补充这一点。</p>
+<p>Cohere 的愿景是开发能够自主执行任务的 AI 代理。该公司已筹集了总共 4.45 亿美元资金，最近的 C 轮融资使其估值超过 21 亿美元。</p>
+        <small class="page-url url "><a href="https://blog.mlq.ai/ai-agent-startups-to-watch/" target="_blank">(https://blog.mlq.ai/ai-agent-startups-to-watch/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="AI-Agents-Show-Huge-Promise,-But-Face-Technical-Barriers-to-Wide-Adoption-|-by-Ardent-Venture-Partners-|-Medium">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🛍&nbsp;</span>AI Agents Show Huge Promise, But Face Technical Barriers to Wide Adoption | by Ardent Venture Partners | Medium</h3>
+        <small class="page-url url "><a href="https://medium.com/@ardent-vc/ai-agents-show-huge-promise-but-face-technical-barriers-to-wide-adoption-68e90e01bab1" target="_blank">(https://medium.com/@ardent-vc/ai-agents-show-huge-promise-but-face-technical-barriers-to-wide-adoption-68e90e01bab1)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: AI代理在零售行业个性化推荐和库存管理方面的应用提升了销售效率。<br></small>
+    </div>
+    <div class="page-content content"><p>虽然令人兴奋，但技术壁垒依然存在，例如缺乏训练数据和错误率累积，这阻碍了多轮大型语言模型（LLM）代理在短期内得到广泛生产和使用。目前，最有效的网络代理的成功率最多为 57%。</p>
+<p>将 AI 代理从研究阶段转变为可靠的工具面临着巨大的挑战，包括：</p>
+<h3>缺乏训练数据</h3>
+<p>最紧迫的挑战之一是需要高质量的、特定于任务的训练数据。与通常可以利用大型通用数据集的更广泛的 AI 系统不同，AI 代理需要高度专业化的数据才能有效地学习和执行特定环境中的特定任务。在现实世界的例子稀少或难以模拟的情况下，这尤其具有挑战性。例如，训练 AI 代理在动态环境中执行复杂、细致的任务需要详细的、上下文丰富的的数据，而这些数据往往不容易获得。这种有针对性的数据的缺失会导致训练无效，代理要么无法泛化，要么由于学习中的差距而表现出次优的性能。数据隐私问题、高昂的收集成本以及可用数据集中的固有偏差加剧了这一挑战。</p>
+<h3>准确性和错误累积</h3>
+<p>在完成任务所需的一系列操作中保持准确性是一项重大挑战。大型语言模型代理在动态环境中运行，每个决策都会影响后续步骤。大型语言模型会产生幻觉。鉴于完成一项任务所需的 LLM 调用次数，微小的错误会累积，导致任务进展过程中出现错误的结果。每个阶段的高精度对于防止这些错误升级至关重要，并且需要高级推理才能进行一致的决策，尤其是在不可预测的情况下。</p>
+        <small class="page-url url "><a href="https://medium.com/@ardent-vc/ai-agents-show-huge-promise-but-face-technical-barriers-to-wide-adoption-68e90e01bab1" target="_blank">(https://medium.com/@ardent-vc/ai-agents-show-huge-promise-but-face-technical-barriers-to-wide-adoption-68e90e01bab1)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="successful-AI-agent-startups-in-healthcare-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💡&nbsp;</span>successful AI agent startups in healthcare at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:successful AI agent startups in healthcare" target="_blank">(DDG:successful AI agent startups in healthcare)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: Kairo Health通过AI代理改善患者护理，展示了初创企业在医疗领域的重要性。<br></small>
+    </div>
+    <div class="page-content content"><h2>2024年医疗保健领域十大AI初创公司</h2>
+<ol>
+<li>Verily</li>
+<li>现代化医疗 (Modernizing Medicine)</li>
+<li>科莫多健康 (Komodo Health)</li>
+<li>春季健康 (Spring Health)</li>
+<li>定时 (Tempus)</li>
+<li>人类寿命 (Human Longevity)</li>
+</ol>
+<p>以下是我们在HLTH会议上遇到的，使用大型语言模型、生成式AI和英伟达计算平台的一些值得关注的初创公司：</p>
+<p>Kairo Health构建了人工智能代理，可以帮助以极低的成本提供患者护理。美国缺乏护士、护理协调员和管理人员……</p>
+        <small class="page-url url "><a href="DDG:successful AI agent startups in healthcare" target="_blank">(DDG:successful AI agent startups in healthcare)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="AI-In-Education-Market-Size-&-Share-|-Industry-Report,-2030">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📊&nbsp;</span>AI In Education Market Size & Share | Industry Report, 2030</h3>
+        <small class="page-url url "><a href="https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-ai-education-market-report" target="_blank">(https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-ai-education-market-report)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: AI代理市场的显著增长显示出金融行业对实时欺诈监测的强烈需求。<br></small>
+    </div>
+    <div class="page-content content"><h2>全球人工智能教育市场规模</h2>
+<p>2024年全球人工智能教育市场规模估计为58.8亿美元，预计从2025年到2030年将以31.2%的复合年增长率增长，这主要得益于对个性化学习体验的需求不断增长。学校和教育机构正在利用人工智能驱动的工具，例如智能辅导系统（ITS）、聊天机器人和学习分析，以增强学生的参与度并优化教学方法。人工智能在教育行业的整合进一步受到向电子学习平台转变的推动，这一转变因COVID-19大流行而加速，以及对教育科技初创企业的投资不断增长。此外，自然语言处理 (NLP) 和计算机视觉方面的进步正在扩展人工智能在自动化评估、内容交付和自适应学习解决方案中的应用。</p>
+<p>机构对数据驱动决策的需求推动了人工智能在教育行业中日益增长的应用。教育机构正在利用基于人工智能的分析来监控学生的学习成绩，预测辍学率，并为有风险的学生设计干预策略。人工智能在技能发展和劳动力培训中日益重要的作用，主要通过在线课程和认证，也促进了市场增长。世界各国政府正在通过资助计划和政策框架支持人工智能在教育领域的倡议，进一步加速了人工智能在教育领域的应用。</p>
+<p>虚拟学习环境的快速扩张严重依赖人工智能来实现定制和扩展，也推动了市场增长。人工智能集成平台通过提供语言翻译、语音识别和残疾学生辅助技术来改善可及性。5G 网络和智能设备的普及使得人们可以无缝访问人工智能驱动的教育解决方案，从而增加了全球的采用率。此外，向混合学习模式的转变为基于人工智能的解决方案创造了长期机遇，因为教育机构越来越多地将面对面和在线教育融合在一起。</p>
+<h3>组件分析</h3>
+<p>根据组件，解决方案部分在2024年以70.3%的最高收入份额引领市场，这是由于人工智能驱动的学习管理系统 (LMS) 和 ITS 的广泛采用。这些解决方案能够实现个性化的学习路径，自动化评分过程，并为教育工作者提供实时分析，从而提高教学效率。对自适应学习软件、虚拟教室和人工智能聊天机器人的需求激增，因为它们提供了灵活、以学生为中心的学习体验。此外，对自动化管理工具（例如考勤跟踪和绩效监控系统）的需求不断增长，也促使机构投资于全面的基于人工智能的解决方案。</p>
+<p>服务部分预计在预测期内将以显著的复合年增长率增长，这是由于对人工智能教育行业中实施、集成和咨询服务的需求不断增长。随着机构采用人工智能驱动的解决方案，他们需要技术支持来定制平台，确保与现有系统的无缝集成，并培训员工有效地使用这些工具。包括定期软件更新、系统监控和数据安全在内的托管服务对于维持基于人工智能平台的平稳运行至关重要。此外，教育机构依靠咨询服务来制定人工智能采用战略，并与不断变化的行业标准和最佳实践保持一致。</p>
+<h3>部署分析</h3>
+<p>根据部署方式，云计算部分在2024年以60.1%的最高收入份额引领市场，这是由于越来越多地采用基于云的平台来随时随地无缝访问学习资源。云解决方案能够更快地部署人工智能驱动的工具，例如虚拟教室、ITS 和 LMS，从而提高运营效率。此外，基于云的平台支持实时数据分析和远程监控，帮助教育工作者更有效地个性化学习体验和跟踪学生表现。随着混合和远程学习模式的增加，对云技术的依赖激增，为机构提供了灵活性和数据安全，并降低了成本。</p>
+<p>本地部署部分预计在预测期内将以显著的复合年增长率增长，因为对数据隐私要求严格的机构更喜欢本地基础设施而不是基于云的解决方案。教育机构，主要是在数据保护法律严格或对网络安全存在担忧的地区，正在投资本地人工智能系统，以完全控制敏感的学生和管理数据。此外，本地部署提供了更大的定制化能力，允许机构根据其具体的运营需求定制人工智能解决方案，而无需依赖第三方云提供商。拥有大量预算的学校和大学也优先考虑本地部署，以确保最小的停机时间、更好的性能和高速数据处理。</p>
+<h3>技术分析</h3>
+<p>根据技术，机器学习部分在2024年以64.7%的最高收入份额引领市场，这是因为机器学习能够提供个性化的学习体验和自适应教育平台。机器学习算法有助于分析学生的学习行为、学习模式和学习成绩数据，使教育工作者能够根据个人需求定制内容和干预措施。这项技术广泛应用于智能辅导系统、自动化评估和预测分析中，从而提高了教学效率和学生成果。教育机构和教育科技公司正在利用机器学习来完成内容推荐、聊天机器人协助和绩效预测等任务，进一步扩展了其应用范围。</p>
+<p>自然语言处理 (NLP) 部分预计在预测期内将以显著的复合年增长率增长，这是因为其能够增强学生与人工智能驱动系统之间的互动。基于 NLP 的聊天机器人和虚拟助手越来越多地用于教育平台，以对学生的查询提供即时响应，减轻教育工作者的负担。这项技术还在语言翻译中发挥着至关重要的作用，使非母语人士能够访问学习材料，并促进包容性教育。此外，NLP 能够对论文和评估进行自动化评分，节省时间并确保评估的一致性。</p>
+<h3>应用分析</h3>
+<p>根据应用，学习平台和虚拟辅导员部分在2024年以45.9%的最高收入份额引领市场，这是由于对数字学习环境和个性化教育的需求不断增长。虚拟辅导员，例如人工智能驱动的导师和助教，能够实现学生之间的实时互动和支持，从而提高学生的参与度和学习成果。教育机构和公司越来越多地采用这些平台来提供灵活的、自定进度的课程和认证，以满足不同学习者的需求。COVID-19 大流行加速了向电子学习的转变，推动了对虚拟教室和人工智能增强平台的投资，用于远程和混合教育模式。</p>
+<p>智能内容部分预计在预测期内将以显著的复合年增长率增长，因为教育机构越来越重视针对各个学生需求量身定制的个性化学习体验。智能内容利用人工智能算法来策划、生成和调整学习材料，确保各种学习者的相关性和参与度。数字教材、互动模拟和多媒体资源的兴起，推动了对既有信息量大，又引人入胜和互动性强的学习内容的需求。此外，自适应学习技术的集成允许根据学生的学习成绩实时调整内容，从而促进学生以个性化的速度掌握科目。</p>
+<h3>最终用户分析</h3>
+<p>根据最终用户，高等教育部分在2024年以44.3%的最高收入份额引领市场，这主要是因为大专院校对创新教学方法和先进学习技术的需求不断增长。高等教育机构正在迅速采用人工智能驱动的解决方案，以增强学生的参与度，提高留存率，并为不同的学生群体提供个性化的学习体验。在线学位课程和混合学习模式的兴起进一步加速了人工智能工具在课程设计、评估和学生支持服务中的整合。此外，机构还在利用数据分析和机器学习来为战略决策提供信息并优化资源分配，从而提高整体运营效率。</p>
+<p>企业培训和学习部分预计在预测期内将以最快的复合年增长率增长，这是因为人们越来越认识到在不断变化的就业市场中持续技能发展的重要性。组织越来越多地采用人工智能驱动的培训解决方案，以提供个性化的学习体验，以满足员工具体的技能差距和职业愿望。向远程和混合工作模式的转变加速了对灵活的、按需的培训项目的需求，这些项目可以随时随地访问。此外，人工智能技术使公司能够跟踪员工的学习进度和参与度，从而允许对培训项目进行数据驱动的调整，以达到最佳效果。</p>
+<h3>地区分析</h3>
+<p>2024年，北美人工智能教育市场以38.0%的最高收入份额主导市场，这是因为该地区拥有先进的技术基础设施和对教育技术的巨额投资。美国领先的教育科技公司和人工智能解决方案提供商的存在促进了创新，并加速了人工智能工具在教育机构中的采用。美国领先的教育科技公司和人工智能解决方案提供商的存在促进了创新，并加速了人工智能工具在教育机构中的采用。</p>
+<h4>美国人工智能教育市场趋势</h4>
+<p>预计美国人工智能教育市场在预测期间将以最快的复合年增长率增长，这得益于对教育技术的巨额投资以及对个性化学习解决方案的关注。对个性化学习体验的需求不断增长，促使教育机构采用人工智能驱动的解决方案，以满足各个学生的学习需求和学习风格。此外，COVID-19 大流行加速了向在线和混合学习环境的转变，促使人工智能工具的使用激增，以增强学生的参与度和可及性。</p>
+<h4>欧洲人工智能教育市场趋势</h4>
+<p>预计欧洲人工智能教育市场在预测期内将以显著的复合年增长率增长。这种增长主要源于数字学习解决方案的日益普及以及对各个欧洲国家个性化教育的推动。政府倡议，例如欧盟委员会的数字教育行动计划，正在推动人工智能技术在学校和大学的整合，以增强教学和学习过程。此外，对智能辅导系统和虚拟学习环境的需求不断增长，正在推动对人工智能驱动的教育工具的投资。</p>
+<h4>亚太地区人工智能教育市场趋势</h4>
+<p>预计亚太地区人工智能教育市场在预测期内将以最快的复合年增长率增长。这种增长是由中国、印度和日本等国家对数字学习平台和人工智能技术的日益采用所驱动的，这些国家非常重视提高教育质量和可及性。为应对COVID-19 大流行而迅速扩展的电子学习解决方案，显著提高了对人工智能驱动的教育工具的需求。旨在将技术融入教育和促进创新的政府倡议进一步支持了该地区市场的增长。</p>
+<h2>人工智能教育领域主要公司洞察</h2>
+<p>一些人工智能教育行业的主要参与者，例如 Pearson、Anthology Inc.、IBM 公司和微软公司，正在积极努力扩大其客户群并获得竞争优势。为了实现这一目标，他们正在追求各种战略举措，包括伙伴关系、兼并和收购、合作以及新产品和技术 的开发。这种积极主动的方法使他们能够增强其市场地位并对不断变化的安全需求做出创新性回应。</p>
+<p>Pearson 是一家全球教育公司，以其在学习领域创新地使用技术而闻名，特别是通过其人工智能驱动的解决方案。该公司已从传统的出版商发展成为数字学习平台的先驱，为 K-12 和高等教育提供广泛的教育资源、评估和服务。Pearson 的人工智能计划侧重于个性化的学习体验，利用数据分析来定制内容并改善学生的学习成果。</p>
+<p>Anthology Inc. 是一家著名的教育技术解决方案提供商，专门通过创新的、人工智能驱动的平台来增强学生的学习体验。该公司的产品涵盖一系列功能，例如学习管理系统 (LMS)、数据分析和学生信息系统，所有这些都旨在使机构能够利用数据来改进决策。</p>
+<h3>人工智能教育领域主要公司：</h3>
+<p>以下是人工智能教育市场的主要公司。这些公司共同占据最大的市场份额，并主导着行业趋势。</p>
+<p>亚马逊网络服务公司
+IBM 公司
+微软
+谷歌 LLC
+Pearson
+BridgeU
+DreamBox Learning, Inc.
+卡内基学习公司
+Fishtree Inc.
+Anthology Inc.</p>
+<h2>最新进展</h2>
+<p>2024年9月，K-12教育云基软件提供商PowerSchool宣布推出其新的PowerBuddy人工智能产品：PowerBuddy for College and Career和PowerBuddy for Custom AI。这些工具旨在增强学校工作人员、教师、辅导员、学生、家庭和社区之间的联系，同时还帮助学生探索并采取措施在大学、职业和生活中取得成功。</p>
+<p>2024年7月，Pearson宣布推出新的生成式人工智能驱动工具，通过Pearson+ Channels增强各个年龄段的教学和学习。这些工具包括学生上传教学大纲的能力，创建个性化学习体验，以及嵌入视频中的人工智能导师，以回答与概念相关的疑问。Pearson的专职在线K-12公立学校项目Connections Academy正在将其高中课程中特定科目的这些人工智能工具整合起来，使教师能够使用基于人工智能的工具设计评估。</p>
+<p>2024年2月，印度推出了一款人工智能驱动的教育平板电脑，旨在增强数字学习，首次采用BharatGPT虚拟助手。这款创新的平板电脑整合了人工智能和机器学习，用于语言间翻译，支持印度的多样化语言，并为残疾人士促进包容性。</p>
+<h2>人工智能教育市场报告范围</h2>
+<p>| 报告属性             | 详情                                                         |
+| -------------------- | ------------------------------------------------------------ |
+| 2025年市场规模        | 83亿美元                                                     |
+| 2030年收入预测      | 322.7亿美元                                                   |
+| 增长率               | 2025年至2030年复合年增长率为31.2%                               |
+| 估算基准年           | 2024年                                                     |
+| 历史数据             | 2017-2023年                                                   |
+| 预测期               | 2025-2030年                                                   |
+| 定量单位             | 以美元十亿/百万计的收入和2025年至2030年的复合年增长率                   |
+| 报告涵盖内容           | 收入预测、公司排名、竞争格局、增长因素和趋势                     |
+| 涵盖的细分市场       | 组件、部署、技术、应用、最终用途、地区                         |
+| 地区范围             | 北美；欧洲；亚太地区；拉丁美洲；中东和非洲                   |
+| 国家范围             | 美国；加拿大；墨西哥；德国；英国；法国；中国；印度；日本；澳大利亚；韩国；巴西；阿联酋；南非；沙特阿拉伯 |
+| 关键公司简介           | 亚马逊网络服务公司；IBM 公司；微软；谷歌 LLC；Pearson；BridgeU；DreamBox Learning, Inc.；卡内基学习公司；Fishtree Inc.；Anthology Inc. |
+| 定制范围             | 免费报告定制（相当于购买后最多8个分析师的工作日）。添加或更改国家/地区、区域和细分范围。 |
+| 定价和购买选项       | 提供定制的购买选项，以满足您的确切研究需求。探索购买选项                 |</p>
+<h2>全球人工智能教育市场报告细分</h2>
+<p>本报告预测全球、地区和国家/地区的收入增长，并分析2017年至2030年每个细分市场的最新行业趋势。为此项研究，Grand View Research根据组件、部署、技术、应用、最终用途和地区对全球人工智能教育市场报告进行了细分。</p>
+<p>组件展望（收入，十亿美元，2017-2030年）
+解决方案
+服务</p>
+<p>部署展望（收入，十亿美元，2017-2030年）
+云
+本地</p>
+<p>技术展望（收入，十亿美元，2017-2030年）
+自然语言处理 (NLP)
+机器学习</p>
+<p>应用展望（收入，十亿美元，2017-2030年）
+学习平台和虚拟辅导员
+智能辅导系统 (ITS)
+智能内容
+欺诈和风险管理
+其他</p>
+<p>最终用途展望（收入，十亿美元，2017-2030年）
+K-12 教育
+高等教育
+企业培训和学习</p>
+<p>地区展望（收入，十亿美元，2017-2030年）
+北美
+美国
+加拿大
+墨西哥
+欧洲
+英国
+德国
+法国
+意大利
+亚太地区
+中国
+印度
+日本
+澳大利亚
+韩国
+拉丁美洲
+巴西
+中东和非洲
+阿联酋
+南非
+沙特阿拉伯</p>
+<h2>关于本报告的常见问题</h2>
+<ul>
+<li>全球人工智能教育市场规模在2024年估计为58.8亿美元，预计2025年将达到83亿美元。</li>
+<li>预计全球人工智能教育市场从2025年到2030年将以31.2%的复合年增长率增长，到2030年将达到322.7亿美元。</li>
+<li>2024年，北美主导了人工智能教育市场，市场份额为36%，这得益于该地区先进的技术基础设施和对教育技术的巨额投资。美国领先的教育科技公司和人工智能解决方案提供商的存在促进了创新，并加速了人工智能工具在教育机构中的采用。</li>
+</ul>
+        <small class="page-url url "><a href="https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-ai-education-market-report" target="_blank">(https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-ai-education-market-report)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="AI-Agents:-Who-Profits-and-What-Are-They?-|-by-Stewart-Townsend-|-AI-for-the-next-century-|-Medium">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🔧&nbsp;</span>AI Agents: Who Profits and What Are They? | by Stewart Townsend | AI for the next century | Medium</h3>
+        <small class="page-url url "><a href="https://medium.com/ai-for-the-next-century/ai-agents-who-profits-and-what-are-they-69c2b94771d3" target="_blank">(https://medium.com/ai-for-the-next-century/ai-agents-who-profits-and-what-are-they-69c2b94771d3)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: AI代理在制造业中快速成长，主要集中在预测性维护和质量控制上。<br></small>
+    </div>
+    <div class="page-content content"><h2>AI 代理竞赛：数十亿美元的机遇与挑战</h2>
+<p>创建 AI 代理的竞赛对科技巨头、研究实验室和初创企业来说都是一个巨大的挑战。自主 AI 市场预计到 2028 年将达到 285 亿美元。但什么是 AI 代理，谁将从中获利？</p>
+<p>AI 代理是一种新型模型，可以自主工作。它们可以在无需人工干预的情况下执行任务，从而提高效率并加快速度。它们将通过提高效率和个性化来改变医疗保健、教育和金融等许多领域。</p>
+<p>OpenAI、Anthropic 和 Adept 等知名公司正在引领 AI 代理竞赛。Imbue 和 Magic AI 等初创公司也参与其中。它们不仅在技术方面展开竞争，还在争夺谁能最好地利用数据和工具来解决人们的实际问题。</p>
+<h3>主要内容</h3>
+<p>全球自主 AI 和自主代理市场预计到 2028 年将达到 285 亿美元。</p>
+<p>AI 代理支持“代理工作流程”——无需人工干预即可运行多个步骤的循环，从而实现优化和增强性能。</p>
+<p>AI 代理竞赛的主要参与者包括 OpenAI、Anthropic、Adept、Imbue 和 Magic AI，它们在组件质量和集成能力方面展开竞争。</p>
+<p>AI 代理有可能通过自动化任务、提高效率和个性化体验来彻底改变各个行业。</p>
+<p>了解 AI 代理的组件和竞争格局对于寻求从这项变革性技术中获利的企业和个人至关重要。</p>
+<h2>AI 代理竞赛</h2>
+<p>创建最先进的 AI 代理的竞争非常激烈。获胜者可能会看到全球 GDP 的大幅增长。各公司正在努力创建最好的 AI 模型并解决现实世界的问题。</p>
+<h2>千亿美元的奖励：彻底改变 AI</h2>
+<p>开创性 AI 代理的回报非常巨大。专家表示，获胜者可能会赚取数十亿美元。这吸引了顶级科技公司和初创企业的巨额投资。</p>
+<h2>AI 代理竞赛中的关键参与者</h2>
+<ul>
+<li>OpenAI：这家 AI 研究公司已经筹集了超过 130 亿美元，使其成为 AI 代理竞赛中的顶级参与者。</li>
+<li>Anthropic：Anthropic 拥有超过 73 亿美元的资金，是 AI 代理开发领域的主要参与者。</li>
+<li>Adept：这家初创公司拥有 4.13 亿美元的 AI 代理投资，用于开发其 AI 解决方案。</li>
+<li>Imbue：Imbue 拥有 2.2 亿美元资金，用于在 AI 代理初创企业领域取得进展。</li>
+<li>Magic AI：Magic AI 拥有 1.45 亿美元资金，用于推动其 AI 代理的研究和开发。</li>
+</ul>
+<p>这些公司和其他公司正在争先恐后地创建最好的 AI 代理。他们利用最新的 AI 代理竞争来解决问题并抢占巨大的市场份额。“AI 代理竞赛是一场高风险的竞争，具有获得天文数字回报的潜力。获胜者可能成为下一场技术革命的驱动力。”</p>
+<h2>什么是代理工作流程？</h2>
+<p>由于像 ChatGPT 这样的 AI 助手，商业世界正在快速变化。我们正在看到一种新的使用人工智能的方式，称为代理工作流程。与旧的语言模型不同，AI 代理可以规划、使用工具、检查结果并提供答案。这个过程使它们更好、更高效。</p>
+<h2>从语言模型到 AI 代理</h2>
+<p>从语言模型转向 AI 代理是一大进步。AI 代理现在是为特定任务而设计的。它们可以利用机器学习和智能算法自行做出选择。它们在理解市场、客户和供应链方面不断变得更好，从而改变了企业的工作方式。</p>
+<h2>代理工作流程的力量</h2>
+<p>代理工作流程比旧的语言模型更先进。它们将任务分解成更小的步骤，并使用工具来更高效、更快地完成任务。这样，AI 代理可以更有效地解决现实世界的问题。它们共同努力解决重大挑战，从而在许多领域取得更好的结果和更高的准确性。</p>
+<p>例如，一个使用代理工作流程的应用程序可以为 Epworth League 的生态联盟播客查找有关生态和保护的新闻。这表明这项技术有多么有用和实用。“在未来一年，人工智能应用开发将发生重大转变，代理工作流程将推动众多行业领域和职能部门的创新和增长。”</p>
+<h2>利用 AI 代理解决现实世界的问题</h2>
+<p>AI 代理擅长解决现实世界的问题，比旧方法更好。它们可能并不总是成为焦点，但它们的真正价值体现在它们如何帮助人们和企业。</p>
+<p>许多公司正在努力将 AI 代理应用于不同领域。这包括在学校中使学习更个性化、在医疗保健中及早发现疾病以及改进供应链。AI 代理可以做很多事情，例如自动化任务、查找重要数据以及帮助人们提出新想法。</p>
+<p>代理式 AI 系统可以大量自主工作，这对于需要持续监控或快速做出选择的任务非常有利。</p>
+<p>代理式 AI 可以提供非常个性化的体验和解决方案，随着时间的推移，它在满足个人需求方面也越来越好。</p>
+<p>代理式 AI 可以理解和使用自然语言进行交流，检查事情是否正常，讨论任务，甚至做出决定，从而使人类更容易与之合作。</p>
+<p>AI 代理用例的用途是无限的，有机会改变许多行业并解决重大问题。AI 代理可以使事情运行更顺利，节省资金并提供更个性化的体验。这将对企业和客户都有很大帮助。“到 2024 年底，预计将有 5 亿个代理部署在各个行业。到 2025 年底的目标是在运营中看到 500 亿到 1000 亿个代理，创建一个庞大的智能生态系统。”随着 AI 代理的影响力不断增长，那些使用 AI 代理解决问题的公司将在未来的 AI 代理行业中占据很大优势。</p>
+<h2>AI 代理系统的五个组成部分</h2>
+<p>AI 代理需要五个关键部分才能正常工作：数据输入、模型、工具、接口和 AI 粘合剂。这些部分共同作用，构成一个强大的 AI 代理系统。该系统可以熟练而准确地处理复杂的任务。</p>
+<h3>数据输入：为代理提供燃料</h3>
+<p>数据输入是 AI 代理用来学习和做出决定的特殊数据。这些数据是代理知识和选择的基石。</p>
+<h3>模型：代理的大脑</h3>
+<p>模型（如 GPT-4）是 AI 代理的大脑。各公司正在争先恐后地创建最好的模型。模型的质量会影响代理的工作效率。</p>
+<h3>工具：增强代理的功能</h3>
+<p>工具赋予 AI 代理特殊的技能，例如 OpenAI 的代码解释器工具。这些工具帮助代理执行更多任务并应对更多挑战。</p>
+<h3>接口：将代理集成到用户工作流程中</h3>
+<p>接口是 AI 代理融入用户工作的方式。良好的接口使代理易于使用且更有效。</p>
+<h3>AI 粘合剂：有效地组合组件</h3>
+<p>“AI 粘合剂”是连接 AI 代理系统所有部分的软件。它经常被忽视，但对于系统正常工作至关重要。</p>
+<p>通过关注这五个关键领域，公司可以创建强大的 AI 代理。这些代理可以解决许多问题，并帮助在不同领域进行创新。</p>
+<h2>AI 代理公司：模型优先与产品优先</h2>
+<p>在快速变化的 AI 代理世界中，正在出现两种主要方法。模型优先的初创公司和产品优先的公司正引领潮流。它们的目标都在于在 AI 代理市场上占据一席之地，但它们的策略却有所不同。</p>
+<p>模型优先的 AI 代理由 OpenAI 和 Anthropic 等公司引领。它们专注于创建先进的语言模型和 AI 架构。他们认为完善模型对于成功至关重要。</p>
+<p>另一方面，产品优先的 AI 代理由 Salesforce 等公司引领。它们的目标是创建能够解决现实世界问题的 AI 代理。它们的目标是创建能够很好地融入现有工作流程并带来实际好处的 AI。</p>
+<p>AI 代理市场格局正在快速变化。模型优先和产品优先这两种策略都在争夺首位。随着竞争的加剧，AI 代理公司的策略将塑造 AI 的未来。</p>
+<h2>AI 代理：谁将从中获利？</h2>
+<p>AI 代理注定要改变游戏规则，为那些正确使用它们的人带来巨额利润。麦肯锡的一份报告显示，60% 的公司已经在使用 AI。报告称，到 2030 年，AI 可能会为全球经济增加高达 15.7 万亿美元。</p>
+<p>那么，谁将从 AI 代理中获益？这些智能系统可以理解、学习和解决问题。它们是许多行业的关键，使企业能够更好地运作。</p>
+<p>AI 代理可以使事情运行更顺利，节省资金并帮助人们更好地工作。它们可以执行数据录入和调度等任务。它们还可以发现大型数据中的趋势，帮助公司做出明智的选择。“AI 代理即将成为游戏规则改变者，释放各行各业的创新和增长新浪潮。”</p>
+<p>AI 代理不仅仅是节省资金。它们通过与客户交谈和提供个性化建议来改善客户服务。这使得客户更加满意和忠诚，从而帮助企业发展壮大。</p>
+<p>随着 AI 代理市场的增长，在 AI 领域领先的公司将赚取大量资金。Salesforce 等领导者正在使 AI 更易于在企业中使用。</p>
+<p>未来，AI 代理将无处不在，从金融到医疗保健领域。在艰难的市场环境中，使用 AI 的公司将做得很好。</p>
+<p>AI 代理市场预计将快速增长，2023 年至 2030 年的复合年增长率为 20%。越来越多的公司将使用 AI，从而带来更多创新和利润。</p>
+<h2>AI 代理的竞争格局</h2>
+<p>AI 代理的使用正在快速增长，竞争也变得激烈。各公司正在努力使 AI 代理在速度、成本和可靠性方面都优于人类。对于企业而言，了解这一点对于利用 AI 代理提高效率和创新至关重要。</p>
+<h3>速度、成本和可靠性</h3>
+<p>AI 代理必须比人类快得多、便宜得多且可靠得多。它们需要快速工作，成本低廉，并且始终准确无误。各公司正在大量投资研究，以提高 AI 代理的性能、速度、成本和可靠性。</p>
+<h3>评估 AI 代理的性能</h3>
+<p>很难衡量 AI 代理的工作效率，因为 AI 始终在变化。投资者正在关注投入 AI 公司的资金数量，以了解其价值。随着我们对 AI 代理评估的改进，我们将看到更清晰的比较 AI 代理的方法。“开发最先进、最具成本效益和最可靠的 AI 代理的竞赛已经开始，各公司正在争夺在这个快速发展的领域中的地位。”</p>
+<h2>AI 代理的兴起：颠覆各行各业</h2>
+<p>AI 代理正在通过其效率、可扩展性和全球覆盖范围来改变许多行业。它们可以不间断地工作，分析海量数据并快速执行重复性任务。这与需要休息的人类不同。</p>
+<p>AI 代理全天候工作，可以接触到世界各地的人们。它们基于数据做出决策，从而提高个性化和业务成功率。这使人们能够专注于创造性和战略性工作，从而带来更多创新和人机协作。</p>
+<h3>无与伦比的效率和可扩展性</h3>
+<p>像 Google 的 Gemini 和 OpenAI 的 GPT-4 这样的 AI 代理非常了解语言。它们可以理解上下文、语气甚至讽刺。这使得它们在许多领域都非常高效且可扩展，从管理供应链到创建内容。</p>
+<h3>全天候运行和全球覆盖范围</h3>
+<p>AI 代理全天候运行，无需休息。这意味着企业可以随时提供服务，帮助全世界的客户。它们扩展运营的能力为增长创造了新的机会。</p>
+<p>AI 代理的增长正在改变各行各业。它帮助企业提高效率、可扩展性和全球覆盖范围。这导致了巨大的生产力增长，并重塑了市场。“AI 代理代表着技术的未来，与传统系统相比，它们提供了无与伦比的自主性、适应性、决策能力和效率。”</p>
+<h2>AI 代理：协作伙伴，而非替代品</h2>
+<p>正如一些人所担心的那样，AI 代理不会取代人类劳动者。相反，它们将与我们一起工作。它们可以处理例行任务，让人类可以从事更有创造性和战略性的工作。</p>
+<h3>释放人类潜能</h3>
+<p>与 AI 合作将带来新的发现和创新。AI 可以帮助快速生成创意并保持内容的一致性。这意味着内容创作者可以做更多的事情，而无需更多的人员。</p>
+<h3>AI 代理应用示例</h3>
+<p>AI 代理正在教育和医疗保健领域发挥着重要作用。它们有助于个性化学习和早期疾病检测。在旅游领域，它们会根据客户的喜好创建定制行程。</p>
+<p>AI 代理注定将成为我们的合作伙伴，而不是我们的替代品。随着 AI 的发展，越来越多的行业将利用它来进行创新并提高工作效率。“AI 代理的开发被描述为走向智能辅助未来的合作之旅。”</p>
+<h2>从 AI 代理热潮中获利</h2>
+<p>AI 代理的力量正在改变许多行业。聪明的投资者和企业家正在寻找从这项新技术中获利的方法。无论你想投资 AI 初创公司还是创建自己的 AI 解决方案，都有许多赚钱的机会。</p>
+<h3>投资 AI 代理公司</h3>
+<p>投资 AI 公司是赚钱的好方法。麦肯锡的一份报告称，60% 的公司正在使用 AI。到 2030 年，全球 AI 市场规模将达到 15.7 万亿美元。通过选择合适的 AI 初创公司或大公司，投资者可以赚取大量资金。</p>
+<h3>开发您自己的 AI 代理解决方案</h3>
+<p>如果您更喜欢自己创业，创建 AI 产品是一个不错的选择。世界经济论坛表示，AI 将创造 9700 万个就业岗位，但也将取代 8500 万个就业岗位。这意味着 AI 存在巨大的创新和成功机会。</p>
+<p>无论您投资 AI 公司还是自己创业，了解最新的 AI 新闻都是关键。了解市场和 AI 的优势可以帮助您在 AI 革命中领先。这样，您就可以通过投资 AI 代理、投资 AI 代理初创企业、构建 AI 代理解决方案以及寻找许多 AI 代理业务机会来获利。“AI 不仅仅是未来——它也是现在。现在拥抱这项技术的公司和个人将在未来几年蓬勃发展。”</p>
+<h2>结论</h2>
+<p>AI 代理正在改变我们使用人工智能的方式。它们是自学习的，并且可以自主工作。这正在改善许多行业，例如教育和医疗保健。</p>
+<p>AI 代理提高了效率，并为我们提供了宝贵的见解。它们甚至可能有助于全球经济增长。这可能会导致新的发现和改进。</p>
+<p>但是，AI 代理并非旨在取代我们。它们旨在帮助我们更好地完成工作。善于使用 AI 代理的公司和个人将会做得很好。</p>
+        <small class="page-url url "><a href="https://medium.com/ai-for-the-next-century/ai-agents-who-profits-and-what-are-they-69c2b94771d3" target="_blank">(https://medium.com/ai-for-the-next-century/ai-agents-who-profits-and-what-are-they-69c2b94771d3)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="AI-Agents-Market-Size,-Share,-Trends-&-Insights-Report,-2035">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🎓&nbsp;</span>AI Agents Market Size, Share, Trends & Insights Report, 2035</h3>
+        <small class="page-url url "><a href="https://www.rootsanalysis.com/ai-agents-market" target="_blank">(https://www.rootsanalysis.com/ai-agents-market)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 预计到2030年，教育领域的AI市场将出现显著增长，显示出强烈的技术需求。<br></small>
+    </div>
+    <div class="page-content content"><h2>全球AI代理市场规模和份额预测</h2>
+<p>全球AI代理市场规模和份额预计将从2024年的52.9亿美元增长到2035年的2168亿美元，预测期（2024-2035年）的复合年增长率为40.15%。</p>
+<p>2024年市场规模：52.9亿美元</p>
+<p>2035年市场规模：2168亿美元</p>
+<p>复合年增长率（至2035年）：40.15%</p>
+        <small class="page-url url "><a href="https://www.rootsanalysis.com/ai-agents-market" target="_blank">(https://www.rootsanalysis.com/ai-agents-market)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="AI-Regulations-and-Ethics:-What-Executives-Need-to-Know">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💵&nbsp;</span>AI Regulations and Ethics: What Executives Need to Know</h3>
+        <small class="page-url url "><a href="https://www.childrenshospitals.org/content/education/summary/ai-regulations-and-ethics-what-executives-need-to-know" target="_blank">(https://www.childrenshospitals.org/content/education/summary/ai-regulations-and-ethics-what-executives-need-to-know)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 零售行业市场规模的巨大增长潜力展示了AI技术的应用价值。<br></small>
+    </div>
+    <div class="page-content content"><h2>美国人工智能立法现状</h2>
+<p>历史上，国会需要数十年时间才能通过规范新技术的重大法律。对于人工智能，法规将不得不考虑患者数据隐私、知识产权、医疗事故责任以及质量控制和标准化。目前展望如下：</p>
+<p>尚无重大法律。美国尚未对人工智能采取实质性行动，尽管拜登政府已发布蓝图作为监管指南。在没有重大法律的情况下，联邦和私人团体正在创建用于道德使用的框架。</p>
+<p>行政命令。白宫发布了一项行政命令，将卫生与公众服务部 (HHS) 确立为人工智能的中央权威机构，并负责协调各联邦机构的工作。</p>
+<p>新的 FDA 模型。大型语言模型与已经受到监管的医疗器械软件不同，并为监管机构带来了新的挑战。FDA 已经提出了一种全产品生命周期方法，强调透明度和真实世界性能监测的重要性。</p>
+<h2>人工智能的伦理与法律问题</h2>
+<p>人工智能有可能使提供者能够践行希波克拉底誓言，也有可能违反誓言。三个主要问题包括：</p>
+<p>如何防止偏见。所有人工智能都有偏见。因为世界上存在偏见，所以它会通过数据、建模和人为干预进入人工智能。儿童医院将需要一个内部评估流程来衡量其人工智能模型中的偏见。</p>
+<p>如何保护患者数据。使用人工智能，数据共享将会增加，数据收集将变得更加脆弱。人工智能已被证明可以重新识别脱敏数据，并使网络罪犯更容易渗透系统。</p>
+<p>如何减少法律责任。人工智能带来了更高的责任，尽管程度未知。大多数适用的医疗保健法律法规早于人工智能的发展。</p>
+<h2>治理至关重要</h2>
+<p>有效解决伦理和法律问题需要适当的治理结构。在短期内，集中式结构最为有效，因为它驱动战略一致性，优化内部资源，并赋予明确的权力来制定人工智能政策和流程。每个结构都会因需求而异，但都应包括战略、战术和运营层面。</p>
+        <small class="page-url url "><a href="https://www.childrenshospitals.org/content/education/summary/ai-regulations-and-ethics-what-executives-need-to-know" target="_blank">(https://www.childrenshospitals.org/content/education/summary/ai-regulations-and-ethics-what-executives-need-to-know)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="AI-Compliance:-Top-6-challenges-&-case-studies">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🚀&nbsp;</span>AI Compliance: Top 6 challenges & case studies</h3>
+        <small class="page-url url "><a href="https://research.aimultiple.com/ai-compliance/" target="_blank">(https://research.aimultiple.com/ai-compliance/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 成功的初创企业通过AI提升客户体验和运营效率，为零售行业的未来发展提供了启发。<br></small>
+    </div>
+    <div class="page-content content"><h2>人工智能合规性：挑战与实践</h2>
+<p>人工智能 (AI) 的兴起正在促使新的法律、法规和伦理标准的出台。因此，77% 的公司将人工智能合规性视为首要任务，69% 的公司已经采用了负责任的人工智能实践来检查人工智能合规性状态并识别其业务中潜在的合规风险。&lt;sup&gt;1&lt;/sup&gt;让我们探索什么是 AI 合规性，它的挑战以及 AI 模型未能遵守伦理标准和法律的现实案例：</p>
+<h3>什么是 AI 合规性？</h3>
+<p>AI 合规性是指确保 AI 系统符合所有相关法律、法规和伦理标准的过程。这包括确保：</p>
+<ul>
+<li>AI 工具不被用于非法、歧视性、欺骗性或有害的方式。</li>
+<li>用于训练这些系统的数据以合法和合乎道德的方式收集和使用。</li>
+<li>AI 技术被负责任地使用，并造福社会。</li>
+</ul>
+<h3>AI 合规性的益处 (标题缺失，根据上下文补充)</h3>
+<h3>AI 合规性挑战</h3>
+<p>以下是一些需要实施工具和实践的 AI 合规性挑战：</p>
+<h4>1. 应对全球法规</h4>
+<p>AI 合规性涉及满足各种国际法规，例如欧盟人工智能法案、美国行政命令和加拿大的 AIDA。这些法规中的每一个都有独特的、不断变化的要求，为在全球运营的组织创造了一个复杂的局面。合规性要求将 AI 系统与每个地区的具体法律框架仔细对齐，以避免处罚和法律问题。</p>
+<p>下表总结了 AI 模型应遵守的当前法律要求：</p>
+<p>| 国家/组织 | 阶段 | 重点 | 未来展望 |
+|---|---|---|---|
+| OECD | 治理 | - 42 个签署国。- 负责任地管理值得信赖的人工智能的 5 项原则：包容性增长、以人为本和公平；透明度和可解释性；稳健性；问责制。- 国家政策建议。 |  |
+| 欧盟 | 法规 | - 对高风险活动具有约束力（X 领域影响），其他活动可选，并可能获得标签。- 违规罚款高达营业额的 4%。- 特别针对模型的公平性、稳健性和可审核性，混合策略和控制。- 将对环境和社会影响的强烈伦理考虑纳入其中。 | 2024 年 8 月 1 日实施 |
+| 加拿大 | 发展 | - 包括 AI 可解释性的具有约束力的私营部门隐私框架。- 监管机构可以要求证明合规性并处以罚款。在很大程度上受到欧盟法规和讨论的启发。 | C-11 法案正在审查中 |
+| 新加坡 | 合规性 | - 积极的、非制裁式的方法。- 关注在组织层面实施人工智能治理的实用步骤和最佳实践。- 任何 B2C 模型都应该具有可解释性、透明性和公平性。 |  |
+| 美国 | 治理 | - 发布联邦指南，为行业特定指南或法规做好准备。- 重点关注公众信任和公平性。没有更广泛的伦理考虑。 | FTC 计划追究使用和销售有偏见算法的公司的责任 |
+| 英国 | 治理 | - 英国人工智能委员会于 2021 年 1 月发布的人工智能路线图。- 呼吁增加投资和治理。- 基于艾伦·图灵研究所的原则。 | 由人工智能办公室启动的工作 |
+| 澳大利亚 | 治理 | 发布详细指南，整合伦理并强烈关注最终客户保护。 | 进一步指导 |</p>
+<h4>2. 基于风险的监管</h4>
+<p>欧盟人工智能法案引入了人工智能系统风险类别（不可接受的、高风险的、有限的、低风险的），每个类别都承担着具体的监管义务。高风险人工智能系统需要更严格的合规措施，包括彻底的文档记录和透明度协议。</p>
+<p>然而，评估每个 AI 系统的风险级别并确保其满足相应的监管要求具有挑战性。例如，47% 的组织拥有 AI 风险管理框架。然而，70% 的组织缺乏持续的监控和控制。错误分类可能导致不合规和严重的后果。&lt;sup&gt;9&lt;/sup&gt;</p>
+<h4>3. 管理新的义务</h4>
+<p>新的法律，例如人工智能法案、人工智能责任指令和产品责任指令，给组织带来了额外的责任。这些法律要求对人工智能系统实施安全机制、定期审核和彻底的文档记录。</p>
+<p>组织必须调整其流程以满足这些新标准，这可能是资源密集型的，并且可能需要重组现有的合规实践，同时考虑人工智能法案的基于风险的方法。</p>
+<h4>4. 在合规团队之间协调</h4>
+<p>AI 合规性需要多个团队之间的协作，包括法律、数据治理和技术开发团队。每个团队都在确保 AI 系统符合监管要求方面发挥着作用。</p>
+<p>有效的协调对于避免沟通不畅并确保解决合规性的所有方面至关重要。持续监控和调整 AI 系统以保持合规性增加了复杂性。</p>
+<h4>5. 跨职能责任</h4>
+<p>AI 合规性通常仅限于首席数据官 (CDO) 或同等职位，但这狭隘的关注点可能具有局限性。只有 4% 的组织拥有专门负责 AI 合规性的跨职能团队。&lt;sup&gt;10&lt;/sup&gt;</p>
+<p>来自高级领导层的广泛组织承诺和参与对于将合规性确立为所有职能的首要任务以及确保必要的资源至关重要。</p>
+<h4>6. 技术保障措施</h4>
+<p>确保 AI 算法遵守伦理准则、透明度和数据保护原则是一项重大挑战，尤其对于高风险系统而言。</p>
+<p>合规性需要开发公平、无歧视和安全的算法，这在技术上要求很高。组织必须投资于专业知识和工具以满足这些标准，同时不会阻碍创新。</p>
+        <small class="page-url url "><a href="https://research.aimultiple.com/ai-compliance/" target="_blank">(https://research.aimultiple.com/ai-compliance/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="AI-Agent-market-size-in-healthcare-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📈&nbsp;</span>AI Agent market size in healthcare at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:AI Agent market size in healthcare" target="_blank">(DDG:AI Agent market size in healthcare)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 全球AI代理市场的快速增长反映出医疗行业的技术需求和投资机会。<br></small>
+    </div>
+    <div class="page-content content"><h2>AI 代理市场规模、份额、趋势及洞察报告，2035 年</h2>
+<p>全球 AI 代理市场规模和份额预计将从 2024 年的 52.9 亿美元增长到 2035 年的 2168 亿美元，复合年增长率为 40.15%。</p>
+<p>全球 AI 代理市场规模在 2023 年为 38.6 亿美元，预计从 2024 年到 2030 年的复合年增长率为 45.1%。</p>
+        <small class="page-url url "><a href="DDG:AI Agent market size in healthcare" target="_blank">(DDG:AI Agent market size in healthcare)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="AI-Agents-in-Finance:-Applications-And-Examples">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>AI Agents in Finance: Applications And Examples</h3>
+        <small class="page-url url "><a href="https://arya.ai/blog/ai-agents" target="_blank">(https://arya.ai/blog/ai-agents)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h3>AI 在金融领域的应用示例</h3>
+<p>金融行业已经见证了人工智能在自动化各种运营和战术任务方面的变革性影响。然而，人工智能在金融领域的未来远不止基于任务的自动化。下一个前沿领域在于认知决策，其中人工智能代理商会做出战略性的、数据驱动的决策，以优化效率和生产力。以下是人工智能代理商的示例：</p>
+<ol>
+<li>
+<p><strong>欺诈检测代理</strong>：这些代理实时监控交易，使用机器学习和异常检测算法来识别可能表明欺诈的异常模式。它们能够快速处理大量数据并发现细微的异常，这使得它们的效率与人工欺诈分析师一样高，甚至更高。</p>
+</li>
+<li>
+<p><strong>风险管理代理</strong>：通过运用预测分析和深度学习，这些代理评估财务风险，执行压力测试并进行情景分析。它们的优势在于能够分析海量数据集并识别人类可能忽略的风险因素，从而能够做出明智的风险评估。</p>
+</li>
+<li>
+<p><strong>信用评分代理</strong>：这些代理使用决策树、回归分析和神经网络来评估信用度并生成信用评分。它们的数据驱动方法允许客观、一致和快速的决策，类似于或超过人工贷款专员。</p>
+</li>
+<li>
+<p><strong>交易和投资代理</strong>：利用强化学习和算法交易，这些代理可以根据市场分析执行交易和管理投资组合。它们的实时处理能力和从历史数据中学习的能力使它们能够做出快速、准确的交易决策，与经验丰富的交易员的专业知识相媲美。</p>
+</li>
+<li>
+<p><strong>客户服务代理</strong>：使用自然语言处理 (NLP) 和聊天机器人，这些代理处理客户咨询、提供财务建议和解决问题。它们可以理解和响应各种各样的问题，提供与人工客户服务代表类似的个性化服务水平。</p>
+</li>
+<li>
+<p><strong>个人理财顾问</strong>：这些代理使用推荐系统和预测分析来提供个性化的财务规划和投资建议。它们能够根据个人的财务目标和行为定制建议，这使得它们能够模拟人工理财顾问提供的细致建议。</p>
+</li>
+<li>
+<p><strong>合规和监管代理</strong>：通过运用文本挖掘和基于规则的系统，这些代理监控监管变化并确保合规性。它们可以快速处理大量的监管信息，确保金融运作符合法律标准，就像人工合规官员一样。</p>
+</li>
+<li>
+<p><strong>贷款承销代理</strong>：这些代理使用机器学习和预测分析来评估贷款申请。它们能够高效地评估各种数据点，这使得它们能够做出准确的承销决策，与人工贷款承销员的工作相平行。</p>
+</li>
+<li>
+<p><strong>财务预测代理</strong>：使用时间序列分析和计量经济模型，这些代理预测市场趋势和财务业绩。它们的分析能力使它们能够准确地预测未来的财务情景，提供类似于经验丰富的财务分析师生成的见解。</p>
+</li>
+</ol>
+<p>人工智能代理正在改变金融机构的运作方式，提供卓越的客户体验，提高效率，并实现数据驱动的决策。通过自动化任务、分析海量数据以及通过自然语言处理与用户互动，人工智能代理正在彻底改变金融领域。</p>
+<p>在考虑人工智能代理在您组织中的潜力时，务必定义明确的目标，选择正确的技术，并确保数据质量和安全。通过持续监控和优化代理性能，您可以利用人工智能的力量，在快速发展的数字世界中保持领先地位。</p>
+<p>您准备好踏上人工智能之旅并改变您的金融运营了吗？安排与Arya AI的演示，了解我们尖端的人工智能解决方案如何彻底改变您的业务。从实时欺诈检测到个性化理财建议，Arya AI 随时准备提升您的财务战略并提高运营效率。不要错过金融的未来——立即预订您的演示！</p>
+<h3>结论</h3>
+<p>人工智能代理正在通过自动化复杂任务、增强决策能力和提高效率来改变金融领域。凭借欺诈检测、风险管理和客户服务等功能，它们使金融机构能够以空前的水平运作。通过集成这些智能系统，组织可以保持竞争力，持续创新，并实现显著的运营卓越。对于旨在在快速发展的市场中领先的金融机构而言，拥抱人工智能代理将至关重要。</p>
+        <small class="page-url url "><a href="https://arya.ai/blog/ai-agents" target="_blank">(https://arya.ai/blog/ai-agents)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="AI-Agents-Market-Size,-Share-and-Global-Forecast-to-2030-|-MarketsandMarkets">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>AI Agents Market Size, Share and Global Forecast to 2030 | MarketsandMarkets</h3>
+        <small class="page-url url "><a href="https://www.marketsandmarkets.com/Market-Reports/ai-agents-market-15761548.html" target="_blank">(https://www.marketsandmarkets.com/Market-Reports/ai-agents-market-15761548.html)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>AI 代理市场</h2>
+<p>[432页报告]</p>
+<p>AI 代理市场预计将从2024年的51亿美元增长到2030年的471亿美元。这一显著的扩张，其特点是在2024年至2030年期间以44.8%的强劲复合年增长率增长，主要受自然语言处理技术进步的推动。随着GPT-4o、AgentGPT等AI代理的能力在理解和生成人类语言方面越来越好，它们能够处理更复杂、更细致的上下文感知用户交互。这带来了更好的用户体验，从而导致在客户服务、医疗保健和金融等行业得到更广泛的接受。自然语言处理（NLP）的增强不仅帮助AI代理处理复杂的查询，而且使它们易于适应不同的方言，从而增加了它们的全球适用性和市场覆盖范围。“构建你自己的代理”解决方案正在推动行业发展，使公司能够设计专门定制以满足其需求的AI代理。多代理系统的日益使用，其中多个AI代理合作解决具有挑战性的问题，是推动市场扩张的另一个重要方面。</p>
+        <small class="page-url url "><a href="https://www.marketsandmarkets.com/Market-Reports/ai-agents-market-15761548.html" target="_blank">(https://www.marketsandmarkets.com/Market-Reports/ai-agents-market-15761548.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="AI-in-FinTech:-Meet-the-Top-10-Startups-Powered-by-AI">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>AI in FinTech: Meet the Top 10 Startups Powered by AI</h3>
+        <small class="page-url url "><a href="https://www.linkedin.com/pulse/ai-fintech-meet-top-10-startups-powered-techmagic" target="_blank">(https://www.linkedin.com/pulse/ai-fintech-meet-top-10-startups-powered-techmagic)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>前十名集成人工智能的金融科技初创企业</h2>
+<p>我们准备了金融科技公司利用人工智能技术进行实践的实时案例，以强化上述说法。让我们开始吧！</p>
+<h3>ZestFinance</h3>
+<p>ZestFinance帮助金融服务提供商更好地进行风险分析和信用建模。通过利用机器学习，该公司使公司能够提高审批率，降低信用损失，并改进承销流程。</p>
+<p>ZestFinance的主要目标之一是为每个人提供公平透明的信贷准入，并建立一个公平的金融体系。该公司开发了Zest自动化机器学习(ZAML)平台，这是一个由人工智能驱动的承销系统，可帮助企业评估几乎没有或没有信用信息或历史的借款人。此外，它还使用机器学习分析数百个数据点，包括传统和非传统数据，以准确预测信用风险。</p>
+<h3>Enova International</h3>
+<p>Enova是一个提供高级金融分析和信用评估的贷款平台。它创建了Colossus平台，该平台使用人工智能和机器学习为非优质消费者、企业和银行提供高级分析和技术，以支持负责任的贷款。通过这个平台，Enova的目标是向传统银行和金融机构服务不足的人群提供信贷。</p>
+<p>利用人工智能和机器学习，Enova可以根据各种数据点（包括借款人的信用历史、收入和就业状况）分析借款人的信用度。Enova可以快速有效地处理贷款申请，从而缩短贷款审批时间，并使借款人更快地获得资金。</p>
+<h3>Affirm</h3>
+<p>Affirm是一款面向消费者的应用程序，它为在各种零售商处购物提供贷款，但其与众不同之处在于它使用了多种机器学习算法进行信用承销。通过分析大量数据，Affirm能够快速准确地做出信用决定，这对于时间至关重要的在线交易尤其重要。</p>
+<p>此外，Affirm最近还成为亚马逊独家的先买后付合作伙伴，允许客户将其购买的商品分期付款。但不仅如此——Affirm还提供一系列其他功能来改善客户体验，例如透明的定价、无隐藏费用和移动应用程序。</p>
+<h3>SESAMm</h3>
+<p>SESAMm专注于投资领域的 大数据和人工智能，使组织能够通过跟踪ESG、风险争议和积极事件来及时做出决策。SESAMm的一大特色是其现成的平台TextReveal®，该平台使用户能够在不到一分钟的时间内从数百万家公司的网络数据中生成人工智能洞察。</p>
+<p>除了提供依赖深度学习技术的 基于情感分析算法外，SESAMm还利用先进的命名实体识别(NER)和消歧技术来正确检测多种语言中相关的公司。</p>
+<h3>Bud Financial</h3>
+<p>Bud Financial开发了一个开放银行平台，允许用户访问任何金融产品的 数据。该公司将数据安全放在首位，并使用高级加密技术来保护用户的信息。此外，Bud的设计注重隐私，仅使用匿名数据来训练其机器学习模型。</p>
+<p>另请阅读：彻底改变银行业务：2023年最佳开放银行应用程序</p>
+<p>Bud还非常重视透明度和责任制。该公司相信负责任地创新金融科技和银行业务，并确保其客户了解其如何以及为何使用数据。</p>
+<h2>领英推荐</h2>
+<h3>Signifyd</h3>
+<p>Signifyd 为零售商生成客户风险概况，以消除欺诈和客户滥用行为，它利用其商业网络并结合来自超过一万家商家的数据。</p>
+<p>Signifyd 的关键特性之一是利用大数据和机器学习，为已批准订单提供 100% 的欺诈和退款财务担保。通过在金融服务中使用人工智能，他们可以识别高风险交易并实时阻止欺诈，同时减少错误拒绝。</p>
+<h3>Kasisto, Inc.</h3>
+<p>Kasisto 创建了一个名为 KAI 的对话式人工智能平台，在改进金融领域的用户体验方面取得了重大进展。KAI 正在通过为客户提供自助服务选项和解决方案来帮助银行降低联络中心流量。</p>
+<p>借助 KAI，客户无需人工干预即可访问帐户信息、进行付款以及执行其他财务交易。人工智能驱动的聊天机器人分析客户数据并提供量身定制的财务建议，以帮助客户做出明智的决定。</p>
+<h3>Vectra AI</h3>
+<p>Vectra 是一家网络安全初创公司，它利用人工智能的力量来检测和防止对金融机构的网络威胁。其人工智能驱动的网络威胁检测平台Cognito可以自动化威胁检测，揭示针对金融机构的隐藏攻击者，加快事件发生后的调查，甚至识别受损信息。</p>
+<p>它可以识别隐藏的攻击者，尤其是那些针对金融机构的攻击者。这是通过其先进的机器学习算法实现的，这些算法可以检测网络流量和用户行为中的细微模式。和自动威胁检测，使金融机构能够实时检测和响应威胁，而无需人工干预。这可以大大减少响应时间并提高网络安全运营的有效性。</p>
+<h3>Upstart</h3>
+<p>Upstart 提供更具包容性和公平性的贷款实践，使借款人更容易获得实现其财务目标所需的信贷。与仅关注信用评分和信用年限的传统贷款机构不同，Upstart 使用其他数据（如就读学校、学习领域和过去的工作）进行信用分析。</p>
+<p>关键特性是更准确和个性化的信用评分，从而提高借款人的批准率并降低利率。这尤其有利于信用记录有限或刚进入职场的借款人。</p>
+<h3>HighRadius</h3>
+<p>HighRadius 是一家提供软件即服务的金融科技初创公司，它使用基于人工智能的自主系统来帮助自动化应收账款和财务流程。该公司为首席财务官办公室提供基于云的自主软件，并改变了订单到现金财务和记录到报告流程。</p>
+<p>HighRadius 利用人工智能自动化和优化复杂的财务流程，在不到六个月的时间内就能带来可衡量的业务成果，例如减少 DSO、优化营运资金、减少坏账、缩短月度结账时间以及提高生产力。</p>
+        <small class="page-url url "><a href="https://www.linkedin.com/pulse/ai-fintech-meet-top-10-startups-powered-techmagic" target="_blank">(https://www.linkedin.com/pulse/ai-fintech-meet-top-10-startups-powered-techmagic)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="金融-AI：应用、示例和优势-|-Google-Cloud">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>金融 AI：应用、示例和优势 | Google Cloud</h3>
+        <small class="page-url url "><a href="https://cloud.google.com/discover/finance-ai" target="_blank">(https://cloud.google.com/discover/finance-ai)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>应用：AI 如何解决金融服务中的实际挑战</h2>
+<h3>语音识别</h3>
+<p>将语音转成文字，通过从客户互动（例如联络中心销售通话）中获得的数据洞见改善您的服务，帮助您提供更好的客户服务体验。</p>
+<h3>情感分析</h3>
+<p>使用自然语言 AI 通过主要情绪基调识别给定文本中的情感，例如投资研究、聊天数据情感等。</p>
+<h3>异常值检测</h3>
+<p>检测异常活动，例如欺诈性交易、金融犯罪、贸易中的仿冒和网络威胁。</p>
+<h3>推荐</h3>
+<p>根据客户转化历程、同伴互动、风险偏好和财务目标，针对金融产品和服务进行高度个性化的推荐，例如投资建议或银行优惠。</p>
+<h3>机器翻译</h3>
+<p>使用快速、动态的机器翻译功能大规模翻译内容（例如财经新闻）和应用，以增强客户互动并覆盖全球更多受众群体。</p>
+<h3>文件处理</h3>
+<p>从文档中提取结构化和非结构化数据，然后分析、搜索和存储这些数据，以用于涉及大量文档的流程，例如贷款服务和投资机会发现。</p>
+<h3>图像识别</h3>
+<p>从图片和视频中提取有用信息，通过评估房屋或车辆等财产损失加快保险索赔处理速度，或通过符合 KYC 要求的身份证明文件验证加快客户引导流程。</p>
+<h3>讨论</h3>
+<p>为客户呈现如同真人一般、由 AI 赋能的联络中心体验（例如银行礼宾部或客户中心），从而降低成本并节省客服人员的时间。帮助您的应用、网站、数字平台和虚拟工具提供直观的智能体验，从而实现个人理财业务的变革，并为客户提供更多理财方式。</p>
+<h3>数据科学和分析</h3>
+<p>使用完整的数据管理、分析和机器学习工具套件生成数据洞见并从数据中发掘价值，为商业智能和决策提供支持。</p>
+<h3>预测性建模</h3>
+<p>使用客户数据、风险、交易或其他数据洞见，精确地预测未来的特定结果。这些功能在检测欺诈、降低风险和预测客户未来需求方面非常有用。</p>
+<h3>信息安全</h3>
+<p>持续监控和分析网络流量以检测、预防和应对网络攻击和威胁，实现信息安全自动化。</p>
+<h3>生成式 AI</h3>
+<p>以自然且负责任的方式进行创建、推荐、合成、分析和互动，打造 AI 赋能的全新搜索和对话体验。观看此演示，了解金融服务公司如何变革员工的搜索体验。</p>
+<h2>金融 AI 的优势</h2>
+<h3>自动化</h3>
+<p>AI 可帮助自动执行工作流和流程，以负责任的方式自主工作，并为决策制定和服务交付提供支持。例如，AI 可以持续监控和分析网络流量，帮助付款服务机构实现信息安全自动化。或者，它可以提供更灵活、更个性化的数字银行体验，能够更快、更安全地满足客户的需求，从而加强银行以客户为中心的策略。</p>
+<h3>准确率</h3>
+<p>AI 可以通过实现每次都遵循相同流程的自动化和算法，帮助金融服务机构减少数据处理、分析、文档处理、客户引导、客户互动和其他任务中的人工错误。</p>
+<h3>提升效率</h3>
+        <small class="page-url url "><a href="https://cloud.google.com/discover/finance-ai" target="_blank">(https://cloud.google.com/discover/finance-ai)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="AI-agents-for-retail-and-e-commerce:-Capabilities,-use-cases,-benefits-and-implementation">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>AI agents for retail and e-commerce: Capabilities, use cases, benefits and implementation</h3>
+        <small class="page-url url "><a href="https://www.leewayhertz.com/ai-agents-in-retail-and-ecommerce/" target="_blank">(https://www.leewayhertz.com/ai-agents-in-retail-and-ecommerce/)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>零售和电商领域的AI代理</h2>
+<p>零售和电商行业正在通过采用AI代理经历一场显著的变革。这些智能系统如今已成为现代企业的必不可少资产，预计将推动自主AI市场在2028年达到285亿美元的规模。全球会话式AI市场规模预计到2025年将增长到139亿美元。此外，84%的电商企业正在优先考虑在其业务中使用AI解决方案。AI代理提供多种解决方案，以提高效率，解决特定痛点，并显著增强客户参与度。AI代理通过提供个性化产品推荐、利用预测精度管理库存以及采用动态定价策略，重新定义了零售商和客户之间的互动。这些功能使企业能够处理海量数据，识别消费者模式，并生成有助于预测市场需求和优化产品供应的见解。这不仅可以根据个人喜好定制购物体验，还可以推动可能带来巨大利益的运营决策。AI代理正在通过增强数据管理、优化运营流程以及改进决策和客户互动来改变零售和电商行业。这些智能系统简化了日常任务，并在战略规划和客户互动中发挥着至关重要的作用。</p>
+<h3>自主性</h3>
+<p>AI代理可以独立运行，这对于自动化诸如根据实时市场数据重新订购和调整价格等例行任务至关重要。此功能确保运营在无需持续人工干预的情况下平稳运行，使企业能够快速应对市场变化。</p>
+<h3>数据收集和分析</h3>
+<p>AI代理擅长从多个来源（例如ERP和CRM系统、社交媒体平台和客户反馈）收集、清理和集成数据。它们充当高级分析工具，提供对明智决策至关重要的预测和战略见解。</p>
+<h3>流程自动化和优化</h3>
+<p>AI代理自动化并优化例行任务，例如库存管理、订单处理和退货处理。它们管理异常和错误，并不断从异常中学习以提高效率。例如，面向任务的代理会根据需求、竞争和其他外部因素实时调整价格。</p>
+<h3>协作</h3>
+<p>AI代理增强了各个部门（从仓库员工和营销团队到客户服务代表）之间的协作，确保流程协调一致并得到充分了解。此功能对于维护从库存管理到客户服务的无缝运营至关重要。</p>
+<h3>适应性</h3>
+<p>AI代理可以从互动中学习，这对于个性化购物体验和有效管理库存至关重要。它们根据消费者行为和反馈调整其回应和策略，不断提高其有效性。</p>
+<h3>决策和执行</h3>
+<p>AI代理协助做出有关库存水平、物流、营销策略和客户参与度的关键决策，确保这些决策基于可靠的数据驱动见解。它们还执行可增强客户体验的决策，例如提供个性化折扣。</p>
+<h3>移动性</h3>
+<p>AI代理能够在不同的数字环境中导航，因此在收集和利用跨各种平台的消费者行为数据方面发挥着重要作用。这种移动性使它们能够无缝地跟踪不同接触点的客户互动和偏好，从而增强提供个性化体验的能力。</p>
+<p>通过利用这些功能，AI代理可以提高效率、降低成本和改善客户体验，帮助零售和电商企业在竞争激烈的市场环境中蓬勃发展。它们集成到各个运营方面，带来了显著的增长和增强的竞争力。</p>
+        <small class="page-url url "><a href="https://www.leewayhertz.com/ai-agents-in-retail-and-ecommerce/" target="_blank">(https://www.leewayhertz.com/ai-agents-in-retail-and-ecommerce/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Artificial-Intelligence-(AI)-in-Retail-Market-Growth,-Trends-and-Industry-Analysis-|-MarketsandMarkets">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>Artificial Intelligence (AI) in Retail Market Growth, Trends and Industry Analysis | MarketsandMarkets</h3>
+        <small class="page-url url "><a href="https://www.marketsandmarkets.com/Market-Reports/artificial-intelligence-ai-retail-market-36255973.html" target="_blank">(https://www.marketsandmarkets.com/Market-Reports/artificial-intelligence-ai-retail-market-36255973.html)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>零售业AI市场增长预测</h2>
+<p>零售业AI市场预计将从2024年的311.2亿美元增长到2030年的1647.4亿美元，预测期内的复合年增长率为32.0%。</p>
+<p>电子商务的快速发展和全渠道零售战略的日益普及推动了该领域AI的实施。AI增强了线上和线下渠道的整合，使零售商能够提供一致且无缝的购物体验。AI工具支持动态定价、实时库存跟踪和跨渠道个性化促销等活动，这对于在数字优先的零售环境中保持竞争力至关重要。 随着越来越多的消费者与多个接触点互动，零售商正在转向AI来优化运营并满足全渠道购物者的日益增长的需求。</p>
+        <small class="page-url url "><a href="https://www.marketsandmarkets.com/Market-Reports/artificial-intelligence-ai-retail-market-36255973.html" target="_blank">(https://www.marketsandmarkets.com/Market-Reports/artificial-intelligence-ai-retail-market-36255973.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="AI-in-Retail-and-E-Commerce:-30-Examples-to-Know-|-Built-In">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>AI in Retail and E-Commerce: 30 Examples to Know | Built In</h3>
+        <small class="page-url url "><a href="https://builtin.com/artificial-intelligence/ai-retail-ecommerce-tech" target="_blank">(https://builtin.com/artificial-intelligence/ai-retail-ecommerce-tech)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>Contentful 的可组合内容平台</h2>
+<p>Contentful 提供了一个可组合的内容平台，其中包含一系列 AI 驱动的功能，品牌可以使用这些功能来简化内容创建并优化电子商务体验。该公司表示，其解决方案允许客户公司大幅缩短创建和发布内容所需的时间，同时还能提高客户参与度。</p>
+<h2>Route 的产品推荐</h2>
+<p>品牌与 Route 合作，通过为客户提供包裹追踪、运输保护和碳中和运输解决方案来改善其在线购物体验。Route 还提供客户参与工具，例如旨在帮助企业提升销量的 AI 驱动的产品推荐。</p>
+<h2>SHEIN 的个性化推荐和趋势预测</h2>
+<p>SHEIN 是一家在线零售商，向全球消费者销售服装、珠宝、鞋子和其他商品。该公司通过使用 AI 为其客户提供产品推荐来个性化在线购物体验。SHEIN 还使用 AI 来预测即将到来的趋势，以便确保其风格产品保持相关性。</p>
+<h2>Upside 的个性化优惠</h2>
+<p>Upside 的移动应用程序通过为消费者提供现金返还奖励，鼓励其在加油站和杂货店等实体店购物。Upside 使用 AI 为其用户提供个性化服务，目标是增强零售购物体验并为企业带来利润。</p>
+<h2>Smartly 的智能广告技术</h2>
+<p>营销技术公司 Smartly 专注于 AI 驱动的社交媒体广告，并得到 Uber 和 eBay 等全球知名品牌的信赖。通过其平台 Smartly.io，品牌可以自动化社交广告流程，包括广告系列管理和创意制作，同时利用人工智能和数据能力来优化跨多个渠道的广告策略。凭借一套全面的 SaaS 工具，该公司旨在最大限度地减少手动任务，扩大客户覆盖范围，并将客户现有资产转化为品牌化的短格式内容。</p>
+<h2>Cox Enterprises 的 AI 驱动的汽车购物</h2>
+<p>Cox Enterprises 是一家多元化的公司，业务遍及媒体、汽车和电信领域，其主要子公司包括 Cox Communications 和 Cox Automotive。作为一家科技公司，Cox Automotive 拥有 Autotrader.com 和 Dealer.com 以及标志性的 Kelley Blue Book 品牌。该公司在其 Esntial 工具（一个基于网络的平台）中使用人工智能和机器学习，该平台旨在通过估算汽车贷款支付额并帮助评估借款人风险因素来“优化销售流程”，以便客户可以立即在线进行交易。</p>
+<h2>Gopuff 的送货路线优化</h2>
+<p>Gopuff 是一款即时商务品牌，它使用微型配送中心和签约的当地司机将零食、饮料和清洁用品、非处方药等家居必需品直接送到客户家中。该公司在其整个运营中都使用 AI，包括在其引导司机沿着最有效路线行驶的映射系统中。</p>
+<h2>亿滋国际的研究与开发</h2>
+<p>亿滋国际在全球范围内生产休闲食品。该公司负责奥利奥和 Toblerone 等备受喜爱的标志性品牌以及 Tate&#x27;s Bake Shop 和 Clif Bar 等较新的热门品牌，它使用 AI 作为其技术堆栈的一部分，以增强其研发过程中的创新和效率。在新产品开发和成本评估方面，亿滋国际使用 AI 可以实现超越人类能力的准确性和效率。</p>
+<h2>Mirakl 的产品发现个性化</h2>
+<p>Mirakl 为零售公司和 B2B 公司提供的软件解决方案包括 Mirakl Target2Sell，它使用 AI 来定制购物者的产品推荐。该公司表示，此产品旨在帮助企业增加收入和转化率。它还会根据客户行为、产品评级和客户评论等因素生成见解，用户可以分析这些见解来了解和优化其数字市场的绩效。</p>
+<h2>Lily AI 的平台可改善产品发现</h2>
+<p>Lily AI 提供 AI 驱动的技术，使时尚、家居和美容行业的零售品牌能够更好地将在线购物者与相关产品联系起来。该公司表示，它已经构建了一个平台，该平台使用计算机视觉、自然语言处理和机器学习模型来识别产品属性并为其分配“以客户为中心”的语言。该产品可用于增强零售生态系统的各个方面，例如网站搜索引擎和需求预测。</p>
+<h2>Rue Gilt Groupe 的产品推荐</h2>
+<p>Rue Gilt Groupe 通过三家仅限会员的网站，为在线购物者提供奢侈商品的销售访问权限。凭借其庞大的高级品牌目录，该公司使用人工智能和机器学习为其客户提供产品推荐。</p>
+<h2>Anaplan 的预测智能平台</h2>
+<p>Anaplan 平台结合了分析和大型数据，帮助零售商留住现有客户并寻找新客户。该公司通过实时扫描网站、社交媒体和其他地方，将预测数据应用于客户推荐和预测业务成果。Anaplan 的预测洞察力已被 AWS 和可口可乐等公司用于销售和供应链定位。</p>
+<h2>Clarifai 的内容分类</h2>
+<p>Clarifai 的 AI 驱动的识别平台有助于对图像、视频、音频和文本进行分类以及审核内容。对于可能逃过 AI 雷达的其他数据，可以添加人工审核员以获得额外的一定程度的准确性。Clarifai 的技术已应用于六个不同的行业，包括电子商务和零售。</p>
+<h2>DRINKS 的精选葡萄酒业务平台</h2>
+<p>DRINKS 为电子商务零售商提供了一个在线平台，让他们可以在其网站或应用程序中添加葡萄酒产品。使用其基于 AI 的“葡萄酒即服务”API，零售商可以销售个人或网络葡萄酒，访问消费者数据洞察以及向美国 42 个州发货。</p>
+<h2>eBay 的客户建议和推荐</h2>
+<p>eBay 使用 AI 提供客户建议和个性化推荐，改善运输和交付时间、定价、买卖双方信任度等等。这项技术还可以用于 eBay 的图像搜索和自动网页翻译等领域。2019 年，这家在线市场声称，在 AI 的帮助下，它以“高精度”识别了 40% 的在线信用卡欺诈行为。</p>
+<h2>Emotive 的定制营销信息</h2>
+<p>Emotive 使用 AI 允许电子商务品牌向消费者发送交互式对话式广告、文本消息、短信支付和客户服务。该公司的 Emotive 平台是用户可以自定义其营销信息并跟踪相关参与分析的地方。Emotive 被超过 1000 个品牌使用，并报告称其对话渠道的转化率至少为 10%，投资回报率平均为原始价值的 27 倍。</p>
+<h2>Hungryroot 的个性化膳食食谱</h2>
+<p>Hungryroot 是一家食品食谱和送货服务，提供各种素食、无麸质和其他膳食选择。根据用户活动和输入，其平台使用 AI 创建个性化推荐和轮换食谱选择，以便在下次送货时包含。</p>
+<h2>IBM 的沃森</h2>
+<p>IBM 的沃森使用 AI 来帮助零售公司创建更个性化的购买体验，使用可以更准确地反映客户当前购买状态的实时数据。Frito-Lay、家得宝等零售企业使用 IBM 的 AI 技术来简化供应链运营并使购物对每个客户都独一无二。</p>
+<h2>Zeta Global 基于 AI 的受众参与</h2>
+<p>Zeta Global 将 AI 和营销自动化相结合，以识别潜在客户和个性化体验。用户还可以使用该技术自动化营销活动并将数据洞察力应用于加强客户关系。</p>
+<h2>3PM 的假冒产品检测</h2>
+<p>3PM 使用 AI 来保护其客户及其客户免受在线市场网站上的假冒伪劣产品侵害。它通过使用通常能够区分真假商品的机器学习算法来实现这一点，并且在此过程中变得越来越智能，因此也越来越有效。3PM 的 AI 产品 ReconBob 利用 Google Cloud Platform 服务来消除亚马逊、eBay 和沃尔玛网站上卖家评级的不准确性。</p>
+<h2>阿里巴巴的 AI 写作解决方案</h2>
+<p>阿里巴巴将 AI 用于从增强现实镜子到面部识别支付的所有方面。它甚至开发了一种 AI 撰写产品，该产品使用深度学习模型和自然语言处理，据报道每秒可输出多达 20,000 行内容。截至 2023 年 2 月，阿里巴巴还在测试类似 ChatGPT 工具的开发。</p>
+<h2>亚马逊的购买推荐和语音购物</h2>
+<p>亚马逊使用 AI 来帮助客户进行语音购物并获得购买推荐，以及其他服务。亚马逊的 AI 技术还用于面部识别、估算房价、视觉搜索、自动驾驶等等。亚马逊客户还可以通过亚马逊 Echo 及其集成的 AI 助手 Alexa 进行语音激活支付。此外，该公司的免结账杂货店 Amazon Go 使用 AI 来区分所选择的商品以及跟踪和估算客户行为。它在美国芝加哥、纽约、旧金山和西雅图设有活跃门店。</p>
+<h2>Fellow AI 的库存管理解决方案</h2>
+<p>Fellow AI 使用图像识别来提供实时库存管理。其一个机器人模型 NAVii 配备数据采集摄像头，可以上下移动建筑物走道以查看有哪些物品。家居建材零售连锁店 Lowes 在某些门店使用 Fellow 机器人（“LoweBots”）来帮助客户并实时监控库存。</p>
+<h2>InVia 的拣货机器人</h2>
+<p>InVia Robotics 声称拥有世界上第一个“机器人即服务”平台，它为供应链和电子商务配送中心自动化制造先进的 AI 驱动的“拣货”机器人。这些机器人可以在不中断运营的情况下与人类一起工作，理想情况下可以提高生产力和降低劳动力成本。2022 年，InVia Robotics 与电子商务履行公司 Fulfyld 合作，开始自动化其仓库运营。</p>
+<h2>Teikametric 的营销和库存自动化平台</h2>
+<p>Teikametrics 通过其在线管理服务帮助零售商在电子商务市场中进行广告宣传。其基于 AI 的市场优化平台 Flywheel 2.0 允许零售商创建和管理广告活动，自动化搜索引擎优化增长以及跟踪洞察和库存数据。该公司为亚马逊和沃尔玛等网站上的品牌广告做出了贡献。</p>
+<h2>Trendalytics 的零售产品情报</h2>
+<p>Trendalytics 是一款产品情报平台，它使用 AI 从社交媒体和 Google 趋势中提取零售行业数据。零售商可以访问这些数据来发现产品趋势、查看竞争对手的定价并帮助增加销量。</p>
+<h2>Valyant AI 的对话式 AI 和订单自动化</h2>
+<p>Valyant AI 为客户服务开发对话式 AI，尤其是在快餐业。该公司的定制语音助手可以集成到提前预约电话系统、餐厅免下车服务和移动应用程序中。</p>
+<h2>Rokt 的电子商务平台</h2>
+<p>Rokt 帮助公司在消费者准备购买的关键时刻使交易与消费者相关。该公司的 AI 驱动的平台和电子商务网络旨在确保客户不会因选择过多而不知所措，这可能会阻碍他们进行交易的选择。Rokt 致力于确定对个别客户最有效的电子商务体验。</p>
+<h2>Klaviyo 的营销技术平台</h2>
+<p>Klaviyo 提供一个 SaaS 营销技术平台，该平台基于预测洞察力定位客户，并使用 AI 创建个性化自动化。该公司的产品已被超过 146,000 个客户使用。它允许用户通过数百个应用程序集成来收集、数字探索和使用其客户的数据。</p>
+<h2>Ruggable 的数字设计助手</h2>
+<p>Ruggable 通过一个在线平台销售可机洗、防滑地毯，让客户可以根据颜色、房间类型等特征搜索产品。其网站有一个 AI 驱动的工具，可以提供装饰建议。用户可以上传他们正在装饰的房间的照片，Ruggable 的解决方案依赖于其 AI 功能来提供个性化推荐。</p>
+<p>Brennan Whitfield、Sara B.T. Thiel、Ashley Bowden、Ana Gore 和 Margo Steines 为这篇报道做出了贡献。</p>
+        <small class="page-url url "><a href="https://builtin.com/artificial-intelligence/ai-retail-ecommerce-tech" target="_blank">(https://builtin.com/artificial-intelligence/ai-retail-ecommerce-tech)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="AI-Driven-Business-Models:-4-Characteristics-|-HBS-Online">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>AI-Driven Business Models: 4 Characteristics | HBS Online</h3>
+        <small class="page-url url "><a href="https://online.hbs.edu/blog/post/ai-driven-business-models" target="_blank">(https://online.hbs.edu/blog/post/ai-driven-business-models)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>什么是AI商业模式？</h2>
+<p>AI商业模式利用AI技术以创新的方式创造、交付和获取价值。与依赖人工流程的传统商业模式不同，AI驱动的商业模式整合了机器学习、数据分析和自动化，以提高运营效率和长期可扩展性。其核心方法是AI工厂，这是一个系统框架，它不断地将原始数据加工提炼成有价值的见解。它包括相互关联的组件，如数据管道和机器学习模型，以自动化决策过程。</p>
+<p>AI工厂为以下AI集中型商业模式提供动力：</p>
+<ul>
+<li>AI产品即服务 (PaaS)：提供持续服务的AI增强型产品，例如从用户交互中学习的家庭助手</li>
+<li>AI数据货币化：收集和分析数据以销售见解或预测分析的公司</li>
+<li>AI驱动平台：使用AI将产品或服务与客户需求匹配的数字平台，例如实时优化路线和定价的拼车应用</li>
+</ul>
+<p>哈佛商学院教授卡里姆·拉卡尼（Karim Lakhani）与哈佛商学院教授马可·伊安西蒂（Marco Iansiti）共同教授在线课程《商业AI精要》。拉卡尼表示：“AI工厂作为其输出，执行三项功能：预测、模式识别和流程自动化。”</p>
+<p>预测使您能够预测客户行为和库存需求，从而主动做出决策。通过模式识别，您可以发现新兴趋势和潜在风险，以便更容易地适应变化。流程自动化处理重复性任务，例如客户服务或医学图像分析，以提高效率并释放宝贵的资源。</p>
+<p>为了保持竞争力，您的组织必须拥抱AI。以下列出了四种有助于推动价值创造、增长和数字化转型的AI商业模式特征。</p>
+<h2>4个AI驱动的商业特征</h2>
+<h3>1. 数据化</h3>
+<p>数据是AI商业模式的基石，对于训练和优化AI系统至关重要。您可以从以下方面收集数据：</p>
+<ul>
+<li>客户互动</li>
+<li>运营流程</li>
+<li>市场趋势</li>
+</ul>
+<p>然后，您可以处理和分析这些数据以提取有价值的见解，从而增强决策和战略规划。《商业AI精要》将此称为“数据化”。</p>
+<p>例如，谷歌在2014年收购Nest时，将简单的恒温器变成了控制温度并收集数据的智能设备。在《商业AI精要》中，拉卡尼重点介绍了房主使用传统恒温器管理的典型功能。“您购买燃料，设定温度，感知温度，然后打开或关闭炉子，”拉卡尼说。“这里面有数据，但实际上没有任何数据被提取出来，对吧？”</p>
+<p>虽然传统恒温器的基本数据很有用，但Nest通过数据化将其更进一步，将用户活动转化为可操作的见解。通过分析加热和冷却模式，Nest帮助房主优化能源使用并节省资金——通常每年在加热和冷却成本上节省约百分之八。</p>
+<p>拉卡尼在《商业AI精要》中说：“这种数据化使您能够开始重新思考在价值创造和价值获取方面您可以做什么。”</p>
+<h3>2. 算法开发</h3>
+<p>另一个特征是使用信息构建算法——因为AI商业模式使用大量数据。该过程通常从收集数据开始，然后训练机器学习模型来识别模式、进行预测和自动化决策。</p>
+<p>伊安西蒂在《商业AI精要》中说：“数据本身什么也做不了。因此，您实际上需要弄清楚要选择哪种算法。您需要弄清楚需要哪种类型的算法。您需要弄清楚如何使用它。”</p>
+<p>选择合适的算法始于了解您的问题和您拥有的数据类型。</p>
+<p>例如，Netflix的推荐算法与其最大化参与度的目标相一致，它通过持续分析观众偏好数据来提供个性化内容。这确保订阅者更有可能发现和观看他们喜欢的內容——从而提高他们的满意度、观看时间和在竞争激烈的市场中的忠诚度。</p>
+<p>选择与您的业务目标和客观相符的算法，并准备好根据您获得的新数据和市场见解进行调整。</p>
+<h3>3. 自动化程度提高</h3>
+<p>自动化对于您的AI商业模式至关重要，因为它使您能够简化手动、重复性任务。</p>
+<p>但是，它可能会引发裁员担忧。根据高盛的报告，大约三分之二的美国职业在某种程度上会受到AI自动化的影响。尽管如此，研究表明，它更多的是补充而不是取代大部分工作。</p>
+<p>AI自动化的一个好处是，它使您可以将员工的注意力转移到更具战略意义的任务上。例如，在实施AI之前，亚马逊的员工会手动测试单个产品以优化包装。一旦亚马逊意识到这种方法在规模上是不可持续的，它就创建了AI驱动的包裹决策引擎来自动化大部分工作，并使员工能够专注于高价值活动，例如：</p>
+<ul>
+<li>制定可持续发展倡议</li>
+<li>改善客户体验</li>
+<li>分析数据以增强服务</li>
+</ul>
+<p>如果您有兴趣采用AI自动化，请找出您组织内的重复性任务。例如，您可以使用AI工具（如聊天机器人或库存跟踪系统）来自动化库存管理、数据输入或客户支持。</p>
+<h3>4. 创新</h3>
+<p>在AI驱动的业务中，创新不仅仅是开发产品，更是数字化转型。这意味着要让您的团队探索想法、测试新兴技术并迭代现有流程。</p>
+<p>在《商业AI精要》中，伊安西蒂解释说，AI优先的创新超越了新技术或新产品。虽然传统公司由于业务运作孤立和文化僵化而难以适应，但那些AI优先的公司可以利用数字核心和集成数据平台更动态、更高效地进行创新。</p>
+<p>伊安西蒂说：“这不是一个新产品，也不是一项新服务。它是一种根本上不同类型的组织。它是一种建立在完全不同前提下的新型公司，它会以全新的方式来服务同类型的客户——甚至更多——并继续创造和积累价值。”</p>
+        <small class="page-url url "><a href="https://online.hbs.edu/blog/post/ai-driven-business-models" target="_blank">(https://online.hbs.edu/blog/post/ai-driven-business-models)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="5-AI-Case-Studies-in-Retail-|-VKTR">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">&nbsp;</span>5 AI Case Studies in Retail | VKTR</h3>
+        <small class="page-url url "><a href="https://www.vktr.com/ai-disruption/5-ai-case-studies-in-retail/" target="_blank">(https://www.vktr.com/ai-disruption/5-ai-case-studies-in-retail/)</a><br></small>
+        <small class="page-rating rating hidden">评分: 0<br></small>
+        <small class="page-annotation annotation hidden">注释: <br></small>
+    </div>
+    <div class="page-content content"><h2>人工智能在零售行业的应用案例</h2>
+<p>人工智能（AI）正在改变零售行业的几乎每一个方面。从商品在商店中的展示方式到供应链的运作和库存规划，人工智能都在帮助零售商更高效、更精简、更准确地开展业务。以下是一些关于实体店如何应用人工智能的案例研究：</p>
+<h3>目录</h3>
+<ol>
+<li>李维斯</li>
+<li>Sport Clips</li>
+<li>SPAR ICS</li>
+<li>Ulta Beauty</li>
+<li>Kerry</li>
+</ol>
+<h3>1. 李维斯</h3>
+<p>当你走进商店寻找一件新牛仔裤时，你可能会发现，这背后是一套人工智能驱动的技术解决方案，它能让你选择裤子的款式——紧身、直筒、修身、宽松、锥形或喇叭形——并在你所在的商店找到你尺码的、你愿意支付价格的裤子。</p>
+<p>服装品牌李维斯使用海量数据来感知需求，预测其产品应该在哪里需要，并在顾客出现寻找时尚服装时将其送达。“在保持需求量和渠道复杂性的同时，将合适的商品以合适的尺寸、合适的数量和合适的价格送到合适的地方，这绝非易事，”该公司关于人工智能应用的案例研究中写道。</p>
+<p>李维斯与 SAS 合作，利用分析技术查看和分析数百万条消费者需求信号，以便零售商能够创建需求计划和供应链，以针对特定地区（包括某个社区）寻求特定服装、颜色、款式或尺码的需求。这项技术仍在开发中，但完全实施后，它应该能够帮助李维斯预测未来的风险、需求和机遇，并在顾客寻找它们之前将顾客想要的商品摆放在货架上。</p>
+<p><strong>成果：</strong></p>
+<ul>
+<li>做出数据驱动的决策，以提高增长和竞争优势</li>
+<li>创建更智能的需求计划和供应链</li>
+<li>定制批发和零售以及批发可用性</li>
+</ul>
+<h3>2. Sport Clips</h3>
+<p>Sport Clips 是一个全国性的美发连锁店，在美国各地拥有数百个门店，数千名造型师。该公司试图通过关键的招聘职能来帮助其加盟商取得成功。</p>
+<p>Sport Clips 的创始人兼董事长戈登·洛根表示：“成为加盟商的人们正在将他们的毕生积蓄托付给我们。”“我们总是收到新加盟商提出的问题是，‘我在哪里可以找到我需要的人员来为我的商店配备人员，并提供冠军级理发体验？’”</p>
+<p>为了帮助加盟商应对这一永恒的挑战，Sport Clips 利用人工智能来构建工具，帮助其众多零售加盟商进行人员配备，同时提高员工生产力和敬业度，案例研究中这样写道。</p>
+<p>该公司转向 IBM watsonx 来创建其所需的人工智能解决方案，以简化和加快加盟商增加其商店熟练造型师人数的能力，同时专注于经营沙龙的日常工作。</p>
+<p>该工具为沙龙提供了聊天风格的界面和多种关键招聘任务的自动化功能，例如创建新的职位发布、将职位发布推送到社交媒体、识别合格的候选人以及安排面试。</p>
+<p><strong>成果：</strong></p>
+<ul>
+<li>将三小时的招聘任务缩短到三分钟</li>
+<li>帮助员工人数增加了 30%</li>
+<li>提供访问 1.69 亿个求职者和人工智能驱动的匹配算法</li>
+</ul>
+<h3>3. SPAR ICS</h3>
+<p>SPAR ICS 是为 SPAR 奥地利集团的食品零售、体育零售和购物中心构建解决方案的 IT 集团。该团队希望开发一个解决方案，利用人工智能更有效地将商品交付给客户，案例研究中这样写道。</p>
+<p>SPAR ICS 向微软寻求帮助，以构建人工智能工具，利用公司数据更快、更准确地将杂货和其他商品送达合适的商店。</p>
+<p>人工智能帮助 IT 团队预测特定地点的需求，管理供应链以有效地将这些商品送达合适的零售店，并创建一个应用程序，帮助客户连接商店、规划购买、结账和收据。“我们使用人工智能来分析天气条件、营销活动、季节性以及许多其他因素的数据，以精确预测每个商店的最佳数量，”SPAR ICS 的高级产品负责人伊丽莎白·布莱克纳说。</p>
+<p>人工智能的努力对零售商取得了成功。“凭借我们新的高级数据和分析能力，我们能够加快上市时间，主动预测市场需求，并真正推动创新，”SPAR ICS 常务董事安德烈亚斯·克兰比特尔说。</p>
+<p><strong>成果：</strong></p>
+<ul>
+<li>库存预测准确率提高到 90% 以上</li>
+<li>未售出的杂货减少到 1%</li>
+<li>提前三天将水果和蔬菜送达商店</li>
+</ul>
+<h3>4. Ulta Beauty</h3>
+<p>Ulta Beauty 与 SAS 合作，利用人工智能改善客户体验 (CX) 并个性化其商店和营销团队向客户展示产品的方式，案例研究中这样写道。“我们真正关注的两个领域——人工智能和机器学习——都植根于推荐引擎，”Ulta Beauty 会员营销副总裁凯利·马奥尼说。“这是一个 Ulta Beauty 专有的算法，它允许我们将物理世界和数字世界联系起来。”</p>
+<p>推荐引擎允许 Ulta 将产品建议、交易和活动定位到小的、特定的客户群体。人工智能确定客户可能想要什么，并通过 Ulta Beauty Rewards 提供奖励，这可能会激励客户返回商店。“我们可以接触到一小部分想要向其展示新产品的宾客，”Ulta Beauty 会员营销和技术高级总监梅利莎·伯谢德说。</p>
+<p><strong>成果：</strong></p>
+<ul>
+<li>提高了客户忠诚度，因为 95% 的销售额来自回头客</li>
+<li>根据真实数据调整产品推荐</li>
+<li>几乎实时地向客户发送营销信息</li>
+</ul>
+<h3>5. Kerry</h3>
+<p>Kerry 是一家全球营养公司，为全球食品零售商开发食品和调味品。由于食品趋势变化迅速，该公司希望更快、更有效地利用消费者食品趋势，以了解消费者的需求，以便更好地创造和交付食品。“在最高层面上，挑战仅仅在于食品和饮料领域的变化速度比以往任何时候都快，”Kerry 的全球数字副总裁詹姆斯·桑多拉说。“我们的客户必须在他们如何满足消费者需求方面变得极其灵活。”</p>
+<p>Kerry 向 IBM Watson 寻求帮助，以构建一个洞察工具 Kerry Trendspotter，使其能够快速发现和预测全球食品和饮料趋势。</p>
+<p>该工具会抓取来自消费者和食品行业影响者的社交媒体内容，分析数据并预测客户可能想要什么。该工具识别并排名新兴模式，以预测具有最高趋势概率的成分、风味和食品。“当我们的客户知道消费者想要什么产品并提前开始开发时，这些产品会在消费者需求高峰期上市，每个人都会受益，”桑多拉说。</p>
+<p><strong>成果：</strong></p>
+<ul>
+<li>帮助将产品开发中的产品概念从四到六周缩短到五天</li>
+<li>帮助将产品创建过程从六到九个月缩短到两个月以内</li>
+<li>努力将趋势研究结果交付给其他食品和饮料制造商</li>
+</ul>
+        <small class="page-url url "><a href="https://www.vktr.com/ai-disruption/5-ai-case-studies-in-retail/" target="_blank">(https://www.vktr.com/ai-disruption/5-ai-case-studies-in-retail/)</a><br></small>
+    </div>
+
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 获取所有导航链接
+        const navLinks = document.querySelectorAll(".navigate-item");
+        // 将导航链接与目标元素建立映射关系
+        const connections = Array.from(navLinks).map(link => {
+            const targetId = link.getAttribute("href").substring(1); // 去掉 #
+            const targetElement = document.getElementById(targetId);
+            return { link, targetElement };
+        });
+        // 使用 IntersectionObserver 观察目标元素
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const { target, isIntersecting } = entry;
+                    const matchingLink = connections.find(connection => connection.targetElement === target).link;
+                    if (isIntersecting) {
+                        // 目标元素在视野中，添加高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.add("active");
+                    } else {
+                        // 目标元素离开视野，移除高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.remove("active");
+                    }
+                });
+            },
+            {
+                root: null, // 默认视口
+                threshold: 0.02
+            }
+        );
+
+        // 开始观察所有目标元素
+        connections.forEach(({ targetElement }) => observer.observe(targetElement));
+    });
+</script>
+</html>

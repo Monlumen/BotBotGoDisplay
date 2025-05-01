@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>研究古罗马贵族的财富来源、钱花到了哪, 要具体的例子</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; 
+            background-color: #f4f6f8; 
+            color: #333; 
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        
+        .content {
+            border-radius: 12px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); 
+            background-color: #fff; 
+            padding: 16px; 
+            margin-bottom: 16px; 
+        }
+
+        
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .left-column{
+            flex: 0.47;
+        }
+        .right-column{
+            flex: 0.53;
+        }
+
+        .left-column {
+            background-color: #eef6ff; 
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; 
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Noto Serif", "SimSun", serif; 
+            position: relative;
+        }
+        .resizer {
+            width: 6px;
+            cursor: col-resize;
+            background-color: #d1d1d1;
+        }
+
+
+        
+        .title {
+            font-size: 1.4em; 
+            font-weight: 600; 
+            color: #1a1a1a; 
+            margin-bottom: 12px; 
+        }
+
+        .page-name.title {
+            font-size: 1.8em; 
+            font-weight: bold; 
+            color: #222; 
+            margin: 16px 0; 
+            text-align: left; 
+        }
+
+        .section-title {
+            font-size: 1.4em; 
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; 
+        }
+
+        
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; 
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; 
+            padding: 12px; 
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; 
+            border: 1px solid #dde3ea; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+            margin-bottom: 20px; 
+        }
+
+        
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; 
+            margin: 20px 0; 
+        }
+
+        
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; 
+            color: #666; 
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; 
+            border-radius: 8px; 
+            line-height: 1.4;
+            margin-bottom: 10px; 
+        }
+
+        
+        .page-rating {
+            background-color: #e8f4ff; 
+            color: #0078d7; 
+            font-weight: bold; 
+            border: 1px solid #aad4ff; 
+        }
+
+        
+        .page-annotation {
+            background-color: #fff5e5; 
+            color: #cc8400; 
+            font-style: italic; 
+            border: 1px solid #ffcc66; 
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; 
+        }
+
+        
+        a {
+            color: #0078d7; 
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+        
+        .content > * {
+            margin-bottom: 12px; 
+        }
+
+        
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; 
+            z-index: 300; 
+            background-color: #ffffff; 
+            color: #222; 
+            font-size: 1.1em; 
+            font-weight: 500; 
+            padding: 12px 16px; 
+            border-radius: 8px; 
+            border: 1px solid #d1e4f2; 
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05),  0 2px 4px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 16px; 
+            text-align: left; 
+            line-height: 1.6; 
+            font-family: "Inter", "Noto Sans", sans-serif; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        
+        .section-link-box {
+            display: inline-block; 
+            margin: 4px 2px; 
+        }
+
+        .section-link {
+            display: inline-flex; 
+            align-items: center; 
+            padding: 6px 12px; 
+            background-color: #eef6ff; 
+            color: #0078d7; 
+            font-size: 0.95em; 
+            font-weight: 500; 
+            text-decoration: none; 
+            border: 1px solid #d1e4f2; 
+            border-radius: 20px; 
+            transition: all 0.2s ease; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; 
+            color: #005bb5; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            text-decoration: underline; 
+        }
+
+        
+        .navigate {
+            display: flex; 
+            max-width: 40%;
+            width: fit-content; 
+            flex-wrap: nowrap; 
+            overflow-x: auto; 
+            gap: 4px; 
+            justify-content: center; 
+            padding: 4px 4px; 
+            background-color: #f4f6f8; 
+            border-radius: 12px; 
+
+            position: fixed;
+            top: 0;
+            left: 55%;
+            
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease; 
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        
+        .navigate-item {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            background-color: #ffffff; 
+            padding: 3px 6px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            transition: all 0.3s ease; 
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            transform: translateY(2px); 
+        }
+        .navigate-item.active {
+            box-shadow: 0 0 10px 3px rgba(0, 120, 215, 0.5); 
+            transform: translateY(1px); 
+        }
+        .navigate-item a {
+            text-decoration: none; 
+            color: #0078d7; 
+            font-weight: bold; 
+            font-size: 1em; 
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; 
+            margin-bottom: 1px; 
+        }
+        .navigate-item-id {
+            font-size: 0.9em; 
+            color: #555; 
+        }
+
+        [id] { 
+            scroll-margin-top: 55px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            研究古罗马贵族的财富来源、钱花到了哪, 要具体的例子
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">财富来源</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Agriculture-in-ancient-Rome---Wikipedia">
+    🌾农业与土地</a></div><div class="section-link-box"><a class="section-link" href="#Luxury-Arts-of-Rome-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History">
+    💰财富来源</a></div><div class="section-link-box"><a class="section-link" href="#Roman-Warfare---World-History-Encyclopedia">
+    🏅战争与扩张</a></div><div class="section-link-box"><a class="section-link" href="#Ancient-Roman-Military:-Mobilization,-Infrastructure,-Spoils-|-Early-European-History-And-Religion-—-Facts-and-Details">
+    ⚔战争获利</a></div><div class="section-link-box"><a class="section-link" href="#Patronage-in-ancient-Rome---Wikipedia">
+    🤝政治及社会赞助</a></div><div class="section-link-box"><a class="section-link" href="#Trade-in-the-Roman-World---World-History-Encyclopedia">
+    🛒贸易</a></div><div class="section-link-box"><a class="section-link" href="#The-Roman-Empire-and-Trade">
+    ⚓贸易网络</a></div><div class="section-link-box"><a class="section-link" href="#“Ancient-Roman-Luxuries:-What-the-Wealthy-Indulged-In”-|-by-Luxury.-Fiance.-Wealth.-|-Medium">
+    👗</a></div><div class="section-link-box"><a class="section-link" href="#RICH-PEOPLE-AND-NOBILITY-IN-ANCIENT-ROME-|-Facts-and-Details">
+    🏛</a></div><div class="section-link-box"><a class="section-link" href="#Roman-economy---Wikipedia">
+    💵</a></div><div class="section-link-box"><a class="section-link" href="#Trade-in-the-Roman-Empire-180-CE">
+    🚚</a></div></div>
+    <div class="section-content content"><h2>古罗马贵族的财富来源</h2>
+<p>古罗马贵族的巨额财富主要源于以下几个方面：</p>
+<p><strong>1.  农业和土地所有制:</strong>  罗马贵族拥有大量拉蒂基金迪亚(latifundia)，即大型庄园，利用廉价的奴隶劳动力进行大规模农业生产。主要种植谷物(小麦、大麦、小米等)、橄榄和葡萄等经济作物。普林尼《自然史》中记载的案例是最好的佐证：某位贵族拥有超过4000名奴隶、3600对牛和257000头其他牲畜，以及6000万塞斯特提厄斯的现款，充分展现了土地所有制和奴隶制带来的巨大财富。  根据科卢梅拉《论农业》的描述，大型庄园的规模超过500育格拉(约125公顷)，通过精细的农业管理和规模化生产，获取巨额利润，这部分利润不仅供贵族本人享用，还用于再投资和扩张。小麦的种子-产量比，根据不同资料来源和地区差异很大，从4:1到15:1不等，显示出罗马农业生产力的差异性及潜在的丰厚利润。[根据维基百科Agriculture in ancient Rome]，谷物提供了罗马人平均饮食中70%到80%的卡路里，显示其至关重要的经济地位。</p>
+<p><strong>2.  贸易与商业活动:</strong> 罗马贵族积极参与地中海地区的贸易网络，进口来自北非的粮食（尤其小麦）、橄榄油、葡萄酒、木材、铁、皮革、大理石、香料、纸莎草、象牙、丝绸等商品；同时出口本国生产的谷物、葡萄酒、橄榄油等。奥斯提亚港是罗马最重要的港口，其发达的航运网络使海运成本仅为陆运的六十分之一，极大地促进了大宗商品的贸易，并直接服务于罗马庞大的人口（据估计，鼎盛时期超过一百万人）。[根据World History Encyclopedia: Trade in the Roman World]，大量商品在区域内大庄园生产，并作为特产用于贸易，例如埃及的葡萄酒和西班牙南部的橄榄油，这说明区域性贸易的规模和发达程度。  [根据The Roman Empire and Trade]，除了日常用品外，还包括来自中国和印度的奢侈品，例如丝绸和香料，体现出罗马贸易网络的广阔和多元化。</p>
+<p><strong>3.  战争与征服:</strong>  罗马的扩张战争带来巨额财富。征服带来的不仅有新的领土和资源（土地、矿产等），还有大量的战利品（金银财宝、艺术品等）以及被征服地区人口的赎金。 马库斯·利西尼乌斯·克拉苏(Marcus Licinius Crassus)是典型的例子，他通过战争和不法手段积累了巨额财富，并以此举办了规模庞大的庆祝宴会，每位参与者还获得三个月的粮食津贴。 [根据RICH PEOPLE AND NOBILITY IN ANCIENT ROME]，克拉苏还通过控制罗马唯一的消防队，利用火灾讹诈业主，获取大量房产。凯撒征服高卢的战争也为其带来了巨额财富，这部分财富也用于巩固其政治权力。 [根据Ancient Roman Military: Mobilization, Infrastructure, Spoils]，战争的 spoils 名义上进入国家金库，但实际上很大一部分被统帅及其手下和士兵瓜分。  被征服领土的重建也为胜利者带来丰厚回报，例如凯撒击败赫尔维蒂人后，埃杜伊人为换取其在高卢中部的霸权付出了高昂代价。</p>
+<p><strong>4.  政治权力和社会庇护关系:</strong>  掌握政治权力是积累财富的重要途径。贵族通过担任政府官员、军队指挥官等职务，可以获得合法收入；同时，他们利用权力影响土地分配、贸易政策等，进一步巩固其财富。罗马复杂的庇护关系(clientela)系统，也促进了财富的累积。贵族(patronus)为客户(cliens)提供保护和各种利益(法律援助、贷款等)，客户则向贵族提供支持和服务，形成一种相互依赖的社会网络，确保财富的持续积累和政治影响力的强化。[根据Patronage in ancient Rome]，这种庇护关系从共和早期到帝国后期都发挥着重要作用，影响着罗马社会的方方面面。  奥古斯都等皇帝的大规模公共开支(竞技场、浴场等)，虽然有公共宣传的成分，但也体现了其掌握的巨大财富。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">财富支出</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#The-Lavish-Roman-Banquet:-A-Calculated-Display-Of-Debauchery-And-Power-:-The-Salt-:-NPR">
+    🍽奢侈生活</a></div><div class="section-link-box"><a class="section-link" href="#Luxury-Arts-of-Rome-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History">
+    💰奢华宴会</a></div><div class="section-link-box"><a class="section-link" href="#RICH-PEOPLE-AND-NOBILITY-IN-ANCIENT-ROME-|-Facts-and-Details">
+    🏛贵族生活</a></div><div class="section-link-box"><a class="section-link" href="#“Ancient-Roman-Luxuries:-What-the-Wealthy-Indulged-In”-|-by-Luxury.-Fiance.-Wealth.-|-Medium">
+    👗</a></div></div>
+    <div class="section-content content"><h2>罗马贵族财富支出：奢靡生活、艺术投资与奢侈消费</h2>
+<p>罗马贵族的财富主要体现在以下几个方面的巨额支出：</p>
+<p><strong>一、极度奢靡的日常生活：</strong>  罗马贵族阶层的日常生活充斥着极度奢靡。他们举办持续数日的奢华宴会，是炫耀财富、巩固权力和进行政治角逐的重要手段。  宴会菜肴极尽奢华，例如《烹饪艺术》中记载的400多种食谱就包括了孔雀、火烈鸟、鸵鸟肉、油焖蜗牛、鱼子酱填充小龙虾等珍稀食材 (Marcus Gavius Apicius, <em>De re culinaria</em>)，甚至还有用拌珍珠的米饭 (Luxury. Fiance. Wealth., "Ancient Roman Luxuries")。美酒更是大量供应，以至于诗人尤维纳利斯用“面包与马戏” (Juvenal, <em>Satires</em>) 来概括罗马皇帝的统治策略，而上层阶级享受的“面包”指的是这些令人眼花缭乱的美食盛宴，甚至“吃到吐” (Barry Strauss, <em>Ten Caesars</em>)。  此外，宴会也暗藏杀机，例如，克劳狄皇帝的死因就曾被怀疑与宴会上的毒酒有关 (Barry Strauss, <em>Ten Caesars</em>)。  贵族妇女则佩戴来自波斯湾的珍珠、波罗的海的琥珀、南亚的紫水晶、蓝宝石和未加工钻石等昂贵珠宝 (Luxury Arts of Rome)，穿着用中国进口丝绸制作的华服，戴着用日耳曼或不列颠奴隶头发制成的假发 (Luxury Arts of Rome)。  埃拉伽巴路皇帝甚至建造了具有可倾斜假天花板的宴会厅，用花瓣“埋葬”宾客 (The Lavish Roman Banquet)。这些都充分体现了罗马贵族挥霍无度的日常生活。</p>
+<p><strong>二、对艺术和建筑的大量投资：</strong>  为了彰显财富和权力，罗马贵族大量投资于宏伟的建筑和艺术项目。  他们建造奢华的别墅，例如庞培城中那些直到19世纪才再次达到的豪华别墅标准 (RICH PEOPLE AND NOBILITY IN ANCIENT ROME)；兴建公共浴场，如卡拉卡拉浴场，这些不仅仅是清洁场所，更是重要的社交中心，装饰着华丽的喷泉、大理石柱、雕像和马赛克 (Ancient Roman Luxuries)；并资助建造神庙等公共建筑。  将军兼政治家克拉苏 (Marcus Licinius Crassus) 就曾利用其巨额财富 (据普鲁塔克记载，他通过“火与掠夺”积累财富) 为庆祝斯巴达克斯起义的镇压而举办了规模空前的庆功宴，每个参与者还获得三个月的粮食津贴 (RICH PEOPLE AND NOBILITY IN ANCIENT ROME)。   此外，大量文献记载和考古发现表明，许多艺术品和贵重金属器皿（如金银器皿）被熔化或再利用，进一步印证了罗马贵族对财富的巨大挥霍 (Luxury Arts of Rome)。</p>
+<p><strong>三、奢侈品的广泛消费：</strong>  除了珠宝和服饰，罗马贵族还消费各种奢侈品，包括象牙梳子、发夹、精美的香水盒和化妆品容器、银镜等 (Luxury Arts of Rome)。  这些奢侈品的消费不仅反映了罗马当时高超的工艺水平，也体现了其国际贸易的繁荣，以及贵族阶层对高品质生活和稀有物品的追求。  老普林尼 (Pliny the Elder) 在《自然史》中记载的伊西多鲁斯 (Isidorus) 的遗产中，就包括了大量的奴隶、牲畜和巨额现金 (RICH PEOPLE AND NOBILITY IN ANCIENT ROME)，这从侧面展示了当时罗马贵族阶层的巨额财富及其在奢侈品消费上的巨大开支。</p>
+<p>总而言之，罗马贵族的财富支出与其奢靡的生活方式、对艺术和建筑的大量投资以及对奢侈品的广泛消费密切相关，这些支出不仅满足了他们的个人享乐需求，也巩固了他们的政治权力和社会地位，并深刻地影响了罗马帝国的文化和社会发展。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">社会文化影响</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Luxury-Arts-of-Rome-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History">
+    💰奢侈消费</a></div><div class="section-link-box"><a class="section-link" href="#The-Lavish-Roman-Banquet:-A-Calculated-Display-Of-Debauchery-And-Power-:-The-Salt-:-NPR">
+    🍽盛宴与权力</a></div><div class="section-link-box"><a class="section-link" href="#“Ancient-Roman-Luxuries:-What-the-Wealthy-Indulged-In”-|-by-Luxury.-Fiance.-Wealth.-|-Medium">
+    👗财富与政治</a></div><div class="section-link-box"><a class="section-link" href="#RICH-PEOPLE-AND-NOBILITY-IN-ANCIENT-ROME-|-Facts-and-Details">
+    🏛贵族生活</a></div><div class="section-link-box"><a class="section-link" href="#Trade-in-the-Roman-World---World-History-Encyclopedia">
+    🛒</a></div><div class="section-link-box"><a class="section-link" href="#Agriculture-in-ancient-Rome---Wikipedia">
+    🌾</a></div><div class="section-link-box"><a class="section-link" href="#Roman-Art-and-Architecture-|-Oxford-Art">
+    🖼</a></div></div>
+    <div class="section-content content"><h2>古罗马贵族财富及其消费对社会结构和文化遗产的影响</h2>
+<p>古罗马贵族的巨额财富及其消费模式深刻地影响了罗马社会的结构和文化遗产，具体体现在以下几个方面：</p>
+<p><strong>1. 加剧社会不平等与社会动荡：</strong>  罗马共和国后期，巨额财富以贡赋、税收、商业利润以及战争掠夺（包括奴隶贸易）的形式涌入罗马，致使部分权贵阶层，例如将军兼政治家克拉苏（约公元前115-53年），积累了惊人财富 (普鲁塔克记载，克拉苏通过“火与掠夺”致富)。  这种财富的极度集中直接导致了社会贫富分化。 贵族阶层的奢侈消费，例如奢华宴会（《十位凯撒：从奥古斯都到君士坦丁的罗马皇帝》中提到，宴会是权力工具，菜品包括孔雀舌、油炸睡鼠等珍稀食材，并大量饮用葡萄酒；《烹饪艺术》则记载了400多种菜谱，囊括了从各种陆禽、飞禽到海鲜等无数食材），以及对奢侈品的挥霍（包括黄金首饰、银镜、象牙梳子、丝绸、从波斯湾进口的珍珠、波罗的海琥珀、以及来自南亚的紫水晶、蓝宝石、钻石和来自上埃及的祖母绿等；《Luxury Arts of Rome》详细描述了贵族女性对珠宝的偏爱），以及在豪华别墅（如庞培城的豪华别墅，其标准“直到19世纪才再次达到”——迈克尔·格兰特）和神庙上的巨额投资，都造成了与普通民众（主要食物为面包、粥、水果和蔬菜——《The Lavish Roman Banquet》）之间巨大的生活水平差异（普通罗马人很少能买得起肉或鱼，《The Lavish Roman Banquet》），加剧了社会不平等，并潜在地埋下了社会动荡和不满的种子。老普林尼（公元23/4-79年）在其《自然史》中记载，一位富有的罗马人伊西多鲁斯拥有4116名奴隶、3600对牛和257000头其他牲畜，以及6000万塞斯特提厄斯的现款，这充分体现了当时社会财富的极度不平衡。即使在公元三世纪帝国衰落时期，面临蛮族入侵、通货膨胀等困境，特权精英仍然享有奢华生活（这导致了贵重物品的埋藏，并由此发现了大量的银器和珠宝）。</p>
+<p><strong>2. 财富的政治运作与权力斗争：</strong>  豪华宴会并非单纯的享乐，更是罗马贵族维系与巩固权力、进行政治运作的重要工具。通过举办盛大的宴会，他们可以拉拢潜在盟友，同时暗中监控潜在的敌人（《十位凯撒：从奥古士都到君士坦丁的罗马皇帝》指出，“宴会是一个遵循‘朋友要近，敌人更近’原则的机会”），权力斗争和阴谋在这些场合暗流涌动。甚至毒杀等极端事件也时有发生（例如，皇帝克劳狄的儿子在宫廷宴会上生病后去世，尽管证据表明是自然原因，但当时许多人认为他是受尼禄的命令而中毒）。 这表明，财富在罗马政治中并非仅仅是经济资源，而是直接影响政治生态，左右政治决策的有效工具。克拉苏利用其雄厚的财富，资助镇压斯巴达克斯起义的军队，并通过操控罗马的消防队，以不正当手段获取土地和财富，最终获得了三巨头的地位(《RICH PEOPLE AND NOBILITY IN ANCIENT ROME》)。</p>
+<p><strong>3. 对艺术风格与文化遗产的影响：</strong>  贵族的财富支出对罗马的艺术和建筑风格产生了深远而广泛的影响。他们对艺术项目的巨额资助，直接催生了大量豪华别墅、宏伟神庙以及其他公共建筑（如卡拉卡拉浴场，《Ancient Roman Luxuries》），并塑造了罗马独特的艺术风格（《Roman Art and Architecture》）。 罗马人的技术和艺术技巧也体现在对珍贵材料的人工仿制上(《富有的罗马女性及其珠宝》)。  这种风格也深刻影响了后世的艺术样式和社会风气，尤其是在装饰和艺术赞助方面。例如，文中提到的克拉苏举办的奢华宴会以及对艺术和建筑的投资，都直接体现了这种影响。罗马贵妇对珠宝的喜好，例如波斯湾珍珠和波罗的海琥珀的使用；以及对玛瑙、缟玛瑙的仿制品的使用(《Luxury Arts of Rome》)，也深刻地体现了这种文化影响。罗马公共艺术的重点是对重要人物的纪念。共和国后期出现了引人注目的肖像，融合了本土写实传统和希腊化风格 (《Roman Art and Architecture》)。  帝国时期，祖先和皇帝的肖像半身像装饰着公共和私人建筑，希腊著名雕塑的复制品和改编品被广泛使用。图拉真柱和提图斯拱门上描绘皇帝成就的浮雕，为历史记载提供了视觉对应 (《Roman Art and Architecture》)。  这些财富体现于精美的罗马钱币以及城市景观和艺术作品中，并对后世产生了深远的影响。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">具体示例</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Luxury-Arts-of-Rome-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History">
+    💰财富与奢侈</a></div><div class="section-link-box"><a class="section-link" href="#Patronage-in-ancient-Rome---Wikipedia">
+    🤝社会赞助体系</a></div><div class="section-link-box"><a class="section-link" href="#“Ancient-Roman-Luxuries:-What-the-Wealthy-Indulged-In”-|-by-Luxury.-Fiance.-Wealth.-|-Medium">
+    👗</a></div><div class="section-link-box"><a class="section-link" href="#Imperial-Sponsorship-of-the-Games-–-Spectacles-in-the-Roman-World">
+    🎪</a></div><div class="section-link-box"><a class="section-link" href="#The-Lavish-Roman-Banquet:-A-Calculated-Display-Of-Debauchery-And-Power-:-The-Salt-:-NPR">
+    🍽</a></div><div class="section-link-box"><a class="section-link" href="#RICH-PEOPLE-AND-NOBILITY-IN-ANCIENT-ROME-|-Facts-and-Details">
+    🏛</a></div></div>
+    <div class="section-content content"><p>古罗马贵族的财富来源及消费模式体现了其社会结构的复杂性。以下案例佐证了这一点：</p>
+<p><strong>1. 克拉苏 (Marcus Licinius Crassus):</strong>  普鲁塔克记载，克拉苏（约公元前115-53年）是罗马最富有的人之一，其财富主要源于房地产和不法手段。他巧妙地利用罗马唯一的消防队，在火灾发生时以低价收购受灾房产，并通过在内战中低价购买敌方土地，甚至暗杀土地所有者来积累财富[维基百科: 古罗马社会的庇护关系]。此外，他经营利润丰厚的奴隶培训中心，通过培训奴隶并高价转卖获利[Facts and Details: 罗马上层阶级的日常生活]。为了炫耀财富和巩固政治影响力，克拉苏大肆挥霍，例如在镇压斯巴达克斯起义后，为全体罗马公民（约10万人）举办持续数日的盛宴，每人还获得三个月的粮食补给[Facts and Details: 罗马上层阶级的日常生活]。此举不仅彰显其财富，更巩固其政治地位，其奢靡生活甚至为“庸俗”（crass）一词增添了新的内涵[Facts and Details: 罗马上层阶级的日常生活]。最终，他在卡莱战役中战败被杀，据传帕提亚人将熔化的黄金灌入其喉咙，象征其对财富的贪婪[Facts and Details: 罗马上层阶级的日常生活]。</p>
+<p><strong>2. 贵族阶层的奢靡生活:</strong>  罗马贵族的生活方式极其奢华。文献记载，其宴会菜肴极其奢侈，包括孔雀舌、油炸田鼠等珍稀食物[The Lavish Roman Banquet]，并大量饮用葡萄酒[The Lavish Roman Banquet]。女性贵族佩戴来自波斯湾的珍珠和波罗的海的琥珀等昂贵珠宝[Luxury Arts of Rome, 富有的罗马女性及其珠宝]，穿着精美的丝绸[Luxury Arts of Rome]，并使用象牙梳子和发夹等奢侈品[Luxury Arts of Rome]。这些奢侈品的需求也促进了各种精湛工艺的发展[Luxury Arts of Rome]，例如马赛克玻璃和大理石陶瓷餐具，被用来仿制昂贵的玛瑙和缟玛瑙[Luxury Arts of Rome]。</p>
+<p><strong>3. 对艺术、建筑及公共事业的投资:</strong> 罗马贵族对艺术和建筑的大规模投资是其财富消费的另一重要体现。他们兴建豪华别墅（如庞贝的别墅）[Facts and Details: 罗马上层阶级的日常生活]、宏伟神庙以及公共建筑（如卡拉卡拉浴场）[The Lavish Roman Banquet]，直接推动了罗马艺术和建筑的发展。此外，他们还资助图书馆和艺术收藏的建立[Luxury Arts of Rome]，大都会艺术博物馆的资料也证实了这一点[Luxury Arts of Rome ]。</p>
+<p><strong>4. 政治和社会赞助:</strong>  罗马的政治和社会结构也深刻影响了贵族的财富消费。奥古斯都等皇帝通过赞助竞技比赛（例如角斗表演、赛马和海战）来巩固统治和展示权力[Imperial Sponsorship of the Games]，花费巨大[Imperial Sponsorship of the Games]。同时，复杂的罗马庇护体系（patronage）也体现了财富的再分配和政治运作方式[Patronage in ancient Rome]。贵族（patronus）通过提供法律援助、资金支持和政治帮助等来维系其客户（cliens）的忠诚，从而巩固其政治和社会地位[Patronage in ancient Rome]。即使在征服地区，罗马征服者或总督也建立起类似的庇护关系来巩固统治[Patronage in ancient Rome]。</p>
+<p>总而言之，古罗马贵族的财富不仅源于土地、商业和战争掠夺，也与复杂的社会政治结构、以及其对奢华生活方式的追求密切相关。他们的消费模式，不仅体现在个人享乐上，也体现在对艺术、建筑和公共事业的投资，以及对政治和社会体系的维护上。  这反映了罗马社会阶层间的权力关系和财富再分配机制。</p></div>
+</div>
+</div>
+<div class="resizer"></div>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item" href="#Luxury-Arts-of-Rome-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History">
+    <a href="#Luxury-Arts-of-Rome-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History" class="navigate-item-emoji ">💰</a>
+    <a href="#Luxury-Arts-of-Rome-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History" class="navigate-item-id">1</a>
+</div><div class="navigate-item" href="#RICH-PEOPLE-AND-NOBILITY-IN-ANCIENT-ROME-|-Facts-and-Details">
+    <a href="#RICH-PEOPLE-AND-NOBILITY-IN-ANCIENT-ROME-|-Facts-and-Details" class="navigate-item-emoji ">🏛</a>
+    <a href="#RICH-PEOPLE-AND-NOBILITY-IN-ANCIENT-ROME-|-Facts-and-Details" class="navigate-item-id">2</a>
+</div><div class="navigate-item" href="#“Ancient-Roman-Luxuries:-What-the-Wealthy-Indulged-In”-|-by-Luxury.-Fiance.-Wealth.-|-Medium">
+    <a href="#“Ancient-Roman-Luxuries:-What-the-Wealthy-Indulged-In”-|-by-Luxury.-Fiance.-Wealth.-|-Medium" class="navigate-item-emoji ">👗</a>
+    <a href="#“Ancient-Roman-Luxuries:-What-the-Wealthy-Indulged-In”-|-by-Luxury.-Fiance.-Wealth.-|-Medium" class="navigate-item-id">3</a>
+</div><div class="navigate-item" href="#Patronage-in-ancient-Rome---Wikipedia">
+    <a href="#Patronage-in-ancient-Rome---Wikipedia" class="navigate-item-emoji ">🤝</a>
+    <a href="#Patronage-in-ancient-Rome---Wikipedia" class="navigate-item-id">4</a>
+</div><div class="navigate-item" href="#The-Lavish-Roman-Banquet:-A-Calculated-Display-Of-Debauchery-And-Power-:-The-Salt-:-NPR">
+    <a href="#The-Lavish-Roman-Banquet:-A-Calculated-Display-Of-Debauchery-And-Power-:-The-Salt-:-NPR" class="navigate-item-emoji ">🍽</a>
+    <a href="#The-Lavish-Roman-Banquet:-A-Calculated-Display-Of-Debauchery-And-Power-:-The-Salt-:-NPR" class="navigate-item-id">5</a>
+</div><div class="navigate-item" href="#Agriculture-in-ancient-Rome---Wikipedia">
+    <a href="#Agriculture-in-ancient-Rome---Wikipedia" class="navigate-item-emoji ">🌾</a>
+    <a href="#Agriculture-in-ancient-Rome---Wikipedia" class="navigate-item-id">6</a>
+</div><div class="navigate-item" href="#Trade-in-the-Roman-World---World-History-Encyclopedia">
+    <a href="#Trade-in-the-Roman-World---World-History-Encyclopedia" class="navigate-item-emoji ">🛒</a>
+    <a href="#Trade-in-the-Roman-World---World-History-Encyclopedia" class="navigate-item-id">7</a>
+</div><div class="navigate-item" href="#Roman-Art-and-Architecture-|-Oxford-Art">
+    <a href="#Roman-Art-and-Architecture-|-Oxford-Art" class="navigate-item-emoji ">🖼</a>
+    <a href="#Roman-Art-and-Architecture-|-Oxford-Art" class="navigate-item-id">8</a>
+</div><div class="navigate-item" href="#The-Roman-Empire-and-Trade">
+    <a href="#The-Roman-Empire-and-Trade" class="navigate-item-emoji ">⚓</a>
+    <a href="#The-Roman-Empire-and-Trade" class="navigate-item-id">9</a>
+</div><div class="navigate-item" href="#Roman-Warfare---World-History-Encyclopedia">
+    <a href="#Roman-Warfare---World-History-Encyclopedia" class="navigate-item-emoji ">🏅</a>
+    <a href="#Roman-Warfare---World-History-Encyclopedia" class="navigate-item-id">10</a>
+</div><div class="navigate-item" href="#Ancient-Roman-Military:-Mobilization,-Infrastructure,-Spoils-|-Early-European-History-And-Religion-—-Facts-and-Details">
+    <a href="#Ancient-Roman-Military:-Mobilization,-Infrastructure,-Spoils-|-Early-European-History-And-Religion-—-Facts-and-Details" class="navigate-item-emoji ">⚔</a>
+    <a href="#Ancient-Roman-Military:-Mobilization,-Infrastructure,-Spoils-|-Early-European-History-And-Religion-—-Facts-and-Details" class="navigate-item-id">11</a>
+</div><div class="navigate-item" href="#Imperial-Sponsorship-of-the-Games-–-Spectacles-in-the-Roman-World">
+    <a href="#Imperial-Sponsorship-of-the-Games-–-Spectacles-in-the-Roman-World" class="navigate-item-emoji ">🎪</a>
+    <a href="#Imperial-Sponsorship-of-the-Games-–-Spectacles-in-the-Roman-World" class="navigate-item-id">12</a>
+</div><div class="navigate-item" href="#Roman-economy---Wikipedia">
+    <a href="#Roman-economy---Wikipedia" class="navigate-item-emoji ">💵</a>
+    <a href="#Roman-economy---Wikipedia" class="navigate-item-id">13</a>
+</div><div class="navigate-item" href="#Trade-in-the-Roman-Empire-180-CE">
+    <a href="#Trade-in-the-Roman-Empire-180-CE" class="navigate-item-emoji ">🚚</a>
+    <a href="#Trade-in-the-Roman-Empire-180-CE" class="navigate-item-id">14</a>
+</div>
+    </div>
+    <div class="page"  id="Luxury-Arts-of-Rome-|-Essay-|-The-Metropolitan-Museum-of-Art-|-Heilbrunn-Timeline-of-Art-History">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💰&nbsp;</span>Luxury Arts of Rome | Essay | The Metropolitan Museum of Art | Heilbrunn Timeline of Art History</h3>
+        <small class="page-url url "><a href="https://www.metmuseum.org/toah/hd/luxu/hd_luxu.htm" target="_blank">(https://www.metmuseum.org/toah/hd/luxu/hd_luxu.htm)</a><br></small>
+        <small class="page-rating rating ">评分: 9.5<br></small>
+        <small class="page-annotation annotation ">注释: This page provides an overview of the immense wealth accumulation and lavish lifestyles of the Roman elite during the late Republic, highlighting both legitimate and illegitimate means of acquiring riches.<br></small>
+    </div>
+    <div class="page-content content"><h2>财富与奢侈：罗马帝国的物质文化</h2>
+<p>罗马共和国后期，巨额财富以贡赋、税收以及商业和银行利润的形式空前涌入罗马。并非所有财富都是合法获得的，部分来自战利品和掠夺，包括被征服的敌人沦为奴隶。 这意味着一些杰出人物，例如将军兼政治家克拉苏（约公元前115-53年），变得极其富有。这些财富主要用于在当时罗马激烈的政治竞争中取得成功，但也刺激了对艺术的资助、图书馆和艺术收藏的建立以及宫殿和花园的建造。</p>
+<p>尽管罗马第一任皇帝奥古斯都试图遏制这些奢侈行为和个人财富的过度炫耀，但在朱里亚·克劳狄王朝时期（公元前27年-公元68年），富有的罗马人越来越沉溺于对奢侈品的追求。 除了在奢华别墅、盛大娱乐、时尚服装和奴隶以及追随者身上挥霍财富外，罗马上流社会的男女还为自己配备了一系列昂贵的个人用品：黄金首饰，如耳环、项链和指环；银镜；象牙梳子和发簪；以及各种香水和化妆品的盒子和容器。 这些珍贵的商品表明，为了满足富有的罗马客户的需求，需要各种各样的精湛工艺。 其他仅从文学资料中得知的配饰是用更容易腐烂的材料制成的，例如从中国进口的昂贵的丝绸或用日耳曼或不列颠奴隶的头发制成的艳丽假发。 象牙主要从非洲经尼罗河进口到罗马。</p>
+<p>罗马妇女还对装饰有色彩鲜艳、奇异宝石的精致珠宝产生了兴趣。 琥珀和珍珠是最受欢迎和最受追捧的材料之一；前者来自波罗的海，最好的珍珠是从波斯湾进口的，尽管克劳狄皇帝（公元41-54年）统治时期征服不列颠的一个理由是它富含珍珠。 其他稀有而昂贵的宝石包括紫水晶、蓝宝石和未切割的钻石，都来自南亚的不同地区。 它们因其光彩和透明度而备受珍视。 来自上埃及东部沙漠的祖母绿也很受欢迎；它们通常保留其天然的棱柱形状，然后被钻孔并串在金项链、手镯和耳环上。 许多女性的丧葬肖像——特别是来自罗马埃及的彩绘木乃伊肖像和来自叙利亚帕尔米拉商队的雕刻石像——都描绘了死者佩戴着这种珠宝，作为其社会地位和个人财富的持久标志。</p>
+<p>一些奢侈材料非常稀有或昂贵，以至于在陶器和玻璃中都出现了更便宜的人造仿制品，但即使在这些仿制品中，我们也能看到最高水平的技术和艺术技巧。 马赛克玻璃和大理石陶瓷餐具就是这种情况，它们旨在复制带状玛瑙的醒目图案。 凸纹玻璃是所有罗马玻璃中最难和最昂贵的，也受到分层半宝石的启发。 例如，许多罗马宝石采用凸纹玻璃制成，作为带状玛瑙或缟玛瑙中真实凸纹的廉价替代品。此外，必须记住，很多东西都已无法挽回地丢失了，特别是金银制品，它们很容易被熔化并重新利用。 其他则成为传家宝和文物，后来被纳入中世纪和文艺复兴时期的作品中，例如威尼斯圣马可教堂金库中的一些半宝石容器。</p>
+<p>公元三世纪，罗马帝国受到欧洲蛮族入侵、东方萨珊波斯帝国复兴、内部混乱和猖獗的通货膨胀的困扰。 然而，帝国积累的资源意味着罗马社会的特权精英仍然享受着无与伦比的财富和奢华生活。 危险增加的一个结果是人们埋藏了他们的珍贵财产，并且更经常地未能回来取回它们。 因此，在整个罗马世界发现了大量的银器和珠宝。 生产这些奢侈品的工匠的技能和创造力肯定没有减少，但设计和时尚风格发生了变化。 特别是珠宝和装饰品变得更加艳丽，其中包括使用金币（一种对抗通货膨胀的有吸引力但实用的方法）。 这种品味最终导致皇帝采用仪式用的丝绸长袍和华丽的金冠，装饰着珍珠和宝石。 这是一种极大地影响了后来拜占庭艺术的时尚，即使在西方，继承王国的统治者也从未完全忘记古代罗马的财富和辉煌。</p>
+        <small class="page-url url "><a href="https://www.metmuseum.org/toah/hd/luxu/hd_luxu.htm" target="_blank">(https://www.metmuseum.org/toah/hd/luxu/hd_luxu.htm)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="RICH-PEOPLE-AND-NOBILITY-IN-ANCIENT-ROME-|-Facts-and-Details">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏛&nbsp;</span>RICH PEOPLE AND NOBILITY IN ANCIENT ROME | Facts and Details</h3>
+        <small class="page-url url "><a href="https://factsanddetails.com/world/cat56/sub369/entry-6301.html" target="_blank">(https://factsanddetails.com/world/cat56/sub369/entry-6301.html)</a><br></small>
+        <small class="page-rating rating ">评分: 9.0<br></small>
+        <small class="page-annotation annotation ">注释: Focuses on the lifestyle of the wealthy Romans, describing excess and how it shape social hierarchies, well aligned with themes of wealth and consumption as discussed in the report.<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马上层阶级的日常生活</h2>
+<p>罗马的上层阶级和精英由地主、军官、政府官员和行政人员以及类似中世纪骑士的富有的士兵地主组成。他们加起来不到人口的1%。富有的罗马人拥有土地、奴隶、牲畜和财富。他们的衣服很容易辨认。历史学家迈克尔·格兰特说，庞培城建造的豪华别墅的标准“直到19世纪才再次达到”。为了支付他们的放纵，许多富有的罗马人，尤其是在意大利，剥削他们控制下的奴隶、农民和农民。一位学者写道：“只要他们不做任何建设性的事情，他们就可以做很多事情。”历史学家威廉·斯蒂恩斯·戴维斯写道：“帝国时期的大财富分为两大类——那些建立在商业基础上的，和那些建立在土地基础上的。这里引自老普林尼的一个很好的例子。伊西多鲁斯一定是一位伟大的领主——在他广阔的领地上几乎是一位小王子。正是像他这样的庄园——依靠廉价的奴隶劳动——毁了意大利诚实的农民。”关于“一位富有的罗马人的财富”，老普林尼（公元23/4-79年）在他的《自然史》XXXIII.47中写道：“在盖乌斯·阿西尼乌斯·加卢斯和盖乌斯·马尔修斯·森索里努斯（公元前8年）担任执政官的任期内，2月卡伦德斯之前的第六天，盖乌斯·凯西利乌斯·克劳狄乌斯·伊西多鲁斯在他的遗嘱中宣布，尽管他在内战中遭受了巨大的损失，但他仍然能够留下4116名奴隶，3600对牛，以及257000头其他牲畜，此外还有6000万塞斯特提厄斯的现款。在他的葬礼上，他下令花费110万塞斯特提厄斯。”</p>
+<h2>克拉苏斯：罗马最富有的人</h2>
+<p>马库斯·利西尼乌斯·克拉苏斯（公元前115-53年）被描述为罗马最富有的人。据普鲁塔克记载，他出身于一个富裕的家庭，通过“火与掠夺”获得了财富。克拉苏斯变得如此强大，以至于他资助了镇压由斯巴达克斯领导的奴隶起义的军队。为了庆祝斯巴达克斯被钉死十字架，克拉苏斯为整个罗马投票公众（1万人）举办了一场持续数日的宴会。每位参与者还获得三个月的粮食津贴。他炫耀的展示给了我们“粗俗”这个词。克拉苏通过控制罗马唯一的消防队在房地产上赚了一大笔钱，从被火灾殃及的业主那里获得土地。当发生火灾时，一辆马拉的运水车被派往现场，但在火被扑灭之前，克拉苏或他的代表会讨价还价他的服务价格，通常是在房子在他们眼前烧毁的时候。为了挽救建筑物，克拉苏经常要求业主交出房产所有权，然后支付租金。克拉苏很可能是罗马最大的业主。他还用不正当手段获得的钱购买房产。在公元前88-82年的内战中担任副官时，他能够以低廉的价格购买以前由敌人持有的土地，有时甚至通过谋杀其所有者。克拉苏还开设了一个利润丰厚的奴隶培训中心。他购买没有技能的奴隶，对他们进行培训，然后以高价将他们卖为奴隶。克拉苏与那些向政党捐款以换取恩惠或高级政府职位成功的现代商人没有什么不同。他几乎向每位参议员贷款，并为有影响力和权力的人举办盛大的宴会。通过巧妙地运用他的钱来获得政治影响力，他获得了三巨头的地位，这是控制国家机构的三个人之一。在获得财富和政治权力之后，克拉苏唯一剩下的就是率领一支罗马军队取得伟大的军事胜利。他购买了一支军队，并由凯撒派往叙利亚与帕提亚人作战。公元前53年，克拉苏在卡莱战役中失败，这是罗马帝国最惨重的失败之一。他被帕提亚人俘虏，据传说，当他们意识到他是罗马最富有的人时，他们将熔化的金子倒进他的喉咙里。这样做的理由是，他毕生对黄金的渴望应该在死后得到满足。</p>
+<h2>公元4世纪罗马富人的颓废</h2>
+<p>威廉·斯蒂恩斯·戴维斯写道：“以下内容是在阿拉里克于公元410年洗劫罗马之前大约一代人的时间里写成的。阿米阿努斯·马塞利努斯在访问罗马时观察到，这座城市充满了空虚、浅薄，并且缺乏任何真正的文化。”关于公元400年罗马富人的奢华，阿米阿努斯·马塞利努斯（约公元330-395年）在他的《历史》中写道：“罗马仍然被视为地球上的女王，罗马人民的名字受到尊重和敬仰。但是罗马的辉煌却被少数人的轻率所玷污，他们从未记得自己出生在哪里，而是堕落到错误和放荡之中，仿佛罪恶得到了完全的豁免。这些人中，有些人认为他们可以通过雕像流传于后世，他们渴望得到雕像，仿佛他们会从没有知觉的青铜雕像中获得比从正直和光荣行为的意识中更高的回报；他们甚至渴望用金子镀上它们！”</p>
+        <small class="page-url url "><a href="https://factsanddetails.com/world/cat56/sub369/entry-6301.html" target="_blank">(https://factsanddetails.com/world/cat56/sub369/entry-6301.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="“Ancient-Roman-Luxuries:-What-the-Wealthy-Indulged-In”-|-by-Luxury.-Fiance.-Wealth.-|-Medium">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">👗&nbsp;</span>“Ancient Roman Luxuries: What the Wealthy Indulged In” | by Luxury. Fiance. Wealth. | Medium</h3>
+        <small class="page-url url "><a href="https://medium.com/@arnoldsthoughts66/ancient-roman-luxuries-what-the-wealthy-indulged-in-50ea316c5040" target="_blank">(https://medium.com/@arnoldsthoughts66/ancient-roman-luxuries-what-the-wealthy-indulged-in-50ea316c5040)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: The page delves into the luxury and extravagance of wealthy Roman women, detailing their affinity for elaborate jewelry and luxury items, and connecting to the broader context of Roman social culture.<br></small>
+    </div>
+    <div class="page-content content"><h2>富有的罗马女性及其珠宝</h2>
+<p>富有的罗马妇女尤其喜爱精致的珠宝，她们使用各种色彩鲜艳、奇特的宝石。琥珀和珍珠是最受欢迎的材料之一，后者是从远至波斯湾的地区进口的。罗马人还珍视紫水晶、蓝宝石、未经切割的钻石和祖母绿，后者通常保留其天然棱柱形，并用于制作令人惊叹的项链、手镯和耳环。这种对奢华的偏好也延伸到人工仿制珍贵材料，展现了罗马人的技术和艺术技巧。</p>
+<h2>休闲和餐饮中的奢华</h2>
+<p>古罗马的奢华文化不仅限于私人享乐，也渗透到公共生活中。罗马人举行奢华的宴会，这些宴会不仅仅是用餐，更是财富和社会地位的象征。这些活动受到旨在限制奢侈的法律的约束，规定了可以花费的金额、宾客人数和提供的食物种类。尽管有这些规定，富人仍然设法展示他们的财富，例如建造卡拉卡拉浴场之类的豪华浴室。这些浴室不仅仅是清洁的地方；它们是社交中心，装饰着华丽的喷泉、大理石柱、雕像和马赛克。</p>
+<h2>奢华、伦理与宗教</h2>
+<p>罗马人对奢华的态度是复杂的，它交织着道德、法律和社会习俗。他们公开讨论奢华的伦理问题，相信奢侈存在自然限度。君士坦丁大帝时期基督教的合法化给奢侈的论述带来了新的动力。虽然教会本身成为最大的奢侈品消费者之一，但它也引发了关于奢华的道德和宗教意义的辩论。这一时期，曾经献给异教神灵的奢侈品转变为献给基督教会的供品，标志着罗马社会对奢华的认知和利用方式发生了转变。</p>
+<p>古罗马的财富和辉煌，体现在其奢华的生活方式、文物和公共工程中，继续吸引着人们，并让人们洞悉罗马社会的复杂性。这些奢侈行为不仅仅是炫耀财富，而是深深地融入社会结构中，影响着政治、宗教和文化。</p>
+        <small class="page-url url "><a href="https://medium.com/@arnoldsthoughts66/ancient-roman-luxuries-what-the-wealthy-indulged-in-50ea316c5040" target="_blank">(https://medium.com/@arnoldsthoughts66/ancient-roman-luxuries-what-the-wealthy-indulged-in-50ea316c5040)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Patronage-in-ancient-Rome---Wikipedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🤝&nbsp;</span>Patronage in ancient Rome - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Patronage_in_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Patronage_in_ancient_Rome)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: The discussion of patronage dynamics in ancient Rome reveals the interconnectedness of wealth, social status, and political influence among the elite, contributing to the overall understanding of Roman society.<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马社会的庇护关系</h2>
+<p>庇护关系（clientela）是古罗马社会中主庇人（patronus）和被庇人（cliens）之间的一种独特关系。除了个人之间的主庇人-被庇人关系外，还存在着附庸王国和部落，其统治者与罗马国家处于从属关系。这种关系是等级森严的，但义务是相互的。主庇人是被庇人的保护者、资助者和恩人；这种保护的专业术语是patrocinium。虽然通常情况下被庇人的社会地位较低，但主庇人和被庇人甚至可能拥有相同的社会地位，但前者拥有更大的财富、权力或声望，使他能够帮助或为被庇人提供恩惠。从顶端的皇帝到底层的平民，这些群体之间的联系在法律对主庇人对被庇人的责任的正式定义中得到了体现。庇护关系并非仅限于两个人之间，也存在于将军和他的士兵、创建者和殖民者以及征服者和附属的外国社区之间。</p>
+<h3>被庇人的利益</h3>
+<p>被庇人可能会获得的利益包括：在法庭上的法律代理、贷款、影响商业交易或婚姻，以及支持被庇人竞选公职或祭司职位。为女儿安排婚姻，被庇人往往能够获得新的主庇人，并在政治领域扩大其影响力。</p>
+<p>作为回报，被庇人应根据需要向其主庇人提供服务。被庇人对主庇人的服务包括陪同主庇人在罗马或打仗，如果主庇人被俘虏则赎回他，并在政治运动中支持他。请求通常由被庇人在主庇人家中每天早上的接待会上提出，称为salutatio。主庇人会在黎明时分在中庭和办公室接待他的被庇人，之后被庇人会陪同主庇人前往广场。陪同主庇人的被庇人数被视为主庇人声望的象征。被庇人被视为其主庇人家族的次要成员，有权协助其家族祭祀，并有义务分担其费用。被庇人受该家族的管辖和约束，并有权在其公共墓地埋葬。</p>
+<p>主庇人-被庇人关系中的一个主要活动领域是法院，但clientela本身并非一项法律合同，尽管它从罗马早期就受到法律的支持。坚持履行义务的压力主要是道德上的，基于祖先的习俗，以及主庇人的诚信和被庇人的忠诚。庇护关系不是一种独立的关系，而是一个网络，因为主庇人本身也可能对地位更高或权力更大的人负有义务。一个被庇人可能有多个主庇人，他们的利益可能会发生冲突。虽然罗马的familia（“家庭”，但更广泛地指“家庭”）是社会的基石，但相互关联的庇护网络创造了高度复杂的社会纽带。</p>
+<p>互惠伦理在主庇人-被庇人制度中发挥着重要作用。主庇人给予被庇人的恩惠和被庇人给予主庇人的恩惠不会相互抵消，相反，给予恩惠和回馈恩惠象征着主庇人和被庇人之间的个人关系。因此，回馈恩惠的行为更多的是出于一种感激之情，而不是因为需要回馈恩惠。</p>
+<p>希腊历史学家狄俄尼修斯和普鲁塔克认为，庇护关系的规范是罗穆卢斯早期的关注点之一。因此，它可以追溯到罗马的建立。在最早的时期，贵族担任过主庇人。patricius（“贵族”）和patronus都与拉丁词pater（“父亲”）有关，在这个意义上具有象征意义，表明罗马社会的父权制性质。虽然其他社会也有类似的制度，但patronus-cliens关系对罗马政治和罗马共和国的familiasense来说是“特别合适的”。一个重要人物通过其拥有的被庇人数来展示其声望或dignitas。</p>
+<h3>主庇人和解放奴隶</h3>
+<p>当奴隶获得自由时，前主人成为他们的主庇人。解放奴隶（libertus）对其主庇人负有社会义务，这可能包括如果主庇人竞选公职则为他助选，做他要求的工作或差事，或继续在奴役期间开始的性关系。作为回报，主庇人有责任确保其被庇人一定程度的物质安全。允许被庇人变得贫困或陷入不公正的法律诉讼将对主庇人的声望不利，并降低其声望。</p>
+<h3>庇护关系的变化</h3>
+<p>复杂的庇护关系随着共和国晚期的社会压力而改变，此时patronus、cliens和patrocinium等术语的含义比amicitia（“友谊”），包括政治友谊和联盟，或hospitium（家庭之间的互惠“宾主”关系）更为狭窄。由于其利益和义务重叠，很难区分patrocinium或clientela、amicitia和hospitium。传统的clientela在公元前2世纪作为一种社会制度开始失去其重要性；弗格斯·米勒德怀疑它是否是罗马选举中经常被认为的主导力量。从共和国到帝国的演变过程中，我们看到了主庇人之间最大的多样性。所有权力地位的主庇人都试图通过控制被庇人和资源来增强自己的权力。越来越多的庇护关系扩展到整个社区，无论是基于政治法令、成为社区主庇人的个人的恩惠，还是社区正式收养一个主庇人。双方都对彼此怀有期望。社区期望得到保护免受外部力量的侵害，而主庇人则期望获得忠实的追随者，以便在需要时进行政治竞选和人力资源。在寻找个人潜在政治力量的表现时，经常会考虑其被庇人关系的程度。</p>
+<p>晚期帝国的庇护与共和国的庇护有所不同。主庇人保护个体被庇人免受税吏和其他公共义务的侵害。作为回报，被庇人给他们钱或服务。一些被庇人甚至将他们的土地所有权交给他们的主庇人。皇帝无法有效地阻止这种类型的庇护。</p>
+<p>clientela的意义随着晚期古代的社会秩序而改变。到10世纪，clientela指的是一支随时准备执行其主人意志的武装追随者。在文件资料中，在军队中服役的年轻人，与构成贵族familia或“家庭”的随从不同，可能会被称为vavasor。</p>
+<h3>公民庇护</h3>
+<p>一些有影响力的罗马人，例如凯撒和奥古斯都，在被征服的地区建立了主庇人-被庇人关系。这可以在凯撒与高卢的艾杜伊人的关系中看到，他能够恢复他们在其他曾经是其被庇人的高卢部落中的影响力。此后，艾杜伊人多次请求他履行主庇人的职责，因此许多罗马人认为他是艾杜伊人的主庇人。奥古斯都在征服期间在帝国各地建立了殖民地，将他的影响力扩展到最远的地方。他还对整个罗马做出了许多善举，包括食物和金钱的施舍，以及将他资助的士兵安置在新殖民地，这使得许多人都欠了他的情。通过这些例子，奥古斯都改变了庇护的形式，使其适合他追求权力的野心，鼓励那些有利于罗马社会而不是自私利益的行为。虽然罕见，但女性也可能成为女庇护人。庇护及其多种形式允许一种最低限度的行政管理，由当事人之间的个人关系约束，因此在共和国晚期，庇护成为统治的典范。</p>
+<p>在国外的征服者或总督建立了与整个社区作为主庇人的个人联系，这些联系随后可能作为家庭义务延续下去。一个例子是马塞利家族对西西里人的庇护，因为克劳狄乌斯·马塞卢斯征服了叙拉古和西西里。将权利或公民权扩展到市镇或省级家庭是增加其被庇人数以达到政治目的的一种方式，就像庞培·斯特拉博在跨帕达尼人中所做的那样。这种形式的庇护有助于奥古斯都作为共和国崩溃后的唯一统治者所创造的新角色，当时他把自己塑造成了整个帝国的主庇人的形象。</p>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Patronage_in_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Patronage_in_ancient_Rome)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="The-Lavish-Roman-Banquet:-A-Calculated-Display-Of-Debauchery-And-Power-:-The-Salt-:-NPR">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🍽&nbsp;</span>The Lavish Roman Banquet: A Calculated Display Of Debauchery And Power : The Salt : NPR</h3>
+        <small class="page-url url "><a href="https://www.npr.org/sections/thesalt/2019/05/20/712772285/the-lavish-roman-banquet-a-calculated-display-of-debauchery-and-power" target="_blank">(https://www.npr.org/sections/thesalt/2019/05/20/712772285/the-lavish-roman-banquet-a-calculated-display-of-debauchery-and-power)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: The lavishness of Roman banquets is illustrated here, providing insight into social practices linked to wealth and power, making it a vital element to Roman cultural life.<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马宴会：权力、享乐与阴谋</h2>
+<p>罗马宴会或许是最初的美食放纵的舞台——想象一下，摆满孔雀舌和油炸睡鼠的盘子，以及裸体侍者端上的数升葡萄酒。但所有贪婪的背后，是冷酷的算计。</p>
+<p>对于统治这个庞大帝国的贵族们来说，宴会远不止是一顿奢华的社交餐。在士兵皇帝图拉真（公元98年至公元117年）统治时期达到顶峰的罗马帝国，版图从不列颠延伸到巴格达，宴会是重要的权力工具。</p>
+<p><strong>古代罗马人吃什么？新的故事展现了美食与阴谋</strong></p>
+<p>康奈尔大学历史学教授巴里·施特劳斯说：“宴会是一个遵循‘朋友要近，敌人更近’原则的机会。”他的新书《十位凯撒：从奥古斯都到君士坦丁的罗马皇帝》介绍了十位杰出的皇帝，他们的政策和性格塑造了罗马帝国的命运。“宴会使皇帝能够展示政治权力和财富，向受邀者施加恩惠，并监视潜在的竞争对手。即使在皇帝出现之前，罗马精英阶层也举行私人宴会来炫耀、建立人脉、奖励朋友和打压敌人。”</p>
+<p>或许，通过在酒中下点什么来除掉他们？施特劳斯说：“当一位精英成员在宴会后突然死亡时，总会有人怀疑是中毒。例如，皇帝克劳狄的儿子在宫廷宴会上生病，不久后就去世了。证据表明是自然原因，但当时许多人都认为他是受尼禄的命令而中毒的。然而，事实是中毒的情况很少见。”</p>
+<p>诗人尤维纳利斯用讽刺的短语“面包与马戏”概括了罗马皇帝的统治策略，而这一策略不仅对平民有效，对上层阶级也一样有效。只是在他们的情况下，“面包”指的是他们毫无节制地狂吃的一系列令人眼花缭乱的美味佳肴。“在他们享乐主义的宴会上，”施特劳斯说，“罗马人吃到吐。”</p>
+<p>罗马宴会让人联想到穿着长袍的男人斜躺在沙发上，狼吞虎咽地吃着野猪的乳房和油焖蜗牛的画面，而仆人们源源不断地端着装满各种调味酱和精致香料的菜肴，这些来自世界各地的食物包括：来自非洲的鸵鸟肉，来自印度的胡椒和甘蔗，来自埃塞俄比亚的孜然，来自叙利亚的漆树，来自希腊的橄榄，以及罗马人永恒最爱的多汁本地无花果。葡萄酒用双耳银杯大量饮用，背景中传来里拉琴的演奏声。还有表演团体、诗人，甚至偶尔会出现豹子，有时还会从高处飘落玫瑰花瓣。残忍的主人，埃拉伽巴路皇帝，建造了一个宴会厅，其假天花板可以倾斜打开，让花朵像瀑布一样倾泻而下，淹没那些无法从花雨中爬出来的客人。</p>
+<p>埃拉加巴路斯的玫瑰，阿尔玛-塔德玛（1888年），油画。据说在装饰有假天花板的宴会厅里，埃拉伽巴路皇帝曾用紫罗兰和其他鲜花把他的客人埋起来，以至于一些人真的被闷死了——这个故事可能是虚构的。</p>
+<p>或者，故事就是这样。与许多讲述罗马荒淫无度的离奇故事一样，这个故事也经过了大量的渲染——在这种情况下，是浓重的香味。然而，毋庸置疑的是，罗马人将美食奉为神明，提升到一门高雅艺术的水平，而它的顶峰就是宴会。罗马精英不相信只是在烤肉叉上烤牛或羊。新奇是常态，目的是不断刺激他们麻木的味蕾。</p>
+<p>伟大的罗马美食家马库斯·加维乌斯·阿皮西乌斯汇编了唯一现存的罗马帝国烹饪书《烹饪艺术》，列出了400多种食谱，包括骆驼蹄、鹦鹉、鸡冠、鹿肉、野鸡、画眉、兔子、鹅肝、脑塞香肠、孔雀、火烈鸟、鱼子酱填充小龙虾、鹤、鸵鸟、火腿、豆类、蔬菜和一系列海鲜，从海胆到红鱼、鲈鱼、鲣鱼和蜗牛，为此还设计了特殊的勺子。</p>
+<p>但在很大程度上，奢华占主导地位。</p>
+<p>施特劳斯警告说，古代文献中关于狂欢的奇异故事“出了名的不可靠，需要谨慎对待”。但它们读起来妙趣横生。年轻的埃拉伽巴路斯，据所有说法，是一个狂热的酒徒，他在撒弗朗香味的游泳池里游泳，为客人提供拌珍珠的米饭，并要求所有菜肴都是蓝色或绿色，或者任何他喜欢的颜色。对于蓝色晚餐，鱼必须用蓝色的酱汁烹制，以模仿大海。狂妄自大的尼禄总是与剥皮的葡萄和小提琴联系在一起，而城市正在燃烧。他是否这样做很难证明，但最近的考古发现挖掘出了他传说中的圆形宴会厅的地基，据历史学家苏埃托尼乌斯说，“它日夜不停地旋转，就像天空一样”。</p>
+<p>最令人毛骨悚然的宴会故事之一，非常适合万圣节派对，是暴君但重建了罗马的皇帝多米蒂安举办的黑色宴会。他用黑色包裹大厅，所有食物都染成黑色，并将每个颤抖的客人放在刻有他名字的墓碑旁边。客人们认为他们永远无法活着离开，尤其是在多米蒂安在用餐时谈论屠杀的情况下，但这原来是一个恶魔般的恶作剧，在把客人吓得魂飞魄散之后，皇帝把他们送回家，并给他们送去礼物。</p>
+<p><strong>角斗士的佳得乐？古代运动员也有恢复性饮料</strong></p>
+<p>施特劳斯说，最传奇的罗马宴会是佩特罗尼乌斯在讽刺小说《萨蒂里孔》中虚构的《特里马尔基奥的晚餐》。施特劳斯说：“小说中，特里马尔基奥是一个发财的自由民（前奴隶）。佩特罗尼乌斯是一位罗马贵族，他和他的阶级其他成员一样，看不起向上流动的非贵族。因此，他在描述宴会过度时夸大了其辞。”特里马尔基奥是他那个时代的大盖茨比，F·斯科特·菲茨杰拉德的小说中提到了他。</p>
+<p>当人们对盖茨比的好奇心达到最高点时，他家里的灯在一个星期六晚上没有亮——而且，和他事业的开始一样模糊，他作为特里马尔基奥的生涯结束了。</p>
+<p>佩特罗尼乌斯对特里马尔基奥宴会（其中有馅有未出生鸟类胚胎的糕点蛋）的描述类似于盖茨比自助餐桌上的“被施了魔法变成深金色的糕点猪和火鸡”。</p>
+<p>在贵族豪宅和撒弗朗香味的游泳池之外，平民住在拥挤的公寓里，节俭地吃饭。食物不平等在古代罗马就像在当今世界一样普遍存在，饥饿和享乐主义在整个帝国中并存。“普通的罗马人吃面包、粥、水果和蔬菜（季节性的），”施特劳斯说。“他们也吃枣子和蜂蜜。奶酪也比较容易买到。一种叫做鱼露的鱼露非常受欢迎，用作盐的替代品。普通人很少能买得起肉或鱼，而富人则有相当多的供应。”</p>
+        <small class="page-url url "><a href="https://www.npr.org/sections/thesalt/2019/05/20/712772285/the-lavish-roman-banquet-a-calculated-display-of-debauchery-and-power" target="_blank">(https://www.npr.org/sections/thesalt/2019/05/20/712772285/the-lavish-roman-banquet-a-calculated-display-of-debauchery-and-power)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Agriculture-in-ancient-Rome---Wikipedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🌾&nbsp;</span>Agriculture in ancient Rome - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Agriculture_in_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Agriculture_in_ancient_Rome)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: This page focuses on Roman agriculture, illustrating the economic foundation of wealth through land ownership and slave labor, essential elements in understanding the social structure of the Roman elite.<br></small>
+    </div>
+    <div class="page-content content"><h2>古罗马农业</h2>
+<p>古罗马农业描述了古罗马超过1000年的农业实践。从不起眼的开端，罗马共和国（公元前509年-公元前27年）和罗马帝国（公元前27年-公元476年）扩张统治着大部分欧洲、北非和中东地区，因此涵盖了许多农业环境，其中地中海气候（夏季干燥炎热，冬季凉爽多雨）最为常见。在地中海地区，三种作物最为重要：谷物、橄榄和葡萄。罗马统治下的绝大多数人都从事农业。从最初的小型、基本上自给自足的土地所有者开始，农村社会逐渐被拉蒂基金迪亚（latifundium）所主导，即富人拥有的大型庄园，主要利用奴隶劳动。城市人口的增长，特别是罗马城的人口增长，需要发展商业市场和远距离农产品的贸易，特别是粮食，以供应城市居民的粮食。</p>
+<h3>背景</h3>
+<p>希腊-罗马农业传统的主要文本主要来自罗马农学家：卡托长者的《论农业》（De agri cultura），科卢梅拉的《论农业》（De re rustica），马库斯·特伦提乌斯·瓦罗和帕拉迪乌斯。据说是迦太基人马戈所著的农业论文《乡村生活》（Rusticatio），最初是用腓尼基语写的，后来被翻译成希腊语和拉丁语，现已失传。学者们推测，这篇文本可能是近东和古典世界农业传统的早期来源。</p>
+<h3>“令人愉悦”的生活</h3>
+<p>古罗马的农业不仅是必需的，而且被理想化为一种生活方式。西塞罗认为农业是所有罗马职业中最好的。在他论职责的论文中，他宣称：“在所有获得收益的职业中，没有比农业更好的，没有比它更赚钱的，没有比它更令人愉悦的，没有比它更适合自由人的。”当他的一个客户在法庭上因偏爱农村生活方式而受到嘲笑时，西塞罗为乡村生活辩护说，它是“节俭、勤奋和正义的老师”（parsimonia, diligentia, iustitia）。卡托、科卢梅拉、瓦罗和帕拉迪乌斯撰写了关于农业实践的手册。卡托在他的论文《论农业》（公元前2世纪）中写道，最好的农场包含一个葡萄园，其次是灌溉花园、柳树种植园、橄榄园、草地、谷物地、森林树木、在树上种植的葡萄藤，最后是橡树林。尽管罗马依靠其通过征服和战争获得的众多行省的资源，但富有的罗马人在意大利发展土地以生产各种作物。“居住在罗马城的人们构成了一个巨大的市场，用于购买在意大利农场生产的食物。”土地所有权是区分贵族和平民的主要因素，罗马人拥有的土地越多，他在城市中的地位就越高。士兵们经常从他们效力的指挥官那里获得土地作为奖励。尽管农场依靠奴隶劳动，但农场也雇佣自由人和公民来监督奴隶，并确保农场顺利运营。</p>
+<h3>作物</h3>
+<p>罗马早期的主要作物是小米和埃默小麦和斯佩尔特小麦，它们是小麦的种类。根据罗马学者瓦罗的说法，普通小麦和硬粒小麦大约在公元前450年被引进意大利作为作物。硬粒（硬质）小麦成为罗马城市居民的首选谷物，因为它可以烤成酵母面包，并且在地中海地区比普通（软质）小麦更容易种植。谷物，特别是烤成面包，是罗马饮食的主食，提供平均饮食中70%到80%的卡路里。大麦也广泛种植，在希腊和土壤贫瘠地区占主导地位，在那里它比小麦更有生产力。小麦是首选谷物，但大麦被广泛食用，并且作为动物饲料也很重要。科卢梅拉在他的《论农业》中写道，埃默小麦比小麦更耐潮湿。根据科卢梅拉的说法，种植了四种埃默小麦，其中一种他称之为克卢西亚（以克卢西姆镇命名）。卡托写道，如果不可避免地在潮湿或露水的土壤中播种谷物，则应与萝卜、狼尾草、小米和油菜一起播种。尽管科卢梅拉将狼尾草和小米列为豆类，但他认为它们应该被认为是谷物作物，“因为在许多国家，农民依靠用它们制作的食物为生”。</p>
+<h4>豆类</h4>
+<p>科卢梅拉列出了一些优选种植的豆类：扁豆、豌豆、羽扇豆、豆类、豇豆和鹰嘴豆（还列出了芝麻、狼尾草、大麻、大麦和小麦作为豆类）。他写了以下关于羽扇豆的内容：它所需的劳力最少，成本最低，并且在所有播种的作物中，对土地最有益。因为它为耕竭的葡萄园和耕地提供了极好的肥料；它甚至在贫瘠的土壤中也能茁壮成长；并且当存放在粮仓中时，它能经受住时间的考验。用沸水软化后，它是冬季牲畜的良好饲料；对于人类来说，如果歉收的年份降临他们身上，它也可以用来避免饥荒。</p>
+<h4>橄榄</h4>
+<p>罗马人在贫瘠的岩石土壤中种植橄榄树，并且经常在降水稀少的地区种植。这种树对冰点温度敏感，不能忍受北欧北部和高海拔地区较冷的天气。橄榄主要种植在地中海附近。橄榄油的消费量提供了平均罗马人饮食中约12%的卡路里和约80%的必需脂肪。</p>
+<h4>葡萄</h4>
+<p>葡萄栽培可能是由希腊殖民者带到意大利南部和西西里岛的，但北非迦太基的腓尼基人给了罗马人许多关于种植葡萄和酿酒的知识。到公元前160年，利用奴隶劳动在大庄园上种植葡萄在意大利很常见，葡萄酒正成为罗马帝国的一种普遍饮品。为了保护他们的葡萄酒产业，罗马人试图禁止在意大利以外种植葡萄，但到公元1世纪，西班牙和高卢（今天的法国）等行省正在向意大利出口葡萄酒。</p>
+<h4>饲料</h4>
+<p>科卢梅拉提到萝卜是一种重要的、高产的粮食作物，尤其是在高卢，在那里它们被用作牛的冬季饲料。作为其他的“饲料作物”，他列出了紫花苜蓿、巢菜、大麦、金雀花、燕麦、鹰嘴豆和胡芦巴。关于紫花苜蓿，他说它能改善土壤，使瘦弱的牛变肥，而且是一种高产的饲料作物。卡托长者写道，在树叶完全干燥之前，应该在秋季收集杨树、榆树和橡树叶，并储存起来作为饲料。萝卜、羽扇豆和饲料作物应在雨季过后播种。</p>
+<h4>其他作物</h4>
+<p>罗马人还种植了朝鲜蓟、芥末、芫荽、芝麻菜、细香葱、韭菜、芹菜、罗勒、欧防风、薄荷、芸香、百里香，“来自海外的”甜菜、罂粟、莳萝、芦笋、萝卜、黄瓜、葫芦、茴香、刺山柑、洋葱、番红花、欧芹、马郁兰、卷心菜、莴苣、孜然、大蒜、无花果、“亚美尼亚杏”、李子、桑葚、桃子和麻。</p>
+<h3>储存</h3>
+<p>科卢梅拉描述了农产品的储存方法，并提供了防止腐败的建议。像油和酒这样的商品液体储存在底层，谷物则储存在阁楼里，里面有干草和其他饲料。他指示粮仓要通风良好，凉爽，湿度最小，以延长新鲜度。他描述了某些施工方法，以避免建筑物出现裂缝，这会使动物和象甲进入谷物。他建议，压榨室应该温暖，从南方接受光线，以防止油结冰，这会使油腐败得更快。</p>
+<h3>土地</h3>
+<p>科卢梅拉将土地分为三种类型的 terrain，他称之为平原（slopingplains）、具有逐渐但温和上升的山丘和树木繁茂、翠绿的山区高地。关于土壤，他说有六种品质：肥沃或贫瘠、疏松或紧实、潮湿或干燥。这些品质的排列产生了多种土壤。科卢梅拉引用维吉尔的评论，说松软的土壤是“我们耕作时与之竞争的东西”。关于最优选的土壤类型，他说最好的土壤是肥沃而疏松的土壤，它成本最低，产量最高，然后是肥沃而致密的土壤，它产量高，但需要更多努力，然后是潮湿的土壤。</p>
+<h3>农业实践</h3>
+<p>公元前5世纪，罗马的农场规模较小，属于家庭所有。然而，这个时期的希腊人已经开始使用轮作，并且拥有大型庄园。罗马在公元前3世纪和2世纪与迦太基、希腊和希腊化东方地区的接触改善了罗马的农业方法。罗马农业在共和国后期和帝国早期达到了生产力和效率的顶峰。罗马的农场规模可分为三类。小型农场面积为18-108育格拉。（一个育格拉约等于0.65英亩或四分之一公顷）。中型农场面积为80-500育格拉。大型庄园（称为拉蒂基金迪亚）面积超过500育格拉。在共和国后期，拉蒂基金迪亚的数量有所增加。富有的罗马人从那些再也无法维持生计的农民手中购买土地。从公元前200年开始，布匿战争使得农民们被叫去打仗更长的时间。现在对此说法有争议；一些学者现在认为，大规模农业直到公元前1世纪才主导意大利农业。牛提供牛奶，牛和骡子则在农场里做重活。绵羊和山羊是奶酪生产者，并且因其皮毛而备受珍视。马匹在农业中没有广泛使用，但富人会饲养它们用于赛马或战争。糖的生产主要集中在养蜂业上，一些罗马人还饲养蜗牛作为奢侈食品。罗马人有四种农场管理制度：业主及其家人直接工作；佃农制或股份制，业主和佃农分摊农场的农产品；贵族拥有的奴隶的强迫劳动，由奴隶管理者监督；以及其他将农场租赁给佃农的安排。</p>
+<h3>贸易</h3>
+<p>帝国各行省之间有大量的贸易往来，帝国所有地区都在很大程度上经济上相互依赖。一些行省专门生产谷物，包括小麦、埃默小麦、斯佩尔特小麦、大麦和小麦；另一些行省则生产葡萄酒，另一些则生产橄榄油，这取决于土壤类型。科卢梅拉在他的《论农业》中写道：“土壤肥沃、白垩质、潮湿并不适合种植冬小麦和斯佩尔特小麦。大麦除了松散干燥的地方以外，任何地方都不能生长。”老普林尼在他的《博物志》第十二至十九卷中广泛地论述了农业，包括第十八章，谷物的博物志。希腊地理学家斯特拉博认为波河谷（意大利北部）在经济上最为重要，因为“所有谷物都生长良好，但小米的产量特别高，因为土壤水源充足。”埃特鲁里亚行省有适合种植小麦的肥沃土壤。坎帕尼亚的火山土壤使其非常适合葡萄酒生产。除了了解不同的土壤类别外，罗马人还对哪种肥料最适合土壤感兴趣。最好的肥料是家禽粪，牛粪是最差的一种。绵羊和山羊粪也很好。驴粪最适合立即使用，而马粪对谷物作物不好，但根据马库斯·特伦提乌斯·瓦罗的说法，它对草地非常好，因为它“促进像草这样的草本植物大量生长”。</p>
+<h3>经济</h3>
+<p>在以古代城市迦太基为中心的北非粮食种植区，一个六口之家需要耕种12育格拉/3公顷的土地才能满足最低的粮食需求（没有动物）。如果一个家庭拥有帮助耕种土地的动物，那么需要20育格拉。如果家庭以佃农的方式耕种，那么满足最低生活水平就需要更多的土地。在公元2世纪的非洲行省，总产量的三分之一作为租金归土地所有者所有（见《曼西亚法》）。这些数据只详细说明了最低生活水平。很明显，一些行省进行了大规模的盈余生产，例如向城市，特别是罗马供应粮食，这一过程被称为Cura Annonae。埃及、北非和西西里岛是供应罗马人口粮食的主要来源，其人口在鼎盛时期估计为一百万人。对于小麦的产量，根据古代的资料来源，其数值有所不同。瓦罗提到，对于富有的地主来说，小麦的种子-产量比为10:1是正常的。在埃特鲁里亚的一些地区，产量可能高达15:1。西塞罗在他的《论维雷斯》中指出，正常的产量为8:1，丰收时的产量为10:1。保罗·埃尔德坎普在他的《罗马帝国的粮食市场》一书中提到，科卢梅拉在提到4:1的低得多的产量时可能存在偏见。根据埃尔德坎普的说法，科卢梅拉想要说明的是，“与葡萄酒相比，谷物利润微薄。他的论点促使他夸大了葡萄园的盈利能力，同时又减少了谷物种植获得的产量。充其量，科卢梅拉为贫瘠的土壤提供了一个可靠的数字；最坏的情况是，他的估计根本不可靠。”本世纪30年代平均每年的小麦产量，播种135公斤/公顷的种子，意大利和西西里岛约为1200公斤/公顷，埃及为1710公斤/公顷，昔兰尼加为269公斤/公顷，突尼斯为400公斤/公顷，阿尔及利亚为540公斤/公顷，希腊为620公斤/公顷。这使得地中海的整体平均值非常难以计算。一个农业单位被称为拉图斯基金杜斯，瓦罗将其称为一个大型庄园，这可以解释为拉蒂基金迪亚，或为500育格拉或约125公顷，因为这是提比略·塞普罗尼乌斯·格拉库斯在公元前133年担任保民官时规定的土地限制。随着埃及并入罗马帝国和奥古斯都皇帝（公元前27年-公元14年）的统治，埃及成为罗马粮食供应的主要来源。到公元70年代，历史学家约瑟夫斯声称，非洲为罗马提供了八个月的粮食，而埃及只提供了四个月的粮食。尽管这一说法可能忽略了来自西西里岛的粮食，并且高估了非洲的重要性，但历史学家们几乎毫无疑问地认为，非洲和埃及是罗马最重要的粮食来源。为了确保罗马的粮食供应充足，在公元前2世纪，格拉库斯在迦太基附近安置了6000名殖民者，给他们每人约25公顷（62英亩）的土地种植谷物。制成面包的谷物是罗马饮食中最重要的成分。一些学者试图计算供应罗马城所需的谷物总量。里克曼估计，罗马每年需要4000万莫迪（20万吨）的谷物来养活其人口。埃尔德坎普估计，所需数量至少为15万吨，计算结果是该市的每位居民每年消耗200公斤（440磅）的谷物。计算这些估计值时假设的罗马总人口在75万到100万人之间。大卫·马廷利和格雷戈里·阿尔德雷特估计，对于100万居民来说，进口谷物的数量为23.7万吨；这数量的谷物将为每人每天提供2326卡路里的热量，不包括其他食物，如肉类、海鲜、水果、豆类、蔬菜和乳制品。在《罗马皇帝传》中，据说塞维鲁留下了2700万莫迪的库存——这被认为是4世纪末的规范数字，足以供80万居民使用，每人每年500磅面包。</p>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Agriculture_in_ancient_Rome" target="_blank">(https://en.wikipedia.org/wiki/Agriculture_in_ancient_Rome)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Trade-in-the-Roman-World---World-History-Encyclopedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🛒&nbsp;</span>Trade in the Roman World - World History Encyclopedia</h3>
+        <small class="page-url url "><a href="https://www.worldhistory.org/article/638/trade-in-the-roman-world/" target="_blank">(https://www.worldhistory.org/article/638/trade-in-the-roman-world/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: The examination of trade within the Roman Empire highlights the economic factors supporting elite wealth, particularly in relation to agricultural products and luxury goods.<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马世界的贸易</h2>
+<p>罗马世界普遍存在地区间、区域间和国际贸易。国家控制和自由市场机制的结合确保了在一个地区生产的商品可以远销各地。谷物、葡萄酒和橄榄油尤其大量出口，而进口商品则包括贵金属、大理石和香料。</p>
+<h3>推动贸易的因素</h3>
+<p>总的来说，与早期和同时期的文明一样，罗马人在农业剩余、人口流动和城市增长、领土扩张、技术创新、税收、货币的传播以及养活伟大的罗马城本身及其庞大军队（无论军队驻扎何处）的需要等因素推动下，逐渐发展出一个更加复杂的经济体系。</p>
+<p>罗马世界的经济既显示出发展不足的特征，也显示出高度成就的特征。一些历史学家（特别是M.I.芬利）认为，前者的元素包括：过度依赖农业；技术传播缓慢；地方城镇消费水平高，而非区域贸易；工业投资水平低。</p>
+<p>然而，也有证据表明，从公元前2世纪到公元2世纪，参与生产和服务业的工人比例显著上升，区域之间对必需品和制成品的贸易也更加频繁。在后期的帝国时期，尽管由于君士坦丁堡的建立刺激了东部贸易的增长，但西部的贸易却有所下降。</p>
+<p>罗马人对贸易的态度有点消极，至少上层阶级是这样。土地所有制和农业被高度重视，被视为财富和地位的来源，而商业和制造业则被视为上层人士较不光彩的追求。然而，那些足够富有可以进行投资的人往往克服了他们的顾虑，雇佣奴隶、自由民和代理人（negotiatores）来管理他们的商业事务，并从中获得巨大的商业回报。</p>
+<h3>贸易商品</h3>
+<p>虽然考古证据有时可能支离破碎且具有误导性，但文献资料、货币以及船难等独特记录的结合，有助于更清晰地了解罗马人交易了什么商品、数量以及交易地点。</p>
+<p>贸易涉及食品（例如橄榄、鱼、肉、谷物、盐、鱼露、橄榄油、葡萄酒和啤酒）、动物产品（例如皮革和兽皮）、木头、玻璃或金属制成的物品、纺织品、陶器以及玻璃、大理石、木材、羊毛、砖块、金、银、铜和锡等制造和建筑材料。最后，当然还有大量的奴隶贸易。</p>
+<p>许多商品作为地区特产在大庄园生产的事实，例如埃及的葡萄酒或西班牙南部的橄榄油，进一步增加了商品的区域间贸易。考古遗址证明了这些大型庄园可以生产大量的剩余商品用于贸易：法国南部的葡萄酒生产商拥有能够储存10万升葡萄酒的酒窖；利比亚的一家橄榄油工厂拥有17个榨油机，每年能够生产10万升橄榄油；西班牙的金矿每年生产9000公斤黄金。虽然城镇通常是消费中心而不是生产中心，但也有一些例外，那里的作坊可以生产大量的商品。这些“工厂”的工人数量可能最多只有30人，但它们通常聚集在较大城市和港口的广阔工业区，陶瓷制品也聚集在靠近必要原材料（粘土和窑炉用的木材）的农村地区。</p>
+<p>然而，商品不仅在罗马世界范围内进行交换，加的斯、奥斯提亚、普特奥利、亚历山大港和安条克等繁华港口也从阿拉伯、印度、东南亚和中国等遥远的地方进口商品。这些商品有时会沿着著名的丝绸之路等陆路运输，有时会经由印度洋海路运输。这种国际贸易并不一定仅限于胡椒、香料（例如丁香、生姜和肉桂）、彩色大理石、丝绸、香水和象牙等奢侈品，正如沉船中发现的低品质陶器和赤陶油灯的地理分布所表明的那样。</p>
+        <small class="page-url url "><a href="https://www.worldhistory.org/article/638/trade-in-the-roman-world/" target="_blank">(https://www.worldhistory.org/article/638/trade-in-the-roman-world/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Roman-Art-and-Architecture-|-Oxford-Art">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🖼&nbsp;</span>Roman Art and Architecture | Oxford Art</h3>
+        <small class="page-url url "><a href="https://www.oxfordartonline.com/page/1762" target="_blank">(https://www.oxfordartonline.com/page/1762)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: Details the artistic and architectural advancements spurred by elite wealth which have left a lasting cultural legacy, tying back to the report's focus on social impact.<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马艺术</h2>
+<p>罗马起源于意大利中部，受其他意大利当地文化的影响，尤其是伊特鲁里亚文化。从公元5世纪起，罗马与希腊人接触，此后罗马共和国吸收了古典艺术和希腊化艺术的许多方面。然而，它从未失去其独特的风格，尤其体现在建筑、肖像和历史浮雕等领域。大约从公元前1世纪开始，罗马帝国的迅速扩张将希腊罗马艺术带到了欧洲、北非和近亚的许多地区，使得无数的省级艺术得以发展，最终从不列颠北部到撒哈拉，从西班牙到阿拉伯。</p>
+<h3>罗马建筑遗产</h3>
+<p>罗马的建筑遗产尤其广泛。除了其高高的基座和仅在一端有显著入口的传统罗马神庙外，罗马建筑的特点还在于其对希腊化规划的 readily adoption，以及对砖和特别是混凝土等新型材料的大胆使用，从而产生了诸如罗马大型公共浴场等宏伟建筑，以及省份中的万神殿和最终君士坦丁堡的圣索菲亚大教堂。</p>
+<h3>罗马公共艺术</h3>
+<p>罗马公共艺术的一个关键方面是对重要人物的纪念，后共和国时期是罗马杰出人物引人注目的肖像的时期，部分遵循本土写实肖像传统，部分受希腊化对体貌特征的兴趣影响。在帝国时期，祖先（以及现在权势滔天的皇帝）的肖像半身像装饰着公共和私人建筑。希腊著名雕塑的复制品和改编品在房屋、神庙、浴室和剧院中也很多，它们旨在为那些粗俗且有时庸俗的权力和财富炫耀提供一丝文化气息。尤其是在帝国时期，描绘皇帝成就的浮雕装饰着纪念拱门（如提图斯拱门）和柱子（特别是图拉真柱），为历史学家的文学记载提供了一种视觉上的对应。这些纪念方面的例子可以在丰富的美丽的罗马钱币上看到，在那里可以看到许多最好的肖像，以及各种各样的图像，既有神圣的，也有纪实的。</p>
+<h3>罗马帝国边缘的雕塑</h3>
+<p>罗马时期最独特的雕塑大部分位于帝国的边缘地区，那里的本土雕塑家使用当地的石灰石和砂岩，其风格近似于罗马大都会风格。在特里尔地区以及高卢北部其他地区和不列颠科茨沃尔德地区制作的雕塑生动活泼，其风格流畅，与中世纪使用相同柔软易加工的石头进行创作的雕塑家所创作的作品具有相似的品质。叙利亚帕尔米拉的丧葬和宗教雕塑在纹理上同样丰富，但在形式上则更为象征性。尤其引人注目的是那些明显穿着本土而非罗马服装的男女肖像。</p>
+<h3>罗马室内装饰</h3>
+<p>罗马室内装饰奢华地采用绘画和灰泥装饰。对于公元前1世纪和公元1世纪，最大的证据来自公元79年维苏威火山喷发摧毁的坎帕尼亚城市和郊区别墅（例如庞培和赫库兰尼姆）。它被分为四种“风格”，第一种风格是基于用绘画模仿彩绘大理石板，第二种风格是将墙壁打开，进行虚幻的神话或风景画，而之后的风格则添加了更多装饰性和富有想象力的图案来强调项目的技巧。实际上，特别是前两种风格都来自希腊化世界，这可以通过将坎帕尼亚的作品与希腊化宫殿和墓葬中的绘画进行比较来证明。然而，如果单独考虑，像来自罗马城外普里马波尔塔的利维娅别墅的花园绘画以及装饰尼禄金屋的奇思妙想这样的精美艺术品都显示出相当大的原创性。此外，绘画在整个地中海地区和各省份继续发展，考古学不断增加我们对罗马后期绘画的了解。来自罗马地下墓穴（基督教、犹太教和异教）、特里尔君士坦丁大帝时期的天花板绘画以及英格兰肯特郡卢林斯通别墅的一排基督教祈祷人物（祈祷者）的绘画，都表明具象绘画倾向于变得更加正式，并预示着拜占庭圣像。</p>
+<h3>罗马马赛克</h3>
+<p>马赛克通常被认为是典型的罗马艺术，但它们的起源也在希腊，尤其是在希腊化世界。许多罗马马赛克在图案上类似于地毯，但制作了各种各样的具象主题，从神话和宗教场景到风景和海洋马赛克，再到角斗士格斗和野兽搏斗的场景。在整个帝国中，可以识别出不同的风格、作坊和曲目差异。例如，在北非，我们发现了许多罗马竞技场的真实写照，而在希腊和不列颠，这些场景大多被神话所取代。西西里岛皮亚扎阿梅里纳的大型狩猎马赛克是公元4世纪早期的作品，它是一个技术精湛的马赛克，描绘了野兽与野兽、人与人之间激烈的冲突，而同时代且同样令人印象深刻的格洛斯特郡伍德切斯特的马赛克在设计和环绕着奥菲斯平静地环绕的动物的富有想象力的风格化方面更加充满活力，但可能缺乏西西里马赛克的技术技巧。</p>
+<h3>罗马的“次要艺术”</h3>
+<p>所谓的“次要艺术”在极度贪婪的罗马社会中非常重要。富人们在炫耀黄金珠宝和银器方面互相竞争，在罗马晚期，这些东西变得越来越令人印象深刻。镌刻宝石是从全世界收集的，包括来自印度的蓝宝石和祖母绿，来自阿尔卑斯的石英，以及来自波罗的海的琥珀。硬石被雕刻成浮雕，用作印章或浮雕。其中一些是由著名的艺术家签名的，例如迪奥斯库里德斯，他以雕刻奥古斯都皇帝的印章而闻名。较软的石头，如琥珀和萤石，被制成小容器的形式。</p>
+        <small class="page-url url "><a href="https://www.oxfordartonline.com/page/1762" target="_blank">(https://www.oxfordartonline.com/page/1762)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="The-Roman-Empire-and-Trade">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">⚓&nbsp;</span>The Roman Empire and Trade</h3>
+        <small class="page-url url "><a href="https://historylearning.com/a-history-of-ancient-rome/the-roman-empire-and-trade/" target="_blank">(https://historylearning.com/a-history-of-ancient-rome/the-roman-empire-and-trade/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: Highlights the significance of trade routes and economic practices in the Roman Empire, underpinning the wealth accumulation discussed in the report.<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马帝国的贸易路线</h2>
+<p>罗马帝国的贸易路线发达，包括地中海和黑海的海上航线，以及罗马人修建的道路所构成的众多陆路路线。修建道路的两个主要动机是贸易和罗马军队的调动。奥斯提亚港是最重要的港口，因为它是最靠近罗马的主要港口；它位于台伯河河口，距离罗马仅15英里。许多船只往来于奥斯提亚和北非主要城市迦太基之间，这段旅程总共需要三到五天。奥斯提亚也有来自法国和西班牙的船只到达。所有货物都可以很快运到罗马，因为一旦奴隶将货物从商船转移到驳船上，它们就会被驳船运到城市和台伯河上游。奥斯提亚实际上在罗马的灭亡中扮演了重要角色，公元409年被哥特人首领阿勒里克攻陷，切断了罗马重要的粮食供应。</p>
+<p>罗马尽最大努力确保海上航行的安全，例如建造灯塔作为安全的港口和码头，罗马海军也试图确保地中海免受海盗侵扰。罗马使贸易尽可能简单——只使用一种货币，没有复杂的关税。由于帝国的和平时期，贸易也得到了额外的欢迎。贸易对帝国的成功至关重要——当它崩溃时，以前构成罗马帝国的土地上的贸易也随之崩溃。商人还发现地中海变成了危险地带，因为没有当局能够控制远至英吉利海峡的海盗活动。</p>
+<p>他们利用道路网络在各国之间运输：来自不列颠的银用于制作珠宝和硬币，羊毛用于制作衣服；来自帝国东南部地区的衣物染料和香料用于调味食物；来自远东（中国）的丝绸用于生产精美的衣服；来自埃及的棉花；来自非洲的野生动物用于角斗士的战斗。西班牙、法国、中东和北非是主要的贸易伙伴。罗马人还进口牛肉、玉米、玻璃、铁、铅、皮革、大理石、橄榄油、香水、木材、锡和葡萄酒。不列颠出口铅、羊毛制品和锡——作为回报，他们进口葡萄酒、橄榄油、陶器和纸莎草纸。不列颠的贸易商依赖罗马的帝国安全——当它崩溃，欧洲似乎被野蛮人占领时，贸易商无法保证他们的货物能够顺利通过。如果没有罗马的额外力量，没有人会渴望购买来自不列颠和欧洲其他地区的产品。</p>
+        <small class="page-url url "><a href="https://historylearning.com/a-history-of-ancient-rome/the-roman-empire-and-trade/" target="_blank">(https://historylearning.com/a-history-of-ancient-rome/the-roman-empire-and-trade/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Roman-Warfare---World-History-Encyclopedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏅&nbsp;</span>Roman Warfare - World History Encyclopedia</h3>
+        <small class="page-url url "><a href="https://www.worldhistory.org/Roman_Warfare/" target="_blank">(https://www.worldhistory.org/Roman_Warfare/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: Examines the processes of war and conquest that fueled wealth through spoils, directly correlating with elite lifestyles elaborated in the report.<br></small>
+    </div>
+    <div class="page-content content"><h2>胜利带来的好处</h2>
+<p>战斗的胜利带来了新的领土、财富和资源，说服敌人请求和平，并传递了一个明确的信息：罗马将保卫她的边疆，她对扩张有着 insatiable 的渴望，并提供了无可辩驳的证据，证明罗马人在战场上是多么强大的战斗机器。在共和国时期，敌人的武器会被焚烧，人们会向诸神，尤其是战神玛尔斯、智慧女神密涅瓦和火神维尔坎献祭。</p>
+<p>胜利的指挥官作为英雄凯旋而归，几个世纪以来，共有 300 多人享受过凯旋的荣耀。凯旋仪式最初由元老院批准并支付费用。指挥官乘坐战车进入城市，参加盛大的游行，其中包括俘虏、黄金和艺术品等珍宝，甚至还有来自胜利领土的奇异动物。他身穿紫色长袍（toga picta 和 tunica palmata），头戴月桂冠，手持象牙权杖和月桂枝，身后站着一个奴隶，手里拿着金冠放在他的头上，并在他耳边低语：“看看你的身后”（Respice），以提醒他骄傲和傲慢的危险。从奥古斯都时期开始，只有皇帝才能享受凯旋的荣耀，但无论如何，这种做法变得越来越不频繁。</p>
+<p>胜利的指挥官还利用战争的掠夺物来美化罗马，例如，庞培剧院、奥古斯都广场和韦斯帕先圆形剧场。其他庆祝胜利的建筑包括方尖碑和柱子，但也许罗马军事虚荣心最引人注目的纪念碑是凯旋门，其中最大、装饰最华丽的是罗马的君士坦丁一世凯旋门。</p>
+        <small class="page-url url "><a href="https://www.worldhistory.org/Roman_Warfare/" target="_blank">(https://www.worldhistory.org/Roman_Warfare/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Ancient-Roman-Military:-Mobilization,-Infrastructure,-Spoils-|-Early-European-History-And-Religion-—-Facts-and-Details">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">⚔&nbsp;</span>Ancient Roman Military: Mobilization, Infrastructure, Spoils | Early European History And Religion — Facts and Details</h3>
+        <small class="page-url url "><a href="https://europe.factsanddetails.com/article/entry-460.html" target="_blank">(https://europe.factsanddetails.com/article/entry-460.html)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: Focuses on the spoils of war and unethical financial gains as means for wealth accumulation among the elite, presenting a broader commentary on Roman societal structures.<br></small>
+    </div>
+    <div class="page-content content"><h3>战争的 spoils</h3>
+<p>战争的 spoils 名义上进入了国家金库。实际上，它们首先经过统帅之手，统帅为自己、他的参谋和士兵留下他想要的东西，其余的送到罗马。机会是巨大的，罗马将军懂得如何利用所有机会。其中一些根据当时的习俗是合法的：掠夺被占领的城镇和城市，向被赦免者勒索赎金，以及将俘虏卖为奴隶。当然，完全不合法的行为是通过以过高的价格向军队提供物资或将这些物资用于私人用途而获得的财富。</p>
+<h3>被征服领土的重建</h3>
+<p>被征服领土的重建带来了同样丰厚的回报；可以肯定地说，在凯撒击败赫尔维蒂人之后，他向埃杜伊人保证在高卢中部的霸权，埃杜伊人为此付出了高昂的代价。那些耗费意大利最优秀血统的内战使胜利者变得极其富有。除了洗劫国库外，敌对党派的成员的财产也被没收并拍卖给最高出价者。所得款项名义上归新政府的国库所有，但与利润相比，所得款项微不足道。苏拉在罗马站稳脚跟后，朋友和敌人的名字都被列入处决名单，如果没有人为他们施加强大的影响力，他们就会失去生命和财富。而为了这种影响力，他们不得不付出高昂的代价。</p>
+<h3>一个例子</h3>
+<p>举一个例子。阿梅利亚的罗斯修斯的一处房产价值 30 万美元，被苏拉的自由民卢修斯·克里索戈努斯以 100 美元的价格买下，因为没有人敢于与独裁者的爪牙竞争。安置士兵获得土地拨款，为监督土地分配的三位专员带来了良好的生意。这些土地拨款总是来自被击败党派的支持者拥有的农场，贿赂来自双方。</p>
+        <small class="page-url url "><a href="https://europe.factsanddetails.com/article/entry-460.html" target="_blank">(https://europe.factsanddetails.com/article/entry-460.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Imperial-Sponsorship-of-the-Games-–-Spectacles-in-the-Roman-World">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🎪&nbsp;</span>Imperial Sponsorship of the Games – Spectacles in the Roman World</h3>
+        <small class="page-url url "><a href="https://pressbooks.bccampus.ca/spectaclesintheromanworldsourcebook/chapter/imperial-sponsorship-of-the-games/" target="_blank">(https://pressbooks.bccampus.ca/spectaclesintheromanworldsourcebook/chapter/imperial-sponsorship-of-the-games/)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: An exploration into how emperors utilized public games and spectacles to consolidate power, reflecting the dynamics of wealth and social relations in ancient Rome.<br></small>
+    </div>
+    <div class="page-content content"><h2>帝王对竞技比赛的赞助</h2>
+<p>本节你将了解：</p>
+<ul>
+<li>皇帝如何利用竞技比赛来娱乐和与民众沟通</li>
+<li>不同皇帝举办竞技比赛的不同方式</li>
+<li>像卡利古拉和克劳狄这样的皇帝，有些过于沉迷于竞技比赛</li>
+</ul>
+<p>在帝国时期，竞技比赛（尤其是在罗马）的作用是巩固皇帝的统治。皇帝成为竞技比赛的主要提供者，总编，尽管有些皇帝恢复了由各级长官主持公共竞技比赛的做法。皇帝们相互竞争，以提供更多更壮观的比赛；然而，直到很久以后（公元80年），角斗场才建成开放，它由对犹太人的战争所得资助建造，并为皇帝们提供了一个举办壮观“munera”（公共表演）的永久性场所。尽管缺乏合适的场地，第一位皇帝奥古斯都却为奢华的帝国竞技比赛设定了标准。</p>
+<p>奥古斯都超过了他之前的所有人，在公共表演的频率、多样性和壮丽程度上都超过了他们。他说他以自己的名义举办了四次比赛，为其他官员（他们要么不在罗马，要么缺乏资源）举办了23次比赛。他有时在所有街区和许多舞台上举办比赛，演员使用各种语言，角斗士的战斗不仅在广场或竞技场，而且在赛马场[1]和Saepta；然而，有时除了野兽搏斗之外，他什么也不提供。他还曾在火星广场举办田径比赛，搭建木制座位；以及海战[2]，在台伯河附近建造一个人工湖，现在的凯撒林就位于那里。在这种场合下，他在罗马的不同地点安排警卫，以防止它成为盗贼的目标，因为只有很少的人留在家里。在赛马场上，他展示了车手、赛跑者和猎兽者，他们有时是最高等级的年轻人。他还经常上演特洛伊游戏[3]，由年龄较大的男孩和年龄较小的男孩表演，认为这是一个历史悠久且值得称道的习俗，能让贵族中的佼佼者以这种方式闻名。当诺尼乌斯·阿斯普雷纳斯在参加这个游戏时因摔倒而受伤时，他赠送给他一条金项链，并允许他和他的后代使用Torquatus的姓氏。但不久之后，他放弃了这种娱乐形式，因为演说家阿西尼乌斯·波利奥在参议院里愤怒地抱怨他的孙子埃塞尔尼努斯的事故，他也摔断了腿。他有时甚至还让罗马骑士参加戏剧和角斗表演，但这只是在参议院的法令禁止之前。在那之后，除了一个名叫利修斯的年轻人外，他没有再展出任何出身显赫的人；因为他身高不到两英尺，体重只有十七磅，但却有着洪亮的声音。然而，在一次演出当天，他展示了有史以来第一次派往罗马的帕提亚人质，将他们带到竞技场的中央，并将他们安排在他自己座位上方第二排的位置[4]。苏埃托尼乌斯，《奥古斯都传》43</p>
+<p>奥古斯都确保自己在观看比赛时花时间真正地观看比赛，以此来取悦民众：</p>
+<p>他自己通常从朋友和自由民的楼上房间观看赛马场的比赛，但有时也在皇室包厢里观看，甚至和妻子孩子一起观看。他有时会缺席数小时，有时甚至会缺席整整一天，他会为此道歉并指定主管官员来代替他。但无论何时他出席，他都会全神贯注于演出，要么是为了避免批评（他意识到他的父亲凯撒[5]普遍受到这种批评，因为他花时间在游戏中阅读或回复信件和请愿书）；要么是因为他对这场演出的兴趣和乐趣，他从来不否认这一点，反而经常公开承认。正因为如此，他经常在其他人举办的比赛中提供特别的奖品和许多贵重的礼物，而且他参加任何希腊风格的比赛都不会忘记根据每个参与者的成绩给他们赠送礼物。他尤其喜欢观看拳击手，特别是拉丁血统的拳击手，不仅是那些被认可和列为专业人士的拳击手（他习惯于让他们与希腊人比赛），甚至包括那些在狭窄的街道上粗鲁地、不熟练地进行近身肉搏战的普通未经训练的城镇居民。简而言之，他对所有参加公共表演的表演者都感兴趣；维护运动员的权利，甚至增加了他们的权利；禁止在没有上诉权的情况下让角斗士进行比赛（formissio）；并剥夺了根据古代法律允许长官在任何地方和任何时候惩罚演员的权力，将其限制在比赛时间和剧院内。然而，他对竞技场和角斗士的战斗实行最严格的纪律。苏埃托尼乌斯，《奥古斯都传》45</p>
+<p>作为奥古斯都节俭（有人会说吝啬）天性的一部分，他的继任者提比略皇帝削减了比赛的费用：</p>
+<p>提比略通过削减演员的薪水并将角斗士的配对数量限制在一个固定数量来降低比赛和演出的成本。他抱怨说，科林斯青铜的价格上涨到一个巨大的数字，三条鲻鱼[6]卖了三万塞斯特斯，他提议对家用家具设置一个限额，并由参议院每年自行决定市场价格；而执政官则被指示对小吃店和餐馆施加限制，不允许出售任何糕点。此外，为了以身作则鼓励普遍节俭，他经常在正式晚餐上供应前一天剩下的或部分食用的肉类，或半只野猪，声称它具有整只野猪的所有品质。苏埃托尼乌斯，《提比略传》34.1</p>
+<p>在提比略统治时期，比赛稀少，规模缩小之后，卡利古拉对演出的喜爱一定受到罗马人民的欢迎。尽管角斗士们被他杀害了除外。</p>
+<p>他举办了几场角斗表演，有些在塔乌鲁斯竞技场[7]，有些在尤利亚围场，他在其中引进了来自非洲和坎帕尼亚的拳击手，他们都是这两个地区最好的拳击手。他并不总是亲自主持比赛，有时会将这项荣誉授予长官或朋友。他在许多不同的地方持续上演不同类型的戏剧，有时甚至在晚上，照亮整个城市[8]。他还分发了各种各样的礼物，并给了每个人一个装满食物的篮子。在宴会期间，他将自己的一份食物送给坐在他对面的一位罗马骑士，这位骑士正津津有味地吃着，而对于一位参议员，出于同样的原因，他给予了他一个任命他为执政官的委员会，这超出了正常的顺序。他还曾在赛马场上举办了许多比赛，从清晨持续到傍晚，在比赛之间穿插着猎豹的围捕或称为特洛伊的游戏[9]；还有一些特别的精彩表演，赛马场的地面撒满了红色和绿色[10]，而所有的车手都是参议员。他还随意开始了一些比赛，当一些人从附近的阳台呼唤时[10]，因为他正在从吉洛西亚的房子检查赛马场的装备。</p>
+<p>除此之外，他还创造了一种闻所未闻的新的奇观；因为他将拜亚和普特奥利的防波堤[11]之间的空隙连接起来，这段距离大约有三万六千步，方法是从四面八方汇集船只，将它们成双排地锚定，然后在上面堆起土堆，并将其塑造成亚庇亚大道的样子[12]。他连续两天在这个桥上骑马来回走动，第一天骑着一匹装饰华丽的马，他自己也穿着华丽的橡树叶冠冕、盾牌、剑和金布斗篷；第二天，他穿着车手的服装，乘坐一辆由一对著名的马拉的车，前面带着一个名叫达瑞乌斯的男孩，他是帕提亚的人质之一，并由整个禁卫军和一群他的朋友乘坐高卢战车陪伴。我知道许多人认为盖乌斯设计这种桥梁是为了与薛西斯[13]竞争，薛西斯曾因建造比赫勒斯滂海峡狭窄得多的桥梁而引起极大的赞赏；另一些人认为，这是为了通过一些惊人的作品的盛名来震慑德国和不列颠，因为他正计划征服这两个国家。但当我还是个孩子的时候，我常常听到我的祖父说，这项工程的原因，正如皇帝的密友所透露的那样，是因为占星家特拉西勒斯曾对提比略说，当他对继承人感到担忧，并倾向于他的亲生孙子时，盖乌斯成为皇帝的机会与骑马过拜亚海湾一样渺茫。</p>
+<p>他还曾在外国举办演出，在西西里岛的锡拉库兹举办雅典运动会，在高卢的卢格杜努姆（里昂）举办各种比赛；在后一个地方，他还举办了一场希腊语和拉丁语演讲比赛，据说，失败者向获胜者颁发奖品，并被迫为他们创作颂词，而最后一名参赛者则被命令用海绵或舌头擦去他们的作品，除非他们选择用棍子殴打或扔进附近的河里。苏埃托尼乌斯，《卡利古拉传》18-20</p>
+<p>然而，卡利古拉对演出的喜爱也有更加黑暗的一面：</p>
+<p>以下是他的天生残暴的一些特殊例子。当为角斗表演准备的野兽的饲料牛比较昂贵时，他挑选罪犯来喂野兽，并在检查指控之前检阅囚犯队列，只是站在柱廊中间，下令将他们“从秃头到秃头”带走。他强迫一个发誓如果皇帝康复就要在竞技场战斗的人遵守诺言，看着他手持剑战斗，直到他获胜才让他离开，而且只是在多次恳求之后才离开。另一个出于同样的原因献出了生命，但延迟自杀的人，他交给了他的奴隶，命令他们打扮成神圣的枝叶和丝带[14]，要求他履行誓言，最后将他从堤岸上扔下去。许多地位显赫的人首先被烙铁留下了疤痕，然后被判处矿井劳动、修路或被扔给野兽；或者他把他们像动物一样关在笼子里，或者把他们锯成两半。并非所有这些惩罚都是针对严重罪行的——它们是为了批评他的演出，或者从未对他的天才发过誓[15]。他强迫父母参加他们儿子的处决，为一个说自己生病的人送来担架，并在目睹死亡后立即邀请另一个人吃晚饭，并试图通过表现出极大的友善来让他微笑和开玩笑。他让他的角斗表演和狩猎项目的经理连续多天在他面前被铁链殴打，直到他对腐烂的大脑的恶臭感到厌恶才杀死他。他因为一句双关语的幽默台词而将一位阿特兰滑稽剧作家活活烧死在竞技场的中央。当一位罗马骑士在被扔给野兽时大声抗议自己的清白时，他把他带出来，割掉他的舌头，然后又把他放回去。当一位来自角斗训练场的穆尔米洛战士用木剑与他战斗并故意跌倒时，他用真正的匕首刺了他一刀，然后像一个真正的胜利者一样挥舞着棕榈枝。</p>
+<p>他还热情地致力于其他各种各样的艺术，扮演过色雷斯角斗士、车夫，甚至是歌手和舞者，用真武器战斗并在不同的地方建造的赛马场上驾车；他非常沉迷于唱歌和跳舞，即使在公开表演中，他也无法克制自己不去和悲剧演员一起唱他的台词，或者公开模仿他的姿态以表示赞扬或纠正。苏埃托尼乌斯，《卡利古拉传》节选</p>
+<p>每个人都批评卡利古拉的以下行为。他让很多人参加角斗士的战斗，强迫他们成双成对地战斗，也让他们组成一种像战线一样的阵容进行战斗。他曾请求参议院批准这样做，因此他能够做任何他想做的事情，即使违反法律规定，并且杀害了许多人——其中包括26名骑士，他们中的一些人花光了所有的钱，而另一些人只是练习了角斗战斗。死的人数之多并不是那么严重，尽管这已经够严重了，但更严重的是他对他们死亡的极度喜悦和对他渴望看到血腥的永不满足的欲望。同样的残酷特征导致他有一次，当缺乏被判处死刑的罪犯来喂野兽时，下令抓住一些站在长凳附近的人群并将他们扔给野兽；为了防止他们发出叫喊或说出任何责难，他首先命人割掉他们的舌头。他强迫一位著名的骑士参加单人决斗，指控他侮辱了他的母亲阿格里皮娜，当这个人获胜时，他把他交给他的原告，并杀了他。而这个人的父亲，尽管没有犯罪，但他也被关进了笼子里，正如他对待许多其他人一样，在那里结束了他的生命。他最初在尤利亚围场举行这些比赛，先挖掘整个场地并注满水，以便能够运来一艘船，但后来他将它们转移到另一个地方，在那里他拆除了许多大型建筑并搭建了木制看台；因为他蔑视塔乌鲁斯剧院。卡西乌斯·狄奥，《罗马史节录》59</p>
+<p>卡利古拉的继任者，他的叔叔克劳狄，通过禁卫军的行动而成为皇帝，禁卫军（显然）发现他在卡利古拉被暗杀后躲在一块幕布后面。他是一位热情的竞技比赛的赞助人，以下摘自苏埃托尼乌斯本人：</p>
+<p>他经常向人民施舍礼物。他还举办了几场精彩的演出，不仅是在惯常地点举办的惯常演出，还有一些是新颖的演出，还有一些是从古代复兴的演出，而且是在以前没有人举办过演出的地方。他从乐队的一个高台上主持了庞培剧院落成典礼上的比赛，他在剧院因火灾受损后修复了该剧院，首先在礼堂上方的庙宇祭祀，然后穿过座位层层而下，所有的人都静静地坐着。他还庆祝了世纪游戏，声称奥古斯都举行的时间太早，没有保留到规定的时间；尽管他自己在他的《历史》中写道，当这些游戏长时间中断后，奥古斯都经过仔细计算间隔后，恢复了它们原来的位置。因此，当使者按照惯例邀请民众参加“以前没有人见过，以后也不会再见到”的游戏时，他的声明引来了笑声；因为还有一些人见过以前的比赛，还有一些演员也在以前的演出中出现过，也在那时出现过。他还经常在梵蒂冈赛马场举办比赛，有时每五场比赛之间都会进行野兽搏斗。但他用大理石屏障和镀金的终点线装饰了最大赛马场，而以前则使用凝灰岩和木材，并为参议员分配了特殊的座位，而参议员以前一直和其他人一起观看比赛。除了赛车比赛，他还上演了名为特洛伊的游戏，以及在禁卫军骑兵中队的带领下，由护民官和长官本人带领的猎豹；还有色萨利骑兵，他们在竞技场四处驱赶野牛，在野牛疲惫不堪时跳到它们身上，并用角把它们摔倒在地。</p>
+<p>克劳狄举办了许多角斗表演，而且在许多地方都举办：每年庆祝他即位周年纪念日，在禁卫军营地举办一场没有野兽和精致装备的表演，以及在围场举办一场常规和通常类型的表演；在同一地点举办另一场不属于常规名单的短期表演，只持续几天，他首先将它命名为“sportula”，因为在第一次给予它之前，他宣布他邀请人们“像是一顿临时准备的快速餐一样”。在他所熟悉的娱乐形式中，没有哪一种比这更自由了，他甚至像普通人一样伸出左手，大声数着支付给获胜者的金币；他会不断地向观众发表讲话，并邀请他们和鼓励他们享受自己，有时称他们为“主人”，并穿插着一些微弱而牵强的笑话。例如，当他们要求帕伦布斯时，他保证会给他们，“如果他能被抓住”[16]。然而，以下这两点都非常及时且有益：当他向一位埃塞达里乌斯授予木剑时，他的四个儿子请求释放他，这一举动受到了热烈而普遍的赞扬，他立即散发了一张纸条，向人们指出，他们应该多么渴望孩子，因为他们看到即使是角斗士也能因此获得恩惠和保护。他在火星广场上表现了以实际战争方式攻城略地的场面，以及不列颠国王的投降场面，并身穿将军的外衣主持。甚至当他要从富奇努斯湖泄水时，他也先进行了一场模拟海战。但当战斗人员喊出：“万岁，皇帝，即将死去的人向您致敬”时，他回答说：“或者不”，然后他们所有人都拒绝战斗，声称他们已被赦免。于是，他犹豫了很长时间，是否要用火和剑消灭他们所有人，但最后，他从王座上跳起来，以他那滑稽蹒跚的步态沿着湖边跑动，一部分用威胁，一部分用承诺诱使他们战斗。在这场表演中，一支西西里舰队和一支罗得岛舰队对峙，每支舰队都有十二艘三层战舰，信号是由一只银色的海神吹号发出的，它是由机械装置从湖中升起的。</p>
+<p>然而，克劳狄过于沉迷于游戏及其流血事件：</p>
+        <small class="page-url url "><a href="https://pressbooks.bccampus.ca/spectaclesintheromanworldsourcebook/chapter/imperial-sponsorship-of-the-games/" target="_blank">(https://pressbooks.bccampus.ca/spectaclesintheromanworldsourcebook/chapter/imperial-sponsorship-of-the-games/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Roman-economy---Wikipedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💵&nbsp;</span>Roman economy - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Roman_economy" target="_blank">(https://en.wikipedia.org/wiki/Roman_economy)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: This page covers the evolution of the Roman economy, emphasizing the role of military conquests, expanding trade networks, and transition to a more monetized system, linking back to elite expenditures.<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马共和国早期的经济</h2>
+<p>罗马共和国早期，经济主要以农业为主，以谷物和葡萄酒等商品贸易为中心。[2]  通过贸易建立了金融市场，主要由家族财富建立的金融机构提供个人消费和公共基础设施信贷。[3] 在农业和现金短缺时期，罗马官员和铸币者倾向于通过铸造货币来应对，这在第一次布匿战争的长期危机期间发生，并造成了经济扭曲和困难。</p>
+<h2>罗马帝国时期的经济</h2>
+<p>布匿战争之后，在共和国后期和罗马帝国早期，经济变得更加货币化，并出现了一个更复杂的金融体系。[4] 皇帝发行刻有他们肖像的货币，以传播宣传，争取公众好感，并象征他们的财富和权力。[5] 罗马帝国的货币经济经常遭受通货膨胀的困扰，部分原因是皇帝发行货币来资助大型帝国项目，例如公共建筑工程或代价高昂的战争，这些项目提供了宣传机会，但却几乎没有物质利益。[4]</p>
+<p>罗马行省之间相互贸易，但贸易也延伸到中国和印度等遥远地区。[47] 主要商品是谷物。[48] 与中国的贸易主要通过丝绸之路上的中间商进行陆路运输；然而，与印度的贸易也通过红海上的埃及港口进行海运。贸易商品还包括橄榄油、各种食品、鱼酱（garum）、奴隶、矿石和金属制品、纤维和纺织品、木材、陶器、玻璃器皿、大理石、纸莎草、香料和药物、象牙、珍珠和宝石。[49] 尽管大多数行省都能生产葡萄酒，但各地区的葡萄酒品种备受青睐，葡萄酒是贸易的中心商品。普通葡萄酒（vin ordinaire）的短缺很少见。[50] 罗马城的 major 供应者是意大利西海岸、高卢南部、西班牙的塔拉科尼斯地区和克里特岛。亚历山大城（第二大城市）从叙利亚的拉奥狄刻亚和爱琴海进口葡萄酒。[51] 在零售层面，酒馆或专门的葡萄酒商店（vinaria）以罐为单位出售外卖葡萄酒，也在店内提供饮用葡萄酒，价格范围反映了质量。[52]</p>
+<h2>罗马帝国的贸易与经济发展</h2>
+<p>罗马帝国早期的贸易使罗马得以发展壮大。奥古斯都皇帝尽管进行了大量的公共和私人支出，但他从政府手中接管了贸易，并通过在不列颠、日耳曼和非洲等海外地区开辟新的贸易市场来扩大罗马的影响力。[53] 罗马帝国时代，罗马主导着世界贸易和影响力，但却无法在工业和制造业方面取得进步。[53] 这最终威胁到了奥古斯都带来的不断扩张的贸易和商业产业，以及罗马帝国在罗马人和世界人民眼中的强大地位。</p>
+<p>罗马经济在公元前几个世纪由于其先进的贸易和商业而蓬勃发展，但随着其商业行为的剧烈变化，这种繁荣受到了抑制。由于奥古斯都和贵族掌握着罗马绝大多数土地和财富，[53] 日常必需品的贸易和商业开始衰落。贸易开始只针对更奢侈的商品，由于贫困， effectively 排除了大多数罗马人。[53]</p>
+<p>对外贸易对罗马经济的崛起和复杂化也极其重要，罗马主要向西方的国家贸易葡萄酒、油、谷物、盐、武器和铁器。[53][37] 当这些国家在公元 2 世纪左右开始衰落，并且它们与罗马帝国之间的贸易因此不得不停止时，这对罗马经济的 strength 造成打击，因为对外贸易是资源丰富的帝国经济增长的主要因素。[53]  再加上他们无法做出适当的生产进步以适应其不断增长和发展的经济，这些事件阻碍了罗马贸易，限制了他们的商品种类，并损害了经济。</p>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Roman_economy" target="_blank">(https://en.wikipedia.org/wiki/Roman_economy)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Trade-in-the-Roman-Empire-180-CE">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🚚&nbsp;</span>Trade in the Roman Empire 180 CE</h3>
+        <small class="page-url url "><a href="https://www.themaparchive.com/product/trade-in-the-roman-empire-180-ce/" target="_blank">(https://www.themaparchive.com/product/trade-in-the-roman-empire-180-ce/)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: Covers the logistics of transportation and trade in the Roman Empire, reinforcing the economic factors believed to have supported elite lifestyles.<br></small>
+    </div>
+    <div class="page-content content"><h2>罗马帝国的运输</h2>
+<p>罗马帝国的运输基于道路、通航河流和海上航线，主要集中在地中海盆地，依靠北非、西班牙、法国和中东地区的资源来供应快速发展的首都，其人口在帝国鼎盛时期达到了100万人。最重要的进口商品是粮食，大量来自北非的“面包篮”。其他进口商品包括牛、橄榄油、葡萄酒、木材、铁、大理石和皮革等日常用品，以及香料、纸莎草、象牙、精美的玻璃器皿、半宝石和丝绸等来自遥远中国的异域奢侈品。到公元前1世纪末，罗马帝国的行省已经发展出专门的商品，特别是制成品，而罗马不断扩张的道路网络，连同其里程碑和驿站系统，对于供应和控制帝国都至关重要。然而，海运成本仅为陆运的六十分之一，因此航运不可避免地被用来运输谷物和建筑材料等笨重的日常用品。地中海（“我们的海”）纵横交错着航运路线，众多的灯塔、码头和港口为商船安全驶向罗马港口奥斯提亚提供了便利。标准化和稳定的货币，以及精确的标准重量和度量衡系统，都在很大程度上促进了跨境贸易。</p>
+        <small class="page-url url "><a href="https://www.themaparchive.com/product/trade-in-the-roman-empire-180-ce/" target="_blank">(https://www.themaparchive.com/product/trade-in-the-roman-empire-180-ce/)</a><br></small>
+    </div>
+
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 获取所有导航链接
+        const navLinks = document.querySelectorAll(".navigate-item");
+        // 将导航链接与目标元素建立映射关系
+        const connections = Array.from(navLinks).map(link => {
+            const targetId = link.getAttribute("href").substring(1); // 去掉 #
+            const targetElement = document.getElementById(targetId);
+            return { link, targetElement };
+        });
+        // 使用 IntersectionObserver 观察目标元素
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const { target, isIntersecting } = entry;
+                    const matchingLink = connections.find(connection => connection.targetElement === target).link;
+                    if (isIntersecting) {
+                        // 目标元素在视野中，添加高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.add("active");
+                    } else {
+                        // 目标元素离开视野，移除高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.remove("active");
+                    }
+                });
+            },
+            {
+                root: null, // 默认视口
+                threshold: 0.02
+            }
+        );
+
+        // 开始观察所有目标元素
+        connections.forEach(({ targetElement }) => observer.observe(targetElement));
+    });
+</script>
+<script>
+    // 获取元素
+    const resizer = document.querySelector('.resizer');
+    const leftColumn = document.querySelector('.left-column');
+    const rightColumn = document.querySelector('.right-column');
+    const navigate = document.querySelector('.navigate')
+
+    let isDragging = false;
+
+    // 鼠标按下事件
+    resizer.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        document.body.style.cursor = 'col-resize';
+        document.body.style.userSelect = 'none';
+    });
+
+    // 鼠标移动事件
+    document.addEventListener('mousemove', (event) => {
+        if (!isDragging) return;
+
+        // 计算新的宽度
+        const newLeftWidth = event.clientX / window.innerWidth * 100; // 转换为百分比
+
+        // 限制宽度范围
+        if (newLeftWidth > 15 && newLeftWidth < 70) {
+            leftColumn.style.flexBasis = `${newLeftWidth}%`;
+            rightColumn.style.flexBasis = `${100 - newLeftWidth}%`;
+            navigate.style.left = `${newLeftWidth + 0.15 * (100 - newLeftWidth)}%`
+            navigate.style.maxWidth = `${0.7 * (100 - newLeftWidth)}%`
+
+            const navigateRect = navigate.getBoundingClientRect();
+            const screenWidth = window.innerWidth;
+
+            // 获取右侧部分宽度
+            const rightColumnWidth = rightColumn.getBoundingClientRect().width;
+
+            // 计算 navigate 的占屏幕宽度比例
+            const navigateWidthPercentage = (navigateRect.width / screenWidth) * 100;
+
+            // 计算 navigate 居中所需的 left 值
+            const rightColumnLeft = rightColumn.getBoundingClientRect().left;
+            const navigateLeft = rightColumnLeft + (rightColumnWidth - navigateRect.width) / 2;
+
+            // 设置 navigate 的宽度和位置
+            navigate.style.left = `${navigateLeft}px`;
+        }
+    });
+
+    // 鼠标松开事件
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        document.body.style.cursor = 'default';
+        document.body.style.userSelect = 'auto';
+    });
+</script>
+</html>
