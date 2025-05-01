@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>港式早茶的传统点心</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; /* 更现代、更通用的字体 */
+            background-color: #f4f6f8; /* 更柔和的整体背景色 */
+            color: #333; /* 默认字体颜色 */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* 主内容区样式 */
+        .content {
+            border-radius: 12px; /* 圆角边界 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* 柔和的阴影 */
+            background-color: #fff; /* 明亮背景色 */
+            padding: 16px; /* 增加内边距 */
+            margin-bottom: 16px; /* 间隔 */
+        }
+
+        /* 左右分栏样式 */
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .left-column{
+            flex: 3;
+        }
+        .right-column{
+            flex: 4;
+        }
+
+        .left-column {
+            background-color: #eef6ff; /* 更亮的浅蓝背景 */
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); /* 内阴影 */
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; /* 明亮的背景色 */
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); /* 内阴影 */
+            font-family: "Noto Serif", "SimSun", serif; /* 更适合长文本阅读的字体 */
+            position: relative;
+        }
+
+        /* 标题样式 */
+        .title {
+            font-size: 1.4em; /* 增大标题字体 */
+            font-weight: 600; /* 半粗体 */
+            color: #1a1a1a; /* 深灰色标题 */
+            margin-bottom: 12px; /* 增加下方间距 */
+        }
+
+        .page-name.title {
+            font-size: 1.8em; /* 更大的字体 */
+            font-weight: bold; /* 加粗标题 */
+            color: #222; /* 更深的灰色 */
+            margin: 16px 0; /* 增加上下间距 */
+            text-align: left; /* 左对齐 */
+        }
+
+        .section-title {
+            font-size: 1.4em; /* 调整大小 */
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; /* 中灰色标题 */
+        }
+
+        /* 段落样式 */
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; /* 更现代的中英双语字体 */
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; /* 柔和的深灰色 */
+            padding: 12px; /* 内边距 */
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; /* 更清新的背景色 */
+            border: 1px solid #dde3ea; /* 添加边框 */
+            border-radius: 12px; /* 圆角 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 轻微阴影 */
+            margin-bottom: 20px; /* 增加间距 */
+        }
+
+        /* 分割线样式 */
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; /* 更柔和的分割线 */
+            margin: 20px 0; /* 增加上下间距 */
+        }
+
+        /* 元数据样式 */
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; /* 更小的字体 */
+            color: #666; /* 浅灰色 */
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; /* 更深的字体颜色 */
+            border-radius: 8px; /* 圆角 */
+            line-height: 1.4;
+            margin-bottom: 10px; /* 增加间距 */
+        }
+
+        /* 评分样式 */
+        .page-rating {
+            background-color: #e8f4ff; /* 浅蓝背景 */
+            color: #0078d7; /* 蓝色文字 */
+            font-weight: bold; /* 加粗文字 */
+            border: 1px solid #aad4ff; /* 边框 */
+        }
+
+        /* 评价样式 */
+        .page-annotation {
+            background-color: #fff5e5; /* 浅黄背景 */
+            color: #cc8400; /* 深黄色文字 */
+            font-style: italic; /* 斜体文字 */
+            border: 1px solid #ffcc66; /* 边框 */
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; /* 隐藏部分 */
+        }
+
+        /* 链接样式 */
+        a {
+            color: #0078d7; /* 蓝色 */
+            text-decoration: none; /* 移除下划线 */
+        }
+
+        a:hover {
+            text-decoration: underline; /* 鼠标悬停时显示下划线 */
+        }
+
+        /* 提高整体间距 */
+        .content > * {
+            margin-bottom: 12px; /* 增加内容之间的间距 */
+        }
+
+        /* query */
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; /* 紧贴页面顶部 */
+            z-index: 300; /* 确保在其他元素之上 */
+            background-color: #ffffff; /* 纯白背景，模拟输入框 */
+            color: #222; /* 深灰色文字 */
+            font-size: 1.1em; /* 略大的字体，提升可读性 */
+            font-weight: 500; /* 中等字体权重，轻松而非刻板 */
+            padding: 12px 16px; /* 内边距，增强舒适感 */
+            border-radius: 8px; /* 圆角设计，柔和外观 */
+            border: 1px solid #d1e4f2; /* 浅蓝边框 */
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05), /* 内阴影，模拟输入框的凹陷效果 */ 0 2px 4px rgba(0, 0, 0, 0.1); /* 外阴影，提升立体感 */
+            margin-bottom: 16px; /* 与下面内容留出空间 */
+            text-align: left; /* 左对齐，模拟自然输入 */
+            line-height: 1.6; /* 提高行间距，增强舒适性 */
+            font-family: "Inter", "Noto Sans", sans-serif; /* 与 sections 不同的字体，轻松现代 */
+            display: flex; /* 使用 flexbox 布局 */
+            align-items: center; /* 确保表情和文字垂直居中 */
+            gap: 10px; /* 表情和文字之间的间距 */
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        /* Section Link */
+        .section-link-box {
+            display: inline-block; /* 让链接保持块状但不独占一行 */
+            margin: 8px 4px; /* 控制胶囊之间的间距 */
+        }
+
+        .section-link {
+            display: inline-flex; /* 使用 flex 布局对齐内容 */
+            align-items: center; /* 垂直居中对齐 */
+            padding: 6px 12px; /* 增加内边距，增强胶囊感 */
+            background-color: #eef6ff; /* 胶囊的背景色 */
+            color: #0078d7; /* 文字颜色 */
+            font-size: 0.95em; /* 调整字体大小 */
+            font-weight: 500; /* 适度加粗 */
+            text-decoration: none; /* 去掉下划线 */
+            border: 1px solid #d1e4f2; /* 胶囊的浅色边框 */
+            border-radius: 20px; /* 胶囊效果 */
+            transition: all 0.2s ease; /* 添加动画过渡效果 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; /* 悬停时更深的背景色 */
+            color: #005bb5; /* 更深的文字颜色 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 加强阴影效果 */
+            text-decoration: underline; /* 可选：添加下划线 */
+        }
+
+        /* Navigate 样式 */
+        .navigate {
+            display: flex; /* 使用 flex 布局 */
+            max-width: 40%;
+            width: fit-content; /* 宽度由内容决定 */
+            flex-wrap: nowrap; /* 禁止换行 */
+            overflow-x: auto; /* 水平方向开启滚动 */
+            gap: 4px; /* 子元素之间的间距 */
+            justify-content: center; /* 主轴居中对齐 */
+            padding: 4px 4px; /* 增加内边距 */
+            background-color: #f4f6f8; /* 柔和背景色 */
+            border-radius: 12px; /* 圆角设计 */
+
+            position: fixed;
+            top: 0;
+            right: 4%;
+            /*transform: translateX(-50%);*/
+            z-index: 1000; /* 确保层级在前 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+            transition: transform 0.3s ease; /* 平滑过渡效果 */
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        /* Navigate 静态内容 */
+        .navigate-item {
+            display: flex; /* 使用 flex 布局 */
+            flex-direction: column; /* 垂直排列子元素 */
+            align-items: center; /* 水平居中 */
+            justify-content: center; /* 垂直居中 */
+            background-color: #ffffff; /* 背景色 */
+            padding: 2px 4px; /* 增加内边距 */
+            border-radius: 12px; /* 圆角设计 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+            transition: all 0.3s ease; /* 平滑的交互效果 */
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; /* 悬停时更浅的背景色 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 增强阴影效果 */
+            transform: translateY(-2px); /* 悬停时微微上浮 */
+        }
+        .navigate-item a {
+            text-decoration: none; /* 移除下划线 */
+            color: #0078d7; /* 蓝色字体 */
+            font-weight: bold; /* 加粗文字 */
+            font-size: 1em; /* 增大字体 */
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; /* 放大 emoji */
+            margin-bottom: 1px; /* 与文字保持间距 */
+        }
+        .navigate-item-id {
+            font-size: 0.9em; /* 稍小的 ID 字体 */
+            color: #555; /* 中灰色字体 */
+        }
+
+        [id] { /* 导航后不要触顶, 不好看 */
+            scroll-margin-top: 40px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            港式早茶的传统点心
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">港式早茶的起源与文化</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Hidden-Hong-Kong:-A-history-of-dim-sum-in-Hong-Kong-|-Localiiz">
+    🫖历史背景</a></div><div class="section-link-box"><a class="section-link" href="#Cantonese-morning-tea-(Yum-Cha):-a-bite-of-Cantonese-culture-|-Journal-of-Ethnic-Foods-|-Full-Text">
+    🍵早茶习俗</a></div><div class="section-link-box"><a class="section-link" href="#How-culinary-icon-dim-sum-connects-Hong-Kong-people-and-reflects-city’s-dynamic-ability-for-reinvention-|-South-China-Morning-Post">
+    🥢文化连接</a></div></div>
+    <div class="section-content content"><p>港式早茶作为饮食文化，源自粤菜，强调社交与慢生活方式。其历史背景显示，饮茶习惯在香港深深扎根，成为家庭和朋友聚会的重要组成部分。近年来，许多传统茶馆面临租金上涨和维护困难的挑战，导致部分老字号逐渐消失。同时，新型餐厅的兴起逐渐吸引年轻消费者，侧重于社交和体验感的提升，体现了现代早茶文化的演变。</p>
+<p>在这种环境下，尽管年轻一代的参与已有所减少，但高质量与创新的早茶理念仍然吸引着他们的注意。这一动态反映了港式早茶如何在现代社会中形成重要的文化习俗，融合传统与现代的元素，推动了饮茶文化的持续发展。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">主要点心种类及特点</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Essential-Types-of-Hong-Kong-Dim-Sum">
+    🥟点心种类</a></div><div class="section-link-box"><a class="section-link" href="#How-culinary-icon-dim-sum-connects-Hong-Kong-people-and-reflects-city’s-dynamic-ability-for-reinvention-|-South-China-Morning-Post">
+    🥢点心文化</a></div><div class="section-link-box"><a class="section-link" href="#Dim-sum---Wikipedia">
+    🍜点心简介</a></div></div>
+    <div class="section-content content"><h3>主要港式早茶点心种类及特点</h3>
+<ol>
+<li><strong>烧卖 (Siu Mai)</strong>  </li>
+<li><strong>主要成分</strong>: 烧卖通常包含猪肉和虾，外观为开口的蒸饺，顶部常用蟹卵作为装饰。</li>
+<li>
+<p><strong>口感特征</strong>: 纹理丰富，肉质鲜嫩，鲜美的虾肉与猪肉的结合，再加上蟹卵的鲜咸口感，使其成为港式早茶中非常受欢迎的一道点心。</p>
+</li>
+<li>
+<p><strong>虾饺 (Har Gow)</strong>  </p>
+</li>
+<li><strong>主要成分</strong>: 虾饺的主要成分是鲜虾，外皮由透明的虾皮制成，制作过程需要技巧。</li>
+<li>
+<p><strong>口感特征</strong>: 薄而透明的外皮搭配鲜甜的虾肉，口感爽滑，十分受欢迎，常被视为港式早茶的经典代表之一。</p>
+</li>
+<li>
+<p><strong>肠粉 (Cheong Fun)</strong>  </p>
+</li>
+<li><strong>主要成分</strong>: 肠粉使用糯米外皮包裹不同的馅料，常见的有猪肉、虾或牛肉。</li>
+<li>
+<p><strong>口感特征</strong>: 外皮软滑，馅料鲜美，通常还搭配甜酱油，深受茶客喜爱，尤其是在早餐和早午餐时段。</p>
+</li>
+<li>
+<p><strong>叉烧包 (Char Siu Bao)</strong>  </p>
+</li>
+<li><strong>主要成分</strong>: 包内夹有甜味叉烧肉，外皮使用低筋面粉制成，经过蒸煮后非常柔软。</li>
+<li>
+<p><strong>口感特征</strong>: 叉烧肉的甜咸结合与松软的包皮相得益彰，是早茶中不可或缺的点心之一，深受各年龄层的喜爱。</p>
+</li>
+<li>
+<p><strong>流沙包 (Custard Buns)</strong>  </p>
+</li>
+<li><strong>主要成分</strong>: 内含流动的蛋奶酱，外皮则是松软的包子皮。</li>
+<li>
+<p><strong>口感特征</strong>: 包子咬开时流出香滑的蛋奶酱，甜而不腻，常被视为新式点心中的人气之选。</p>
+</li>
+<li>
+<p><strong>凤爪 (Chicken Feet)</strong>  </p>
+</li>
+<li><strong>主要成分</strong>: 带有黑豆酱的鸡脚，经过长时间炖煮处理。</li>
+<li>
+<p><strong>口感特征</strong>: 皮肤黏滑，味道浓郁，通常在早茶中作为一种独特的小吃停售，虽然部分人初次接触可能会觉得陌生，但深受喜欢的食客喜爱。</p>
+</li>
+<li>
+<p><strong>小笼包 (Xiaolongbao)</strong>  </p>
+</li>
+<li><strong>主要成分</strong>: 这种蒸包通常包含热汤和猪肉作为馅料。</li>
+<li><strong>口感特征</strong>: 皮薄汤多，口感独特，食用时需要小心热汤流出，常常对美食爱好者拥有很高的人气。</li>
+</ol>
+<p>以上各种点心在港式早茶中地位非常重要，各自的独特风味和制作工艺使它们成为茶客们流连忘返的美味。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">传统点心的制作方法</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Pineapple-Buns-(Bolo-Bao)---Omnivore's-Cookbook">
+    🍍菠萝包制作</a></div><div class="section-link-box"><a class="section-link" href="#Char-Siu-Bao-(Steamed-BBQ-Pork-Buns)-叉烧包---Omnivore's-Cookbook">
+    🥢叉烧包制作</a></div><div class="section-link-box"><a class="section-link" href="#How-culinary-icon-dim-sum-connects-Hong-Kong-people-and-reflects-city’s-dynamic-ability-for-reinvention-|-South-China-Morning-Post">
+    🥢点心文化</a></div></div>
+    <div class="section-content content"><ol>
+<li><strong>菠萝包 (Bolo Bao)</strong></li>
+<li><strong>所需原料</strong>：面粉、酵母、牛奶、糖、黄油、蛋黄、水果干（如菠萝干）。</li>
+<li>
+<p><strong>制作步骤</strong>：</p>
+<ul>
+<li>激活酵母：将温牛奶与糖和酵母混合，静置至表面出现气泡。</li>
+<li>制作面团：将面粉与激活的酵母混合，揉成光滑的面团，加入黄油继续揉捏，最后放置在温暖处发酵。</li>
+<li>制作糖皮：将糖、黄油及面粉混合后，冷藏以便成型。</li>
+<li>组合：将发酵好的面团分成小剂子，包入糖皮，再次发酵，最后烘烤至金黄。</li>
+</ul>
+</li>
+<li>
+<p><strong>叉烧包 (Char Siu Bao)</strong></p>
+</li>
+<li><strong>所需原料</strong>：低筋面粉、水、酵母、叉烧肉、糖、咸蛋黄（可选）。</li>
+<li>
+<p><strong>制作步骤</strong>：</p>
+<ul>
+<li>准备面团：将水与酵母混合后，加入低筋面粉和糖，揉成面团，发酵至三倍大。</li>
+<li>制作馅料：将叉烧肉切丁，加入酱油、糖调味，若使用咸蛋黄，则与叉烧肉混合。</li>
+<li>包制：将面团分割成剂子，擀成圆皮，包入叉烧馅料，封口捏紧，卫抚成形。</li>
+<li>蒸制：将包好的叉烧包放入蒸锅，蒸10分钟至熟透。</li>
+</ul>
+</li>
+<li>
+<p><strong>韭菜饺</strong></p>
+</li>
+<li><strong>所需原料</strong>：韭菜、虾仁、猪肉、姜、水饺皮（或自制面团）。</li>
+<li>
+<p><strong>制作步骤</strong>：</p>
+<ul>
+<li>馅料准备：将韭菜切碎，与剁碎的虾仁和猪肉混合，加盐、姜丝调味。</li>
+<li>包制饺子：将饺子皮放在手心中，放入适量馅料，对折捏紧，边缘捏成波浪形。</li>
+<li>烹饪：可蒸、煮或煎制，蒸制时间约为10分钟。</li>
+</ul>
+</li>
+<li>
+<p><strong>虾饺 (Har Gow)</strong></p>
+</li>
+<li><strong>所需原料</strong>：虾仁、猪油、淀粉（如木薯淀粉）、水、盐。</li>
+<li><strong>制作步骤</strong>：<ul>
+<li>准备虾仁：将虾仁剁成碎肉，加盐和猪油搅拌均匀。</li>
+<li>制作皮：将木薯淀粉与水混合制成面团，擀成薄皮。</li>
+<li>包饺子：取适量虾馅放于皮中央，捏合边缘，轻轻塑形为饺子。</li>
+<li>蒸制：放入蒸锅，用大火蒸制约8-10分钟直至熟透。</li>
+</ul>
+</li>
+</ol>
+<h3>用户关心的部分</h3>
+<ul>
+<li><strong>注意事项</strong>：在制作叉烧包时，注重低筋面粉的使用以确保面皮的松软；制作韭菜饺时，韭菜要切得细致，避免水分过多而影响包制；虾饺的皮需尽量擀薄，以保证口感的Q弹。菠萝包的糖皮需冷藏，使得出炉时表面形成酥脆的外壳。</li>
+</ul></div>
+</div><div class="section">
+    <h3 class="section-title title">现代饮茶文化的演变</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Essential-Types-of-Hong-Kong-Dim-Sum">
+    🥟现代早茶的创意</a></div><div class="section-link-box"><a class="section-link" href="#Char-Siu-Bao-(Steamed-BBQ-Pork-Buns)-叉烧包---Omnivore's-Cookbook">
+    🥢餐饮创新</a></div><div class="section-link-box"><a class="section-link" href="#How-culinary-icon-dim-sum-connects-Hong-Kong-people-and-reflects-city’s-dynamic-ability-for-reinvention-|-South-China-Morning-Post">
+    🥢传统与现代交汇处</a></div></div>
+    <div class="section-content content"><ol>
+<li><strong>消费者偏好的转变</strong>：</li>
+<li>港式早茶文化正处于传统与现代的变化交汇处，越来越多的新式餐厅正在吸引年轻消费者。</li>
+<li>
+<p>随着消费者需求的变化，传统的茶馆面临维修和租金上涨的挑战，而新型餐饮更加注重社交和体验感。</p>
+</li>
+<li>
+<p><strong>年轻一代对饮茶方式的影响</strong>：</p>
+</li>
+<li>尽管年轻一代的参与有所减少，但高质量、创意十足的早茶仍旧吸引他们的青睐。</li>
+<li>
+<p>年轻一代推崇用户体验，倾向于选择那些具有创新和社交属性的现代餐厅而非传统茶楼。</p>
+</li>
+<li>
+<p><strong>现代餐厅如何吸引年轻人的注意</strong>：</p>
+</li>
+<li>新一波餐厅通过提供独特的用餐体验和创新的菜品，满足年轻消费者的期待。例如，一些现代餐厅将传统点心以趣味化和创意化的形式呈现，以吸引年轻食客。</li>
+<li>餐厅的营销策略往往侧重于社交媒体的影响力，这也使得创新的外观和精致的呈现成为吸引年轻顾客的重要因素。</li>
+</ol>
+<h3>用户关心的重点：</h3>
+<ul>
+<li>年轻消费者的倾向是选择具有创新和社交属性的现代餐厅，这对饮茶文化的未来发展提出了新的挑战和机遇。</li>
+<li>现代餐厅的角色不仅是提供食物，更是创造社交空间，满足年轻人对体验的需求，这意味着传统茶楼需要进行调整以适应新的市场环境。</li>
+</ul></div>
+</div><div class="section">
+    <h3 class="section-title title">茶楼推荐及特色点心</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Hidden-Hong-Kong:-A-history-of-dim-sum-in-Hong-Kong-|-Localiiz">
+    🫖点心历史</a></div><div class="section-link-box"><a class="section-link" href="#IN-DEPTH-Guide-to-8-Must-Visit-Tea-Houses-in-Hong-Kong">
+    🍽茶馆推荐</a></div><div class="section-link-box"><a class="section-link" href="#How-culinary-icon-dim-sum-connects-Hong-Kong-people-and-reflects-city’s-dynamic-ability-for-reinvention-|-South-China-Morning-Post">
+    🥢点心文化</a></div></div>
+    <div class="section-content content"><ol>
+<li><strong>陆羽茶馆 (Luk Yu Tea House)</strong></li>
+<li>特色：以传统的点心和普洱茶闻名，环境保持经典的广式茶楼风情。</li>
+<li>
+<p>招牌点心：虾饺、烧肉酥等。</p>
+</li>
+<li>
+<p><strong>时光茶室 (Yum Cha)</strong></p>
+</li>
+<li>特色：提供创意十足的点心，以可爱的造型和现代化的饮茶体验吸引年轻消费者。</li>
+<li>
+<p>招牌点心：小猪包（猪形包）、流沙包、苹果蛋挞。</p>
+</li>
+<li>
+<p><strong>绿桐茶 (Green Ginkgo Tea)</strong></p>
+</li>
+<li>特色：专注于手工泡茶，提供多种新颖的茶品，强调茶叶的质量与制作工艺。</li>
+<li>
+<p>招牌点心：菜心包等。</p>
+</li>
+<li>
+<p><strong>乐茶茶馆 (LockCha Tea House)</strong></p>
+</li>
+<li>特色：提供超过100种茶品和素食点心，注重传统茶文化与创新相结合。</li>
+<li>招牌点心：素食点心，例如香菇包。</li>
+</ol>
+<h3>重要性与顾客推荐的热门点心</h3>
+<p>这些茶楼在当地饮茶文化中扮演了重要角色，吸引了不同年龄层的顾客，并提供了丰富的社交和饮食体验。顾客特别推荐的热门点心包括：
+- <strong>虾饺</strong>：以其新鲜的虾肉和透明的外皮而受到青睐，是不可或缺的经典小吃。
+- <strong>叉烧包</strong>：选用高质量的叉烧肉，甜而不腻，口感极佳。
+- <strong>流沙包</strong>：因其内部爆浆的蛋奶馅而备受年轻人追捧，是拍照打卡的热门选择。 </p>
+<p>这部分信息强调了具体茶楼的特色和招牌点心，直接满足了顾客对饮茶文化与美食的关注。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">健康影响与营养成分分析</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#The-Health-Benefits-of-Eating-Dim-Sum:-A-Nutritious-Guide-to-Traditional-Chinese-Fare">
+    🍽健康影响</a></div><div class="section-link-box"><a class="section-link" href="#Dim-sum---Wikipedia">
+    🍜营养成分</a></div><div class="section-link-box"><a class="section-link" href="#Dim-Sum:-How-Nutritious-Is-It?---MyHealth-Beijing">
+    🏥营养建议</a></div></div>
+    <div class="section-content content"><p>在健康影响与营养成分分析的维度中，以下信息被提取并整理：</p>
+<ol>
+<li><strong>营养成分与健康影响</strong>：</li>
+<li>港式早茶常见点心的总脂肪、高饱和脂肪和钠含量普遍较高，可能增加心血管疾病和某些癌症风险。</li>
+<li>
+<p>具体分析显示，如水母和豆腐卷等，含有较高的脂肪和热量，食用时应适量。</p>
+</li>
+<li>
+<p><strong>健康饮茶习惯建议</strong>：</p>
+</li>
+<li>建议在享用港式早茶时，应理性选择点心，选择蒸制的点心，尽量减少油炸和煎炸的食物。</li>
+<li>
+<p>搭配煮蔬菜和高钙食物，以达到均衡饮食的效果。</p>
+</li>
+<li>
+<p><strong>蒸点与炸点的比较</strong>：</p>
+</li>
+<li>蒸点相较于炸点，能够更好地保留营养成分，且通常油脂含量较低，是更健康的选择。</li>
+</ol>
+<p>用户可能最关心的部分是：
+- 港式早茶常见点心的高脂肪与钠含量如何影响健康，特别是在心血管疾病的风险方面。
+- 如何在享受港式早茶的同时，理性选择点心和饮品，以维持健康的饮食习惯。</p></div>
+</div>
+</div>
+<hr>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item">
+    <a href="#How-culinary-icon-dim-sum-connects-Hong-Kong-people-and-reflects-city’s-dynamic-ability-for-reinvention-|-South-China-Morning-Post" class="navigate-item-emoji ">🥢</a>
+    <a href="#How-culinary-icon-dim-sum-connects-Hong-Kong-people-and-reflects-city’s-dynamic-ability-for-reinvention-|-South-China-Morning-Post" class="navigate-item-id">1</a>
+</div><div class="navigate-item">
+    <a href="#Hidden-Hong-Kong:-A-history-of-dim-sum-in-Hong-Kong-|-Localiiz" class="navigate-item-emoji ">🫖</a>
+    <a href="#Hidden-Hong-Kong:-A-history-of-dim-sum-in-Hong-Kong-|-Localiiz" class="navigate-item-id">2</a>
+</div><div class="navigate-item">
+    <a href="#Cantonese-morning-tea-(Yum-Cha):-a-bite-of-Cantonese-culture-|-Journal-of-Ethnic-Foods-|-Full-Text" class="navigate-item-emoji ">🍵</a>
+    <a href="#Cantonese-morning-tea-(Yum-Cha):-a-bite-of-Cantonese-culture-|-Journal-of-Ethnic-Foods-|-Full-Text" class="navigate-item-id">3</a>
+</div><div class="navigate-item">
+    <a href="#Essential-Types-of-Hong-Kong-Dim-Sum" class="navigate-item-emoji ">🥟</a>
+    <a href="#Essential-Types-of-Hong-Kong-Dim-Sum" class="navigate-item-id">4</a>
+</div><div class="navigate-item">
+    <a href="#Dim-sum---Wikipedia" class="navigate-item-emoji ">🍜</a>
+    <a href="#Dim-sum---Wikipedia" class="navigate-item-id">5</a>
+</div><div class="navigate-item">
+    <a href="#Pineapple-Buns-(Bolo-Bao)---Omnivore's-Cookbook" class="navigate-item-emoji ">🍍</a>
+    <a href="#Pineapple-Buns-(Bolo-Bao)---Omnivore's-Cookbook" class="navigate-item-id">6</a>
+</div><div class="navigate-item">
+    <a href="#Char-Siu-Bao-(Steamed-BBQ-Pork-Buns)-叉烧包---Omnivore's-Cookbook" class="navigate-item-emoji ">🥢</a>
+    <a href="#Char-Siu-Bao-(Steamed-BBQ-Pork-Buns)-叉烧包---Omnivore's-Cookbook" class="navigate-item-id">7</a>
+</div><div class="navigate-item">
+    <a href="#Authentic-Recipes:-Dim-Sum-in-Hong-Kong---In-the-Know-Traveler" class="navigate-item-emoji ">🥟</a>
+    <a href="#Authentic-Recipes:-Dim-Sum-in-Hong-Kong---In-the-Know-Traveler" class="navigate-item-id">8</a>
+</div><div class="navigate-item">
+    <a href="#The-Disappearing-Art-and-Rhythm-of-Chinese-Tea-in-Hong-Kong---Brad-A.-Johnson" class="navigate-item-emoji ">☕</a>
+    <a href="#The-Disappearing-Art-and-Rhythm-of-Chinese-Tea-in-Hong-Kong---Brad-A.-Johnson" class="navigate-item-id">9</a>
+</div><div class="navigate-item">
+    <a href="#Hong-Kong-tea-culture---Wikipedia" class="navigate-item-emoji ">🏮</a>
+    <a href="#Hong-Kong-tea-culture---Wikipedia" class="navigate-item-id">10</a>
+</div><div class="navigate-item">
+    <a href="#IN-DEPTH-Guide-to-8-Must-Visit-Tea-Houses-in-Hong-Kong" class="navigate-item-emoji ">🍽</a>
+    <a href="#IN-DEPTH-Guide-to-8-Must-Visit-Tea-Houses-in-Hong-Kong" class="navigate-item-id">11</a>
+</div><div class="navigate-item">
+    <a href="#The-best-dim-sum-in-Hong-Kong-–-Time-Out-Hong-Kong" class="navigate-item-emoji ">🍤</a>
+    <a href="#The-best-dim-sum-in-Hong-Kong-–-Time-Out-Hong-Kong" class="navigate-item-id">12</a>
+</div><div class="navigate-item">
+    <a href="#Dim-Sum:-How-Nutritious-Is-It?---MyHealth-Beijing" class="navigate-item-emoji ">🏥</a>
+    <a href="#Dim-Sum:-How-Nutritious-Is-It?---MyHealth-Beijing" class="navigate-item-id">13</a>
+</div><div class="navigate-item">
+    <a href="#The-Health-Benefits-of-Eating-Dim-Sum:-A-Nutritious-Guide-to-Traditional-Chinese-Fare" class="navigate-item-emoji ">🍽</a>
+    <a href="#The-Health-Benefits-of-Eating-Dim-Sum:-A-Nutritious-Guide-to-Traditional-Chinese-Fare" class="navigate-item-id">14</a>
+</div><div class="navigate-item">
+    <a href="#Lovers-of-dim-sum-beware" class="navigate-item-emoji ">🧘</a>
+    <a href="#Lovers-of-dim-sum-beware" class="navigate-item-id">15</a>
+</div><div class="navigate-item">
+    <a href="#The-Changing-World-of-Dim-Sum.-In-Hong-Kong,-rents-are-rising,-tastes…-|-by-Max-Falkowitz-|-Airbnb-Magazine-|-Medium" class="navigate-item-emoji ">📈</a>
+    <a href="#The-Changing-World-of-Dim-Sum.-In-Hong-Kong,-rents-are-rising,-tastes…-|-by-Max-Falkowitz-|-Airbnb-Magazine-|-Medium" class="navigate-item-id">16</a>
+</div>
+    </div>
+    <div class="page">
+    <div class="page-meta" id="How-culinary-icon-dim-sum-connects-Hong-Kong-people-and-reflects-city’s-dynamic-ability-for-reinvention-|-South-China-Morning-Post">
+        <h3 class="page-name title"><span class="page-emoji ">🥢&nbsp;</span>How culinary icon dim sum connects Hong Kong people and reflects city’s dynamic ability for reinvention | South China Morning Post</h3>
+        <small class="page-url url "><a href="https://www.scmp.com/native/lifestyle/topics/wrldcty-hong-kong/article/3116625/culinary-icon-dim-sum-connects-hong-kong" target="_blank">(https://www.scmp.com/native/lifestyle/topics/wrldcty-hong-kong/article/3116625/culinary-icon-dim-sum-connects-hong-kong)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 本页介绍了港式点心的社会和文化意义，强调了其在香港人际关系中的重要性。<br></small>
+    </div>
+    <div class="page-content content"><h2>港式点心：一种连接纽带</h2>
+<p>点心是中国的传统美食，长期以来一直维系着香港人的联系，帮助他们彼此沟通。这种以各种馅料的小笼包（蒸或煎）为特色的烹饪标志，仍然是香港本地文化中最容易辨认的部分之一。</p>
+<p>点心传统上作为早餐和午餐食用，最常在家庭以外准备和食用，并且最适合在集体用餐的环境中享用。周末或节假日，供应点心的餐馆通常人满为患，因为家庭和朋友聚在一起分享菜肴——通常是从餐车中分送的，餐车缓慢地在桌子之间穿梭——同时聊天和品尝中国茶。</p>
+<p>在香港生活了十多年的瑞士厨师兼点心爱好者尼古拉斯·埃拉卢夫说：“点心不仅仅是一顿饭——它是一种联系、一种关系和一种沟通。”</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Hidden-Hong-Kong:-A-history-of-dim-sum-in-Hong-Kong-|-Localiiz">
+        <h3 class="page-name title"><span class="page-emoji ">🫖&nbsp;</span>Hidden Hong Kong: A history of dim sum in Hong Kong | Localiiz</h3>
+        <small class="page-url url "><a href="https://www.localiiz.com/post/food-drink-history-dim-sum-hong-kong" target="_blank">(https://www.localiiz.com/post/food-drink-history-dim-sum-hong-kong)</a><br></small>
+        <small class="page-rating rating ">评分: 9.0<br></small>
+        <small class="page-annotation annotation ">注释: 本页探讨了港式早茶的历史与文化，以及与家庭和友人聚会的紧密联系。<br></small>
+    </div>
+    <div class="page-content content"><h2>隐藏的香港：香港点心的历史</h2>
+<p>图片由Hywit Dimyadi（Shutterstock）提供</p>
+<p>对于任何在香港长大的人来说，周末与家人一起享用早午餐的方式自然就是点心：各种小巧的粤式家常菜，通常配茶食用，在中国的茶楼与亲人分享。</p>
+<p>虽然这项古老的烹饪传统起源于古代中国，但点心已深深融入香港文化，几乎成为当地的一种习俗，老少皆宜，普遍享受这种经典的用餐仪式。如果您想知道这种烹饪现象是如何在我们城市蓬勃发展的，请与我们一起深入了解点心的历史，从它几千年前的词源起源到今天它演变成的奢华家庭聚会。</p>
+<h3>触动心灵的点心</h3>
+<p>点心在中文中字面意思是“触动心灵”，几个世纪以来一直是深受喜爱的国宝，尽管它的确切起源被时间的迷雾所掩盖。一个传说认为它的远古根源可以追溯到东晋时期（公元317年-公元420年），当时一位将军号召平民制作各种糕点和馒头，送到前线战场士兵手中，以此表达对他们服务的衷心感谢，或者用中文表达为“点点心意”。“点心”一词据说是从这个短语中简化而来的。</p>
+<p>虽然故事可能只是故事，但书面历史记录可以确定“点心”的概念至少可以追溯到唐代（公元618年-公元907年）。关于“点心”一词的最早记录之一来自《唐书》。记载中说，有一位官员邀请一位客人早上到他家做客。然而，由于官员的妻子还在准备，无法准备丰盛的早餐，所以就提供了一些小菜来招待客人。文中，“点心”一词用作动词，意为“勉强填饱肚子”。</p>
+<p>虽然这种早期的点心与如今奢华的茶楼盛宴相去甚远，它指的是清淡的早晨点心，但这并非随意之举，而是在特殊场合提供的体面之物。</p>
+<h3>点心的普及</h3>
+<p>虽然中国各地长期存在着对点心的模糊概念，但广州通常被誉为现代点心的诞生地，因为正是那里形成了独特的粤式传统——通常与饮茶（饮茶；“drinking tea”）同义。</p>
+<p>在清朝时期，广州是海上丝绸之路上的一个重要贸易枢纽。疲惫不堪的旅行者会在路边的茶楼（茶樓；caa4 lau4）稍作停留，用小盘食物补充能量，并配以中国茶来帮助消化。</p>
+<p>这些餐馆同样也是社交场所，也成为商人以更轻松的氛围洽谈生意交易的重要场所；由此诞生了粤式点心文化的蓝图。</p>
+<p>点心不仅仅是食物，更是一种共享的集体体验，也是一种更易获得的奢华形式。恰如其分的是，它的菜品往往精致，制作费时。它涵盖了各种蒸、炸、焖的菜肴，这些菜肴通常被认为在家中制作过于费力。</p>
+<p>将小盘美食的独特体验与该地区作为对外贸易中心的战略地位相结合，点心在19世纪下半叶蓬勃发展；不久之后，它的流行迅速蔓延到广州南部邻近的香港。</p>
+<h3>你也可能喜欢这些故事 👇</h3>
+<h3>隐藏的香港：茶餐厅的历史……</h3>
+<h3>香港最佳点心餐厅</h3>
+<h3>在香港扎根</h3>
+<p>由于广州和香港的饮食重叠，点心很容易在我们的当地烹饪领域扎根，几乎没有抵抗。</p>
+<p>到20世纪初，西营盘、上环和中环地区涌现出一批茶楼，供应茶和各种点心。其中最成功的是著名的莲香楼，它于20世纪20年代开业，至今仍在供应美味的点心！</p>
+<p>根据粤式传统，香港早期的茶楼只在上午到午餐时间营业；而传统的粤菜馆（酒樓；zau2 lau4）则负责晚餐服务。直到二战后，这两种类型的中国餐馆才在很大程度上可以互换，因为许多餐馆开始提供全天候的餐饮服务。然而，那时，点心与一日三餐中较早的餐点相关的联系已经深深植根于我们的文化意识中，并延续至今。</p>
+<p>随着点心习俗在香港扎根，这种美食逐渐形成了自身的特色，融入了一丝西方的影响，以体现香港的殖民和文化根源。传统上，点心是广东省各种家常菜的混合体，包括著名的烧卖、虾饺、叉烧包、肠粉和鸡脚等。虽然许多这些菜肴仍然是香港点心界的主食，但许多当地美食也融入其中，并变得同样令人印象深刻。</p>
+<p>当地茶楼开始融合中西口味，将西式食材和烘焙等烹饪风格引入厨房。这导致了蛋挞、蒸奶芒果布丁和广受欢迎的奶黄包等融合菜肴出现在菜单上。现在，如果没有这些热门菜品，你几乎不能说点心菜单是完整的！</p>
+<p>点心的主要吸引力之一是其丰富多样的风味和质地，几乎适合所有人的口味。因此，毫不奇怪，随着点心在香港发展成为一种越来越包容的美食，它吸引了遍布全球的粉丝。凭借这种包容性优势，我们的城市现在被誉为无可争议的点心世界之都，世界各地的人们都来到香港，品尝被认为是当地典型餐饮体验的点心。</p>
+<h3>重塑点心文化</h3>
+<p>熙熙攘攘的手推车、喧闹的人群和冒着热气的茶壶都是我们所熟知的点心标志——但信不信由你，情况并非总是如此。自从点心首次来到我们的海岸以来，围绕着它的文化已经走了很长一段路。</p>
+<p>虽然点心始终拥有超越世代和社会界限的吸引力，但在早期，你的座位在茶室的位置仍然显示出社会阶层。通常情况下，上层和中产阶级会占据楼上较安静和宽敞的区域，而工人阶级则会坐在楼下的地面上。</p>
+<p>为了创造一个轻松而友好的空间，方便休闲聚会和聊天，一些高档茶楼甚至会播放音乐，并提供中国棋牌游戏，让客人们在品茶和享用点心的同时增进感情。然而，这些娱乐活动在20世纪70年代后逐渐减少，当时香港经济迅速发展，人们开始采用更快的生活方式。</p>
+<p>说到供应点心，这（确实）是一项费力的工作。在20世纪上半叶，服务员会带着绑在身上的大托盘，上面堆满了竹蒸笼，然后在茶楼上下走动，大声叫卖他们的商品。这种做法一直持续到20世纪50年代左右，笨重的系带托盘才被标志性的手推车所取代。</p>
+<p>即使是茶的供应方式在当时也与众不同。热气腾腾的饮料不是用圆形的瓷制茶壶供应，而是用带盖的碗供应，这催生了流行的俗语“一盅两件”，意思是“一碗两件”。</p>
+<p>在点心成为如今丰盛的早午餐之前，人们会用这个词来点一杯茶和两种点心，并以此为一顿饭。尽管这个词可能不再适用，但它仍然成为这种烹饪标志的代名词。</p>
+<h3>现代点心</h3>
+<p>如今，点心已经发展成为一项相当奢华的活动，通常留给周末和悠闲的早晨。近几十年来，人们的注意力从茶转移到了食物上，菜单日益丰富和富有想象力。与此同时，为了迎合现代沉迷于Instagram的人群，菜品的摆盘也提升到了一个新的水平。从可爱的猪形叉烧包到色彩鲜艳的饺子，点心实际上已经成为可以食用的艺术画布！</p>
+<p>然而，就像生活中的大多数事情一样，你不能既要马儿好又要马儿不吃草。新传统的重塑不可避免地伴随着旧习俗的抛弃。随着租金空间越来越值钱，笨重的手推车变得不合时宜，被手写点菜单所取代，以节省空间和劳动力。如今，只有少数香港点心餐厅仍在坚持使用老式手推车。</p>
+<p>尽管发生了这些变化，点心仍然是香港的心脏。也许我们的味蕾已经被训练成将茶和热气腾腾的肉馅和甜饺子视为舒适食品；或者也许是这种历史悠久的烹饪仪式仅仅迎合了我们怀旧的渴望，因为点心的集体性质使其成为产生快乐回忆和感伤情绪的理想场所。无论哪种方式，香港对待点心都极其认真，这是毋庸置疑的。随着点心传统的不断发展，我们继续将它视为我们文化中不可或缺的一部分，一种珍贵的联谊体验，最终也是我们城市的骄傲和喜悦。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Cantonese-morning-tea-(Yum-Cha):-a-bite-of-Cantonese-culture-|-Journal-of-Ethnic-Foods-|-Full-Text">
+        <h3 class="page-name title"><span class="page-emoji ">🍵&nbsp;</span>Cantonese morning tea (Yum Cha): a bite of Cantonese culture | Journal of Ethnic Foods | Full Text</h3>
+        <small class="page-url url "><a href="https://journalofethnicfoods.biomedcentral.com/articles/10.1186/s42779-023-00180-9" target="_blank">(https://journalofethnicfoods.biomedcentral.com/articles/10.1186/s42779-023-00180-9)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 本页分析了广式早茶的特点，探讨了早茶在地方饮食文化中的重要性。<br></small>
+    </div>
+    <div class="page-content content"><h2>广东早茶 (Yum Cha)：一口广东文化</h2>
+<h3>摘要</h3>
+<p>在中国各种类型的早餐中，广东早茶（Yum Cha）以其形式和特色而独树一帜。早茶是广东的一种晨间传统活动，起源于清朝。经过多年的变迁，它已发展成为如今的模样，提供各种小菜（点心）以及中国茶。中国茶的分类是基于颜色、形状、香气和发酵程度。广东的几种点心菜肴根据地区、食材选择、口味和烹饪方法进行分类。Yum Cha 具有独特的礼仪，不同于其他地区的民间文化。早茶在影响广东人的饮食模式和饮食习惯方面发挥着重要作用。此外，早茶支持日常生活中的人际互动和联系，为旧友谊的培养和新纽带的建立提供了一个实用且可接受的渠道。作为当地文化的一个象征，早茶在身心上塑造着广东人。因此，应重视和传播 Yum Cha 文化。</p>
+<h3>引言</h3>
+<p>自古以来，早餐一直是中国饮食文化的载体和缩影 [1]。在一日三餐中，早餐常被认为是一天中最重要的一餐，它提供维持和支持日常活动的能量 [2, 2]。早餐已成为一些国家的营养政策的一部分。全球约 90 个国家制定了膳食指南，其中大多数都提到了早餐的重要性 [4]。一些国家建立了包括早餐在内的完整的营养政策法律体系，例如日本和美国 [5]。中国也陆续出台了一系列营养政策措施，强调早餐的重要性，例如《中国食物与营养发展纲要》。早餐在中国发展成为一种文化。从饮食文化的角度来看，由于当地农产品和口味偏好的差异，各个地区形成了独特的早餐风格，例如北京豆浆、武汉热干面、兰州牛肉面和河南胡辣汤。简单是大多数中国地区饮食文化中早餐的共同特征。然而，包含茶和点心的广东早茶却是一个例外。</p>
+<p>早茶，普通话也称作“早茶”，是广东人的一种典型而独特的晨间活动。在广东话中，这种习俗被称为“饮茶”（Yum Cha），意思是“喝茶”。该词也与“叹茶”（Tan Cha）互换使用，在口语中翻译为“享受茶” [6]。广东式早餐的主要特点是在户外享用点心或各种小吃 [7]。俗话说“一盅两件”，指的是为顾客提供两道美味佳肴来搭配茶的习俗 [8]。对于当地人来说，早茶更像是一种社交聚会，而不是“进食”。它是一天中预留出来与朋友和家人社交和联络的时间。在其漫长的历史中，早茶已发展成为超越单纯美食而成为文化的东西。</p>
+<p>饮茶是中国文化的一个组成部分。不同民族和地区的饮茶习惯和习俗各不相同 [9]。中国茶文化通过文化交流传播到许多地区。广东早茶是一种非常本土的文化传统，它是中国茶文化的一种代表类型。如今，广东早茶已广为人知。它在中国乃至世界都具有一定的影响力。在国外可以看到广东茶楼，其中许多茶楼直接被称为“Yum Cha”。当代早茶文化影响着越来越多的人，并逐渐将中国的传统茶文化传播到世界各地。在本文中，我们回顾了早茶的起源、发展、组成部分、服务和礼仪，以帮助人们深入了解广东早茶文化并传承这一传统。此外，我们介绍了早茶的功能和未来，以了解早茶对现代社会的适应性。</p>
+<h3>早茶的起源和发展</h3>
+<p>广东早茶的起源可以追溯到清朝 [10]。1757 年，清朝乾隆皇帝颁布谕旨，下令除广州外，沿海各省停止对外贸易。由于这项政策，全国各地的茶叶、瓷器和丝绸源源不断地运往广州，销往世界各地。广州当时成为中国最大的物流中心，这导致了广州经济的空前繁荣。随着商品日益丰富，茶叶变得价格大众化，为广东早茶文化的形成播下了种子。“一厘馆”被认为是早茶的发源地。最初，“一厘馆”以街边摊的形式起家，只有一两张木桌木凳，提供一个休闲的休憩和社交场所。随着店面规模的不断扩大，“一厘馆”升级为“二厘馆” [11]，这是广州最早的茶楼。“二厘馆”位于劳动力密集的地区，例如码头和食品市场。为工人阶级设计，“二厘馆”提供茶、快餐和与同事交流的场所。这种模式迅速传播，导致茶居和茶楼的出现。茶居，意为“茶馆”，服务于商人，社会经济地位较高的人群。然而，由于广州经济呈现下行趋势，其受欢迎程度仍然较低。茶楼，意为“茶馆”，出现在清朝后期，主要针对满族官僚。清朝灭亡后，由于消费者流失，旧茶楼迅速消失。与此同时，“二厘馆”的独特之处脱颖而出，获得了“饮茶”（Yum Cha）的名称。在广东快速现代化和全球化的背景下，这种传统文化仍然蓬勃发展，并在广东人的休闲生活中变得越来越不可或缺。另一方面，全球化将“Yum Cha”文化传播到其他国家，如越南、澳大利亚和美国。如今，早茶闻名世界并被广泛接受。</p>
+<h3>早茶的组成部分</h3>
+<p>早茶是广东的一种早餐传统，提供各种蒸菜以及中国茶。中国是茶叶的原产国，以其种植和制茶技术而闻名。中国拥有数百年茶叶生产和消费的历史。茶叶种植主要集中在长江流域及其他南方地区。2021 年，该行业生产了约 320 万吨茶叶，占世界总量的 45%。中国不仅是世界上最大的茶叶生产国，也是主要的出口国，每年向世界供应超过 35 万吨茶叶 [12]。广东的茶叶消费与广东的饮食习惯有关。它是中国茶叶产品消费的基本市场 [13]。根据颜色、形状、香气和发酵程度，茶叶分为多种类型。茶楼中常见的茶叶有乌龙茶、普洱茶和菊花茶。乌龙茶，普通话也称作武夷茶，是一种半发酵茶，主要通过采摘、萎凋、揉捻、发酵和烘焙等工艺加工而成 [14]。这种工艺融合了绿茶和红茶的加工方法，赋予乌龙茶绿茶的新鲜花香和红茶的醇厚口感。普洱茶，由山茶属植物的叶子和茎制成，是一种中国黑茶。它包含两种主要类型：不发酵普洱茶和发酵普洱茶 [15]。普洱茶独特的香气以持久香气、橙色和浓郁醇厚的口感为特征。由于其浓郁的口感会随着时间的推移而增强，因此普洱茶叶可以冲泡多次。因此，陈年普洱茶在中国茶文化中倍受推崇。菊花茶是一种用鲜菊花烘焙和阴干或晒干制成的花茶 [16]。茶叶通常透明，有时略带颜色，从浅黄色到亮黄色不等。</p>
+<p>早茶的另一个组成部分是点心，这是一种传统的广东小份菜肴，用竹蒸笼盛放。广东有数千种点心，其风味、质地、烹饪风格和食材各不相同 [17]。这些菜肴有时按用途分类，例如宴席点心、季节性点心、每周点心、旅行点心、节日点心、招牌点心等。此外，它们还可以通过地区差异、食材选择和口味来区分，例如岭南民间小吃、面点和西式甜点 [18]。此外，点心还按烹饪方法进行分类，分为干点和湿点。一般来说，完整的广东点心包括蒸菜、煎炸菜、粥和甜点。许多点心都是用海鲜、切碎的肉类和蔬菜包裹制成的。</p>
+<p>虾饺（图 1），起源于 20 世纪 20 年代，是典型的广东点心。主要成分是小麦淀粉、虾、猪油和竹笋。首先使用小麦淀粉来制作饺子的水晶皮。馅料包括虾、猪油、竹笋、葱、姜、芝麻油、味醂、盐和胡椒粉。混合调味后，将一大勺馅料放在饺子皮的中间。一旦馅料完全包裹在褶皱中，必须捏紧边缘以密封。蒸约十分钟后，虾饺即可上桌。</p>
+<p>虾饺：已有百年历史。它们馅料丰富，包含新鲜虾、猪肉、竹笋等。虾饺的皮包含各种颜色。</p>
+<p>糯米鸡（图 2）是另一道受欢迎且具有代表性的点心，口感粘稠、湿润且浓郁。糯米、鸡肉、叉烧肉、排骨、咸蛋黄和蘑菇用荷叶包裹。蒸制过程中，米饭浸泡在荷叶独特的香气和风味中，产生菜肴特有的香味。</p>
+<p>糯米鸡：用荷叶包裹的糯米，通常含有蛋黄、干贝、蘑菇和肉（通常是猪肉和鸡肉）。</p>
+<h3>早茶的服务</h3>
+<p>由于早茶是广东当地人的一种习惯，回头客通常都有自己喜欢的座位。就座后，客人会收到菜单。每位就座的顾客都会收取“茶位费” [19]。大多数茶楼会先要求顾客选择他们喜欢的茶，例如绿茶或乌龙茶。如今，一些茶楼甚至供应冷奶茶和苏打水。一旦选择了伴随的饮料，顾客就会开始点餐。</p>
+<p>传统上，各种点心是用推车送达的，由服务员推着在周围走动 [20]。点心不是根据菜单点菜的，而是预先做好的，放在推车上供食客选择 [21]。因此，食客通常更喜欢靠近厨房的桌子，因为服务员和推车会先经过这些桌子。上菜时，服务员会高声报出菜名，顾客会通知服务员所选择的菜肴。因此，场地通常喧闹但充满活力，洋溢着满足感和人情味。通常，菜肴按“小”、“中”、“大”、“特大”或“特价”五个类别收费。餐费按菜肴的数量、大小和类型计算，记录在账单卡上。在传统的茶楼里，服务员通常会在上菜时用橡皮图章或钢笔在账单卡上记录订单。最终账单由服务员根据账单卡上的印章数量或数量计算。然而，许多茶楼现在都使用在线点餐系统或纸质清单式的方法。</p>
+<h3>早茶的礼仪</h3>
+<p>例如，“揭盖续水”和“扣指茶礼”等 Yum Cha 礼仪代表了一种独特的民间文化 [22]。“揭盖续水”是指掀开杯盖或茶壶盖，示意服务员为茶壶续水。这种礼仪本身是在清朝后期建立的。一位贵族在斗鸟比赛中惨败后去了一家茶楼。他决定通过策划一个骗局来赢回他的钱。于是，他拿了一个空茶壶，把他的鸟放进去。当服务员打开盖子来加水时，鸟飞走了。这位贵族愤怒地要求赔偿他的损失。幸运的是，一位武林高手介入并调解了这一事件。然而，从那时起，茶楼老板就规定顾客自己打开茶壶盖续水。“扣指茶礼”，用中指和食指轻叩桌面，是一种表达对为你续杯的人的感谢的礼仪。相传，清朝微服私访的乾隆皇帝曾与仆人一起光顾过一家茶楼。皇帝拿过茶壶，给仆人们倒茶。仆人们由于害怕暴露皇帝的身份，无法下跪感谢皇帝。于是，他们用卷起的三根手指敲了三下桌子，以象征代替下跪三次。敲击的方式不同，取决于你和倒茶人的关系。对长辈，你应该用紧握的拳头敲击，象征叩拜和敬仰。同辈之间，用食指和中指敲击，就像将一个拳头握成杯状作为尊敬的标志。对年轻人，只需要敲一下手指作为感谢的点头示意。</p>
+<p>还有一些用餐礼仪。为了表示尊重，用餐开始或上新菜时，最年长的人先动筷 [23]。另一种表示尊重的方式是在别人从盘子里拿食物时保持桌子不动。当其他人正在拿食物时，转动餐桌转盘是不尊重的。如果没有餐桌转盘，只应取面前的食物。此外，最后一块或一份通常提供给客人或其他朋友。另一个有趣的礼仪是抢着付账，这是表达好客和友善的一种方式。此外，筷子不应垂直插入食物中，因为它类似于为死者提供的香火 [24]。这些独特的礼仪代表了广东人在过去一个世纪里建立的生活方式和习惯。</p>
+<h3>早茶的功能</h3>
+<p>作为早餐，早茶可能会产生多种有益的健康影响。茶叶含有各种生物活性成分和微量元素。因此，适量饮茶有益于人体健康 [25]。临床和流行病学研究的累积证据表明，饮茶与各种疾病的风险降低有关，例如糖尿病、中风、心血管疾病、卵巢癌和胃癌 [26]。当地人认为，喝茶是一种可以镇静神经、增强自我保护能力，甚至帮助身体恢复健康的方法。在开始忙碌的一天之前，喝茶可以短暂放松一下。研究表明，空腹喝茶可能会引起胃部不适 [27]。因此，喝茶的同时吃点心可以避免这种不良后果。</p>
+<p>点心营养丰富，因为它包含大量食物，例如面粉、海鲜和蔬菜。主要成分是碳水化合物，这是人体重要的能量来源。大多数海鲜中饱和脂肪酸的比例较低，富含 n-3 多不饱和脂肪酸 [28]。《中国膳食指南（2016）》指出，n-3 多不饱和脂肪酸在降低心血管疾病和中风风险方面发挥着重要作用 [29]。另一方面，加工点心时会添加各种调味品和配料，例如动物脂肪和糖 [30]。过量摄入脂肪和糖可能会增加肥胖的风险 [31]。因此，消费者需要限制某些菜肴的消费量。</p>
+<p>广东当地人和文化是发展这种独特饮食文化的基础。因此，早茶作为当地居民之间的纽带，支持日常生活中的人际互动和联系。对于长者来说，Yum Cha 是在太极拳锻炼或散步后享受清晨时光的一种仪式。家庭主妇也参加早茶来与朋友社交和联络。茶楼的顾客通常是一群朋友和亲戚，他们聊天、阅读，甚至讨论生意 [32]。广东早茶为旧友谊的培养和新纽带的建立提供了一个实用且可接受的渠道。与目前流行的快餐文化相比，广东早茶已成为当代广东人参与公共领域的一种互动模式。</p>
+<h3>早茶的未来</h3>
+<p>随着快速全球化和城市化的发展，西方饮食文化已经融入当地的 Yum Cha 文化，形成了中国独特的饮食文化。与此同时，Yum Cha 也经历了一系列由社会和文化变革引起的变迁。传统上，各个年龄段和社会经济地位的当地人都聚集在茶楼享用早茶。然而，由于生活方式的变化，早茶的主要消费群体也发生了变化。特别是由于工作压力，一些年轻人没有时间在早上喝早茶，同时忽略了广东早茶文化。只有中老年人仍然保持着早上喝早茶的行为。一项研究分析了来自广东的 1100 名参与者的数据 [33]。结果表明，74.2% 的早茶消费者年龄超过 45 岁。虽然喝早茶的年轻人数量逐渐减少，但他们仍然使用茶楼作为社交或讨论业务的首选场所。在这个过程中，早茶文化得到了传播。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Essential-Types-of-Hong-Kong-Dim-Sum">
+        <h3 class="page-name title"><span class="page-emoji ">🥟&nbsp;</span>Essential Types of Hong Kong Dim Sum</h3>
+        <small class="page-url url "><a href="https://matadornetwork.com/read/dim-sum-hong-kong/" target="_blank">(https://matadornetwork.com/read/dim-sum-hong-kong/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 本页详细介绍了几种经典的港式点心及其特点，符合对点心文化的研究。<br></small>
+    </div>
+    <div class="page-content content"><h2>1. 烧卖</h2>
+<p>照片：Paul_Brighton/Shutterstock</p>
+<p>这种经典的点心已遍布城市的各个小吃摊，但烧卖也是一种能让你明显看出街边小吃版和优质点心店版之间巨大差距的菜式。这些开放式蒸饺包含虾和猪肉，并以鲜亮的橙色蟹黄装饰。其他一些烧卖的变种用蘑菇代替虾，用鸡肉代替猪肉。点心图书馆为食客提供了这种经典菜式的现代风格，例如黑蒜猪肉虾烧卖。</p>
+<h2>2. 虾饺</h2>
+<p>照片：monotui/Shutterstock</p>
+<p>虾饺的成败取决于虾的质量和面皮的透明度。这些小小的虾饺看起来简单，但却是一门艺术，因为食材（特别是虾和竹笋，这使得内部口感顺滑）的质量以及褶皱饺子的精准度要求很高。位于中环的陆羽茶室是香港最古老的点心餐厅之一，是品尝这种经典菜式的完美场所。</p>
+<h2>3. 罗卜糕，或煎萝卜糕</h2>
+<p>照片：Tharnapoom Voranavin/Shutterstock</p>
+<p>这可不是西式意义上的蛋糕，而是点心中的主食，是终极的舒适食物。萝卜糕是农历新年庆祝活动的传统菜肴，被认为是幸运的，因为它的名称与中文的“好运”发音相似。它传统上是用中国香肠或金华火腿、虾米、萝卜丝和米粉混合制成的。将混合物蒸熟后切片煎制，使其外皮酥脆，内里柔软蓬松。通常佐以辣椒XO酱蘸食，增加口感。一家点心店经常被吹捧为香港顶级点心餐厅之一，它在萝卜糕方面绝对不会令人失望。</p>
+<h2>4. 肠粉，或蒸米卷</h2>
+<p>照片：Bankoo/Shutterstock</p>
+<p>如果您想到的是春卷，那就错了。这种柔软的薄片是用糯米粉制成的，卷着馅料（通常是虾、猪肉或牛百叶），配以酱油食用。其中最好的变种之一是在虾的周围包裹着一层酥脆的内层，这为通常柔软的口感增添了额外的松脆感。不妨在点心点试试。</p>
+<h2>5. 叉烧包，或猪肉包</h2>
+<p>照片：momo2050/Shutterstock</p>
+<p>即使您从未听说过点心，您也很有可能听说过叉烧包，这是香港最著名的烹饪产品之一。叉烧是烤猪肉，其甜味馅料与包裹它的普通蒸熟的柔软白色包完美互补。香港最著名的叉烧包可在米其林星级添好运找到，它为这种标准街边小吃提供了一种烘烤版本，包子外皮酥脆，入口即化的甜糖皮。</p>
+<h2>6. 奶黄包</h2>
+<p>照片：Stripped Pixel/Shutterstock</p>
+<p>请抛弃您对块状英国蛋奶冻的任何想法，因为在香港的情况有些不同。这些蓬松的白包内橙色的熔化物是一种浓郁甜美的鸡蛋蛋奶冻，与西式蛋奶冻不同，因为它经常使用炼乳。 yum cha的特色熔化蛋奶冻包提供了一种有趣互动的用餐体验，但您可以在任何点心餐厅找到这些包子。</p>
+<h2>7. 鸡爪</h2>
+<p>照片：Stripped Pixel/Shutterstock</p>
+<p>虽然对许多西方人来说，这道菜并不那么诱人，但鸡爪是一种经典的点心，如果您以前从未尝试过，应该列入您的清单。它传统上是用黑豆酱焖制的，肉主要是有脂肪和类似皮肤的。如果烹调得好，它会很嫩、好吃，可以直接吮吸骨头上的肉。它们经常被称为凤凰爪，包括在鼎点1968，您可以在那里品尝这道独特的香港菜肴。</p>
+<h2>8. 小笼包</h2>
+<p>照片：TMON/Shutterstock</p>
+<p>这种上海小笼包并非传统的点心，但您经常会在菜单上找到它。这些蒸饺里装着汤汁，通常是猪肉馅，配姜醋食用。第一次咬的时候要小心，因为里面的汤汁通常很烫——看到食客先在上面戳一个小洞来降温是很常见的。鼎泰丰凭借其猪肉小笼包享誉国际，这些多汁的小笼包绝对值得一试（以及米其林星级）。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Dim-sum---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">🍜&nbsp;</span>Dim sum - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Dim_sum" target="_blank">(https://en.wikipedia.org/wiki/Dim_sum)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 本页概述了港式点心的种类及发展历史，有助于理解广式点心在饮食文化中的地位。<br></small>
+    </div>
+    <div class="page-content content"><h2>点心 (Dim Sum)</h2>
+<p>点心（传统中文：點心；简体中文：点心；拼音：diǎn xīn；Jyutping：dim2 sam1）是一种种类繁多的中式小吃，传统上在餐厅享用早午餐。[1][2]大多数现代点心菜肴通常与粤菜有关，尽管其他中国菜系中也存在点心菜肴。</p>
+<p>在十世纪，当广州开始经历商业旅行的增加时，[3]许多人光顾茶馆享用名为“饮茶”（早午餐）的小份餐点和茶。[4][3][5]“饮茶”包括两个相关的概念。[6]第一个是“一盅两件”，字面意思是“一杯两件”。这是指为茶馆顾客提供两件精致的食物（咸味或甜味）以搭配茶的习俗。第二个是点心，字面意思是“触动心弦”，这个词用来指代伴随茶的小吃。茶馆老板逐渐增加了各种名为点心的零食。饮茶的习俗最终发展成为现代的“饮茶”。[3]</p>
+<p>粤式点心文化在十九世纪后半叶的广州迅速发展。[7]粤式点心最初基于当地食物。[7]随着点心的不断发展，厨师们引入了中国其他地区的影响和传统。[7]粤式点心拥有非常广泛的风味、质地、烹饪风格和食材[7]，可以分为常规菜品、季节性菜品、每周特菜、宴会菜品、节日菜品、招牌菜品和方便携带的菜品，以及早餐或午餐食品和夜宵。[7]</p>
+<p>一些估计表明，中国总共有至少两千种点心，但在中国以外，通常只销售大约四五十种。[8][9]仅广东就有超过一千种点心菜肴，这是中国其他地区无法比拟的。事实上，大多数中国菜系的食谱往往将他们自己对点心菜肴的改良与其他当地小吃结合起来。但粤式点心并非如此，它已经发展成为一个独立的菜系分支。[10][7]</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Pineapple-Buns-(Bolo-Bao)---Omnivore's-Cookbook">
+        <h3 class="page-name title"><span class="page-emoji ">🍍&nbsp;</span>Pineapple Buns (Bolo Bao) - Omnivore's Cookbook</h3>
+        <small class="page-url url "><a href="https://omnivorescookbook.com/pineapple-buns/" target="_blank">(https://omnivorescookbook.com/pineapple-buns/)</a><br></small>
+        <small class="page-rating rating ">评分: 6.0<br></small>
+        <small class="page-annotation annotation ">注释: 介绍了菠萝包的制作方法，反映了港式点心的多样性和本地特色。<br></small>
+    </div>
+    <div class="page-content content"><p>菠萝包 (Bolo Bao)</p>
+<p>学习如何在自家厨房制作亚洲烘焙风格的菠萝包。这些面包松软蓬松，并带有额外酥脆、黄油味和甜味的外皮，完美裂开成菠萝状。包含详细的分步图片和视频，引导您了解每个细节。</p>
+<p>菠萝包，在中国称为菠萝包，是香港流行的甜点。它们内部松软蓬松。顶部则具有令人愉悦的酥脆质地。</p>
+<p>或许关于这些甜菠萝包最引人入胜的事情是它们里面没有任何菠萝。一点都没有！它们之所以被称为“菠萝包”，是因为它们开裂的外观有点像菠萝的外皮。</p>
+<p>我总觉得应该提醒大家这一点——如果你期待菠萝馅，你会失望的！但请注意，您可以将面包切成两半，然后塞入任何您喜欢的馅料。</p>
+<p>为什么选择这个食谱</p>
+<p>看起来，这似乎令人生畏，但不用担心！我的菠萝包食谱比您在其他地方找到的许多版本都更容易，并且完全捕捉并再现了从亚洲面包店新鲜烘焙并仍然温暖地品尝它们的体验。</p>
+<p>使用厨师机使揉捏过程变得非常简单。</p>
+<p>分步图片和视频指南将引导您完成整个过程。</p>
+<p>面包面团易于操作，可 tạo ra 松软蓬松的质地。</p>
+<p>重现自然开裂的酥脆黄油顶部。</p>
+<p>面包在冰箱里保存得很好。您可以提前制作并在稍后食用，质地将同样出色。</p>
+<p>按照我的食谱，您的菠萝包将会与您在香港繁华街头和面包店看到的正宗菠萝包一样美味。</p>
+<p>烹饪过程</p>
+<p>菠萝包由两部分组成：底部的面包面团和顶部的饼干面团。您需要一次完成一个。</p>
+<p>制作饼干面团——顶部</p>
+<p>我的食谱从顶部开始。我发现如果将面团冷藏在冰箱中（而不是在冰箱中），则更容易操作。从饼干面团开始可以确保您有足够的时间在切面团之前将其冷藏。</p>
+<p>混合融化的黄油、牛奶、蛋黄、香草精和糖。</p>
+<p>搅拌直至形成均匀顺滑的质地。</p>
+<p>加入干性材料</p>
+<p>搅拌直至所有材料混合均匀</p>
+<p>将其压成面团</p>
+<p>用保鲜膜包裹面团，然后将其滚成圆柱体。冷藏。</p>
+<p>制作面包面团</p>
+<p>将温牛奶、糖和酵母混合以激活酵母。</p>
+<p>将剩余的面团材料放入厨师机中，并揉成面团。</p>
+<p>加入黄油，然后在搅拌机中揉面团 14 分钟。</p>
+<p>完成后，松散地盖住面团，让它静置 1 小时。</p>
+<p>注意：</p>
+<p>当您用塑料盖住厨师机搅拌碗时，请务必留出一些小缝隙，以便有足够的氧气帮助面团休息。</p>
+<p>尝试在您的房间里找到一个温暖的地方来让面团休息。根据您的室温，达到所需的质地可能需要 15 分钟或多或少。</p>
+<p>塑造面团</p>
+<p>面团休息完毕后，其大小会加倍。</p>
+<p>轻轻地敲打面团以排出空气。</p>
+<p>将面团塑造成 16 个均匀的小块，然后将其滚成球形（有关更详细的说明，请参见下面的视频）。</p>
+<p>盖住面团球，再次让它们醒发 30 分钟。</p>
+<p>切顶部</p>
+<p>当您让成型面包卷休息时，顶部应完全冷却。</p>
+<p>切掉圆木的两端，并丢弃两端。在面团圆木上标记 15 个均匀间隔的标记，将其分成 16 个均匀的小块。</p>
+<p>切片顶部。</p>
+<p>将顶部在两张保鲜膜之间擀开，直到略微变平，足以覆盖发酵的面包。</p>
+<p>注意：顶部面团非常易碎（因此它会自然开裂并尝起来非常酥脆）。如果您发现擀得太难，您可以简单地用手指按压面团使其略微变平。在这种情况下，顶部会更厚，不会完全覆盖面团。但这不会影响烘焙后的味道。</p>
+<p>组装和烘烤</p>
+<p>面包面团发酵后，轻轻地将顶部圆盘放在每个面包上。</p>
+<p>在顶部刷上蛋液。让它稍微干燥，然后再次刷上蛋液。</p>
+<p>烘烤 15 到 17 分钟。</p>
+<p>注意：</p>
+<p>刷蛋液前将其冷藏有助于使其变稠，因此可以更好地覆盖面团。</p>
+<p>两次刷蛋液有助于形成更厚的层，使您获得亚洲面包店面包美丽的金色外观。</p>
+<p>食用和储存</p>
+<p>如何食用</p>
+<p>菠萝包一旦出炉并变热就可以食用了。</p>
+<p>传统上，菠萝包是温热的，中间夹着一块黄油。当面包很热时，黄油会融化，使面包尝起来更美味。</p>
+<p>您也可以在面包中加果酱。</p>
+<p>用以下材料制作美味的菠萝包：</p>
+<p>烧烤叉烧肉。我在香港吃过，我的天哪，太好吃了！</p>
+<p>我喜欢自己吃菠萝包，因为它们本身味道就很好！</p>
+<p>如何储存和再加热</p>
+<p>要储存，请将面包放在拉链袋中，并尽可能挤出尽可能多的空气。</p>
+<p>在室温下储存 2 到 3 天。</p>
+<p>在冰箱中储存长达 2 个月。</p>
+<p>附注：我不喜欢将面包储存在冰箱中，因为它会使面包变干。如果您计划长时间储存它们，冷冻法效果更好。</p>
+<p>再加热：</p>
+<p>将面包放入 350°F（176°C）的烤箱中，直到重新加热（无需解冻）。</p>
+<p>当我非常懒惰时，我会用微波炉加热面包直到加热。顶部不会那么酥脆，但面包仍然很好吃。</p>
+<p>后记</p>
+<p>菠萝包不是您想在工作日制作的东西，但您会在周末很乐意付出努力。您可能会发现它们是您周日早午餐的完美补充，或者是在周末结束时享用的美味甜点。您也可能会将它们用作零食。它们非常值得付出努力。</p>
+<p>更多美味的亚洲烘焙食谱</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Char-Siu-Bao-(Steamed-BBQ-Pork-Buns)-叉烧包---Omnivore's-Cookbook">
+        <h3 class="page-name title"><span class="page-emoji ">🥢&nbsp;</span>Char Siu Bao (Steamed BBQ Pork Buns) 叉烧包 - Omnivore's Cookbook</h3>
+        <small class="page-url url "><a href="https://omnivorescookbook.com/steamed-char-siu-bao/" target="_blank">(https://omnivorescookbook.com/steamed-char-siu-bao/)</a><br></small>
+        <small class="page-rating rating ">评分: 6.0<br></small>
+        <small class="page-annotation annotation ">注释: 本页提供了叉烧包的制作步骤，展示了常见点心的准备及制作技巧。<br></small>
+    </div>
+    <div class="page-content content"><h2>叉烧包 (Char Siu Bao) 蒸制叉烧包</h2>
+<p>学习制作正宗的叉烧包，如同点心店出品一般。包子拥有非常柔软、细腻蓬松的面包体和多汁鲜嫩的猪肉馅料。我的食谱包含详细的分步照片和视频，帮助你在自家厨房获得最佳效果。叉烧包是人人都爱的点心明星，你去点心店，不吃它就等于白去了！超级蓬松的面包包裹着鲜美多汁的叉烧肉，想想都令人垂涎欲滴。</p>
+<p>这些蒸制叉烧包的魅力在于其柔软蓬松的面包，表面光滑如丝。包子顶部裂开，露出内部美味，并散发出令人愉悦的香气。鲜嫩多汁的叉烧肉裹着甜味酱汁，与香喷喷的面包完美搭配。这是一个用剩菜（中式烧烤叉烧肉）制作比原菜肴更美味佳肴的好方法。</p>
+<h3>最新视频</h3>
+<p>通常，如此美味的食物需要大量的时间和精力。本食谱使用厨师机来揉面，因此对任何家庭厨师来说都非常容易上手。我也更喜欢自制版本，胜过那些通常用肥肉做的中式面包房版本。我用瘦肉来制作这些包子，减少了油腻感，但依然保留了所有的美味。</p>
+<h2>为什么选择这个食谱</h2>
+<ul>
+<li>面团表面光滑，质地细腻，蓬松，就像点心店里供应的一样。</li>
+<li>猪肉馅料非常多汁，如同正宗版本。</li>
+<li>食谱使用厨师机，最大限度地减少了手工操作时间。面团醒发后，可在不到一小时内准备好这些肉包。</li>
+<li>这些包子可以冷冻。你可以提前做好，在你的点心派对上给客人留下深刻印象。</li>
+<li>我提供了分步图片和视频，即使没有任何制作点心的经验，你也可以轻松按照食谱操作。</li>
+</ul>
+<h2>使用什么面粉</h2>
+<p>我们尝试了蛋糕粉和中式低筋面粉，发现低筋面粉的效果略好一些。</p>
+<h3>什么是低筋面粉</h3>
+<p>低筋面粉 (Di Jin Mian Fen) 是一种常用在亚洲点心、烘焙食品和甜点中的混合面粉。它由普通小麦粉和添加的小麦淀粉组成，以产生较低的筋度百分比，从而产生柔软的面团。</p>
+<p>请注意，低筋面粉不同于蛋糕粉，蛋糕粉通过不同的研磨过程来达到低筋度的效果。我检查了两种面粉的蛋白质含量，发现低筋面粉实际上比蛋糕粉的筋度略高，但仍然低于中筋面粉。</p>
+<h3>蛋糕粉与低筋面粉的比较</h3>
+<p>使用低筋面粉时，包子的表面更光滑，具有点心外观。面团的质地也更光滑一些。蛋糕粉做出的包子颜色更白（可能是因为面粉经过漂白），但表面略有不均匀。</p>
+<p>总之，如果你想要一个与正宗叉烧包相似的完美结果，你应该选择低筋面粉。如果你找不到低筋面粉，或者想省去去亚洲杂货店的麻烦，蛋糕粉也可以。</p>
+<h2>工作流程</h2>
+<h3>1. 准备面团 – 第一次醒发</h3>
+<ul>
+<li>用温水激活酵母</li>
+<li>在厨师机碗中混合干湿材料</li>
+<li>用刮刀搅拌几次</li>
+<li>让厨师机完成工作</li>
+<li>面团做好后应光滑</li>
+<li>将面团静置至体积增大三倍</li>
+</ul>
+<p>如果你不想使用厨师机，也可以用手揉面，尤其是有面包制作经验的情况下。你可能需要揉面更长时间才能达到理想效果。</p>
+<h3>2. 制作馅料</h3>
+<ul>
+<li>将酱汁混合物煮沸以融化糖。</li>
+<li>让酱汁冷却，然后加入玉米淀粉浆。注意：让酱汁先冷却非常重要。否则，热糖会煮熟玉米淀粉并结块。</li>
+<li>再次将酱汁煮至微沸以使其变稠。</li>
+<li>将酱汁与叉烧肉混合。</li>
+<li>你可以使用我叉烧肉食谱中剩余的叉烧肉，或者可以从粤菜馆购买一些叉烧肉。如果这两种方法都不适合你，尝试使用杂货店熟食店的不太浓味的烤肉。这个食谱的叉烧酱味道非常浓郁，所以你仍然可以用普通的烤肉做出非常美味的肉包。</li>
+</ul>
+<h3>3. 擀面团</h3>
+<ul>
+<li>面团醒发后即可使用。你需要将空气排出，并将面团分成 16 块。</li>
+<li>制作肉包面皮时，用擀面杖将面团擀成圆形薄片，中间厚，边缘薄。因为稍后我们会折叠包子，这个过程会使包子顶部变厚。保持面团中间较厚，成品的厚度就会均匀。</li>
+<li>注意：我强烈建议分批处理面团。分割面团后，将剩余的面团放在保鲜膜或几层湿润的纸巾下，以覆盖面团并防止其变干。</li>
+<li>包好包子后，用同样的方法防止包子在第二次醒发时变干。</li>
+</ul>
+<h3>4. 如何包叉烧包</h3>
+<ul>
+<li>
+<p>如果你在点心店吃过叉烧包，你会注意到包子是裂开的，你可以透过裂缝看到多汁的猪肉。为了达到裂开的效果，你需要一个两步的过程：</p>
+</li>
+<li>
+<p>第一步折叠</p>
+<ul>
+<li>将面团的两侧捏在一起</li>
+<li>折叠第三侧</li>
+<li>将边缘压在一起</li>
+<li>折叠第四侧</li>
+<li>将其余边缘捏紧以密封包子</li>
+<li>现在包子是方形的，上面有一个十字</li>
+</ul>
+</li>
+<li>第二步折叠<ul>
+<li>收集包子的两个尖端</li>
+<li>将它们折叠并压实，使包子保持在一起，但不要太紧（为了产生裂缝效果）</li>
+<li>以同样的方式处理其余两个点</li>
+<li>现在它形成了一个圆形包子，蒸熟后会裂开并“微笑”</li>
+</ul>
+</li>
+</ul>
+<h3>5. 第二次醒发和蒸制</h3>
+<ul>
+<li>包好后，需要让包子再醒发 20 到 30 分钟才能蒸。</li>
+<li>由于很难找到一个巨大的蒸笼来同时蒸所有包子，最好的做法是分批包好和蒸制包子。包好 3 到 4 个包子后，启动计时器并开始蒸制。当计时器达到 20 分钟时，第一批包子就可以蒸熟了。然后你可以继续制作其余的包子，并以同样的方式蒸制它们。</li>
+</ul>
+<h2>上菜和储存</h2>
+<p>这些叉烧包刚蒸好，趁热吃最好。蒸熟后，它们可以保持相当长时间的热度，以防你同时准备多道菜。叉烧包通常作为开胃菜或多道菜的一部分。我也喜欢把剩下的包子热一下当午餐和晚餐。</p>
+<p>你可以将剩下的包子冷藏 3 天，或冷冻一个月。它们保存得很好，加热后味道也很好。不过我怀疑你不需要保存那么久，因为它们会在眨眼间消失！</p>
+<h2>更多美味点心食谱</h2>
+<ul>
+<li>叉烧 (中式烧烤猪肉)</li>
+<li>如何制作中国蛋卷</li>
+<li>云吞汤</li>
+<li>正宗中国葱油饼</li>
+<li>黑豆酱蒸排骨</li>
+<li>中国蒸蛋包子 (奶黄包)</li>
+</ul>
+<p>如果你尝试了这个食谱，请告诉我们！留下评论，评价它（你尝试过之后），拍张照片并标记@omnivorescookbook在 Instagram 上！我很想看看你的作品。</p>
+<h2>叉烧包 (Char Siu Bao) 蒸制叉烧包</h2>
+<h3>食材</h3>
+<h4>面团</h4>
+<ul>
+<li>125 克（1/2 杯）温水</li>
+<li>7 克（1 包 / 2 茶匙）活性干酵母</li>
+<li>60 克（4 汤匙）糖</li>
+<li>250 克（1 2/3 杯）低筋面粉（或蛋糕粉）</li>
+<li>7 克（2 茶匙）泡打粉</li>
+<li>7 克（1 1/2 茶匙）起酥油</li>
+</ul>
+<h4>馅料</h4>
+<ul>
+<li>1/4 杯低钠鸡汤</li>
+<li>2 汤匙海鲜酱</li>
+<li>2 汤匙蚝油</li>
+<li>2 汤匙绍兴酒（或干雪利酒）</li>
+<li>1 汤匙糖</li>
+<li>1 瓣蒜，磨碎</li>
+<li>1/8 茶匙五香粉</li>
+<li>1 1/2 汤匙玉米淀粉</li>
+<li>1 1/2 杯叉烧肉（中式烧烤猪肉），切碎（*脚注 1）</li>
+</ul>
+<h3>指引</h3>
+<h4>准备面团</h4>
+<ul>
+<li>将水倒入一个小碗中，在微波炉中加热约 30 秒至约 100-110°F（38°C）。水应该温热，略高于体温。加入糖和活性干酵母，搅拌均匀。静置 5 分钟，让酵母活化。</li>
+<li>在酵母活化期间，将蛋糕粉和泡打粉加入你的搅拌机碗中。</li>
+<li>酵母活化后，你应该会在混合物表面看到气泡。将其倒入搅拌机碗中。用刮刀搅拌几次，直到液体被干性材料完全吸收。</li>
+<li>将面钩安装在你的搅拌机上。以低速开始，然后逐渐增加到 10 档中的 6 档。揉捏 10 分钟，直到面团非常光滑。中途停止搅拌机，将面团从碗边刮下。</li>
+<li>加入起酥油。以 6 档揉捏另外 5 分钟。面团应该柔软、光滑，并且可以轻松地从碗中取出，而不会粘在手上。</li>
+<li>用黄油或油喷雾轻轻涂抹一个大碗。将面团转移到碗中。用保鲜膜盖住碗，放在房间温暖的地方静置，直到体积增大三倍，约 2 小时。</li>
+</ul>
+<h4>准备叉烧馅料</h4>
+<ul>
+<li>在一个小平底锅中混合鸡汤、海鲜酱、蚝油、绍兴酒、糖、大蒜和五香粉。用中火煮沸。转小火慢炖 1 分钟。偶尔搅拌，直到所有东西混合均匀。完成后，将锅从炉子上拿下来，让酱汁冷却 3 到 5 分钟。</li>
+<li>在酱汁冷却的同时，在一个小碗中加入玉米淀粉和 1 汤匙水。搅拌混合，直到玉米淀粉完全溶解。将玉米淀粉倒入酱汁中。搅拌均匀。重新开火，调至中小火。将酱汁煮至微微沸腾，并不断搅拌，直到变稠。你应该能够轻松地在锅底画线。</li>
+<li>将酱汁转移到一个中等大小的碗中。加入叉烧肉。搅拌均匀。</li>
+</ul>
+<h4>组装和烹饪</h4>
+<ul>
+<li>切一些烘焙纸成 3 英寸（7 厘米）见方的正方形来盛放包子。你需要 16 个正方形。</li>
+<li>将面团中的空气排出。将其转移到轻微涂油的工作表面上。揉捏几次，使面团成圆球形。将面团分成 16 个均匀的小块，方法是将其切成 2 条均匀的条，然后将每条再切成 8 个小块。每块面团重约 27 克。用你的手将面团揉成面团球。</li>
+<li>一次包一个包子。用你的手掌压平一个面团球。用擀面杖将面团擀成一个中间厚、边缘薄的圆形薄片，直径约 2.5 到 3 英寸（6 到 7 厘米）。小心地将其从表面取下，放在你的手掌上。</li>
+<li>将约一大汤匙叉烧肉混合物放在面皮的中心。将包子包好，方法是将面团的两端捏在一起，然后将另外两端捏在一起。将面团边缘压在一起，使其形成一个上面有十字的方形包子。将相对的两端捏在一起，然后重复剩余的两端。现在包子就成圆形了。查看我上面的博客文章以查看分步包装图片。</li>
+<li>完成后，将叉烧包子放在一个切好的烘焙纸正方形上，褶皱面朝下，然后放在盘子上。用保鲜膜松散地盖住它，以防止其变干。重复此过程包好其余的包子。</li>
+<li>包好第一个包子后，设置一个秒表（或计时器），以跟踪醒发时间。你需要让包子醒发 20 到 30 分钟才能蒸。</li>
+</ul>
+<h4>蒸制</h4>
+<ul>
+<li>根据蒸笼的大小，你可能需要分批蒸包子。我通常的做法是在包好一半包子后准备蒸笼，这样在我制作其余包子时，一些包子就可以蒸了。</li>
+<li>准备蒸笼时，在锅中加入约 3 英寸（7 厘米）的水，用中大火加热，直到水沸腾。将醒发好的包子放在蒸笼架上，包子之间至少留 2 英寸（5 厘米）的距离，因为包子在烹饪时会膨胀很多。</li>
+<li>盖上盖子，蒸 10 分钟。完成后，取出蒸笼架，放在三脚架上。小心地打开蒸笼架。让蒸汽散出来，然后将包子转移到盛菜盘上。让包子冷却 5 分钟再食用。</li>
+<li>使用同样的方法蒸制其余的包子。</li>
+</ul>
+<h4>上菜和储存</h4>
+<ul>
+<li>叉烧包热着或温着吃最好。如果你提前做好了，你可以在微波炉或蒸笼中加热它们。</li>
+<li>包子完全冷却后，将它们放在密封容器中冷藏最多 3 天。</li>
+<li>你可以将煮熟的包子冷冻最多一个月。要烹制冷冻包子，请将其在冰箱中完全解冻。然后在微波炉或蒸笼中加热，直到加热透。</li>
+</ul>
+<h3>附注</h3></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Authentic-Recipes:-Dim-Sum-in-Hong-Kong---In-the-Know-Traveler">
+        <h3 class="page-name title"><span class="page-emoji ">🥟&nbsp;</span>Authentic Recipes: Dim Sum in Hong Kong - In the Know Traveler</h3>
+        <small class="page-url url "><a href="https://intheknowtraveler.com/authentic-recipes-dim-sum-in-hong-kong/" target="_blank">(https://intheknowtraveler.com/authentic-recipes-dim-sum-in-hong-kong/)</a><br></small>
+        <small class="page-rating rating ">评分: 5.0<br></small>
+        <small class="page-annotation annotation ">注释: 本页介绍了饺子的制作过程，突显了港式早茶的风味与家庭传统。<br></small>
+    </div>
+    <div class="page-content content"><h3>韭菜饺子</h3>
+<p>1磅切碎的虾肉
+1杯切碎的韭菜
+1/2杯切碎的香菇
+1汤匙芝麻油
+1/4茶匙盐
+1茶匙鸡粉
+1汤匙糖</p>
+<p>混合所有材料，冷藏四个小时。</p>
+<h3>虾饺子</h3>
+<p>6盎司切碎的虾肉
+3汤匙切碎的竹笋
+1/4茶匙盐
+1茶匙鸡粉
+1/4茶匙糖
+1/4茶匙芝麻油</p>
+<p>混合所有馅料材料，冷藏四个小时。</p>
+<h3>点心皮</h3>
+<p>（也可以购买现成的饺子皮）</p>
+<p>2杯小麦粉
+3汤匙玉米淀粉
+1 3/4杯开水（虾饺子）
+或1 3/4杯韭菜水（韭菜饺子）。制作韭菜水：将3盎司切碎的韭菜放入两杯水中煮沸至变绿，然后过滤，代替普通水。如果需要，可以添加食用色素。</p>
+<p>混合所有材料，根据需要调整至形成面团。揉成小球，擀薄，放入馅料，捏成虾饺子的钱包形状，或韭菜饺子的任意形状，蒸4分钟。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="The-Disappearing-Art-and-Rhythm-of-Chinese-Tea-in-Hong-Kong---Brad-A.-Johnson">
+        <h3 class="page-name title"><span class="page-emoji ">☕&nbsp;</span>The Disappearing Art and Rhythm of Chinese Tea in Hong Kong - Brad A. Johnson</h3>
+        <small class="page-url url "><a href="https://bradajohnson.net/2020/04/27/the-art-and-rhythm-of-chinese-tea/" target="_blank">(https://bradajohnson.net/2020/04/27/the-art-and-rhythm-of-chinese-tea/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 本页描述了现代饮茶文化的演变，讲述了年轻消费者对传统茶文化的影响。<br></small>
+    </div>
+    <div class="page-content content"><h2>品茶</h2>
+<p>“饮茶”，她说，这是一个口语词，大致翻译为“请喝茶”。我一口喝光了茶，杯子太小了。我的老师摇摇手指，扬起眉毛，但什么也没说。她重复了这个过程，又给我们续上了茶。“三口”，她说。这次我仔细观察了她三口喝完一杯茶的过程。我还注意到，她好像在品尝 fine wine 一样，在嘴里轻轻地搅拌茶水。我模仿她的动作，第一次真正品尝到了茶的味道。我把空杯子放在桌子上。她笑了，我意识到这是我第一次看到她笑。“很好，”她说。</p>
+<p>不知不觉，一个小时过去了，我们还在细细品味温热的（不是热的）茶，每次三口。每轮冲泡的时间都比上一轮长几秒钟。现在我们俩的腿上都沾了饼干屑，尽管我们没有说过多少话，但我已经学会了在喝完茶后，用右手的前两个手指轻轻地敲击桌子，这是一个表示感谢和尊重服务员的细微手势。</p>
+<p>这几乎像冥想一样，茶道有一种神秘的品质，只有通过练习和时间才能更清晰地理解。我了解到，经验丰富的主人只用左手来处理茶壶，只用右手喝茶，双手同步但独立工作，用精确的量为几十个杯子斟茶，从不浪费一滴。茶是靠闻而不是靠时间来冲泡的，每个杯子里的茶都应该有完全相同的颜色。茶的香气弥漫在空气中时，你就知道茶好了，这在开始的时候几乎是瞬间发生的，到后来则需要一分钟或更长时间。茶叶绝不能像大多数餐馆那样无限期地浸泡。“那不是好茶，”她谈到这种普遍做法时说道。</p>
+<p>我离开了茶馆，带走了比我所能喝的还要多的乌龙茶和茉莉花茶。然而，几年后当我回到香港时，我又开始想念它了。我沿着荷李活道漫步，寻找我第一次学习欣赏茶的地方。但它已经消失了，取而代之为一座办公大楼。</p>
+<p>香港大部分传统的茶馆都消失了。同样，中国茶艺也逐渐淡出了历史。以前的方式泡茶，其实从来都不是为了喝茶。而是为了慢下来。是为了在一起。是出于善意。是友谊。以及更新。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Hong-Kong-tea-culture---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">🏮&nbsp;</span>Hong Kong tea culture - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Hong_Kong_tea_culture" target="_blank">(https://en.wikipedia.org/wiki/Hong_Kong_tea_culture)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 本页讨论了香港的茶楼历史与文化，反映饮茶传统的演变过程及对社会的影响。<br></small>
+    </div>
+    <div class="page-content content"><p>香港居民的饮茶习惯源于中国茶文化，主要是粤式传统，例如饮茶。由于香港曾是英国殖民地，香港茶文化与大陆茶文化有所不同。其茶文化的独特性体现在茶本身，也体现在潜在的社会和文化价值观上。[1][有争议——讨论]</p>
+<h3>香港茶楼历史</h3>
+<p>香港第一家茶楼成立于19世纪末。当时人们从茶楼购买茶叶，以便招待来访的客人。茶会在一天开始时冲泡，并在当天客人到达时供应。晚上，剩余的茶会被倒掉。无论访客是否真的到来，他们都会这样做。这就产生了“茶是用来倒掉的”这个成语。</p>
+<p>在当代社会，香港人购买茶叶不仅是为了招待客人，也是为了自己。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="IN-DEPTH-Guide-to-8-Must-Visit-Tea-Houses-in-Hong-Kong">
+        <h3 class="page-name title"><span class="page-emoji ">🍽&nbsp;</span>IN-DEPTH Guide to 8 Must-Visit Tea Houses in Hong Kong</h3>
+        <small class="page-url url "><a href="https://www.happyhongkonger.com/best-tea-houses-in-hong-kong/" target="_blank">(https://www.happyhongkonger.com/best-tea-houses-in-hong-kong/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 本页推荐了几家受欢迎的茶楼及其特色点心，提供消费者选择的依据。<br></small>
+    </div>
+    <div class="page-content content"><h2>绿宇茶室</h2>
+<p>这家三层楼高的石头结构茶室以其传统制作的点心、糖醋排骨和其他经典中式菜肴而闻名。当然，所有这些菜肴都最好搭配餐厅招牌的普洱茶。</p>
+<p>这里白天提供的茶大多是香港人的最爱，例如来自中国云南的陈年和新鲜普洱茶叶。</p>
+<p>这些茶以其泥土般细微却持久回甘的苦味而闻名，因此非常适合搭配绿宇茶室提供的油腻可口的点心和叉烧包。</p>
+<h2>絡茶軒 (LockCha Tea House)</h2>
+<p>此外，絡茶軒是一家提供全套服务的素食餐厅，供应素食点心。煎锅蘑菇包和蒸松露烧卖是必尝的茶点。</p>
+<p>除此之外，絡茶軒还在工作日提供私人茶艺课程——您可以在他们的网站上报名！</p>
+<h2>明茶房 (MingCha Tea House)</h2>
+<p>网站：https://www.mingcha.com/#/
+地址：香港柴湾利众街40号，富都工厂大厦B座15楼B2
+营业时间：周一至周五 – 上午10点至下午7点，周六至周日 – 关闭
+联系方式：+852 2520 2118
+畅销品：茉莉花茶、乌龙茶、绿茶、日本茶</p>
+<p>无论您是资深茶客，还是只是想体验正宗的中国茶道和茶艺，明茶房都是一个绝佳的选择。它位于柴湾的一座厂房内，因此茶室相当隐蔽。</p>
+<p>这里使用的茶叶直接来自中国传统茶园。除此之外，明茶房还展示了一系列高级茶叶，例如茉莉花茶、白牡丹、铁观音至尊等等，因此许多茶迷经常光顾这里。</p>
+<h2>Basao 茶室 (湾仔)</h2>
+<p>网站：https://basaotea.com/
+地址：香港湾仔摩利臣街17号
+营业时间：周一至周日 – 上午10点至下午7点
+联系方式：+852 2952 3313
+畅销品：海边蜜香乌龙茶、武夷大红袍、抹茶拿铁、白牡丹茶</p>
+<p>Basao 茶室于2018年在湾仔向茶叶爱好者开放。它位于摩利臣街的餐馆之中，因此很容易找到。</p>
+<p>这个地方是刚开始探索茶世界的人的首选之地。菜单甚至提供风味简介和颜色指示，因此您可以轻松选择要订购的茶类型。</p>
+<p>Basao 的乌龙茶和白牡丹茶最适合搭配其甜点，例如茶味卷蛋糕和冰淇淋。在炎热的日子里，不妨尝试一些水果茶冷泡和水果冰茶吉托特饮。</p>
+<p>除此之外，他们还提供工作坊，您可以学习更多关于传统冲泡日本抹茶和中国工夫茶道的知识。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="The-best-dim-sum-in-Hong-Kong-–-Time-Out-Hong-Kong">
+        <h3 class="page-name title"><span class="page-emoji ">🍤&nbsp;</span>The best dim sum in Hong Kong – Time Out Hong Kong</h3>
+        <small class="page-url url "><a href="https://www.timeout.com/hong-kong/restaurants/hong-kong-best-dim-sum" target="_blank">(https://www.timeout.com/hong-kong/restaurants/hong-kong-best-dim-sum)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 本页列举了香港最佳的点心餐厅，附带了部分招牌点心的介绍。<br></small>
+    </div>
+    <div class="page-content content"><h2>香港最佳点心</h2>
+<h3>春月 (Spring Moon)</h3>
+<p><strong>中菜，尖沙咀，价格：4/4</strong></p>
+<p>自1986年开业以来，半岛酒店的春月一直提供香港最好的粤菜。这里您可以品尝到菜单上的顶级点心，例如竹笋蒸虾饺、烤叉烧酥，以及用餐厅特制XO酱拌制的香菇萝卜糕及各式腊味。搭配春月专家茶艺师准备的大量优质中国茶，您将获得难忘的点心体验。</p>
+<h3>添好运点心专门店 (The Kitin)</h3>
+<p><strong>中菜，西九龙</strong></p>
+<p>添好运专门提供高端创意粤菜，融合东西方烹饪技法。由在日本、法国和意大利磨练厨艺的韦恩主厨掌舵，添好运的烹饪团队使用各种异域食材，创造出他们对粤菜的独特诠释。食客可以享用令人惊叹的菜肴，例如配有金黄XO酱的牛角包、精心制作成鲤鱼形状的鸡汤龙虾饺，以及顶部饰以24K金箔的烤日本雪蟹壳。</p>
+<h3>东方阁 (House of Orient)</h3>
+<p><strong>中菜，中环</strong></p>
+<p>由一位拥有40多年经验的点心厨师掌舵，东方阁提供一些如今难得一见的怀旧点心，例如“凤眼”饺子和咸蛋蒸千层糕——这两样都需要熟练的技艺才能制作。这家茶室的灵感来自英国下午茶文化，提供结合甜味和咸味美食的点心套餐——例如虾多士、咖喱春卷、红枣糕、桂花布丁等等。</p>
+<h3>香港1983 (Hong Kong Cuisine 1983)</h3>
+<p><strong>中菜，跑马地</strong></p>
+<p>香港1983餐厅呈现正宗的香港当地菜肴的滋味和风味。凭借在高级餐厅工作的数十年经验以及无限的创造力，行政总厨李思力及其团队提供优质且摆盘精美的点心和其他粤菜。香港1983点心菜单上的亮点包括：用鱼子酱和芹菜馅的精致雕刻的天鹅形萝卜酥皮、上海猪肉汤包，以及包裹在酥皮中的芝士牛肉馅饼。</p>
+<h3>采龙餐厅 (Choi Lung Restaurant)</h3>
+<p><strong>中菜，荃湾</strong></p>
+<h3>林苑茶室 (Lin Heung Tea House)</h3>
+<p><strong>中环</strong></p>
+<p>林苑茶室（香港人称之为林兴楼）是香港最古老的传统粤菜餐厅之一，白天只供应点心，晚上供应正餐。顾客可以从林苑的老式点心车上挑选点心，例如猪肝烧卖、蒸萝卜糕和其他经典美食。</p>
+<h3>金叶 (Golden Leaf)</h3>
+<p><strong>金钟</strong></p>
+<p>由拥有30多年经验的行政总厨万志强掌舵，金叶是一家屡获殊荣的餐厅，提供奢华的粤菜和点心。午餐时来餐厅享用经典点心的经典菜肴，例如饰以金箔的虾饺、鲍鱼蒸猪肉饺或美味的小蛋挞。</p>
+<h3>御苑 (The Legacy House)</h3>
+<p><strong>中菜，尖沙咀</strong></p>
+<p>前往香港瑰丽酒店内的御苑，在享用精致粤菜的同时，欣赏维多利亚码头的壮丽景色。中国行政总厨李的精心策划的点心菜单在经典菜肴的基础上融入了现代元素，例如海参和松茸烧卖、炸芋泥鸭，以及配虾和猪肉的至尊汤鱼饺。用传统的中国甜点，如黑芝麻卷和白糖布丁，结束您的点心盛宴。</p>
+<h3>点点心 (Dim Dim Sum) (旺角)</h3>
+<p><strong>中菜，旺角</strong></p>
+<p>旺角是香港享用美食的最佳地点之一，因此，这个街区有一些符合要求的点心餐厅也就不足为奇了。我们在这个区域最喜欢的餐厅之一是点点心，这是一家宽敞的场所，供应无穷无尽的竹篮盛装的美味佳肴，例如米粉卷、芥末味炸饺子以及他们分量十足的小笼包。除了经典点心外，还值得一试的是搭配四川麻辣酱的酿茄子。</p>
+<h3>逸仙饭店 (Yixin Restaurant)</h3>
+<p><strong>湾仔</strong></p>
+<p>逸仙饭店自20世纪50年代以来一直是点心名店。这家家庭经营的餐厅几十年来一直保持着其卓越的食品和服务质量，主要供应怀旧粤菜。这些正宗的菜谱自餐厅开业以来就一直沿用至今，凭借其高标准的服务，既能满足老顾客的需求，也能吸引新顾客。一些特色菜包括：上汤小笼包、瑶柱菜心猪肉饺、煎酿豆腐和XO酱米粉卷。</p>
+<h3>都爹利 (Duddell’s)</h3>
+<p><strong>中菜，中环，价格：4/4</strong></p>
+<p>都爹利热爱艺术。都爹利也热爱美食。当这两种热情结合在一起时，您将获得丰盛而略带艺术感的点心。作为价格较高的粤菜，这里的点心堪称一流。您可以找到对经典菜肴的现代诠释，例如鲍鱼鸡丁酥、松露炸素肉饺子、石斑鱼虾仁辣虫草菇饺子，当然还有叉烧包、春卷等主食——所有这些都色香味俱全。</p>
+<h3>点心图书馆 (Dim Sum Library)</h3>
+<p><strong>中菜，金钟，价格：3/4</strong></p>
+<p>点心图书馆为传统的点心增添了新的风味，它一直在重新诠释享受这种经典当地美食的现代方式。采用大胆的诠释，传统的点心以一种令人耳目一新的方式呈现，融合了稀有食材、西方风味和新颖的技法。值得尝试的现代点心包括：玫瑰黑松露虾饺、黑蒜烧卖、麻辣小笼包、黑胡椒和牛酥以及北海道帝王蟹和海胆春卷。</p>
+<h3>Above &amp; Beyond</h3>
+<p><strong>中菜，尖沙咀东</strong></p>
+<p>如果菜肴达不到同样的令人眩晕的高度，那么一家餐厅夸耀其绝佳的摩天高景观就没有意义了，而 ICON 酒店的 Above &amp; Beyond 并没有令人失望。这里的点心水平一流。我们认为您应该在午餐时间将选择权交给厨师，并享用龙虾配鱼子酱蒸饺、松露酱炸虾酱卷和野生菌烤蟹肉馅饼等美味佳肴。多年来，这家餐厅屡获殊荣并非没有道理。</p>
+<h3>福禄寿 (Foxglove)</h3>
+<p><strong>中环</strong></p>
+<p>福禄寿除了是一家提供创意鸡尾酒和现场音乐的地下酒吧外，还提供一份受该机构虚构创始人——英国绅士和冒险家弗兰克·明扎启发的点心菜单。您可以期待具有创新元素的经典点心，例如马苏里拉虾仁春卷、龙虾和猪肉烧卖以及麻辣小笼包。</p>
+<h3>天龙轩 (Tin Lung Heen)</h3>
+<p><strong>中菜，西九龙</strong></p>
+<p>云端上的美味点心。这就是您在这家位于九龙环球贸易广场102层的米其林二星级餐厅所能获得的体验。欢迎来到这座城市最高的中国餐厅，由名厨保罗·刘掌勺，他在这里创作出令人难以置信的点心，如XO辣椒酱煎萝卜糕、带扇贝和鱼子的鲜虾猪肉饺以及中东吉浜鲍鱼酥。</p>
+<h3>润 (Rùn)</h3>
+<p><strong>湾仔</strong></p>
+<p>香港瑞吉酒店内的这家中国餐厅为这家优雅的酒店增光添彩，并提供同样优雅的点心。润由洪志光大厨掌舵，在最新的指南中荣获米其林一星，这并非没有道理。他对经典菜肴的创新手法已成为备受欢迎的菜肴，其中包括做得非常出色的叉烧和牛酥。</p>
+<h3>天宝阁 (Celestial Court)</h3>
+<p><strong>中菜，尖沙咀</strong></p>
+<p>这家喜来登酒店的粤菜餐厅的点心具有传统特色，几乎所有的点心都近乎完美，包括叉烧包、炸素春卷和海胆炸虾春卷。点心字面意思是“触动你的心”，这家尖沙咀餐厅的菜肴确实做到了这一点。</p>
+<h3>新兴食家 (Sun Hing Restaurant)</h3>
+<p><strong>中菜，坚尼地城</strong></p>
+<p>对于不仅美味而且易于获得的管饱点心，新兴食家是您的最佳选择。这家不起眼的小点心店是夜猫子的理想去处；在正常情况下，他们凌晨3点开门。与大多数餐厅不同，顾客不能随意点菜。这里的点心是新鲜出炉的，食物准备好后，服务员会挨桌询问是否有顾客需要。剩下的点心则堆放在一张旁边的桌子上，顾客稍后可以回去取用。这真的是香港最地道的地方了。</p>
+<h3>新同乐 (Sun Tung Lok)</h3>
+<p><strong>中菜，尖沙咀</strong></p>
+<p>新同乐在米其林指南中获得了一星，它由袁氏家族于近50年前创立，自2011年以来一直因其卓越的品质而获得米其林的认可。不容错过的季节性点心包括：带毛蟹肉和蛋黄的蒸猪肉饺以及煎韭菜牡蛎虾蛋米粉卷。</p>
+<h3>添好运 (Tim Ho Wan)</h3>
+<p><strong>北角</strong></p>
+<p>自从这家街坊点心店获得米其林必比登推介后，每天都开始排起长队，焦虑的人们都在等待品尝这座城市一些最好的点心。这家餐厅专门供应香港传统的饺子，而且价格低廉，这绝对是双赢的局面。点心并不算特别有创意，但它始终如一，任何时候都能满足您的需求。</p>
+<h3>誉茶 (Yum Cha)</h3>
+<p><strong>中环，价格：2/4</strong></p>
+<p>誉茶以其美味的包子和饺子而闻名，它还拥有优质的食材，并以可爱的造型供应其点心。如果您想在轻松的氛围中享用中国经典菜肴，那么这里就是您的最佳选择。不要错过那些做成小猪和胖脸形状的小包子。真的太可爱了。我们推荐叉烧猪肉包、热奶油包子和苹果蛋挞。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Dim-Sum:-How-Nutritious-Is-It?---MyHealth-Beijing">
+        <h3 class="page-name title"><span class="page-emoji ">🏥&nbsp;</span>Dim Sum: How Nutritious Is It? - MyHealth Beijing</h3>
+        <small class="page-url url "><a href="https://www.myhealthbeijing.com/resources/womens-health/dim-sum-how-nutritious-is-it/" target="_blank">(https://www.myhealthbeijing.com/resources/womens-health/dim-sum-how-nutritious-is-it/)</a><br></small>
+        <small class="page-rating rating ">评分: 9.5<br></small>
+        <small class="page-annotation annotation ">注释: 本页着眼于健康影响与营养成分，提供了对点心饮食的警示和建议。<br></small>
+    </div>
+    <div class="page-content content"><h2>中国点心营养分析及建议</h2>
+<p>研究结果表明，部分中国点心的总脂肪、饱和脂肪和钠含量较高，而钙和膳食纤维含量普遍较低。</p>
+<p>在中餐厅享用点心时，可以通过仔细挑选食物来实现均衡饮食。</p>
+<p>建议公众选择总脂肪含量低、富含复合碳水化合物的中国点心作为主食；每人食用约半盘煮熟的蔬菜（最好不加酱汁）；适量食用清蒸咸味点心；少吃煎炸点心，避免食用汤面和汤饭的汤汁。</p>
+<p>此外，建议中餐厅顾客在一天剩余时间里食用一到两份低脂/脱脂乳制品，以确保足够的钙摄入量。</p>
+<p>建议食品行业调整中国点心的配方，降低食物中的总脂肪、饱和脂肪和钠含量，并在菜单中提供更多富含膳食纤维和钙的食物。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="The-Health-Benefits-of-Eating-Dim-Sum:-A-Nutritious-Guide-to-Traditional-Chinese-Fare">
+        <h3 class="page-name title"><span class="page-emoji ">🍽&nbsp;</span>The Health Benefits of Eating Dim Sum: A Nutritious Guide to Traditional Chinese Fare</h3>
+        <small class="page-url url "><a href="https://www.pearlonthepoint.com.au/post/the-health-benefits-of-eating-dim-sum-a-nutritious-guide-to-traditional-chinese-fare" target="_blank">(https://www.pearlonthepoint.com.au/post/the-health-benefits-of-eating-dim-sum-a-nutritious-guide-to-traditional-chinese-fare)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 本页比较了蒸点与炸点在健康层面的差异，倡导合理选择点心。<br></small>
+    </div>
+    <div class="page-content content"><h2>广式早茶的营养价值</h2>
+<p>点心通常由肉类、海鲜、蔬菜，有时还有水果混合而成，做法包括蒸、煎或烤。其中，蒸制尤其有助于保留食物的营养成分，因此蒸点心比油炸点心更健康。</p>
+<h3>蒸点心：</h3>
+<p>虾饺和烧麦等菜肴不仅富含蛋白质，而且卡路里含量低。蒸制确保营养成分（特别是来自海鲜和蔬菜的营养成分）得以保留，提供必需的维生素和矿物质。</p>
+<h3>素菜点心：</h3>
+<p>蒸蔬菜包和豆腐菜肴等提供纤维、维生素A和C以及铁，所有这些对维持健康至关重要。</p>
+<h3>肉类和海鲜点心：</h3>
+<p>这些食物提供高质量的蛋白质，对肌肉修复和身体机能至关重要。许多点心还含有有益的欧米伽-3脂肪酸，特别是那些用鱼制成的点心。</p>
+<h2>点心常用食材的健康益处</h2>
+<p>许多点心中常见的食材都具有独特的健康益处：</p>
+<p>生姜：常用于点心的调味，生姜以其消炎特性和助消化能力而闻名。</p>
+<p>大蒜：用于许多腌料和馅料，大蒜可以增强免疫系统并降低血压。</p>
+<p>竹笋：在各种饺子中很常见，竹笋富含膳食纤维，有助于消化和延长饱腹感，有助于体重管理。</p>
+<h2>蒸点心与煎炸点心的健康比较</h2>
+<p>虽然点心可以以各种方式烹制，但烹饪方法会显著影响其健康程度：</p>
+<p>蒸点心：通过蒸制，食物保留了大部分营养成分，并且需要的油较少，因此卡路里和脂肪含量较低。这种方法突出了食材的天然风味，无需过多的调味料或脂肪。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Lovers-of-dim-sum-beware">
+        <h3 class="page-name title"><span class="page-emoji ">🧘&nbsp;</span>Lovers of dim sum beware</h3>
+        <small class="page-url url "><a href="https://www.nbcnews.com/id/wbna7488178" target="_blank">(https://www.nbcnews.com/id/wbna7488178)</a><br></small>
+        <small class="page-rating rating ">评分: 9.5<br></small>
+        <small class="page-annotation annotation ">注释: 本页总结了有关食用港式点心的一些健康建议，对饮食有指导意义。<br></small>
+    </div>
+    <div class="page-content content"><h2>香港研究：点心高脂高钠，过量食用增肥风险</h2>
+<p>一项香港研究发现，美味的点心脂肪和钠含量高，过量食用会增加肥胖风险。“你绝对不能每天都吃点心，因为这样不可能获得均衡的饮食，”领导这项研究的政府食物及环境卫生署顾问何玉燕表示。</p>
+<p>何玉燕周三告诉记者，这项关于中国烹饪美味佳肴（其历史可追溯到宋代（960-1279））的研究是世界上首例。</p>
+<p>研究人员分析了75种受欢迎的点心中的碳水化合物、蛋白质、总脂肪、饱和脂肪、胆固醇、膳食纤维、糖、钠和钙的含量。</p>
+<p>结果显示，总脂肪、饱和脂肪和钠含量普遍较高，而钙和膳食纤维含量较低。</p>
+<p>一些主要“罪魁祸首”包括腌制海蜇，每盘含有高达18克总脂肪，或230卡路里。看似清淡的蒸豆干卷则含有12克脂肪，或140卡路里。</p>
+<p>何玉燕警告说，长期过量摄入饱和脂肪会增加患心血管疾病和某些癌症等慢性健康问题的风险，而过多的盐分会增加血压。</p>
+<p>对于点心爱好者，何玉燕建议他们明智地选择点心，例如多点蒸包子，少点煎炸食品。他们还应该吃半盘煮熟的蔬菜（不加任何酱汁），并在当天晚些时候补充高钙食物，例如乳制品、豆浆和绿叶蔬菜。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="The-Changing-World-of-Dim-Sum.-In-Hong-Kong,-rents-are-rising,-tastes…-|-by-Max-Falkowitz-|-Airbnb-Magazine-|-Medium">
+        <h3 class="page-name title"><span class="page-emoji ">📈&nbsp;</span>The Changing World of Dim Sum. In Hong Kong, rents are rising, tastes… | by Max Falkowitz | Airbnb Magazine | Medium</h3>
+        <small class="page-url url "><a href="https://medium.com/airbnbmag/dim-sum-is-dead-long-live-dim-sum-f2eb94200cbb" target="_blank">(https://medium.com/airbnbmag/dim-sum-is-dead-long-live-dim-sum-f2eb94200cbb)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 本页分析了港式早茶在现代社会面临的挑战，以及如何吸引年轻消费者的策略。<br></small>
+    </div>
+    <div class="page-content content"><h2>正在变化的点心世界</h2>
+<p>在香港，租金上涨，口味也在变化，这个毋庸置疑的点心之都正处于一个转折点。但业内人士和爱好者们常常重复一些说法，让我开始担心——香港的点心文化正处于危险之中。没有人大声说出来，但迹象确凿。核心粉丝群体正在老龄化。能够制作点心的熟练厨师群体也在老龄化。长期存在的劳动力短缺问题越来越严重。在这个世界上最昂贵的城市之一，租金上涨得如此之高，以至于一些人怀疑，那些建立在不仅要制作精美点心，还要提供悠闲用餐体验基础上的香港经典点心餐厅，能否生存下去。</p>
+<p>新兴餐厅凌晨3点开门，营业到第二天凌晨4点。这是一家有着几十年历史的小型点心店，几乎只接待来自肯尼迪镇附近宁静社区的人们。我的待访名单上还有几家类似的餐厅，但我听说这家餐厅的氛围和蒸笼包不错。拥挤的餐桌旁没有游客，空间狭小，服务员（大多是女性）不用点心车，而是用小托盘端上点心蒸笼。唯一的装饰是贴在墙上的新闻剪报，小小的空间里回荡着顾客的聊天声、服务员向厨房喊叫的点单声以及杯子和水壶的碰撞声。这是旧香港美味的喧嚣。“如果你看起来像外国人，他们通常默认给你绿茶，”我的点心伙伴，香港本地人杰伊·希尔纳尼告诉我，他掰下了一块压缩的普洱茶砖（一种陈年发酵茶）的茶叶。这是饮茶的必备饮品，深受当地人喜爱，因为它具有缓解肠胃不适的功效。 “你必须告诉他们给你这个。”像许多饮茶的常客一样，他随身携带自己的茶叶来享用点心，而作为网上商店“茶生活香港”的老板，他的茶叶比餐厅的标准高出一大截。</p>
+<p>饮茶的乐趣之一是在决定食用前就能看到你的食物，而这些蒸笼包看起来很完美。我们点了两篮：一篮是熔化的咸蛋黄，咸甜；另一篮里塞满了粘稠的烤肉块。虾饺，鲜虾包裹在柔软透明的皮里，看起来有点粗糙，但味道正好；虾肉新鲜甜美，略带清脆，这要归功于用小苏打快速翻炒，这是一种常见的粤菜做法。因为这是我今天第四次饮茶了，我开始感到疲倦。马来糕，或称“马来糕”，是一种高耸的蒸糕，呈棕褐色，似乎是让我在用餐中途小睡片刻的理想枕头。</p>
+<p>回到纽约的家，同样的问题也出现在其标志性的地方美食上。我最喜欢的比萨店正在失去生意，取而代之的是一波新的美元比萨店，它们出售可怕的比萨，但价格只有原来的一半。而我能数出几家制作真正好的百吉饼的地方屈指可数。卡尔弗特加入了我的百吉饼抱怨，但他同意香港点心界并没有那么黑暗。一方面，尽管人口老龄化，但点心作为一种现象从未如此受欢迎。游客从世界各地来到香港品尝世界上最好的点心，即使传统餐厅举步维艰，由雄心勃勃的投资者开设的新餐厅也在拓展点心餐的理念。</p>
+<p>因此，对点心厨师的需求增加，这在麦贵辉20个座位的点心餐厅添好运于2010年获得米其林星级并一夜之间成为全球现象后就已经开始启动了。现在被称为世界上最便宜的米其林星级餐厅之一，它在香港有6家分店，在世界各地还有39家分店，这些分店排着数小时的长队，坦率地说，主要是不错的——如果说是标准的——点心菜肴。随后对点心专用餐厅的需求激增，导致对熟练点心厨师的需求激增，使本来就紧张的劳动力市场达到了极限。</p>
+<p>陈解释说，职业训练局的目标之一是为满足香港的需求提供新的年轻人才，“并传承我们的文化”。该市的酒店业蓬勃发展，但如今，一个热门的新开张很可能是一家意大利面食店，而不是一家粤菜馆。随着经济的腾飞，年轻的厨师们纷纷尝试寻找其他更有利可图的工作，或在海外追求烹饪名声。为了维持这种不断发展的餐饮文化，行业需要鼓励年轻人加入。“他们需要掌握传统技法，”陈说。</p>
+<p>陈察觉到我的不安，并提醒我：“饮茶已经存在很久了。”而且它从来就不是一种体验。如果新一波餐厅能够以旧餐厅无法做到方式吸引年轻人享用点心，“这是一件好事。新旧可以共存。”</p>
+<p>当我结束和陈的谈话时，我开始模模糊糊地记起饥饿的感觉。过去一周，我喝了十几次茶，我渴望得到补充。所以我邀请几个朋友和我一起去“添好运”吃午饭，这是另一家新派点心店，在香港有四家分店。添好运的价格介于新兴餐厅和 Mott 32 等高档餐厅之间，它将强劲的点心基础融入奇特、适合在Instagram上发布的菜品中：将台湾凤梨酥压成歌鸲的形状，并放在鸟笼里；带有可爱小猪脸的烤肉包。</p>
+<p>食物味道和外观一样好，我的朋友们来自大陆广州，他们评论说，香港的点心比70英里外的家乡好吃得多。“即使是在普通的餐厅，平均质量也高得多，”其中一人一边吃着煎萝卜糕一边说。周末的人群——挤满了千禧一代和带着孩子的年轻家庭——正在享用它。但我不知道有多少家庭每周都回来，也不知道在这个餐厅里是否已经形成了一些新的传统。当我们喝完茶水时，我突然想到，除了美味的萝卜糕之外，添好运并没有什么东西能满足我对饮茶的童年渴望。</p>
+<p>那些装饰还在那里，但这顿饭明显是交易性的。在哪里能享受到消磨早晨时光的乐趣，以及知道另一口点心就在点心车旁的轻松感呢？服务员知道如何将我们的菜肴摆放在桌子上，以便我们拍出完美的照片，但他们也会谨慎地警告我们必须在特定时间离开，以便他们为下一组客人做准备。</p></div>
+
+</div>
+</div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navigate = document.querySelector(".navigate");
+        if (!navigate) {
+            console.error("找不到 .navigate 元素!");
+            return;
+        }
+
+        let lastScrollY = 0; // 初始化滚动位置
+        const scrollContainer = document.querySelector(".right-column");
+        let isNavigating = false;
+        document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                isNavigating = true; // 设置导航状态
+                navigate.classList.add("navigate-hidden"); // 隐藏导航栏
+
+                setTimeout(() => {
+                    isNavigating = false;
+                }, 100);
+            });
+        })
+
+        scrollContainer.addEventListener("scroll", () => {
+            const currentScrollY = scrollContainer.scrollTop; // 获取容器的滚动位置
+
+            // 判断滚动方向
+            if (!isNavigating) {
+                if (currentScrollY > lastScrollY) {
+                    navigate.classList.add("navigate-hidden");
+                } else {
+                    navigate.classList.remove("navigate-hidden");
+                }
+            }
+
+            // 更新上一次的滚动位置
+            lastScrollY = currentScrollY;
+        });
+    });
+</script>
+</html>

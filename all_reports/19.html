@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>罗马帝国三世纪危机的详情</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; /* 更现代、更通用的字体 */
+            background-color: #f4f6f8; /* 更柔和的整体背景色 */
+            color: #333; /* 默认字体颜色 */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* 主内容区样式 */
+        .content {
+            border-radius: 12px; /* 圆角边界 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* 柔和的阴影 */
+            background-color: #fff; /* 明亮背景色 */
+            padding: 16px; /* 增加内边距 */
+            margin-bottom: 16px; /* 间隔 */
+        }
+
+        /* 左右分栏样式 */
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .left-column{
+            flex: 3;
+        }
+        .right-column{
+            flex: 4;
+        }
+
+        .left-column {
+            background-color: #eef6ff; /* 更亮的浅蓝背景 */
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); /* 内阴影 */
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; /* 明亮的背景色 */
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); /* 内阴影 */
+            font-family: "Noto Serif", "SimSun", serif; /* 更适合长文本阅读的字体 */
+            position: relative;
+        }
+
+        /* 标题样式 */
+        .title {
+            font-size: 1.4em; /* 增大标题字体 */
+            font-weight: 600; /* 半粗体 */
+            color: #1a1a1a; /* 深灰色标题 */
+            margin-bottom: 12px; /* 增加下方间距 */
+        }
+
+        .page-name.title {
+            font-size: 1.8em; /* 更大的字体 */
+            font-weight: bold; /* 加粗标题 */
+            color: #222; /* 更深的灰色 */
+            margin: 16px 0; /* 增加上下间距 */
+            text-align: left; /* 左对齐 */
+        }
+
+        .section-title {
+            font-size: 1.4em; /* 调整大小 */
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; /* 中灰色标题 */
+        }
+
+        /* 段落样式 */
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; /* 更现代的中英双语字体 */
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; /* 柔和的深灰色 */
+            padding: 12px; /* 内边距 */
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; /* 更清新的背景色 */
+            border: 1px solid #dde3ea; /* 添加边框 */
+            border-radius: 12px; /* 圆角 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 轻微阴影 */
+            margin-bottom: 20px; /* 增加间距 */
+        }
+
+        /* 分割线样式 */
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; /* 更柔和的分割线 */
+            margin: 20px 0; /* 增加上下间距 */
+        }
+
+        /* 元数据样式 */
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; /* 更小的字体 */
+            color: #666; /* 浅灰色 */
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; /* 更深的字体颜色 */
+            border-radius: 8px; /* 圆角 */
+            line-height: 1.4;
+            margin-bottom: 10px; /* 增加间距 */
+        }
+
+        /* 评分样式 */
+        .page-rating {
+            background-color: #e8f4ff; /* 浅蓝背景 */
+            color: #0078d7; /* 蓝色文字 */
+            font-weight: bold; /* 加粗文字 */
+            border: 1px solid #aad4ff; /* 边框 */
+        }
+
+        /* 评价样式 */
+        .page-annotation {
+            background-color: #fff5e5; /* 浅黄背景 */
+            color: #cc8400; /* 深黄色文字 */
+            font-style: italic; /* 斜体文字 */
+            border: 1px solid #ffcc66; /* 边框 */
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; /* 隐藏部分 */
+        }
+
+        /* 链接样式 */
+        a {
+            color: #0078d7; /* 蓝色 */
+            text-decoration: none; /* 移除下划线 */
+        }
+
+        a:hover {
+            text-decoration: underline; /* 鼠标悬停时显示下划线 */
+        }
+
+        /* 提高整体间距 */
+        .content > * {
+            margin-bottom: 12px; /* 增加内容之间的间距 */
+        }
+
+        /* query */
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; /* 紧贴页面顶部 */
+            z-index: 300; /* 确保在其他元素之上 */
+            background-color: #ffffff; /* 纯白背景，模拟输入框 */
+            color: #222; /* 深灰色文字 */
+            font-size: 1.1em; /* 略大的字体，提升可读性 */
+            font-weight: 500; /* 中等字体权重，轻松而非刻板 */
+            padding: 12px 16px; /* 内边距，增强舒适感 */
+            border-radius: 8px; /* 圆角设计，柔和外观 */
+            border: 1px solid #d1e4f2; /* 浅蓝边框 */
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05), /* 内阴影，模拟输入框的凹陷效果 */ 0 2px 4px rgba(0, 0, 0, 0.1); /* 外阴影，提升立体感 */
+            margin-bottom: 16px; /* 与下面内容留出空间 */
+            text-align: left; /* 左对齐，模拟自然输入 */
+            line-height: 1.6; /* 提高行间距，增强舒适性 */
+            font-family: "Inter", "Noto Sans", sans-serif; /* 与 sections 不同的字体，轻松现代 */
+            display: flex; /* 使用 flexbox 布局 */
+            align-items: center; /* 确保表情和文字垂直居中 */
+            gap: 10px; /* 表情和文字之间的间距 */
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        /* Section Link */
+        .section-link-box {
+            display: inline-block; /* 让链接保持块状但不独占一行 */
+            margin: 8px 4px; /* 控制胶囊之间的间距 */
+        }
+
+        .section-link {
+            display: inline-flex; /* 使用 flex 布局对齐内容 */
+            align-items: center; /* 垂直居中对齐 */
+            padding: 6px 12px; /* 增加内边距，增强胶囊感 */
+            background-color: #eef6ff; /* 胶囊的背景色 */
+            color: #0078d7; /* 文字颜色 */
+            font-size: 0.95em; /* 调整字体大小 */
+            font-weight: 500; /* 适度加粗 */
+            text-decoration: none; /* 去掉下划线 */
+            border: 1px solid #d1e4f2; /* 胶囊的浅色边框 */
+            border-radius: 20px; /* 胶囊效果 */
+            transition: all 0.2s ease; /* 添加动画过渡效果 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; /* 悬停时更深的背景色 */
+            color: #005bb5; /* 更深的文字颜色 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 加强阴影效果 */
+            text-decoration: underline; /* 可选：添加下划线 */
+        }
+
+        /* Navigate 样式 */
+        .navigate {
+            display: flex; /* 使用 flex 布局 */
+            max-width: 40%;
+            width: fit-content; /* 宽度由内容决定 */
+            flex-wrap: nowrap; /* 禁止换行 */
+            overflow-x: auto; /* 水平方向开启滚动 */
+            gap: 4px; /* 子元素之间的间距 */
+            justify-content: center; /* 主轴居中对齐 */
+            padding: 4px 4px; /* 增加内边距 */
+            background-color: #f4f6f8; /* 柔和背景色 */
+            border-radius: 12px; /* 圆角设计 */
+
+            position: fixed;
+            top: 0;
+            right: 4%;
+            /*transform: translateX(-50%);*/
+            z-index: 1000; /* 确保层级在前 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+            transition: transform 0.3s ease; /* 平滑过渡效果 */
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        /* Navigate 静态内容 */
+        .navigate-item {
+            display: flex; /* 使用 flex 布局 */
+            flex-direction: column; /* 垂直排列子元素 */
+            align-items: center; /* 水平居中 */
+            justify-content: center; /* 垂直居中 */
+            background-color: #ffffff; /* 背景色 */
+            padding: 2px 4px; /* 增加内边距 */
+            border-radius: 12px; /* 圆角设计 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+            transition: all 0.3s ease; /* 平滑的交互效果 */
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; /* 悬停时更浅的背景色 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 增强阴影效果 */
+            transform: translateY(-2px); /* 悬停时微微上浮 */
+        }
+        .navigate-item a {
+            text-decoration: none; /* 移除下划线 */
+            color: #0078d7; /* 蓝色字体 */
+            font-weight: bold; /* 加粗文字 */
+            font-size: 1em; /* 增大字体 */
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; /* 放大 emoji */
+            margin-bottom: 1px; /* 与文字保持间距 */
+        }
+        .navigate-item-id {
+            font-size: 0.9em; /* 稍小的 ID 字体 */
+            color: #555; /* 中灰色字体 */
+        }
+
+        [id] { /* 导航后不要触顶, 不好看 */
+            scroll-margin-top: 40px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            罗马帝国三世纪危机的详情
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">政治动荡表现</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Crisis-of-the-Third-Century---Wikipedia">
+    📜政治不稳定</a></div><div class="section-link-box"><a class="section-link" href="#What-Was-the-Crisis-of-the-Third-Century?">
+    💥皇帝更替</a></div><div class="section-link-box"><a class="section-link" href="#The-Crisis-of-the-Third-Century---World-History-Encyclopedia">
+    ⚔篡位者</a></div></div>
+    <div class="section-content content"><p>以下是关于三世纪危机期间罗马帝国政治动荡表现的具体信息：</p>
+<ol>
+<li>
+<p>自公元235年亚历山大·塞维鲁被杀后，帝国经历了持续的统治不稳定，50年内有超过20位皇帝相继登基与被杀，显示出频繁的政治更替。</p>
+</li>
+<li>
+<p>军队在权力选拔过程中越发重要，军方变成了选拔皇帝的主要力量，这促使皇帝的合法性越来越依赖于对军队的支持。</p>
+</li>
+<li>
+<p>由于缺乏明确的继承政策，产生了权力真空，导致多个 usurper（篡位者）在帝国内争夺权力，进一步加剧了政治的不稳定。</p>
+</li>
+</ol>
+<p>总结来说，三世纪危机期间的政治动荡主要体现在皇帝更替频繁、军队干预政治、以及继承制度缺失导致的权力真空上，这些因素都直接影响了帝国的统治稳定性。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">经济崩溃原因</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#The-Crisis-of-the-Third-Century:-How-Rome-barely-survived-its-own-apocalypse---History-Skills">
+    💸通货膨胀</a></div><div class="section-link-box"><a class="section-link" href="#What-Was-the-Crisis-of-the-Third-Century?">
+    💥贸易网络崩溃</a></div><div class="section-link-box"><a class="section-link" href="#Crisis-of-the-Third-Century---Wikipedia">
+    📜货币贬值</a></div></div>
+    <div class="section-content content"><p>在罗马帝国三世纪危机期间，经济崩溃的原因主要包括以下几个方面：</p>
+<ol>
+<li><strong>货币贬值</strong>：</li>
+<li>
+<p>不断的军事开支和不当的货币政策是导致货币贬值的重要因素。为了支付庞大的军队费用，政府开始贬低货币的实际价值，造成了严重的通货膨胀。这使得市民的实际购买力大幅下降。</p>
+</li>
+<li>
+<p><strong>通货膨胀的背景</strong>：</p>
+</li>
+<li>
+<p>由于皇帝们在不断的战争中急需资金，他们采取了增加货币流通量的极端措施，但这些措施并未能伴随相应的经济增长，导致物价飞涨，民众面临着日益加重的生活负担。</p>
+</li>
+<li>
+<p><strong>内外贸易网络的崩溃</strong>：</p>
+</li>
+<li>
+<p>由于国家的内外部战争和社会动荡，罗马的广泛贸易网络遭到严重破坏。商贩不再能安全地进行长途交易，便导致了商品的短缺和供应的混乱，从而影响了人们的生计。</p>
+</li>
+<li>
+<p><strong>自给自足社区的出现</strong>：</p>
+</li>
+<li>随着贸易网络的崩溃，许多人不得不放弃对外部资源的依赖，转而依靠自己地方的生产来维持生计。这促使一些地区形成了自给自足的社区，其中农民和小商贩为了生存逐渐形成了初步的家庭经济和地方性商品交易，而独立于原本的市场体系。</li>
+</ol>
+<p>通过以上因素的影响，罗马帝国的经济面临崩溃，民众的生活质量显著下降，社会结构也因此发生了深刻的变化。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">军事冲突细节</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#The-Crisis-of-the-Third-Century---World-History-Encyclopedia">
+    ⚔军事领导力</a></div><div class="section-link-box"><a class="section-link" href="#Aurelian---Wikipedia">
+    🏆亚乌里安的胜利</a></div><div class="section-link-box"><a class="section-link" href="#Crisis-of-the-Third-Century---Wikipedia">
+    📜外国侵略</a></div></div>
+    <div class="section-content content"><p>在罗马帝国三世纪危机期间，发生了一系列重要的军事冲突，以下是涉及的主要敌对势力及相关事件的分析：</p>
+<ol>
+<li><strong>日耳曼部落的战争</strong></li>
+<li>
+<p>罗马帝国在这一时期面临来自北方的日耳曼部落的频繁侵扰。由于内部政治动荡，军队的忠诚度和战斗力下降，罗马面对侵略时的反应显得迟缓。</p>
+</li>
+<li>
+<p><strong>波斯的冲突</strong></p>
+</li>
+<li>
+<p>与波斯的军事对抗也是三世纪危机的一个重要方面。皇帝瓦勒良（Valerian）在对抗波斯时遭遇重大失利，尤其是在260年的战役中，他被波斯军队捕获，此次事件严重削弱了罗马帝国的威望和军事能力。</p>
+</li>
+<li>
+<p><strong>分裂势力的斗争</strong></p>
+</li>
+<li>
+<p>三世纪危机期间，帝国的分裂导致了许多内战，尤其是在与加尔（Gallic）和帕尔米尔（Palmyrene）两个分别政权的斗争中。亚乌里安通过军事胜利，成功恢复了被分裂势力夺取的部分领土，从而稳固了罗马的边界。</p>
+</li>
+<li>
+<p><strong>反叛及民众的不满</strong></p>
+</li>
+<li>随着各地军队领袖的兴起，更加剧了帝国内部的冲突。许多军队选择支持地方统治者，导致了帝国统治的进一步削弱，皇帝们在内外压力的交织下难以长久稳定其统治。</li>
+</ol>
+<p>这些军事冲突的背景是由于罗马帝国内部的弱化与外部压力的叠加效应，形成了一个复杂而动荡的局面，影响到整个帝国的存续与发展。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">社会结构变化</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#The-Crisis-of-the-Third-Century:-How-Rome-barely-survived-its-own-apocalypse---History-Skills">
+    💸经济崩溃</a></div><div class="section-link-box"><a class="section-link" href="#Crisis-of-the-Third-Century---Wikipedia">
+    📜城市迁移</a></div><div class="section-link-box"><a class="section-link" href="#Crises-of-the-Roman-Empire-|-Western-Civilization">
+    🏚内部贸易崩溃</a></div></div>
+    <div class="section-content content"><p>从对话记录中提取的关于社会结构变化的相关信息如下：</p>
+<ol>
+<li>
+<p><strong>城市居民迁移到乡村</strong>：由于粮食生产转向自给自足，许多城镇的自由市民为了寻找食物和更好的保护，开始迁移到乡村。这一迁移趋势是因为经济动荡和不安全感推动的。</p>
+</li>
+<li>
+<p><strong>成为‘coloni’的原因</strong>：许多人放弃了基本权利，成为名为‘coloni’的半自由农民。这是因为在经济压力下，他们需要依赖大地主的保护，以维持生存。</p>
+</li>
+<li>
+<p><strong>依赖关系变化</strong>：随着农村经济的破坏，土地拥有者开始生产仅供自用的粮食，从而减少了长途贸易。这导致普通自由人变得依赖大地主以获得保护，经济地位和政治地位降低。</p>
+</li>
+</ol>
+<p>最关心的部分为：</p>
+<ul>
+<li>
+<p><strong>城市居民迁移到乡村和成为‘coloni’的原因</strong>：这显示了危机如何迫使人们改变生活状态，以适应更为严峻的经济环境和社会安全问题。</p>
+</li>
+<li>
+<p><strong>大地主与小农、平民之间的依赖关系变化</strong>：在经济崩溃的背景下，平民和小农依赖大地主，形成了早期的农奴制模式。这一变化在社会结构中深刻影响了不同阶层的地位及其相互关系。</p>
+</li>
+</ul></div>
+</div><div class="section">
+    <h3 class="section-title title">危机的结束机制</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Roman-Emperor-Diocletian-|-Biography,-Reforms-&-Palace---Lesson-|-Study.com">
+    🛡戴克里先的改革</a></div><div class="section-link-box"><a class="section-link" href="#Diocletian---Domestic-Reforms-|-Britannica">
+    ⚖行政改革</a></div><div class="section-link-box"><a class="section-link" href="#Crises-of-the-Roman-Empire-|-Western-Civilization">
+    🏚经济影响</a></div></div>
+    <div class="section-content content"><p>从对话记录中提取的信息如下：</p>
+<ol>
+<li><strong>戴克里先的Tetrarchy制度</strong>：</li>
+<li>
+<p>戴克里先实施了“Tetrarchy”制度，共同治理的四位皇帝各自管理不同的区域，这一制度为罗马帝国带来了重要的稳定，帮助减少了权力集中引发的内乱。</p>
+</li>
+<li>
+<p><strong>财政改革</strong>：</p>
+</li>
+<li>
+<p>戴克里先的改革包括建立中央集权和一个新颖的税制，带来了更高效的财政管理，帮助恢复了帝国的经济基础。这种集权化使得政府能够更好地对复杂的经济形势作出反应。</p>
+</li>
+<li>
+<p><strong>军队重组</strong>：</p>
+</li>
+<li>
+<p>军队进行了重组，增强了边境防御力量，确保了军队能有效应对外部威胁。同时，军事力量的稳定对于维护内部秩序也至关重要。</p>
+</li>
+<li>
+<p><strong>恢复后的社会与政治形态</strong>：</p>
+</li>
+<li>随着戴克里先的改革，社会结构发生了变化，政治上开始向更加体系化及制度化发展，边疆的安全得到保障，同时增强了皇权与民众之间的联系，政治环境的稳定为经济复苏创造了条件。</li>
+</ol>
+<p>用户可能最关心的部分为：
+- 戴克里先实施的“Tetrarchy”制度通过分权治理减少内乱，这种机制以及相应的财政改革和军队重组是如何直接帮助恢复罗马帝国的稳定并最终结束三世纪危机的。</p></div>
+</div>
+</div>
+<hr>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item">
+    <a href="#Crisis-of-the-Third-Century---Wikipedia" class="navigate-item-emoji ">📜</a>
+    <a href="#Crisis-of-the-Third-Century---Wikipedia" class="navigate-item-id">1</a>
+</div><div class="navigate-item">
+    <a href="#The-Crisis-of-the-Third-Century:-How-Rome-barely-survived-its-own-apocalypse---History-Skills" class="navigate-item-emoji ">💸</a>
+    <a href="#The-Crisis-of-the-Third-Century:-How-Rome-barely-survived-its-own-apocalypse---History-Skills" class="navigate-item-id">2</a>
+</div><div class="navigate-item">
+    <a href="#The-Crisis-of-the-Third-Century---World-History-Encyclopedia" class="navigate-item-emoji ">⚔</a>
+    <a href="#The-Crisis-of-the-Third-Century---World-History-Encyclopedia" class="navigate-item-id">3</a>
+</div><div class="navigate-item">
+    <a href="#Mapping-History-:-Crisis-of-the-3rd-Century---Introduction" class="navigate-item-emoji ">🔄</a>
+    <a href="#Mapping-History-:-Crisis-of-the-3rd-Century---Introduction" class="navigate-item-id">4</a>
+</div><div class="navigate-item">
+    <a href="#What-Was-the-Crisis-of-the-Third-Century?" class="navigate-item-emoji ">💥</a>
+    <a href="#What-Was-the-Crisis-of-the-Third-Century?" class="navigate-item-id">5</a>
+</div><div class="navigate-item">
+    <a href="#Crises-of-the-Roman-Empire-|-Western-Civilization" class="navigate-item-emoji ">🏚</a>
+    <a href="#Crises-of-the-Roman-Empire-|-Western-Civilization" class="navigate-item-id">6</a>
+</div><div class="navigate-item">
+    <a href="#Diocletian---Domestic-Reforms-|-Britannica" class="navigate-item-emoji ">⚖</a>
+    <a href="#Diocletian---Domestic-Reforms-|-Britannica" class="navigate-item-id">7</a>
+</div><div class="navigate-item">
+    <a href="#Aurelian---Wikipedia" class="navigate-item-emoji ">🏆</a>
+    <a href="#Aurelian---Wikipedia" class="navigate-item-id">8</a>
+</div><div class="navigate-item">
+    <a href="#Roman-Emperor-Diocletian-|-Biography,-Reforms-&-Palace---Lesson-|-Study.com" class="navigate-item-emoji ">🛡</a>
+    <a href="#Roman-Emperor-Diocletian-|-Biography,-Reforms-&-Palace---Lesson-|-Study.com" class="navigate-item-id">9</a>
+</div><div class="navigate-item">
+    <a href="#Maximinus-Thrax:-The-Rise-and-Fall-of-Rome's-Warrior-Emperor-|-Roman-Emperors" class="navigate-item-emoji ">👑</a>
+    <a href="#Maximinus-Thrax:-The-Rise-and-Fall-of-Rome's-Warrior-Emperor-|-Roman-Emperors" class="navigate-item-id">10</a>
+</div>
+    </div>
+    <div class="page">
+    <div class="page-meta" id="Crisis-of-the-Third-Century---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">📜&nbsp;</span>Crisis of the Third Century - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Crisis_of_the_Third_Century" target="_blank">(https://en.wikipedia.org/wiki/Crisis_of_the_Third_Century)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 这部分详细描述了三世纪危机的起因及其对罗马帝国的影响。<br></small>
+    </div>
+    <div class="page-content content"><p>外族入侵
+经济影响
+经济影响细分
+内部贸易网络的崩溃
+军事化加剧</p>
+<p>三世纪危机，又称军事无政府状态[1]或帝国危机（235-284年），是罗马历史上的一个时期，在此期间，罗马帝国在反复的外族入侵、内战和经济崩溃的共同压力下几乎崩溃。在危机的高峰时期，罗马国家分裂成三个截然不同且相互竞争的政治实体。</p>
+<p>危机始于235年，当时的皇帝塞维鲁·亚历山大被自己的军队暗杀。在接下来的几年里，帝国经历了野蛮人的入侵和迁移进入罗马领土，内战，农民起义和政治动荡，多个篡位者争夺权力。这导致货币贬值，贸易网络和经济生产力都崩溃，西普里安瘟疫加剧了这种混乱。罗马军队随着时间的推移变得越来越依赖日益增长的被称为foederati的野蛮人雇佣军的势力。战场上的罗马指挥官，虽然名义上效忠于国家，但却越来越独立于罗马的中央权威。</p>
+<p>在危机期间，至少有26人声称拥有皇帝的头衔，他们大多是著名的罗马将军，他们在帝国全部或部分地区掌握了帝国权力。同样数量的人在此期间被罗马元老院接受为皇帝，因此成为合法皇帝。到268年，帝国分裂成三个相互竞争的国家：高卢帝国（包括罗马行省高卢、不列颠尼亚和短暂的西班牙）；帕尔米拉帝国（包括叙利亚巴勒斯坦和埃及的东部行省）；以及介于两者之间的以意大利为中心的罗马帝国本身。</p>
+<p>奥勒良的统治（270-275年）标志着危机时期的转折点。奥勒良成功地通过击败两个分裂的国家重新统一了帝国，并进行了一系列改革，帮助恢复了罗马经济的一定程度的稳定。据说这场危机以戴克里先及其对罗马帝国政府、经济和军事的重组而告终。后者被视为罗马历史上一个关键时刻，标志着统治时代的开始。</p>
+<p>这场危机给帝国的制度、社会、经济生活和宗教带来了如此深刻的变化，以至于大多数历史学家越来越将其视为古典时代和晚期古典时代之间过渡的决定性因素[2]。</p>
+<p>起因
+继承问题和内战
+从Principate的开始，就没有明确的帝国继承规则，主要是因为帝国维持着共和国的外表[26]。在早期的Principate时期，成为皇帝的过程依赖于元老院的宣布，民众的认可以及军队的接受，特别是近卫军。与前任皇帝的家族联系是有益的，但这并没有像正式的世袭继承制度那样决定问题。从朱里奥-克劳狄王朝开始，元老院的首选和军队之间有时存在紧张关系。随着元老院阶级政治影响力的下降以及更多将军从各省招募，这种紧张关系加剧了。每当继承权似乎不确定时，任何拥有庞大军队的将军都有动机试图夺取权力，从而引发内战。在此次危机之前，最近的例子是“五帝之年”，塞普蒂米乌斯·塞维鲁最终获胜。塞维鲁王朝被推翻后，在整个3世纪的剩余时间里，罗马由一系列将军统治，他们通过频繁的内战上台，这些内战摧毁了帝国[27]。</p>
+<p>自然灾害
+罗马帝国在三世纪面临的第一个也是最直接的灾难性自然灾害是瘟疫。在三世纪危机之前的安东尼瘟疫削弱了罗马军队的兵力，并给罗马经济带来了灾难性的后果[28]。从249年到262年，西普里安瘟疫对罗马帝国造成了如此严重的破坏，以至于一些城市，例如亚历山大城，人口下降了62%[29]。这些瘟疫极大地阻碍了罗马帝国抵御野蛮人入侵的能力，但也导致了饥荒等问题，许多农场被废弃，无法生产[30]。三世纪发生的第二个也是长期存在的自然灾害是天气变化的加剧。夏季干旱意味着农业生产力下降，更极端的天气事件导致农业不稳定。这也可能导致罗马边境野蛮人压力增加，因为他们也会经历气候变化的不利影响，并试图向地中海地区更有生产力的地区推进[31]。</p>
+<p>外族入侵
+野蛮人的入侵是在内战、瘟疫和饥荒之后发生的。部分由气候变化引起的不幸导致各个野蛮部落涌入罗马领土。其他部落合并成更强大的实体（特别是阿勒曼尼人和法兰克人），或者被萨尔马提亚人等更危险的人民赶出其原来的领土（匈奴人一个世纪后才出现在伏尔加河以西）。最终，伊利里亚皇帝稳定了边境。然而，越来越多的野蛮人迁移进入帝国。虽然这些移民最初受到严格的监控和同化，但后来的部落最终带着武器大量进入罗马帝国，只象征性地承认罗马的权威[32]。</p>
+<p>经济影响
+&lt;table&gt;0,1,本节需要补充引文以供查证。请通过添加可靠来源的引文来帮助改进这篇文章。未引证的内容可能会受到质疑并被移除。(2017年8月)(学习如何和何时移除此模板消息)&lt;/table&gt;</p>
+<p>在内部，帝国面临着由于多年来货币贬值造成的恶性通货膨胀[35]。这在早期的塞维鲁皇帝时期就已经开始，他们将军队扩大了四分之一[36][自发表来源？]，并将军团士兵的基本工资翻了一番。由于每一个短命的皇帝上台，他们都需要快速筹集资金来支付军队的“就职奖金”，最简单的办法就是严重贬低货币，通过用青铜和铜来贬低货币来实现这一过程。这导致物价飞涨，到戴克里先上台时，罗马帝国的旧货币几乎崩溃了。一些税收是以实物形式征收的，价值往往是名义上的，以金条或青铜货币计算。实际价值仍然以金币计算，但使用300年的银币，第纳尔已经消失了（1磅黄金=40个金币=1000个第纳尔=4000个塞斯特尔提）。[需要引文]到三世纪末，这种货币几乎没有价值，贸易在没有零售货币的情况下进行。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="The-Crisis-of-the-Third-Century:-How-Rome-barely-survived-its-own-apocalypse---History-Skills">
+        <h3 class="page-name title"><span class="page-emoji ">💸&nbsp;</span>The Crisis of the Third Century: How Rome barely survived its own apocalypse - History Skills</h3>
+        <small class="page-url url "><a href="https://www.historyskills.com/classroom/ancient-history/crisis-of-the-third-century/?srsltid=AfmBOop25GhCjkaPT3SXvtuv50gOIJopdATHlYd1JDkuz5hBhevIvgQz" target="_blank">(https://www.historyskills.com/classroom/ancient-history/crisis-of-the-third-century/?srsltid=AfmBOop25GhCjkaPT3SXvtuv50gOIJopdATHlYd1JDkuz5hBhevIvgQz)</a><br></small>
+        <small class="page-rating rating ">评分: 9.5<br></small>
+        <small class="page-annotation annotation ">注释: 探讨了三世纪危机期间经济崩溃的多重因素及其对社会的影响。<br></small>
+    </div>
+    <div class="page-content content"><p>公元三世纪危机的主要特征是严重的经济衰退，其标志是恶性通货膨胀、贸易和农业衰退以及财政问题。这场经济崩溃既是这场更大危机的起因，也是其后果，加剧了整个帝国的政治和社会动荡。</p>
+<p>经济衰退的一个关键方面是货币贬值。为了资助他们的军事行动和支付士兵的薪水，许多皇帝开始减少硬币中贵金属的含量，特别是银币，用价值较低的合金代替。这一政策导致了猖獗的通货膨胀，因为货币的实际价值暴跌，物价飞涨。公民的购买力下降，贸易因此受到影响，导致整体经济活动下降。</p>
+<p>另一个重要因素是农业和贸易危机。作为罗马经济支柱的农业受到了多种因素的严重影响：持续不断的战争扰乱了农业活动，沉重的税收降低了农业盈利能力，而瘟疫和军事征兵导致的人力短缺导致可耕地利用不足。与此同时，作为帝国繁荣的重要组成部分的远距离贸易也下降了。猖獗的通货膨胀使得交易变得困难，而贸易路线上的海盗和不安全因素进一步吓退了商人。</p>
+<p>帝国还面临严重的财政问题。随着国家收入减少，资助不断增加的军事开支和维持公共设施变得越来越具有挑战性。国家通过向已经 struggling 的民众征收重税来应对，加剧了社会动荡，并导致进一步的经济困难。此外，由于行政效率低下和普遍存在的腐败，税收变得越来越困难。</p>
+<h3>后续的社会动荡</h3>
+<p>就社会影响而言，这场危机加剧了贫富差距。经济低迷、猖獗的通货膨胀和沉重的税收尤其重创了下层阶级，导致贫困和不满情绪增加。许多小农无力承担经济负担，被迫将其土地出售给富有的地主，导致大型庄园或“拉提富迪亚”的出现。这种转变不仅造成了更加明显的阶级差距，而且改变了帝国的农业结构。</p>
+<p>相反，这场危机为富人提供了一些机会。经济混乱使他们能够扩大自己的庄园并巩固其经济实力。同样，一些人，特别是士兵，可以利用这一时期的动荡来改善他们的社会地位，从而促进社会流动性。</p>
+<p>这场危机也引发了重大的文化变革，尤其是在宗教方面。传统的罗马多神教信仰受到了东方宗教传播和基督教迅速发展的挑战。这段充满痛苦和不确定性的时期，基督教所承诺的来世生活对许多人产生了吸引力。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="The-Crisis-of-the-Third-Century---World-History-Encyclopedia">
+        <h3 class="page-name title"><span class="page-emoji ">⚔&nbsp;</span>The Crisis of the Third Century - World History Encyclopedia</h3>
+        <small class="page-url url "><a href="https://www.worldhistory.org/Crisis_of_the_Third_Century/" target="_blank">(https://www.worldhistory.org/Crisis_of_the_Third_Century/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 详细阐述三世纪危机的历史背景，特别是各个政权更替的情况。<br></small>
+    </div>
+    <div class="page-content content"><p>公元235年到284年间的第三世纪危机（也称为帝国危机）是罗马帝国历史上一个时期，在此期间，帝国分裂成三个独立的政治实体：高卢帝国、罗马帝国和帕尔米拉帝国。这些分裂的帝国以及这一时期所特有的社会动荡和混乱，源于许多因素：皇帝亚历山大·塞维鲁（公元222-235年）于公元235年被自己的军队暗杀后，领导模式发生了转变；军队越来越多地参与政治；缺乏明确的皇帝继承政策；塞维鲁王朝时期货币贬值导致通货膨胀和经济萧条；皇帝面临越来越大的压力，需要保卫各行省免受入侵部落的攻击；瘟疫加剧了人们的恐惧，并使社会动荡不安；军队规模扩大，需要更多的人员，从而减少了农业劳动力。在亚历山大·塞维鲁遇刺后，在公元235年到284年将近50年的时间里，帝国经历了20多位皇帝的兴衰，相比之下，从奥古斯都·凯撒（公元前27年-公元14年）到塞维鲁（公元前27年-公元235年）的250多年时间里，只有26位皇帝在位。在奥勒良皇帝（公元270-275年）的努力下，帝国得到了恢复，戴克里先（公元284-305年）进一步发展了他的措施，戴克里先被认为结束了这场危机，并确保了帝国未来的生存。</p>
+<p>公元235年到284年间的第三世纪危机（也称为帝国危机）是罗马帝国历史上一个时期，在此期间，帝国分裂成三个独立的政治实体：高卢帝国、罗马帝国和帕尔米拉帝国。这些分裂的帝国以及这一时期所特有的社会动荡和混乱，源于许多因素：皇帝亚历山大·塞维鲁（公元222-235年）于公元235年被自己的军队暗杀后，领导模式发生了转变；军队越来越多地参与政治；缺乏明确的皇帝继承政策；塞维鲁王朝时期货币贬值导致通货膨胀和经济萧条；皇帝面临越来越大的压力，需要保卫各行省免受入侵部落的攻击；瘟疫加剧了人们的恐惧，并使社会动荡不安；军队规模扩大，需要更多的人员，从而减少了农业劳动力。在亚历山大·塞维鲁遇刺后，在公元235年到284年将近50年的时间里，帝国经历了20多位皇帝的兴衰，相比之下，从奥古斯都·凯撒（公元前27年-公元14年）到塞维鲁（公元前27年-公元235年）的250多年时间里，只有26位皇帝在位。在奥勒良皇帝（公元270-275年）的努力下，帝国得到了恢复，戴克里先（公元284-305年）进一步发展了他的措施，戴克里先被认为结束了这场危机，并确保了帝国未来的生存。</p>
+<p>此外，塞维鲁对军队采取讨好的策略，削弱了皇帝角色的传统地位，使皇帝的地位依赖于军队的忠诚。尽管皇帝总是或多或少地依赖军队的支持，但皇帝对军队的争取变得更加明显。尽管在塞维鲁王朝统治期间，这种传统模式的转变——即皇帝凭借继承权至高无上——的危险并没有造成问题，但在该王朝最后一位皇帝亚历山大去世后，这种危险便显而易见。</p>
+<p>亚历山大·塞维鲁受他母亲茱莉亚·马麦亚和祖母茱莉亚·梅萨的摆布，她们从他年少继位之初就掌控着他。尽管他启动了一系列积极的政策，但他从未能摆脱母亲的控制，这最终导致了他的垮台。亚历山大的母亲因为为了自己目的省钱而削减军饷，已经在军队中不受欢迎。随着亚历山大只是他母亲傀儡的事实越来越明显，军队对他失去了尊重，最终的侮辱发生在一次对抗日耳曼部落的战役中。</p>
+<p>他听从了他母亲的建议，为了和平而向对手支付赎金，而不是与他们作战。虽然他母亲认为这是最谨慎的选择，但亚历山大追随母亲建议的决定被亚历山大的军队视为不光彩和懦弱；他和他的母亲都被他的指挥官暗杀。色雷斯士兵马克西米努斯·特拉克思（公元235-238年）随后掌握了权力，成为所谓的“军营皇帝”中的第一位，这些皇帝将在接下来的49年中迅速兴衰。</p>
+<p>“军营皇帝”是后来的历史学家创造的一个术语，指的是那些出身于军队并被军队推上权力的罗马皇帝。过去，皇帝是通过继承制度上台的——要么是现任皇帝的儿子，要么是被收养的继承人——而现在，皇帝是由军队根据其在军队中的受欢迎程度、对军队的慷慨程度以及其产生直接和明显结果的能力来选择的。当任何这些标准令人失望时——尤其是最后一个——他就会被暗杀并被另一个人取代。</p>
+<p>在亚历山大·塞维鲁和戴克里先的统治之间，有20多位皇帝迅速地兴衰更迭。他们是：</p>
+<h3>危机开始</h3>
+<p>塞普蒂米乌斯·塞维鲁（公元193-211年）创立了塞维鲁王朝，他开始奉行安抚军队并通过增加薪酬和其他措施来争取他们忠诚的政策。塞普蒂米乌斯·塞维鲁将士兵的年薪从300提高到500第纳里，这是早就应该做的事情，但与此同时，他还扩大了军队规模，以应对罗马现在面临的来自边境以外的挑战。为了支付士兵的薪水，他通过在铸币中添加较少贵金属来贬低货币。虽然最初的贬值没有造成任何经济问题，但这为后来的皇帝效仿开了先例。</p>
+<p>此外，塞维鲁对军队采取讨好的策略，削弱了皇帝角色的传统地位，使皇帝的地位依赖于军队的忠诚。尽管皇帝总是或多或少地依赖军队的支持，但皇帝对军队的争取变得更加明显。尽管在塞维鲁王朝统治期间，这种传统模式的转变——即皇帝凭借继承权至高无上——的危险并没有造成问题，但在该王朝最后一位皇帝亚历山大去世后，这种危险便显而易见。</p>
+<p>亚历山大·塞维鲁受他母亲茱莉亚·马麦亚和祖母茱莉亚·梅萨的摆布，她们从他年少继位之初就掌控着他。尽管他启动了一系列积极的政策，但他从未能摆脱母亲的控制，这最终导致了他的垮台。亚历山大的母亲因为为了自己目的省钱而削减军饷，已经在军队中不受欢迎。随着亚历山大只是他母亲傀儡的事实越来越明显，军队对他失去了尊重，最终的侮辱发生在一次对抗日耳曼部落的战役中。</p>
+<p>他听从了他母亲的建议，为了和平而向对手支付赎金，而不是与他们作战。虽然他母亲认为这是最谨慎的选择，但亚历山大追随母亲建议的决定被亚历山大的军队视为不光彩和懦弱；他和他的母亲都被他的指挥官暗杀。色雷斯士兵马克西米努斯·特拉克思（公元235-238年）随后掌握了权力，成为所谓的“军营皇帝”中的第一位，这些皇帝将在接下来的49年中迅速兴衰。</p>
+<h3>军营皇帝</h3>
+<p>“军营皇帝”是后来的历史学家创造的一个术语，指的是那些出身于军队并被军队推上权力的罗马皇帝。过去，皇帝是通过继承制度上台的——要么是现任皇帝的儿子，要么是被收养的继承人——而现在，皇帝是由军队根据其在军队中的受欢迎程度、对军队的慷慨程度以及其产生直接和明显结果的能力来选择的。当任何这些标准令人失望时——尤其是最后一个——他就会被暗杀并被另一个人取代。</p>
+<p>在亚历山大·塞维鲁和戴克里先的统治之间，有20多位皇帝迅速地兴衰更迭。他们是：</p>
+<p>马克西米努斯·特拉克思（公元235-238年），当他的军队厌倦了他不断将他们投入内外战争时，他被军队杀害。此外，在面对饥荒、瘟疫和大型内乱时，他被认为是一位无能的领导者。</p>
+<p>戈尔迪安一世和戈尔迪安二世（公元238年，三月-四月）是父子，被元老院立为皇帝，他们参与了推翻马克西米努斯的尝试。戈尔迪安二世在与支持马克西米努斯的军队作战时阵亡，戈尔迪安一世在听到儿子的死讯后自杀。</p>
+<p>巴尔比努斯和普比努斯（公元238年，四月-七月）也反对马克西米努斯，但他们不受人民欢迎，并被近卫军杀害。</p>
+<p>戈尔迪安三世（公元238-244年）与巴尔比努斯和普比努斯共同统治，直到他们被暗杀，然后被戈尔迪安一世和戈尔迪安二世的军事支持者宣布为皇帝。他被暗杀，可能是被他的继任者菲利普·阿拉伯人暗杀。</p>
+<p>菲利普·阿拉伯人（公元244-249年）是戈尔迪安三世手下的近卫军长官，他立他的儿子菲利普二世为共同皇帝。他被他的继任者德西乌斯在战斗中杀死，他的12岁儿子和共同皇帝随后被近卫军谋杀。</p>
+<p>德西乌斯（公元249-251年）是一位被军队推上权力的地区总督。他效仿菲利普的政策，立他的儿子为共同皇帝，以确保顺利过渡，但两人都在公元251年在阿布里图斯战役中与由克尼瓦国王领导的哥特联盟作战时阵亡。</p>
+<p>霍斯提里安（公元251年，六月-十一月），德西乌斯的幼子，死于瘟疫。</p>
+<p>加卢斯（公元251-253年），德西乌斯手下的指挥官，也立他的儿子沃卢西亚努斯为共同皇帝；两人都被自己的军队暗杀，军队推举了埃米利亚努斯。</p>
+<p>埃米利亚努斯（公元253年，八月-十月），由军队选择的地区总督，他证明令人失望，因此被暗杀，以支持瓦勒良。</p>
+<p>瓦勒良（公元253-260年）立他的儿子加列努斯为共同皇帝。他在战役中被萨珊波斯国王沙普尔一世（公元240-270年）俘虏，死于狱中。根据一些报道，他死后尸体被填充，并在波斯宫廷向来访的达官显贵展示。</p>
+<p>加列努斯（公元253-268年）是一位有效的统治者和军事领导人，他在军事方面（最显著的是扩大骑兵的作用）以及文化方面都启动了一些重要的发展。即便如此，他也无法逃脱当时的局势，并在一次战役中被自己的军队暗杀，参与暗杀的阴谋涉及未来的皇帝奥勒良。</p>
+<p>克劳狄乌斯·哥特库斯（公元268-270年），在他战胜哥特人后获得了荣誉称号“哥特库斯”。据说他最初不愿接受皇帝的职位，并为加列努斯的死报了仇。他作为一位有效的皇帝展现了很大的希望，但在位仅两年就死于瘟疫。</p>
+<p>昆蒂卢斯（公元270年），克劳狄乌斯·哥特库斯的兄弟，在后者去世后短暂上台，但不久后去世，可能是被奥勒良暗杀。</p>
+<p>奥勒良（公元270-275年）是为数不多的军营皇帝之一，他努力将人民的福祉和帝国的安全置于他个人的野心之上。他通过击败高卢和帕尔米拉这两个分裂的帝国，并将它们重新置于罗马的控制之下，从而统一了帝国，他还战胜了许多不同的敌对部落，从而确保了边境的安全。尽管他取得了成功，但他还是被他的指挥官暗杀。</p>
+<p>在接下来的九年里，塔西佗、弗洛里安努斯、普罗布斯、卡鲁斯、努梅里安和卡里努斯将统治——所有这些人都遵循同样的模式，即被军队推举，而且大多数情况下都被军队暗杀——直到戴克里先掌权。在所有这些人为谁统治或应该统治而互相争斗的那些年里，他们试图领导的帝国正在崩溃。自从亚历山大·塞维鲁去世以来，未来的皇帝需要越来越多的军队和物资，而由于缺乏支付这些费用的资金，他们一次又一次地贬低货币。</p>
+<p>针对当时经济和社会的混乱——以及在处理许多紧迫困难方面的领导能力参差不齐——庞大的帝国分裂，以及一些领导者认为他们可以在没有罗马政府已经成为的那种戏剧和流血事件的情况下为人民做得更好，这并不令人惊讶。公元260年，上日耳曼尼亚和下日耳曼尼亚的地区总督波斯图姆斯（公元260-269年）脱离帝国，建立了包括日耳曼尼亚、高卢、西班牙和不列颠的高卢帝国，约公元270年，东方的帕尔米拉女王芝诺比娅（公元267-272年）建立了她自己的帝国——帕尔米拉帝国——势力范围从叙利亚延伸到埃及。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Mapping-History-:-Crisis-of-the-3rd-Century---Introduction">
+        <h3 class="page-name title"><span class="page-emoji ">🔄&nbsp;</span>Mapping History : Crisis of the 3rd Century - Introduction</h3>
+        <small class="page-url url "><a href="https://mappinghistory.uoregon.edu/english/EU/EU08-00.html" target="_blank">(https://mappinghistory.uoregon.edu/english/EU/EU08-00.html)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 介绍了三世纪危机前的罗马稳定与后来的衰落过程。<br></small>
+    </div>
+    <div class="page-content content"><p>引言</p>
+<p>公元14年到235年，即奥古斯都去世后的两个世纪里，地中海世界经历了一段罕见的和平与稳定的时期。此后（公元235-285年），内乱和外族入侵席卷了帝国，几乎将其摧毁。本单元的目的是阐明这场危机的性质，并描述其至少部分原因。</p>
+<p>奥古斯都经过几次失误后，整顿并稳定了罗马的边境。后来的罗马皇帝在帝国边缘地区逐步扩张。沿着莱茵河、多瑙河和叙利亚边境建立的军团营地，为帝国提供了有效而稳定的防御。罗马帝国的人口和生产力达到了前所未有的高度，直到近代早期才再次出现。此外，欧洲的属民开始“罗马化”，学习拉丁语并接受罗马城市文化的特征。大多数情况下，权力和平地从一位皇帝转移到另一位皇帝手中。边境以外的蛮族部落也保持稳定和平静。</p>
+<p>到了公元3世纪中期，奥古斯都制度崩溃了。蛮族部落从许多地方入侵帝国。军团及其指挥官更热衷于“制造皇帝”，而不是“保卫帝国”。</p>
+<p>在这些权力斗争中，很少有皇帝自然死亡。当中央政府无力抵御国内外敌人的入侵时，行省脱离帝国，建立了自己的区域帝国体系，在西方产生了高卢帝国，在东方产生了帕尔米拉王国。直到公元285年之后，戴克里先和君士坦丁才成功地恢复了一定程度的秩序和稳定。尽管帝国 пережил这场危机，但它发生了转变。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="What-Was-the-Crisis-of-the-Third-Century?">
+        <h3 class="page-name title"><span class="page-emoji ">💥&nbsp;</span>What Was the Crisis of the Third Century?</h3>
+        <small class="page-url url "><a href="https://www.thecollector.com/what-was-the-crisis-of-the-third-century/" target="_blank">(https://www.thecollector.com/what-was-the-crisis-of-the-third-century/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 总结了三世纪危机的主要特征及其导致的重大变化。<br></small>
+    </div>
+    <div class="page-content content"><p>第三世纪危机是什么？</p>
+<p>第三世纪危机是一段动荡时期，其特征是军事、经济和政治挑战，将罗马帝国推向崩溃的边缘。所谓的“第三世纪危机”是罗马帝国一个混乱、无政府状态和经济不稳定的时期。不到一百年内，至少有24位皇帝轮流登基，这与从奥古斯都到塞普蒂米乌斯·塞维鲁斯时期250多年间统治的26位皇帝形成了鲜明对比。这是一个士兵皇帝的时代，他们得到军团的支持，反复发生的内战将帝国推向崩溃的边缘。一度，罗马帝国分裂成三个独立的部分。只有奥勒良皇帝的努力才挽救了帝国。第三世纪危机也看到了帝国边境压力加大，敌军推进罗马领土。难怪许多皇帝死在战场上，或被自己的人暗杀。然而，罗马帝国设法幸存下来。动荡随着戴克里先皇帝的即位而结束，他建立了一个新的政治制度——四帝共治或“四人统治”——稳定了帝国，增强了帝国的力量和实力。</p>
+<p>第三世纪危机始于一场暗杀</p>
+<p>在第三世纪危机开始时，罗马帝国享有一段稳定的时期。王位由强大的塞维鲁王朝的成员占据，该王朝由塞普蒂米乌斯·塞维鲁斯皇帝创立。具有讽刺意味的是，塞维鲁斯是加强军队重要性的人，这将在动荡的世纪中发挥重要作用。士兵们是强大的支持者，但他们日益增长的政治作用导致了士兵皇帝卡拉卡拉及其反复无常的继任者埃拉加巴卢斯的死亡。因此，当最后一位塞维鲁皇帝年轻的亚历山大·塞维鲁斯遭受严重的军事失败时，军队决定除掉这位经验不足的皇帝，于公元235年暗杀了不幸的亚历山大。取而代之的是，军团选举了一位出身低微的职业士兵马克西米努斯·特拉克。塞维鲁王朝结束了。</p>
+<p>士兵皇帝很少长时间保有王位</p>
+<p>马克西米努斯·特拉克的短暂统治开始和结束都充满了血腥。皇帝得到了军队的支持，但没有得到元老院的支持。马克西米努斯无力支付军队，在公元238年阿奎莱亚围攻战中被自己的人杀害。这时，罗马帝国的几个不同地区有多人声称拥有紫袍。更糟糕的是，罗马的敌人，日耳曼部落和萨珊王朝，利用了这种情况，入侵了帝国领土。一些皇帝在保有王位方面更为成功。他们甚至设法稳定了帝国，尽管只是短暂的。然而，他们死在了战场上，内战随之而来。戴克修斯皇帝是第一位死于与外国敌人作战的罗马皇帝。情况变得更糟。在公元260年瓦列里安皇帝在失败的波斯战役中惨败并被俘后，罗马帝国受到了严重的羞辱。除了军事损失外，致命的瘟疫袭击了帝国，摧毁了它的土地，杀死了数百万人民，尤其是在大城市。</p>
+<p>罗马帝国几乎崩溃</p>
+<p>瓦列里安的儿子加列努斯的统治时期发生了一件罗马历史上史无前例的事件。面对皇帝的缺席和日耳曼人在莱茵河的袭击，高卢的军队选择波斯图姆斯为他们的皇帝。他还得到了西班牙和高卢的支持。大约在同一时间，东部的军队支持帕尔米拉国王奥达伊纳图斯，在他死后，则支持他的女儿，这位强大而野心勃勃的女王泽诺比娅。罗马帝国现在分裂成三部分。意大利、巴尔干和北非仍然承认加列努斯皇帝。然而，他不得不面对西部的加利亚帝国和东部的帕尔米拉帝国（控制着富裕而至关重要的埃及省）。罗马帝国即将崩溃。</p>
+<p>奥勒良皇帝拯救了帝国</p>
+<p>不出所料，加列努斯也死在了战场上，他的继任者是克劳狄乌斯·戈提库斯皇帝。克劳狄乌斯是一位成功的军事指挥官，在他的指挥下，罗马军团取得了对入侵的哥特部落的重大胜利，稳定了多瑙河边境。然而，克劳狄乌斯在公元270年战斗后不久就去世了，留下拯救罗马帝国的任务给他的继承人奥勒良皇帝。奥勒良经过巨大努力，击败了泽诺比娅的军队，将这位叛逆的女王带回罗马囚禁。然后，皇帝将他的军团向西推进，彻底结束了高卢帝国。这是一个重要的胜利，奥勒良理所当然地获得了“世界恢复者”（Restitutor Orbis）的称号。这位野心勃勃的皇帝现在准备入侵波斯。然而，奥勒良在公元275年前往东方的途中被自己的军队暗杀。</p>
+<p>戴克里先结束了危机并建立了四帝共治</p>
+<p>奥勒良的突然去世导致了另一场内战，并动摇了这个他为之奋斗的帝国。野蛮人的袭击仍在继续，与萨珊帝国的战争也在继续。普罗布斯的统治短暂地稳定了局势，但这位皇帝在向东线进军时被杀害。最后，在公元284年，经过另一场内战后，戴克里先皇帝登上了王位。戴克里先意识到一个人无法统治这片广阔的领土，首先选择马克西米安为他的同事和共同皇帝。然后，为了进一步增强罗马帝国的稳定性和确保其统一，两位高级皇帝（奥古斯都）选择了两个下级皇帝（凯撒），建立了四帝共治——四人统治。就这样，第三世纪危机结束了，迎来了罗马帝国后期，这段时期也被称为统治时期。戴克里先的改革即使在四帝共治垮台后，在君士坦丁大帝的单独统治时期仍在继续。奥勒良、戴克里先和君士坦丁皇帝的努力，确保了罗马帝国的生存超过一千年，直到公元1453年中世纪罗马国家（也称为拜占庭帝国）的灭亡。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Crises-of-the-Roman-Empire-|-Western-Civilization">
+        <h3 class="page-name title"><span class="page-emoji ">🏚&nbsp;</span>Crises of the Roman Empire | Western Civilization</h3>
+        <small class="page-url url "><a href="https://courses.lumenlearning.com/atd-herkimer-westerncivilization/chapter/crises-of-the-roman-empire/" target="_blank">(https://courses.lumenlearning.com/atd-herkimer-westerncivilization/chapter/crises-of-the-roman-empire/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 说明了危机对内部贸易体系的影响以及其长远的经济后果。<br></small>
+    </div>
+    <div class="page-content content"><p>第三世纪危机最深刻和持久的影响之一是罗马在和平时期建立的庞大国内贸易网络遭到破坏。</p>
+<p>奥勒良在危机最严重的时期（270-275年）执政，他击败了汪达尔人、西哥特人、帕尔米拉人、波斯人和高卢帝国的残余势力。到274年末，罗马帝国重新统一，边防部队也已就位。一个多世纪后，罗马才再次失去对其外部敌人的军事优势。然而，数十个曾经繁荣的城市，尤其是在西罗马帝国，已被摧毁，人口分散，随着经济体系的崩溃，无法重建。甚至罗马本身在许多世纪以来都不需要防御工事；许多城市随后都筑起了厚厚的城墙。</p>
+<p>第三世纪危机最深刻和持久的影响之一是罗马庞大的国内贸易网络遭到破坏。自从奥古斯都开始的和平时期以来，帝国的经济很大程度上依赖于地中海港口之间的贸易以及遍布帝国腹地的庞大道路系统。商人们可以在几周内相对安全地往来于帝国的各个角落，将各行省生产的农产品运往城市，并将东方大城市生产的制成品运往较为偏远的行省。</p>
+<p>然而，随着第三世纪危机的爆发，这个庞大的国内贸易网络崩溃了。 widespread civil unrest使得商人们不再像以前那样安全地旅行，而严重的金融危机又由于货币贬值使得交易变得非常困难。这带来了深刻的变化，在许多方面预示着即将到来的中世纪经济的去中心化特征。</p>
+<p>大地主们，由于无法成功地将他们的农作物远距离出口，开始生产用于自给自足和当地易货的食物。他们不再从帝国的大都市进口制成品，而是开始在当地生产许多商品，通常是在他们自己的庄园里，从而开始了自给自足的“家庭经济”，这种经济在后来的几个世纪中变得普遍，并在中世纪的庄园制度中最终形成。与此同时，罗马城市中普通的自由民开始搬到农村寻找食物和更好的保护。</p>
+<p>由于经济上的必要性而变得绝望的许多这些前城市居民，以及许多小农，被迫放弃来之不易的基本公民权利，以便从大地主那里获得保护。这样做，他们成为了一种半自由的罗马公民阶级，被称为科洛努斯。他们被束缚在土地上，在后来的帝国法律中，他们的地位被规定为世袭的。这为农奴制、中世纪封建社会和中世纪农民的起源提供了一个早期模式。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Diocletian---Domestic-Reforms-|-Britannica">
+        <h3 class="page-name title"><span class="page-emoji ">⚖&nbsp;</span>Diocletian - Domestic Reforms | Britannica</h3>
+        <small class="page-url url "><a href="https://www.britannica.com/biography/Diocletian/Domestic-reforms" target="_blank">(https://www.britannica.com/biography/Diocletian/Domestic-reforms)</a><br></small>
+        <small class="page-rating rating ">评分: 9.5<br></small>
+        <small class="page-annotation annotation ">注释: 分析了戴克里先如何通过一系列改革来结束三世纪危机。<br></small>
+    </div>
+    <div class="page-content content"><p>也许对帝国的维持更为重要的是戴克里先的国内改革计划。他在这方面并非一个彻底的创新者，因为他的前任们也曾在这个方向上进行过一些尝试性的尝试；盖卢斯皇帝曾将参议员排除在军队之外，并将军事生涯与文职生涯分开。参议院逐渐被剥夺了特权。然而，戴克里先系统化了这些安排，以至于他的所有改革都指向了一种中央集权的专制君主制，这种君主制使他能够有效地采取行动。因此，戴克里先指定了执政官；参议员不再参与立法；御前顾问（consilia sacra）被分配到专门的办公室，他们的职能被严格界定，从而限制了禁卫军长官（皇帝的贴身保镖）的权力；行政工作的专业化程度提高了；官僚的数量增加了。这是官僚主义和技术官僚主义的开始，最终将席卷现代社会。这种组织使得行政工作能够减少对个人的依赖，更多地依赖法律条文的应用。事实上，正是在戴克里先统治时期，《格里高利法典》和《赫尔摩根法典》（现仅存片段）被改写。但现存的1200份诏书显示了皇帝性格的另一个方面。作为一名保守派，戴克里先关注的是维护古代美德：子女赡养年迈父母的义务；父母公正对待子女的义务；配偶遵守婚姻法的义务；儿子不得对父亲作证，奴隶不得对主人作证；以及保护私有财产、债权人和合同条款。他禁止使用酷刑，除非可以通过其他方式发现真相，并鼓励州长尽可能地自主。军队也进行了重组，恢复了旧有的纪律。驻军（地方部队）被派往边境，常备军（主要的机动军队）被部署在国内。军队人数增加了四分之一（并非像拉克坦提乌斯所说的那样增加了四倍）。同样，戴克里先的改革也融入了对人类现实的理解；他允许士兵服役20年后退役，而且，如果他限制商品价格以降低生活成本，那主要是为了让士兵的生活更容易。如果要相信拉克坦提乌斯的说法，戴克里先划分行省是为了“让自己更令人恐惧”，但事实上，这是为了让州长更靠近他们所管理的人民，并通过分割他们的权力来削弱他们的地域力量。他努力通过恢复农业和一项建筑计划来促进经济发展。这些政策是昂贵的，战争和不稳定的财政状况的遗产也是如此。戴克里先的财政解决方案仍在争论中；它们构成一个非常困难的问题。设立了两项新的税收，即jugum和capitatio，前者是对可耕种土地单位的税收，后者是对个人的税收。税收是按比例征收的，缴纳金额取决于生产力和耕作类型。通常情况下，这是一种基于人与土地之间在所有权或生产力方面的联系的社会经济税收。评估每五年进行一次；后来，这个系统被巩固成一个为期15年的周期，称为indictio。这项对可征税成年人的普查引起了激烈的批评，但它具有取代前一个时代任意征税的理论优势。可以肯定的是，金融体系存在着过度的现象；但戴克里先的目的是获得资金，他甚至没有放过此前免征土地税的意大利。这项改革伴随着货币改革，包括恢复固定设计的健全的金银币、创造新的青铜币、发行小额硬币以方便日常金融交易、分散铸币权以及将铸币厂数量从8个增加到15个。所有这些措施都有助于避免金融危机。著名的《最高限价法令》（Edictum de Maximis Pretiis）于公元301年颁布，规定工资并设定最高价格，以防止通货膨胀、滥用利润和对买方的剥削。列举了大约1000篇文章，违反者将处以死刑；对黑市交易者处以严厉的惩罚。但即便如此，这项对价格和工资的管制也无法执行，该法令后来被废除了。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Aurelian---Wikipedia">
+        <h3 class="page-name title"><span class="page-emoji ">🏆&nbsp;</span>Aurelian - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Aurelian" target="_blank">(https://en.wikipedia.org/wiki/Aurelian)</a><br></small>
+        <small class="page-rating rating ">评分: 9.0<br></small>
+        <small class="page-annotation annotation ">注释: 详细讲述了皇帝亚乌里安的军事行动及其对恢复帝国稳定的贡献。<br></small>
+    </div>
+    <div class="page-content content"><p>奥勒良（拉丁语：卢修斯·多米修斯·奥勒良；公元约214年9月9日—公元约275年11月）是罗马帝国皇帝，在三世纪危机期间（公元270年—275年）在位。作为皇帝，他取得了一系列空前的军事胜利，重整了在蛮族入侵和内部叛乱压力下几乎解体的罗马帝国。他出身卑微，很可能出生于上默西亚，于公元235年加入罗马军队，并步步高升。他后来领导了皇帝加里恩努斯的骑兵部队，直到加里恩努斯于公元268年遇刺身亡。此后，克劳狄·哥特库斯成为皇帝，直到他在公元270年去世。克劳狄的兄弟昆提卢斯随后统治了三个月，之后奥勒良夺取了帝国。在他统治期间，他击败了阿勒曼尼人，之后又击败了哥特人、汪达尔人、尤松吉人、萨尔马提亚人和卡尔皮人。奥勒良在公元273年征服帕尔米拉帝国后，恢复了帝国的东部行省。次年，他征服了西部的高卢帝国，使帝国完全统一。他还负责建造罗马的奥勒良城墙，放弃了达契亚行省，并进行了货币改革，试图遏制罗马货币的贬值。尽管多米蒂安两个世纪前是第一个要求被正式称为“dominus et deus”（主人和神）的皇帝，但在奥勒良统治之前，这些头衔从未出现在官方文件中。[4]他的成功对结束危机至关重要，为他赢得了“Restitutor Orbis”（世界恢复者）的称号。</p>
+<p>早期生活</p>
+<p>新皇帝的首要行动是巩固他在自己领土上的地位。公元270年末，奥勒良在意大利北部对汪达尔人、尤松吉人和萨尔马提亚人进行了军事行动，将他们驱逐出罗马领土。为了庆祝这些胜利，奥勒良被授予“日耳曼尼库斯·马克西姆斯”的称号。[41]皇帝的权威受到了几名篡位者——塞普蒂米乌斯、乌尔巴努斯、多米蒂亚努斯以及费利西西姆斯叛乱——的挑战，他们试图利用帝国的不安全感和军队在罗马政治中的巨大影响力。奥勒良是一位经验丰富的指挥官，他意识到军队的重要性，从他的钱币可以看出他的宣传，他希望得到军团的支持。[38]</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Roman-Emperor-Diocletian-|-Biography,-Reforms-&-Palace---Lesson-|-Study.com">
+        <h3 class="page-name title"><span class="page-emoji ">🛡&nbsp;</span>Roman Emperor Diocletian | Biography, Reforms & Palace - Lesson | Study.com</h3>
+        <small class="page-url url "><a href="https://study.com/academy/lesson/emperor-diocletian-definition-palace-reforms.html" target="_blank">(https://study.com/academy/lesson/emperor-diocletian-definition-palace-reforms.html)</a><br></small>
+        <small class="page-rating rating ">评分: 9.5<br></small>
+        <small class="page-annotation annotation ">注释: 描述了戴克里先的统治及其改革如何帮助恢复和重建帝国。<br></small>
+    </div>
+    <div class="page-content content"><p>戴克里先（约公元245-311年）是一位罗马皇帝，他的政府和经济改革帮助罗马从三世纪危机中恢复过来。戴克里先从公元285年到公元305年执政，他将罗马帝国一分为二，建立了四帝共治制，与三位共同皇帝分享统治权。罗马皇帝戴克里先还主持了基督教最后一次迫害，之后基督教才合法化。戴克里先也是第一位退休的皇帝，他退隐到位于今克罗地亚斯普利特的别墅，于公元311年去世。</p>
+<p>戴克里先的统治结束了被称为三世纪危机的动荡时期。公元235年亚历山大·塞维鲁皇帝被暗杀后，罗马帝国陷入混乱。边境危机四伏，帝国四面八方都面临着不断的冲突和战争。有多位竞争者争夺皇帝称号，每个人都有自己的军队支持他们。</p>
+<p>持续不断的战争和入侵威胁阻碍了农业和贸易，导致经济危机。罗马城市变成了设有高墙的堡垒，以抵御入侵者。戴克里先重组了罗马政府，巩固了边境，刺激了经济，帮助帝国从这段漫长的暴力时期中恢复过来。</p>
+<p>在他统治期间，戴克里先建立了四帝共治制——一种他与其他三位共同皇帝分享权力的政府体系：马克西米安、伽列里乌斯和君士坦提乌斯·克洛鲁斯。虽然以前有过不止一位皇帝，但从未有过四位皇帝共同执政。和平很快恢复到帝国，四帝共治制允许成员选择自己的继承人。尽管戴克里先尽职尽责地为每种情况都做好了计划，但他的四帝共治制度在他下台后便瓦解了。内战再次席卷帝国，最终以罗马最著名的皇帝之一君士坦丁的上台而告终。</p>
+<p>戴克里先于公元285年当选罗马帝国皇帝。在接下来的二十年里，他通过政府和经济改革，旨在使帝国更容易统治，并帮助罗马从三世纪危机中恢复过来。戴克里先第一次将罗马帝国一分为二，任命马克西米安统治西方，而他自己统治东方。戴克里先后来建立了四帝共治制，任命伽列里乌斯和君士坦提乌斯·克洛鲁斯为共同皇帝。所有四位成员都有自己的领土，但伽列里乌斯、君士坦提乌斯和马克西米安都对戴克里先负责。戴克里先和马克西米安收养了伽列里乌斯和君士坦提乌斯，并训练他们在他退休或去世后管理帝国。</p>
+<p>戴克里先的经济改革（包括人丁税制）刺激了经济，并建立了正常的税收制度，但他在301年的《最高物价法令》失败了。戴克里先成为第一位退休的皇帝，于305年退位，退隐到他位于今克罗地亚的宫殿堡垒。虽然戴克里先使罗马摆脱了长期的无政府状态，但他的统治却被大迫害玷污了。这是君士坦丁在整个帝国使宗教自由合法化之前的最后一次迫害基督徒。戴克里先的许多改革在他公元311年去世后很久才延续下去，成为拜占庭帝国政府的基础。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Maximinus-Thrax:-The-Rise-and-Fall-of-Rome's-Warrior-Emperor-|-Roman-Emperors">
+        <h3 class="page-name title"><span class="page-emoji ">👑&nbsp;</span>Maximinus Thrax: The Rise and Fall of Rome's Warrior Emperor | Roman Emperors</h3>
+        <small class="page-url url "><a href="https://www.romanemperors.com/roman-emperor-maximinus-thrax" target="_blank">(https://www.romanemperors.com/roman-emperor-maximinus-thrax)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 概述了马克西米努斯·特拉克斯的崛起及其带来的影响。<br></small>
+    </div>
+    <div class="page-content content"><p>马克西米努斯·特拉克，公元 173 年左右出生，名为盖乌斯·尤利乌斯·维鲁斯·马克西米努斯，是第一位出身非元老院，甚至非贵族阶层的罗马皇帝。马克西米努斯出身卑微，身材高大，他在公元 235 年当上皇帝，标志着罗马历史上的一个重要转折点。他的统治持续到公元 238 年，其特点是军事侵略、与罗马元老院关系紧张，以及第三世纪危机（长达近 50 年的动荡和内乱时期）的开始。马克西米努斯的故事是野心、残暴以及在内外部势力持续威胁下统治帝国的挑战。</p>
+<p>马克西米努斯·特拉克的遗产是一个充满争议的话题，由他非凡的崛起和动荡的统治所塑造。他经常被人们铭记为罗马帝国军事化的象征，在此期间，军团的忠诚成为决定皇帝合法性的主要因素。他的统治标志着权力从传统的元老院贵族手中转移，反映出军队在罗马政治中日益增长的力量。</p>
+<p>马克西米努斯统治也预示着第三世纪危机的开始，在这近 50 年的时间里，罗马帝国经历了严重的政治动荡、经济衰退和外部威胁。他未能维持军事力量与文官政府之间的微妙平衡，导致罗马国家在此期间瓦解。</p>
+<p>尽管马克西米努斯·特拉克作为统治者存在缺陷，但他的故事证明了罗马帝国权力变化的易变性。他从卑微的出身跃升到帝国最高的职位，随后又迅速垮台，这说明了在一个动荡加剧的时期，帝国权力的不稳定性。马克西米努斯短暂的统治对罗马帝国留下了持久的影响，为第三世纪剩余时间里将要定义的挑战奠定了基础。</p></div>
+
+</div>
+</div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navigate = document.querySelector(".navigate");
+        if (!navigate) {
+            console.error("找不到 .navigate 元素!");
+            return;
+        }
+
+        let lastScrollY = 0; // 初始化滚动位置
+        const scrollContainer = document.querySelector(".right-column");
+        let isNavigating = false;
+        document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                isNavigating = true; // 设置导航状态
+                navigate.classList.add("navigate-hidden"); // 隐藏导航栏
+
+                setTimeout(() => {
+                    isNavigating = false;
+                }, 100);
+            });
+        })
+
+        scrollContainer.addEventListener("scroll", () => {
+            const currentScrollY = scrollContainer.scrollTop; // 获取容器的滚动位置
+
+            // 判断滚动方向
+            if (!isNavigating) {
+                if (currentScrollY > lastScrollY) {
+                    navigate.classList.add("navigate-hidden");
+                } else {
+                    navigate.classList.remove("navigate-hidden");
+                }
+            }
+
+            // 更新上一次的滚动位置
+            lastScrollY = currentScrollY;
+        });
+    });
+</script>
+</html>

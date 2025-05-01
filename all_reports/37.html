@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2024年成都市中心隐藏的低成本美食. 你可能需要用中文搜索</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; 
+            background-color: #f4f6f8; 
+            color: #333; 
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        
+        .content {
+            border-radius: 12px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); 
+            background-color: #fff; 
+            padding: 16px; 
+            margin-bottom: 16px; 
+        }
+
+        
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .left-column{
+            flex: 0.47;
+        }
+        .right-column{
+            flex: 0.53;
+        }
+
+        .left-column {
+            background-color: #eef6ff; 
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; 
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Noto Serif", "SimSun", serif; 
+            position: relative;
+        }
+        .resizer {
+            width: 6px;
+            cursor: col-resize;
+            background-color: #d1d1d1;
+        }
+
+
+        
+        .title {
+            font-size: 1.4em; 
+            font-weight: 600; 
+            color: #1a1a1a; 
+            margin-bottom: 12px; 
+        }
+
+        .page-name.title {
+            font-size: 1.8em; 
+            font-weight: bold; 
+            color: #222; 
+            margin: 16px 0; 
+            text-align: left; 
+        }
+
+        .section-title {
+            font-size: 1.4em; 
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; 
+        }
+
+        
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; 
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; 
+            padding: 12px; 
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; 
+            border: 1px solid #dde3ea; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+            margin-bottom: 20px; 
+        }
+
+        
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; 
+            margin: 20px 0; 
+        }
+
+        
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; 
+            color: #666; 
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; 
+            border-radius: 8px; 
+            line-height: 1.4;
+            margin-bottom: 10px; 
+        }
+
+        
+        .page-rating {
+            background-color: #e8f4ff; 
+            color: #0078d7; 
+            font-weight: bold; 
+            border: 1px solid #aad4ff; 
+        }
+
+        
+        .page-annotation {
+            background-color: #fff5e5; 
+            color: #cc8400; 
+            font-style: italic; 
+            border: 1px solid #ffcc66; 
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; 
+        }
+
+        
+        a {
+            color: #0078d7; 
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+        
+        .content > * {
+            margin-bottom: 12px; 
+        }
+
+        
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; 
+            z-index: 300; 
+            background-color: #ffffff; 
+            color: #222; 
+            font-size: 1.1em; 
+            font-weight: 500; 
+            padding: 12px 16px; 
+            border-radius: 8px; 
+            border: 1px solid #d1e4f2; 
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05),  0 2px 4px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 16px; 
+            text-align: left; 
+            line-height: 1.6; 
+            font-family: "Inter", "Noto Sans", sans-serif; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        
+        .section-link-box {
+            display: inline-block; 
+            margin: 4px 2px; 
+        }
+
+        .section-link {
+            display: inline-flex; 
+            align-items: center; 
+            padding: 6px 12px; 
+            background-color: #eef6ff; 
+            color: #0078d7; 
+            font-size: 0.95em; 
+            font-weight: 500; 
+            text-decoration: none; 
+            border: 1px solid #d1e4f2; 
+            border-radius: 20px; 
+            transition: all 0.2s ease; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; 
+            color: #005bb5; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            text-decoration: underline; 
+        }
+
+        
+        .navigate {
+            display: flex; 
+            max-width: 40%;
+            width: fit-content; 
+            flex-wrap: nowrap; 
+            overflow-x: auto; 
+            gap: 4px; 
+            justify-content: center; 
+            padding: 4px 4px; 
+            background-color: #f4f6f8; 
+            border-radius: 12px; 
+
+            position: fixed;
+            top: 0;
+            left: 55%;
+            
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease; 
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        
+        .navigate-item {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            background-color: #ffffff; 
+            padding: 3px 6px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            transition: all 0.3s ease; 
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            transform: translateY(2px); 
+        }
+        .navigate-item.active {
+            box-shadow: 0 0 10px 3px rgba(0, 120, 215, 0.5); 
+            transform: translateY(1px); 
+        }
+        .navigate-item a {
+            text-decoration: none; 
+            color: #0078d7; 
+            font-weight: bold; 
+            font-size: 1em; 
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; 
+            margin-bottom: 1px; 
+        }
+        .navigate-item-id {
+            font-size: 0.9em; 
+            color: #555; 
+        }
+
+        [id] { 
+            scroll-margin-top: 55px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            2024年成都市中心隐藏的低成本美食. 你可能需要用中文搜索
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">成都市中心低成本美食的具体定位</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#成都美食潮流双地标，太古里最全美食地图陪你边吃边耍！">
+    🍽太古里低成本餐厅</a></div><div class="section-link-box"><a class="section-link" href="#吃货必看：成都最全的美食地图">
+    🍜经济实惠美食地理</a></div><div class="section-link-box"><a class="section-link" href="#赴一场舌尖上的旅行丨真正的民间美食，都隐藏在成都边上这个小县城里_Feekr旅行_新浪博客">
+    🏞新津地方小吃</a></div><div class="section-link-box"><a class="section-link" href="#成都的熱門特色小食[2024]-|-Trip.Best-|-Trip.com">
+    🥟高评分餐厅介绍</a></div><div class="section-link-box"><a class="section-link" href="#美食爱好者不可错过的2024年度美食趋势前瞻_饮食_食品_发展">
+    🌟</a></div><div class="section-link-box"><a class="section-link" href="#嘉州葉婆婆缽缽雞（太古裏店）餐廳、地址、電話、相片、用戶真實評價，油簍街68號（成都太古里亞朵S酒店對面），成都餐廳推薦---Trip.com">
+    🐔</a></div><div class="section-link-box"><a class="section-link" href="#四川华西都市网络科技有限公司-安排上了！外地朋友来成都，这5家成都小吃集合店值得一去_华西都市报-华西都市网">
+    🍴</a></div><div class="section-link-box"><a class="section-link" href="#2021年大众点评“必吃榜”揭晓！成都这62家餐厅入选---川观新闻">
+    💰</a></div><div class="section-link-box"><a class="section-link" href="#“熊猫之城-美食之都”--2024成都国际美食嘉年华·2024成都熊猫国际美食荟联合启幕_手机新浪网">
+    🎉</a></div><div class="section-link-box"><a class="section-link" href="#新经济观察丨成都20家餐厅上榜“2024黑珍珠”-川菜、火锅成本地上榜餐厅数量前二中餐菜系_城市_发展_菜品">
+    🌏</a></div></div>
+    <div class="section-content content"><h2>成都市中心低成本美食具体定位 (2024)</h2>
+<p>本报告整理2024年成都市中心低成本美食信息，旨在为用户提供便捷的筛选依据，涵盖以下几方面：</p>
+<p><strong>一、太古里区域中低价位餐厅:</strong>  太古里区域虽然以高端餐饮为主，但部分餐厅提供性价比高的选择，例如：</p>
+<ul>
+<li>
+<p><strong>柴门饭儿:</strong>  位于太古里摩卡站旁1243B，人均消费78元，主营新派川菜，特色菜品包括樱桃肉、糖醋大黄鱼、蛤蜊青椒辣子鸡等，装修融入熊猫和川剧元素，窗外可观大慈寺及漫广场。（联系电话：028-86759777）</p>
+</li>
+<li>
+<p><strong>摩卡站:</strong>  并非咖啡店，而是一家主打糙米健康理念的西餐厅，适合下午茶，人均消费约79元（文中未明确说明），特色菜品包括牛油果虾沙拉、米饭博士、红米饭等。（文中未提供地址及联系方式）</p>
+</li>
+<li>
+<p><strong>8号水产:</strong>  源于深圳，主打手抓海鲜，全国已有70余家门店，口碑良好（点评网9分5星好评），人均消费72元，特色菜品包括土龙烧饼、冰粥以及20余种口味烤鱼，目前新店有开业折扣，持续至27号。（文中未提供太古里店具体地址及联系方式）</p>
+</li>
+<li>
+<p><strong>吴系茶餐厅:</strong>  位于中纱帽街8号远洋太古里第二层2328号商铺，人均消费85元，主营港式茶点，菜品种类丰富，好评率达99%，特色菜品包括冰镇菠萝油、豉汁凤爪、烧味双拼等。（需注意菜品种类多可能导致消费超预算）</p>
+</li>
+<li>
+<p><strong>Eggo餐厅:</strong> 人均消费48元（文中未提供菜品信息及其他信息）。</p>
+</li>
+</ul>
+<p><strong>二、经济实惠本地小餐馆:</strong>  这些餐厅更贴近本地生活，提供地道成都风味，价格亲民，例如：</p>
+<ul>
+<li>
+<p><strong>小巷子饭馆:</strong> 人均40元，主营家常菜，特色菜品：韭黄肉丝（文中未提供更多信息）。</p>
+</li>
+<li>
+<p><strong>南堂小馆:</strong> 人均80元，主营新派川菜，特色菜品：毛血旺、手撕豆腐（文中未提供更多信息）。</p>
+</li>
+<li>
+<p><strong>大众点评推荐-杨三娘跷脚牛肉:</strong>  文中未提供具体信息，需参考大众点评平台信息。</p>
+</li>
+</ul>
+<p><strong>三、特色小吃:</strong>  这类选择更能体现成都街头文化和地方特色：</p>
+<ul>
+<li>
+<p><strong>新津特色小吃:</strong> 新津县黄辣丁（水煮野生黄辣丁人均110元，养殖黄辣丁68元/斤，野生黄辣丁138元/斤，另有川北凉粉），龙须牛肉（人均25元，搭配火巴萝卜），老一品蹄花（人均约20元，包含米饭和泡菜）。</p>
+</li>
+<li>
+<p><strong>成都经典小吃:</strong> 钵钵鸡、担担面、龙抄手等（价格因店而异，普遍较低），建议参考大众点评或其他平台获取具体信息和价格。这些小吃遍布成都街头，选择范围广泛。</p>
+</li>
+</ul>
+<p><strong>四、新开经济实惠餐厅:</strong></p>
+<ul>
+<li>
+<p><strong>时代广场6楼经济餐厅:</strong>  人均19元，特色菜品：米线、毛血旺（需补充餐厅名称及更详细地址信息）。</p>
+</li>
+<li>
+<p><strong>陈麻婆豆腐（青华路店）:</strong> 人均40元，招牌菜品：麻婆豆腐（需补充更详细地址信息）。</p>
+</li>
+</ul>
+<p><strong>五、补充信息:</strong></p>
+<p>本报告信息部分源于网络信息，价格和菜品信息可能存在变动，建议用户出发前再次核实。  报告还参考了2024年成都国际美食嘉年华及大众点评必吃榜等信息，提供了更全面的成都美食信息，但需用户自行查找具体餐厅地址及联系方式。  此外，2024年大众点评“必吃榜”中，成都入选餐厅平均客单价为77元，可作为参考。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">用户反馈与评价</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#吃货必看：成都最全的美食地图">
+    🍜菜品口味</a></div><div class="section-link-box"><a class="section-link" href="#成都美食潮流双地标，太古里最全美食地图陪你边吃边耍！">
+    🍽性价比</a></div><div class="section-link-box"><a class="section-link" href="#赴一场舌尖上的旅行丨真正的民间美食，都隐藏在成都边上这个小县城里_Feekr旅行_新浪博客">
+    🏞菜品特色</a></div><div class="section-link-box"><a class="section-link" href="#嘉州葉婆婆缽缽雞（太古裏店）餐廳、地址、電話、相片、用戶真實評價，油簍街68號（成都太古里亞朵S酒店對面），成都餐廳推薦---Trip.com">
+    🐔口味小吃</a></div><div class="section-link-box"><a class="section-link" href="#易老媽蹄花（東城根總店）餐廳、地址、電話、相片、用戶真實評價，東城根南街17號附4號，成都餐廳推薦---Trip.com">
+    🥢性价比</a></div><div class="section-link-box"><a class="section-link" href="#成都真的挺好的，但是求求你们别来了-36氪">
+    💼菜品推荐</a></div><div class="section-link-box"><a class="section-link" href="#2024成都米其林指南">
+    ⭐用餐体验</a></div><div class="section-link-box"><a class="section-link" href="#成都的熱門特色小食[2024]-|-Trip.Best-|-Trip.com">
+    🥟</a></div><div class="section-link-box"><a class="section-link" href="#2024年十大饮食行业趋势---大厨工坊">
+    🥗</a></div><div class="section-link-box"><a class="section-link" href="#西月城譚豆花(春熙路店)餐廳、地址、電話、相片、用戶真實評價，春熙路街道暑襪北二街56號1-6號（總府大廈沿街商鋪），成都餐廳推薦---Trip.com">
+    🍲</a></div><div class="section-link-box"><a class="section-link" href="#成都市-美食-推荐-小红书-at-DuckDuckGo">
+    🥘</a></div><div class="section-link-box"><a class="section-link" href="#成都好吃的中餐馆（成都比较出名的中餐店）---义乌市皖瑞智能科技有限公司">
+    🏮</a></div><div class="section-link-box"><a class="section-link" href="#新经济观察丨成都20家餐厅上榜“2024黑珍珠”-川菜、火锅成本地上榜餐厅数量前二中餐菜系_城市_发展_菜品">
+    🌏</a></div></div>
+    <div class="section-content content"><h2>用户反馈与评价维度：</h2>
+<p>用户评价主要集中在以下四个方面：</p>
+<p><strong>1. 性价比:</strong>  用户对价格极其敏感，反复强调“经济实惠”、“价格亲民”、“性价比高”，力求在有限预算内获得最佳用餐体验。  例如，“小巷子饭馆”（人均40元）和“时代广场6楼经济餐厅”（人均19元）因其低廉价格获得好评；即使是“南堂小馆”（人均80元）这类相对高价位餐厅，其4.7的高分也证明了菜品和服务质量对弥补价格劣势的关键作用。  众多评论中体现了用户对高性价比的强烈需求。</p>
+<p><strong>2. 菜品口味及特色:</strong> 用户评价中频繁提及具体菜品，例如“小巷子饭馆”的韭黄肉丝和凉拌兔丁，“南堂小馆”的毛血旺和手撕豆腐，“柴门饭儿”的樱桃肉和糖醋大黄鱼，以及新津地区的黄辣丁和川北凉粉等，充分体现了用户对菜品口味和地方特色的重视。“陈麻婆豆腐”因其招牌菜而获得广泛好评，再次佐证了菜品特色对用户选择的影响。  部分评论还详细描述了菜品的口感、味道及烹饪方法，展现了用户对美食的细腻体验和独特需求。</p>
+<p><strong>3. 用餐体验:</strong>  除了价格和口味，用餐环境和服务质量也受到用户关注。“南堂小馆”的优雅环境获得好评，“小巷子饭馆”的评论中也涉及环境和服务评价。  部分用户评论中提及餐厅卫生状况和服务态度，例如此次评论中出现的“店裡人滿為患，但不怎麼要排隊”，体现了用餐体验的重要性。   这些细节评价显示，用户对舒适的就餐环境和优质服务有较高期望。</p>
+<p><strong>4. 信息真实性与可靠性:</strong>  用户评论中既包含对美食博主推荐（如李子柒和密子君）的正面评价，也提及对部分负面评价（如包家巷牛肉）的考量，表明用户对信息真实性和可靠性有谨慎态度，并对博主个人信誉有所关注。  用户倾向于通过多渠道信息获取更全面、更客观的用餐体验，以避免信息偏差。</p>
+<p><strong>总结:</strong> 成都市中心低成本美食的选择，并非单纯依赖单一因素，而是用户对价格、口味、用餐体验和信息真实性进行综合考量后的结果。  用户希望在经济实惠的前提下，获得令人满意且具有地方特色的美食体验，并期望获得真实可靠的信息来源，辅助其做出选择。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">新的经济实惠餐饮场所</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#成都美食潮流双地标，太古里最全美食地图陪你边吃边耍！">
+    🍽餐厅推荐</a></div><div class="section-link-box"><a class="section-link" href="#嘉州葉婆婆缽缽雞（太古裏店）餐廳、地址、電話、相片、用戶真實評價，油簍街68號（成都太古里亞朵S酒店對面），成都餐廳推薦---Trip.com">
+    🐔用户评价</a></div><div class="section-link-box"><a class="section-link" href="#成都的熱門特色小食[2024]-|-Trip.Best-|-Trip.com">
+    🥟特色小吃</a></div><div class="section-link-box"><a class="section-link" href="#吃货必看：成都最全的美食地图">
+    🍜</a></div><div class="section-link-box"><a class="section-link" href="#赴一场舌尖上的旅行丨真正的民间美食，都隐藏在成都边上这个小县城里_Feekr旅行_新浪博客">
+    🏞</a></div><div class="section-link-box"><a class="section-link" href="#西月城譚豆花(春熙路店)餐廳、地址、電話、相片、用戶真實評價，春熙路街道暑襪北二街56號1-6號（總府大廈沿街商鋪），成都餐廳推薦---Trip.com">
+    🍲</a></div><div class="section-link-box"><a class="section-link" href="#易老媽蹄花（東城根總店）餐廳、地址、電話、相片、用戶真實評價，東城根南街17號附4號，成都餐廳推薦---Trip.com">
+    🥢</a></div></div>
+    <div class="section-content content"><h2>2024年成都市中心隐藏的低成本美食：新的经济实惠餐饮场所</h2>
+<p>本报告的核心价值在于为用户提供具体、实用且可靠的成都经济实惠餐饮信息，以高效满足用户需求。报告重点关注以下几个方面：</p>
+<p><strong>1. 详尽的餐厅信息:</strong>  报告列举了多家餐厅，提供名称、地址、人均消费、特色菜品及联系电话（若有）。例如：</p>
+<ul>
+<li><strong>太古里区域:</strong>  柴门旗下新派川菜馆（人均78元，特色菜：樱桃肉、糖醋大黄鱼、蛤蜊青椒辣子鸡；电话：028-86759777；地址：锦江区太古里摩卡站旁边1243B），嘉州叶婆婆钵钵鸡（太古里店）（Trip.com评价4.0-5.0分，567条评价，人均消费约61港币，特色菜：红油味钵钵鸡、老红糖冰粉、特色臊子蛋炒饭；地址：油篓街68号），吴系茶餐厅（人均85元，特色菜：冰镇菠萝油、豉汁凤爪、烧味双拼；地址：中纱帽街8号远洋太古里第二层2328号商铺），Eggo餐厅（人均48元）。</li>
+<li><strong>其他区域:</strong>  新津县的特色小吃，例如水煮野生黄辣丁（人均110元，野生黄辣丁138元/斤，养殖黄辣丁68元/斤；推荐水煮野生黄辣丁和川北凉粉），龙须牛肉（人均25元，特色菜：龙须牛肉和火巴萝卜；地址：新津县黄鹤大道82号），老一品蹄花（人均约20元，特色菜：蹄花；地址：新津县，具体地址未在网页中明确指出）。</li>
+</ul>
+<p>这些信息直接帮助预算有限的游客规划行程和选择就餐地点。</p>
+<p><strong>2. 用户评价与推荐:</strong> 报告整合了Trip.com、大众点评等平台的用户评价和推荐，例如嘉州叶婆婆钵钵鸡（Trip.com 567条评价，好评率高）和西月城谭豆花（Trip.com 多条评价，对甜水面、冰醉豆花等好评如潮），提升报告可信度，为用户提供参考依据。  易老妈蹄花(东城根总店)的Trip.com评价也显示了其高人气和用户满意度(多条5.0分评价)。</p>
+<p><strong>3.  新兴餐饮场所:</strong> 报告提及了2024年新开或受关注的经济型餐厅，例如时代广场6楼的经济餐厅（具体信息缺失，需补充），以及陈麻婆豆腐（青华路店）（需补充信息，如价格、菜品等），展现成都餐饮市场动态。</p>
+<p><strong>4. 多样化美食选择:</strong> 报告涵盖钵钵鸡、担担面、川菜、茶餐厅、新津特色小吃等多种类型，满足不同口味需求，体现成都美食的多样性。  文中提及的羊西线、沙西线、春熙路、府南新区等区域也包含了大量不同类型的餐饮选择（需补充部分餐厅信息）。</p>
+<p>总而言之，本报告通过提供详细的餐厅信息、用户评价和新兴餐饮场所信息，以及涵盖多种美食类型，有效地帮助用户找到符合自身需求的低成本美食。  需补充部分餐厅的具体信息，以增强报告的完整性和实用性。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">社交媒体推荐及线上反馈</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#吃货必看：成都最全的美食地图">
+    🍜美食街与餐厅信息</a></div><div class="section-link-box"><a class="section-link" href="#成都的熱門特色小食[2024]-|-Trip.Best-|-Trip.com">
+    🥟餐厅评价和推荐</a></div><div class="section-link-box"><a class="section-link" href="#四川华西都市网络科技有限公司-安排上了！外地朋友来成都，这5家成都小吃集合店值得一去_华西都市报-华西都市网">
+    🍴小吃集合店推荐</a></div><div class="section-link-box"><a class="section-link" href="#2021年大众点评“必吃榜”揭晓！成都这62家餐厅入选---川观新闻">
+    💰性价比高的餐厅</a></div><div class="section-link-box"><a class="section-link" href="#2024年十大饮食行业趋势---大厨工坊">
+    🥗植物性饮食趋势</a></div><div class="section-link-box"><a class="section-link" href="#2024成都米其林指南">
+    ⭐米其林推荐餐厅</a></div><div class="section-link-box"><a class="section-link" href="#成都美食潮流双地标，太古里最全美食地图陪你边吃边耍！">
+    🍽高档餐厅推荐</a></div><div class="section-link-box"><a class="section-link" href="#美食爱好者不可错过的2024年度美食趋势前瞻_饮食_食品_发展">
+    🌟美食趋势前瞻</a></div><div class="section-link-box"><a class="section-link" href="#成都美食吃货博主排名（成都美食博主排行）---义乌市皖瑞智能科技有限公司">
+    👩美食博主推荐</a></div><div class="section-link-box"><a class="section-link" href="#嘉州葉婆婆缽缽雞（太古裏店）餐廳、地址、電話、相片、用戶真實評價，油簍街68號（成都太古里亞朵S酒店對面），成都餐廳推薦---Trip.com">
+    🐔缽缽鸡餐厅介绍</a></div><div class="section-link-box"><a class="section-link" href="#易老媽蹄花（東城根總店）餐廳、地址、電話、相片、用戶真實評價，東城根南街17號附4號，成都餐廳推薦---Trip.com">
+    🥢蹄花餐厅及评价</a></div><div class="section-link-box"><a class="section-link" href="#成都市-美食-推荐-小红书-at-DuckDuckGo">
+    🥘特色菜和小吃总结</a></div><div class="section-link-box"><a class="section-link" href="#新经济观察丨成都20家餐厅上榜“2024黑珍珠”-川菜、火锅成本地上榜餐厅数量前二中餐菜系_城市_发展_菜品">
+    🌏黑珍珠餐厅指南</a></div><div class="section-link-box"><a class="section-link" href="#赴一场舌尖上的旅行丨真正的民间美食，都隐藏在成都边上这个小县城里_Feekr旅行_新浪博客">
+    🏞</a></div><div class="section-link-box"><a class="section-link" href="#成都南堂小馆·新川菜(德商国际店)攻略,南堂小馆·新川菜(德商国际店)特色菜推荐/菜单/人均消费/电话/地址/菜系/点评/营业时间【携程美食】">
+    👨</a></div><div class="section-link-box"><a class="section-link" href="#西月城譚豆花(春熙路店)餐廳、地址、電話、相片、用戶真實評價，春熙路街道暑襪北二街56號1-6號（總府大廈沿街商鋪），成都餐廳推薦---Trip.com">
+    🍲</a></div><div class="section-link-box"><a class="section-link" href="#小红书露营成都美食攻略（小红书成都旅游攻略）---义乌市皖瑞智能科技有限公司">
+    🏕</a></div><div class="section-link-box"><a class="section-link" href="#成都小巷子饭馆攻略,小巷子饭馆特色菜推荐/菜单/人均消费/电话/地址/菜系/点评/营业时间【携程美食】">
+    🧑</a></div></div>
+    <div class="section-content content"><h2>社交媒体推荐及线上反馈</h2>
+<p>本报告基于用户反馈，对成都市中心低成本美食的社交媒体推荐和线上评价进行了分析，发现用户主要关注以下三个方面：</p>
+<p><strong>一、信息真实性和可靠性:</strong> 用户对小红书、大众点评等平台上低成本美食推荐的真实性存疑。部分美食博主推荐的餐厅获得正面评价，例如Trip.com上对嘉州叶婆婆钵钵鸡（太古里店）的4.0-5.0分好评，以及对易老妈蹄花（东城根总店）的众多5.0分好评，显示其口碑良好。但部分餐厅如文中提到的“包家巷牛肉”却收到负面反馈，这导致用户对博主推荐的信任度存在差异，难以有效甄别信息真伪，增加选择成本和踩雷风险。  这需要更精细的评价体系和信息筛选机制，例如结合多平台评价，并对评论进行情感分析，以提高信息可靠性。</p>
+<p><strong>二、热门程度及最新趋势:</strong> 用户高度关注2024年成都低成本美食的热门程度和最新趋势，例如植物性食品消费增长（如报告中提及的植物基饮食趋势）、科技美食（3D打印食物，虽然目前在低成本领域应用有限）、本地食材选择（越来越多的餐厅主打本地食材，例如文中提到的新津县的特色美食）以及社交媒体对消费行为的影响。  用户期望了解2024年成都哪些类型的低成本美食最受欢迎，以及这些趋势如何影响市场，例如新开业的经济实惠餐厅数量及类型。  这表明，对市场趋势的精准把握和及时更新，对满足用户需求至关重要。</p>
+<p><strong>三、具体餐厅信息:</strong>  用户需求涵盖餐厅的具体信息，包括餐厅名称、地址、人均消费、特色菜品、用户评价（包括评分及评论内容）。  例如，报告中详细介绍了多个餐厅，包括陈麻婆豆腐 (青华路)、西月城谭豆花(春熙路店)、南堂小馆·新川菜(德商国际店)，以及文中提及的多个特色小吃店，并引用了Trip.com, 大众点评等平台的用户评价（例如对西月城谭豆花的评价分数及评论内容），这为用户提供决策参考。  然而，信息仍需更系统化，例如建立数据库，方便用户按菜系、价格、地理位置等维度进行筛选，提升用户体验。  此外，应积极补充2024年新开业的经济实惠餐厅信息。</p>
+<p>总而言之，为了满足用户的需求，未来的研究应更注重信息真实性验证、市场趋势分析，以及餐厅信息的系统化和可视化呈现。  这需要结合多种数据来源，并运用更先进的数据分析技术。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">成都市美食文化活动</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#成都的熱門特色小食[2024]-|-Trip.Best-|-Trip.com">
+    🥟热门餐厅</a></div><div class="section-link-box"><a class="section-link" href="#“熊猫之城-美食之都”--2024成都国际美食嘉年华·2024成都熊猫国际美食荟联合启幕_手机新浪网">
+    🎉美食活动</a></div><div class="section-link-box"><a class="section-link" href="#美食爱好者不可错过的2024年度美食趋势前瞻_饮食_食品_发展">
+    🌟美食风潮</a></div><div class="section-link-box"><a class="section-link" href="#四川华西都市网络科技有限公司-安排上了！外地朋友来成都，这5家成都小吃集合店值得一去_华西都市报-华西都市网">
+    🍴小吃集合</a></div><div class="section-link-box"><a class="section-link" href="#成都美食潮流双地标，太古里最全美食地图陪你边吃边耍！">
+    🍽</a></div><div class="section-link-box"><a class="section-link" href="#吃货必看：成都最全的美食地图">
+    🍜</a></div><div class="section-link-box"><a class="section-link" href="#嘉州葉婆婆缽缽雞（太古裏店）餐廳、地址、電話、相片、用戶真實評價，油簍街68號（成都太古里亞朵S酒店對面），成都餐廳推薦---Trip.com">
+    🐔</a></div><div class="section-link-box"><a class="section-link" href="#新经济观察丨成都20家餐厅上榜“2024黑珍珠”-川菜、火锅成本地上榜餐厅数量前二中餐菜系_城市_发展_菜品">
+    🌏</a></div><div class="section-link-box"><a class="section-link" href="#成都市-美食-推荐-小红书-at-DuckDuckGo">
+    🥘</a></div><div class="section-link-box"><a class="section-link" href="#2024成都米其林指南">
+    ⭐</a></div></div>
+    <div class="section-content content"><h2>2024年成都市中心隐藏的低成本美食：成都市美食文化活动</h2>
+<p><strong>2024成都国际美食嘉年华</strong>于2024年9月27日至10月7日（为期11天）在成都文殊坊蜀艺剧院前广场举行，由成都市商务局、成都市人民政府外事办公室、成都市文化广电旅游局主办，成都市各区（市）县政府协办。活动主题为“国际范 成都味”，旨在推广成都特色美食及国际美食文化。</p>
+<p><strong>活动亮点:</strong></p>
+<ul>
+<li><strong>“2024成都国际美食嘉年华熊猫美食地图”</strong>:  该地图整合了“中华老字号”、“成都名店”、“成都名小吃”、“成都重点餐饮单位”、“熊猫美食榜”上榜的100余家特色餐厅，为游客提供全面的美食打卡指南。</li>
+<li><strong>十条“寻味成都”美食主题线路</strong>:  这十条线路（包含Citywalk和Cityride两种形式）串联起成都的特色景区（例如杜甫草堂，宽窄巷子等）、街区（例如文殊坊，太古里等）和商圈，方便游客探索成都美食。</li>
+<li><strong>“总领事推荐餐厅”</strong>:  考虑到成都拥有超过2000家外国餐厅，该活动特别推出“总领事推荐餐厅”板块，旨在推荐由各国驻蓉、渝领事机构总领事推荐的餐厅，为消费者提供更多元化的国际美食选择，从而展现成都“美食+文化”、“美食+旅游”的城市魅力。  </li>
+</ul></div>
+</div>
+</div>
+<div class="resizer"></div>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item" href="#成都美食潮流双地标，太古里最全美食地图陪你边吃边耍！">
+    <a href="#成都美食潮流双地标，太古里最全美食地图陪你边吃边耍！" class="navigate-item-emoji ">🍽</a>
+    <a href="#成都美食潮流双地标，太古里最全美食地图陪你边吃边耍！" class="navigate-item-id">1</a>
+</div><div class="navigate-item" href="#吃货必看：成都最全的美食地图">
+    <a href="#吃货必看：成都最全的美食地图" class="navigate-item-emoji ">🍜</a>
+    <a href="#吃货必看：成都最全的美食地图" class="navigate-item-id">2</a>
+</div><div class="navigate-item" href="#美食爱好者不可错过的2024年度美食趋势前瞻_饮食_食品_发展">
+    <a href="#美食爱好者不可错过的2024年度美食趋势前瞻_饮食_食品_发展" class="navigate-item-emoji ">🌟</a>
+    <a href="#美食爱好者不可错过的2024年度美食趋势前瞻_饮食_食品_发展" class="navigate-item-id">3</a>
+</div><div class="navigate-item" href="#成都的熱門特色小食[2024]-|-Trip.Best-|-Trip.com">
+    <a href="#成都的熱門特色小食[2024]-|-Trip.Best-|-Trip.com" class="navigate-item-emoji ">🥟</a>
+    <a href="#成都的熱門特色小食[2024]-|-Trip.Best-|-Trip.com" class="navigate-item-id">4</a>
+</div><div class="navigate-item" href="#2024成都米其林指南">
+    <a href="#2024成都米其林指南" class="navigate-item-emoji ">⭐</a>
+    <a href="#2024成都米其林指南" class="navigate-item-id">5</a>
+</div><div class="navigate-item" href="#成都好吃的中餐馆（成都比较出名的中餐店）---义乌市皖瑞智能科技有限公司">
+    <a href="#成都好吃的中餐馆（成都比较出名的中餐店）---义乌市皖瑞智能科技有限公司" class="navigate-item-emoji ">🏮</a>
+    <a href="#成都好吃的中餐馆（成都比较出名的中餐店）---义乌市皖瑞智能科技有限公司" class="navigate-item-id">6</a>
+</div><div class="navigate-item" href="#“熊猫之城-美食之都”--2024成都国际美食嘉年华·2024成都熊猫国际美食荟联合启幕_手机新浪网">
+    <a href="#“熊猫之城-美食之都”--2024成都国际美食嘉年华·2024成都熊猫国际美食荟联合启幕_手机新浪网" class="navigate-item-emoji ">🎉</a>
+    <a href="#“熊猫之城-美食之都”--2024成都国际美食嘉年华·2024成都熊猫国际美食荟联合启幕_手机新浪网" class="navigate-item-id">7</a>
+</div><div class="navigate-item" href="#新经济观察丨成都20家餐厅上榜“2024黑珍珠”-川菜、火锅成本地上榜餐厅数量前二中餐菜系_城市_发展_菜品">
+    <a href="#新经济观察丨成都20家餐厅上榜“2024黑珍珠”-川菜、火锅成本地上榜餐厅数量前二中餐菜系_城市_发展_菜品" class="navigate-item-emoji ">🌏</a>
+    <a href="#新经济观察丨成都20家餐厅上榜“2024黑珍珠”-川菜、火锅成本地上榜餐厅数量前二中餐菜系_城市_发展_菜品" class="navigate-item-id">8</a>
+</div><div class="navigate-item" href="#2024年十大饮食行业趋势---大厨工坊">
+    <a href="#2024年十大饮食行业趋势---大厨工坊" class="navigate-item-emoji ">🥗</a>
+    <a href="#2024年十大饮食行业趋势---大厨工坊" class="navigate-item-id">9</a>
+</div><div class="navigate-item" href="#嘉州葉婆婆缽缽雞（太古裏店）餐廳、地址、電話、相片、用戶真實評價，油簍街68號（成都太古里亞朵S酒店對面），成都餐廳推薦---Trip.com">
+    <a href="#嘉州葉婆婆缽缽雞（太古裏店）餐廳、地址、電話、相片、用戶真實評價，油簍街68號（成都太古里亞朵S酒店對面），成都餐廳推薦---Trip.com" class="navigate-item-emoji ">🐔</a>
+    <a href="#嘉州葉婆婆缽缽雞（太古裏店）餐廳、地址、電話、相片、用戶真實評價，油簍街68號（成都太古里亞朵S酒店對面），成都餐廳推薦---Trip.com" class="navigate-item-id">10</a>
+</div><div class="navigate-item" href="#四川华西都市网络科技有限公司-安排上了！外地朋友来成都，这5家成都小吃集合店值得一去_华西都市报-华西都市网">
+    <a href="#四川华西都市网络科技有限公司-安排上了！外地朋友来成都，这5家成都小吃集合店值得一去_华西都市报-华西都市网" class="navigate-item-emoji ">🍴</a>
+    <a href="#四川华西都市网络科技有限公司-安排上了！外地朋友来成都，这5家成都小吃集合店值得一去_华西都市报-华西都市网" class="navigate-item-id">11</a>
+</div><div class="navigate-item" href="#成都市-美食-推荐-小红书-at-DuckDuckGo">
+    <a href="#成都市-美食-推荐-小红书-at-DuckDuckGo" class="navigate-item-emoji ">🥘</a>
+    <a href="#成都市-美食-推荐-小红书-at-DuckDuckGo" class="navigate-item-id">12</a>
+</div><div class="navigate-item" href="#成都南堂小馆·新川菜(德商国际店)攻略,南堂小馆·新川菜(德商国际店)特色菜推荐/菜单/人均消费/电话/地址/菜系/点评/营业时间【携程美食】">
+    <a href="#成都南堂小馆·新川菜(德商国际店)攻略,南堂小馆·新川菜(德商国际店)特色菜推荐/菜单/人均消费/电话/地址/菜系/点评/营业时间【携程美食】" class="navigate-item-emoji ">👨</a>
+    <a href="#成都南堂小馆·新川菜(德商国际店)攻略,南堂小馆·新川菜(德商国际店)特色菜推荐/菜单/人均消费/电话/地址/菜系/点评/营业时间【携程美食】" class="navigate-item-id">13</a>
+</div><div class="navigate-item" href="#赴一场舌尖上的旅行丨真正的民间美食，都隐藏在成都边上这个小县城里_Feekr旅行_新浪博客">
+    <a href="#赴一场舌尖上的旅行丨真正的民间美食，都隐藏在成都边上这个小县城里_Feekr旅行_新浪博客" class="navigate-item-emoji ">🏞</a>
+    <a href="#赴一场舌尖上的旅行丨真正的民间美食，都隐藏在成都边上这个小县城里_Feekr旅行_新浪博客" class="navigate-item-id">14</a>
+</div><div class="navigate-item" href="#西月城譚豆花(春熙路店)餐廳、地址、電話、相片、用戶真實評價，春熙路街道暑襪北二街56號1-6號（總府大廈沿街商鋪），成都餐廳推薦---Trip.com">
+    <a href="#西月城譚豆花(春熙路店)餐廳、地址、電話、相片、用戶真實評價，春熙路街道暑襪北二街56號1-6號（總府大廈沿街商鋪），成都餐廳推薦---Trip.com" class="navigate-item-emoji ">🍲</a>
+    <a href="#西月城譚豆花(春熙路店)餐廳、地址、電話、相片、用戶真實評價，春熙路街道暑襪北二街56號1-6號（總府大廈沿街商鋪），成都餐廳推薦---Trip.com" class="navigate-item-id">15</a>
+</div><div class="navigate-item" href="#易老媽蹄花（東城根總店）餐廳、地址、電話、相片、用戶真實評價，東城根南街17號附4號，成都餐廳推薦---Trip.com">
+    <a href="#易老媽蹄花（東城根總店）餐廳、地址、電話、相片、用戶真實評價，東城根南街17號附4號，成都餐廳推薦---Trip.com" class="navigate-item-emoji ">🥢</a>
+    <a href="#易老媽蹄花（東城根總店）餐廳、地址、電話、相片、用戶真實評價，東城根南街17號附4號，成都餐廳推薦---Trip.com" class="navigate-item-id">16</a>
+</div><div class="navigate-item" href="#小红书露营成都美食攻略（小红书成都旅游攻略）---义乌市皖瑞智能科技有限公司">
+    <a href="#小红书露营成都美食攻略（小红书成都旅游攻略）---义乌市皖瑞智能科技有限公司" class="navigate-item-emoji ">🏕</a>
+    <a href="#小红书露营成都美食攻略（小红书成都旅游攻略）---义乌市皖瑞智能科技有限公司" class="navigate-item-id">17</a>
+</div><div class="navigate-item" href="#2021年大众点评“必吃榜”揭晓！成都这62家餐厅入选---川观新闻">
+    <a href="#2021年大众点评“必吃榜”揭晓！成都这62家餐厅入选---川观新闻" class="navigate-item-emoji ">💰</a>
+    <a href="#2021年大众点评“必吃榜”揭晓！成都这62家餐厅入选---川观新闻" class="navigate-item-id">18</a>
+</div><div class="navigate-item" href="#成都美食吃货博主排名（成都美食博主排行）---义乌市皖瑞智能科技有限公司">
+    <a href="#成都美食吃货博主排名（成都美食博主排行）---义乌市皖瑞智能科技有限公司" class="navigate-item-emoji ">👩</a>
+    <a href="#成都美食吃货博主排名（成都美食博主排行）---义乌市皖瑞智能科技有限公司" class="navigate-item-id">19</a>
+</div><div class="navigate-item" href="#成都小巷子饭馆攻略,小巷子饭馆特色菜推荐/菜单/人均消费/电话/地址/菜系/点评/营业时间【携程美食】">
+    <a href="#成都小巷子饭馆攻略,小巷子饭馆特色菜推荐/菜单/人均消费/电话/地址/菜系/点评/营业时间【携程美食】" class="navigate-item-emoji ">🧑</a>
+    <a href="#成都小巷子饭馆攻略,小巷子饭馆特色菜推荐/菜单/人均消费/电话/地址/菜系/点评/营业时间【携程美食】" class="navigate-item-id">20</a>
+</div><div class="navigate-item" href="#成都真的挺好的，但是求求你们别来了-36氪">
+    <a href="#成都真的挺好的，但是求求你们别来了-36氪" class="navigate-item-emoji ">💼</a>
+    <a href="#成都真的挺好的，但是求求你们别来了-36氪" class="navigate-item-id">21</a>
+</div>
+    </div>
+    <div class="page"  id="成都美食潮流双地标，太古里最全美食地图陪你边吃边耍！">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🍽&nbsp;</span>成都美食潮流双地标，太古里最全美食地图陪你边吃边耍！</h3>
+        <small class="page-url url "><a href="https://www.cdfer.com/index.php?s=/CdferArticle/index/detail/id/966" target="_blank">(https://www.cdfer.com/index.php?s=/CdferArticle/index/detail/id/966)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 太古里区域的美食推荐，为寻求性价比高的用餐体验的游客提供有价值的信息。<br></small>
+    </div>
+    <div class="page-content content"><h2>太古里新晋川菜馆</h2>
+<p>越来越多高逼格的餐厅在太古里落户，高档的环境，多类型的选择，让太古里成了请客吃饭的首选地！柴门旗下超赞的一家新派川菜馆子，性价比很高，一开业立刻就火了。装修是浓浓的四川style，各种熊猫和川剧元素。窗外可以直接看到大慈寺和漫广场，good look！菜品摆盘也有创新，感觉像在吃西餐一样。众多吃货都在推荐，太古里怎么能少了川菜是不是？</p>
+<p>推荐菜：「樱桃肉」「糖醋大黄鱼」「蛤蜊青椒辣子鸡」</p>
+<p>人均：78元/人</p>
+<p>电话：028-86759777</p>
+<p>地址：锦江区 太古里摩卡站旁边1243B</p>
+<h2>摩卡站西餐厅</h2>
+<p>摩卡站不是咖啡店，是一家满足多吃糙米少吃精粮理念的西餐店，适合喝点下午茶什么的。</p>
+<p>推荐菜：「牛油果虾沙拉」「米饭博士」「红米饭」</p>
+<h2>8号水产市场海鲜店</h2>
+<p>8号水产市场，在深圳和帝火爆了，堪称排队等号用餐界的神话。作为主营海鲜的餐厅，8号水产打的是“手抓用餐”概念，放下刀刀叉叉，更有一种在泰国吃大排档的feel~!不过价格有点小贵哦！外婆家旗下的品牌。目前在全国开了70多家，开一家火一家。点评网上全是9分5星好评！20种口味的烤鱼随便选。目前新店在搞开业折扣，持续到27号都在打折。</p>
+<p>推荐菜：「土龙烧饼」「冰粥」「酱香、蒜香、香辣等口味烤鱼」</p>
+<p>人均：72元/人</p>
+<h2>吴系茶餐厅</h2>
+<p>港式茶餐厅，99%的好评率。餐单五花八门的，种类太多了，每一样都想点，同时一不小心就会点多，吃下来就好贵惹！</p>
+<p>推荐菜：「冰镇菠萝油」「豉汁凤爪」「烧味双拼」</p>
+<p>人均：85元/人</p>
+<p>地址：中纱帽街8号远洋太古里第二层2328号商铺</p>
+<h2>Eggo餐厅</h2>
+<p>人均：48元/人</p>
+        <small class="page-url url "><a href="https://www.cdfer.com/index.php?s=/CdferArticle/index/detail/id/966" target="_blank">(https://www.cdfer.com/index.php?s=/CdferArticle/index/detail/id/966)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="吃货必看：成都最全的美食地图">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🍜&nbsp;</span>吃货必看：成都最全的美食地图</h3>
+        <small class="page-url url "><a href="http://www.360doc.com/content/20/0531/18/15867642_915723592.shtml" target="_blank">(http://www.360doc.com/content/20/0531/18/15867642_915723592.shtml)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 对成都市各大美食区的详细介绍，适合游客了解食物选择。<br></small>
+    </div>
+    <div class="page-content content"><h2>成都美食地图</h2>
+<h3>羊西线</h3>
+<p>都说成都是吃货的天堂，好吃的太多！这次小编收罗了从羊西线—沙西线—春熙路—府南新区—草堂文化美食—望平美食区—人民南路—武侯美食区—玉林小区—领事馆路—中华园—科华路的美食。羊西线是成都最具代表性的美食一条街。这里不仅有川菜，各地美味皆可品尝。品牌餐饮云集，高中低档纷呈，中餐为主兼有火锅，它还带动了旁边的府南新区火锅一条街的崛起。羊西线有着闻名全国的餐饮品牌：川菜有红杏、大蓉和、夕阳红等；粤菜有银杏、圣淘沙、潮皇阁等；还有日式松阪烤肉、韩风苑韩国烧烤、巴西烤肉等国外美食。</p>
+<p>交通：公交7路、32路、37路、48路、51路、52路、59路、69路、83路、113路、339路、802路、805路</p>
+<h3>沙西线</h3>
+<p>沙西线美食街代表着平民、大众，这里的美食不仅味道正宗，而且价格便宜，适合朋友聚会、请客。这里虽然不是很高档，却更贴近食客的心。能在吃上注重娱乐性的地方就得数沙西线。此线有每日爆满的夕阳红老菜馆，其大妈红烧肉、大妈带鱼等大妈系列菜品倾倒八方食客；味之道食府以墨脱石锅煨出的“石锅汤”胜过补药；故乡缘川菜馆院中有院，小桥流水，还有那川味浓厚的合欢香菇包，脆皮粉蒸肉、江鲢系列菜品；顺兴老茶馆的功夫茶、名小吃、变脸、吐火、滚灯，将川菜、川酒、川茶、川戏之风采一并领略。</p>
+<p>交通：公交3路、56路、56A路、93路、101路</p>
+<h3>春熙路</h3>
+<p>春熙路虽然是一条商业步行街，但这里的美食同样出名。这里云集了众多成都特色小吃，各种餐馆也层出不穷。最出名的美食便是龙抄手，此外还有夫妻肺片、麻辣龙虾、红油鸡丝锅魁、各种串串香也让人垂涎欲滴。</p>
+<p>交通：公交43路、47路、55路、56A路、56路、58路、81路、98A路、104路、298路</p>
+<h3>府南新区</h3>
+<p>府南新区紧邻羊西线的府南新区是崭新的特色火锅一条街，有近20家大大小小的火锅在此营业。除了食圣黄辣丁火锅、曾实记泥鳅王风味庄的土泥鳅火锅、三只耳冷锅鱼、赵老四九尺鹅肠火锅等品牌火锅之外，还有笋子鸡火锅、连锅、盆盆虾、山珍火锅、美蛙火锅等。</p>
+<p>交通：公交32路、63路、64路、79路、82路、163路</p>
+<h3>草堂文化美食圈</h3>
+<p>草堂文化美食圈包括琴台路、锦里西路、芳邻路和青华路以及清江东路等，紧邻杜甫草堂、青羊宫几个特色景点，是蓉城文化底蕴最为深厚的美食圈。琴台路上有狮子楼火锅、皇城老妈，都是成都十佳餐饮企业，文君酒家、飘雪酒楼各具特色，琴台北京烤鸭与毗河土鲢鱼庄风味独特，民丰泰燕翅鲍更显高档。芳邻路上有十多家风格各异的主题酒吧，是蓉城新兴的酒吧一条街；青华路上则有谭鱼头、老成都公馆菜、随园食坊、陈麻婆豆腐、金满堂、南河人家等酒楼；清江东路有卞氏菜根香、重庆德庄火锅、重庆孔亮鳝鱼火锅、江北老灶、大宅门火锅、金盆地酒楼、重庆盆盆虾等。</p>
+<p>交通：公交19路、35路、59路、82路、165路、170路、208路至青华路；公交5路、13路、47路、59A路、64路、78路、81路至清江东路</p>
+<h3>望平美食区</h3>
+<p>望平美食区是成都较早形成的美食区之一。这里有飘香酒楼、锦官驿酒楼、仁和鲶鱼庄、三只耳、张记怪味怪、外婆乡村菜等大型的餐饮场所，更多的还是中小型的酒楼。锦官驿招牌菜品有湖南风味的酱椒鱼头、沪上风味的毛蟹年糕和粤式锦官大王蛇等；外婆乡村菜酒楼的乡村鸡、飘香骨、霸王鱼头等麻辣鲜香；三只耳冷锅鱼鱼肉鱼头鲜嫩滑爽。</p>
+<p>交通：公交76路</p>
+<h3>人民南路</h3>
+<p>人民南路上，有中日合资的蜀丰百菜百味酒楼，川菜第一品牌的巴国布衣，卞氏菜根香锦绣店也在这条线上长盛不衰。南延线上，多是走的园林式生态餐饮之路，典型的有外婆家、食圣生态园、南草坪、雍雅山房、女儿村、蒋排骨等。</p>
+<p>交通：公交16路、26路、45路、61路、78路、118路、213路、300路、334路</p>
+<h3>武侯美食区</h3>
+<p>武侯美食区包括武侯祠大街、内外双楠和武侯大道。武侯祠大街上老房子南门店环境优雅，钦膳斋的药膳是港台和东南亚游客来蓉必吃的滋补菜。双楠美食广场拥有一家川菜、一家海鲜、一家西餐、两家火锅和一个歌城；此外双楠还有天天排队的重庆孔亮鳝鱼火锅，有海鲜川做的先行者老石人家辣螃蟹，有广东家常菜做得特别到位的良记广东大排挡。处于外双楠的逸都城汇集了众多酒楼，如喜庆坊、大卫营蓝色海岸、新天府大酒楼、高丽轩韩国烤肉、凯悦家宴、七星咖啡等。武侯大道上武福源酒楼菜品味正有魂，价格贴近大众；大唐人则是该条线上的领军品牌，既有大厅开架自助又有包间点菜，还有歌舞伴餐和茶园配套，其怪味兔头为不传之秘方配制。</p>
+<p>交通：公交8路、21路至武侯祠大街；公交51路、52路、53路、72路、100路、111路、175路、334路、368路、805路、809路至武侯大道；公交21路至双楠</p>
+<h3>玉林小区</h3>
+<p>玉林小区的知名餐饮品牌有满庭芳、陶然居、川江号子、三只耳、武陵山珍等等。附近还有成都最负盛名的玉林酒吧街。</p>
+<p>交通：公交12路、59路、61路、109路、115路至玉林北路；153路至玉林东路；59路、61路、76路、109路、115路、153路至玉林南路</p>
+<h3>领事馆路</h3>
+<p>领事馆路是成都餐饮密度最大的地方，这里有魏火锅、快乐老家、玉龙火锅、赵老四九尺鹅肠火锅、合记鲍鱼火锅等风味火锅，有海上海、海上皇、天仁海鲜粤菜馆，有经营杭帮菜的新外滩酒店，有卖东南亚菜的泰国鱼翅馆，还有阳光餐厅、繁华居、大自然河鲜馆、毛哥老鸭汤等川菜酒楼。</p>
+<p>交通：公交76路、77路、79路、114路</p>
+<h3>中华园</h3>
+<p>中华园里面则有红杏、大蓉和、故乡缘、龙鹰鸭王、汉席酒楼、蜀江春等知名品牌，其中龙鹰鸭王火锅城是全国首家前店后厂的餐饮店，荣获“中国火锅名宴”称号。</p>
+<p>交通：公交16路、99路、118路、300路、303路、504路至人民南路四段</p>
+<h3>科华路</h3>
+<p>这里有好些各具特色的小型西餐馆，不少老外爱来光顾。祖母的厨房经营传统的美式西餐，米诺比萨卖意式西餐，佐治城西餐厅则以现代美式西餐闻名；欧洲房子是成都欧式西餐的代表。科华路上红星大酒楼的婶婶家宴颇有名气，老成都公馆菜得月楼包间颇具特色，红鼎坊火锅夜夜翻台。</p>
+<p>交通：公交51路、52路、79路、92路、97路、114路、139路、304路、501路、817路至二环科华路口</p>
+        <small class="page-url url "><a href="http://www.360doc.com/content/20/0531/18/15867642_915723592.shtml" target="_blank">(http://www.360doc.com/content/20/0531/18/15867642_915723592.shtml)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="美食爱好者不可错过的2024年度美食趋势前瞻_饮食_食品_发展">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🌟&nbsp;</span>美食爱好者不可错过的2024年度美食趋势前瞻_饮食_食品_发展</h3>
+        <small class="page-url url "><a href="https://www.sohu.com/a/835630680_122001006" target="_blank">(https://www.sohu.com/a/835630680_122001006)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 总结并预测2024年的美食趋势，为消费者提供新的用餐灵感。<br></small>
+    </div>
+    <div class="page-content content"><h2>2024年度美食趋势前瞻</h2>
+<p>美食，总是让人热议的话题。尤其2024年将至，各种美食趋势逐渐显现。无论你是资深吃货、烹饪高手，还是美食爱好者，以下趋势都值得关注。健康、环保和科技发展，将使2024年成为令人期待的美食变革年。</p>
+<p>我们已进入2024年的倒计时，美食行业正经历翻天覆地的变化：从食材到烹饪方式，从餐饮形式到消费习惯，都与日常生活息息相关。</p>
+<p>近期调查显示，越来越多的人关注食品健康与营养，这将引领新的美食风潮。</p>
+<h3>植物基饮食</h3>
+<p>2024年的一大亮点是植物基饮食。越来越多的人摒弃传统肉类饮食，选择植物基美食，这不仅为了健康，也为了环保。</p>
+<p>食品研究机构数据显示，未来一年内，植物基餐饮市场预计增长30%。这种健康环保的饮食方式，激发了餐饮企业的灵感，众多创意菜肴应运而生。</p>
+<h3>3D打印食物</h3>
+<p>随着科技发展，3D打印食物逐渐进入视野。虽然概念略显未来感，但越来越多的餐馆和食品公司开始尝试应用这项技术，从设计到生产，颠覆我们的用餐体验。机器打印食物的新奇感，将成为流行趋势的诱惑之一。</p>
+<h3>本地化食材选择</h3>
+<p>人们开始关注食品来源，注重选择本地农场的新鲜食材。这不仅使消费者享受到更优质美食，也促进当地经济发展。2024年，众多餐厅推出以本地农产品为主的菜单。</p>
+<h3>社交媒体的影响</h3>
+<p>社交媒体对美食文化的影响日益显著。2024年，短视频平台将成为美食传播的重要渠道。美食博主的崛起，不仅推荐潮流美食，也带来独特的餐饮文化体验。</p>
+<p>从植物基饮食到科技美食，再到本地化选材和社交媒体的影响，这些变化不仅是饮食习惯的转变，更推动行业创新发展。</p>
+<p>期待在新的一年，大家体验更多美味与惊喜，享受创意与健康的饮食时代。许多新概念餐厅和菜品将应运而生，让我们拭目以待！</p>
+        <small class="page-url url "><a href="https://www.sohu.com/a/835630680_122001006" target="_blank">(https://www.sohu.com/a/835630680_122001006)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="成都的熱門特色小食[2024]-|-Trip.Best-|-Trip.com">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🥟&nbsp;</span>成都的熱門特色小食[2024] | Trip.Best | Trip.com</h3>
+        <small class="page-url url "><a href="https://hk.trip.com/toplist/tripbest/chengdu-best-light-bites-100900005454" target="_blank">(https://hk.trip.com/toplist/tripbest/chengdu-best-light-bites-100900005454)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 推荐多家在成都受欢迎的小吃和饭店，实用的低成本消费指导。<br></small>
+    </div>
+    <div class="page-content content"><h2>成都美食推薦</h2>
+<h3>嘉州葉婆婆缽缽雞（太古裏店）</h3>
+<p>5.0/5  567則評價  小食 HK$61
+成都.春熙路/太古里商業區  距離市中心1.9公里
+入選2024 Greater China - 特色小食
+推薦原因: 紅油味缽缽雞(2836人推薦) | 位於成都太古里  197人已收藏  485則正面評價</p>
+<h3>西月城譚豆花(春熙路店)</h3>
+<p>4.2/5  75則評價  小食 HK$30
+成都.春熙路/太古里商業區  距離市中心1公里
+入選2024 Greater China - 特色小食
+推薦原因: 饅子豆花(1823人推薦) | 百年老店  102人已收藏  35%正面評價</p>
+<h3>易老媽蹄花（東城根總店）</h3>
+<p>4.3/5  456則評價  川菜 HK$60
+成都.寬窄巷子/中醫學院附近地區  距離市中心507米
+入選2024 Greater China - 特色小食
+推薦原因: 老媽蹄花(977人推薦) | 創立80多年  356則正面評價  最近瀏覽量100+</p>
+<h3>洞子口張老二涼粉（文殊院店）</h3>
+<p>4.5/5  298則評價  小食 HK$18
+成都.文殊院/龍湖上城天街  距離市中心2公里
+入選2024 Greater China - 特色小食
+推薦原因: 甜水麵 (704人推薦) | 創立70多年  211則正面評價  最近瀏覽量100+</p>
+<h3>樂山鮮知味缽缽雞（草堂北路店）</h3>
+<p>4.7/5  411則評價  小食 HK$44
+成都.杜甫草堂/省人民醫院  距離市中心3.6公里
+入選2024 Greater China - 特色小食
+328則正面評價  最近瀏覽量100+</p>
+<h3>鐘水餃(人民公園店)</h3>
+<p>4.3/5  197則評價  小食 HK$44
+成都.寬窄巷子/中醫學院附近地區  距離市中心661米
+137人已收藏  135則正面評價</p>
+<h3>小名堂擔擔甜水麵（東城根街店）</h3>
+<p>4.6/5  280則評價  小食 HK$23
+成都.寬窄巷子/中醫學院附近地區  距離市中心542米
+256則正面評價  最近瀏覽量100+</p>
+<h3>鄧記新一代糖油果子</h3>
+<p>4.5/5  22則評價  小食 HK$5
+成都.寬窄巷子/中醫學院附近地區  距離市中心1.8公里
+最近瀏覽量100+</p>
+<h3>重慶森林缽缽雞(川大店)</h3>
+<p>4.5/5  11則評價  小食 HK$33
+成都.合江亭/九眼橋附近地區  距離市中心3.8公里
+最近瀏覽量100+</p>
+<h3>雙流馮記老媽兔頭·川菜館（青石橋總店）</h3>
+<p>5.0/5  5則評價  小食 HK$71
+成都.春熙路/太古里商業區  距離市中心712米
+最近瀏覽量100+</p>
+        <small class="page-url url "><a href="https://hk.trip.com/toplist/tripbest/chengdu-best-light-bites-100900005454" target="_blank">(https://hk.trip.com/toplist/tripbest/chengdu-best-light-bites-100900005454)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="2024成都米其林指南">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">⭐&nbsp;</span>2024成都米其林指南</h3>
+        <small class="page-url url "><a href="https://jiobxn.github.io/2023/10/16/michelin-chengdu/" target="_blank">(https://jiobxn.github.io/2023/10/16/michelin-chengdu/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 提供米其林指南的评价为成都的餐饮业提供了更高层次的认同。<br></small>
+    </div>
+    <div class="page-content content"><h2>陈麻婆豆腐 (青华路)</h2>
+<p>青羊区青华路10号, 成都, 中国大陆地区。¥ · 川菜</p>
+<h3>米其林指南的观点</h3>
+<p>必比登推介：具素质且经济实惠的美食</p>
+<p>相传于清朝同治元年，陈麻婆创作出麻婆豆腐这道经典料理，经过百载后这老字号已是成都人尽皆知的美食据点。此招牌菜以保温性强的石锅烧煮，搭配米饭份外滋味。其他菜式如钟水饺、荷叶粉蒸肉均价廉物美，值得一试。楼高两层，装潢古色古香，经常座无虚席，建议订座并支付按金，节省排队时间。</p>
+        <small class="page-url url "><a href="https://jiobxn.github.io/2023/10/16/michelin-chengdu/" target="_blank">(https://jiobxn.github.io/2023/10/16/michelin-chengdu/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="成都好吃的中餐馆（成都比较出名的中餐店）---义乌市皖瑞智能科技有限公司">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏮&nbsp;</span>成都好吃的中餐馆（成都比较出名的中餐店） - 义乌市皖瑞智能科技有限公司</h3>
+        <small class="page-url url "><a href="http://www.bastasparrantan.com/post/38867.html" target="_blank">(http://www.bastasparrantan.com/post/38867.html)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 多家中式餐厅的介绍为消费者提供了多样化的选择。<br></small>
+    </div>
+    <div class="page-content content"><h2>饕林餐厅与永乐饭店</h2>
+<p>饕林餐厅：这家餐厅以其独特的川菜风味和优雅的就餐环境而闻名。饕林餐厅注重菜品的创新与传承，将传统川菜与现代烹饪技艺相结合，为食客带来别具一格的美食体验。</p>
+<p>永乐饭店：永乐饭店是成都一家历史悠久的中餐厅，以正宗的川菜和优质的服务赢得了广大食客的喜爱。</p>
+<h2>悦食尚品</h2>
+<p>悦食尚品：这是一家融合了川菜和粤菜精华的高端中餐馆。这里的菜品以精致和口味正宗著称。餐厅的装修典雅，服务一流，无论是商务宴请还是家庭聚餐，都是一个很好的选择。在这里，你可以品尝到兼具两地特色的美食，满足味蕾的不同需求。此外，餐厅还会定期推出新菜品，让食客体验不同的味觉盛宴。</p>
+<h2>部分成都推荐中餐馆</h2>
+<p>皇宫中餐：位于新都区的皇宫中餐是一家高品质的中餐馆，提供各种精致的中式菜肴，如川菜、粤菜、京菜等。</p>
+<p>柿子树中餐：位于新都区的柿子树中餐是一家口碑非常好的中餐馆，提供各种传统的中式菜肴和小吃，如麻辣烫、串串香、担担面等。</p>
+<h2>老码头火锅和红石榴餐厅</h2>
+<p>老码头火锅：这是一家以川菜和火锅为主打的餐厅，提供正宗的川菜和火锅菜品。他们的麻辣香锅和水煮鱼都非常受欢迎，口味浓郁，辣味十足。此外，他们还提供各种海鲜和肉类选择，让您可以尽情享受美食。</p>
+<p>红石榴餐厅：这是一家以粤菜为主的餐厅，提供精致的粤菜菜品。</p>
+<h2>全聚德烤鸭店</h2>
+<p>全聚德烤鸭店：这家店是来自北京的品牌，主打正宗的北京烤鸭。这里的烤鸭皮脆肉嫩，香味扑鼻，嚼上一口就会让你忘却所有烦恼。此外，全聚德烤鸭店还推出了多种与烤鸭相关的小吃和配菜，如什锦***、鸭掌、豆酥鸭肝等，可谓是一家让人难以忘怀的中餐餐馆。</p>
+<h2>成都温江区中餐推荐</h2>
+<p>成都温江区有很多中餐可以选择，让你尝尽美食佳肴。</p>
+<p>小全：它是一家家庭式中餐馆。这里的菜式非常地道，特别是川菜和湖南菜。经典的鱼香肉丝，口味独特的经典炒菜和辣椒炒鸡，都是值得推荐的菜品。</p>
+<h2>成都万象城好吃的中餐</h2>
+<p>全聚德烤鸭店：这家店是来自北京的品牌，主打正宗的北京烤鸭。这里的烤鸭皮脆肉嫩，香味扑鼻，嚼上一口就会让你忘却所有烦恼。此外，全聚德烤鸭店还推出了多种与烤鸭相关的小吃和配菜，如什锦***、鸭掌、豆酥鸭肝等，可谓是一家让人难以忘怀的中餐餐馆。</p>
+<p>麻辣香锅：万象城的麻辣香锅以其独特的麻辣味道和丰富的食材选择，成为许多食客的心头好。其特色在于将多种食材如肉类、蔬菜、海鲜等炒制在一起，加入特制的麻辣调料，让人回味无穷。</p>
+<p>烤鱼：万象城的烤鱼店提供各式各样的烤鱼选择，从常见的草鱼、鲈鱼到特色鱼类应有尽有。</p>
+<p>海鲜自助餐厅及传统中餐厅：华润万象城有多家特色餐厅，如海鲜自助餐厅，提供各类新鲜海鲜和精美的西餐料理，为食客带来丰富的味觉体验。传统中餐厅则注重传承经典，提供正宗的中华美食，如川菜、粤菜等，满足食客对中式美食的需求。</p>
+<p>特色小吃：除了特色餐厅，华润万象城还有各种特色小吃。第一层和第二层有众多的小吃摊位，包括了各种地方特色小吃，如重庆小面、四川烤鱼、广式早茶、东北大饺子等，口味十分地道，深受消费者的喜爱。同时，汉堡王、麦当劳等国际知名餐饮品牌也在此设有分店，为爱好西式快餐的人提供了更多选择。第三层则是高端美食餐厅的集中区域，包括各种亚洲和欧洲菜系。</p>
+<p>必胜客和星巴克：必胜客提供各种口味的披萨、意面和沙拉等，是一家适合家庭聚餐的餐厅。星巴克提供各种咖啡和茶饮，以及甜点和面包等。</p>
+<h2>成都温江最好吃的中餐馆</h2>
+<p>陈麻婆豆腐：陈麻婆豆腐是温江区一家以麻婆豆腐为特色的中餐馆。这里的麻婆豆腐选用上好的豆腐和牛肉末，搭配特制的麻辣调料，味道鲜美，辣而不燥。此外，陈麻婆豆腐还提供各种川菜，如回锅肉、水煮肉片等，让您在品尝美食的同时，也能感受到四川传统菜肴的魅力。</p>
+<p>雪柳渡：雪柳渡是温江最好的中餐馆之一，位于温江两河西路。这家餐厅的环境很好，菜品味道鲜美，种类繁多，包括各种川菜和粤菜等。</p>
+<p>温江区其他中餐馆推荐：</p>
+<p>一家位于温江的小餐馆：虽然环境不如高档餐厅，但是菜品味道很好，价格也很实惠。特别是他们的蛙和兔，非常受欢迎。</p>
+<p>温江天香酒楼：温江天香酒楼是当地一家以川菜为主的餐厅，其菜品口味正宗，深受当地人和游客的喜爱。酒楼环境优雅，服务周到，是品尝四川美食的好去处。</p>
+<p>温江府邸酒楼：温江府邸酒楼是一家融合川菜、粤菜等多种菜系的高端餐厅。</p>
+<p>杨板凳川菜馆：这家店的柔辣口味足可令人难忘，并且价格公道，老板娘也十分热情好客。在这里品尝老火靓汤、毛血旺和麻辣香锅等地方美食，是您来温江度***的不二选择。</p>
+<p>陇上风味馆：这家饭店既有川菜口味，也有徽菜、滇菜等多种地方美食。</p>
+        <small class="page-url url "><a href="http://www.bastasparrantan.com/post/38867.html" target="_blank">(http://www.bastasparrantan.com/post/38867.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="“熊猫之城-美食之都”--2024成都国际美食嘉年华·2024成都熊猫国际美食荟联合启幕_手机新浪网">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🎉&nbsp;</span>“熊猫之城 美食之都”  2024成都国际美食嘉年华·2024成都熊猫国际美食荟联合启幕_手机新浪网</h3>
+        <small class="page-url url "><a href="https://sc.sina.cn/news/b/2024-09-27/detail-incqrezs4718289.d.html?oid=20&vt=4&wm=1000_0009&cid=76905&node_id=76905" target="_blank">(https://sc.sina.cn/news/b/2024-09-27/detail-incqrezs4718289.d.html?oid=20&vt=4&wm=1000_0009&cid=76905&node_id=76905)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 成都国际美食嘉年华的总结，为用户了解即将来临的活动提供了信息。<br></small>
+    </div>
+    <div class="page-content content"><h2>2024成都国际美食嘉年华·成都熊猫国际美食荟联合启幕</h2>
+<p>2024年9月27日，由成都市商务局、成都市人民政府外事办公室、成都市文化广电旅游局主办，成都市各区（市）县政府协办的2024成都国际美食嘉年华·2024成都熊猫国际美食荟，在成都文殊坊蜀艺剧院前广场联合启幕。</p>
+<p>本届美食嘉年华汇聚老字号、特色小吃以及不同国家（地区）的特色美食，推出以“国际范 成都味”为主题的美食市集。这场为期11天的美食集市，在成都特色商业街区文殊坊举办，将吸引更多市民和游客前往。川西民居建筑、各种各样的美食、时尚潮玩，将让中外各方宾朋全方位感受世界美食之都“美食+文化”、“美食+旅游”的魅力。</p>
+<h3>“2024成都国际美食嘉年华熊猫地图”及主题线路</h3>
+<p>本届美食嘉年华开幕仪式的一大亮点是梳理并发布了“2024成都国际美食嘉年华熊猫美食地图”。该地图整合了“中华老字号”、“成都名店”、“成都名小吃”、“成都重点餐饮单位”、“熊猫美食榜”上榜企业，涵盖100余家特色餐厅，为游客提供最全方位的美食打卡指引。</p>
+<p>同时，10条“寻味成都”citywalk、cityride美食主题线路也火热出炉，串联起成都的特色景区、街区、商圈，将成为游客探索成都的不二之选。</p>
+<h3>“总领事推荐餐厅”</h3>
+<p>目前，成都的外国餐厅数量已超过2000家。成都熊猫国际美食荟在开幕仪式上推出“总领事推荐餐厅”，上榜餐厅均为相关国家驻蓉、渝领事机构的总领事推荐，为消费者提供更多元的选择。成都向世界展示了品类繁多的地道成都风味，成都人民也敞开胸怀接纳了来自世界各地的异域佳肴。</p>
+        <small class="page-url url "><a href="https://sc.sina.cn/news/b/2024-09-27/detail-incqrezs4718289.d.html?oid=20&vt=4&wm=1000_0009&cid=76905&node_id=76905" target="_blank">(https://sc.sina.cn/news/b/2024-09-27/detail-incqrezs4718289.d.html?oid=20&vt=4&wm=1000_0009&cid=76905&node_id=76905)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="新经济观察丨成都20家餐厅上榜“2024黑珍珠”-川菜、火锅成本地上榜餐厅数量前二中餐菜系_城市_发展_菜品">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🌏&nbsp;</span>新经济观察丨成都20家餐厅上榜“2024黑珍珠” 川菜、火锅成本地上榜餐厅数量前二中餐菜系_城市_发展_菜品</h3>
+        <small class="page-url url "><a href="https://www.sohu.com/a/754431018_120952561" target="_blank">(https://www.sohu.com/a/754431018_120952561)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 总结成都美食指南上榜餐厅，分析菜系和定位，为地道美食的选择提供依据。<br></small>
+    </div>
+    <div class="page-content content"><h2>成都2024黑珍珠餐厅指南</h2>
+<p>成都共有20家餐厅上榜，比上一年增加1家，其中包括2家二钻餐厅，18家一钻餐厅。</p>
+<p>3家餐厅连续7年上榜。</p>
+<h2>消费趋势与黑珍珠餐厅</h2>
+<p>消费回归“质价比”：吃得好，不等于吃得贵。消费者更加注重精致、营养和健康。</p>
+<p>这使得更加亲民的精致餐厅脱颖而出，“黑珍珠”在高质量发展中孕育出新增长。</p>
+<p>2024年黑珍珠上榜餐厅数量稳步增长，超半数城市上榜餐厅数量创新高。</p>
+<p>上海三分之一的新上榜餐厅主打质价比。</p>
+<h2>其他城市黑珍珠餐厅概况</h2>
+<p>北京：38家上榜餐厅，包含一线城市唯一一家升钻中餐厅，成精致中餐发展新高地。</p>
+<p>广州：19家上榜餐厅，粤菜餐厅数量扩增，也有湘菜等地方菜系新晋上榜。</p>
+<p>深圳：17家上榜餐厅，是内地上榜餐厅数增量最高的城市。</p>
+<p>武汉：上榜餐厅数量增速最快的城市，同比增长达66%。</p>
+<p>无锡：去年新开城市，今年新增1家餐厅，体现了其在精致餐饮上强劲的增长动能。</p>
+<h2>成都黑珍珠餐厅菜系分析</h2>
+<p>成都20家上榜餐厅中，16家为中餐（占比八成），其中川菜8家，火锅3家，分别为当地上榜餐厅中TOP1和TOP2的中餐菜系。</p>
+<p>城市发展加速，吸引了更多人，也促使黑珍珠上榜餐厅菜系愈加多元化。今年成都新上榜的黑珍珠餐厅中，增加了台州菜、闽菜两个菜系。</p>
+        <small class="page-url url "><a href="https://www.sohu.com/a/754431018_120952561" target="_blank">(https://www.sohu.com/a/754431018_120952561)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="2024年十大饮食行业趋势---大厨工坊">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🥗&nbsp;</span>2024年十大饮食行业趋势 - 大厨工坊</h3>
+        <small class="page-url url "><a href="https://masterchefworks.com/food-and-beverage-trends-in-2024" target="_blank">(https://masterchefworks.com/food-and-beverage-trends-in-2024)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 探讨2024年食品行业的趋势，涉及植物性食品和健康饮食等。<br></small>
+    </div>
+    <div class="page-content content"><h2>1. 植物性食品</h2>
+<p>素食主义和纯素主义并非新兴事物。然而，以植物为基础的肉类替代品消费趋势的崛起不容忽视，已成为最重要的食品饮料新兴趋势之一。虽然只有3%的美国成年人认为自己是素食主义者（比2012年的2%略有增加），但“素食”一词却是互联网上搜索量第二大的零食词汇，在食品杂货购物网站上的搜索量排名第七。尽管严格意义上的纯素食者为数不多，但趋势表明，越来越多的杂食者渴望获得植物性食品。2020年至2021年期间，对植物性食品的需求增加了12%；与此同时，对肉类替代品的需求跃升了11%。人们希望有这些选择，但它在很大程度上仍被忽视。在食品杂货店中，67%的情况下“素食”是无人认领的。这使得那些标榜自己有植物替代品的餐馆处于有利地位。不过，植物替代品的范围远不止肉类。当下最热门的植物替代品之一就是花椰菜。花椰菜通常被用作低碳水化合物的麸质替代品，可以用来制作披萨饼皮、米饭和土豆泥。</p>
+<h2>2. 负责任的采购</h2>
+<p>消费者比以往任何时候都更加注重食品安全，通常将食品视为减少对地球影响的一种方式。这不仅仅是基本的饮食习惯，如素食主义或纯素主义，而是扩展到人道待遇和碳足迹等因素。有良知的消费者在选择食品品牌时关注的一些常见因素包括：生物基和生物降解食品配送包装、环保认证、珊瑚礁安全、公平贸易、可持续农业。餐馆老板可以通过多种方式将负责任的采购引入其业务中。例如，许多咖啡店认为烘焙公平贸易认证咖啡豆非常重要。讨论最多的趋势之一是纸吸管和餐具。注重环保的消费者喜欢支持那些可以减少对塑料依赖的企业。</p>
+<h2>3. 无酒精饮料</h2>
+<p>近年来，酒精消费量不断上升，导致酒精饮料市场增长了6%。然而，这种放纵的增长导致了一些过度的纠正。“清醒十月”（Sober October）和“无酒一月”（Dry January）等运动已成为热门趋势。虽然近34%的美国成年人保持清醒，但还有20%的人有清醒的好奇心，这为提供无酒精选择的餐厅开辟了巨大的市场。通过提供不含酒精的饮料，如模拟鸡尾酒和不含酒精的啤酒，清醒和清醒好奇的食客可以尽情享受饮料，而不会感到被冷落。</p>
+<h2>4. 咖啡替代品</h2>
+<p>从燕麦牛奶拿铁到冰美式咖啡，咖啡是58%美国人的日常习惯。然而，与美国人减少饮酒一样，许多人也在寻求减少对咖啡因的依赖。咖啡替代品远不是一个新概念。绿茶、抹茶和昆布茶等产品都曾有过或正在继续发展。尽管如此，绿茶和抹茶等咖啡替代品通常都含有咖啡因。虽然几乎所有咖啡因含量高的饮料都有不含咖啡因的版本，但消费者的行为表明，他们正在转向寻求全新的饮料。黄金奶（Golden Milk）是最流行的无咖啡因饮料之一。黄金奶以温热的植物或动物奶为基底，其主要香料姜黄以及肉桂、生姜和小豆蔻等其他香料对健康大有裨益。生姜姜黄茶和薄荷茶等辛辣茶具有一系列健康益处，许多消费者都对它们情有独钟。通过提供一些不含咖啡因的选择，您可以让您的企业成为咖啡因消减者日常生活的一部分。</p>
+<h2>5. 夸张的甜点</h2>
+<p>与前几条趋势相反，最值得关注的趋势之一是放纵、夸张的甜点。人们一直都喜欢甜点，而且永远都会喜欢，所以这并不一定是新趋势。然而，这些甜点在Instagram上的表现形式才是新颖的。纽约市的Black Tap餐厅就是这种趋势改变餐厅的一个典型例子。虽然菜单上有汉堡和啤酒，但人们还是排起长队，只为品尝超凡脱俗的奶昔。有些奶昔上面还放着一整片蛋糕，Black Tap经常成为社交媒体上的热门话题。这样的奇观会让你的餐厅成为当地人和游客的聚集地。</p>
+<h2>6. 正宗美食</h2>
+<p>特别是在食品方面，全球消费者都非常追求原汁原味。人们比以往任何时候都更渴望体验其他文化，而美食则为消费者在自家后院提供了这样的机会。特别是在大城市，许多食客正在用正宗的替代品取代快餐。家庭经营的小餐馆也成为潮流，给食客带来正宗家常菜的感觉。在大流行病之后，旅行受到限制，餐饮选择有限，人们比以往任何时候都更渴望寻找新的口味和表达方式。来自不常见菜系的食物如今备受追捧，成为人们体验新事物和真实感受的一种方式。</p>
+<h2>7. 透明度</h2>
+<p>与负责任的采购类似，消费者希望了解他们所支持和食用的产品背后的道德规范。这其中的一部分原因就是希望这些产品的供应链和生产过程透明化。通过提供这种程度的透明度，您的餐厅将与众不同。转基因生物（GMOs）是人们普遍希望了解的信息。通过标明菜单上哪些菜品是非转基因的，您可以帮助有意识的顾客挑选适合他们生活方式的菜品，并可能吸引他们再次光顾。这种透明度很简单，而且往往不会被忽视。在开始菜单工程之前，您要确保您的菜单尽可能透明，并与透明的供应商合作。许多消费类电子产品制造商都使用二维码来提供特定产品的信息。通过与透明供应商合作，您不仅可以制作出更贴心的菜单，还能帮助回答顾客的问题。</p>
+<h2>8. 提高情绪的饮料</h2>
+<p>在不含酒精的趋势下，提升情绪的饮料越来越受欢迎。这些饮料能给人一种放松或舒适的感觉——25%的消费者在选择食品和饮料时追求的就是这种感觉。温热的功能性饮料以及人参、MCTs和玛卡等成分通常是这类饮料的首选。黄油咖啡越来越受欢迎，其中包括冲泡咖啡、无盐黄油和MCTs。</p>
+<h2>9. 注重健康的甜点</h2>
+<p>人们总是喜欢放纵自己；然而，人们比以往任何时候都更加注重健康，这已不是什么秘密。因此，食客跳过甜点菜单的现象越来越普遍。如果在甜点菜单中加入一些健康的选择，就能避免这些销售额的流失。牛油果是一种非常时髦的食材，其奶油质地和中性口味适合制作美味的甜点。例如，牛油果冰淇淋就是一种一定能吸引注重健康的食客的甜点。制作“健康”菜单，与其说是为了健康，不如说是为了减少放纵的负罪感。只要突出一两种健康食材，就能改变甜点菜单。</p>
+<h2>10. 幽灵厨房</h2>
+<p>作为餐饮业的最新概念之一，幽灵厨房是一种迅速发展的趋势，有人预测到2023年，它将成为一个价值万亿美元的产业。幽灵厨房的商业模式完全是虚拟的，减少了餐厅、服务员、停车场和其他与餐厅相关的面向顾客需求的开销。相反，它们利用价值1500亿美元的食品外卖行业，直接送货上门。幽灵厨房的主要优势之一是，它们可以在全国各地（如在奥斯汀、纽约或芝加哥开设商业厨房）推出，投资极少，只需六周时间。幽灵厨房只需：200平方英尺的场地、四名员工、初始投资3万美元。自2017年以来，由于Uber Eats、Postmates和GrubHub等应用程序的出现，餐饮外卖行业的规模已经增长了两倍。由于消费者现在已经习惯了食品外送的舒适，因此这一数字只会上升。有了合适的团队和适当的餐厅技术，幽灵厨房是食品行业最好、最具创新性的投资之一。</p>
+<h3>相关推荐</h3>
+<p>Yoplait计划如何扭转酸奶的颓势？食品工业如何支持儿童营养？没有放之四海而皆准的健康饮食：通过个性化营养满足个人健康需求；科学家发现剩咖啡渣的惊人实际用途。</p>
+<h3>热门文章</h3>
+<p>食品科技：瑞士人如何用生物反应器制作巧克力；食品科技：减少食物浪费的智能包装；食品科技：英国新政府对餐饮业产生哪些影响？食品科技：在英国罗汉果成分产品不再属于新型食品，那么欧盟呢？食品科技：食谱盒公司是否有了新的竞争对手？</p>
+<h3>文章目录</h3>
+<ol>
+<li>植物性食品</li>
+<li>负责任的采购</li>
+<li>无酒精饮料</li>
+<li>咖啡替代品</li>
+<li>夸张的甜点</li>
+<li>正宗美食</li>
+<li>透明度</li>
+<li>提高情绪的饮料</li>
+<li>注重健康的甜点</li>
+<li>幽灵厨房</li>
+</ol>
+        <small class="page-url url "><a href="https://masterchefworks.com/food-and-beverage-trends-in-2024" target="_blank">(https://masterchefworks.com/food-and-beverage-trends-in-2024)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="嘉州葉婆婆缽缽雞（太古裏店）餐廳、地址、電話、相片、用戶真實評價，油簍街68號（成都太古里亞朵S酒店對面），成都餐廳推薦---Trip.com">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🐔&nbsp;</span>嘉州葉婆婆缽缽雞（太古裏店）餐廳、地址、電話、相片、用戶真實評價，油簍街68號（成都太古里亞朵S酒店對面），成都餐廳推薦 - Trip.com</h3>
+        <small class="page-url url "><a href="https://hk.trip.com/travel-guide/chengdu-104-restaurant/Ye Po Po (Taikooli)-56563314/?source=uccrank&rankingId=100900005454" target="_blank">(https://hk.trip.com/travel-guide/chengdu-104-restaurant/Ye Po Po (Taikooli)-56563314/?source=uccrank&rankingId=100900005454)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 嘉州叶婆婆缽缽鸡的详细评价，符合消费者对美食的真实反馈需求。<br></small>
+    </div>
+    <div class="page-content content"><h2>嘉州葉婆婆钵钵鸡（太古里店）</h2>
+<h3>SerenityZ  4.0/5 极好</h3>
+<p>钵钵鸡探店 | 嘉州叶婆婆钵钵鸡（太古里店）
+📍地址：油篓街68号（博舍饭店正对面）</p>
+<p>🌿环境：有分室内和室外。夏天怕热🥵的话可以选择室内，位置也比较多。找好位置挑选完钵钵鸡食材，选择红油or藤椒汤底，吃完再按签子算钱💰“红油味钵钵鸡”比起藤椒，红油汤底感觉会更入味，辣度适中。芝麻撒得很足，吃起来满口留香。吃到后面，浸泡较久的食材可能会有些咸。钵钵鸡搭配“老红糖凉糕”和“醪糟汤圆手搓冰粉”是再好不过的选择啦。醪糟汤底不会过分甜腻，解腻神器。“凉糕”很扎实。要是觉得钵钵鸡还吃不过瘾的话，可以点“特色臊子蛋炒饭”。</p>
+<h3>吃喝玩乐小呆拉 5.0/5 完美</h3>
+<p>第一次来成都，落地后，接机司机师傅推荐去这里感受下钵钵鸡。对于不太能吃辣的馋嘴星人，很好吃，很香，量也可以，价格也亲民，是很不错的选择。环境很干净卫生，服务生大姐也很热情，食材挺新鲜的，个人喜欢醪糟汤圆冰粉。</p>
+<h3>pan***he 4.0/5 极好</h3>
+<p>第一次吃叶婆婆，据说这家的钵钵鸡最正宗。的确顾客很多，每张桌子都一大捆串串，对于不吃辣的来说，红油的还可以吃吃，每串都小小的，倒是吃不撑。菜饭泡饭啥的都挺一般的。</p>
+<h3>心灵宫殿 5.0/5 完美</h3>
+<p>《41年来，唯一不变的就是那种味道》</p>
+<p>最近抖音上非常火的钵钵鸡成了网红，它是成都最近几年非常流行的特色小吃，一听说其名，就觉得很新奇。说到这家叶婆婆钵钵鸡算是成都最火的一家代表，经常上各种美食网站的必吃榜，算是网红店。太古里店位于锦江区油篓街48号附1号，在远洋太古里边，我从峨眉山旅游回成都，一路奔途过来，到了门口已经过饭点了，依然还排长队，果然很火。好在可以先点单，话不多说咱就开始吧。店内装修清新明亮的原木风，暖黄的灯光使就餐环境很小资。店内铭牌和菜单上无不一刻说明叶婆婆钵钵鸡的历史，始创于1980年乐山，以及叶婆婆起源的故事，乖乖创店超过40年的历史，比我们年龄都大得多。叶婆婆家的钵钵鸡汤底有2种，红油味钵钵鸡和藤椒味钵钵鸡，虽然很多人推荐红油味，但个人更喜欢藤椒味，一次性汤底竹签一个人才3元，荤素0.7元/串，很便宜。就餐是自选模式，食品柜里可选的品种真的很多，分量也很足，菜品摆放整齐，而且很干净，自助拿菜，然后报桌号交给服务员加工。还根据网站推荐的点了招牌特色臊子蛋炒饭，老红糖冰粉等，因为只有一人就餐，无法点更多的美食，只好作罢。钵钵鸡的灵魂就是那一锅汤底，汤的味道十分鲜香浓郁，配料也都是现点现调。因为不喜欢吃重辣多油，藤椒味真的很适合。青花椒的香麻和汤汁的鲜美搭配在一起，微辣带麻，一点都不油腻。串串选了黄喉，牛肉，毛肚，响皮，莲藕，青笋，无骨鸡爪，小肝郡，牛肚，魔芋……每种都拿一样，全部吃个遍，才算不枉此行。用这清爽的灵魂藤椒汤底去涮各种的串串，简直清爽到让你把持不住青花椒味！特色臊子蛋炒饭，不愧为店内招牌，不能不点，每一桌上都有这一大盘炒饭，好大一份，炒得粒粒分明，饭粒晶莹剔透，入口喷香四溢，跟钵钵鸡是绝配，太好吃了！老红糖冰粉，在如今冰粉大多花哨的今天，但它始终不变保持着那份朴实的老红糖味，可口爽滑。人的味蕾是不会骗人的，舌头会让你一下子就能记住了这个味道，非常的独特和纯粹。叶婆婆钵钵鸡，41年来，唯一不变的就是那种味道！</p>
+<p>小贴士：
+交通：成都地铁2号线【东门大桥】站D2出口或2/3号线【春熙路】站B出口；
+推荐指数：五颗星
+特色菜推荐：招牌特色臊子蛋炒饭必点，老红糖冰粉，老红糖凉糕，醪糟荷包蛋等，钵钵鸡汤底有2种，红油味钵钵鸡和藤椒味钵钵鸡，看个人口味选择，不过人多时可以2种都选。</p>
+        <small class="page-url url "><a href="https://hk.trip.com/travel-guide/chengdu-104-restaurant/Ye Po Po (Taikooli)-56563314/?source=uccrank&rankingId=100900005454" target="_blank">(https://hk.trip.com/travel-guide/chengdu-104-restaurant/Ye Po Po (Taikooli)-56563314/?source=uccrank&rankingId=100900005454)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="四川华西都市网络科技有限公司-安排上了！外地朋友来成都，这5家成都小吃集合店值得一去_华西都市报-华西都市网">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🍴&nbsp;</span>四川华西都市网络科技有限公司-安排上了！外地朋友来成都，这5家成都小吃集合店值得一去_华西都市报-华西都市网</h3>
+        <small class="page-url url "><a href="http://www.huaxi100.com/a/321ch5a95c2" target="_blank">(http://www.huaxi100.com/a/321ch5a95c2)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 结合新兴小吃集合店的推荐，丰富了成都的美食选择。<br></small>
+    </div>
+    <div class="page-content content"><h2>安排上了！外地朋友来成都，这5家成都小吃集合店值得一去</h2>
+<p>又到一年夏季旅游旺季，眼看雷暴天气也快结束，即将有大波放暑假的学生娃儿、休年假的上班族来成都旅游~</p>
+<p>传统的路线，网红的餐厅，正儿八经盖章的5A景区，被抖音捧红的路边小店，在成都的耍法很多，但来到这座三千余年历史的老城，你千万不要忘了打卡一顿正宗的地域小吃美食！</p>
+<p>如何吃到一顿资格正宗又美味的小吃？</p>
+<ol>
+<li>啥子锦里、宽窄巷子景区内的小吃店就请直接忽略不计了，范儿姐怕那些地方卖的东西让你对成都小吃产生误解</li>
+<li>想要不踩雷的拔草成都老牌小吃，钟水饺、龙抄手都是正儿八经的老字号，各个商业区也都有分店，味道也还是可以</li>
+<li>成都这几年还新开了一些小吃集合店，店内装修更新，味道也巴适正宗，其实是很不错的选择</li>
+</ol>
+<p>今天范儿姐想给大家推荐的就是几家近几年成都新开的小吃集合店！这些集合店，种类丰富，不光是成都，还集合了四川其它地方的各种名小吃；大多味道巴适，有些还有心的请来了业界名厨或者鼻祖；而且新开不久的店嘛，装修也是很不错的哦！</p>
+<h3>三食六集</h3>
+<p>位于银泰in99，它是“中国最美书店”钟书阁旗下打造的。可能走门口你以为它是个创意集市，往里面走才发现它还有个小食堂。这个小食堂相当巴适，乐山的纪六孃甜皮鸭，威远的三毛兔头，荥经县的熊阿兵周记祖传棒棒鸡、顺德的双皮奶、成都锅盔界网红严太婆......这些让资深吃货光听名字就流口水的民间美食，三食六集是正儿八经把他们的手艺人请来了成都。</p>
+<ul>
+<li><strong>乐山纪六孃甜皮鸭</strong>:  它家在乐山开了32年，曾经让无数吃货专门开车都要去。现在三食六集也卖得超好，大家可以打电话提前预定。他家的鸭子选取农家麻鸭，营养丰富，肉质细嫩。用滚烫的油一勺勺淋熟，秘制的卤料一遍遍刷上，端在你眼前的甜皮鸭看上去色泽棕红，闻起来香气宜人，吃一口皮酥带甜，嚼起来肥瘦均匀。</li>
+<li><strong>威远三毛兔头</strong>: 这家兔头来自威远马路边的鱼庄，兔头却抢足了风头，十多年来吃货们专门绕个路也要去啃一个。秘制卤汁卤制，再用威远的七星椒大火翻炒，和很多兔头的做法不太一样。吃法上，它家将一个兔头劈成两半，有吃货说少了吃兔头的仪式感，但吃在嘴里每一块骨头和每一寸肉质都是如此香辣酥脆入味，味蕾表示可以完全忽略那些“繁文缛节”。</li>
+<li><strong>熊阿兵周记祖传棒棒鸡</strong>: 成都人爱吃棒棒鸡，那是小时候就有的美食记忆。而棒棒鸡的祖师爷也来了三食六集，它就是雅安荥经县的百年老店周记祖传棒棒鸡。棒棒鸡为何叫棒棒鸡？店门口的菜板、刀和棒为你现场作答。两位师傅一人持刀，一人持棒，木棒敲击刀背，配合宰切，确保每一片肌肉薄厚均匀、有骨有肉。再淋一勺秘制香辣的芝麻红油，尝一口鸡肉本身鲜嫩，融合清爽的麻辣入味，这就是戒不掉的四川味。</li>
+<li><strong>严太婆锅盔</strong>: 严太婆锅盔是成都锅盔界正儿八经的网红，每家店永远排长队的食客。严太婆的家人也来到了三食六集。下午两三点人少的空挡，你或许可以免去排队的困扰轻松打卡网红美食。源于南充锅盔，在南充锅盔上创新。和面，刷上一层“酥”，那是严太婆的秘方。刚从烤箱里出锅的锅盔，金黄蓬松、食欲相当，咬一口香脆可口、外酥里脆。牛肉、猪肉、耳片、凉粉、凉面，严太婆也一直在创新它的馅料，选择多多，口福也多多。</li>
+<li><strong>顺德双皮奶</strong>:  空运来标有保质期的水牛奶作为奶源，将其炖滚倒入碗中，结一层奶皮盖住奶香，奶皮下则是香甜爽滑如膏状的另一层奶。吃起来第一层奶皮软滑甘香，另一层奶则口感细腻嫩滑，香甜浓郁却不腻。满满的蛋白质感，营养也不言而喻。</li>
+</ul>
+<p>地址：银泰中心中心in99 L601
+电话：028-67176990</p>
+<h3>大小喜吃匠心集</h3>
+<p>也在银泰in99这座大食堂，开业时间比三食六集早一点。店内打上的招牌是“全国首家川菜手工瑰宝示范体验餐厅”。农品超市、梓潼片片粉、汶川洋芋糍粑、岷江鱼篓子、江油肥肠、乡坝焖饭、荥经挞挞面......餐厅也是把各地小吃集合在了一起，小吃、烧菜、甜品、汤锅，样样都有，味道巴适，环境也很舒服，关键价格还不贵！</p>
+<ul>
+<li><strong>豌豆腊肉饭</strong>: 豌豆、腊肉、土豆和糯米一起“焖”，腊肉的油香和豌豆的清香混入软糯的糯米，嘴巴里的食材丰富，糯米饭本身软糯有粘性，相互融合和衬托，那个味道油叽叽但又让人停不下嘴。</li>
+<li><strong>荥经挞挞面</strong>: 挞挞面在荥经已有100多年历史。纯手工制作，主要经过调、和、揉、挞等几道工序来完成，“挞”是做面师傅的绝活，所以民间也就叫它挞挞面了。大小喜吃的挞挞面汤底红油，撒上小葱和芝麻，臊子是肥瘦相间、耙活的红烧肉，重口味的范儿姐觉得味道略微偏淡，但好在面条本身劲道有嚼劲，独一根长面条可以叫服务员帮忙剪短。</li>
+<li><strong>梓潼片粉</strong>: 梓潼片粉这道小吃也是大有来头，传说清光绪年间，梓潼东坝一位仇姓厨师，不断实验和总结中创造而成。而且这道小吃还是四川非遗美食哦！大小喜吃的片粉不是绿色的，而红薯粉调制而成的米白色。片粉吃起来柔滑、弹性，夏季更是有凉爽的感觉，经麻辣酸味调味料调拌，红油色泽鲜亮，麻辣够味，像是加了芥末又有一点点冲。</li>
+</ul>
+<p>地址：天府大道北段1199号银泰中心in99 L7层717号
+电话：028-86021182</p>
+<h3>顺兴老茶馆</h3>
+<p>在环球中心负一楼，顺兴老茶馆开了18年的沙湾店原班人马出动，老师傅些带着自己的拿手绝活，开了一座四川小吃城！100多种四川小吃，600多种地道美食，从四川小吃到特色川菜，都能在这个小吃城一次性吃遍，不怕美食不够多，就怕你的胃装不下！</p>
+<ul>
+<li><strong>糖油果子</strong>:  师傅的手艺几乎可以秒杀成都90%的糖油果子。刚出炉的糖油果子喷香扑鼻，香甜的味道惹人吞口水，外皮香脆被红糖裹得满满当当，大口咬开，里面是半实心的糯米馅儿，软糯粘牙，吃着太有满足感。</li>
+<li><strong>蛋苕酥</strong>: 传统的蛋苕酥主要是用鸡蛋、香米、麦芽糖制作，而顺兴的却只用鸡蛋和白砂糖浇制而成，制作完成后，师傅再小心翼翼切成块，丝状分明的蛋苕酥，轻轻一掰就分开了，酥脆化渣的口感给人惊喜，甜度适中，蛋香味无比香浓，吃一口满口都是香气。</li>
+<li><strong>三大炮</strong>:  现吃现做，很有感觉，这也是很多成都小娃娃小时候赶庙会必吃的小吃之一。“炮”好后的三大炮浇上自制的浓稠红糖，一口一个，塞得嘴巴满满当当，慢慢嚼，感受糯米混合黄豆粉、红糖的香气。</li>
+<li><strong>蛋烘糕</strong>:  这里也有咸甜共8种口味，随意自己搭配。吃一次就晓得，这里的蛋烘糕没有那么多妖艳儿过场，小时候的味道！</li>
+<li><strong>肥肠粉</strong>: 顺兴的粉可都是手打粉。手打粉却依旧保持着劲道，没有软烂散掉，当然刚上桌趁热吃才会是最巴适的。酸辣、麻辣有度，肥肠煮得软糯，香气十足。</li>
+</ul>
+<p>地址：天府大道北段环球中心负一楼
+电话：028-85380001</p>
+<h3>天府掌柜</h3>
+<p>给范儿姐的第一感觉，是满足了范儿姐对成都小吃的所有需求，这里既有糖油果子、蛋烘糕、锅盔、红糖糍粑这些小吃，也有传统的川菜，这对口味儿多元刁钻的范儿姐来说简直是福音！</p>
+        <small class="page-url url "><a href="http://www.huaxi100.com/a/321ch5a95c2" target="_blank">(http://www.huaxi100.com/a/321ch5a95c2)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="成都市-美食-推荐-小红书-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🥘&nbsp;</span>成都市 美食 推荐 小红书 at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:成都市 美食 推荐 小红书" target="_blank">(DDG:成都市 美食 推荐 小红书)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 总结了成都的经典美食，让读者对美食有了更直观的理解。<br></small>
+    </div>
+    <div class="page-content content"><p>此外，成都还有很多特色小吃，如担担面、钟水饺、麻婆豆腐、辣子鸡等，都是不可错过的美味。</p>
+<h3>成都美食大总结</h3>
+<h4>特色美食：火锅、串串香、钵钵鸡、……</h4>
+<p>小馆和高端餐厅亦或是街边小吃，他们不吝于分享着自己的爱好和推荐。</p>
+<h4>达人推荐：</h4>
+<p>1、胖达子：九眼桥附近的小辣椒，菜品种类多样，推荐花椒牛筋和小鱼干。</p>
+        <small class="page-url url "><a href="DDG:成都市 美食 推荐 小红书" target="_blank">(DDG:成都市 美食 推荐 小红书)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="成都南堂小馆·新川菜(德商国际店)攻略,南堂小馆·新川菜(德商国际店)特色菜推荐/菜单/人均消费/电话/地址/菜系/点评/营业时间【携程美食】">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">👨&nbsp;</span>成都南堂小馆·新川菜(德商国际店)攻略,南堂小馆·新川菜(德商国际店)特色菜推荐/菜单/人均消费/电话/地址/菜系/点评/营业时间【携程美食】</h3>
+        <small class="page-url url "><a href="https://you.ctrip.com/food/104/5263998.html" target="_blank">(https://you.ctrip.com/food/104/5263998.html)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 详细的菜品点评和就餐体验反馈，让用户对餐厅的选择更具信心。<br></small>
+    </div>
+    <div class="page-content content"><p>4.7/5分  口味4.7  环境4.6  服务4.6  全部(84) ◆很好(61) ◆好(20) ◆一般(3) ◆差(0) ◆很差(0) ◆智能排序  有用数排序  按时间排序</p>
+<h2>评论</h2>
+<p>这家也算是南堂馆的升级店，适合请客吃饭。鱼香虾球配葱油饼有创意，青椒毛血旺在一片红汤毛血旺里面更显突出，鱼豆花借鉴了酸汤的做法很是开胃解腻，锅巴凉粉则是我们老家的特色，对于餐饮同行来说很有借鉴意义。</p>
+<p>大蓉和旗下新川菜连锁经营品牌门店，装饰风格偏复古，环境雅致，餐品味道不错。</p>
+<p>平凡的川菜馆让你感受一些实在的快乐，平凡的生活也能找到独特的乐趣。</p>
+<p>很幽静 环境很喜欢 但价格也不便宜 菜的味道也挺不错的</p>
+<p>这是一家在环球中心旁边的新派川菜，传承着川菜最质朴，最原始的记忆味道。一直是他们家的忠实粉丝，不论商务邀请，或家庭聚会都会选择在他们家。有时候外卖也叫他们家，离公司近速度快，价位，菜品都是最适合的👍各种菜品口味都不错，随便点，都不会踩雷，还特别适合广东客户的口味😄特别喜欢他们家的小院子，每次最爱坐的就是小院子周围的小格间，吃饭喝茶感觉瞬间被治愈了，特别是雨天别有一番味道。推荐：煨牦牛肉 番茄🍅乌鱼片 青瓜桃仁  泡菜肥肠  吊锅饭</p>
+<p>南堂馆在成都开了不少店子，南堂小馆主打中端市场，菜品味道属于家常川菜，好吃不贵，性价比高</p>
+<p>环境：5  服务：5  来成都特意跑到这家店来吃饭的，味道非常不错，环境也非常舒服，服务员也非常热情，一个人点了一个炒菜，两个明档，还有份吊锅饭，吃撑了。。。</p>
+<p>乌鱼片味道不错，吃光了才想起拍照。不辣又有味道！</p>
+<p>口味：4  环境：4  服务：4  环境真心好，离我住的酒店也很近，服务态度也很好，我来到成都后，立马就到她家来吃，很喜欢啊！我真心喜欢他家吊锅饭。</p>
+<p>口味：3  环境：4  服务：4  人均消费：80元  本来很期待的，但是发现味道一般，只有大黄鱼和格格肉还有全家福留下了比较深的印象，刺身感觉不算特别新鲜。每样菜份量都不大，但品种还是挺多的，这个思路不错。环境不错。价格还算可以，毕竟还包括红酒的嘛。</p>
+        <small class="page-url url "><a href="https://you.ctrip.com/food/104/5263998.html" target="_blank">(https://you.ctrip.com/food/104/5263998.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="赴一场舌尖上的旅行丨真正的民间美食，都隐藏在成都边上这个小县城里_Feekr旅行_新浪博客">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏞&nbsp;</span>赴一场舌尖上的旅行丨真正的民间美食，都隐藏在成都边上这个小县城里_Feekr旅行_新浪博客</h3>
+        <small class="page-url url "><a href="https://blog.sina.com.cn/s/blog_aa7cdabe0102wbfx.html" target="_blank">(https://blog.sina.com.cn/s/blog_aa7cdabe0102wbfx.html)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 介绍新津的特色美食，增加了成都周边的美食选择选项。<br></small>
+    </div>
+    <div class="page-content content"><h2>新津：成都小县城的隐藏美食</h2>
+<p>说起美食，你肯定会想到广州的早茶点心，也会想到成都的麻辣川锅，但你肯定没有料到，在成都边上还有这么一个小县城，虽无美食之都的盛名，但却有着隐藏于市井中的饕餮美味，让人念念不忘。它就是——新津。</p>
+<p>这里有鲜而不腥的黄辣丁</p>
+<p>这里有隐于市井里的黄春卷</p>
+<p>这里还有四川的百年名菜王“火巴”(pa)肉</p>
+<p>Feekr飞行家大美爱拉带你走进新津与成都，吃遍大街小巷，赴一场舌尖上的旅行！</p>
+<h3>推荐餐厅一：水煮野生黄辣丁</h3>
+<ul>
+<li><strong>推荐指数：★★★★★</strong></li>
+<li><strong>推荐理由：</strong>新津的特色就是黄辣丁，其实新津的大街上卖黄辣丁的店，家家都美味。选择这家店的理由很简单，因为是董卿在电视台推荐过的，名气相对大一些。</li>
+<li><strong>人均消费：</strong>110元</li>
+<li><strong>推荐菜品：</strong>水煮野生黄辣丁确实很好吃，鱼肉细嫩爽滑，最关键的是鱼刺少，好吃极啦~还有川北凉粉味道也是超赞的，辣辣的凉粉里面又透着一股甜头，超级喜欢~黄辣丁在这里分为野生的和养殖的，养殖的是68元/斤，野生的138/斤。做法有水煮黄辣丁、酸菜黄辣丁和红汤黄辣丁。黄辣丁鱼不光没有什么刺，基本只有中间的一根，鱼肉还一点不腥，肉质细嫩，超级好吃，不负众望！</li>
+</ul>
+<h3>推荐餐厅二：龙须牛肉</h3>
+<ul>
+<li><strong>推荐理由：</strong>龙须牛肉风味独特，简直太太太喜欢了。</li>
+<li><strong>人均消费：</strong>25元</li>
+<li><strong>推荐菜品：</strong>龙须牛肉和各种牛肉干搭配一碗火巴萝卜，有干有稀，好吃管饱还不长胖。</li>
+<li><strong>地址：</strong>新津县黄鹤大道82号（去纯阳观的大牌楼旁边）</li>
+</ul>
+<h3>推荐餐厅三：老一品蹄花</h3>
+<p>这家老一品蹄花可是来新津必吃的小吃之一，不可错过！</p>
+<ul>
+<li>这么大一份蹄花20元/份，米饭每人1块，管够。泡菜管老板要就好了，也是免费的。味道好极啦，蹄花粘粘的全是胶原蛋白，蹄花的汤也很浓郁，粘上剁椒的辣汁，超级下饭。</li>
+</ul>
+<p>这就是蹄花的蘸料，里面可不光是红油，红油下面是碎的剁椒。</p>
+        <small class="page-url url "><a href="https://blog.sina.com.cn/s/blog_aa7cdabe0102wbfx.html" target="_blank">(https://blog.sina.com.cn/s/blog_aa7cdabe0102wbfx.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="西月城譚豆花(春熙路店)餐廳、地址、電話、相片、用戶真實評價，春熙路街道暑襪北二街56號1-6號（總府大廈沿街商鋪），成都餐廳推薦---Trip.com">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🍲&nbsp;</span>西月城譚豆花(春熙路店)餐廳、地址、電話、相片、用戶真實評價，春熙路街道暑襪北二街56號1-6號（總府大廈沿街商鋪），成都餐廳推薦 - Trip.com</h3>
+        <small class="page-url url "><a href="https://hk.trip.com/travel-guide/chengdu-104-restaurant/XI YUE CHENG TAN DOU HUA-25782997/?source=uccrank&rankingId=100900005454" target="_blank">(https://hk.trip.com/travel-guide/chengdu-104-restaurant/XI YUE CHENG TAN DOU HUA-25782997/?source=uccrank&rankingId=100900005454)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 西月城谭豆花的评价和推荐，展示了本地小吃的魅力。<br></small>
+    </div>
+    <div class="page-content content"><h2>西月城譚豆花(春熙路店)顾客评价</h2>
+<h3>第二号爱人 4.0/5 极好</h3>
+<p>原味的豆腐花的确是不錯，而且經常都會有促銷一塊錢的性價比，可以說是相當的高了，這裏離春熙路其實還是蠻遠的，大約也需要走到十多分鐘才到封鎖區。</p>
+<p>评价日期：2022年2月22日</p>
+<h3>广州中奖小锦鲤 4.0/5 极好</h3>
+<p>豆花還算是比較的滑，而且的話能夠吃的出來，沒有添加其他東西的，還有很多的小吃都能夠在店裡吃到，所以也吸引了很多年輕人過來這邊喝個下午茶什的。</p>
+<p>评价日期：2022年2月22日</p>
+<h3>努力的三号 4.0/5 极好</h3>
+<p>這邊的豆花跟我們那邊的豆花是有最大的區別，就是咸甜之分，當然，西月城譚的這一家是比較清淡的，已經是做了五代的老字號了，交通不算特別的便利，還好就是靠近大馬路對面是一個商場。</p>
+<p>评价日期：2022年2月22日</p>
+<h3>安心 5.0/5 完美</h3>
+<p>店裡人滿為患，但不怎麼要排隊。點的菜看圖。推薦撒子豆花，撒子香脆，豆花軟嫩，配上特製紅油，脆嫩香和在一起，美妙無比。強烈推薦甜水面，剛一端上來，便看到白而光滑的粗面被店家特質的濃醬從頭澆到腳。先把面拌一拌，將面與醬徹底融合再吃。麵條十分有韌勁，醬甜絲絲的，比較辣，裏面還調和着特質醬油，超級好吃！冰醉豆花，是用的米酒釀調味的，甜蜜蜜，爽口極了。擔擔面也不錯，又麻又辣，肉末又增香，濃濃的成都味兒。紅湯抄手要趁熱吃，感受一下紅油、吹彈可破的麵皮、肉餡的完美結合。蒸牛肉是後來加的，原來是因為沒有葷菜才加的，後來吃了才發現，味道很好。牛肉有勁道，醬也不錯。總體來說，這裏的菜非常棒。</p>
+<p>评价日期：2017年8月10日</p>
+<h3>呱呱怒怒 5.0/5 完美</h3>
+<p>抒發一下…太喜歡歡這裏的牛肉豆花了…恨不得天天早點都吃它，回天津后每天都在思念它！成都旅行時，無意發現的一家小吃店，相比周圍其它小吃店比較乾淨，看着就會想進去！（能理解么，沒有對比就沒有傷害！）牛肉豆花，不同於天津的老豆腐，這邊的不是鹵子，是類似豆瓣醬辣醬一起拌，牛肉清晰可見！再加上脆脆的撒子…天啊…寫着點評又讓我看圖咽口水了！酥肉豆花，香而不膩的酥肉，其它用料和牛肉豆花差不多！我還是更愛牛肉滴！冰醉豆花，“醉”就是加了醪糟，嫩滑的豆花和醪糟的搭配，點綴紅色的枸杞！（耍都人民真會吃，一碗豆花，甜的，辣的，涼的，熱的！哈哈！）紅油抄手，類似雲吞，看着火紅的辣湯其實微辣濃香，抄手皮薄潤滑，餡料柔嫩鮮美！具有四川特色的小吃。黑芝麻湯圓，個人比較鍾愛黑芝麻，皮Q加上入口濃香的餡料！重點是湯圓不是元宵！擔擔面，不是很辣，醬香，要一兩面正好可以多吃幾樣！黑糖粽子，香粘的糯米粽個頭很大，黑糖汁也很濃稠！端上來熱氣騰騰的，看着就有食慾！成都小吃真好，價格都不貴，而且品種多，北方人一次能吃好多種！多滿足啊！服務員阿姨們人都很好，會告訴溫馨提示！</p>
+<p>评价日期：2017年12月27日</p>
+<h3>rochers 5.0/5 完美</h3>
+<p>從春熙路溜達過來吃西月城譚豆花，古色古香的環境，小吃選擇很多，感覺可以多吃幾次！甜水面，為了這口甜水面，醬料很多拌開之後就很有食慾，甜甜的麻醬很香，帶點微辣，真的很好吃呀！冰醉豆花，冰冰涼涼，搭配甜水面就很贊！白湯抄手，朋友不吃辣，所以抄手選了白湯，雞湯底也挺鮮美的，抄手很大個！</p>
+<p>评价日期：2021年11月13日</p>
+<h3>未接来电2019 5.0/5 完美</h3>
+<p>冰醉豆花真是愛死了。西月城譚豆花，對於愛吃醪糟的人是無法抵抗任何一種形式的醪糟美食，第一次看到有冰醉豆花，我就被它的名字，顏值深深吸引了。這次來成都住的地方檀西路就幾分鐘的路程，早餐義無反顧的飛奔過去。具體就是春熙路王府井百貨再西走一百米左右，總府大廈樓下。冰醉豆花確實是我的菜，醪糟口感微調，湯汁微稠甚至有些藕粉的感覺，豆花白白嫩嫩滴，入口即化，早上吃是溫溫的，可想而知如果是夏天，一碗冰醉，真的得如痴如醉了。甜皮鴨也好吃，味道像什麼呢，有點甜甜的蟲草醬鴨的口感，肉質也比較軟，很適合我這種喜歡軟口的吃貨。清湯抄手份量十足呀，個頂個得，滿滿一大碗，湯汁很濃郁，而且白鬍椒粉味道也比較濃郁。牛肉豆花這個一直是好評，豆花搭配酥酥的牛肉菘和脆脆的叫不上名字的，入口酥中有脆，口感很混合，有層次。葉兒粑嘛，不太適合我，因為裏面夾的是肉，比較濃郁的豬肉味道，夾肉的糯米食品都不是我的菜，譬如肉粽，就不點評了哈。總而言之，冰醉豆花是來對嘍，再點贊。人均30以內吧。</p>
+<p>评价日期：2021年4月28日</p>
+<h3>小花猫大笨熊 4.0/5 极好</h3>
+<p>【位置】春熙路王府井背後的街上，都是飯店，中式門面很顯眼。
+【環境】中式風格裝修，古色古香，乾淨整潔，座位舒適，操作間是明檔。
+【服務】門口點單，坐下來服務員會負責送到座位上，服務員都是阿姨大姐，感覺有點國營老店的傳統風格。
+【食物】三合泥，還不錯，比以前在錦里吃的要好吃。冰醉豆花，酥肉豆花，饊子辣豆花，我更喜歡辣豆花。豆花面、葉兒粑都一般，也不難吃。
+【評價】春熙路上的老字號之一，環境一流，服務尚可，食物尚可，價格親民。</p>
+<p>评价日期：2017年2月8日</p>
+        <small class="page-url url "><a href="https://hk.trip.com/travel-guide/chengdu-104-restaurant/XI YUE CHENG TAN DOU HUA-25782997/?source=uccrank&rankingId=100900005454" target="_blank">(https://hk.trip.com/travel-guide/chengdu-104-restaurant/XI YUE CHENG TAN DOU HUA-25782997/?source=uccrank&rankingId=100900005454)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="易老媽蹄花（東城根總店）餐廳、地址、電話、相片、用戶真實評價，東城根南街17號附4號，成都餐廳推薦---Trip.com">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🥢&nbsp;</span>易老媽蹄花（東城根總店）餐廳、地址、電話、相片、用戶真實評價，東城根南街17號附4號，成都餐廳推薦 - Trip.com</h3>
+        <small class="page-url url "><a href="https://hk.trip.com/travel-guide/chengdu-104-restaurant/YILAOMATIHUA-27388618/?source=uccrank&rankingId=100900005454" target="_blank">(https://hk.trip.com/travel-guide/chengdu-104-restaurant/YILAOMATIHUA-27388618/?source=uccrank&rankingId=100900005454)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 易老妈蹄花的用户反馈，提供了选择的可靠性和参考依据。<br></small>
+    </div>
+    <div class="page-content content"><h2>易老媽蹄花（東城根總店）</h2>
+<h3>zbz_不一样的天空 的评价 (5.0/5)</h3>
+<ul>
+<li><strong>環境:</strong> 店面不大，乾淨整潔</li>
+<li><strong>服務:</strong> 服務尚可，上菜快</li>
+<li><strong>口味:</strong> 老媽蹄花：招牌菜，湯熬很濃，蹄花軟糯入味，芸豆綿綿，辣椒超級香，美味！蒜苗回鍋肉：回鍋肉有點肥，但很香，與蒜苗是絕配。</li>
+</ul>
+<h3>红妆人Nefelibata 的评价 (5.0/5)</h3>
+<p>他們家的麻辣燙、麻辣香鍋等“刺激美食”，一直以來被譽為“0誘惑美食”；鮮香麻辣，回味刺激，想起來就不由得“流出了口水”。</p>
+<h3>蔷薇岛屿008 的评价 (4.0/5)</h3>
+<p>還不錯，建議打卡。他家的菜顏值都比較高，分量也很多，而且做得類似於創意融合菜，非常實惠，服務也很贊，兩個人人均100塊錢。</p>
+<h3>雪域圣焰 的评价 (5.0/5)</h3>
+<p>人氣很旺！人民公園對面，有兩家蹄花，這家是在廖老媽邊上，和廖老媽不是一家，去的時候看好招牌，這家店的服務員會在店門口招呼客人。同樣，這裏的人氣也是挺旺的，到了飯點，排隊等位是難免的。主打的招牌是老媽蹄花，蹄花就是我們平時所說的豬蹄或豬腳，用清湯燉爛，然後蘸辣椒醬吃。燉得雪白軟爛的，豬皮也是肥而不膩，有種入口即化的口感。還有其他一些川味小吃、菜品可以選擇，價格適中。強烈推薦！！！</p>
+<h3>Kinoshitalite 的评价 (5.0/5)</h3>
+<p>豬蹄打理得很乾凈，浸泡在乳白色湯汁里，燉得軟糯，沾上特製蘸醬，幾口就解決。特別的香，但又不是很辣，提味解膩，令人食慾大開。除了蹄花，夫妻肺片、魚香肉絲等川菜頗受好評。只點了蹄花，29元錢，竟然沒有收餐具費，慕名而來，蹄花燉得很爛，湯很清爽不是很濃很稠的那種，老闆娘也親自在門口攬客。旁邊真的好多家蹄花，看網友說這家是最老最正宗的，服務也不錯，店裡有空調，也幫忙開關店門，不錯！至於很多網友很喜歡的辣椒蘸醬，雖然不是本地人，但是覺得不辣所以不好吃，香確實是很香，只香不辣，但是真的超級香。</p>
+<h3>quanweihb 的评价 (5.0/5)</h3>
+<p>一家親民的館子，總體上味道不錯，蹄花沒那麼油膩，湯很鮮。個人比較喜歡夫妻肺片，味道好還很下飯。因為一個人，點了三個菜，有點多。紅苕葉只吃了不到一半，主要是炒得太油了。</p>
+<h3>萌小肉 的评价 (5.0/5)</h3>
+<p>口味不錯，幾家店挨着都說是老字號，不好分辨，不過幾家味道都不錯，還有28個字，寫點什麼呢，肌膚勝雪，形似飛花，滑嫩細緻，柔嫩爽口，香而不膩，豆如棉紗，湯香四溢。</p>
+<h3>懿路前行1314 的评价 (5.0/5)</h3>
+<p>老媽蹄花，吃過一次都不會忘記的美食。來成都的路上就惦記這個味道。大年初一，從寬窄巷子人山人海走過，穿過人民公園就來到了老媽蹄花一條街。最有名的應該是廖老媽蹄花了，春節休息了，直接來到了第二家易老媽蹄花。店門口都寫着原半邊橋店。現在也無從考證哪一家到底在那裡。人民公園側面這邊東城根南街。易老媽蹄花，店面一共兩層，環境還可以，店內都是微信自助點餐。蹄花的種類挺多，有海帶蹄花，還有各種各種，我獨愛原味的蹄花湯。很快，蹄花就上來了，應該是已經煮好的，蹄花已經煮的軟爛，吃起來完全不費力。如果不喜歡原味，還可以蘸一點辣椒，湯裡邊的芸豆，也已經煮的軟面，湯也非常好喝。這暖暖的一大碗，吃完特別舒服。在成都滿街都是辣椒的味道，吃一頓不辣的美食，感覺特別的親切。再來一個川北涼粉，味道特別不錯。搭配着吃，味道棒棒的。</p>
+        <small class="page-url url "><a href="https://hk.trip.com/travel-guide/chengdu-104-restaurant/YILAOMATIHUA-27388618/?source=uccrank&rankingId=100900005454" target="_blank">(https://hk.trip.com/travel-guide/chengdu-104-restaurant/YILAOMATIHUA-27388618/?source=uccrank&rankingId=100900005454)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="小红书露营成都美食攻略（小红书成都旅游攻略）---义乌市皖瑞智能科技有限公司">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏕&nbsp;</span>小红书露营成都美食攻略（小红书成都旅游攻略） - 义乌市皖瑞智能科技有限公司</h3>
+        <small class="page-url url "><a href="http://www.bastasparrantan.com/post/31345.html" target="_blank">(http://www.bastasparrantan.com/post/31345.html)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 提供了适合露营的地方和美食，结合了旅游与美食的需求。<br></small>
+    </div>
+    <div class="page-content content"><h2>小红书露营成都美食攻略</h2>
+<h3>成都春天有哪些适合露营的地方？</h3>
+<ul>
+<li>青城山：以秀美的山水和道教文化闻名，春季山花烂漫，绿意盎然，可游览建福宫、天师洞等古迹道观。</li>
+<li>龙泉山城市森林公园：位于成都东部，大型城市森林公园，春天桃花樱花盛开，设有露营区域，设施齐全。</li>
+<li>卧龙自然保护区：位于成都西北部，大熊猫故乡。</li>
+<li>青城山：位于成都市都江堰市，道教名山，春季花开，环境幽静，适合露营，可听到溪水声。</li>
+<li>龙泉山城市森林公园：绿树成荫，空气清新，有专门露营区域，桃花樱花盛开，设施齐全，适合亲子露营。</li>
+<li>都江堰露营地：世界文化遗产，以悠久历史和灌溉工程闻名。</li>
+</ul>
+<h3>来成都必吃的美食有哪些？</h3>
+<ul>
+<li>成都必吃的美食排行榜：麻婆豆腐、钵钵鸡、串串香。</li>
+<li>担担面：面条细薄，卤汁酥香，咸鲜微辣。</li>
+<li>龙抄手：皮薄、馅嫩、汤鲜。</li>
+<li>川菜经典：宫保鸡丁、鱼香肉丝、麻婆豆腐、夫妻肺片等。</li>
+<li>成都小吃四大金刚：龙抄手、赖汤圆、钟水饺和郭汤圆。</li>
+</ul>
+<h3>后备箱+露营风!成都继三色路后,又一家夜市火起来了!</h3>
+<p>(此标题无对应译文)</p>
+        <small class="page-url url "><a href="http://www.bastasparrantan.com/post/31345.html" target="_blank">(http://www.bastasparrantan.com/post/31345.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="2021年大众点评“必吃榜”揭晓！成都这62家餐厅入选---川观新闻">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💰&nbsp;</span>2021年大众点评“必吃榜”揭晓！成都这62家餐厅入选 - 川观新闻</h3>
+        <small class="page-url url "><a href="https://cbgc.scol.com.cn/news/1768555" target="_blank">(https://cbgc.scol.com.cn/news/1768555)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 餐厅客单价的分析为经济实惠的选择提供具体的数据支持。<br></small>
+    </div>
+    <div class="page-content content"><h2>成都餐厅榜单数据</h2>
+<p>成都上榜餐厅平均客单价为77元，与消费者日常外出就餐的平均水平相符。</p>
+<p>入选餐厅包括：杨三孃跷脚牛肉（橡树林店）、冒椒火辣（奎星楼街店）、爱妻牛排火锅（川音店）、西月城谭豆花（春熙路店）、鸡毛店·川菜（玉林店）等。</p>
+<p>消费者对本地特色餐饮的认可度不断提升，本土餐饮发展迎来高光时刻。</p>
+<h3>各品类餐厅数量</h3>
+<p>中餐门店数947家，占比高达76%，较2017年高出5.4个百分点。</p>
+<p>带有地域风味的特色小吃共上榜190家，创下该品类5年上榜数量新高，也成为今年榜单中TOP 1的品类。</p>
+<p>火锅上榜门店数达173家，是各年龄层消费者就餐的首选，其中20岁以下的消费者每两笔消费就有一笔来自火锅。</p>
+<h3>川味美食占比高</h3>
+<p>成都共有22家川菜馆、20家火锅串串香、7家本地特色小吃上榜，川味美食占比高达79%，为本地和外地食客提供了丰富多样的选择。</p>
+        <small class="page-url url "><a href="https://cbgc.scol.com.cn/news/1768555" target="_blank">(https://cbgc.scol.com.cn/news/1768555)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="成都美食吃货博主排名（成都美食博主排行）---义乌市皖瑞智能科技有限公司">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">👩&nbsp;</span>成都美食吃货博主排名（成都美食博主排行） - 义乌市皖瑞智能科技有限公司</h3>
+        <small class="page-url url "><a href="http://www.bastasparrantan.com/post/7323.html" target="_blank">(http://www.bastasparrantan.com/post/7323.html)</a><br></small>
+        <small class="page-rating rating ">评分: 6.0<br></small>
+        <small class="page-annotation annotation ">注释: 评论成都知名美食博主，补充了用户对餐厅选择的参考。<br></small>
+    </div>
+    <div class="page-content content"><h2>成都美食吃货博主排名（成都美食博主排行）</h2>
+<p>本文介绍成都美食吃货博主排名以及成都美食博主排行相关知识。</p>
+<h2>美食博主大全排行榜（地方美食博主排行榜前十名？）</h2>
+<ol>
+<li>
+<p>李子柒：知名美食博主，以古朴天然的食品风格和优美的拍摄风格闻名。
+办公室小野：在办公室制作美食的博主，创意和美食制作技巧深受年轻人喜爱。</p>
+</li>
+<li>
+<p>网红吃播人气排行榜：密子君</p>
+</li>
+</ol>
+<p>密子君（张榆密，1992年出生），知名大胃王吃播，以与粉丝互动，邻家女孩风格著称。</p>
+<ol>
+<li>李子柒粉丝：5428万</li>
+</ol>
+<p>李子柒（李佳佳），中国内地美食短视频创作者，粉丝数过千万，视频风格古朴典雅。</p>
+<ol>
+<li>
+<p>很抱歉，我无法提供西安十大最火美食博主的信息。但可以介绍西安十大网红美食及相关美食博主：摔碗酒，最出名的网红美食，喝完后摔碗，寓意岁岁平安。</p>
+</li>
+<li>
+<p>雪茸堂</p>
+</li>
+</ol>
+<p>抖音户外美食博主，展现美食制作方法，以粗暴的制作方法吸引粉丝。</p>
+<ol>
+<li>密子君</li>
+</ol>
+<p>美食测评博主，推荐各地美食，观看需谨慎，以免深夜觅食。</p>
+<h2>美食网红名人排行榜前十（中国最火网红排名）</h2>
+        <small class="page-url url "><a href="http://www.bastasparrantan.com/post/7323.html" target="_blank">(http://www.bastasparrantan.com/post/7323.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="成都小巷子饭馆攻略,小巷子饭馆特色菜推荐/菜单/人均消费/电话/地址/菜系/点评/营业时间【携程美食】">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🧑&nbsp;</span>成都小巷子饭馆攻略,小巷子饭馆特色菜推荐/菜单/人均消费/电话/地址/菜系/点评/营业时间【携程美食】</h3>
+        <small class="page-url url "><a href="https://you.ctrip.com/food/104/12158325.html" target="_blank">(https://you.ctrip.com/food/104/12158325.html)</a><br></small>
+        <small class="page-rating rating ">评分: 6.0<br></small>
+        <small class="page-annotation annotation ">注释: 简要评估餐厅的环境和服务，提供了不同用餐选择的反馈。<br></small>
+    </div>
+    <div class="page-content content"><p>4.3/5分 口味 3.5 环境 3.5 服务 3.5  全部(4) ◆很好(2)◆好(1)◆一般(1)◆差(0)◆很差(0)◆智能排序 有用数排序 按时间排序</p>
+<h5>评论1</h5>
+<p>韭黄肉丝，口感、味道一流；第二个是下饭菜，就是肉末炒盐菜，加上一个丸子汤，都是下饭的好帮手。粉蒸肉和凉拌兔丁中规中矩没什么可挑剔，这样的家常菜馆很难得。</p>
+<h5>评论2</h5>
+<p>环境：5 服务：5 人均消费：40元 小馆子的菜也能做得很好啊，价格又实惠，不错</p>
+<h5>评论3</h5>
+<p>来成都几天住在这里。这家店就在旅馆的后面。很合适。这家店有炒菜也有饺子吃。出菜的速度也还可以。菜的味道也还不错。价位也还不贵。店里边还是跃层的。饺子的味道一般。是速冻饺子。不是现包的 总的来说还是不错。</p>
+<h5>评论4</h5>
+<p>常常来这边就餐，就在小区外面，比较近，之前喜欢他们家的甜椒肉丝，不知道是后面改了做法还是怎么样，就不是很开心咯。今天过来点了一个炒饭，因为赶时间的。希望下次能做的更好。</p>
+        <small class="page-url url "><a href="https://you.ctrip.com/food/104/12158325.html" target="_blank">(https://you.ctrip.com/food/104/12158325.html)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="成都真的挺好的，但是求求你们别来了-36氪">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💼&nbsp;</span>成都真的挺好的，但是求求你们别来了-36氪</h3>
+        <small class="page-url url "><a href="https://m.36kr.com/p/1848077993561223" target="_blank">(https://m.36kr.com/p/1848077993561223)</a><br></small>
+        <small class="page-rating rating ">评分: 5.5<br></small>
+        <small class="page-annotation annotation ">注释: 讨论应届生在成都生活和工作的多面性，反映了年轻人的需求。<br></small>
+    </div>
+    <div class="page-content content"><h2>成都真的挺好的，但是求求你们别来了？应届生到底适不适合来成都？</h2>
+<p>最近，这个话题在社交平台上被讨论很多。理想中的成都，是火锅飘香的小吃街、潮人聚集的太古里，是玉林路的尽头、小酒馆的门口说不完的故事，是社畜心中卷不动时的“退路”。而实际的成都，和许多城市一样，背负着一代人的压力和迷茫。曾有人用“少不入川”来形容成都生活太过安逸，会让年轻人失去斗志；而今天，很多人吐槽“别来成都，同样很卷”。对游客而言，这里的美食和市井气或许令人流连忘返；但应届生们对工作和生活的期待，成都能够满足吗？</p>
+<h2>百万“蓉漂”，涌向成都</h2>
+<p>本地人眼中，成都近些年最大的变化，是人越来越多了。和其飞快高涨的名气一样，成都的人口增长迅速。从2010年到2021年，11年间成都常住人口增长了714万人，仅次于深圳。根据成都统计局数据，2021年底成都市常住人口为2119万人，突破2千万大关，超越了广州、深圳，仅次于3212万人的重庆、2489万人的上海和2188万人的北京 [1]。如今，成都已经是中国人口第四城。继“北漂”“沪漂”之后，“蓉漂”成了年轻人追梦的新选择。目前，“蓉漂”人口的总数高达683.49万人 [2]。在抢人大战中，成都自2017年实行“人才新政”，4年内吸引了50多万蓉漂青年落户，相当于一个小县城的人口，其中30岁以下的占比78.8%，本科以上学历的占到九成 [3]。为了体现对人才的重视和珍惜，成都还专门把每年4月最后一周的星期六设为“蓉漂人才日”，声称“蓉漂之后，再无漂泊” [4]。智联招聘数据显示，在新一线城市中，成都已经连续6年应届生流入占比第一。来成都的，不仅是中西部城市年轻人，还有一线城市的年轻人。根据《“蓉漂”青年发展调研报告》，落户成都的蓉漂青年来源地中，北上广分别从2017年的第17、28、6位，上升到2020年的第6、18、4位 [2]。逃离北上广，越来越多卷不动的年轻人选择来成都。成都这几年确实发展迅速。2021年，成都GDP达1.9万亿元，位列全国第七，在新一线城市里仅次于重庆和苏州，比杭州、南京等一些东部省会还要高 [5]。科技创新也是成都成绩单上的亮眼一笔——去年，成都新增科创板上市及过会企业11家，总数居中西部城市第1位 [6]；高新企业数量在新一线城市中仅次于杭州、天津和武汉，位列第4 [7]。这些都宣示着这座“新一线城市之首”的无限潜力。最主要的是，在成都生活，真的很巴适。通过统计知乎关于“成都生活”的回答，我们发现，“美食之都”“慢节奏生活”“悠闲文化”这些名片，仍然是人们心中的成都印记。在成都，随便一家馆子都很难踩雷，火锅串串川菜天天换着样儿吃不腻；街头随处可见茶馆、麻将馆、小吃摊，人们一边品茶一边摆龙门阵；晚上则是俱乐部和电子乐的天下，各种新潮流和亚文化在此汇集……</p>
+<h2>来成都工作，我后悔了</h2>
+<p>然而，来的人多，去的也多。智联招聘数据显示，2016-2021年成都的人才流出比例在主要新一线城市里连年第一，直到2020年才扭转人才净流出状态 [8]。许多人的成都滤镜，在找工作的第一天就碎了。许多成都打工人开始在社交媒体劝退应届生：成都曾经可能是东方瑞士平替，但来的人多了，也就成了“瑞士卷”。检索小红书和微博关于成都就业的帖子发现，“成都找工作太难了”的吐槽越来越多。应届生们没有预料到，成都更多是销售、客服、审核这些人力密集型岗位。今年二季度，成都再次成为全国招聘需求最旺盛城市 [9]，但不少网友吐槽——一看岗位，全是销售客服。孙悟空来了都要打两百个电话才走得脱。根据智联招聘数据，流入成都的人才主要从事的是房地产、互联网电商行业，而这些行业最缺的便是销售、客服。58同城招聘研究院数据也显示，2020年成都一度是全国销售和客服招聘需求最旺盛的城市 [10][11]。以互联网销售为例，这个岗位普遍被认为可替代性高，很难稳定，还需要有社牛的天赋，是不少年轻人最嫌弃的职业之一。工资低、待遇差，是成都社畜们普遍吐槽的第二大坑：一天100可能招不到一个农民工，但一定能招到一个研究生。不要再骗毕业生过来卷3000一个月的工作了，反诈APP都响了。根据《成都市2021年国民经济和社会发展统计公报》，去年成都城镇居民年人均可支配收入约5.26万元，在新一线城市里排行倒数第五 [1]。月薪三四千，才是成都打工人的常态。除了工资低，一些不交五险一金还理直气壮的公司更是劝退一大波打工人，让人忍不住调侃：“北上广不相信眼泪，成都不相信劳动法。”擎盾数据中台分析了中国2011-2020年近240万份劳动争议案件的判决文书，结果显示，成都劳动争议案件数量达5万多件，比肩一线城市 [12]。仅在2020年，成都市两级法院就受理了1.55万劳动争议案件 [13]，怪不得网友称“去排队劳动仲裁都起码得半年才排得到”。而那些希望摆脱通勤痛苦的大城市“难民”，在成都也难以如愿。据《2021年度全国主要城市通勤监测报告》，成都平均单程通勤时长超过半小时，仅好于北上广深和重庆 [14]。</p>
+<h2>离开成都，就一定更好吗</h2>
+<p>“网恋奔现”般的落差感，根源于成都本土产业的薄弱。高速增长的人口和大量的人才流入，并没有足够的高质量岗位与其对接。以互联网行业为例，凭借着统摄西南的地理区位，成都承接了众多国内外大厂分部，例如腾讯成都、阿里成都、华为成研所等。我们盘点了成都44家主要的互联网企业，其中大厂分部占了将近一半，总部只占1/4。而2021年中国互联网百强企业，成都本土只有一家上榜 [15]。不仅是互联网行业，成都直到2021年才有第一家本土企业上榜世界500强——做饲料、禽蛋奶加工起家的新希望 [16]。要知道，产业链中的高价值区段、核心研发岗往往集中在企业总部，而分部多是人力密集型岗位。作为新一线城市领头者，成都这些年来的发展脚步迈得飞快，“宜居城市”“最具幸福感城市”这些标签萦绕出一个天堂般的成都，却悄然抹去了发展道路的坎坷和尘埃。事实上，不论是产业发展不均衡、就业机会少还是工资偏低，成都暴露出的可能是许多新一线城市的通病。如果抱着逃避压力的心态转场，你可能会发现，哪里都很难。但是成都已经算相对宜居的城市了，例如在买房这件人生大事上，成都在一线、新一线19城里的居住自由指数排名第五，已经处于相对友好的位置。虽然近年来成都房价不断上涨，不靠家里人资助也很难独立买房，但比起北上广深以及杭州、南京等东部城市，成都的居住负担还是轻了不少。成都在社交平台上的光环太大，总让人误以为这里总是晴朗光明的，却掩盖了平日的阴霾、潮湿与暗淡。离开成都，要么回到一线城市继续卷，忍受昂贵的生活成本和工作高压；要么去三四线小城市，虽压力低一些，但更讲人情世故，常年在大城市生活的人可能很难融入。总是站在人生十字路口的年轻人，往往在安逸和奋斗的道路中纠结——既想找份轻松的工作，在一个宜居城市“美美躺平”；又不甘青春就这样虚度，想趁年轻打拼出一番事业。这也是为什么，应届生对成都的感情很复杂。它可以给你温柔的一面，用美食和美景疗愈疲倦的身心；也会向你展示残酷的一面，让你无奈自嘲“天府N街氛围组”，一时难以触碰到梦想和高薪。</p>
+        <small class="page-url url "><a href="https://m.36kr.com/p/1848077993561223" target="_blank">(https://m.36kr.com/p/1848077993561223)</a><br></small>
+    </div>
+
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 获取所有导航链接
+        const navLinks = document.querySelectorAll(".navigate-item");
+        // 将导航链接与目标元素建立映射关系
+        const connections = Array.from(navLinks).map(link => {
+            const targetId = link.getAttribute("href").substring(1); // 去掉 #
+            const targetElement = document.getElementById(targetId);
+            return { link, targetElement };
+        });
+        // 使用 IntersectionObserver 观察目标元素
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const { target, isIntersecting } = entry;
+                    const matchingLink = connections.find(connection => connection.targetElement === target).link;
+                    if (isIntersecting) {
+                        // 目标元素在视野中，添加高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.add("active");
+                    } else {
+                        // 目标元素离开视野，移除高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.remove("active");
+                    }
+                });
+            },
+            {
+                root: null, // 默认视口
+                threshold: 0.02
+            }
+        );
+
+        // 开始观察所有目标元素
+        connections.forEach(({ targetElement }) => observer.observe(targetElement));
+    });
+</script>
+<script>
+    // 获取元素
+    const resizer = document.querySelector('.resizer');
+    const leftColumn = document.querySelector('.left-column');
+    const rightColumn = document.querySelector('.right-column');
+    const navigate = document.querySelector('.navigate')
+
+    let isDragging = false;
+
+    // 鼠标按下事件
+    resizer.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        document.body.style.cursor = 'col-resize';
+        document.body.style.userSelect = 'none';
+    });
+
+    // 鼠标移动事件
+    document.addEventListener('mousemove', (event) => {
+        if (!isDragging) return;
+
+        // 计算新的宽度
+        const newLeftWidth = event.clientX / window.innerWidth * 100; // 转换为百分比
+
+        // 限制宽度范围
+        if (newLeftWidth > 15 && newLeftWidth < 70) {
+            leftColumn.style.flexBasis = `${newLeftWidth}%`;
+            rightColumn.style.flexBasis = `${100 - newLeftWidth}%`;
+            navigate.style.left = `${newLeftWidth + 0.15 * (100 - newLeftWidth)}%`
+            navigate.style.maxWidth = `${0.7 * (100 - newLeftWidth)}%`
+
+            const navigateRect = navigate.getBoundingClientRect();
+            const screenWidth = window.innerWidth;
+
+            // 获取右侧部分宽度
+            const rightColumnWidth = rightColumn.getBoundingClientRect().width;
+
+            // 计算 navigate 的占屏幕宽度比例
+            const navigateWidthPercentage = (navigateRect.width / screenWidth) * 100;
+
+            // 计算 navigate 居中所需的 left 值
+            const rightColumnLeft = rightColumn.getBoundingClientRect().left;
+            const navigateLeft = rightColumnLeft + (rightColumnWidth - navigateRect.width) / 2;
+
+            // 设置 navigate 的宽度和位置
+            navigate.style.left = `${navigateLeft}px`;
+        }
+    });
+
+    // 鼠标松开事件
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        document.body.style.cursor = 'default';
+        document.body.style.userSelect = 'auto';
+    });
+</script>
+</html>

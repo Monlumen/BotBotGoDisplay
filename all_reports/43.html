@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>steam上隐藏的低价上手简单但是实际有深度的好玩的策略游戏?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; 
+            background-color: #f4f6f8; 
+            color: #333; 
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        
+        .content {
+            border-radius: 12px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); 
+            background-color: #fff; 
+            padding: 16px; 
+            margin-bottom: 16px; 
+        }
+
+        
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .left-column{
+            flex: 0.47;
+        }
+        .right-column{
+            flex: 0.53;
+        }
+
+        .left-column {
+            background-color: #eef6ff; 
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; 
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Noto Serif", "SimSun", serif; 
+            position: relative;
+        }
+        .resizer {
+            width: 6px;
+            cursor: col-resize;
+            background-color: #d1d1d1;
+        }
+
+
+        
+        .title {
+            font-size: 1.4em; 
+            font-weight: 600; 
+            color: #1a1a1a; 
+            margin-bottom: 12px; 
+        }
+
+        .page-name.title {
+            font-size: 1.8em; 
+            font-weight: bold; 
+            color: #222; 
+            margin: 16px 0; 
+            text-align: left; 
+        }
+
+        .section-title {
+            font-size: 1.4em; 
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; 
+        }
+
+        
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; 
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; 
+            padding: 12px; 
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; 
+            border: 1px solid #dde3ea; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+            margin-bottom: 20px; 
+        }
+
+        
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; 
+            margin: 20px 0; 
+        }
+
+        
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; 
+            color: #666; 
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; 
+            border-radius: 8px; 
+            line-height: 1.4;
+            margin-bottom: 10px; 
+        }
+
+        
+        .page-rating {
+            background-color: #e8f4ff; 
+            color: #0078d7; 
+            font-weight: bold; 
+            border: 1px solid #aad4ff; 
+        }
+
+        
+        .page-annotation {
+            background-color: #fff5e5; 
+            color: #cc8400; 
+            font-style: italic; 
+            border: 1px solid #ffcc66; 
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; 
+        }
+
+        
+        a {
+            color: #0078d7; 
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+        
+        .content > * {
+            margin-bottom: 12px; 
+        }
+
+        
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; 
+            z-index: 300; 
+            background-color: #ffffff; 
+            color: #222; 
+            font-size: 1.1em; 
+            font-weight: 500; 
+            padding: 12px 16px; 
+            border-radius: 8px; 
+            border: 1px solid #d1e4f2; 
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05),  0 2px 4px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 16px; 
+            text-align: left; 
+            line-height: 1.6; 
+            font-family: "Inter", "Noto Sans", sans-serif; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        
+        .section-link-box {
+            display: inline-block; 
+            margin: 4px 2px; 
+        }
+
+        .section-link {
+            display: inline-flex; 
+            align-items: center; 
+            padding: 6px 12px; 
+            background-color: #eef6ff; 
+            color: #0078d7; 
+            font-size: 0.95em; 
+            font-weight: 500; 
+            text-decoration: none; 
+            border: 1px solid #d1e4f2; 
+            border-radius: 20px; 
+            transition: all 0.2s ease; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; 
+            color: #005bb5; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            text-decoration: underline; 
+        }
+
+        
+        .navigate {
+            display: flex; 
+            max-width: 40%;
+            width: fit-content; 
+            flex-wrap: nowrap; 
+            overflow-x: auto; 
+            gap: 4px; 
+            justify-content: center; 
+            padding: 4px 4px; 
+            background-color: #f4f6f8; 
+            border-radius: 12px; 
+
+            position: fixed;
+            top: 0;
+            left: 55%;
+            
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease; 
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        
+        .navigate-item {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            background-color: #ffffff; 
+            padding: 3px 6px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            transition: all 0.3s ease; 
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            transform: translateY(2px); 
+        }
+        .navigate-item.active {
+            box-shadow: 0 0 10px 3px rgba(0, 120, 215, 0.5); 
+            transform: translateY(1px); 
+        }
+        .navigate-item a {
+            text-decoration: none; 
+            color: #0078d7; 
+            font-weight: bold; 
+            font-size: 1em; 
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; 
+            margin-bottom: 1px; 
+        }
+        .navigate-item-id {
+            font-size: 0.9em; 
+            color: #555; 
+        }
+
+        [id] { 
+            scroll-margin-top: 55px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            steam上隐藏的低价上手简单但是实际有深度的好玩的策略游戏?
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">低价策略游戏推荐</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#The-20-best-strategy-games-to-play-on-PC-&-Steam-in-2024">
+    🏆策略游戏推荐</a></div><div class="section-link-box"><a class="section-link" href="#33-Best-Games-Under-$10-in-the-Steam-Winter-Sale">
+    💲折扣RPG</a></div><div class="section-link-box"><a class="section-link" href="#Most-Replayable-Strategy-Games">
+    🔄</a></div></div>
+    <div class="section-content content"><p>根据Kingbot 的报告及其他来源信息，以下Steam策略游戏价格低于10美元，并被推荐为易上手但具有深度策略的游戏：</p>
+<ol>
+<li>
+<p><strong>Sid Meier’s Civilization VI (2.99美元):</strong>  这是一款广受好评的回合制4X策略游戏，玩家需要管理文明的发展，从石器时代发展到信息时代。其核心循环易于理解，但其深度策略在于科技树的选择、外交策略、城市规划、与其他文明的互动以及多种胜利方式的选择，使其重玩价值极高。《文明VI》拥有大量文明和领导者，每个都有独特的特性和游戏风格，进一步增加了游戏的可玩性。(参考网页一、三)</p>
+</li>
+<li>
+<p><strong>Total War: Warhammer (6美元):</strong>  这款游戏结合了回合制的帝国管理和即时的史诗级战斗。玩家需要管理自己的派系，扩张领土，招募和指挥军队，并参与各种规模的战斗。虽然战斗系统需要一定程度的掌握，但宏观的战略层面易于上手，丰富的兵种和战术选择保证了高可玩性和策略深度。(参考网页二)</p>
+</li>
+<li>
+<p><strong>《全面战争：战锤》系列基础游戏(约6美元):</strong>  该系列以其融合了回合策略和即时战略战斗而闻名，其世界设定和丰富的单位类型使得策略选择非常多样化。虽然有着较高的策略深度，但上手难度相对友好。(参考网页二)</p>
+</li>
+<li>
+<p><strong>Slay the Spire (6.24美元):</strong> 这是一款集换式卡牌roguelike游戏，玩家需要通过精心构建牌组来应对随机生成的挑战。游戏规则简单易懂，但策略性极强，需要玩家在卡牌选择、战斗策略以及资源管理方面做出权衡，极高的重玩性来自于随机性与策略组合。(参考网页二)</p>
+</li>
+</ol>
+<p><strong>需要说明的是：</strong>  原报告中提及的《Defense Grid: The Awakening》价格未能明确查证，因此未列入此推荐中。  其他一些在报告中被提及但定价不明确或高于10美元的游戏（例如《XCOM 2》，《Into The Breach》 , 《Tropico》系列， 《Patrician》系列）均未包含在此列表中。(参考网页二)</p></div>
+</div><div class="section">
+    <h3 class="section-title title">游戏特性分析</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#ARTICLE:-Strategy-games-for-beginners-–-Save-or-Quit">
+    🎮策略游戏入门</a></div><div class="section-link-box"><a class="section-link" href="#The-20-best-strategy-games-to-play-on-PC-&-Steam-in-2024">
+    🏆策略游戏排行榜</a></div><div class="section-link-box"><a class="section-link" href="#Most-Replayable-Strategy-Games">
+    🔄</a></div><div class="section-link-box"><a class="section-link" href="#Good-strategy-games-on-Steam---General-Discussion---Giant-Bomb">
+    🔍</a></div></div>
+    <div class="section-content content"><h2>游戏特性分析：易上手与策略深度的平衡</h2>
+<p>本报告探讨Steam平台上低价策略游戏中“易上手”与“策略深度”的平衡问题。  分析基于用户需求和多个游戏案例，重点考察游戏机制如何实现二者兼顾。</p>
+<p><strong>1. 回合制策略游戏:</strong></p>
+<ul>
+<li>
+<p><strong>《文明VI (Civilization VI)》:</strong>  该游戏被认为拥有平缓的学习曲线，其4X游戏模式（探索、扩张、开发、消灭）易于理解。但其复杂的文明管理、科技树和外交系统，以及可重玩性极高的随机地图和众多文明领导者，提供了极高的策略深度。 (参考网页1, 网页3)</p>
+</li>
+<li>
+<p><strong>《XCOM 2》:</strong>  该游戏通过回合制战斗和不可预测的敌人行动，以及随机事件，迫使玩家不断调整战术，从而实现策略深度。虽然初期上手相对容易，但后期高难度下的作战规划与资源管理要求极高的策略素养。(参考网页1)</p>
+</li>
+</ul>
+<p><strong>2. 即时战略与回合制混合游戏:</strong></p>
+<ul>
+<li><strong>《全面战争：战锤 (Total War: Warhammer)》系列:</strong>  该系列游戏将即时战术战斗与回合制策略地图结合。  虽然战斗部分需要一定的微操技巧，但总体学习曲线较为平缓。丰富的兵种组合、战役目标以及策略地图上的政治、经济互动提供了策略深度。(虽然网页中未直接提及该游戏，但基于游戏类型特性分析)</li>
+</ul>
+<p><strong>3. 塔防游戏:</strong></p>
+<ul>
+<li><strong>《防御阵线：觉醒 (Defense Grid: The Awakening)》:</strong>  该游戏被明确肯定其平缓的学习曲线，初期塔防类型机制简单易懂。但随着游戏进程，越来越多的塔防类型和更高难度的敌人，对玩家的策略规划和资源管理提出了更高的挑战，展现策略深度。(参考网页1)</li>
+</ul>
+<p><strong>4. 其他类型游戏:</strong></p>
+<ul>
+<li>
+<p><strong>《杀戮尖塔 (Slay the Spire)》:</strong>  该卡牌构筑 roguelike 游戏，通过随机卡牌组合和高难度战斗，要求玩家不断调整策略，从而具有很高的重玩价值和策略深度。(参考网页1)</p>
+</li>
+<li>
+<p><strong>《环世界 (RimWorld)》、《逆风前行 (Against the Storm)》、《王权 (Kingdom)》:</strong>  这些独立游戏在Steam上广受欢迎，用户反馈表明它们在易上手性和策略深度方面取得了平衡。(参考网页3)</p>
+</li>
+</ul>
+<p><strong>5.  策略深度高但学习曲线陡峭的游戏:</strong></p>
+<ul>
+<li>《钢铁雄心 (Hearts of Iron)》、《十字军之王 (Crusader Kings)》:  这些游戏策略深度极高，但复杂的机制和庞大的信息量，使其更适合有一定策略游戏基础的玩家。(参考网页1)</li>
+</ul>
+<p><strong>6. 经济策略游戏:</strong></p>
+<ul>
+<li><strong>《大亨 (Tycoon)》系列:</strong>  该系列游戏关注经济和城市/产业管理，其核心玩法围绕着赚钱和扩张。虽然《大亨3》被认为相对易于上手且价格低廉，但其经济模拟的深度和策略性仍然能带来一定的挑战。(参考网页4)</li>
+</ul>
+<p><strong>总结:</strong>  本分析表明，Steam平台上存在许多兼顾易上手性和策略深度的低价策略游戏。不同类型的游戏通过不同的机制实现这一平衡。  选择适合自己的游戏，需要根据自身策略游戏经验和偏好进行判断。  某些游戏虽然策略深度很高，但也可能需要较高的学习成本。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">用户反馈与偏好</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#ARTICLE:-Strategy-games-for-beginners-–-Save-or-Quit">
+    🎮入门推荐</a></div><div class="section-link-box"><a class="section-link" href="#Good-strategy-games-on-Steam---General-Discussion---Giant-Bomb">
+    🔍用户求推荐</a></div><div class="section-link-box"><a class="section-link" href="#Most-Replayable-Strategy-Games">
+    🔄</a></div><div class="section-link-box"><a class="section-link" href="#The-20-best-strategy-games-to-play-on-PC-&-Steam-in-2024">
+    🏆</a></div></div>
+    <div class="section-content content"><h2>用户反馈与偏好维度总结：</h2>
+<p>本次调查用户主要青睐Steam平台上价格低廉（大部分低于10美元，促销期间价格更低）、易于上手但策略深度丰富的游戏。  他们尤其重视游戏的学习曲线和可玩性，希望快速上手并获得策略挑战和乐趣。</p>
+<p>根据用户反馈，以下游戏及其特性最受关注：</p>
+<p><strong>A.  入门级策略游戏 (学习曲线平缓，价格低廉):</strong></p>
+<ul>
+<li><strong>Defense Grid: The Awakening:</strong>  用户明确评价其为新手友好型入门策略游戏，拥有良好的学习曲线，且价格合理。</li>
+<li><strong>Into the Breach:</strong>  口碑良好，被推荐为易于上手且策略性强的游戏，用户赞扬其简洁易懂的操作和高策略深度。</li>
+<li><strong>Tropico系列 和 Patrician系列:</strong> 论坛讨论中多次推荐，评价为有趣且价格合理，适合入门且策略性强。（例如，文章提及《大亨3》在Steam打折价仅为2.5美元）</li>
+</ul>
+<p><strong>B.  策略深度较高的游戏 (入门门槛略高，价格可能较高，但重玩性高):</strong></p>
+<ul>
+<li><strong>Civilization VI:</strong>  多次提及，价格相对低廉，用户认为其文明管理和发展机制具有深度，重玩价值极高，但对于完全策略游戏新手，学习曲线可能略陡峭。  (多个网页提到其易上手但深度高，以及高重玩性)</li>
+<li><strong>XCOM 2:</strong>  获得高度评价，其不可预测的战斗和多元化战术被赞赏，但被认为对完全新手有一定学习门槛。(文章中指出其难度增加)</li>
+<li><strong>Slay the Spire:</strong> 用户高度评价其高重玩价值和策略深度，但其Roguelike元素可能并非所有玩家都适应。</li>
+</ul>
+<p><strong>C.  策略深度高，入门门槛较高，价格可能偏高 (更适合有一定策略游戏经验玩家):</strong></p>
+<ul>
+<li><strong>Total War: Warhammer:</strong>  回合制战略和即时战斗的结合，以及丰富的策略选择吸引了玩家，但价格相对较高，且其复杂的游戏机制可能不适合新手 (文章中推荐但同时强调其复杂性)</li>
+<li><strong>Hearts of Iron 和 Crusader Kings:</strong>  策略深度极高，但用户一致认为更适合有一定策略游戏基础的玩家，并非完全新手向。</li>
+</ul>
+<p><strong>D.  其他提及游戏:</strong>  部分用户还提及了其他策略游戏，但缺乏具体的评价和推荐理由，因此未在此处详细列出。</p>
+<p><strong>总结:</strong>  用户对于低价策略游戏的需求主要集中在“易于上手”和“策略深度”两个维度上。  不同类型的策略游戏在学习曲线和价格上存在差异，选择时应根据自身经验和预算进行权衡。  本次调查结果显示，部分入门级策略游戏由于其优秀的游戏性和合理的价格，非常符合用户需求。  而策略深度高的游戏则更受有一定游戏经验玩家的青睐。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">游戏的重玩价值</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#ARTICLE:-Strategy-games-for-beginners-–-Save-or-Quit">
+    🎮入门推荐</a></div><div class="section-link-box"><a class="section-link" href="#Best-Replay-Value-Games-on-Steam-|-Steambase">
+    🌟重玩价值前十</a></div><div class="section-link-box"><a class="section-link" href="#The-20-best-strategy-games-to-play-on-PC-&-Steam-in-2024">
+    🏆策略游戏排行榜</a></div><div class="section-link-box"><a class="section-link" href="#Most-Replayable-Strategy-Games">
+    🔄重玩价值探讨</a></div><div class="section-link-box"><a class="section-link" href="#Good-strategy-games-on-Steam---General-Discussion---Giant-Bomb">
+    🔍</a></div></div>
+    <div class="section-content content"><h2>Steam上低价策略游戏重玩价值分析：</h2>
+<p>用户对Steam平台低价策略游戏的重玩价值关注度极高，其评价标准主要体现在以下几个方面：</p>
+<p><strong>1. 机制驱动的高重玩性：</strong>  用户期望游戏机制能够持续提供新鲜感，避免重复游玩带来的枯燥。  例如，《文明VI》凭借其复杂机制、多样化文明和随机事件，保证了每次游戏体验的独特性；《XCOM 2》的随机战斗和事件也使其重玩价值极高；《帝国时代II》的多样化战役、独特文明和游戏模式（单人/多人）也带来了持续的乐趣。  此外，Roguelike元素（如《Hades》、《Terraria》、《Slay the Spire》）和卡牌构建系统也显著提升了游戏的重玩价值，体现了用户对高重玩性机制的追求。  《征服之歌》近20个独特派系也提供了极高的重玩性。</p>
+<p><strong>2. 各类型策略游戏重玩机制差异：</strong>  不同类型的策略游戏，其重玩机制设计存在差异。RTS游戏（如《帝国时代II》、《星际争霸II》）主要依靠多人模式和不同文明的策略差异维持重玩性；4X策略游戏（如《文明VI》）则更依赖于随机地图生成和不同的扩张策略。  塔防游戏（例如文中提到的Bloons TD 6,军团TD 2）则通过不断涌现的敌人和塔防策略组合来提升重玩性。  用户在选择游戏时，会根据自身偏好和对不同游戏类型重玩机制的理解，进行选择。</p>
+<p><strong>3. 用户评价与反馈：</strong>  用户对游戏的重玩价值评价直接影响其游戏体验和购买意愿。  Steam上“ overwhelmingly Positive”等正面评价，表明重玩价值是用户选择策略游戏的重要因素。  反例是《命令与征服4》因缺乏有效的重玩机制而遭受差评，突显了重玩价值的重要性。</p>
+<p><strong>总结：</strong>  重玩价值是用户选择Steam平台低价策略游戏的重要考量因素。用户期望游戏提供足够丰富的游戏内容和巧妙的机制设计，以保证游戏的长期可玩性和趣味性。 不同类型策略游戏的重玩机制设计不尽相同，用户需根据自身偏好和对不同类型游戏重玩机制的理解，进行理性选择。  高评价游戏往往具备能持续激发玩家探索和策略思考的机制，而低评价游戏则通常缺乏这方面的设计。</p></div>
+</div>
+</div>
+<div class="resizer"></div>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item" href="#Steam-easy-to-learn-affordable-strategy-games-user-reviews-and-prices-at-DuckDuckGo">
+    <a href="#Steam-easy-to-learn-affordable-strategy-games-user-reviews-and-prices-at-DuckDuckGo" class="navigate-item-emoji ">💡</a>
+    <a href="#Steam-easy-to-learn-affordable-strategy-games-user-reviews-and-prices-at-DuckDuckGo" class="navigate-item-id">1</a>
+</div><div class="navigate-item" href="#Most-Replayable-Strategy-Games">
+    <a href="#Most-Replayable-Strategy-Games" class="navigate-item-emoji ">🔄</a>
+    <a href="#Most-Replayable-Strategy-Games" class="navigate-item-id">2</a>
+</div><div class="navigate-item" href="#ARTICLE:-Strategy-games-for-beginners-–-Save-or-Quit">
+    <a href="#ARTICLE:-Strategy-games-for-beginners-–-Save-or-Quit" class="navigate-item-emoji ">🎮</a>
+    <a href="#ARTICLE:-Strategy-games-for-beginners-–-Save-or-Quit" class="navigate-item-id">3</a>
+</div><div class="navigate-item" href="#The-20-best-strategy-games-to-play-on-PC-&-Steam-in-2024">
+    <a href="#The-20-best-strategy-games-to-play-on-PC-&-Steam-in-2024" class="navigate-item-emoji ">🏆</a>
+    <a href="#The-20-best-strategy-games-to-play-on-PC-&-Steam-in-2024" class="navigate-item-id">4</a>
+</div><div class="navigate-item" href="#Good-strategy-games-on-Steam---General-Discussion---Giant-Bomb">
+    <a href="#Good-strategy-games-on-Steam---General-Discussion---Giant-Bomb" class="navigate-item-emoji ">🔍</a>
+    <a href="#Good-strategy-games-on-Steam---General-Discussion---Giant-Bomb" class="navigate-item-id">5</a>
+</div><div class="navigate-item" href="#33-Best-Games-Under-$10-in-the-Steam-Winter-Sale">
+    <a href="#33-Best-Games-Under-$10-in-the-Steam-Winter-Sale" class="navigate-item-emoji ">💲</a>
+    <a href="#33-Best-Games-Under-$10-in-the-Steam-Winter-Sale" class="navigate-item-id">6</a>
+</div><div class="navigate-item" href="#Best-Replay-Value-Games-on-Steam-|-Steambase">
+    <a href="#Best-Replay-Value-Games-on-Steam-|-Steambase" class="navigate-item-emoji ">🌟</a>
+    <a href="#Best-Replay-Value-Games-on-Steam-|-Steambase" class="navigate-item-id">7</a>
+</div><div class="navigate-item" href="#best-cheap-strategy-games-with-high-replay-value-at-DuckDuckGo">
+    <a href="#best-cheap-strategy-games-with-high-replay-value-at-DuckDuckGo" class="navigate-item-emoji ">♻</a>
+    <a href="#best-cheap-strategy-games-with-high-replay-value-at-DuckDuckGo" class="navigate-item-id">8</a>
+</div><div class="navigate-item" href="#Strategy-games---The-Lounge---Kerbal-Space-Program-Forums">
+    <a href="#Strategy-games---The-Lounge---Kerbal-Space-Program-Forums" class="navigate-item-emoji ">💬</a>
+    <a href="#Strategy-games---The-Lounge---Kerbal-Space-Program-Forums" class="navigate-item-id">9</a>
+</div><div class="navigate-item" href="#The-best-budget-games-on-Steam-|-Stuff">
+    <a href="#The-best-budget-games-on-Steam-|-Stuff" class="navigate-item-emoji ">📚</a>
+    <a href="#The-best-budget-games-on-Steam-|-Stuff" class="navigate-item-id">10</a>
+</div><div class="navigate-item" href="#Games-Can-Make-You-a-Better-Strategist">
+    <a href="#Games-Can-Make-You-a-Better-Strategist" class="navigate-item-emoji ">📈</a>
+    <a href="#Games-Can-Make-You-a-Better-Strategist" class="navigate-item-id">11</a>
+</div><div class="navigate-item" href="#Games-with-depth,-strategy-and-replay-value-|-BoardGameGeek">
+    <a href="#Games-with-depth,-strategy-and-replay-value-|-BoardGameGeek" class="navigate-item-emoji ">👥</a>
+    <a href="#Games-with-depth,-strategy-and-replay-value-|-BoardGameGeek" class="navigate-item-id">12</a>
+</div><div class="navigate-item" href="#Best-entry-level-strategy-games?-|-PC-Gamer-Forums">
+    <a href="#Best-entry-level-strategy-games?-|-PC-Gamer-Forums" class="navigate-item-emoji ">🆕</a>
+    <a href="#Best-entry-level-strategy-games?-|-PC-Gamer-Forums" class="navigate-item-id">13</a>
+</div>
+    </div>
+    <div class="page"  id="Steam-easy-to-learn-affordable-strategy-games-user-reviews-and-prices-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💡&nbsp;</span>Steam easy to learn affordable strategy games user reviews and prices at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Steam easy to learn affordable strategy games user reviews and prices" target="_blank">(DDG:Steam easy to learn affordable strategy games user reviews and prices)</a><br></small>
+        <small class="page-rating rating ">评分: 9.0<br></small>
+        <small class="page-annotation annotation ">注释: 分析了Steam上价格低廉策略游戏的推荐，直接满足用户预算和内容需求。<br></small>
+    </div>
+    <div class="page-content content"><h2>Steam Curator：最佳PC策略游戏-热门评价</h2>
+<p>MARVEL SNAP. 免费</p>
+<p>Sid Meier&#x27;s Civilization® V · 29.99美元</p>
+<p>Battle Brothers · 29.99美元。14.99美元</p>
+<p>They Are Billions · 29.99美元。22.49美元</p>
+<p>-Stellaris和Crusader Kings II可免费游玩。我建议从它们开始。所有这些游戏都有较高的学习曲线，但是也有……</p>
+<p>-在这篇文章中，我将提供50个你可以在Steam夏季特卖期间购买的电子游戏推荐。</p>
+        <small class="page-url url "><a href="DDG:Steam easy to learn affordable strategy games user reviews and prices" target="_blank">(DDG:Steam easy to learn affordable strategy games user reviews and prices)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Most-Replayable-Strategy-Games">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🔄&nbsp;</span>Most Replayable Strategy Games</h3>
+        <small class="page-url url "><a href="https://gamerant.com/most-replayable-strategy-games/" target="_blank">(https://gamerant.com/most-replayable-strategy-games/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 分析了流行的策略游戏及其重玩价值，契合用户对长期可玩性的需求。<br></small>
+    </div>
+    <div class="page-content content"><p>一些令人惊叹的策略游戏提供了残酷的游戏体验，由于随机元素和永久死亡，具有很高的重玩价值。</p>
+<p>例如，《文明6》提供了易于上手的4X策略游戏体验，拥有多样化的领导者和在线多人游戏模式。</p>
+<p>另一方面，《帝国时代2》通过多个战役、独特的文明和混战模式提供了可重复游玩的乐趣。</p>
+<p>尽管策略游戏的流行度自90年代和2000年代初的巅峰时期以来有所下降，尤其是在RTS类型游戏中，但近年来策略游戏正在复苏。这在独立游戏领域尤其如此，例如《逆风前行》、《RimWorld》和《王权》都在Steam商店表现出色。</p>
+<p>《文明》系列以其易于上手的4X策略游戏体验以及巨大的重玩价值而闻名。这种重玩价值是通过密集的游戏机制实现的，这些机制鼓励多种策略，而多人游戏的不可预测性确保每场比赛都有不同的结果。</p>
+<p>《文明6》与其前作一样，也拥有各种著名的领导者供玩家使用。这本身就增加了游戏的重玩价值，但正是《文明》精心打造的游戏循环奖励了玩家的重复游玩。游戏的随机生成元素也有助于防止游戏变得陈旧，允许玩家多次玩游戏，仍然感到惊喜。尽管《文明》可以单人游戏，但在大型多人在线游戏中玩 arguably 更好，也更耐玩。</p>
+<h3>4 《帝国时代2》</h3>
+<p>像《星际争霸2》这样的即时战略游戏以其复杂的机制和陡峭的学习曲线而臭名昭著，尤其是在多人在线游戏中。因此，需要反复比赛才能学习游戏，这些游戏因此而被设计为可重复游玩。</p>
+<p>然而，《帝国时代2》即使没有其多人游戏功能，也可以重复游玩。这要归功于玩家享受游戏的方式的多样性。《帝国时代2》可以通过多种方式进行游戏；游戏包含大量单人战役以及可以在单人游戏中和与其他玩家在线一起玩的混战模式。此外，游戏中还有大量的独特文明供玩家控制，每个文明都有其独特的优势和劣势。</p>
+<h3>3 《全面战争：中世纪2》</h3>
+        <small class="page-url url "><a href="https://gamerant.com/most-replayable-strategy-games/" target="_blank">(https://gamerant.com/most-replayable-strategy-games/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="ARTICLE:-Strategy-games-for-beginners-–-Save-or-Quit">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🎮&nbsp;</span>ARTICLE: Strategy games for beginners – Save or Quit</h3>
+        <small class="page-url url "><a href="https://saveorquit.com/2019/12/24/article-strategy-games-for-beginners/" target="_blank">(https://saveorquit.com/2019/12/24/article-strategy-games-for-beginners/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 这篇文章列出了适合新手的多款策略游戏，符合用户对低价、易上手和高重玩价值的需求。<br></small>
+    </div>
+    <div class="page-content content"><h2>策略游戏入门指南</h2>
+<p>策略游戏通常难以上手。市面上策略游戏众多，选择错误的入门游戏可能会带来糟糕的体验。许多策略游戏学习曲线陡峭，仿佛默认玩家已熟悉该类型游戏。但有一些游戏非常适合入门，即使你从未玩过策略游戏，也能轻松上手。我尝试整理了一些我认为适合入门的游戏，但这绝非新玩家唯一的选择，希望这份列表能为想入门策略游戏的玩家提供帮助。我尝试选择符合以下标准的游戏：</p>
+<ul>
+<li>学习曲线平缓：游戏易于上手，无需花费数小时学习所有机制才能开始享受乐趣。依赖维基来讲解基础的游戏不在此列。</li>
+<li>易于获取：如果需要寻找二手副本，或仅在一些不知名的平台上可用，则不会列入列表。</li>
+<li>呈现良好：如果游戏内容枯燥乏味，则不会列入列表。</li>
+</ul>
+<h3>命令与征服3</h3>
+<p>即时战略游戏可能是最容易上手的策略游戏类型之一。许多即时战略游戏都有良好的战役模式，帮助玩家逐步了解游戏玩法，并且通常拥有不错的画面表现。而《命令与征服》系列可能是最佳的入门点之一。《命令与征服》初代游戏奠定了后续即时战略游戏的标准，其续作和衍生作品在此基础上进行了扩展。虽然《命令与征服3》可能比系列早期的游戏更复杂一些，但它仍然是一个非常好的入门点。战斗快速刺激，无需过多微操，战役剧情也相当不错，让人想一探究竟。</p>
+<p>在《命令与征服3》中，你将控制GDI或NOD的部队（以及后来出现的第三派系，但我不会剧透），你需要建造基地、训练士兵并将其送入战场。所有操作都在实时进行，但《命令与征服》系列节奏相对较快，你无需等待太久就能开始战斗，部队也会立即开始互相射击。它是一款非常有趣的游戏，变化多样，战役模式很好地展现了游戏的特色和代表性，由约瑟夫·库坎饰演的NOD领导人在游戏中的一些真人过场动画堪称游戏史上的最佳之作。</p>
+<p>如果你对《命令与征服3》感兴趣，可以在Steam和Origin上找到它，而且经常打折。不过不要购买《命令与征服4》，那款游戏很糟糕，其在Steam上的“压倒性差评”分数实至名归。</p>
+<h3>防御阵线：觉醒</h3>
+<p>《防御阵线》是一款塔防游戏，这类策略游戏介于即时战略游戏和益智游戏之间。基本理念是敌人会从地图上预定的不同点涌入，你需要建造不同的防御塔来击败他们。合理安排时间和资源至关重要。《防御阵线》比大多数塔防游戏更进一步，拥有引人入胜的主线战役和平缓的学习曲线。但要注意的是，游戏后期难度会逐渐增加。</p>
+<p>在《防御阵线》中，随着防御工事的建立，你将拥有越来越多的塔可以选择。这些塔从简单的机关枪到减缓附近敌人速度的塔，再到火焰喷射器和激光塔，种类繁多。游戏节奏安排得非常好，早期游戏只提供少量塔，等你掌握基础后，就能获得更多种类繁多的塔。在战役模式中，配音演员吉姆·沃德饰演的AI会陪伴你并和你交谈，其游戏内旁白堪称任何游戏中最佳旁白之一，与《堡垒》不相上下。</p>
+<p>这款游戏可在Steam以及其自身的Humble Widget平台上找到，并且定期打折。</p>
+<h3>巫妖王：奥术大师 或 巫妖王2：放逐者</h3>
+<p>4X游戏是比较难上手的策略游戏类型之一。在大多数4X游戏中，你将获得随机生成的地图，你需要从一座城市开始建造一个庞大的帝国，并逐渐扩张。由于其性质使然，你不会像即时战略游戏中那样获得以剧情驱动的战役，也不会像即时战略游戏中那样有不同的关卡，让你逐步了解游戏机制。不过，4X游戏通常具有很高的重玩性，因为每次开始新游戏，你都会获得一张全新的地图。</p>
+<p>《巫妖王》系列是现有4X游戏中最不复杂的游戏之一。你无需担心复杂的科技树或大量不同的经济资源，游戏节奏也很快。但这并不是说游戏浅薄或简单，只是对于一款4X游戏来说比较直接。在《巫妖王》中，你将扮演众多不同种族之一，例如人类、怪物、亡灵、精灵等等，每个种族都有其独特的优势和劣势，由一位强大的巫师领导，试图建立自己的帝国，并成为奥术大师。战斗策略性强且令人满意，各单位拥有不同的角色，有些擅长攻城，有些擅长近战等等。</p>
+<p>两款《巫妖王》游戏非常相似，不过第二款游戏的内容更多。但其默认设置对新手并不友好，因此如果你想玩这款游戏，请在沙盒地图上玩，并将城市数量限制关闭（尽管游戏建议你保留该选项）。</p>
+<p>这款游戏很容易获得，它在Steam上，并且经常打折。</p>
+<h3>光明力量</h3>
+<p>策略角色扮演游戏有很多不同的形式，有时很难区分策略角色扮演游戏与“普通”角色扮演游戏或策略角色扮演游戏与战术游戏之间的界限。但这些游戏的共同点是，你拥有一个角色阵容，这些角色会在游戏中升级并变得更强大。</p>
+<p>《光明力量》系列是进入该类型的相当不错的入门点，关于这是否是普通角色扮演游戏或策略角色扮演游戏，并没有真正的争议。在游戏中，你将从一支小型部队开始，随着游戏的进行，部队规模会越来越大。战斗简单直接，但仍然令人满意。与许多其他策略角色扮演游戏不同，这款游戏相当宽容。你最终拥有的部队阵容包括巫师、弓箭手、战士以及更多奇特的生物，每个单位在游戏中都会得到提升，并随着战斗变得更强大，这为你的战斗选择增添了策略元素。</p>
+<p>《光明力量》的另一个优点是它几乎可以在所有平台上玩。想在PC上玩？Steam可以满足你。任意的三大游戏主机？世嘉Mega Drive/Genesis经典合集可以满足你。它还在Android和iOS上，你可以在Android上获得免费但包含广告的版本（如果你不想付费）。</p>
+<h3>英雄无敌5</h3>
+<p>《英雄无敌》系列一直以来都非常适合新手，因为它相当直接简洁，该系列中的几乎任何作品都可以作为入门级策略游戏（尽管并非所有作品都很好），但第五代感觉是最佳的起点。</p>
+<p>在《英雄无敌》系列中，你拥有众多不同的派系，由伟大的英雄率领他们的军队。英雄在世界地图上移动，收集资源，征服城市和资源收集建筑，一旦遇到敌人，游戏就会切换到战术视角，你可以在其中控制你的各个单位与敌人作战。</p>
+<p>《英雄无敌5》拥有一个很好的自成一体的战役，它非常出色地展示了其机制，并且故事也不错。它还有一个优点就是，《英雄无敌5》本身就是一个非常好的游戏。《英雄无敌3》也非常好，但战役更差一些。但要避免该系列的最新作品7，因为它太容易出现bug了。而且不用担心游戏顺序，因为《魔法门与地下城》系列发生在不同的世界中，游戏之间几乎没有什么联系。</p>
+<p>获得《英雄无敌5》非常容易。它在GOG、Steam和Uplay上经常打折（尽管出于某种原因，Uplay上并没有说明基础游戏是否包含第一个资料片）。</p>
+<h3>国王密令：传说</h3>
+<p>乍一看，《国王密令》可能看起来很像《英雄无敌》，在某些方面确实如此。《国王密令》的战术战斗非常类似于《英雄无敌》系列，但你在世界地图上的移动方式类似于角色扮演游戏。随着你的角色变得更强大，就像在角色扮演游戏中一样，你可以带上更多部队。这些游戏的重点是战术战斗，它具有令人惊讶的多样性。你可以招募近100个不同的单位，它们都有自己的优势。幸运的是，你不需要从一开始就了解每个单位的作用，它们会随着游戏的进行逐渐出现，而且在大多数情况下，它们的作用都很明显。弓箭手射箭，龙可以飞行和喷火，巫师施法，身穿重甲的骑士进行近战。</p>
+<p>1C公司发布的所有《国王密令》游戏都非常相似，以至于你可以很容易地将《国王密令：传说》之后的几款游戏视为加强版的独立资料片。虽然后来的版本包含更多内容，但第一款游戏的主线战役最易于上手。</p>
+<p>《国王密令：传说》在Steam和GOG上价格便宜，而且经常打折。它也不是一款短游戏，所以你物有所值！</p>
+<h3>战锤40K：圣战之地</h3>
+<p>作为广受欢迎的战锤40K系列的一部分，《圣战之地》是一款回合制战术游戏，你将率领一支太空海军陆战队对抗兽人。即使对于那些对战锤40K背景一无所知的人来说，这款游戏也很容易上手，它拥有大量造型各异、行动不同的单位。它也很容易上手，你的太空海军陆战队可以在倒下之前承受打击。它虽然容易上手，但也不算太简单。游戏还分为两个战役，其中一个战役限制了你能够使用什么，以及必须与什么战斗，所以没有过于复杂的单位，而另一个战役则为双方提供了完整的部队阵容。看着兽人群被你精心布置的配备重型榴弹发射器（一种反步兵武器）的太空海军陆战队屠杀，或者用几枚从后面射出的火箭摧毁他们的机器人，这感觉真的非常令人满意。</p>
+<p>《圣战之地》可在GOG和Steam上找到，而且经常打折。</p>
+<h3>荣誉奖提名</h3>
+<p>还有一些游戏由于某种原因没有入选，但对于那些想进入该类型的玩家来说，可能值得一试。</p>
+<ul>
+<li><strong>Advance Wars:</strong> 很遗憾这款游戏不太容易获得，因为它几乎是想要进入该类型游戏的玩家的完美游戏。简单但并非简化的游戏玩法，吸引人的画面，精彩的主线战役，这款游戏确实拥有这一切。但它于2001年在GBA上发行，任天堂并没有在后来的平台上重新发行它。他们也不热衷于重新发行它的任何续作。</li>
+<li><strong>星际争霸2:</strong> 《星际争霸》系列是最好的即时战略系列之一，《星际争霸2》是一款非常棒的游戏，拥有精彩的主线战役。但是，由于大多数单位都有自己必须手动激活的特殊能力，对于那些刚接触该类型游戏的玩家来说，可能会有些不知所措。</li>
+<li><strong>战锤40K：战争黎明:</strong> 第一部《战争黎明》是一款很棒的即时战略游戏，它还有一个非常棒的战役。但激烈的战斗中，如果你至少不熟悉战锤40,000的背景，可能会有点混乱。不过，如果《命令与征服》让你感到兴奋，它可以作为一款很棒的第二款游戏。</li>
+<li><strong>文明VI:</strong> 《文明》系列是最重要的4X系列之一，但对于新手来说，《文明》游戏在游戏风格上可能过于开放，很容易陷入游戏新手的陷阱。不过，特别是《文明VI》，不失为一款不错的第一个4X游戏，并且在大多数方面都比《巫妖王》更好，但它更复杂一些。</li>
+<li><strong>魔兽争霸3:</strong>  即将推出重制版，《魔兽争霸3》有点像《星际争霸》，它需要相当多的微操，但你的单位数量较少。</li>
+<li><strong>统一指挥:</strong>  在这个规模上，没有很多策略游戏适合策略游戏新手轻松上手，但《统一指挥》非常接近成为完美的策略游戏入门游戏，但它有一些机制对于第一次玩游戏的玩家来说并不完全显而易见。其简单的呈现方式也可能并不适合所有人。</li>
+</ul>
+<h2>结语</h2>
+<p>我希望这份列表能帮助那些对策略游戏类型感兴趣，但不太确定从哪里开始的人。策略游戏类型确实是游戏中变化最多的类型之一，只有角色扮演游戏才能与之抗衡，玩像《命令与征服》这样的即时战略游戏与玩像《文明》这样的4X游戏大相径庭。</p>
+<p>有些策略游戏比其他策略游戏更难上手，我找不到符合列表要求的优秀大战略游戏范例。大战略游戏中，你将控制一个已经存在于世界的国家，例如我们自己的世界，你需要带领它走向伟大。例如，《全面战争》系列以及Paradox制作的大多数游戏，如《欧陆风云》。但这恰恰是那些可能不太适合新手类型的游戏。从类似《文明》的游戏过渡到《全面战争：罗马2》应该不会太难，但对于从未玩过策略游戏的玩家来说，这些游戏可能会让人不知所措。</p>
+        <small class="page-url url "><a href="https://saveorquit.com/2019/12/24/article-strategy-games-for-beginners/" target="_blank">(https://saveorquit.com/2019/12/24/article-strategy-games-for-beginners/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="The-20-best-strategy-games-to-play-on-PC-&-Steam-in-2024">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏆&nbsp;</span>The 20 best strategy games to play on PC & Steam in 2024</h3>
+        <small class="page-url url "><a href="https://gg.deals/blog/best-strategy-games-to-play-on-pc-steam/" target="_blank">(https://gg.deals/blog/best-strategy-games-to-play-on-pc-steam/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 提供了一份优秀策略游戏的推荐列表，有助于用户根据自己的需求找到合适的游戏。<br></small>
+    </div>
+    <div class="page-content content"><h2>2024年最佳策略游戏（PC和Steam平台）</h2>
+<p>在这些策略游戏中锻炼你的批判性思维、计划能力和战术技巧！策略游戏类型一直以来深受游戏玩家欢迎，它挑战玩家批判性思维和策略性地击败对手。与普遍认知相反，它仍然非常流行，你不必费力就能找到一些最好的策略游戏。</p>
+<p>从让你成为古代皇帝到星际霸主的游戏，这篇文章将证明该类型仍然有很多现代代表。种类繁多，你一定能找到你喜欢的游戏。需要指出的是，本文使用的类型划分纯粹是惯例，因为策略游戏往往结合了许多子类型的元素。</p>
+<h3>最佳即时战略游戏 (RTS)</h3>
+<ul>
+<li>
+<p><strong>帝国时代 IV (包含在PC Game Pass中)</strong>：多年之后，最受欢迎的策略PC游戏系列之一强势回归。《帝国时代4》为喜欢引人入胜的战役、快速冲突和漫长的多人游戏会话的玩家提供了丰富的体验。这款游戏是历史爱好者的完美选择，因为它允许玩家指挥不同的文明，并观察它们如何在各个时代发展。最重要的是？虽然基本玩法相对容易掌握，但经验丰富的策略家们会在《帝国时代4》的系统中发现许多深度内容。它还值得一提的是，《帝国时代IV》可在Game Pass上玩到。活跃会员可以简单地下载它，享受数百小时史诗般的战斗。</p>
+</li>
+<li>
+<p><strong>亡命之徒3</strong>：亡命之徒3可能不是一个显而易见的选择，但它仍然强烈推荐。与其他提到的RTS游戏相比，它提供了参与小型战斗的机会。在某些情况下，避免冲突并偷偷接近敌人可能是最好的解决方案。这款游戏对玩家的策略技能提出了真正的挑战，因为他们必须协调多个英雄的动作。虽然主动暂停功能允许仔细计划，但游戏仍然很难。</p>
+</li>
+<li>
+<p><strong>全面战争：法老王朝</strong>：你可能记得《全面战争：法老》是该系列中较差的作品之一，因为它发布时评价褒贬不一。评论家们认为它与之前的几部作品相比缺乏新意。那么……它为什么会在顶级策略游戏列表中呢？原因是，法老通过免费的王朝更新改头换面了，更新引入了新的美索不达米亚和爱琴地区，并增加了一系列以前未见过的单位。改进的规模不容小觑，因为它基本上彻底改革了游戏的许多系统，使整个体验更加令人愉快。而且，由于家族谱系机制，你甚至可以在死后继续保持帝国的强大。</p>
+</li>
+<li>
+<p><strong>星际争霸II</strong>：任何一份关于PC上值得注意的策略游戏的列表，都不能少了《星际争霸II》。虽然有些人可能会争论《魔兽争霸》更好，但我们不想包含它。要玩经典的《魔兽争霸III》，你必须先购买重制版。考虑到它“良好”的评价，你可能不想这样做。但这不是我们做出决定的唯一原因。《星际争霸II》仍然是一款优秀的FPS游戏，拥有有趣的玩法和广泛的战役（准确地说，是三个，其中一个是免费的）。毫无疑问，它会让你着迷数小时。</p>
+</li>
+</ul>
+<h3>最佳回合制策略游戏</h3>
+<p>总的来说，回合制策略游戏比你的反应速度更考验你的战术思维。它们给了你足够的时间来评估你的形势并采取行动。希望这是能带给你胜利的那一步。</p>
+<ul>
+<li>
+<p><strong>装甲兵团2</strong>：《装甲兵团》是最传奇的二战游戏之一。因此，粉丝们听到《装甲兵团2》发布的消息后感到兴奋也就不足为奇了。尽管它最初由于与广受欢迎的原作不同以及AI不平衡而收到褒贬不一的评价，但一旦你尝试一下，它实际上非常令人上瘾。它最显著的优势之一是任务种类繁多。此外，行动本身的过程会根据天气条件而发生巨大变化。如果你厌倦了游戏中的战役和场景，模组社区会来帮助你。</p>
+</li>
+<li>
+<p><strong>征服之歌</strong>：《征服之歌》的首发可能让许多传奇英雄系列的粉丝感到高兴，因为带有RPG元素的回合制策略游戏子类型缺乏代表作。凭借其令人上瘾的游戏性、引人入胜的氛围和唤起怀旧情绪的配乐，Lovapotion的游戏迅速赢得了玩家的心。尽管外观如此，《征服之歌》不仅仅是标志性英雄的忠实复制品。游戏的核心是相似的，但开发人员确保改变和区分了公式，使其感觉焕然一新。</p>
+</li>
+<li>
+<p><strong>XCOM 2</strong>：由于《XCOM 2》在该类型中首屈一指，我们觉得将其排除在最值得注意的类型代表的集合之外是一种犯罪。即使情节相当简单，但这并不会让它变得不那么有趣。当然，如果你还没有机会，那么值得花时间熟悉整个《XCOM》系列。然而，第二部作品在几乎所有方面都更好。除此之外，程序生成的关卡使其更具可玩性。</p>
+</li>
+</ul>
+<h3>最佳大亨游戏</h3>
+<p>如果你厌倦了大型战斗，更喜欢以更和平的方式建立拥有繁荣经济的帝国或经营自己的企业，那就试试这些大亨游戏吧。它们将是对你的预算管理能力的可靠考验。</p>
+<ul>
+<li>
+<p><strong>Anno 1800</strong>：《Anno 1800》当然可以被列入育碧更成功的游戏中。一切运作如常，游戏性经过深思熟虑，bug很少，与之前的版本相比也有许多变化，让该系列再次闪耀。无论你是休闲玩家还是硬核玩家，这款游戏都能满足所有人的口味。如果你想在辛苦工作一天后启动它，看看你美丽的城市，那就去做吧。但如果你喜欢挑战，你不会对《Anno 1800》感到失望。</p>
+</li>
+<li>
+<p><strong>城市：天际线和城市：天际线II (包含在PC Game Pass中)</strong>：当《模拟城市》的第五部分发布时，对于许多城市建造者粉丝来说是一个令人失望的作品。幸运的是，Paradox在2015年发布了《城市：天际线》，此后它已成为那些希望建造大都市的人的首选。尽管它的游戏玩法结合了《模拟城市》和《城市XL》系列的机制，但它仍然是一款更精细的产品，bug更少。现在，经过这些年和几十个DLC之后，我们有了完整版。它会让你忙上几百个小时。但是，如果你渴望一些更新的东西，你可能想看看续集《城市：天际线II》。它提供了更美丽的视觉效果，并在第一款游戏的基础上构建，使规划和建造更具吸引力。然而，它也缺少原版中的一些内容，并存在恼人的性能问题。</p>
+</li>
+<li>
+<p><strong>庄园领主 (包含在PC Game Pass中)</strong>：《庄园领主》甚至在发布之前就占据了新闻头条——它被广泛认为是“Steam上愿望清单最多的游戏”，数百万玩家都在关注这款中世纪城市建造游戏。发布后的反响也相当热烈，虽然斯拉夫魔法的抢先体验版游戏仍需一些调整，但它已被认为是2024年最佳策略游戏之一。这款游戏为我们带来了沉浸式中世纪环境，并注重细节（别忘了，这是单人开发者作品的成果）。有建筑、资源管理和战斗，但节奏也相当缓慢。如果你喜欢你的游戏充满活力并立即获得回报，你可能敲错了门。但那些仍然可以拥抱慢节奏生活的人可能会在这个中世纪世界里迷失很久。</p>
+</li>
+<li>
+<p><strong>双点医院</strong>：现在该轮到与阵容中其他大亨游戏略有不同的游戏了。在《双点医院》中，我们将从宏观管理转向微观管理。在这个《主题医院》的精神续作中，你将成为医疗机构的负责人，试图在治疗病人的同时尽可能多地赚钱。为了成功，你必须不断扩大你的诊所，聘用最好的员工，并购买最先进的设备。病人可能会患上各种可怕的疾病，例如动物磁力，这会导致所有当地动物包围不幸的个人。</p>
+</li>
+</ul>
+<h3>最佳塔防游戏</h3>
+<p>塔防游戏的概念不言自明。顾名思义，重点是保护你的基地免受敌人的攻击。在阵容中，我们专注于对子类型采用更传统方法的游戏。</p>
+<ul>
+<li>
+<p><strong>Bloons TD 6</strong>：很难相信一款最初为移动设备制作的游戏在PC上如此成功。尽管外观如此，《Bloons TD 6》非常耐玩，抵御不断涌来的气球的攻击也相当令人愉快。此外，发布后发布的一个补丁引入了一种合作模式，最多允许四名玩家组队一起建造塔楼。纯粹的乐趣！</p>
+</li>
+<li>
+<p><strong>军团TD 2</strong>：谁说最好的电脑策略游戏必须很复杂？《军团TD 2》是易于学习但难以掌握的游戏的完美典范。前提很简单：成群的敌人正在攻击，你需要阻止他们。仅此就足以提供相当引人入胜的塔防体验。你将不断派遣新单位参与战斗并自动攻击他们的对手。有许多不同的战术可以使用，以及多种战斗人员组合可以使用，这导致了高重玩性。</p>
+</li>
+<li>
+<p><strong>他们都是亿万富翁</strong>：至于《他们都是亿万富翁》，它绝对是重新定义了该类型之一的塔防游戏。你不死敌人的行动更难预测。他们可以从任何方向以使即使是最强大的游戏PC过热的数量攻击你。大多数情况下，你的基地将同时被成千上万的敌人围困。最重要的是，你不仅要自卫，还要设法夺回落入敌手的地盘，扩大你的基地，并照顾经济。</p>
+</li>
+</ul>
+<h3>最佳4X游戏</h3>
+<p>你可能会好奇这个神秘的名字背后是什么？4X游戏是这个子类型，在这个子类型中，你将扮演一个新兴帝国领导者的角色，前方道路坎坷。这个名字来源于探索（eXpore）、开发（eXploit）、扩张（eXpand）和消灭（eXterminate）这四个词。</p>
+<ul>
+<li>
+<p><strong>太阳帝国的罪孽II</strong>：2008年发布的相当受欢迎的太空RTS游戏的续作于2022年发布（最初为Epic独占，最终登陆Steam），结果非常出色。当然，否则它就不会获得顶级即时战略游戏的地位。这个游戏主要关注军事策略，允许玩家指挥三个不同的种族，分为六个派系。《太阳帝国的罪孽II》是即时战略与4X子类型典型元素的巧妙融合。开发人员决定不使事情复杂化，主要专注于提供与原始游戏类似的体验——只是更好，更厉害。好吧，这可能是个不错的选择。值得一提的是，该游戏目前没有单人战役（计划在未来作为DLC添加），而是专注于战斗。喜欢多人游戏的人可能想参加支持多达10名玩家的在线战斗。</p>
+</li>
+<li>
+<p><strong>奇迹时代4</strong>：在去太空旅行之后，让我们前往由奇幻种族和神秘生物居住的神奇土地。《奇迹时代4》是广受欢迎的4X策略系列的另一个作品。最大的新增功能之一是可以创建你自己的派系，其独特的特征将影响游戏玩法。除此之外，《奇迹时代4》拥有大量魔法书籍，可以使用法术来增强你的军队实力。这款游戏在选择你的游戏风格方面提供了很大的自由度。结合深度的战斗机制，这款游戏很难放下。再来一轮……</p>
+</li>
+<li>
+<p><strong>文明VI</strong>：这就是它，名副其实的山顶之王，市场上最知名的策略游戏之一。即使是那些对该类型不感兴趣或根本不玩游戏的人，它的名字也能引起他们的共鸣。《文明VI》是该系列的最终结晶（它还没有结束；下一部作品正在制作中）。凭借多年的经验，游戏机制已被磨练到近乎完美，使第六部作品成为纯粹的快乐。</p>
+</li>
+<li>
+<p><strong>星际公民 (包含在PC Game Pass中)</strong>：《星际公民》是对Paradox Interactive的某种考验。许多优秀游戏作品的创造者以前一直困在地球表面，因此忠实的粉丝们对将动作移入太空的想法持谨慎态度。这些担忧是否合理？当然不是。它是一款出色且适合初学者的游戏，这对于Paradox游戏来说并不典型。但是，当你开始深入研究所有这些图表和表格时，你可能会发现你所知道的比你想象的要少。这是另一个“易于学习，难以掌握”的游戏。</p>
+</li>
+</ul>
+<h3>最佳MOBA游戏</h3>
+<p>MOBA游戏属于策略游戏还是动作游戏尚有争议，但它源自RTS，因为它始于《星际争霸：混乱时代》的地图。然后它通过Basshunter（一位在2006年发行了一首名为DotA的歌曲的DJ）变得更受欢迎。但绝对的狂热始于Riot Games的《英雄联盟》的推出，该游戏现在每月吸引数百万玩家。</p>
+<ul>
+<li>
+<p><strong>DOTA 2</strong>：《DOTA 2》多年来一直位居Steam最受玩家青睐的游戏榜首。每天，数十万玩家参加5v5团队战斗。首先，从120多个独特的虚拟角色中选择你的英雄。一旦进入地图，每个玩家都会努力通过赚取经验值和金币来提升他们的英雄，然后可以使用这些经验值和金币来发展技能并购买越来越好的物品。随着时间的推移，游戏的重点逐渐从与小兵战斗转向与对手玩家进行更大胆的冲突。第一个突破敌方防线并摧毁基地的团队获胜。</p>
+</li>
+<li>
+<p><strong>英雄联盟</strong>：《堡垒之夜》目前是互联网上最令人讨厌的游戏，但在Epic Games的吃鸡游戏发布之前，《英雄联盟》是普遍厌恶的对象。你要么玩《英雄联盟》并喜欢它，要么不玩它并讨厌它。也许，还存在第三组人，他们热情地一场接一场地比赛，并不断抱怨有毒的社区和糟糕的平衡。话虽如此，这款游戏已永远铭刻在我们的记忆中，并继续吸引数百万玩家至今。游戏玩法基于与前面提到的《DOTA 2》类似的规则。毫无疑问，这两款游戏是市场上最好的MOBA游戏。</p>
+</li>
+</ul>
+<h3>最佳即将推出的策略游戏</h3>
+<p>既然我们已经看过一些最好的策略游戏，那么是时候看看今年晚些时候将上市的一些即将推出的游戏了。或者至少是那些将在2024年发布的游戏。</p>
+<ul>
+<li>
+<p><strong>文明VII</strong>：该系列将通过第七部主要作品回归，并在Gamescom 2024期间展示了第一部游戏画面。画面与预期大致相同：查看一些建筑物和单位，以及标志性的奇观，例如埃菲尔铁塔。《文明VII》将于2025年2月11日发布，承诺为策略爱好者带来精彩开端。</p>
+</li>
+<li>
+<p><strong>双点博物馆</strong>：在专业管理医院和大学之后，是时候挖掘过去的事情了。《双点博物馆》将让你扮演馆长的角色，馆长的任务是尽一切可能展出古代文物，并确保客人不仅满意，而且对发现自己身处如此宏伟的博物馆感到欣喜若狂。</p>
+</li>
+<li>
+<p><strong>风暴崛起</strong>：对于那些喜欢玩类似《命令与征服》系列的复古游戏的人来说，这款游戏将特别有趣。《风暴崛起》捕捉了老式即时战略游戏的氛围，同时提供了令人惊叹的画面。你将能够从三个派系中选择，允许你根据你喜欢的风格进行游戏。</p>
+</li>
+<li>
+<p><strong>突击队员：起源</strong>：这个经典系列的粉丝们很快就能欣赏到《突击队员：起源》，这是一款设定在二战期间的即时战术游戏。它应该提供引人入胜的潜行游戏玩法，并提供完成任务的多种方式。它能否成功渗透到2024年最佳策略游戏列表中呢？</p>
+</li>
+</ul>
+<p>这就是我们的列表。我们很清楚，还有许多其他游戏也值得提及。不幸的是，一篇文章不足以涵盖所有内容。请在下面的评论中分享你在PC上最喜欢的10款策略游戏！</p>
+<h5>关于作者</h5>
+        <small class="page-url url "><a href="https://gg.deals/blog/best-strategy-games-to-play-on-pc-steam/" target="_blank">(https://gg.deals/blog/best-strategy-games-to-play-on-pc-steam/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Good-strategy-games-on-Steam---General-Discussion---Giant-Bomb">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🔍&nbsp;</span>Good strategy games on Steam - General Discussion - Giant Bomb</h3>
+        <small class="page-url url "><a href="https://www.giantbomb.com/forums/general-discussion-30/good-strategy-games-on-steam-474554/" target="_blank">(https://www.giantbomb.com/forums/general-discussion-30/good-strategy-games-on-steam-474554/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 用户寻求易上手且具有深度的策略游戏，这里的讨论与推荐的目标相符。<br></small>
+    </div>
+    <div class="page-content content"><p>我想要一个好玩的策略游戏，但不是随便什么策略游戏。我的需求是这样的：</p>
+<p>我曾经沉迷于《游戏开发物语》很久，现在又沉迷于《兄弟会》中的翻新和刺客公会内容。不知道为什么，我无可救药地沉迷于选择选项、等待片刻，然后看着数字上升。所以基本上，任何涉及赚钱的，或者类似于那些游戏的体验，但更有深度的游戏都可以。我已经拥有了所有《文明IV》和《文明III》的内容，但这并不是我想要的类型。我只是想要一些能让我沉迷一段时间的游戏。</p>
+<p>而且，它必须便宜，也就是5美元或更少。我真的很想玩《席德·梅尔的 海盗！》，但我承认我根本不知道那是什么样的游戏。</p>
+<p>或许可以试试《大亨》系列？不确定《大亨4》是否有试玩版，我自己也没玩过。但这些游戏似乎是《刺客信条II》中Monteggeroni（拼写？）翻新的完整版，也类似于《刺客信条：兄弟会》。</p>
+<p>编辑：好的，《大亨4》没有试玩版。但它现在在Steam上打折，售价15美元，《大亨3》售价2.50美元。也许可以先从《大亨3》开始，看看是否符合你的喜好？</p>
+<p>编辑2：《大亨》是一款商业城市策略模拟游戏。一切都是为了赚钱。</p>
+<p>论坛帖子：21414251
+评论：3</p>
+        <small class="page-url url "><a href="https://www.giantbomb.com/forums/general-discussion-30/good-strategy-games-on-steam-474554/" target="_blank">(https://www.giantbomb.com/forums/general-discussion-30/good-strategy-games-on-steam-474554/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="33-Best-Games-Under-$10-in-the-Steam-Winter-Sale">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💲&nbsp;</span>33 Best Games Under $10 in the Steam Winter Sale</h3>
+        <small class="page-url url "><a href="https://www.ign.com/articles/best-games-under-10-steam-winter-sale" target="_blank">(https://www.ign.com/articles/best-games-under-10-steam-winter-sale)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 推荐了几款价格低于10美元的优秀游戏，反映了用户对性价比高的策略游戏的偏好。<br></small>
+    </div>
+    <div class="page-content content"><h2>《巫师3：狂猎》完全版 10 美元</h2>
+<p>《巫师3：狂猎》完全版</p>
+<p>《巫师3》庞大的开放世界、引人入胜的角色和富有意义的玩家决策方式在 2015 年就为 RPG 设定了标杆。在《巫师4》于游戏大奖上公布后，现在是游玩（或重玩）有史以来最伟大的 RPG 之一最好的时机。尤其现在完全版（包含基础游戏和所有 DLC）仅售 9.99 美元。</p>
+<h2>星露谷物语</h2>
+<h2>《文明VI》2.99 美元</h2>
+<p>《文明VI》</p>
+<p>随着《文明VII》即将在几个月内发布，大部分的 Sid Meier 系列游戏都在打折。虽然我更喜欢《文明V》的地图机制，《文明VI》在我看来，在建立多人游戏大厅方面优化得更好。说服你的朋友花几美元，你们就可以开始一场帝国建设的马拉松，这场马拉松很可能会以某种形式的背叛告终。</p>
+<h3>更多低于 10 美元的策略和模拟游戏：</h3>
+<p>大多数《全面战争》游戏和 DLC 都有折扣，但其中最划算的是《战锤》基础游戏，售价 6 美元。如果你曾经想花 5 美元游遍整个欧洲，现在你可以了（通过《欧洲卡车模拟2》）。</p>
+<p>《全面战争：战锤》</p>
+<p>《星际公民》</p>
+<p>《城市：天际线》</p>
+<p>《过山车之星》</p>
+<p>《欧洲卡车模拟2》</p>
+        <small class="page-url url "><a href="https://www.ign.com/articles/best-games-under-10-steam-winter-sale" target="_blank">(https://www.ign.com/articles/best-games-under-10-steam-winter-sale)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Best-Replay-Value-Games-on-Steam-|-Steambase">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🌟&nbsp;</span>Best Replay Value Games on Steam | Steambase</h3>
+        <small class="page-url url "><a href="https://steambase.io/games/best-replay-value-steam-games" target="_blank">(https://steambase.io/games/best-replay-value-steam-games)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 列举了一些玩法多样且受欢迎的游戏，说明了玩家的策略兴趣和重玩价值的寻找。<br></small>
+    </div>
+    <div class="page-content content"><h2>1. Hades</h2>
+<p>挑战冥界之神，在这款来自《堡垒》、《晶体管》和《火炬》制作团队的Rogue-like地牢爬行者游戏中，挥舞武器，杀出一条血路。</p>
+<p>Hades在Steam上以97分获得“最佳重玩价值游戏”榜首。该分数是通过分析Steam上总计272,792条评论计算得出的。其中包含268,110条好评和4,682条差评——在Steam上获得“ overwhelmingly Positive”（ overwhelmingly Positive）评价。</p>
+<p>游戏售价9.99美元，可在Windows和Mac系统上运行。Valve还验证了其可在Steam Deck上运行，并且运行良好。</p>
+<h2>2. Terraria</h2>
+<p>挖掘、战斗、探索、建造！在这个动作冒险游戏中，没有什么是不可能的。四重包也可用！</p>
+<p>Terraria获得97分，在最佳重玩价值游戏中排名第二。该分数是通过分析Steam上总计1,359,833条评论计算得出的。其中包含1,326,003条好评和33,830条差评——在Steam上获得“ overwhelmingly Positive”（ overwhelmingly Positive）评价。</p>
+<p>游戏售价4.99美元，可在Windows、Mac和Linux系统上运行。Valve还验证了其可在Steam Deck上运行，并且运行良好。</p>
+<h2>3. Left 4 Dead 2</h2>
+<p>在僵尸末日背景下，《求生之路2》(L4D2)是备受期待的获奖游戏《求生之路》(2008年最佳合作游戏)的续作。这款合作动作恐怖FPS游戏将带你和你朋友们穿越美国南部的城市、沼泽和墓地，从萨凡纳到新奥尔良，跨越五个广阔的战役。</p>
+<p>Left 4 Dead 2获得97分，在最佳重玩价值游戏中排名第三。该分数是通过分析Steam上总计925,412条评论计算得出的。其中包含902,599条好评和22,813条差评——在Steam上获得“ overwhelmingly Positive”（ overwhelmingly Positive）评价。</p>
+<p>游戏售价1.99美元，可在Windows和Linux系统上运行。Valve还验证了其可在Steam Deck上运行，并且运行良好。</p>
+<h2>4. Balatro</h2>
+<p>扑克牌Roguelike游戏。Balatro是一款令人着迷的套牌构建游戏，你可以在游戏中打出非法的扑克牌组合，发现改变游戏的王牌，并触发令人肾上腺素飙升的、离谱的组合。</p>
+<p>Balatro获得97分，在最佳重玩价值游戏中排名第四。该分数是通过分析Steam上总计105,302条评论计算得出的。其中包含103,442条好评和1,860条差评——在Steam上获得“ overwhelmingly Positive”（ overwhelmingly Positive）评价。</p>
+<p>游戏售价13.49美元，可在Windows和Mac系统上运行。Valve还验证了其可在Steam Deck上运行，并且运行良好。</p>
+<h2>5. Slay the Spire</h2>
+<p>我们将卡牌游戏和Roguelike游戏融合在一起，打造了我们所能制作的最佳单人套牌构建游戏。创建独特的套牌，遭遇奇异的生物，发现拥有强大力量的遗物，然后征服尖塔！</p>
+<p>Slay the Spire获得97分，在最佳重玩价值游戏中排名第五。该分数是通过分析Steam上总计171,475条评论计算得出的。其中包含167,758条好评和3,717条差评——在Steam上获得“ overwhelmingly Positive”（ overwhelmingly Positive）评价。</p>
+<p>游戏售价6.24美元，可在Windows、Mac和Linux系统上运行。Valve还验证了其可在Steam Deck上运行，并且运行良好。</p>
+<h2>6. OneShot</h2>
+<p>OneShot是一款超现实的俯视角解谜/冒险游戏，具有独特的玩法。你需要引导一个孩子在一个神秘的世界中完成一项任务，以恢复其早已逝去的太阳。这个世界知道你的存在。</p>
+<p>OneShot获得96分，在最佳重玩价值游戏中排名第六。该分数是通过分析Steam上总计49,278条评论计算得出的。其中包含48,430条好评和848条差评——在Steam上获得“ overwhelmingly Positive”（ overwhelmingly Positive）评价。</p>
+<p>游戏售价5.99美元，可在Windows、Mac和Linux系统上运行。目前，无法在Steam Deck上运行OneShot。</p>
+<h2>7. The Binding of Isaac: Rebirth</h2>
+<p>《以撒的结合：重生》是一款随机生成的ARPG射击游戏，具有浓厚的Rogue-like元素。跟随以撒的旅程，玩家将发现奇异的宝藏，这些宝藏会改变以撒的形态，赋予他超人的能力，使他能够对抗成群结队的奇异生物，发现秘密并为生存而战。</p>
+<p>The Binding of Isaac: Rebirth获得96分，在最佳重玩价值游戏中排名第七。该分数是通过分析Steam上总计318,684条评论计算得出的。其中包含310,474条好评和8,210条差评——在Steam上获得“ overwhelmingly Positive”（ overwhelmingly Positive）评价。</p>
+<p>游戏售价4.94美元，可在Windows、Mac和Linux系统上运行。Valve还验证了其可在Steam Deck上运行，并且运行良好。</p>
+<h2>8. Dishonored</h2>
+<p>《耻辱》是一款沉浸式第一人称动作游戏，你将扮演一位被复仇驱使的超自然刺客。利用《耻辱》灵活的战斗系统，创造性地消灭你的目标，结合你所掌握的超自然能力、武器和奇特的工具。</p>
+<p>Dishonored获得96分，在最佳重玩价值游戏中排名第八。该分数是通过分析Steam上总计81,005条评论计算得出的。其中包含79,104条好评和1,901条差评——在Steam上获得“ overwhelmingly Positive”（ overwhelmingly Positive）评价。</p>
+<p>游戏售价2.49美元，可在Windows系统上运行。Valve还验证了其可在Steam Deck上运行，并且运行良好。</p>
+<h3>tModLoader</h3>
+<p>通过tModLoader，在玩家创建的Terraria模组世界中挖掘、战斗和建造——这个DLC使Terraria模组成为现实！</p>
+<p>tModLoader获得96分，在最佳重玩价值游戏中排名第九。该分数是通过分析Steam上总计289,080条评论计算得出的。其中包含280,749条好评和8,331条差评——在Steam上获得“ overwhelmingly Positive”（ overwhelmingly Positive）评价。</p>
+<p>游戏完全免费，可在Windows、Mac和Linux系统上运行。目前，可以在Steam Deck上运行tModLoader（尽管某些功能可能有限）。</p>
+<h2>10. Our Life: Beginnings &amp; Always</h2>
+<p>一张二十美元的钞票，四个夏天，十五年，以及一段独一无二的人生。在这个近乎完全可自定义的视觉小说中，创造属于你自己的体验，与隔壁内向的男孩一起从童年成长到成年。</p>
+<p>Our Life: Beginnings &amp; Always获得96分，在最佳重玩价值游戏中排名第十。该分数是通过分析Steam上总计11,832条评论计算得出的。其中包含11,695条好评和137条差评——在Steam上获得“ overwhelmingly Positive”（ overwhelmingly Positive）评价。</p>
+<p>游戏完全免费，可在Windows和Linux系统上运行。目前，可以在Steam Deck上运行Our Life: Beginnings &amp; Always（尽管某些功能可能有限）。</p>
+        <small class="page-url url "><a href="https://steambase.io/games/best-replay-value-steam-games" target="_blank">(https://steambase.io/games/best-replay-value-steam-games)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="best-cheap-strategy-games-with-high-replay-value-at-DuckDuckGo">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">♻&nbsp;</span>best cheap strategy games with high replay value at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:best cheap strategy games with high replay value" target="_blank">(DDG:best cheap strategy games with high replay value)</a><br></small>
+        <small class="page-rating rating ">评分: 6.0<br></small>
+        <small class="page-annotation annotation ">注释: 简要提到了一款重玩价值高的策略游戏，符合用户的兴趣特征。<br></small>
+    </div>
+    <div class="page-content content"><h2>征服伊甸园5</h2>
+<p>一款深度极高、可重复游玩性极强的策略游戏，拥有近20个独特的派系可供选择。它出自一个小型瑞典团队（两人……）之手。</p>
+        <small class="page-url url "><a href="DDG:best cheap strategy games with high replay value" target="_blank">(DDG:best cheap strategy games with high replay value)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Strategy-games---The-Lounge---Kerbal-Space-Program-Forums">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💬&nbsp;</span>Strategy games - The Lounge - Kerbal Space Program Forums</h3>
+        <small class="page-url url "><a href="https://forum.kerbalspaceprogram.com/topic/139056-strategy-games/?do=findComment&comment=2564247" target="_blank">(https://forum.kerbalspaceprogram.com/topic/139056-strategy-games/?do=findComment&comment=2564247)</a><br></small>
+        <small class="page-rating rating ">评分: 6.0<br></small>
+        <small class="page-annotation annotation ">注释: 用户分享了不同策略游戏的经验和评价，有利于理解热门策略游戏的特点。<br></small>
+    </div>
+    <div class="page-content content"><h2>策略游戏推荐</h2>
+<ul>
+<li>战锤40K：战争黎明</li>
+<li>战争格调</li>
+<li>XCOM：未知敌人</li>
+<li>皮质指令 (我个人最喜欢的游戏之一)</li>
+<li>暗影狂奔：归来和暗影狂奔：龙之秋导演剪辑版</li>
+<li>战争区域2100 (完全免费开源！也是我玩过的第一个策略游戏，也是我玩过的第一个游戏之一。如果我列出其他类型的游戏（主题是“策略游戏”），列表会长得多，但现在是凌晨3:11，我不想写长篇帖子)</li>
+<li>我觉得欧陆风云IV很有趣。虽然它并不华丽。</li>
+<li>为了彻底改变类型，这里推荐《战场女武神》，虽然有时会让人想摔键盘。</li>
+<li>它有多人游戏服务器，大量的用户自制内容，而且相对容易创建自己的内容（需要一些编程技能，但并不太复杂）。如果您觉得默认的战斗机制不符合您的喜好，我设计了一个伤害分配mod。</li>
+<li>基于回合制的策略游戏？ 文明IV和V</li>
+<li>对我来说，策略游戏的鼻祖必须是钢铁雄心3，基础游戏有很多问题，但是加上资料片（Semper Fi，为了祖国和他们的黄金时代）之后，它是唯一一个能让我像KSP一样长时间投入的游戏。</li>
+</ul>
+        <small class="page-url url "><a href="https://forum.kerbalspaceprogram.com/topic/139056-strategy-games/?do=findComment&comment=2564247" target="_blank">(https://forum.kerbalspaceprogram.com/topic/139056-strategy-games/?do=findComment&comment=2564247)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="The-best-budget-games-on-Steam-|-Stuff">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📚&nbsp;</span>The best budget games on Steam | Stuff</h3>
+        <small class="page-url url "><a href="https://www.stuff.tv/features/best-cheap-steam-games/" target="_blank">(https://www.stuff.tv/features/best-cheap-steam-games/)</a><br></small>
+        <small class="page-rating rating ">评分: 6.0<br></small>
+        <small class="page-annotation annotation ">注释: 总结了当前策略类游戏市场的趋势和推荐，适合寻找新游戏的用户。<br></small>
+    </div>
+    <div class="page-content content"><h2>特性</h2>
+<h2>评论</h2>
+<h2>最佳产品</h2>
+<h2>奖项</h2>
+<p>加入我们的新闻通讯</p>
+<p>RSS 新闻源</p>
+<p>搜索</p>
+<p>评论</p>
+<p>最佳产品</p>
+        <small class="page-url url "><a href="https://www.stuff.tv/features/best-cheap-steam-games/" target="_blank">(https://www.stuff.tv/features/best-cheap-steam-games/)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Games-Can-Make-You-a-Better-Strategist">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📈&nbsp;</span>Games Can Make You a Better Strategist</h3>
+        <small class="page-url url "><a href="https://hbr.org/2015/09/games-can-make-you-a-better-strategist" target="_blank">(https://hbr.org/2015/09/games-can-make-you-a-better-strategist)</a><br></small>
+        <small class="page-rating rating ">评分: 5.0<br></small>
+        <small class="page-annotation annotation ">注释: 探讨了游戏在商业战略中的应用及其提升战略能力的重要性，间接关系到用户对策略游戏的兴趣。<br></small>
+    </div>
+    <div class="page-content content"><h2>游戏能让你成为更好的战略家</h2>
+<p>马丁·里夫斯，乔治·维滕堡，马丁·里夫斯</p>
+<p>游戏长期以来就融入到商业语言中：我们谈论参与者、行动、最终游戏、游戏手册等等。现在我们经常听到工作的“游戏化”——使用竞争、反馈和计分元素来更好地激励员工，甚至追踪业绩。即便如此，实际的游戏在大多数组织中仍然是禁忌——逃避工作的员工在扫雷游戏中取得新的高分，这种刻板印象让游戏声名狼藉。而公司高管玩游戏来提高其战略决策能力的情况仍然很少见。这是不幸的。我们认为游戏在培养优秀的战略家方面具有重要作用，并且现在比以往任何时候，游戏都能让高管在竞争中获得优势。</p>
+        <small class="page-url url "><a href="https://hbr.org/2015/09/games-can-make-you-a-better-strategist" target="_blank">(https://hbr.org/2015/09/games-can-make-you-a-better-strategist)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Games-with-depth,-strategy-and-replay-value-|-BoardGameGeek">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">👥&nbsp;</span>Games with depth, strategy and replay value | BoardGameGeek</h3>
+        <small class="page-url url "><a href="https://boardgamegeek.com/thread/2388840/games-with-depth-strategy-and-replay-value" target="_blank">(https://boardgamegeek.com/thread/2388840/games-with-depth-strategy-and-replay-value)</a><br></small>
+        <small class="page-rating rating ">评分: 4.5<br></small>
+        <small class="page-annotation annotation ">注释: 讨论了论坛社区对策略游戏的关注，反映用户在寻找适合自己的游戏时的共同需求。<br></small>
+    </div>
+    <div class="page-content content"><h2>您的支持让游戏持续精彩！</h2>
+<p>论坛
+一般论坛
+所有
+最近
+搜索
+热门
+活跃
+帖子
+主题
+游戏论坛
+最近
+搜索
+热门
+活跃
+实用工具
+订阅
+书签
+版主
+社区规则
+购物
+极客市场
+交易
+BGG 商店
+拍卖搜索
+eBay 列表</p>
+        <small class="page-url url "><a href="https://boardgamegeek.com/thread/2388840/games-with-depth-strategy-and-replay-value" target="_blank">(https://boardgamegeek.com/thread/2388840/games-with-depth-strategy-and-replay-value)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Best-entry-level-strategy-games?-|-PC-Gamer-Forums">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🆕&nbsp;</span>Best entry level strategy games? | PC Gamer Forums</h3>
+        <small class="page-url url "><a href="https://forums.pcgamer.com/threads/best-entry-level-strategy-games.1701/" target="_blank">(https://forums.pcgamer.com/threads/best-entry-level-strategy-games.1701/)</a><br></small>
+        <small class="page-rating rating ">评分: 3.5<br></small>
+        <small class="page-annotation annotation ">注释: 提供了一些关于策略游戏的新动态，符合用户对最新游戏信息的需求。<br></small>
+    </div>
+    <div class="page-content content"><h2>最新动态</h2>
+<p>新帖子
+最新活动
+首页
+访问网站
+策略与模拟</p>
+        <small class="page-url url "><a href="https://forums.pcgamer.com/threads/best-entry-level-strategy-games.1701/" target="_blank">(https://forums.pcgamer.com/threads/best-entry-level-strategy-games.1701/)</a><br></small>
+    </div>
+
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 获取所有导航链接
+        const navLinks = document.querySelectorAll(".navigate-item");
+        // 将导航链接与目标元素建立映射关系
+        const connections = Array.from(navLinks).map(link => {
+            const targetId = link.getAttribute("href").substring(1); // 去掉 #
+            const targetElement = document.getElementById(targetId);
+            return { link, targetElement };
+        });
+        // 使用 IntersectionObserver 观察目标元素
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const { target, isIntersecting } = entry;
+                    const matchingLink = connections.find(connection => connection.targetElement === target).link;
+                    if (isIntersecting) {
+                        // 目标元素在视野中，添加高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.add("active");
+                    } else {
+                        // 目标元素离开视野，移除高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.remove("active");
+                    }
+                });
+            },
+            {
+                root: null, // 默认视口
+                threshold: 0.02
+            }
+        );
+
+        // 开始观察所有目标元素
+        connections.forEach(({ targetElement }) => observer.observe(targetElement));
+    });
+</script>
+<script>
+    // 获取元素
+    const resizer = document.querySelector('.resizer');
+    const leftColumn = document.querySelector('.left-column');
+    const rightColumn = document.querySelector('.right-column');
+    const navigate = document.querySelector('.navigate')
+
+    let isDragging = false;
+
+    // 鼠标按下事件
+    resizer.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        document.body.style.cursor = 'col-resize';
+        document.body.style.userSelect = 'none';
+    });
+
+    // 鼠标移动事件
+    document.addEventListener('mousemove', (event) => {
+        if (!isDragging) return;
+
+        // 计算新的宽度
+        const newLeftWidth = event.clientX / window.innerWidth * 100; // 转换为百分比
+
+        // 限制宽度范围
+        if (newLeftWidth > 15 && newLeftWidth < 70) {
+            leftColumn.style.flexBasis = `${newLeftWidth}%`;
+            rightColumn.style.flexBasis = `${100 - newLeftWidth}%`;
+            navigate.style.left = `${newLeftWidth + 0.15 * (100 - newLeftWidth)}%`
+            navigate.style.maxWidth = `${0.7 * (100 - newLeftWidth)}%`
+
+            const navigateRect = navigate.getBoundingClientRect();
+            const screenWidth = window.innerWidth;
+
+            // 获取右侧部分宽度
+            const rightColumnWidth = rightColumn.getBoundingClientRect().width;
+
+            // 计算 navigate 的占屏幕宽度比例
+            const navigateWidthPercentage = (navigateRect.width / screenWidth) * 100;
+
+            // 计算 navigate 居中所需的 left 值
+            const rightColumnLeft = rightColumn.getBoundingClientRect().left;
+            const navigateLeft = rightColumnLeft + (rightColumnWidth - navigateRect.width) / 2;
+
+            // 设置 navigate 的宽度和位置
+            navigate.style.left = `${navigateLeft}px`;
+        }
+    });
+
+    // 鼠标松开事件
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        document.body.style.cursor = 'default';
+        document.body.style.userSelect = 'auto';
+    });
+</script>
+</html>

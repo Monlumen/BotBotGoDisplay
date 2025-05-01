@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>各种学者和从业者对比特币 2025 年走势的看法, 以及 2025 年应当如何投资</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; /* 更现代、更通用的字体 */
+            background-color: #f4f6f8; /* 更柔和的整体背景色 */
+            color: #333; /* 默认字体颜色 */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* 主内容区样式 */
+        .content {
+            border-radius: 12px; /* 圆角边界 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* 柔和的阴影 */
+            background-color: #fff; /* 明亮背景色 */
+            padding: 16px; /* 增加内边距 */
+            margin-bottom: 16px; /* 间隔 */
+        }
+
+        /* 左右分栏样式 */
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .left-column{
+            flex: 3;
+        }
+        .right-column{
+            flex: 4;
+        }
+
+        .left-column {
+            background-color: #eef6ff; /* 更亮的浅蓝背景 */
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); /* 内阴影 */
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; /* 明亮的背景色 */
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); /* 内阴影 */
+            font-family: "Noto Serif", "SimSun", serif; /* 更适合长文本阅读的字体 */
+            position: relative;
+        }
+
+        /* 标题样式 */
+        .title {
+            font-size: 1.4em; /* 增大标题字体 */
+            font-weight: 600; /* 半粗体 */
+            color: #1a1a1a; /* 深灰色标题 */
+            margin-bottom: 12px; /* 增加下方间距 */
+        }
+
+        .page-name.title {
+            font-size: 1.8em; /* 更大的字体 */
+            font-weight: bold; /* 加粗标题 */
+            color: #222; /* 更深的灰色 */
+            margin: 16px 0; /* 增加上下间距 */
+            text-align: left; /* 左对齐 */
+        }
+
+        .section-title {
+            font-size: 1.4em; /* 调整大小 */
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; /* 中灰色标题 */
+        }
+
+        /* 段落样式 */
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; /* 更现代的中英双语字体 */
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; /* 柔和的深灰色 */
+            padding: 12px; /* 内边距 */
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; /* 更清新的背景色 */
+            border: 1px solid #dde3ea; /* 添加边框 */
+            border-radius: 12px; /* 圆角 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 轻微阴影 */
+            margin-bottom: 20px; /* 增加间距 */
+        }
+
+        /* 分割线样式 */
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; /* 更柔和的分割线 */
+            margin: 20px 0; /* 增加上下间距 */
+        }
+
+        /* 元数据样式 */
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; /* 更小的字体 */
+            color: #666; /* 浅灰色 */
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; /* 更深的字体颜色 */
+            border-radius: 8px; /* 圆角 */
+            line-height: 1.4;
+            margin-bottom: 10px; /* 增加间距 */
+        }
+
+        /* 评分样式 */
+        .page-rating {
+            background-color: #e8f4ff; /* 浅蓝背景 */
+            color: #0078d7; /* 蓝色文字 */
+            font-weight: bold; /* 加粗文字 */
+            border: 1px solid #aad4ff; /* 边框 */
+        }
+
+        /* 评价样式 */
+        .page-annotation {
+            background-color: #fff5e5; /* 浅黄背景 */
+            color: #cc8400; /* 深黄色文字 */
+            font-style: italic; /* 斜体文字 */
+            border: 1px solid #ffcc66; /* 边框 */
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; /* 隐藏部分 */
+        }
+
+        /* 链接样式 */
+        a {
+            color: #0078d7; /* 蓝色 */
+            text-decoration: none; /* 移除下划线 */
+        }
+
+        a:hover {
+            text-decoration: underline; /* 鼠标悬停时显示下划线 */
+        }
+
+        /* 提高整体间距 */
+        .content > * {
+            margin-bottom: 12px; /* 增加内容之间的间距 */
+        }
+
+        /* query */
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; /* 紧贴页面顶部 */
+            z-index: 300; /* 确保在其他元素之上 */
+            background-color: #ffffff; /* 纯白背景，模拟输入框 */
+            color: #222; /* 深灰色文字 */
+            font-size: 1.1em; /* 略大的字体，提升可读性 */
+            font-weight: 500; /* 中等字体权重，轻松而非刻板 */
+            padding: 12px 16px; /* 内边距，增强舒适感 */
+            border-radius: 8px; /* 圆角设计，柔和外观 */
+            border: 1px solid #d1e4f2; /* 浅蓝边框 */
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05), /* 内阴影，模拟输入框的凹陷效果 */ 0 2px 4px rgba(0, 0, 0, 0.1); /* 外阴影，提升立体感 */
+            margin-bottom: 16px; /* 与下面内容留出空间 */
+            text-align: left; /* 左对齐，模拟自然输入 */
+            line-height: 1.6; /* 提高行间距，增强舒适性 */
+            font-family: "Inter", "Noto Sans", sans-serif; /* 与 sections 不同的字体，轻松现代 */
+            display: flex; /* 使用 flexbox 布局 */
+            align-items: center; /* 确保表情和文字垂直居中 */
+            gap: 10px; /* 表情和文字之间的间距 */
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        /* Section Link */
+        .section-link-box {
+            display: inline-block; /* 让链接保持块状但不独占一行 */
+            margin: 8px 4px; /* 控制胶囊之间的间距 */
+        }
+
+        .section-link {
+            display: inline-flex; /* 使用 flex 布局对齐内容 */
+            align-items: center; /* 垂直居中对齐 */
+            padding: 6px 12px; /* 增加内边距，增强胶囊感 */
+            background-color: #eef6ff; /* 胶囊的背景色 */
+            color: #0078d7; /* 文字颜色 */
+            font-size: 0.95em; /* 调整字体大小 */
+            font-weight: 500; /* 适度加粗 */
+            text-decoration: none; /* 去掉下划线 */
+            border: 1px solid #d1e4f2; /* 胶囊的浅色边框 */
+            border-radius: 20px; /* 胶囊效果 */
+            transition: all 0.2s ease; /* 添加动画过渡效果 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; /* 悬停时更深的背景色 */
+            color: #005bb5; /* 更深的文字颜色 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 加强阴影效果 */
+            text-decoration: underline; /* 可选：添加下划线 */
+        }
+
+        /* Navigate 样式 */
+        .navigate {
+            display: flex; /* 使用 flex 布局 */
+            max-width: 40%;
+            width: fit-content; /* 宽度由内容决定 */
+            flex-wrap: nowrap; /* 禁止换行 */
+            overflow-x: auto; /* 水平方向开启滚动 */
+            gap: 4px; /* 子元素之间的间距 */
+            justify-content: center; /* 主轴居中对齐 */
+            padding: 4px 4px; /* 增加内边距 */
+            background-color: #f4f6f8; /* 柔和背景色 */
+            border-radius: 12px; /* 圆角设计 */
+
+            position: fixed;
+            top: 0;
+            right: 4%;
+            /*transform: translateX(-50%);*/
+            z-index: 1000; /* 确保层级在前 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+            transition: transform 0.3s ease; /* 平滑过渡效果 */
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        /* Navigate 静态内容 */
+        .navigate-item {
+            display: flex; /* 使用 flex 布局 */
+            flex-direction: column; /* 垂直排列子元素 */
+            align-items: center; /* 水平居中 */
+            justify-content: center; /* 垂直居中 */
+            background-color: #ffffff; /* 背景色 */
+            padding: 2px 4px; /* 增加内边距 */
+            border-radius: 12px; /* 圆角设计 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+            transition: all 0.3s ease; /* 平滑的交互效果 */
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; /* 悬停时更浅的背景色 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 增强阴影效果 */
+            transform: translateY(-2px); /* 悬停时微微上浮 */
+        }
+        .navigate-item a {
+            text-decoration: none; /* 移除下划线 */
+            color: #0078d7; /* 蓝色字体 */
+            font-weight: bold; /* 加粗文字 */
+            font-size: 1em; /* 增大字体 */
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; /* 放大 emoji */
+            margin-bottom: 1px; /* 与文字保持间距 */
+        }
+        .navigate-item-id {
+            font-size: 0.9em; /* 稍小的 ID 字体 */
+            color: #555; /* 中灰色字体 */
+        }
+
+        [id] { /* 导航后不要触顶, 不好看 */
+            scroll-margin-top: 40px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            各种学者和从业者对比特币 2025 年走势的看法, 以及 2025 年应当如何投资
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">比特币2025年的学术预测</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Cointelegraph-Bitcoin-&-Ethereum-Blockchain-News">
+    💰利率变化与市场反应</a></div><div class="section-link-box"><a class="section-link" href="#Bitcoin-trading-volume-2025-at-DuckDuckGo">
+    📈分析师价格预测</a></div><div class="section-link-box"><a class="section-link" href="#Where-Analysts-Think-Bitcoin-is-Headed-in-2025">
+    🔍价格预测与资金流入</a></div></div>
+    <div class="section-content content"><p>在对话记录中关于比特币2025年的学术预测，以下是各个学者和机构对比特币走势的预测总结：</p>
+<ol>
+<li><strong>价格预测</strong>：</li>
+<li>
+<p>多位机构和分析师，包括Bitwise、VanEck和Standard Chartered，都预测比特币在2025年可能达到<strong>$180,000到$200,000</strong>的水平。</p>
+</li>
+<li>
+<p><strong>关键因素</strong>：</p>
+</li>
+<li>
+<p>这些预测的核心因素包括：</p>
+<ul>
+<li><strong>现货比特币ETF的反应</strong>：投资者对ETF的反应预计将吸引大量资金流入，这对价格的上涨至关重要。</li>
+<li><strong>市场心理</strong>：恐慌与贪婪指数的波动被认为反映了市场情绪的不稳定，投资者信心会影响比特币的短期走势。</li>
+<li><strong>机构投资者的参与</strong>：机构资金的流入和持续需求是推动比特币价格上涨的重要因素，尤其是在当前货币政策环境可能导致利率降低的情况下。</li>
+</ul>
+</li>
+<li>
+<p><strong>机构观点</strong>：</p>
+</li>
+<li><strong>Morningstar</strong>分析指出，永久的市场监测将对比特币价格形成影响，预示着市场更广泛的接受度。</li>
+<li><strong>John Plassard</strong>和<strong>Adrian Fritz</strong>等专家提到，比特币价格的波动性和市场修正是不可避免的，但也强调了来自机构投资者的持久需求。</li>
+</ol>
+<p>这些信息反映了对于2025年比特币走势的积极预期，同时也警示投资者关注市场心理和宏观经济等外部因素的变化。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">市场心理与投资者情绪</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Retail-Investors’-Strategies-and-Expectations-for-2025---OneSafe-Blog">
+    🤔零售投资者心态</a></div><div class="section-link-box"><a class="section-link" href="#Bitcoin-Market-Fear-and-Greed-Index-2025-at-DuckDuckGo">
+    😬市场心理指数</a></div><div class="section-link-box"><a class="section-link" href="#Cointelegraph-Bitcoin-&-Ethereum-Blockchain-News">
+    💰利率与市场动态</a></div></div>
+    <div class="section-content content"><ol>
+<li>
+<p><strong>恐慌与贪婪指数</strong>：恐慌与贪婪指数从63降至54，反映出市场情绪的不稳定。此指数的下降可能说明投资者情绪对比特币的信心减弱。</p>
+</li>
+<li>
+<p><strong>市场情绪的影响</strong>：当前市场情绪的低迷可能会导致资金流入现货比特币ETF的减缓，因为投资者在不确定的情况下通常会采取保守策略，避免风险。</p>
+</li>
+<li>
+<p><strong>投资者兴趣变化</strong>：调查显示，大约61%的零售投资者对2025年感到乐观，认为牛市将持续。然而，恐慌与贪婪指数的变化表明，尽管整体预期向好，但短期内市场情绪的波动可能会影响投资者的实际资金流入和决策。</p>
+</li>
+<li>
+<p><strong>的心理因素对资金流入的影响</strong>：恐慌与贪婪指数的变化不仅影响投资者情绪，也直接影响资金的流入。当前市场的不确定性使得投资者可能会降低资金投入的比例，从而影响比特币价格的稳定。</p>
+</li>
+</ol>
+<h3>用户可能最关心的部分</h3>
+<ul>
+<li>恐慌与贪婪指数的变化对市场情绪的影响直接关联资金流入现货比特币ETF的可能性，尤其是当前的市场情绪显示出不稳定性，可能会导致投资者采取更谨慎的态度，这样的心理因素直接影响比特币的投资吸引力和市场动态。</li>
+</ul></div>
+</div><div class="section">
+    <h3 class="section-title title">外部经济因素影响分析</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Cointelegraph-Bitcoin-&-Ethereum-Blockchain-News">
+    💰利率与市场动态</a></div><div class="section-link-box"><a class="section-link" href="#Blockchain-&-Cryptocurrency-Laws-&-Regulations-2025-|-USA">
+    👮政策制定</a></div><div class="section-link-box"><a class="section-link" href="#Monetary-policy-and-Bitcoin---ScienceDirect">
+    📉政策影响</a></div></div>
+    <div class="section-content content"><ol>
+<li><strong>美联储降息的影响</strong>：</li>
+<li>研究表明，随着美联储可能的降息，投资者对比特币及其他加密货币的兴趣将增加。低利率环境通常会刺激投资者向风险资产（如比特币）转移，以追求更高的回报。</li>
+<li>
+<p>美联储的降息行为可能导致比特币价格上涨，应考虑逐步增加投资比特币的比例。</p>
+</li>
+<li>
+<p><strong>市场流动性</strong>：</p>
+</li>
+<li>
+<p>当前货币政策利率的变化可能导致比特币价格的上行，尤其是在市场整体流动性增加的情况下。</p>
+</li>
+<li>
+<p><strong>宏观经济环境</strong>：</p>
+</li>
+<li>宏观经济因素，包括通货膨胀和利率变化，可能会影响投资者对比特币的态度和配置决策。投资者在考虑进入加密货币市场时，往往会关注这些经济指标的变化，以判断时机和规模。</li>
+</ol>
+<h3>用户可能最关心的部分</h3>
+<ul>
+<li>美联储的降息将如何具体推动比特币投资者的兴趣，是否意味着在低利率的背景下投资比特币是一个理智的选择。</li>
+<li>货币政策的其他变化如何影响市场流动性，进而对比特币价格产生影响。</li>
+<li>结合通货膨胀和利率变化的整体宏观经济环境，投资者如何调整其加密货币投资策略。</li>
+</ul>
+<p>这些信息不仅关注美联储的政策变化，还深入探讨了其对比特币价格和投资策略的具体潜在影响，符合外部经济因素维度的需求。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">区块链技术发展对比特币的影响</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Cointelegraph-Bitcoin-&-Ethereum-Blockchain-News">
+    💰利率变化</a></div><div class="section-link-box"><a class="section-link" href="#2025-Bitcoin-Fundamental-Outlook">
+    📅价格突破</a></div><div class="section-link-box"><a class="section-link" href="#3-Reasons-Bitcoin-Could-Go-Parabolic-in-2025-|-The-Motley-Fool">
+    🚀暴涨潜力</a></div></div>
+    <div class="section-content content"><p>在维度“区块链技术发展对比特币的影响”中，我提取到以下关键信息：</p>
+<ol>
+<li>
+<p>区块链技术逐步被认可，并加速了比特币的接受度，尤其是在金融科技行业。金融科技公司在2025年预计将普遍采取比特币作为战略资产，其中一些金融巨头计划将比特币纳入其资产负债表。</p>
+</li>
+<li>
+<p>根据近期的行业报道，区块链技术的进步和即将到来的第四次比特币减半预计将导致比特币在2025年达到新的高度。历史上，每次比特币减半都伴随着价格的显著上涨，预计在未来的减半后，比特币的价格将进一步上升，使其更加主流化。</p>
+</li>
+<li>
+<p>区块链技术的成熟推动金融科技公司深化与比特币的整合，提供了更为便捷和安全的投资通道。同时，当前对比特币的认知已经从最初的怀疑转变为更多机构和个人的信任。</p>
+</li>
+</ol>
+<p>综上所述，用户可能最关心的部分是：
+- 金融科技公司对比特币的广泛采纳可能会带来对其市场接受度的显著提升。
+- 第四次比特币减半将对价格产生积极影响，历史趋势显示减半后价格上涨的可能性很大。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">投资机构的策略和展望</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Cointelegraph-Bitcoin-&-Ethereum-Blockchain-News">
+    💰利率影响</a></div><div class="section-link-box"><a class="section-link" href="#Monetary-policy-and-Bitcoin---ScienceDirect">
+    📉货币政策</a></div><div class="section-link-box"><a class="section-link" href="#Where-Analysts-Think-Bitcoin-is-Headed-in-2025">
+    🔍分析预测</a></div></div>
+    <div class="section-content content"><ol>
+<li><strong>BlackRock</strong>：</li>
+<li>BlackRock表示将持续对风险保持积极态度，看好网络资产的长期价值。</li>
+<li>
+<p>他们计划在投资组合中增加比特币的配置，尤其是投资于比特币ETF。</p>
+</li>
+<li>
+<p><strong>EY（安永）</strong>：</p>
+</li>
+<li>EY强调各机构在未来数年中会增加对数字资产的投资，特别关注代币化资产的探索。</li>
+<li>
+<p>多项数据显示，机构投资者对长期持有数字资产的信心强烈，计划逐步提升投资比例。</p>
+</li>
+<li>
+<p><strong>Hashdex</strong>：</p>
+</li>
+<li>Hashdex认为比特币的主流接受是数字资产投资的重要趋势，看好比特币在未来的发展。</li>
+<li>他们提到，预计进一步的基础设施建设和政策支持将推动比特币的投资机会。</li>
+</ol>
+<h3>用户可能最关心的部分</h3>
+<ul>
+<li><strong>比特币ETF的影响</strong>：</li>
+<li>BlackRock认为比特币ETF的推出将吸引更多资金流入，成为推动比特币价格上涨的重要因素。</li>
+<li>
+<p>EY和Hashdex也支持ETFs，认为它们为投资者提供了更好的市场接入方式，降低了投资比特币的门槛。</p>
+</li>
+<li>
+<p><strong>机构投资者的态度</strong>：</p>
+</li>
+<li>
+<p>绝大多数机构预计会扩展在数字资产，尤其是比特币方面的投资，即便面对市场波动和不确定性，他们依然看好比特币的长期潜力。</p>
+</li>
+<li>
+<p><strong>投资比例建议</strong>：</p>
+</li>
+<li>动态投资策略被提及，针对小型投资者，建议将比特币的投资比例控制在1%-2%之间，借助ETFs方式进行投资，以降低风险。</li>
+</ul></div>
+</div><div class="section">
+    <h3 class="section-title title">未来投资建议与策略</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Cointelegraph-Bitcoin-&-Ethereum-Blockchain-News">
+    💰利率与加密货币</a></div><div class="section-link-box"><a class="section-link" href="#Should-You-Invest-In-Bitcoin-In-2025?">
+    🧑持仓比例建议</a></div><div class="section-link-box"><a class="section-link" href="#Monetary-policy-and-Bitcoin---ScienceDirect">
+    📉美联储政策影响</a></div></div>
+    <div class="section-content content"><p>根据对话记录，小型投资者在比特币投资方面的具体建议包括：</p>
+<ol>
+<li>
+<p><strong>投资比例建议</strong>：一些专家建议小型投资者将比特币的投资比例控制在总投资组合的<strong>1%到2%</strong>之间。</p>
+</li>
+<li>
+<p><strong>使用比特币ETF的便利性</strong>：在市场中，推荐使用<strong>比特币ETF</strong>作为一种相对简单且便利的投资方式，尤其适合新手投资者，这样他们在不需要深度学习加密货币存储和交易的情况下，也能参与到比特币的投资中。</p>
+</li>
+<li>
+<p><strong>逐步增加投资的策略</strong>：在市场波动的背景下，投资者应考虑<strong>逐步增加比特币的投资比例</strong>，以便在价格上涨时捕获更好的收益，同时在不确定性中管理风险。 </p>
+</li>
+</ol>
+<p>这些建议为小型投资者提供了实用的投资策略，能够帮助他们在复杂的市场环境中做出明智的投资决策。</p></div>
+</div>
+</div>
+<hr>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item">
+    <a href="#Monetary-policy-and-Bitcoin---ScienceDirect" class="navigate-item-emoji ">📉</a>
+    <a href="#Monetary-policy-and-Bitcoin---ScienceDirect" class="navigate-item-id">1</a>
+</div><div class="navigate-item">
+    <a href="#Cointelegraph-Bitcoin-&-Ethereum-Blockchain-News" class="navigate-item-emoji ">💰</a>
+    <a href="#Cointelegraph-Bitcoin-&-Ethereum-Blockchain-News" class="navigate-item-id">2</a>
+</div><div class="navigate-item">
+    <a href="#Bitcoin-Market-Fear-and-Greed-Index-2025-at-DuckDuckGo" class="navigate-item-emoji ">😬</a>
+    <a href="#Bitcoin-Market-Fear-and-Greed-Index-2025-at-DuckDuckGo" class="navigate-item-id">3</a>
+</div><div class="navigate-item">
+    <a href="#Bitcoin-trading-volume-2025-at-DuckDuckGo" class="navigate-item-emoji ">📈</a>
+    <a href="#Bitcoin-trading-volume-2025-at-DuckDuckGo" class="navigate-item-id">4</a>
+</div><div class="navigate-item">
+    <a href="#Bitcoin-social-media-sentiment-2025-at-DuckDuckGo" class="navigate-item-emoji ">📱</a>
+    <a href="#Bitcoin-social-media-sentiment-2025-at-DuckDuckGo" class="navigate-item-id">5</a>
+</div><div class="navigate-item">
+    <a href="#Where-Analysts-Think-Bitcoin-is-Headed-in-2025" class="navigate-item-emoji ">🔍</a>
+    <a href="#Where-Analysts-Think-Bitcoin-is-Headed-in-2025" class="navigate-item-id">6</a>
+</div><div class="navigate-item">
+    <a href="#What-To-Expect-From-Bitcoin-and-Crypto-Markets-In-2025" class="navigate-item-emoji ">🔮</a>
+    <a href="#What-To-Expect-From-Bitcoin-and-Crypto-Markets-In-2025" class="navigate-item-id">7</a>
+</div><div class="navigate-item">
+    <a href="#What-to-Expect-from-Bitcoin-in-2025-|-Morningstar" class="navigate-item-emoji ">📊</a>
+    <a href="#What-to-Expect-from-Bitcoin-in-2025-|-Morningstar" class="navigate-item-id">8</a>
+</div><div class="navigate-item">
+    <a href="#2025-Bitcoin-Technical-Outlook-Preview" class="navigate-item-emoji ">⏳</a>
+    <a href="#2025-Bitcoin-Technical-Outlook-Preview" class="navigate-item-id">9</a>
+</div><div class="navigate-item">
+    <a href="#2025-Bitcoin-Fundamental-Outlook" class="navigate-item-emoji ">📅</a>
+    <a href="#2025-Bitcoin-Fundamental-Outlook" class="navigate-item-id">10</a>
+</div><div class="navigate-item">
+    <a href="#Tech-Companies-Embracing-Bitcoin-Treasuries-as-a-Strategic" class="navigate-item-emoji ">🏢</a>
+    <a href="#Tech-Companies-Embracing-Bitcoin-Treasuries-as-a-Strategic" class="navigate-item-id">11</a>
+</div><div class="navigate-item">
+    <a href="#3-Reasons-Bitcoin-Could-Go-Parabolic-in-2025-|-The-Motley-Fool" class="navigate-item-emoji ">🚀</a>
+    <a href="#3-Reasons-Bitcoin-Could-Go-Parabolic-in-2025-|-The-Motley-Fool" class="navigate-item-id">12</a>
+</div><div class="navigate-item">
+    <a href="#What-to-Expect-From-Bitcoin-and-Other-Cryptocurrencies-in-2025-|-Kiplinger" class="navigate-item-emoji ">🗳</a>
+    <a href="#What-to-Expect-From-Bitcoin-and-Other-Cryptocurrencies-in-2025-|-Kiplinger" class="navigate-item-id">13</a>
+</div><div class="navigate-item">
+    <a href="#Best-Crypto-Stocks-to-Invest-in-2025:-A-Comprehensive-Guide-|-ECOS" class="navigate-item-emoji ">🖥</a>
+    <a href="#Best-Crypto-Stocks-to-Invest-in-2025:-A-Comprehensive-Guide-|-ECOS" class="navigate-item-id">14</a>
+</div><div class="navigate-item">
+    <a href="#Retail-Investors’-Strategies-and-Expectations-for-2025---OneSafe-Blog" class="navigate-item-emoji ">🤔</a>
+    <a href="#Retail-Investors’-Strategies-and-Expectations-for-2025---OneSafe-Blog" class="navigate-item-id">15</a>
+</div><div class="navigate-item">
+    <a href="#Should-You-Invest-In-Bitcoin-In-2025?" class="navigate-item-emoji ">🧑</a>
+    <a href="#Should-You-Invest-In-Bitcoin-In-2025?" class="navigate-item-id">16</a>
+</div><div class="navigate-item">
+    <a href="#Blockchain-Technology-Development-Trends:-Bitcoin-and-beyond---Lexology" class="navigate-item-emoji ">🔗</a>
+    <a href="#Blockchain-Technology-Development-Trends:-Bitcoin-and-beyond---Lexology" class="navigate-item-id">17</a>
+</div><div class="navigate-item">
+    <a href="#10-Crypto-Predictions-For-2025---Nations,-Corporations,-Regulations" class="navigate-item-emoji ">🌟</a>
+    <a href="#10-Crypto-Predictions-For-2025---Nations,-Corporations,-Regulations" class="navigate-item-id">18</a>
+</div><div class="navigate-item">
+    <a href="#Blockchain-&-Cryptocurrency-Laws-&-Regulations-2025-|-USA" class="navigate-item-emoji ">👮</a>
+    <a href="#Blockchain-&-Cryptocurrency-Laws-&-Regulations-2025-|-USA" class="navigate-item-id">19</a>
+</div><div class="navigate-item">
+    <a href="#2025-Investment-Outlook-|-BlackRock-Investment-Institute" class="navigate-item-emoji ">🌍</a>
+    <a href="#2025-Investment-Outlook-|-BlackRock-Investment-Institute" class="navigate-item-id">20</a>
+</div><div class="navigate-item">
+    <a href="#How-institutions-are-investing-in-digital-assets-|-EY---US" class="navigate-item-emoji ">🏦</a>
+    <a href="#How-institutions-are-investing-in-digital-assets-|-EY---US" class="navigate-item-id">21</a>
+</div><div class="navigate-item">
+    <a href="#Hashdex-Releases-2025-Crypto-Investment-Outlook" class="navigate-item-emoji ">📈</a>
+    <a href="#Hashdex-Releases-2025-Crypto-Investment-Outlook" class="navigate-item-id">22</a>
+</div><div class="navigate-item">
+    <a href="#How-The-Fed-Impacts-Stocks,-Crypto-And-Other-Investments-|-Bankrate" class="navigate-item-emoji ">📉</a>
+    <a href="#How-The-Fed-Impacts-Stocks,-Crypto-And-Other-Investments-|-Bankrate" class="navigate-item-id">23</a>
+</div>
+    </div>
+    <div class="page">
+    <div class="page-meta" id="Monetary-policy-and-Bitcoin---ScienceDirect">
+        <h3 class="page-name title"><span class="page-emoji ">📉&nbsp;</span>Monetary policy and Bitcoin - ScienceDirect</h3>
+        <small class="page-url url "><a href="https://www.sciencedirect.com/science/article/abs/pii/S0261560623000815" target="_blank">(https://www.sciencedirect.com/science/article/abs/pii/S0261560623000815)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 此页面讨论了货币政策对比特币价格的影响，为理解比特币2025年的走势提供了宏观经济背景。<br></small>
+    </div>
+    <div class="page-content content"><p>•货币政策对比特币的影响随着时间的推移而演变。
+•2020年之后，美联储收紧政策后，比特币价格立即下跌。
+•而历史上，相比之下，比特币价格在紧缩政策之后往往会上涨。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Cointelegraph-Bitcoin-&-Ethereum-Blockchain-News">
+        <h3 class="page-name title"><span class="page-emoji ">💰&nbsp;</span>Cointelegraph Bitcoin & Ethereum Blockchain News</h3>
+        <small class="page-url url "><a href="https://cointelegraph.com/explained/impact-of-fed-interest-rates-on-crypto-holders" target="_blank">(https://cointelegraph.com/explained/impact-of-fed-interest-rates-on-crypto-holders)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 解释了利率变化如何影响加密货币市场和投资者行为，从而影响比特币的走势。<br></small>
+    </div>
+    <div class="page-content content"><p>利率变化通过改变投资者行为和市场动态来影响加密货币价格。美联储（美联储）是美国的中央银行。其主要职责之一是管理美国的利率，这实质上控制着借贷的成本。较低的利率使借贷成本更低，增加了经济流动性，并刺激了消费者支出和投资。相反，提高利率会抑制借贷，减少经济中的资金流动，并减缓经济增长，其目标是抑制通货膨胀。资产价格，包括股票、债券和加密货币，往往与利率成反比。根据经验，利率可以被视为用于对资产定价的共同分母。如果这个分母的值增加，大多数资产的价格就会下降，反之亦然。因此，像加密货币和非同质化代币（NFT）这样波动性高的资产也不例外。</p>
+<p>从行为角度来看，当利率较低时，银行提供的储蓄利率也较低。因此，投资者更有可能寻求风险更高的资产，如风险投资和加密货币，以追求更高的回报。这种增加的需求可以推高加密货币价格。另一方面，上升的利率使像储蓄账户和债券这样的避险资产更具吸引力，从而将投资从加密货币等风险较高的投资中撤出，并可能导致价格下跌。</p>
+<p>上升的利率往往会抑制加密货币市场，因为投资者的风险偏好降低，机会成本增加，以及保证金电话增多，导致价格下跌和破产。</p>
+<h3>降低投资者对风险的偏好</h3>
+<p>如前所述，上升的利率使债券等避险资产更具吸引力。当投资者可以在低风险的AAA级政府债券上获得有保证的回报时，他们可能不太愿意冒险投资波动性较大的加密货币以寻求更高的回报。低风险AAA级政府债券是由信用评级最高的政府发行的债务证券，提供可靠的收入，且违约风险极低。这种投资者情绪的变化可能导致对加密货币的需求下降，从而压低价格。</p>
+<h3>机会成本增加</h3>
+<p>当利率上升时，持有现金或其他生息资产的潜在回报变得更有吸引力。这增加了持有风险资产（如股票、风险投资和加密货币）的机会成本。</p>
+<h3>保证金电话和杠杆压力</h3>
+<p>加密货币市场依赖于杠杆，投资者借钱来放大其潜在收益。然而，上升的利率使这些贷款的利息支付变得更加昂贵。在经济下行时期，投资者可能会面临保证金电话，迫使他们出售其加密货币资产以履行义务。这种被迫抛售可能会加剧价格下跌。</p>
+<p>2022年，由于利率上升导致加密货币价格下跌和保证金电话增加而产生的连锁反应，导致Celsius和FTX等多家公司破产。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Bitcoin-Market-Fear-and-Greed-Index-2025-at-DuckDuckGo">
+        <h3 class="page-name title"><span class="page-emoji ">😬&nbsp;</span>Bitcoin Market Fear and Greed Index 2025 at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Bitcoin Market Fear and Greed Index 2025" target="_blank">(DDG:Bitcoin Market Fear and Greed Index 2025)</a><br></small>
+        <small class="page-rating rating ">评分: 6.5<br></small>
+        <small class="page-annotation annotation ">注释: 介绍了加密市场的恐慌与贪婪指数，反映了市场情绪对比特币投资的影响。<br></small>
+    </div>
+    <div class="page-content content"><p>什么是加密货币恐惧与贪婪指数？该指数的范围为 0（极度恐惧）到 100（极度贪婪），反映了加密货币市场的整体情绪。</p>
+<p>比特币恐惧与贪婪指数（实时及历史图表）该指数的范围为 0（极度恐惧）到 100（极度贪婪）。高值可能表明市场超买，而低值可能表明市场超卖……</p>
+<p>恐惧与贪婪指数已从周四的 63 下降到周五的 54。比特币预计将在本轮周期中达到最终峰值……</p>
+<p>加密货币恐惧与贪婪指数下降至 74，进入“贪婪”区域该指数下降 5 点至 74，从“极度贪婪”区域移至“贪婪”区域，反映出市场热情略微降温。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Bitcoin-trading-volume-2025-at-DuckDuckGo">
+        <h3 class="page-name title"><span class="page-emoji ">📈&nbsp;</span>Bitcoin trading volume 2025 at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Bitcoin trading volume 2025" target="_blank">(DDG:Bitcoin trading volume 2025)</a><br></small>
+        <small class="page-rating rating ">评分: 9.0<br></small>
+        <small class="page-annotation annotation ">注释: 分析了分析师对比特币2025年价格的预测，汇总了乐观态度。<br></small>
+    </div>
+    <div class="page-content content"><p>1: 分析师预测比特币2025年的走向 - Investopedia——Bitwise、渣打银行和VanEck的分析师认为，比特币在2025年将上涨至18万至20万美元。现货比特币的资金流入……</p>
+<p>2: 2025年比特币和其他加密货币的预期——自1月份开始交易以来，比特币现货ETF的资金流入已达364亿美元，而以太坊现货ETF的资金流入已达24亿美元……</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Bitcoin-social-media-sentiment-2025-at-DuckDuckGo">
+        <h3 class="page-name title"><span class="page-emoji ">📱&nbsp;</span>Bitcoin social media sentiment 2025 at DuckDuckGo</h3>
+        <small class="page-url url "><a href="DDG:Bitcoin social media sentiment 2025" target="_blank">(DDG:Bitcoin social media sentiment 2025)</a><br></small>
+        <small class="page-rating rating ">评分: 5.5<br></small>
+        <small class="page-annotation annotation ">注释: 讨论了社交媒体情绪与比特币价格之间的关系，提供市场情绪的参考。<br></small>
+    </div>
+    <div class="page-content content"><p>10% 调整后，围绕比特币的社交媒体情绪跌至 2024 年的最低点，平均比率为四比五……</p>
+<p>比特币抹去圣诞涨幅：社交媒体情绪或已预示……</p>
+<p>比特币今日暴跌，抹去了圣诞反弹的涨幅。以下是社交媒体情绪可能如何预示这一点。</p>
+<p>尽管短期回调，但宏观经济支撑表明比特币将在 2025 年达到 16 万美元。比特币的社交情绪已暴跌至……</p>
+<p>行业人士表示，在乐观情绪的推动下，数字资产预计将在 2025 年继续增长。如果过去六周的情况可以说明什么问题的话……</p>
+<p>比特币：社交情绪暴跌引发 BTC 突破预期</p>
+<p>围绕比特币的社交情绪今年跌至最低点，但分析师认为这可能预示着即将到来的价格复苏。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Where-Analysts-Think-Bitcoin-is-Headed-in-2025">
+        <h3 class="page-name title"><span class="page-emoji ">🔍&nbsp;</span>Where Analysts Think Bitcoin is Headed in 2025</h3>
+        <small class="page-url url "><a href="https://www.investopedia.com/where-analysts-think-bitcoin-is-headed-in-2025-8762665" target="_blank">(https://www.investopedia.com/where-analysts-think-bitcoin-is-headed-in-2025-8762665)</a><br></small>
+        <small class="page-rating rating ">评分: 9.5<br></small>
+        <small class="page-annotation annotation ">注释: 提供了分析师关于比特币2025年价格预期以及推动因素的详细分析。<br></small>
+    </div>
+    <div class="page-content content"><p>Bitwise、渣打银行和VanEck的分析师预测，比特币将在2025年涨至18万至20万美元。</p>
+<p>分析师表示，2025年流入现货比特币ETF的资金可能与2024年的水平持平。</p>
+<p>如果美国决定采用比特币战略储备，比特币价格也可能上涨。</p>
+<p>比特币(BTCUSD)在2024年表现强劲，突破许多价格里程碑——包括10万美元——一系列因素提振了投资者对这种领先加密货币的信心。</p>
+<p>今年的价格上涨始于与1月份开始交易的现货比特币交易所交易基金(ETF)相关的需求，随后是减半限制了新的比特币供应，以及唐纳德·特朗普连任后对支持加密货币政策的希望，这似乎得到了他连任后几项任命的强化。</p>
+<p>虽然美联储最新关于明年降息的预测震动了加密货币市场，但上述一些乐观理由仍然存在——不过，专家表示，如果美联储放慢降息步伐，国债收益率可能会保持高位，导致投资者撤离比特币和其他风险资产。</p>
+<p>这就是一些分析师仍然看好比特币，但同时警告未来存在波动性的原因。</p>
+<h2>分析师认为比特币仍有上涨空间</h2>
+<p>在美联储会议引发冲击之前，数字资产管理公司Bitwise预测，2025年比特币将首次突破20万美元。如果联邦政府采用参议员辛西娅·卢米斯购买100万比特币用于“战略比特币储备”的计划，这一数字将上升至50万美元。当选总统特朗普也支持比特币储备的想法，但政府可能持有多少比特币、是否会增加现有持仓以及此类储备的目的尚不明确。</p>
+<p>渣打银行分析师对比特币的价格预期类似，并与Bitwise一致预测，2025年流入现货比特币ETF的资金将与今年的水平相似。这些基金持有比特币作为基础证券，需要在投资者投入资金时购买比特币。根据Farside Investors的数据，今年迄今为止，比特币ETF的净流入超过350亿美元。</p>
+<p>VanEck的分析师也看好比特币，但程度较低。他们预计比特币价格将在2025年达到18万美元的高点，并伴随剧烈波动：他们认为，比特币价格在年初触及新高后将下跌30%，随后在夏季进入盘整期，并在年底达到峰值。</p>
+<p>而Gene Munster的Deepwater Asset Management本月早些时候预测，比特币将在2025年达到15万美元，称“成熟的市场和监管环境将推动比特币在2025年达到新高，其峰值之前可能会出现回调”。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="What-To-Expect-From-Bitcoin-and-Crypto-Markets-In-2025">
+        <h3 class="page-name title"><span class="page-emoji ">🔮&nbsp;</span>What To Expect From Bitcoin and Crypto Markets In 2025</h3>
+        <small class="page-url url "><a href="https://www.investopedia.com/what-to-expect-from-bitcoin-and-crypto-markets-in-2025-8750171" target="_blank">(https://www.investopedia.com/what-to-expect-from-bitcoin-and-crypto-markets-in-2025-8750171)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 总结了2025年比特币市场的关键因素及分析师的展望，呼应了报告中的正面预期。<br></small>
+    </div>
+    <div class="page-content content"><p>关键要点</p>
+<p>比特币今年飙升，这得益于现货比特币ETF的批准和比特币减半事件，以及对唐纳德·特朗普当选美国总统的乐观情绪。</p>
+<p>2025年，人们的注意力将转向特朗普政府试图为加密货币行业提供监管清晰度的努力。</p>
+<p>一些分析师表示，在机构投资者需求不断增长的推动下，比特币到明年年底可能上涨至20万美元，尽管历史表明市场可能即将迎来回调。</p>
+<p>目前尚不清楚近期比特币的涨势是否会蔓延到山寨币。</p>
+<p>加密货币市场经历了非凡的一年，市场参与者对2025年的前景持乐观态度，届时新的政府将接管华盛顿特区，尽管仍存在许多不确定性。</p>
+<p>比特币 (BTCUSD) 在年初上涨，原因是新推出的现货比特币交易所交易基金 (ETF) 的需求激增。此后不久，比特币减半（这减缓了新比特币的创造速度）导致供需失衡，进一步推高了价格。</p>
+<p>唐纳德·特朗普以及一些加密货币友好型立法者的当选，最近几周又给比特币带来了提振，帮助这种数字货币首次突破了10万美元的价格大关。</p>
+<p>以下是市场参与者在未来一年中将关注的内容。</p>
+<p>特朗普对加密货币监管可能意味着什么？</p>
+<p>近年来，加密货币市场最大的担忧之一是围绕监管和美国证券交易委员会 (SEC) 执行方法的缺乏清晰度。</p>
+<p>在竞选过程中，特朗普向比特币和加密货币行业做出了多项承诺，包括他将在上任第一天解雇 SEC 主席 Gary Gensler，并建立一个“战略国家比特币储备”。Gensler 决定辞职，特朗普提议由加密货币倡导者 Paul Atkins 领导该机构。</p>
+<p>即使市场正在等待监管清晰度，也不能保证他们会得到想要的东西，或者何时得到。</p>
+<p>Delphi Ventures 总法律顾问 Sarah Brennan 告诉 Investopedia：“特朗普对[去中心化金融 (DeFi)] 和加密货币的立场有些前后矛盾。”“虽然他表达了对该领域的兴趣，但他的大部分注意力似乎都集中在支持美元主导地位和房地产应用上。”比特币主导指数衡量比特币在整体加密货币市场估值中的份额，它最近创下新高。</p>
+<p>Castle Island Ventures 合伙人 Nic Carter 表示，立法重点将是首先通过稳定币立法。然后，重点将转向加密货币市场结构法案，该法案将阐明哪些加密资产是商品，哪些是证券。</p>
+<p>比特币价格预测和驱动因素</p>
+<p>Bitwise 的分析师预计，到 2025 年底，比特币将达到 20 万美元，而 VanEck 的分析师则将其定为 18 万美元。</p>
+<p>过去曾多次做出过此类比特币价格预测，但似乎过于雄心勃勃。随着比特币价格飙升至 10 万美元以上，它们现在似乎并不那么牵强了。</p>
+<p>最多只能创造 2100 万个比特币，其中 1979 万个已经在流通。</p>
+<p>虽然比特币供应有限，但对其需求却有所增加。</p>
+<p>包括 ETF 推广者、公司和国家在内的机构投资者对比特币的需求日益增长。现货比特币 ETF 已吸引投资者投入 360 亿美元。</p>
+<p>截至 12 月 23 日，在账面上持有比特币的上市公司领导者 MicroStrategy (MSTR) 持有 444,262 个比特币，价值约 420 亿美元。</p>
+<p>从历史上看，比特币——以及整个加密货币市场——的涨跌与四年一度的比特币减半周期一致。如果该周期持续下去，加密货币市场将在 2025 年迎来回调。但大型机构投资者的存在可能会限制任何下跌。</p>
+<p>经济学家兼 Asgard Markets 创始人 Alex Kruger 表示，比特币正处于“超级周期”，这意味着“反复出现 20%-40% 的回调”，而不是“85% 的暴跌”。</p>
+<p>美联储也可能让比特币的盛宴终结。美联储最近下调了对 2025 年降息的预期，这给比特币价格带来了压力。如果美联储放缓降息速度，国债收益率可能会保持高位，与比特币等风险较高的资产相比，它们对投资者的吸引力更大。</p>
+<p>比特币的涨势会蔓延到山寨币吗？</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="What-to-Expect-from-Bitcoin-in-2025-|-Morningstar">
+        <h3 class="page-name title"><span class="page-emoji ">📊&nbsp;</span>What to Expect from Bitcoin in 2025 | Morningstar</h3>
+        <small class="page-url url "><a href="https://www.morningstar.co.uk/uk/news/258219/what-to-expect-from-bitcoin-in-2025.aspx" target="_blank">(https://www.morningstar.co.uk/uk/news/258219/what-to-expect-from-bitcoin-in-2025.aspx)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 探讨了特朗普再任对比特币市场的潜在影响，提供了关于市场动态的进一步分析。<br></small>
+    </div>
+    <div class="page-content content"><h1>2025年比特币的预期</h1>
+<p>亲加密货币的美国总统支持看涨的加密货币故事，但修正可能仍在到来。特朗普的连任激发了比特币的涨势，支持者对2025年感到乐观。我们将考察明年主要加密货币的价格驱动因素，资产管理者将其纳入主流的作用，以及监管环境的可能变化。</p>
+<h2>比特币的快速复苏</h2>
+<p>2021年和2022年的“加密寒冬”现在似乎已经是遥远的记忆了。这对加密货币来说是一场重大危机，比特币价格暴跌至2万美元以下，12个月内损失了75%。</p>
+<p>如此强劲的反弹令人印象深刻，但比特币的历史充满了极端的高点和低点，Mirabaud 集团高级投资专家 John Plassard 表示：“比特币前所未有的上涨反映了合法性提高和需求增长，但历史表明应谨慎对待，因为比特币的价格轨迹的特点是在指数增长时期之后出现大幅回调。”</p>
+<p>加密货币以其高波动性而闻名。价格可能在短时间内发生剧烈波动，其诱因包括市场情绪和风险偏好、监管新闻、技术发展和宏观经济趋势。</p>
+<p>事实上，21Shares研究主管Adrian Fritz表示，回调是比特币历史的一部分，对价格动态至关重要。“这些通常在20%到40%区间的下调，是重新建立市场平衡的重要机制，也是比特币历史价格模式的一个组成部分”。</p>
+<p>WisdomTree数字资产研究总监Dovile Silenskyte表示赞同。“投资者应该在投资比特币时了解波动性是其固有特征。这意味着要为价格回调和潜在的价值大幅下跌做好准备，无论当前价格或市场状况如何。”</p>
+<p>“投资者还应认识到，波动性可以双向发挥作用：虽然它带来了大幅上涨的可能性，但也同样带来了重大损失的风险。”</p>
+<h2>2025年比特币：机遇与风险</h2>
+<p>预测加密货币的价格是一项非常冒险的事情。“在2025年，比特币的未来看起来充满希望，但也充满不确定性，”John Plassard说。</p>
+<p>“比特币通过现货ETF和机构采用越来越融入主流金融，这表明它可能会巩固其作为合法资产类别的地位，”他说。</p>
+<p>然而，它的表现将取决于宏观经济因素、市场流动性和特朗普政府的监管政策。“如果目前的轨迹继续下去，比特币可能会进一步增长，尽管波动性和市场回调可能仍然是叙述的一部分，”他补充道。</p>
+<p>在2025年比特币可能的积极驱动因素中，WisdomTree的Silenskyte还提到持续的通货膨胀压力和货币政策不确定性，刺激了人们将比特币视为“价值储存手段”的兴趣。</p>
+<h2>更便宜的资金可能流向加密货币</h2>
+<p>Adrian Fritz表示，随着2025年货币政策宽松，“金融体系中增加的流动性也可能流入数字资产，可能会推动对比特币的需求。”</p>
+<p>Fritz反驳说，中东地区不断升级的地缘政治冲突可能会严重抑制投资者对高风险资产的兴趣。“由此产生的经济不确定性和市场不稳定通常会促使投资者转向更安全、更传统的资产，可能引发抛售，”这位21Shares研究主管解释道。</p>
+<p>他还警告说，白宫可能比预期更慢地实施支持加密货币的政策。</p>
+<p>这“可能会导致市场失望和价格回调，因为许多投资者押注特朗普政府将扭转美国加密货币处理的局面”。</p>
+<h2>特朗普推动支持加密货币的监管</h2>
+<p>事实上，特朗普政府预计将发挥重要作用，因为比特币支持者预计对加密货币的监管将更为有利。现任证券交易委员会（SEC）主席Gary Gensler（历史上反对加密货币世界并支持更严格的监管）将于2025年1月20日离任。唐纳德·特朗普提名多年来一直是加密货币倡导者的Paul Atkins接替他的职位。</p>
+<p>特朗普承诺将美国打造成为新的“比特币中心”，美国媒体推测商务部、财政部和证券交易委员会领导职位的候选人非常支持加密产业。</p>
+<p>具体的计划包括建立专门从事数字资产的咨询委员会，以及任命一位“加密沙皇”，负责为该行业提供咨询和监管。Ripple首席执行官Brad Garlinghouse正在被讨论担任这一角色。</p>
+<p>“这些举措表明，监管流程可能会简化，数字资产与传统金融系统的整合程度更高，这可能会促进创新和增长，”Fritz评论道。</p>
+<h2>不买比特币就是资产配置</h2>
+<p>在过去的几年里，比特币已经发展成为一个成熟的金融资产类别。其2.03万亿美元（1.57万亿英镑）的市值使其跻身全球最大资产之列，而2024年1月在美国批准现货ETF*则弥合了加密货币与传统金融之间的差距。</p>
+<p>“随着越来越多的私人银行、对冲基金和政府养老基金将BTC添加到其投资组合中，正如过去三个季度SEC的13F文件所证明的那样，这些工具将继续为美国增加的需求做出贡献，”Adrian Fritz补充道。</p>
+<p>Mirabaud的Plassard补充说，贝莱德和富达等大型资产管理公司的加入“进一步使比特币作为投资组合资产合法化”。</p>
+<p>WisdomTree的Dovile Silenskyte还表示，机构投资者越来越认识到，为其多资产投资组合分配一小部分比特币的价值。她说，与机构投资者的对话正在发展。</p>
+<p>“越来越多的人开始认识到，对比特币没有配置代表的是积极的低配，而不是中性立场。”</p>
+<p>目前，英国投资者必须等待加密ETF。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="2025-Bitcoin-Technical-Outlook-Preview">
+        <h3 class="page-name title"><span class="page-emoji ">⏳&nbsp;</span>2025 Bitcoin Technical Outlook Preview</h3>
+        <small class="page-url url "><a href="https://www.cityindex.com/en-au/news-and-analysis/2025-bitcoin-technical-outlook-preview/" target="_blank">(https://www.cityindex.com/en-au/news-and-analysis/2025-bitcoin-technical-outlook-preview/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 讨论了比特币的市场顶峰和潜在价格波动，为2025年走势提供了历史参考。<br></small>
+    </div>
+    <div class="page-content content"><p>这是我们完整的2025年比特币展望报告的摘录，这份报告是关于明年预期情况的九份详细报告之一。</p>
+<h2>为什么比特币（仍然）可能尚未达到周期顶部</h2>
+<p>然而，从更长远来看，有很多指标表明，我们可能在时间和价格上都还有很长一段路要走，才能达到比特币的周期顶部。</p>
+<p>市值与已实现价值 (MVRV) Z 得分比较当前价格与所有未偿还比特币的总支付成本，该得分已从 2023 年初标志着熊市底部的 &lt; 1 水平上升到 2024 年 12 月底的大约 3。</p>
+<p>然而，正如上图所示，之前的周期顶部直到该指标达到 7 以上的水平才形成，这表明我们可能还需要进一步上涨才能达到周期顶部（尽管考虑到比特币有限的历史记录，重要的是要记住，当前周期不一定与之前的模式相匹配）：</p>
+<p>来源：Bitcoin Magazine。过往业绩并非未来收益的指示器。</p>
+<p>最后要考虑的是长期持有者的行为。正如我们在之前的展望中提到的那样，那些持有比特币超过一年的人，几乎可以肯定的是，他们并非试图从加密货币中“快速获利”；相反，他们更有可能是“真正的信徒”或“HODLer”，除非他们获得了真正巨大的收益，否则不太可能出售。</p>
+<p>如下图所示，持有至少一年的比特币比例在 2024 年初创下 70% 以上的历史新高，然后在截至 12 月底撰写本文时下降到 63% 以下。虽然 7% 的跌幅看起来相对较小，但这代表着近 140 万的边际比特币供应量，抵消了部分大型 ETF 流入。根据定义，这一指标变化相对缓慢，但只要比特币持续升值，长期“HODLer”可能会继续出售加密货币：</p>
+<p>来源：MacroMicro.me</p>
+<p>当然，我们在本报告中强调的催化剂可能无法按预期发挥作用——在某种程度上，它们可能已经被计入价格，因此读者在交易比特币和其他加密资产时应始终谨慎行事。与以往一样，随着今年的发展，监测广泛的宏观经济和加密货币特定指标至关重要。</p>
+<h2>比特币技术分析 – BTC/USD 周线图</h2>
+<p>来源：TradingView，StoneX</p>
+<p>从长期图表来看，比特币已经突破了在 2024 年二季度限制价格的高基数/看涨旗形模式。在一个持续的盘整形态突破后，11 月和 12 月强劲的单向持续反弹并不令人意外。</p>
+<p>展望未来，交易者将密切关注 2025 年政策变化和普遍机构接受度方面的情况。从纯粹的技术角度来看，截至撰写本文时，价格“超买”，增加了 2025 年初短期回调的风险，但只要流入该资产类别的资金保持强劲，我们预计交易者将积极买入浅层回调，并最终将比特币推高至 15 万美元以上。</p>
+<p>向上方面，接下来需要注意的水平是 12.3 万美元（2021-2022 年跌幅的 200% 扩展）和 15.6 万美元（相同跌幅的 261.8% 斐波那契扩展）。</p>
+<p>向下方面，只有跌破 7 万美元区域之前的历史高点，才会对看涨周期论点提出质疑。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="2025-Bitcoin-Fundamental-Outlook">
+        <h3 class="page-name title"><span class="page-emoji ">📅&nbsp;</span>2025 Bitcoin Fundamental Outlook</h3>
+        <small class="page-url url "><a href="https://www.forex.com/ie/news-and-analysis/2025-bitcoin-fundamental-outlook/" target="_blank">(https://www.forex.com/ie/news-and-analysis/2025-bitcoin-fundamental-outlook/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 回顾了比特币在2024年表现与2025年预测，为价格预期提供了历史背景。<br></small>
+    </div>
+    <div class="page-content content"><p>比特币要点</p>
+<p>比特币突破其减半后的盘整区间，创下超过10万美元的新高。尽管2024年第四季度出现大幅上涨，但多个指标表明，我们在时间和价格上可能仍距离比特币的周期顶部还有一段距离。向上方面，下一个值得关注的价位是12.3万美元（2021-2022年跌幅的200%扩展）和15.6万美元（261.8%斐波那契扩展）。</p>
+<p>比特币2024年第四季度回顾</p>
+<p>正如俗话所说，你睡着了，你就输了。我们的比特币第四季度展望报告题为“没有理由忽视缺乏活力的价格走势”，果不其然，在报告发布后不久，我们看到比特币突破了其长期横盘的价格走势，截至2024年12月底撰写本文时，价格飙升至超过10.8万美元的历史高位。突破的直接催化剂是美国总统选举中的“红色浪潮”，这为世界最大经济体的政府带来了一个更加友好加密货币的政府。进入2025年，交易员们热切地关注特朗普政府能否兑现其承诺，以及这将如何影响全球最大加密资产的价格。</p>
+<p>比特币2025年展望</p>
+<p>比特币在其历史上看涨的减半后时期启动，这花费的时间比一些比特币多头所希望的要长。对于那些不了解的人来说，比特币减半是指开采新比特币的奖励减半。这降低了新比特币的产生速度，从而降低了进入市场的新的比特币的总供应量。减半往往会增加稀缺性，并且历史上导致比特币价格上涨，当然，未来并不保证会如此。任何比特币多头都会告诉你，2024年4月的减半使比特币供应的“通货膨胀率”降至每年低于1%，不到黄金年度通货膨胀率的一半。查看我最喜欢的图表，我俗称“你唯一需要的比特币图表™”，之前的比特币减半标志着从（黄色）底部反弹后的复苏阶段到（绿色）全面牛市阶段的转变。随着比特币作为一种资产类别日益成熟，即使总体模式继续保持（即，像我们在2016-17年看到的29倍涨幅将使比特币价格超过2,000,000美元，市值达到荒谬的40万亿美元），我们也可能会看到每个阶段的百分比涨幅较小，但大约1.5年的牛市周期到2025年末的时间预测，总体上与4年周期一致：</p>
+<p>来源：TradingView，StoneX。过去的表现不能保证未来的回报。</p>
+<p>正如我们在上一份报告中指出的那样，除了这种简单的周期分析之外，比特币还有宏观经济和“基本面”上的看涨论据，但密切关注这些催化剂在未来一年及以后如何演变至关重要。从宏观经济角度来看，货币政策背景总体上仍然有利，尽管我们可能正在接近利率下调的转折点。如下图所示，全球央行总体上仍在降息，但我们在2024年末看到净利率变化略有上升：</p>
+<p>来源：Chase Bank</p>
+<p>如果新兴的加息趋势加速（尤其是在主要央行——美联储、欧洲央行、日本央行、欧洲央行和中国人民银行——暂停或略微加息的情况下），因为央行将重点转向重新加速通胀的风险，那么这可能会在今年下半年成为比特币的潜在阻力。同样，金融体系中的法币数量也转向更具刺激性的方向。所谓的“M2”是央行对货币总供应量的估计，包括人们手头的所有现金，以及存放在支票账户、储蓄账户和其他短期储蓄工具（如存款证明）中的所有资金。在2024年中期飙升至6%以上后，截至撰写本文时，全球货币供应量的同比增长已降至接近2%：</p>
+<p>来源：TradingView，StoneX。</p>
+<p>推动比特币价值的关键叙事之一是“硬通货”的概念，或者是对法币贬值的避险，如果全球货币供应量在2025年开始萎缩，这可能会对加密货币构成压力。另一个推动比特币上涨的叙事是，美国建立“国家战略储备”持有高达100万个比特币的希望。候任总统特朗普暗示了这种策略，尽管它有可能对美元作为全球储备货币的现状产生怀疑，因此最终可能不会被执行。无论如何，如果我们确实看到明确的步骤，将比特币正式列为美国的国家储备资产，这可能会推动价格达到新的高度，因为其他国家争先恐后地确保他们自己的比特币储备。</p>
+<p>说到大型实体积累比特币，继美国大选之后，机构资本大量涌入现货比特币 ETF 的势头再次加快。在一些最成功的 ETF 推出中，流入比特币 ETF 的总资金在不到一年的时间里超过了350亿美元：</p>
+<p>来源：Farside Investors</p>
+<p>只要比特币 ETF 每周继续吸引超过10亿美元的资金流入，比特币本身的下跌可能仍然很浅且持续时间很短，因为华尔街“追赶”小型散户投资者对比特币和其他加密资产的配置。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Tech-Companies-Embracing-Bitcoin-Treasuries-as-a-Strategic">
+        <h3 class="page-name title"><span class="page-emoji ">🏢&nbsp;</span>Tech Companies Embracing Bitcoin Treasuries as a Strategic</h3>
+        <small class="page-url url "><a href="https://www.globenewswire.com/news-release/2024/12/26/3001955/0/en/Tech-Companies-Embracing-Bitcoin-Treasuries-as-a-Strategic-Asset-as-Market-Heats-up-Heading-into-2025.html" target="_blank">(https://www.globenewswire.com/news-release/2024/12/26/3001955/0/en/Tech-Companies-Embracing-Bitcoin-Treasuries-as-a-Strategic-Asset-as-Market-Heats-up-Heading-into-2025.html)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 概述了科技公司如何将比特币纳入其现金储备，反映了机构对比特币的逐渐接受。<br></small>
+    </div>
+    <div class="page-content content"><p>科技公司拥抱比特币作为战略资产，市场升温走向2025年</p>
+<p>2024年12月26日 08:45 ET | 来源：FN Media Group LLC</p>
+<p>佛罗里达州棕榈滩，2024年12月26日（GLOBE NEWSWIRE）--FN Media Group新闻评论——比特币杂志最近的一篇文章讨论了近期大量公司加入当前“IT”战略的浪潮……将比特币作为一种资产储备。文章写道：“MicroStrategy的企业比特币资产储备战略正在起飞。上市公司正在害怕错过（FOMO）比特币。这几乎就像特朗普支持比特币的立场给了公司囤积BTC的绿灯。（仅在11月的一天）七家上市公司宣布他们已经购买或计划为其资产储备购买比特币，其中一家新公司承诺购买100万美元的BTC（第二天）。疯狂吧？感觉每天至少有一到两家新公司正在采用比特币作为储备资产——更不用说所有通过ETF获得比特币敞口的公司了。亲眼目睹公司实时采用企业比特币策略的FOMO令人难以置信……在未来一年中，我预计随着比特币价格上涨和特朗普上任，这种企业比特币采用率只会增加。”</p>
+<p>市场审查显示，领先公司正在将比特币资产储备作为战略资产。在各个行业的创新型公司中，采用比特币作为企业资产储备的势头正在增强。像Rumble、MicroStrategy、Marathon Digital Holdings、Hut 8 Mining Corp、KULR Technology Group、Block Inc.和Coinbase等企业认识到比特币作为价值储存手段和通货膨胀对冲工具的潜力，正在带头将其整合到其财务战略中。</p>
+<p>今日新闻中的活跃科技公司包括：KULR Technology Group, Inc.（NYSE: KULR）、Hut 8 Corp.（NASDAQ: HUT）、MARA Holdings, Inc.（NASDAQ: MARA）、Rumble Inc.（NASDAQ: RUM）、MicroStrategy® Incorporated（NASDAQ: MSTR）。</p>
+<p>比特币资产储备：企业战略中日益增长的趋势——比特币的去中心化特性、有限供应和日益普及使其成为寻求多元化和增强资产负债表公司的诱人选择。随着全球经济形势的变化，越来越多的组织正在探索比特币作为一种长期资产，以保持价值并利用其潜在的升值潜力。</p>
+<p>一些公司是主要的参与者，例如：“视频分享平台Rumble最近宣布计划将其比特币纳入其资产储备。通过采用比特币，Rumble的目标是与其去中心化和自由选择的愿景保持一致，与全球用户群产生共鸣；MicroStrategy是上市公司中比特币采用技术的先驱，截至其最近的披露，该公司持有超过15万个BTC。该公司首席执行官Michael Saylor一直大力倡导比特币是一种优越的价值储存手段和企业资产储备的变革性金融资产；作为领先的比特币矿业公司，Marathon Digital Holdings不仅生产比特币，还将其纳入其资产储备战略。该公司致力于持有比特币，这与其对这种加密货币长期潜力的信念相符；以及Hut 8 Mining Corp，这是比特币矿业领域的另一位主要参与者，该公司采用了“HODL”策略，在其资产负债表上持有其开采的大部分比特币。这种方法反映了Hut 8 对比特币未来作为一项有价值资产的信心。</p>
+<p>KULR Technology Group, Inc.（纽约证券交易所美国市场代码：KULR）启动比特币资产储备，购买217.18个比特币，价值2100万美元——KULR Technology Group, Inc.（“公司”或“KULR”）（$KULR），一家先进能源管理平台的领导者，今天宣布已完成以约96,556.53美元/BTC的平均价格购买217.18个比特币（“BTC”），总价值约2100万美元。此次收购是在该公司12月4日宣布其比特币资产储备战略之后进行的，该公司在战略中宣布将多达90%的盈余现金分配给BTC。自公告以来购买的价值2100万美元的BTC是公司打算今后进行的持续购买中的第一次。KULR 选择Coinbase（COIN）的Prime平台为其BTC提供托管、USDC和自我托管钱包服务。</p>
+<p>续……阅读本新闻稿全文以及更多关于KULR的新闻：https://www.financialnewsmedia.com/news-kulr/</p>
+<p>其他值得关注的科技/加密行业发展：Hut 8 Corp.（纳斯达克代码：HUT），一家领先的垂直整合的大规模能源基础设施运营商，也是北美最大的比特币矿商之一，最近宣布购买约990个比特币。收购比特币的总购买价格约为1亿美元，平均约为每个比特币101,710美元。加上此次收购前持有的比特币，Hut 8的战略比特币储备现已达到10,096个比特币，截至2024年12月18日，市值超过10亿美元。根据公开信息，该公司认为这使其成为全球十大比特币公司所有者之一。储备中持有的10,096个比特币是通过低成本生产和今天宣布的战略市价购买获得的，实现的平均成本为每个比特币24,484美元。已购买的比特币将在公司先前宣布的机队升级的创新融资模式中发挥核心作用。</p>
+<p>MARA Holdings, Inc.（纳斯达克代码：MARA），一家利用数字资产计算来支持能源转型的全球领导者，最近宣布于2024年12月4日完成其发行到期日为2031年的0.00%可转换高级票据（“票据”）。此次发行出售的票据总本金金额为8.5亿美元。MARA还授予初始购买者在从包括发行票据之日起算的13天期限内购买额外1.5亿美元票据总本金金额的选择权。这些票据是通过私人发行向被合理认为是合格机构买家的个人出售的，其依据是1933年证券法修正案（“证券法”）下的第144A条规则。扣除初始购买者的折扣和佣金，但在扣除MARA应支付的估计发行费用之前，票据出售的净收益约为8.351亿美元。MARA预计将使用票据出售净收益中的约4800万美元回购其现有到期日为2026年的可转换票据（“现有2026年可转换票据”）的约5100万美元总本金金额，其余净收益将用于收购更多比特币以及用于一般公司用途，这可能包括营运资金、战略收购、现有资产的扩张以及偿还额外债务和其他未偿债务。</p>
+<p>Rumble Inc.（纳斯达克代码：RUM）最近公布了截至2024年9月30日的第三季度财政业绩。2024年第三季度主要亮点和重点事项：第三季度收入为2510万美元，比2024年第二季度的2250万美元环比增长12%，比2023年第三季度的1800万美元增长39%；2024年第三季度全球平均月活跃用户（“MAU”）为6700万，而2024年第二季度为5300万。这代表该平台连续第十一季度平均全球MAU超过4000万。我们认为，与2024年第二季度相比有所增加是由于2024年第三季度对政治内容的兴趣日益浓厚。在6700万MAU中，有4300万来自美国和加拿大；2024年第三季度的平均每用户收入（“ARPU”）为0.33美元，而第二季度为0.37美元。鉴于我们目前正处于用户货币化的早期阶段，我们预计收入相对于用户的增长会有一定的滞后，尤其是在用户增长迅速的时期。因此，在第三季度，由于收入增长略微落后于美国总统大选之前的强劲MAU增长，Rumble 的ARPU有所下降。</p>
+<p>Rumble董事长兼首席执行官Chris Pavlovski评论道：“自从我们公开上市以来已经两年了，我可以诚实地说，我对我们面前的机会从未如此乐观。我们在选举之夜创造了纪录。我们创造了第三季度创纪录的收入，达到2510万美元，同比增长39%。除了创纪录的收入外，我们的平均MAU达到6700万，连续第十一季度MAU超过4000万。美国人民已经表决。抵制文化已经消亡。言论自由现在已经成为主流，而Rumble正处于驾驶员的位置，拥有最好的独立创作者阵容和最好的经济效益。”</p>
+<p>MicroStrategy® Incorporated（纳斯达克代码：MSTR）发展——在Barrons.com上发表的一篇文章中，MSTR上周购买了5.61亿美元的比特币，延续了11月初开始的一系列每周购买活动。但最新的购买量是过去一段时间内每周购买量中最小的之一。它们远低于12月16日宣布的15亿美元和12月9日披露的21亿美元。MicroStrategy是全球最大的比特币公司持有者。根据上周一上午提交的证券文件，该公司通过九个成员组成的承销集团，根据10月底宣布的210亿美元授权，通过“按市价”销售股票的方式筹集了最新的5.61亿美元购买资金。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="3-Reasons-Bitcoin-Could-Go-Parabolic-in-2025-|-The-Motley-Fool">
+        <h3 class="page-name title"><span class="page-emoji ">🚀&nbsp;</span>3 Reasons Bitcoin Could Go Parabolic in 2025 | The Motley Fool</h3>
+        <small class="page-url url "><a href="https://www.fool.com/investing/2024/12/27/3-reasons-bitcoin-could-go-parabolic-in-2025/" target="_blank">(https://www.fool.com/investing/2024/12/27/3-reasons-bitcoin-could-go-parabolic-in-2025/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 强调了比特币进一步增长的潜力和市场支持，讨论了未来的投资趋势。<br></small>
+    </div>
+    <div class="page-content content"><p>比特币在2025年可能飙升的三个原因</p>
+<p>要点：</p>
+<p>即使比特币价格达到10万美元，它在2025年之前仍具有巨大的上涨潜力。</p>
+<p>流入新的现货比特币ETF的资金没有放缓的迹象。</p>
+<p>美国政府创建战略比特币储备可能会导致价格飙升。</p>
+<p>摩尔金融发出罕见的“全押”买入警报</p>
+<p>纳斯达克：IBIT</p>
+<p>iShares比特币信托</p>
+<p>现在比特币(BTC-0.56%)已经突破了10万美元的价格水平，许多投资者想知道这种世界上最受欢迎的加密货币还能上涨多少是可以理解的。比特币今年的涨幅约为115%，过去两年的涨幅约为500%。在过去十年中，比特币的涨幅令人难以置信，达到了28,500%。</p>
+<p>有人认为，比特币不可能再涨了，对吗？错。事实上，有三个主要原因可能导致比特币在2025年飙升。</p>
+<p>现货比特币ETF资金流入</p>
+<p>今年比特币价格飙升的主要催化剂是1月份推出的新的现货比特币交易所交易基金(ETF)。截至今年，超过1000亿美元流入这些ETF，其中535亿美元流入iShares比特币信托(IBIT0.07%)。</p>
+<p>纳斯达克：IBIT</p>
+<p>关键数据点：</p>
+<p>几乎从任何衡量标准来看，这些新的现货比特币ETF都获得了巨大的成功。散户投资者开始将其作为一种简单、低成本的方式来大量持有比特币。规避风险的机构投资者开始将其作为一种投资组合多元化工具。华尔街投资银行和大型对冲基金开始将其作为一种对市场进行方向性押注的方式。</p>
+<p>如果您是比特币投资者，好消息是所有这些稳定的购买都在帮助推高比特币价格。对现货比特币ETF的需求正在帮助吸收市场上任何过剩的抛售压力，这可能是我们尚未从10万美元的价格水平出现大幅回调的原因。</p>
+<p>图片来源：Getty Images.</p>
+<p>这种购买压力只会加剧。目前，许多投资经理只将1%的投资组合分配给比特币。但如果他们开始将这一比例提高到2%呢？如果养老基金、捐赠基金和主权财富基金开始投资比特币呢？这种现货比特币ETF购买趋势可能会持续数年。</p>
+<p>新的战略比特币储备</p>
+<p>2025年比特币的另一个重要催化剂可能是创建新的战略比特币储备。这个想法最初是在唐纳德·特朗普总统竞选期间提出的，似乎正在获得动力。例如，美国参议员辛西娅·卢米斯(Cynthia Lummis，怀俄明州共和党人)已经起草了一项立法(称为2024年比特币法案)，该立法将使战略比特币储备成为现实。</p>
+<p>诚然，战略比特币储备的许多细节都需要制定。但是，正如卢米斯所概述的那样，战略比特币储备将使美国政府承诺每年购买20万个比特币，在未来五年内总共购买100万个比特币。届时，美国将持有全球约5%的比特币。</p>
+<p>其他主权政府也提出了创建类似类型的比特币储备的想法。迄今为止最好的例子是巴西，它已经成为加密领域的繁荣创新中心。包括德克萨斯州、佛罗里达州和宾夕法尼亚州在内的几个美国州也表示，他们将创建自己的战略比特币储备。</p>
+<p>公司将比特币作为资产负债表资产的采用</p>
+<p>最后，是美国公司越来越多地将比特币作为资产负债表资产的采用。正如公司在其资产负债表上持有现金(和现金等价物)一样，他们现在也在考虑在其资产负债表上持有比特币的优点。这里的典型例子是MicroStrategy Inc.(MSTR-1.65%)，该公司已经积累了高达444,262个比特币(现在价值超过410亿美元)，使其成为世界上最大的比特币公司持有者。</p>
+<p>MicroStrategy的股票今年上涨了470%，其他公司也开始关注。事实上，一种新型的股东行动主义似乎正在兴起，公司被要求将其资产负债表上增加比特币，以提高股东价值。</p>
+<p>例如，去年12月，微软的股东就一项提议进行了投票，该提议要求这家科技巨头在其资产负债表上增加比特币。今年4月，亚马逊的股东将获得类似的机会。</p>
+<p>诚然，微软的股东对该提案投了反对票，并且唯一广泛采用这一战略的公司似乎是加密行业内的公司，例如比特币矿业公司。</p>
+<p>但大坝正在开始崩塌。去年11月，三家小型生物技术公司宣布计划开始积极购买比特币。如果这种趋势在2025年获得发展势头，比特币的价格可能会飙升。</p>
+<p>比特币还能上涨多少？</p>
+<p>去年12月底，方舟投资(Ark Invest)的凯西·伍德(Cathie Wood)重申了她之前对比特币的价格预测，认为到2030年比特币的价格可能会达到100万美元。她指出了比特币在全球范围内日益稀缺的特性，并指出它现在“比黄金还要稀缺”。由于现在有如此多的个人、机构、公司和政府都在购买比特币，很容易看出这种稀缺效应如何推动比特币价格上涨。</p>
+<p>比特币的价格达到100万美元可能让一些人感到不可思议。但是，如果你计算一下，这仅仅意味着未来五年复合年增长率(CAGR)为60%。鉴于比特币在过去两年中获得了三位数的回报，这似乎并非不可能。目前，所有迹象都显示比特币呈绿色，我对其短期和长期都持乐观态度。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="What-to-Expect-From-Bitcoin-and-Other-Cryptocurrencies-in-2025-|-Kiplinger">
+        <h3 class="page-name title"><span class="page-emoji ">🗳&nbsp;</span>What to Expect From Bitcoin and Other Cryptocurrencies in 2025 | Kiplinger</h3>
+        <small class="page-url url "><a href="https://www.kiplinger.com/investing/bitcoin-crypto-trends" target="_blank">(https://www.kiplinger.com/investing/bitcoin-crypto-trends)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 探讨了特朗普当选对加密货币市场的影响，分析了中期前景与风险。<br></small>
+    </div>
+    <div class="page-content content"><p>2025年比特币及其他加密货币的展望</p>
+<p>在唐纳德·特朗普的帮助下，加密货币产业正在快速扩张。以下是2025年比特币的展望。</p>
+<p>比特币势头强劲
+以太坊可能超越比特币
+准备好迎接加密货币的首次公开募股(IPO)</p>
+<p>对加密货币来说，今年是不同寻常的一年，其特点是比特币的迅速上涨。全球首个加密货币从1月份的不到4万美元飙升至秋季的超过10万美元，并在夏季稳定在6万美元左右。</p>
+<p>当然，真正的转折点出现在11月的美国总统大选中——这一事件不仅重塑了政治格局，也重塑了金融格局。</p>
+<p>由亲加密货币政策和监管清晰度推动的选举后热情，已使比特币的市值达到约1.96万亿美元。</p>
+<p>这是一个了不起的成就，尤其考虑到这种资产自中本聪在2008年10月发布著名白皮书后不久才出现。</p>
+<p>有一点很清楚：加密货币产业正在以惊人的速度发展。势头明显，但仍存在不确定性。</p>
+<p>展望2025年，最大的问题是，比特币和更广泛的加密货币生态系统下一步将走向何方？比特币的涨势会持续吗？山寨币会崛起挑战其主导地位吗？</p>
+<p>让我们考虑一些正在塑造2025年加密货币格局的关键趋势。</p>
+<p>比特币势头强劲</p>
+<p>目前，多种长期力量正在推动比特币和更广泛的加密货币市场。</p>
+<p>首先，比特币在信任度、品牌和流动性方面都是标准。美联储主席杰罗姆·鲍威尔最近强调了这一点，称比特币“就像黄金一样，只是它是虚拟的，是数字的”。</p>
+<p>这种比较充分说明了比特币在金融世界中日益增长的合法性。</p>
+<p>另一个变革性的发展是现货比特币ETF的出现。自2024年初推出以来，这些交易所交易基金迅速获得发展，在九个月内筹集了超过600亿美元，打破了预期。</p>
+<p>Calamos Investments高级副总裁兼ETF主管马特·考夫曼表示：“来自iShares和富达的现货比特币ETF是有史以来增长最快的新品发布。这反映了投资者对这一资产类别巨大的积压需求。”</p>
+<p>推动比特币上涨的另一个关键因素是其固定供应：BTC的总数量在原始源代码中上限为2100万。这种内置的稀缺性支撑了其价值。</p>
+<p>TradeStation经纪解决方案产品管理主管安东尼·鲁索指出：“随着比特币的固定供应满足激增的需求，一场实时的供应冲击正在展开。许多持有者也不愿以目前的价格出售。”</p>
+<p>然而，投资者仍应谨慎行事。比特币仍然是一种波动性极高的资产。</p>
+<p>Galileo FX首席执行官戴维·马特拉齐表示：“人们正在追逐收益，就像2021年一样。比特币、迷因股票，等等。每个人都想参与其中。这很有趣，我承认这一点。但投机有效，直到它无效。”</p>
+<p>以太坊可能超越比特币</p>
+<p>以太坊(ETH)是按市值计算的第二大加密货币，仅次于比特币。</p>
+<p>使以太坊引人注目之处不仅仅在于其地位。它作为构建去中心化应用程序(dApp)的平台（尤其是在金融服务等领域）的作用也使其与众不同。</p>
+<p>其核心是以太坊，是以太坊的原生代币，作为该平台上交易的费用。</p>
+<p>Northstake首席执行官兼创始人杰斯珀·约翰森指出：“目前市场上最被忽视的机会之一，就是比特币和以太坊之间的机构配置差异。当我们查看数据——ETF中比特币的比例为6%，而以太坊仅为1.9%——我们看到一个巨大的差距，正处于修正之中。”</p>
+<p>约翰森表示：“机构投资者逐渐认识到，以太坊不仅仅是另一种数字资产。它是一种产生收益的工具。到2025年，我们将开始看到ETH和BTC持有量之间的均等。”</p>
+<p>约翰森指出，质押是以太坊上涨潜力的一大驱动力。质押允许投资者从其加密货币持有量中赚取奖励或利息。</p>
+<p>据约翰森说，潜在的以质押为重点的美国ETF的监管批准，可能会显著提高以太坊的吸引力。</p>
+<p>他解释说：“质押之所以如此吸引人，是因为它能够带来通常超过传统储蓄账户或固定收益债券的收益。”</p>
+<p>准备好迎接加密货币的首次公开募股(IPO)</p>
+<p>加密货币股票的迅速崛起是2024年华尔街最令人振奋的故事之一。</p>
+<p>例如，Coinbase Global(COIN)的股价几乎翻了一番。而MicroStrategy (MSTR)的股价今年迄今已飙升了500%。</p>
+<p>尽管如此，在传统交易所交易的纯粹加密货币股票仍然很少。但随着2025年IPO环境更加友好，这种情况可能会改变。</p>
+<p>当选总统唐纳德·特朗普选择保罗·阿特金斯领导证券交易委员会(SEC)，应该会为加密货币IPO提供巨大助力。</p>
+<p>阿特金斯是加密货币的支持者，预计他将为新申请获得更顺利的监管批准铺平道路。</p>
+<p>那么，最受关注的即将到来的IPO有哪些呢？</p>
+<p>Circle Internet Financial是第二大稳定币发行商，是一个强大的竞争者。稳定币是与美元等资产挂钩的加密货币。</p>
+<p>Circle已经吸引了市场的关注。早在2022年4月，该公司就筹集了4亿美元，获得了贝莱德和富达管理与研究等重量级公司的支持。</p>
+<p>另一个杰出的公司是Kraken，这是一个加密货币交易平台，客户超过1000万。预计2024年收入将超过10亿美元，该公司有望在公开市场掀起波澜。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Best-Crypto-Stocks-to-Invest-in-2025:-A-Comprehensive-Guide-|-ECOS">
+        <h3 class="page-name title"><span class="page-emoji ">🖥&nbsp;</span>Best Crypto Stocks to Invest in 2025: A Comprehensive Guide | ECOS</h3>
+        <small class="page-url url "><a href="https://ecos.am/en/blog/top-crypto-stocks-to-buy-in-2025-investment-strategies-and-expert-picks?srsltid=AfmBOorOcN6a-e6e3Yqo_H4yemx5Xqttv5eWzPxlOgdY2_hi7BsZuJGK" target="_blank">(https://ecos.am/en/blog/top-crypto-stocks-to-buy-in-2025-investment-strategies-and-expert-picks?srsltid=AfmBOorOcN6a-e6e3Yqo_H4yemx5Xqttv5eWzPxlOgdY2_hi7BsZuJGK)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 分析了区块链技术的发展对比特币和相关股票的影响，强调了数字资产的重要性。<br></small>
+    </div>
+    <div class="page-content content"><h1>2025年值得购买的顶级加密货币股票：投资策略和专家推荐</h1>
+<h2>2025年最佳加密货币股票投资</h2>
+<h3>投资加密货币股票的主要优势</h3>
+<h2>值得关注的2025年顶级加密货币股票</h2>
+<h3>投资加密货币股票的策略</h3>
+<h3>加密货币股票的优势和风险</h3>
+<h3>加密货币股票分析工具和资源</h3>
+<h2>未来加密货币股票</h2>
+<h3>结论：加密货币股票适合您吗？</h3>
+<h2>主要结论</h2>
+<p>加密货币股票提供区块链敞口，风险较低。</p>
+<p>区块链的采用提高了相关股票的价值。</p>
+<p>顶级股票包括英伟达和Coinbase。</p>
+<p>多样化降低了区块链行业的风险。</p>
+<p>监控加密货币趋势有助于预测股票表现。</p>
+<p>平衡风险和回报对于成功至关重要。</p>
+<p>监管变化可能会影响区块链市场。</p>
+<p>使用TradingView等工具有助于决策。</p>
+<p>加密货币股票正获得极大的关注。它们提供对区块链的敞口，而无需持有易波动性的币种。在2025年，与加密货币相关的股票是投资者的首选。这些股票将创新与增长潜力相结合。许多专家认为它们比直接投资加密货币更安全。区块链的采用在各个行业持续增长。随着它的增长，加密货币股票变得越来越重要。如果您想要进行明智的投资，这就是您的指南。让我们探索最佳的加密货币股票和策略。</p>
+<h2>2025年最佳加密货币股票投资</h2>
+<p>加密货币股票将传统投资与区块链创新联系起来。它们与利用区块链的公司相关，而不是波动性本身的币种。这种联系提供了稳定性，使它们对谨慎的投资者具有吸引力。区块链正在重塑各个行业，从金融到医疗保健。到2024年12月，区块链的采用率已飙升，越来越多的企业正在整合它。到2026年，区块链市场预计将达到674亿美元。这种增长预示着为领先企业提供了巨大的机会。</p>
+<h3>为什么投资加密货币股票？</h3>
+<p>加密货币股票提供了对区块链的敞口，而不会出现加密货币价格的剧烈波动。例如，比特币的价值在今年早些时候下降了30%，然后反弹。与区块链相关的股票保持相对稳定。</p>
+<p>它们还提供多元化。拥有英伟达等公司的股票意味着可以接触到人工智能、游戏和区块链。这种平衡吸引了寻求长期收益的老练投资者。</p>
+<h2>投资加密货币股票的主要优势</h2>
+<p>加密货币股票将区块链创新与股票市场的可靠性相结合。它们吸引了平衡风险和回报的投资者。以下是在2024年加密货币股票是明智选择的理由：</p>
+<h3>多元化机会</h3>
+<p>加密货币股票提供对区块链行业的多种敞口。与持有加密货币不同，它们与推动创新的现实世界企业联系在一起。例如：</p>
+<ul>
+<li><strong>英伟达</strong>开发了对区块链挖掘和人工智能至关重要的GPU。它在各个行业的业务多元化增强了其韧性。</li>
+<li><strong>Coinbase</strong>仍然是全球加密货币交易所的领导者，2024年的交易量超过1.2万亿美元。</li>
+<li><strong>Block</strong>(前身为Square)将区块链整合到金融服务中，连接加密支付和传统银行业务。</li>
+</ul>
+<p>这些例子突出了加密货币股票如何使投资组合多元化。您可以在不承受直接持有币种的极端波动的情况下获得区块链敞口。</p>
+<h3>与加密货币相比波动性较低</h3>
+<p>加密货币股票比加密货币稳定得多。例如，比特币可以在几小时内损失或获得10%。与区块链公司相关的股票波动较慢，提供更高的可预测性。</p>
+<p>在2024年，比特币在一周内下跌了20%，而英伟达的股票保持稳定，波动不到3%。同样，Coinbase在市场调整期间仅下跌了4%。</p>
+<p>这种稳定性吸引了谨慎的投资者，确保了更好的财务安全和安心。</p>
+<h3>长期增长潜力</h3>
+<p>区块链的日益普及推动了加密货币股票的价值。像MicroStrategy这样的公司证明了战略性投资比特币如何创造财富。在2025年，MicroStrategy的BTC持有量价值增长了35%，从而提升了其股票表现。</p>
+<p>区块链创新也扩展到物流、房地产和医疗保健等行业。专家预测区块链的采用率将每年增长25%，释放巨大的增长机会。</p>
+<p>对于长期投资者而言，随着区块链重塑全球经济，加密货币股票有望带来稳定的回报。通过选择在创新方面领先的公司，您可以在这场数字革命中占据前排位置。</p>
+<h2>2025年值得关注的顶级加密货币股票</h2>
+<p>在2025年，几只加密货币股票主导了区块链市场。这些公司将创新与强大的财务业绩相结合，使其成为投资者的首选：</p>
+<h3>Coinbase (COIN)</h3>
+<p>Coinbase引领加密货币交易行业。它简化了散户和机构投资者对加密货币的访问。2025年Coinbase的突出之处：</p>
+<ul>
+<li>创纪录的交易量：到2024年12月，Coinbase处理的交易量超过1.5万亿美元。</li>
+<li>机构关注：与全球银行和基金建立伙伴关系，提升了其信誉。</li>
+<li>全球扩张：其用户基数超过1.3亿，遍布100多个国家。</li>
+<li>潜在风险：监管变化可能会影响盈利能力，尤其是在美国。</li>
+</ul>
+<p>凭借其全球影响力和对大型投资者的关注，Coinbase仍然是区块链市场领导者的有力竞争者。</p>
+<h3>Marathon Digital Holdings (MARA)</h3>
+<p>Marathon Digital是比特币矿业的巨头。其股票与比特币的市场表现密切相关，为加密货币的增长提供了独特的敞口。MARA的突出之处：</p>
+<ul>
+<li>高效的采矿效率：凭借超过23 EH/s的哈希率，Marathon运营着业内效率最高的矿工之一。</li>
+<li>绿色能源投资：其近60%的运营现在使用可再生能源，对具有环保意识的投资者具有吸引力。</li>
+<li>利润与比特币挂钩：随着比特币接近40,000美元，Marathon的收入在2024年激增。</li>
+</ul>
+<p>MARA对可持续性和运营效率的承诺使其成为比特币重点投资的首选。</p>
+<h3>Nvidia (NVDA)</h3>
+<p>Nvidia在区块链生态系统中扮演着至关重要的角色。它的GPU为从加密货币挖掘到人工智能进步的一切提供动力。是什么让Nvidia成为必须关注的股票：</p>
+<ul>
+<li>双市场领导地位：Nvidia同时主导区块链和人工智能行业，使收入来源多元化。</li>
+<li>GPU需求不断增长：区块链网络和人工智能项目对Nvidia的GPU提出了空前的需求。</li>
+<li>强大的财务状况：收入同比增长45%，巩固了投资者的信任。</li>
+</ul>
+<p>随着区块链和人工智能技术的扩展，Nvidia的创新优势确保了2025年及以后的持续增长。</p>
+<h3>其他值得关注的股票</h3>
+<p>虽然Coinbase、Marathon和Nvidia处于领先地位，但请考虑以下其他股票：</p>
+<ul>
+<li><strong>MicroStrategy (MSTR):</strong> 继续受益于其巨额比特币资产，目前价值60亿美元。</li>
+<li><strong>Block (SQ):</strong> 将区块链整合到金融服务中，连接加密货币和传统银行业务。</li>
+<li><strong>PayPal (PYPL):</strong> 推进加密支付选项，在全球拥有超过3亿活跃账户。</li>
+</ul>
+<p>这些公司利用区块链创新来重塑各个行业，使其成为当前市场的主要投资机会。</p>
+<h2>投资加密货币股票的策略</h2>
+<p>投资加密货币股票需要周密的计划和战略方法。通过多元化和保持信息灵通，您可以充分利用区块链的增长。</p>
+<h3>多元化投资方法</h3>
+<p>一个多元化的投资组合将投资分散到多个区块链领域。这降低了风险，并最大限度地增加了对不同机会的敞口。以下是有效多元化的方式：</p>
+<ul>
+<li><strong>硬件领导者：</strong>投资英伟达等公司，该公司主导着区块链和人工智能的GPU生产，为全球矿工和区块链网络提供服务。</li>
+<li><strong>交易所：</strong>增加像Coinbase这样的股票，受益于高交易量和日益增长的机构兴趣。</li>
+<li><strong>比特币采矿：</strong>包括Marathon Digital，它与比特币的表现一致，并强调运营的可持续性。</li>
+<li><strong>金融服务：</strong>考虑Block，它将区块链整合到支付和银行业务中。</li>
+</ul>
+<p>例如，持有英伟达和Coinbase的股票可以平衡对硬件创新和交易活动的敞口，最大限度地减少来自单一领域的价格波动。</p>
+<h3>分析市场趋势</h3>
+<p>了解市场趋势是驾驭加密货币股票走势的关键。以下是一些追踪和分析趋势的实用方法：</p>
+<ul>
+<li><strong>相关性：</strong>加密货币股票通常遵循比特币的价格趋势。例如，当比特币在2024年初飙升20%时，Coinbase的股票上涨了12%。认识到这些联系有助于预测股票行为。</li>
+<li><strong>价格模式：</strong>使用TradingView等工具比较加密货币和股票的价格随时间推移的变化。例如，英伟达的股票在区块链领域的GPU需求激增期间往往会上涨。</li>
+<li><strong>行业新闻：</strong>随时了解区块链法规和创新。积极的发展，例如新的伙伴关系或比特币ETF的批准，通常会提振相关股票。</li>
+</ul>
+<h3>趋势分析的实际示例</h3>
+<p>假设在新的ETF批准后比特币价格上涨。历史数据显示，由于交易活动激增，Coinbase的股票也随之上涨。使用工具分析此类模式有助于识别购买机会。</p>
+<p>通过将多元化与趋势分析相结合，您可以建立一个有韧性的投资组合，从而充分利用区块链的动态增长。</p>
+<h2>加密货币股票的优势和风险</h2>
+<p>加密货币股票呈现出增长潜力和稳定性的独特结合。但是，与任何投资一样，它们也存在风险。以下是更详细的介绍：</p>
+<p>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;类别&lt;/th&gt;
+    &lt;th&gt;描述&lt;/th&gt;
+    &lt;th&gt;示例&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;优势&lt;/td&gt;
+    &lt;td&gt;低波动性&lt;/td&gt;
+    &lt;td&gt;比特币的价格可能波动10%，而像英伟达或Coinbase这样的股票一天的波动为2-4%。&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;优势&lt;/td&gt;
+    &lt;td&gt;长期增长&lt;/td&gt;
+    &lt;td&gt;由于对区块链和人工智能的GPU需求，英伟达的收入在2024年增长了45%。&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;优势&lt;/td&gt;
+    &lt;td&gt;投资组合多元化&lt;/td&gt;
+    &lt;td&gt;将风险分散到硬件、交易所和采矿等领域，从而避免衰退。&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;风险&lt;/td&gt;
+    &lt;td&gt;监管不确定性&lt;/td&gt;
+    &lt;td&gt;不断变化的法规影响区块链公司，增加了成本或限制运营。&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;风险&lt;/td&gt;
+    &lt;td&gt;市场竞争&lt;/td&gt;
+    &lt;td&gt;新的进入者挑战了现有厂商，给利润带来了压力。&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;风险&lt;/td&gt;
+    &lt;td&gt;对加密货币价格的依赖&lt;/td&gt;
+    &lt;td&gt;加密货币股票通常跟随比特币的表现，导致相关的风险。&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</p>
+<h3>平衡优势和风险</h3>
+<p>投资者应仔细权衡这些因素。对于那些寻求以较低风险接触区块链的人来说，股票提供了比加密货币更安全的替代方案。但是，随时了解市场趋势和法规对于成功驾驭这些投资至关重要。</p>
+<h2>加密货币股票分析工具和资源</h2>
+<p>为了对加密货币股票做出明智的决定，请利用可靠的工具和资源。这些平台提供见解、指标和实时更新，以有效地指导您的投资。</p>
+<h3>雅虎财经</h3>
+<p><strong>提供的服务：</strong>访问Coinbase、Nvidia和Marathon Digital等加密货币股票的最新新闻、详细的财务指标和业绩趋势。</p>
+<p><strong>使用方法：</strong>追踪特定股票的数据，例如市盈率和股息收益率。例如，比较英伟达始终如一的增长指标以评估长期潜力。</p>
+<h3>TradingView</h3>
+<p><strong>提供的服务：</strong>高级价格图表、技术分析工具和自定义指标，用于将加密货币股票与加密货币进行比较。</p>
+<p><strong>使用方法：</strong>监控比特币的价格以及Marathon Digital等相关股票。使用它们的图表叠加来识别趋势，例如比特币飙升与股票走势之间的相关性。</p>
+<h3>Bloomberg</h3>
+<p><strong>提供的服务：</strong>全面的市场分析、专家意见和行业见解，重点关注区块链和与加密货币相关的股票。</p>
+<p><strong>使用方法：</strong>使用彭博社的深度报告来随时了解监管发展或新兴竞争对手。例如，他们对2024年比特币ETF的分析揭示了对Coinbase等公司市场的影响。</p>
+<h3>其他资源</h3>
+<ul>
+<li><strong>Morningstar：</strong>评估与加密货币相关的投资的股票评级和分析师报告。</li>
+<li><strong>CoinMarketCap：</strong>虽然专注于加密货币，但它也提供关于影响股票的区块链趋势的有用新闻。</li>
+<li><strong>Stocktwits：</strong>与分享实时见解和股票选择的投资者社区互动。</li>
+</ul>
+<h3>这些工具为何重要</h3>
+<p>使用这些平台可以帮助您发现模式、评估风险并在不断变化的加密货币股票市场中抓住机会。掌握正确的数据，您可以自信地建立一个符合您的投资目标的投资组合。</p>
+<h2>未来加密货币股票</h2>
+<p>未来加密货币股票的前景光明，这得益于区块链技术的快速发展以及正在塑造市场的趋势。以下是未来的发展方向：</p>
+<h3>全球区块链扩张</h3>
+<p><strong>更广泛的采用：</strong>到2024年12月，超过60%的财富500强公司在运营中使用区块链，从供应链管理到数字身份。这种采用支持专注于区块链股票的稳定增长。</p>
+<p><strong>新兴市场：</strong>亚洲和非洲国家正在引领区块链驱动的金融普惠，为Coinbase和PayPal等公司开辟了新的途径。</p>
+<h3>人工智能与区块链的整合</h3>
+<p><strong>彻底改变运营：</strong>人工智能和区块链的整合为数据处理和安全创建了更高效的系统。英伟达处于两种技术的领先地位，预计其年增长率将达到两位数。</p>
+<p><strong>新的应用：</strong>从加密货币交易所中基于人工智能的欺诈检测到基于区块链的自主交易，这些创新扩展了区块链股票的用例。</p>
+<h3>机构采用</h3>
+<p><strong>兴趣日益增长：</strong>机构正在大力投资区块链解决方案。仅在2024年，机构对区块链项目的投资就超过了300亿美元。这推动了像Marathon Digital这样的与机构矿工合作的股票的收入增长。</p>
+<p><strong>ETF增长：</strong>比特币ETF的批准提高了对与区块链相关的股票的兴趣，使它们更容易被传统投资者所接受。</p>
+<h3>对2026年的预测</h3>
+<p><strong>区块链主导的技术投资：</strong>分析师预测，到2026年，与区块链相关的行业将占据所有技术投资的30%以上。像英伟达和Block这样在该领域拥有强大立足点的公司，将获得巨大的增长。</p>
+<p><strong>创造就业机会：</strong>区块链创新可能会在全球创造超过1000万个就业机会，进一步刺激经济增长，并吸引投资者投资与加密货币相关的股票。</p>
+<h3>一个充满希望的前景</h3>
+<p>随着区块链重塑从医疗保健到金融的各个行业，加密货币股票仍然是这场变革中的关键因素。对于投资者来说，这提供了一个与塑造未来的技术相一致的绝佳机会。</p>
+<h2>结论：加密货币股票适合您吗？</h2>
+<p>加密货币股票提供了稳定性和创新的引人注目的组合。它们弥合了传统投资与区块链变革潜力的差距。但它们是正确的选择吗？</p>
+<p>如果您正在寻找：</p>
+<ul>
+<li><strong>稳定性：</strong>加密货币股票的波动性低于直接的加密货币，这使得它们成为进入区块链领域更安全的切入点。</li>
+<li><strong>创新：</strong>这些股票让您接触到区块链、人工智能和数字金融等尖端技术。</li>
+<li><strong>多元化的机会：</strong>一个平衡的加密货币股票投资组合可以降低风险，同时充分利用区块链在各行业的增长。</li>
+</ul>
+<h3>如何进行投资</h3>
+<ul>
+<li><strong>明智地进行多元化：</strong>将来自硬件（英伟达）、交易所（Coinbase）和采矿（Marathon Digital）等领域的股票结合起来，以获得更广泛的敞口。</li>
+<li><strong>着眼于长期：</strong>区块链的采用仍在增长，为未来的回报提供了巨大的潜力。</li>
+<li><strong>保持信息灵通：</strong>监控市场趋势、监管发展和专家见解。雅虎财经和TradingView等工具可以帮助您做出明智的决策。</li>
+</ul>
+<h3>最后一句话</h3>
+<p>每项投资都存在风险，加密货币股票也不例外。监管不确定性、市场竞争和价格依赖性是需要考虑的重要因素。但是，通过仔细的规划和明智的选择，加密货币股票可以成为您投资组合的有力补充。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Retail-Investors’-Strategies-and-Expectations-for-2025---OneSafe-Blog">
+        <h3 class="page-name title"><span class="page-emoji ">🤔&nbsp;</span>Retail Investors’ Strategies and Expectations for 2025 - OneSafe Blog</h3>
+        <small class="page-url url "><a href="https://www.onesafe.io/blog/crypto-investment-trends-2025" target="_blank">(https://www.onesafe.io/blog/crypto-investment-trends-2025)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 零售投资者对2025年的乐观展望反映出市场的潜在动力和风险，其中涉及加密市场的心理因素。<br></small>
+    </div>
+    <div class="page-content content"><p>面向2025年的散户投资者情绪：</p>
+<p>问：您如何看待散户投资者对2025年的展望？</p>
+<p>答：他们对2025年感到相当乐观。散户投资者准备在加密货币和人工智能领域采取大胆行动。eToro对1000名美国散户投资者进行的一项调查显示，约61%的投资者相信牛市将在来年继续。这一预期源于科技和人工智能相关股票的强劲表现，其中16%的受访者认为人工智能股票价格将出现大幅飙升，而42%的受访者预计价格将逐步上涨。</p>
+<p>哪些行业将吸引更多投资？</p>
+<p>问：散户投资者最感兴趣投资哪些公司？</p>
+<p>答：调查显示，他们的兴趣将高度集中在“Magnificent Seven”（七大科技巨头）股票上，其中包括亚马逊、特斯拉、苹果、英伟达、Alphabet、微软和Meta等知名公司。这些公司因其与人工智能领域的联系而获得了关注和动力，而人工智能是投资者乐观情绪的主要组成部分。</p>
+<p>监管变化将如何影响市场？</p>
+<p>问：2025年有哪些即将出台的监管变化？</p>
+<p>答：预计2025年人工智能和加密货币投资将受到监管变化的重大影响。欧盟的《加密资产市场条例》(MiCA)旨在为加密货币建立更清晰、更统一的监管框架。这预计将创造一个更稳定的环境，这可能有利于投资者信心。与此同时，美国似乎正在采用《21世纪金融创新和技术法案》(FIT21)，该法案旨在通过监管清晰来刺激创新。</p>
+<p>这些变化将如何影响人工智能投资？</p>
+<p>问：人工智能领域将如何应对这些监管规定？</p>
+<p>答：美国证券交易委员会(SEC)2025年的审查重点将高度关注人工智能。因此，公司需要实施强大的控制措施，并确保披露准确，特别是对于内部使用的人工智能应用和系统。这可能有助于提高人工智能系统的可靠性，并因此吸引更多机构投资，但也可能使运营更加复杂和昂贵。</p>
+<p>政治转变将如何影响投资？</p>
+<p>问：政治变化如何影响散户投资者的策略？</p>
+<p>答：特朗普的连任，因为他以亲加密货币立场而闻名，导致散户投资者的投资组合发生了重大变化。根据调查，55%的投资者改变了他们的策略，其中66%增加了对加密货币的配置。这种转变可能导致监管行动被取消，这将鼓励增长，但也增加市场波动性和风险，特别是对于那些投资经验不足的人。</p>
+<p>依赖政治变化的风险是什么？</p>
+<p>问：依赖政治影响制定策略的一些风险是什么？</p>
+<p>答：依赖政治变化存在相当大的风险。这包括加剧的市场波动、潜在的利益冲突以及对投资者的保护不足。监管变化可能会偏向特定群体而非更广泛的投资公众，这可能会使散户投资者面临更高水平的风险。</p>
+<p>投资中的性别差异如何影响市场行为？</p>
+<p>问：性别差异如何影响投资行为？</p>
+<p>答：投资策略存在性别差异。女性通常更厌恶风险，更喜欢更安全的资产，如定期存款或黄金，而男性则更倾向于风险较高的投资，包括普通股和房地产。这些差异可能会重塑市场行为。</p>
+<p>这些偏好如何稳定市场？</p>
+<p>问：这些不同的偏好会对市场产生任何稳定作用吗？</p>
+<p>答：eToro的调查显示，女性更倾向于更多投资亚马逊，而男性更喜欢英伟达。这些不同的偏好可能有助于通过将投资导向更保守的资产来稳定市场价格波动。</p>
+<p>金融科技将如何重塑散户投资？</p>
+<p>问：金融科技在散户投资领域的作用是什么？</p>
+<p>答：金融科技对金融服务行业的持续颠覆将在2025年产生巨大影响。许多金融科技公司正在利用人工智能和机器学习等尖端技术，创造定制的金融解决方案。他们将提供量身定制的投资建议、个性化的贷款选择和具体的储蓄策略。</p>
+<p>人工智能驱动的金融顾问的重要性是什么？</p>
+<p>问：2025年人工智能驱动的金融顾问日益增长的重要性是什么？</p>
+<p>答：人工智能金融顾问的兴起将改变散户投资。他们将分析市场数据和用户的偏好，以提供即时的投资建议，使投资者更容易做出明智的决策。通过机器人顾问获得专业投资建议也将实现民主化。</p>
+<p>金融科技将在增强金融包容性方面发挥什么作用？</p>
+<p>问：金融科技如何增强散户投资者的金融包容性？</p>
+<p>答：随着金融科技促进未银行账户和银行账户不足的社区获得金融服务，金融包容性将加速发展。这可能会进一步扩大投资者群体，吸引更多个人进入正规金融体系，并使可用的投资产品种类多样化。</p>
+<p>总结</p>
+<p>当我们深入到2025年时，散户投资者表现出对由宏观经济和政治力量塑造的市场动态的敏锐认识。随着监管调整、政治影响和金融科技进步重新定义投资环境，投资者已准备好抓住加密货币和人工智能领域的新机遇。无论是通过乐观的展望还是金融技术的变革潜力，2025年都将成为散户投资的关键一年。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Should-You-Invest-In-Bitcoin-In-2025?">
+        <h3 class="page-name title"><span class="page-emoji ">🧑&nbsp;</span>Should You Invest In Bitcoin In 2025?</h3>
+        <small class="page-url url "><a href="https://www.investopedia.com/should-you-invest-in-bitcoin-in-2025-8764837" target="_blank">(https://www.investopedia.com/should-you-invest-in-bitcoin-in-2025-8764837)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 总结了财务顾问对比特币投资的谨慎态度，并建议少量投资。<br></small>
+    </div>
+    <div class="page-content content"><p>关键要点</p>
+<p>尽管比特币最近取得成功，但理财规划师表示，他们对向客户推荐比特币持谨慎态度。</p>
+<p>一些专家建议仅将一小部分投资组合分配给比特币，通常在 1% 到 2% 之间。</p>
+<p>如果你必须投资，一位顾问建议直接购买比特币，但其他顾问建议现货 ETF 可能是加密货币投资新手的一种简单方法。</p>
+<p>比特币 (BTCUSD) 今年表现出色，价格上涨超过 10 万美元，一些分析师预计明年它还会涨得更高。虽然这可能会诱使您考虑投资比特币，但理财顾问仍然对向客户推荐这种加密货币持谨慎态度，并建议仅将其投资组合的一小部分分配给比特币。</p>
+<p>尽管美联储 (Fed) 最近关于明年降息次数减少的预测导致比特币价格下跌，但今年比特币价格仍然上涨了一倍多。如果美联储放慢降息步伐，国债收益率将保持高位，并吸引比比特币等风险资产更多的投资者。</p>
+<p>专家建议投资比特币时要谨慎</p>
+<p>资产管理公司贝莱德最近建议，投资组合中 1%-2% 的比特币敞口是一个“合理的范围”。1 虽然需要注意的是，贝莱德运营着最大的现货比特币 ETF，即 iShares 比特币信托 (IBIT)，但一些顾问也同意对比特币进行有限的分配。“如果价格真的升值……它仍然会为投资组合带来有意义的超额收益，”认证理财规划师 (CFP) 兼 Capital Area Planning Group 管理合伙人 Malcolm Ethridge 说。“但如果它没有兑现其承诺，价格跌至零，也不会完全将他们淘汰。”比特币是一种极易波动的资产，只有少量投资可能意味着限制了损失。“这应该被视为核心投资之外的投资，因为它们非常不稳定，你可能会损失大量的钱，”CFP 兼 Wharton Wealth Planning 创始人 David Rosenstrock 说。Oread Wealth Partners 的 CFP 和创始人 Scott Sturgeon 建议人们反思他们真正想投资比特币的原因。“如果你想投资它，因为你认为它是一种非相关的资产或是对冲通货膨胀的工具，也许这就是投资的理由，”Sturgeon 说。“相反，如果你想买它只是因为它今年迄今上涨了 120%，我可能会建议你只是在追逐回报，并且更多的是投机而不是投资。”</p>
+<p>你应该购买比特币、选择 ETF，还是考虑代理？</p>
+<p>如果你确信投资比特币适合你，你需要决定如何投资。你的选择包括直接购买加密货币，投资比特币 ETF 或基金，或购买与比特币相关的公司股票。</p>
+<p>Bone Fide Wealth 的 CFP 和总裁 Douglas Boneparth 教育他的客户了解加密货币，但不寻求投资。他本人于 2024 年开始投资比特币，并且更喜欢直接投资比特币，而不是现货 ETF 或像 MicroStrategy (MSTR) 这样的股票（一家被认为是加密货币代理的比特币持有公司）。</p>
+<p>“我是一个纯粹主义者，我相信，如果你要拥有比特币，最好的方法就是实际拥有这种加密货币本身，并将其存储在硬件钱包中，”Boneparth 说。“至于 Microstrategy，你基本上是在购买杠杆比特币——他们正在用比特币填补他们的资产负债表，并使用大量债务在公开市场上购买它……你正在购买一种风险更高的比特币资产。”</p>
+<p>然而，对于加密货币新手投资者来说，顾问们表示现货 ETF 可能是一个更好的选择。这样，你就不需要比特币钱包来持有加密货币，并且可以通过你的经纪账户进行 ETF 交易。不过，一定要注意费用。“如果你刚进入这个领域，并且你是长期投资者，使用 ETF 会相对容易，”Sturgeon 说。</p>
+<p>贝莱德。“确定投资组合中的比特币规模。”</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Blockchain-Technology-Development-Trends:-Bitcoin-and-beyond---Lexology">
+        <h3 class="page-name title"><span class="page-emoji ">🔗&nbsp;</span>Blockchain Technology Development Trends: Bitcoin and beyond - Lexology</h3>
+        <small class="page-url url "><a href="https://www.lexology.com/library/detail.aspx?g=d4b79b29-22df-40f7-be2c-ab0a29b4c86c" target="_blank">(https://www.lexology.com/library/detail.aspx?g=d4b79b29-22df-40f7-be2c-ab0a29b4c86c)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 探讨了区块链技术对比特币的持续影响，强调了金融科技行业的接受度提高。<br></small>
+    </div>
+    <div class="page-content content"><p>区块链技术发展趋势：超越比特币</p>
+<p>虽然近年来关于区块链和比特币的讨论有所减少，人工智能相关新闻占据了头条，但比特币近期剧烈上涨再次使数字资产和区块链技术成为热门话题。关于这一领域的问题层出不穷。我们列出了以下关于全球区块链技术发展以及这些技术在泰国的前景的观察结果。</p>
+<p>比特币达到历史新高，预计将超过10万美元</p>
+<p>比特币作为最早的加密货币之一，推出15年后经历了巨大的发展，世界对它的看法也发生了剧烈的变化。从最初不受信任且很大程度上被误解的商品，比特币和其他加密货币呈指数级增长，现在已被广泛接受为一种交换媒介，并帮助铺平了数字技术进步的道路。2024年初，比特币价格创下历史新高，这甚至发生在比特币减半之前，预计届时价格将达到10万美元。这一飙升标志着数字货币的历史性时刻，在全球范围内，包括泰国的加密货币市场，引发了投资者和技术开发商的兴奋和兴趣。预计这将引领一个加密货币和区块链技术被广泛应用的新时代。</p>
+<p>第四次比特币减半和即将到来的趋势</p>
+<p>自2009年推出以来，比特币一直被誉为基于去中心化概念的点对点电子现金系统，它绕过了收取服务费和操纵市场的中间商或经纪人。为了平衡比特币矿业系统的持续能力与维持对产品的经济利益，比特币创始人中本聪创建了比特币减半功能来控制市场上比特币供应量，目标是在2141年市场上将有最终的2100万比特币（迄今已产生1960万比特币）。</p>
+<p>根据以往趋势，比特币周期每四年循环一次。一旦发生比特币减半，市场至少有一年的时间保持活跃，然后在接下来的三年里逐渐下滑，直到下一次比特币减半，周期重复本身。前三次比特币减半在虚拟货币资本市场创造了约一万亿美元，涌现出越来越热衷于投资的技术投资者和散户投资者。新的技术整合和客户行为的变化，加上美国证券交易委员会（SEC）批准资产管理公司在特定条件下投资现货比特币交易所交易基金（ETF），意味着2024年的第四次比特币减半将成为一股巨大的突破性浪潮，为区块链整合平台开启黄金时代，由机构投资者带来其可观的财政资源推动。这将导致全球区块链实施出现新的趋势。</p>
+<p>技术演变加速：回顾四年来的创新</p>
+<p>COVID-19大流行给人们的生活带来了重大变化，迫使他们接受新技术的加速发展，包括区块链技术。生成式人工智能的出现进一步加速了社会对使用数字平台的适应，其中许多平台被区块链技术所利用。很明显，人们越接受数字化，这将越推动区块链技术发展的创新。此外，区块链技术还在协调和整合网络参与者和活动方面发展，其效率高于任何组织管理。例如，去中心化物理基础设施网络（DePIN）有助于确保区块链网络不依赖于任何可能被其他因素破坏的单一组织，并且它们还保护其他高级协议，例如Restaking，这是一种允许投资者/加密货币交易者定期从其通过质押产生的加密资产中重新投资加密货币的程序，随着时间的推移，它们的回报会不断增加。这与已被采用的以真实世界资产为支撑的概念一起，帮助解决了加密货币投资的许多缺点，进而增强了机构投资者和监管机构的信心，说服他们同意投资加密货币。因此，DePIN、Restaking、以真实世界资产为支撑和生成式人工智能证明了区块链是全球科技趋势的关键驱动力。</p>
+<p>泰国的飞跃：对ICO和区块链融资的监管支持</p>
+<p>泰国证券交易委员会（“SEC”）认识到区块链和所有山寨币的ICO项目所具有的潜力，正在积极采取措施，为科技企业家营造有利的环境。这种具有前瞻性的方法旨在通过ICO平台促进小型企业发展，这与转向去中心化融资模式的全球趋势相一致。我们看到SEC在债务型、基础设施支持型ICO方面的立法发展，改进数字资产运营许可审批程序的规定，规范数字资产运营商的信誉，实施制衡机制以保护数字代币持有人的权利，加强关于数字代币持有人决议和会议程序的规定，以及规范ICO广告。所有更新后的法规旨在为运营商提供充分的工具，以增强业务运营，同时保护公众利益。</p>
+<p>此外，正如泰国政府在泰国4.0倡议中概述的那样，泰国监管机构正在积极推动加密货币和区块链技术的采用，目标是将泰国确立为东南亚领先的区块链中心，而SEC则积极更新其法规，以确保泰国4.0依然在计划之中。</p>
+<p>区块链支付系统与泰国数字经济融合</p>
+<p>与此同时，泰国银行（“BOT”）也正在为预计将于2025年推出的数字经济：东盟一体化协议做准备。BOT通过Inthanon项目第三阶段，正在积极探索全面监管的数字泰铢的实施。它还与主要的区块链公司合作，对B2C应用进行重大转型，这将通过引入创新的支付方式和金融解决方案来加快金融交易的处理速度，从而在B2B交易中实现显著增长，从而改变泰国的区块链生态系统。通过利用复杂算法的力量，区块链支付系统正在重新定义东盟内部的金融生态系统，消除了对中间商的需求，并实施智能合约以简化流程，从而实现更快、更安全、更透明的交易。这一大胆迈向区块链驱动的金融科技预示着一个新时代的到来，东盟地区将成为一个充满活力的灯塔，由区块链支付系统固有的效率和安全性提供动力。</p>
+<p>区块链在绿色革命中的作用：碳信用和可持续投资</p>
+<p>随着世界最终认识到气候变化的真实影响，绿色革命已成为下一个关键趋势，重塑全球格局。区块链作为这场革命的推动者，将在21世纪以技术整合的方式巩固其作为变革力量的地位。在这一新的环境责任时代，区块链技术记录碳排放的能力将非常宝贵，尤其是在工业过程中。区块链和碳信用的协同作用不仅解决了环境问题，还在前所未有的规模上为可持续投资创造了机遇。</p>
+<p>各行业正在利用区块链的去中心化账本记录和验证其碳排放量。这不仅确保了准确性和问责制，而且还建立了其环境影响的不可更改记录。在日益增长的环保意识的驱动下，投资者和金融机构现在可以通过支持具有经过验证和可追溯碳信用记录的项目，自信地参与可持续实践。</p>
+<p>韩国一直在积极探索将区块链技术用于管理碳信用。韩国科学和ICT部与韩国电力公司（KEPCO）合作，开发了一个基于区块链的碳排放交易系统。该倡议旨在通过利用区块链固有的特性，提高碳信用市场的透明度、可追溯性和效率。</p>
+<p>投资明天——比特币减半展现出广泛的机会</p>
+<p>即将在2024年进行的第四次比特币减半，正值区块链演变、监管支持、金融科技技术整合和环保趋势的重要发展时期，加上可以帮助开发人员创建更有趣的算法来辅助平台的生成式人工智能，这将是数字世界演变中的一个关键时刻。机构投资者受到加密货币市场信誉日益提高的鼓舞，并被巨大的盈利机会所吸引，将开启数字资产领域充满活力和希望的时代。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="10-Crypto-Predictions-For-2025---Nations,-Corporations,-Regulations">
+        <h3 class="page-name title"><span class="page-emoji ">🌟&nbsp;</span>10 Crypto Predictions For 2025 - Nations, Corporations, Regulations</h3>
+        <small class="page-url url "><a href="https://www.forbes.com/sites/alexanderblume/2024/12/19/10-crypto-predictions-for-2025nations-corporations-regulations/" target="_blank">(https://www.forbes.com/sites/alexanderblume/2024/12/19/10-crypto-predictions-for-2025nations-corporations-regulations/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 提供了2025年加密资产市场的大胆预测，阐述了其发展的机会。<br></small>
+    </div>
+    <div class="page-content content"><p>数字资产在2025年继续积聚势头</p>
+<p>随着我们接近2025年，数字资产背后的势头持续增强。2024年，加密货币在主流采用方面取得了重大进展，但2025年将是变革性后续发展的年份。预计各国将接受比特币作为储备资产，公司将加密货币整合到财务策略和运营框架中，而监管明确性将释放美国新的增长潜力。以下是对未来一年的10项大胆预测，这些预测以趋势、市场数据和新兴叙事为支撑。</p>
+<ol>
+<li>美国将宣布比特币为战略储备资产</li>
+</ol>
+<p>在其政府的前100天内，唐纳德·特朗普将签署一项行政命令，将比特币指定为战略储备资产。此举将标志着地缘政治的转变，巩固比特币作为“数字黄金”的地位，同时为快速机构和零售采用奠定基础。单一国家宣布这一声明可能会使比特币价格飙升至每枚超过150,000美元。</p>
+<ol>
+<li>全球央行将争先恐后地收购比特币</li>
+</ol>
+<p>随着美国采用比特币，竞争国家将争先恐后地对冲美元的主导地位。数据显示，央行仅将1%的资金配置给比特币，就可能使比特币的市值增加2万亿美元。比特币价格的反射性——需求增加会引发更高的估值——将引发一场类似于军备竞赛的竞争。预计印度和俄罗斯等国家将率先采取行动。</p>
+<ol>
+<li>一家FAANG公司将比特币添加到其资产负债表中</li>
+</ol>
+<p>效仿MicroStrategy，一家顶级FAANG公司——例如苹果、亚马逊或谷歌——将将其部分国库资金分配给比特币。由于现金储备通常超过1000亿美元，即使是5%的配置也将代表一个重要的市场信号。历史趋势表明，由于投资者信心增强，国库公告可能导致股价平均上涨15%。</p>
+<ol>
+<li>加密贷款将超过1000亿美元</li>
+</ol>
+<p>在由于高调的崩盘而导致贷款大幅下降之后，加密贷款正在复苏。增强的风险控制和更严格的尽职调查流程将导致更强大的BTC支持和无担保贷款市场。预计到年底，在零售和机构市场的有效资本部署需求的推动下，贷款规模将超过1000亿美元。</p>
+<h3>2024年最佳高收益储蓄账户</h3>
+<h3>2024年最佳5%利率储蓄账户</h3>
+<ol>
+<li>加密ETF激增</li>
+</ol>
+<p>比特币ETF的成功，其资金流入在2024年超过100亿美元，将在2025年激发一波新的ETF发行。产品将多样化，ETF提供杠杆敞口、创收策略和风险调整变化。预计将批准领先山寨币（如Solana (SOL)）和其他第一层代币的ETF，从而推动机构采用。</p>
+<ol>
+<li>支持加密货币的监管将释放美国的增长</li>
+</ol>
+<p>美国证券交易委员会和商品期货交易委员会的领导层变动将为加密货币公司提供更公平的待遇铺平道路。包括Ripple和Coinbase在内的关键诉讼将得到解决，为更广泛的市场提供清晰度。分析师估计，监管明确性可能会释放1万亿美元的新的机构资本流入。</p>
+<ol>
+<li>稳定币监管将带来清晰度和规模</li>
+</ol>
+<p>稳定币支撑着超过1万亿美元的年度交易量，但监管仍然不明确。2025年，美国将实施明确的稳定币发行要求，确保充分的法币支持和严格的审计。这种监管确定性将推动稳定币在金融科技和传统银行部门的采用，从而增强美元在全球市场的主导地位。</p>
+<ol>
+<li>主要银行将推出专有的稳定币</li>
+</ol>
+<p>摩根大通和花旗等顶级银行将创建自己的稳定币，并将它们无缝集成到加密生态系统中。这些货币不仅能促进更快结算，还能提供与政府债券挂钩的诱人收益。行业报告表明，到年底，银行发行的稳定币可能占据1500亿美元稳定币市场30%的份额。</p>
+<ol>
+<li>国会将修正证券和合格投资者规则</li>
+</ol>
+<p>为了适应不断变化的金融格局，国会将重新定义证券法并修改合格投资者标准。这些更新将扩大对私人投资（包括加密资产）的准入，同时为基于区块链的项目提供明确的合规途径。这一立法转变可能会将加密货币的可寻址市场扩大20-30%。</p>
+<ol>
+<li>并购浪潮将重塑加密景观</li>
+</ol>
+<p>资金充裕并渴望现代化的主流金融巨头将收购领先的加密公司。预计会有引人注目的收购，估值从5亿美元到50亿美元不等。银行和资产管理公司将专注于专门从事区块链基础设施、DeFi和代币化的公司，以保持竞争优势。</p>
+<p>总之，2025年的加密货币行业将反映出主流采用、监管明确和金融整合的新时代。每一个预测都强调了一个日益成熟的资产类别，它有望重新定义全球经济。机遇和挑战将决定未来十年的基调。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Blockchain-&-Cryptocurrency-Laws-&-Regulations-2025-|-USA">
+        <h3 class="page-name title"><span class="page-emoji ">👮&nbsp;</span>Blockchain & Cryptocurrency Laws & Regulations 2025 | USA</h3>
+        <small class="page-url url "><a href="https://www.globallegalinsights.com/practice-areas/blockchain-cryptocurrency-laws-and-regulations/usa/" target="_blank">(https://www.globallegalinsights.com/practice-areas/blockchain-cryptocurrency-laws-and-regulations/usa/)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 概述了美国政府对加密货币的监管动态，展示市场对比特币的接受度。<br></small>
+    </div>
+    <div class="page-content content"><p>在美国，加密货币一直是联邦和州政府关注的焦点。在联邦层面，大部分关注点都集中在行政和机构层面，包括证券交易委员会（“SEC”）、商品期货交易委员会（“CFTC”）、联邦贸易委员会（“FTC”）和财政部（“财政部”），通过国税局（“IRS”）、货币监理署（“OCC”）和金融犯罪执法网络（“FinCEN”）。虽然这些机构进行了大量的工作，但正式的法规制定却很少。许多联邦机构和政策制定者都赞扬这项技术是美国未来基础设施的重要组成部分，并承认美国需要在该技术的发展中保持领先地位。</p>
+<p>从2022年开始，随着加密货币在主流社会中普及，美国国会提出了几项旨在为新兴部门提供更多明确性的法案。“负责任金融创新法案”（“RFIA”）旨在为负责监管数字资产市场的机构提供监管清晰度，为稳定币提供强大、量身定制的监管框架，将数字资产整合到现有的税收和银行法律中，并促进数字资产领域的创新。民主党参议员帕特里克·图米提出了一项法案，该法案将为稳定币及其发行建立一个监管框架，目前被称为图米稳定币法案。该法案包括授权三种发行支付稳定币的方案（国家有限支付稳定币发行者、担保存款机构和货币传输企业），使所有支付稳定币发行者都遵守标准化要求，通过指出至少不提供利息的稳定币不是证券来区分稳定币和证券，并将隐私保护应用于涉及稳定币和其他虚拟货币的交易。</p>
+<p>在2022年下半年，两党参议员提出了《数字商品消费者保护法案》（“DCCPA”），授权CFTC监管“数字商品平台”和“数字商品”交易。DCCPA将赋予CFTC对“数字商品”交易的专属管辖权，但使用数字商品仅用于购买或出售商品或服务的商户或消费者除外。“数字商品”被定义为一种可替代的数字形式的个人财产，可以在个人之间拥有和转移，而无需依赖中介。</p>
+<p>两个月后，共和党参议员比尔·哈格蒂提出了《数字交易透明法案》，该法案规定，未经SEC或联邦法院确定且通过符合某些与托管、披露和其他投资者保护相关的要求的中介机构上市的数字资产，不应被视为证券。2023年7月，RFIA的更新版本出台，旨在在区块链公司和利益相关者之间出现连锁破产的情况下提供更大的消费者保护。八天后，众议院金融服务委员会主席帕特里克·麦克亨利和众议院农业委员会主席格伦·汤普森提出了《21世纪金融创新和技术法案》（“麦克亨利-汤普森法案”），该法案为数字资产监管提供了一个法定框架，旨在提供清晰度并填补监管空白。众议院和参议院的法案都试图将数字资产和数字资产衍生品的监管整合到现有的美国监管框架中——主要是SEC和CFTC的框架——而不是创建一个独立的框架，这将在下面进一步讨论。</p>
+<p>许多州政府已经提出和/或通过了影响加密货币和区块链技术的法律，大部分活动发生在立法部门。州一级的监管一般有两种方法。一些州试图通过通过非常优惠的法规来促进这项技术，例如将加密货币从州证券法和/或货币传输法规中豁免。这些州希望利用对该技术的投资来刺激当地经济和改善公共服务。怀俄明州就是一个例子，它被认为是一个寻求对其经济产生更广泛影响的州。为了实现这一目标，怀俄明州通过了允许创建新型银行或特殊目的存款机构的立法。这些专注于加密货币的银行可以同时履行托管和受托人的职责，旨在允许企业安全合法地持有数字资产。该州还通过了旨在简化去中心化自治组织（“DAO”）组建的立法。通过发布《DAO补充法案》，怀俄明州成为第一个监管DAO并将DAO视为有限责任公司（“LLC”）形式的州。在其最雄心勃勃的努力中，该州颁布了《怀俄明州稳定代币法案》。该法案为怀俄明州发行美国首个政府发行的稳定币创造了一条途径，该稳定币将完全由美元储备支持。邻近的犹他州效仿怀俄明州，颁布了自己的《去中心化自治组织法案》，允许未注册为营利性公司实体或非营利性实体的DAO被视为国内LLC的法律等价物。此前，犹他州允许使用数字资产向政府机构付款。令许多人感到意外的是，加利福尼亚州州长否决了拟议的《数字金融资产法》，该法案将禁止交易所和其他当事方从事数字金融资产业务活动，除非获得该州金融保护和创新部门的许可。</p>
+<p>相反，越来越多的州通过要求货币传输许可证和/或需要严格遵守州蓝天证券法，从而使区块链公司在其境内运营变得更加困难。在过去的一年中，包括佛罗里达州和哥伦比亚特区在内的许多州都修改了其货币传输法规，其中包括虚拟货币/加密货币，并要求某些中介机构拥有州颁发的许可证。去年还出现了一些保护其州证券法免受区块链领域一些最大公司侵害的多州联盟。2023年6月6日，在包括加利福尼亚州和纽约州在内的九个州的一个特别工作组的调查之后，并在SEC的协助下，每个州都对加密货币交易所Coinbase及其母公司提起了执法行动，声称Coinbase的质押奖励计划构成未注册的证券销售，违反了州证券法。另外五个州联盟对Nexo Inc.发出了停止营业令，声称Nexo通过在其州内提供未注册的证券违反了其州蓝天法。2023年1月19日，Nexo与多州联盟达成了总计2250万美元的和解。一个清晰的模式正在出现，这反映了其他行业的情况，即经济规模较大的州显然打算监管区块链技术，而规模较小的州则试图成为区块链利益相关者的监管避风港。</p>
+<p>“加密货币”没有统一的定义，它通常被称为“虚拟货币”、“数字资产”、“数字代币”、“加密资产”或简称为“加密”。统一法律委员会和美国法律研究所修改了《统一商法典》，其中包括第12条，该条专门对数字资产进行定义和管理。新条款在其对“可控电子记录”的定义中包含了虚拟货币。一些州已经通过了这项修正案。其他司法管辖区试图为资产类别制定详细的定义，大多数明智地选择了更广泛、更与技术无关的定义。采用后一种方法的机构将能够更好地在技术发展时进行监管。</p>
+<p>拜登政府发布了一项行政命令（“EO”），概述了一种方法来应对数字资产和区块链技术增长带来的风险，同时支持负责任的创新。EO关注六大重点：（1）消费者和投资者保护；（2）金融稳定；（3）非法融资；（4）美国在全球金融体系和经济竞争力中的领导地位；（5）普惠金融；（6）负责任的创新。</p>
+<p>为了推进这些重点，EO呼吁提交多份报告、研究和计划，包括财政部关于：（1）货币的未来以及美国中央银行数字货币（“CBDC”）的潜在影响；（2）围绕消费者保护和普惠金融问题的政策建议。它还呼吁金融稳定监督委员会就金融稳定风险和监管差距提交报告。为响应EO，白宫发布了一份情况说明书，旨在根据美国政府各机构和部门的意见，为数字资产监管提供一个全面的框架。该框架批准监管机构（如SEC和CFTC）继续协调努力，在该行业执法并共享消费者投诉数据。财政部将积极参与与金融机构合作，通过数据共享和分析来帮助识别和减轻网络风险。它还负责与监管机构合作，确保加密公司获得监管指导。情况说明书还提到了潜在的美国CBDC，列举了其在技术、经济、安全和个人自由方面的许多潜在好处。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="2025-Investment-Outlook-|-BlackRock-Investment-Institute">
+        <h3 class="page-name title"><span class="page-emoji ">🌍&nbsp;</span>2025 Investment Outlook | BlackRock Investment Institute</h3>
+        <small class="page-url url "><a href="https://www.blackrock.com/us/individual/insights/blackrock-investment-institute/outlook" target="_blank">(https://www.blackrock.com/us/individual/insights/blackrock-investment-institute/outlook)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 分析了变革过程中投资策略的变化和全球市场的新趋势。<br></small>
+    </div>
+    <div class="page-content content"><h1>建立转型</h1>
+<h2>投资主题</h2>
+<p>01 融资未来</p>
+<p>包括人工智能在内的巨大力量正在改变经济。我们认为资本市场——特别是私人市场——在构建这种转型中发挥着至关重要的作用。</p>
+<p>02 重新思考投资</p>
+<p>这种转变引发了关于如何为不断变化的前景构建投资组合的问题。我们认为投资者应该关注主题，并更加重视战术观点。</p>
+<p>03 保持风险偏好</p>
+<p>由于美国企业实力雄厚，我们仍然保持风险偏好，并进一步上调美国股票的权重。但我们保持灵活。改变我们观点的关键指标包括长期债券收益率的任何飙升或贸易保护主义的升级。</p>
+<h2>阅读我们2025年展望的详细信息：</h2>
+<h2>变革正在进行中</h2>
+<p>随着人工智能（AI）等巨大力量改变经济，历史趋势正在实时永久性地被打破。长期资产对短期新闻反应过度，这表明当前环境不同寻常。我们保持风险偏好，寻找转型受益者——并且随着人工智能主题的扩大，进一步超配美国股票。我们更有信心通胀和利率将保持在疫情前水平以上。2024年强化了我们的观点，即我们并非处于商业周期：人工智能一直是主要的市场驱动因素，通胀下降而经济增长未放缓，典型的衰退信号也未能出现。随着市场通过商业周期的视角看待发展，波动性飙升，叙事反复无常。</p>
+<p>展望2025年，一些国家出现了新的领导人，他们肩负着政治和经济变革的使命。这可能导致政策制定者采取加剧波动而非稳定性的措施。金融市场可能会努力控制任何极端的政策，例如财政政策。然而，我们认为在股票上涨时，制衡会减少，从而可能导致风险偏好变得泡沫化。</p>
+<h2>了解趋势</h2>
+<p>几十年来，经济遵循着稳定、长期的趋势。投资者几乎可以完全专注于应对这些趋势周围的任何暂时偏差。增长最终将收敛回其趋势。这长期以来一直是投资组合构建的一条基本原则。</p>
+<p>我们认为目前的形势大不相同。经济正在经历可能持续改变长期趋势的转型，使得各种截然不同的结果成为可能。见图表。推动经济增长的因素可能看起来大相径庭。</p>
+<h2>不断变化的趋势</h2>
+<p>美国GDP的假设演变</p>
+<p>仅供说明之用。</p>
+<p>资料来源：贝莱德投资研究所，2024年12月。注：图表显示了经济产出如何演变的示例——左图和右上角的图表假设只有一个单一的中心增长趋势，而右下角的图表假设并非只有一个单一的中心增长趋势，而是许多不同的可能趋势。</p>
+<h2>制衡与（不）平衡</h2>
+<p>2024年是重要的大选年，也是执政政府艰难的一年。选民表达了不满，最显著的是疫情后生活成本的提高，但也包括移民等问题。现在已经有几个国家出现了政府更迭或执政党支持率下降的情况。对政治和经济变革的渴望可能仍将是2025年的驱动力。</p>
+<p>在美国，共和党控制国会和总统职位意味着当选总统唐纳德·特朗普可以实施他的大部分议程。如果广泛实施，他的一些政策可能会加剧地缘政治分裂并加剧通胀。见图表。政府对宏观稳定政策（如财政框架和通胀目标）的重视程度降低，将使金融市场承担更大的责任来执行纪律。</p>
+<h2>保护主义日益加剧</h2>
+<p>贸易限制，2014-2023</p>
+<p>资料来源：贝莱德投资研究所、国际货币基金组织，数据来自globaltradealert.org，2024年12月。注：图表显示了世界各国采取的单方面非自由化贸易干预（按globaltradealert.org分类）的数量。</p>
+<h2>2024年对2025年的预测</h2>
+<p>市场对数据意外的敏感程度超过以往，即使是长期资产也反应过度。见图表。这加剧了波动性。然而，2024年强调了为什么在结构性力量发挥作用时，试图将典型的商业周期叠加到美国数据上可能会产生误导。通胀有所缓解，但增长依然强劲，这是由结构性力量推动的，例如疫情后劳动力和商品市场的正常化以及移民的增加。</p>
+<p>展望2025年，我们预计持续的通胀压力将由日益加剧的地缘政治分裂以及对人工智能建设和低碳转型的大量支出所推动。移民放缓可能会加剧老龄化工作队伍带来的挑战，从而保持工资增长。美联储不太可能大幅降息，利率不太可能降到4%以下。鉴于持续的预算赤字、粘性通胀和加剧的波动性，我们预计长期国债收益率将上升，因为投资者要求更高的风险补偿。</p>
+<h2>对意外事件敏感</h2>
+<p>2003-2024年美国10年期收益率对经济意外事件的敏感性</p>
+<p>过去的表现并非未来结果的保证。</p>
+<p>资料来源：贝莱德投资研究所，数据来自LSEG Datastream，2024年12月。注：该曲线显示了美国10年期国债收益率对经济意外事件的敏感性，使用回归分析来估计美国10年期国债收益率与花旗经济意外指数在滚动六个月窗口内的关系。这只是对10年期国债收益率与经济意外事件之间关系的估计。</p>
+<h2>融资未来</h2>
+<p>在我们看来，投资的性质正在发生重大变化。我们认为，投资者可以通过利用我们在实体经济中看到的未来转型浪潮来寻找机会，人工智能和低碳转型所需的投资可能与工业革命不相上下。这就是为什么我们的第一个主题是融资未来。我们认为，随着这些巨大力量推动大规模基础设施建设，资本市场将发挥至关重要的作用。</p>
+<h2>崛起</h2>
+<p>私人市场资产管理规模，2015-2029</p>
+<p>前瞻性估计可能无法实现。</p>
+<p>资料来源：贝莱德投资研究所，Preqin，2024年12月。注：图表显示了私人市场基金的总资产管理规模，以及Preqin的“2029年另类投资的未来”报告中从2024年开始的预测。</p>
+<h2>重新思考投资</h2>
+<p>我们认为，随着巨大力量重塑整个经济，投资者应该更多地关注主题，而不是广泛的资产类别。换句话说，思考回报的分析单位正在发生变化——这需要重新思考投资，这是我们的第二个主题。一个关键结论：由于没有稳定的长期趋势和不断变化的前景，投资者可能需要重新考虑中性基准是什么，并更加重视战术观点，因为投资者不能依赖最终回归历史趋势。在我们看来，更加动态地管理投资组合和对观点进行细致的分析都是必不可少的。</p>
+<h2>越来越大的份额</h2>
+<p>“七巨头”市值占标普500指数的比例，1995-2024</p>
+<p>过去的表现并非未来业绩的可靠指标。无法投资于指数。指数是非管理的，业绩未考虑费用。</p>
+<p>资料来源：贝莱德投资研究所，数据来自LSEG Datastream，2024年12月。注：图表显示了“七巨头”（亚马逊、苹果、谷歌、Meta、微软、英伟达和特斯拉）股票的总市值占标普500指数总市值的比例。该图表总结了每只股票上市时的市值，从1997年开始记录亚马逊，从1999年开始记录英伟达，从2004年开始记录谷歌，从2010年开始记录特斯拉，从2012年开始记录Meta。</p>
+<h2>保持风险偏好</h2>
+<p>我们保持风险偏好，这是我们的第三个主题。由于更强劲的增长及其更好地利用巨大力量的能力，我们认为美国在其他发达市场中仍然脱颖而出。我们将对美国股票的超配比例提高，并认为人工智能主题正在扩大。我们认为，仅美国股票估值偏高本身并不会引发短期重新评估。但如果市场变得过度乐观，我们准备调整。我们在战术和战略层面上都低配长期美国国债——并且我们认为长期债券收益率的任何飙升都对我们的乐观观点构成风险。我们认为私人市场是配置巨大力量的重要方式，并在战略层面上对基础设施股票变得更加乐观。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="How-institutions-are-investing-in-digital-assets-|-EY---US">
+        <h3 class="page-name title"><span class="page-emoji ">🏦&nbsp;</span>How institutions are investing in digital assets | EY - US</h3>
+        <small class="page-url url "><a href="https://www.ey.com/en_us/insights/financial-services/how-institutions-are-investing-in-digital-assets" target="_blank">(https://www.ey.com/en_us/insights/financial-services/how-institutions-are-investing-in-digital-assets)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 介绍了机构投资者对数字资产的信心，展现了长期投资的前景与挑战。<br></small>
+    </div>
+    <div class="page-content content"><p>持续前行：机构投资者对数字资产的展望</p>
+<p>作者：Sara Elinson（安永美洲金融科技并购业务主管和安永美洲支付并购业务主管）, Prashant Kher（安永-帕森策略高级总监，安永会计师事务所）</p>
+<p>安永-帕森的研究表明，尽管近期市场波动，机构投资者仍相信区块链和数字资产的长期价值。</p>
+<p>简要概述：</p>
+<p>机构投资者相信区块链和加密/数字资产的长期价值。
+预计对数字资产和数字资产相关产品的配置将增加。
+机构投资者对代币化资产以及将其产品代币化感兴趣。</p>
+<p>在一个以波动性著称的行业中，2022 年对数字资产来说是具有标志性意义的一年¹——大量的头条新闻、电视访谈节目和播客都报道了这一发展。一方面，我们见证了参与者格局的彻底转变，包括一些最知名公司的倒闭，以及价值的历史性侵蚀和监管执法行动的增加。另一方面，我们已经看到，并且仍在继续看到，大型传统金融 (TradFi) 机构对区块链技术的首次有意义的机构级实施，包括数字资产托管的启动、代币化存款和结算币的启动和使用、众多央行数字货币 (CBDC) 试点、在公共账本上结算数字债券、私募基金的代币化、发生在区块链上的日内回购交易，以及支持支付和资金转移的众多用例的扩展。此外，许多 TradFi 机构继续推进其为零售和机构客户提供数字资产产品的计划。</p>
+<p>安永-帕森如何提供帮助</p>
+<p>加密和数字资产</p>
+<p>我们的安永加密和数字资产团队可以帮助您的企业提供前瞻性的、多学科的指导，以制定您自己的个性化战略。</p>
+<p>鉴于这种不断变化的背景，安永-帕森团队对 250 多家机构进行了调查，了解他们对区块链和数字资产的看法、使用情况和计划。我们的研究结果表明，他们正在坚持既定路线，并没有远离加密/数字资产，而是谨慎地、以理性乐观的态度进行投资。机构投资者绝大多数都相信加密/数字资产的长期利益，他们谨慎的主要原因是对监管不确定性、寻找值得信赖的合作伙伴机构以及确保这种新型资产类别安全保管的担忧。</p>
+<p>机构投资者看到了多元化资产的能力以及投资加密/数字资产潜在的不对称回报的价值。35% 的受访者表示将 1%-5% 的资金分配给数字资产和/或相关产品，60% 的受访者表示他们将超过 1% 的投资组合分配给数字资产和/或相关产品。虽然资产管理规模 (AUM)/资产管理规模 (AUA) 较小的受访者倾向于将其投资组合的更大一部分分配给这些产品，但值得注意的是，45% 的资产管理规模超过 5000 亿美元的机构表示，他们分配了超过 1% 的投资组合，这表明传统机构投资者投入该领域的资金数量巨大。</p>
+<p>为了制定适当的保障措施和计划，投资时间范围已延长，大多数机构计划在未来两到三年内扩大投资规模。然而，机构认为代币化非常有前景，并希望在未来两年内更快地转向投资代币化资产，以及将其自身资产代币化。特别是对冲基金对其投资启动时间表最为乐观。</p>
+<p>关于：持续前行：机构投资者对区块链和数字资产的看法全文下载</p>
+<p>数字资产及相关产品的配置</p>
+<p>尽管近期市场事件发生，投资者仍普遍相信区块链和/或数字资产的长期价值。</p>
+<p>数字资产机构投资者：</p>
+<ul>
+<li>数字资产相关产品包括基金、信托、衍生品等。</li>
+</ul>
+<p>机构投资者正在乐观而谨慎地推进投资计划，目前已投资的机构中，大多数将 1% 到 5% 的投资组合分配给数字资产或相关产品。76% 投资于数字资产的受访者表示投资组合配置低于 5%，只有 3% 的受访者表示投资组合配置高于 20%。鉴于其风险偏好，对冲基金是一个显著的例外，36% 的受访者将其投资组合的 5% 以上分配给该资产类别。</p>
+<p>此外，AUM/AUA &lt; 10 亿美元的受访者中，有 71% 表示他们将超过 1% 的投资组合分配给数字资产，而所有受访者中这一比例为 60%，而 AUM/AUA &gt; 5000 亿美元的机构中只有 45% 表示他们分配了超过 1% 的投资组合。</p>
+<p>展望未来，机构投资者普遍预计将增加其配置，预计在 2024 年或 2025 年将实现持续增长，这与普遍谨慎但乐观的做法相一致。</p>
+<p>现货加密货币是最常见的投资方式，比特币 (BTC) 和以太坊 (ETH) 最为普遍。然而，重要的是要注意，目前投资现货加密货币的机构中有 60% 也投资于 BTC 和 ETH 之外的加密货币。展望未来，现货加密货币仍然是最受欢迎的投资方式，但展望 2025 年，机构预计将更多资金分配给其他工具，尤其是“追踪加密货币的基金”和对数字资产公司的“私募股权/风险投资 (PE/VC) 式投资”。</p>
+<p>对代币化的兴趣</p>
+<p>代币化是使用区块链将资产或资产的所有权转换为数字形式的过程。资产代币化具有许多好处，包括：能够接触新的客户和资本来源；提高流动性；支持分割；支持从结算过程中移除中介机构；减少市场摩擦；提高运营效率；降低成本；通过智能合约实现流程自动化；等等。</p>
+<p>在代币化方面，有两方面：投资代币化资产和将自身资产代币化。57% 的受访者表示有兴趣投资代币化资产，特别是代币化的私募基金、证券（例如债券和股票）和公募基金。对冲基金对其投资启动时间表最为乐观。在有兴趣投资代币化资产的机构中，公募基金、证券和私募基金最受关注。</p>
+<p>机构投资者最感兴趣的是投资代币化的私募基金和证券（例如债券、股票），他们认为获得新的资产类型、提高流动性和提高透明度是他们感兴趣的主要驱动力。</p>
+<p>机构投资者最感兴趣的是投资代币化的私募基金和证券（例如债券、股票），他们认为获得新的资产类型、提高流动性和提高透明度是他们感兴趣的主要驱动力。</p>
+<p>一个柱状图，比较了受访者公司感兴趣代币化的资产类别或证券类型的调查结果。在对冲基金和资产管理公司中，首先优先考虑的资产类别或证券类型包括房地产基金、证券、私募基金、公募基金以及贷款和抵押贷款。</p>
+<p>一个大小比较气泡图，比较了受访者公司表示对其资产代币化最感兴趣的三个因素。新的投资者和新的资本是受访者代币化资产的主要原因，提高流动性和运营效率是机构感兴趣代币化资产的其他主要原因。</p>
+<p>47% 的对冲基金和机构资产管理公司有兴趣将自身资产代币化。代币化资产的主要理由包括获得新的投资者和资本以及提高流动性（分别为 53% 和 47% 的受访者）。最感兴趣的资产类别或证券类型包括公募基金、私募基金和房地产基金，60% 的受访机构将在公共许可区块链上进行代币化。</p>
+<p>对代币化资产感兴趣的机构最感兴趣的是代币化公募基金、私募基金和房地产基金。</p>
+<p>除了获得新的投资者和新的资本作为代币化资产的主要原因（53%）外，提高流动性（47%）和运营效率（40%）也是机构感兴趣代币化资产的其他主要原因。</p>
+<p>一个柱状图，比较了受访者公司感兴趣代币化的资产类别或证券类型的调查结果。在对冲基金和资产管理公司中，首先优先考虑的资产类别或证券类型包括房地产基金、证券、私募基金、公募基金以及贷款和抵押贷款。</p>
+<p>一个大小比较气泡图，比较了受访者公司表示对其资产代币化最感兴趣的三个因素。新的投资者和新的资本是受访者代币化资产的主要原因，提高流动性和运营效率是机构感兴趣代币化资产的其他主要原因。</p>
+<p>调查受访者资料——总共调查了来自全球各地买方公司的 256 位决策者。被调查的投资者来自买方内部的不同细分市场，资产规模也各不相同。单击图表右侧的图表修改器，可以按公司类型、地区、总 AUM/AUA 或高管职位对数据进行分组。</p>
+<p>总结</p>
+<p>大多数机构投资者相信区块链和加密/数字资产的长期价值，并计划在未来两到三年内扩大数字资产投资。投资者也对投资代币化金融资产感兴趣，机构正在积极探索将其自身资产代币化。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="Hashdex-Releases-2025-Crypto-Investment-Outlook">
+        <h3 class="page-name title"><span class="page-emoji ">📈&nbsp;</span>Hashdex Releases 2025 Crypto Investment Outlook</h3>
+        <small class="page-url url "><a href="https://www.globenewswire.com/news-release/2024/12/03/2990714/0/en/Hashdex-Releases-2025-Crypto-Investment-Outlook.html" target="_blank">(https://www.globenewswire.com/news-release/2024/12/03/2990714/0/en/Hashdex-Releases-2025-Crypto-Investment-Outlook.html)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: Hashdex的报告强调了共同推动加密货币主流化的重要力量，展望了未来的投资机会。<br></small>
+    </div>
+    <div class="page-content content"><p>纽约/里约热内卢/伦敦，2024年12月3日——全球专注于加密资产的资产管理公司Hashdex今日发布了2025年加密投资展望——进入主流。报告中，Hashdex的领导层和数字资产专家回顾了2024年加密领域的进展，并分享了可能影响2025年及以后加密投资趋势的观点。</p>
+<p>报告称，机构兴趣、基础设施进步和不断变化的监管环境可能会影响数字资产生态系统。虽然宏观经济条件可能会带来短期波动，但报告探讨了进一步创新可能导致增长远超当前市场3万亿美元估值的场景。</p>
+<p>Hashdex联合创始人兼首席执行官Marcelo Sampaio表示：“自2018年以来，我们的团队一直致力于帮助投资者了解加密‘火花’如何转变为强大的创新和投资机遇。正如我们的2025年加密投资展望所强调的那样，我们认为2024年是加密领域的关键一年，标志着重大的进步和里程碑。”“作为我们致力于教育投资者了解这一引人注目的投资机会的一部分，我们很荣幸能够分享我们的观点并提供见解，以帮助投资者在数字资产类别发展过程中做出明智的决策。”</p>
+<p>Hashdex的2025年加密投资展望——进入主流探讨了可能影响新年数字资产投资的三个关键主题：</p>
+<p>机会的扩展。数字资产在传统金融生态系统中的日益普及正在扩大加密资产在多元化投资组合中的作用，并塑造互联网发展的下一阶段。</p>
+<p>比特币正在走向主流。机构的接受以及比特币作为价值储存手段的日益认可，促进了其更广泛的认可。</p>
+<p>寻找下一个“杀手级应用”。新年可能会看到区块链应用的进展，因为基础设施发展和新兴趋势可能会揭示新的用例。</p>
+<p>Hashdex首席投资官Samir Kerbage表示：“在去年的报告中，我们强调了我们对加密资产与传统金融的整合、基础设施进步以及宏观经济因素将推动这一资产类别进入主流的预期，这是我们观察到的趋势。”“展望未来，2025年可能被视为加密生态系统的一个关键时期，在这个时期，那些认识到区块链技术潜力（超越比特币）的投资者获得了可观的回报。随着动力的持续和新的用例的出现，我们认为投资者必须考虑在此资产类别内多元化的益处，以充分利用这一充满希望时期的机会。”</p>
+<p>作为其提供对加密资产的创新和多元化访问的使命的一部分，Hashdex提供了一系列基于指数的投资产品，这些产品能够接触到各种各样的数字资产。其中包括全球首个加密ETF，Hashdex-纳斯达克加密指数ETF (HASH11)，它追踪NCI™，该指数作为多资产ETF取得了成功。此外，Hashdex纳斯达克加密指数欧洲ETP（“HASH”）截至2024年11月14日资产已达到5.4亿美元，成为欧洲首个资产超过5亿美元的多资产加密ETP，规模是下一个最大的加密指数ETP的两倍多。这些产品旨在为全球投资者提供接触数字资产类别的方法，同时管理相关的风险。</p></div>
+
+</div><hr><div class="page">
+    <div class="page-meta" id="How-The-Fed-Impacts-Stocks,-Crypto-And-Other-Investments-|-Bankrate">
+        <h3 class="page-name title"><span class="page-emoji ">📉&nbsp;</span>How The Fed Impacts Stocks, Crypto And Other Investments | Bankrate</h3>
+        <small class="page-url url "><a href="https://www.bankrate.com/investing/federal-reserve-impact-on-stocks-crypto-other-investments/" target="_blank">(https://www.bankrate.com/investing/federal-reserve-impact-on-stocks-crypto-other-investments/)</a><br></small>
+        <small class="page-rating rating ">评分: 8.0<br></small>
+        <small class="page-annotation annotation ">注释: 总结了美联储降息对加密市场的影响，预示着未来对风险资产的兴趣可能增加。<br></small>
+    </div>
+    <div class="page-content content"><p>过去几年，股票、加密货币和石油等商品的价格一直在上涨。但现在短期利率正在下降，投资者可以期待什么呢？这种不断变化的利率环境将对市场产生多长时间的影响？</p>
+<p>美联储在12月17日至18日的会议上决定下调利率，将联邦基金利率下调25个基点，至4.25%至4.5%的区间。由于通货膨胀已降至最高水平，该国央行认为现在是进一步降息的适当时机，此前在9月份下调了50个基点，在11月份下调了25个基点。</p>
+<p>2025年可能还会进一步降息，这将有助于支撑美国经济。</p>
+<p>投资者期待更低的利率</p>
+<p>利率是美联储影响经济的最大工具之一。通过降低利率，美联储可以刺激经济活动，降低借贷成本。另一方面，通过提高利率，美联储可以减缓经济活动，提高信贷成本——这是一种对抗通货膨胀的有用策略。</p>
+<p>在上一轮紧缩周期中，美联储加息11次，但很容易看出，当市场真正注意到央行并非开玩笑，即将重新校准货币政策时，市场做出了怎样的反应。那是2021年11月，加密货币和许多风险最高的股票达到峰值。</p>
+<p>Illumen Capital的负责人Octavio Sandoval表示：“当美联储在2022年通过提高利率实施限制性货币政策时，这导致股票市场和加密货币的估值适度下降。”</p>
+<p>密歇根州特洛伊市Azoury Financial负责人Steve Azoury表示：“股市永远不会不担心未来的利率。借贷成本影响着投资、购买和储蓄的所有领域。仅仅是对可能发生的事情的预期就足以引发股市反应。”</p>
+<p>在利率上升期间，许多股票都在下跌，预示着经济状况将会放缓。但当投资者对2023年利率上升结束有了更清晰的认识时，前景变得更加乐观。</p>
+<p>由于利率上升，标准普尔500指数在2022年的大部分时间里都表现低迷，但在2023年表现良好。标准普尔500指数去年上涨了约24%，纳斯达克综合指数上涨了约43%。他们在2024年延续了强劲势头，迄今为止创下了有史以来最佳年份之一。</p>
+<p>但在2023年和2024年强劲上涨后，如果经济恶化，市场可能还有很大的下跌空间。</p>
+<p>在利率上升期间，许多无利可图的高增长股票在2022年表现糟糕，尽管价格在2023年企稳，但这并不意味着这些股票仍然接近之前的最高点。</p>
+<p>例如，Cloudflare、Zoom Communications和Confluent等软件股票远低于他们在2020年或2021年创下的历史高点。尽管如此，微软、苹果和其他“七大巨头”等盈利的大型股票，即使在2022年表现不佳之后，也创下了一系列新的历史高点。</p>
+<p>2022年，随着利率似乎将上涨，加密货币价格下跌，但当利率开始见顶时，加密货币价格触底反弹，并在2023年和2024年上涨。比特币ETF的推出也帮助推高了比特币的价格。更低的利率预期和流入ETF的资金也推高了以太坊的价格。</p></div>
+
+</div>
+</div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navigate = document.querySelector(".navigate");
+        if (!navigate) {
+            console.error("找不到 .navigate 元素!");
+            return;
+        }
+
+        let lastScrollY = 0; // 初始化滚动位置
+        const scrollContainer = document.querySelector(".right-column");
+        let isNavigating = false;
+        document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                isNavigating = true; // 设置导航状态
+                navigate.classList.add("navigate-hidden"); // 隐藏导航栏
+
+                setTimeout(() => {
+                    isNavigating = false;
+                }, 100);
+            });
+        })
+
+        scrollContainer.addEventListener("scroll", () => {
+            const currentScrollY = scrollContainer.scrollTop; // 获取容器的滚动位置
+
+            // 判断滚动方向
+            if (!isNavigating) {
+                if (currentScrollY > lastScrollY) {
+                    navigate.classList.add("navigate-hidden");
+                } else {
+                    navigate.classList.remove("navigate-hidden");
+                }
+            }
+
+            // 更新上一次的滚动位置
+            lastScrollY = currentScrollY;
+        });
+    });
+</script>
+</html>

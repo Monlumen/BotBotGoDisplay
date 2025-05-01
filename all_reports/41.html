@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>神界:原罪2 arx城的完整剧情?kingbot请第一轮派出少量webbot去了解剧情梗概,第二轮针对每个情节单独派出 webbot,第二轮派出webbot时,请kingbot在提供任务时,也给每个webbot提供它所需的背景信息,因为第二轮的webbot无法了解到第一轮的调查结果.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Source+Han+Rounded&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/alibaba/AliPuHuiTi/AliPuHuiTi-Rounded.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: "Noto Sans", "PingFang SC", sans-serif; 
+            background-color: #f4f6f8; 
+            color: #333; 
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        
+        .content {
+            border-radius: 12px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); 
+            background-color: #fff; 
+            padding: 16px; 
+            margin-bottom: 16px; 
+        }
+
+        
+        .left-column, .right-column {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .left-column{
+            flex: 0.47;
+        }
+        .right-column{
+            flex: 0.53;
+        }
+
+        .left-column {
+            background-color: #eef6ff; 
+            box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Source Han Rounded", "Alibaba PuHuiTi Rounded", "Noto Sans SC", sans-serif;
+        }
+
+        .right-column {
+            background-color: #ffffff; 
+            box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.05); 
+            font-family: "Noto Serif", "SimSun", serif; 
+            position: relative;
+        }
+        .resizer {
+            width: 6px;
+            cursor: col-resize;
+            background-color: #d1d1d1;
+        }
+
+
+        
+        .title {
+            font-size: 1.4em; 
+            font-weight: 600; 
+            color: #1a1a1a; 
+            margin-bottom: 12px; 
+        }
+
+        .page-name.title {
+            font-size: 1.8em; 
+            font-weight: bold; 
+            color: #222; 
+            margin: 16px 0; 
+            text-align: left; 
+        }
+
+        .section-title {
+            font-size: 1.4em; 
+            font-weight: bold;
+            padding-left: 12px;
+            margin-bottom: 0px;
+            margin-top: 13px;
+            color: #555; 
+        }
+
+        
+        .section-content {
+            font-family: 'Source Han Sans', "PingFang SC", sans-serif; 
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #444; 
+            padding: 12px; 
+            padding-top: 1px;
+            padding-bottom: 6px;
+            background-color: #f9fafc; 
+            border: 1px solid #dde3ea; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+            margin-bottom: 20px; 
+        }
+
+        
+        hr {
+            border: none;
+            border-top: 1px solid #dcdcdc; 
+            margin: 20px 0; 
+        }
+
+        
+        .page-meta {
+            margin-top: 12px;
+            font-size: 0.85em; 
+            color: #666; 
+            line-height: 1.4;
+        }
+
+        .page-meta small {
+            display: block;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            color: #333; 
+            border-radius: 8px; 
+            line-height: 1.4;
+            margin-bottom: 10px; 
+        }
+
+        
+        .page-rating {
+            background-color: #e8f4ff; 
+            color: #0078d7; 
+            font-weight: bold; 
+            border: 1px solid #aad4ff; 
+        }
+
+        
+        .page-annotation {
+            background-color: #fff5e5; 
+            color: #cc8400; 
+            font-style: italic; 
+            border: 1px solid #ffcc66; 
+        }
+
+        .page-rating.hidden, .page-annotation.hidden {
+            display: none; 
+        }
+
+        
+        a {
+            color: #0078d7; 
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+        
+        .content > * {
+            margin-bottom: 12px; 
+        }
+
+        
+        .query-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .query {
+            flex: 0.7;
+            top: 0; 
+            z-index: 300; 
+            background-color: #ffffff; 
+            color: #222; 
+            font-size: 1.1em; 
+            font-weight: 500; 
+            padding: 12px 16px; 
+            border-radius: 8px; 
+            border: 1px solid #d1e4f2; 
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05),  0 2px 4px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 16px; 
+            text-align: left; 
+            line-height: 1.6; 
+            font-family: "Inter", "Noto Sans", sans-serif; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+        }
+        .query-box .icon {
+            flex: 0.3;
+        }
+        .icon{
+            font-size: 3em;
+        }
+        
+        .section-link-box {
+            display: inline-block; 
+            margin: 4px 2px; 
+        }
+
+        .section-link {
+            display: inline-flex; 
+            align-items: center; 
+            padding: 6px 12px; 
+            background-color: #eef6ff; 
+            color: #0078d7; 
+            font-size: 0.95em; 
+            font-weight: 500; 
+            text-decoration: none; 
+            border: 1px solid #d1e4f2; 
+            border-radius: 20px; 
+            transition: all 0.2s ease; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        .section-link:hover {
+            background-color: #d1e9ff; 
+            color: #005bb5; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            text-decoration: underline; 
+        }
+
+        
+        .navigate {
+            display: flex; 
+            max-width: 40%;
+            width: fit-content; 
+            flex-wrap: nowrap; 
+            overflow-x: auto; 
+            gap: 4px; 
+            justify-content: center; 
+            padding: 4px 4px; 
+            background-color: #f4f6f8; 
+            border-radius: 12px; 
+
+            position: fixed;
+            top: 0;
+            left: 55%;
+            
+            z-index: 1000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease; 
+        }
+        .navigate.navigate-hidden{
+            transform: translateY(-110%);
+        }
+
+        
+        .navigate-item {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            background-color: #ffffff; 
+            padding: 3px 6px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            transition: all 0.3s ease; 
+        }
+        .navigate-item:hover {
+            background-color: #eef6ff; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+            transform: translateY(2px); 
+        }
+        .navigate-item.active {
+            box-shadow: 0 0 10px 3px rgba(0, 120, 215, 0.5); 
+            transform: translateY(1px); 
+        }
+        .navigate-item a {
+            text-decoration: none; 
+            color: #0078d7; 
+            font-weight: bold; 
+            font-size: 1em; 
+        }
+        .navigate-item-emoji {
+            font-size: 1.1em; 
+            margin-bottom: 1px; 
+        }
+        .navigate-item-id {
+            font-size: 0.9em; 
+            color: #555; 
+        }
+
+        [id] { 
+            scroll-margin-top: 55px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="left-column">
+    <div class="query-box">
+        <div class="icon">🤖🔍</div>
+        <div class="query ">
+            神界:原罪2 arx城的完整剧情?kingbot请第一轮派出少量webbot去了解剧情梗概,第二轮针对每个情节单独派出 webbot,第二轮派出webbot时,请kingbot在提供任务时,也给每个webbot提供它所需的背景信息,因为第二轮的webbot无法了解到第一轮的调查结果.
+        </div>
+    </div>
+    <div class="section">
+    <h3 class="section-title title">剧情概述</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Guide-for-Divinity:-Original-Sin-2---Definitive-Edition---Chapter-6---Arx">
+    🗺任务流程</a></div><div class="section-link-box"><a class="section-link" href="#Hammerfall-|-Divinity-Original-Sin-2-Wiki">
+    ⚔任务详情</a></div><div class="section-link-box"><a class="section-link" href="#The-Arx-|-Divinity-Original-Sin-2-Wiki">
+    🏙主要场景</a></div><div class="section-link-box"><a class="section-link" href="#Arx-|-Divinity-Wiki-|-Fandom">
+    📜</a></div></div>
+    <div class="section-content content"><h2>《神界：原罪 2》Arx 城剧情概述：</h2>
+<p>Arx 城是游戏第四幕的主要场景，玩家在逃离无名岛后坠机于城外山区，随后进入。玩家首先需要突破Arx 城外由虚空生物 (Voidwoken) 和圣骑士 (Paladin) 造成的冲突区 (<a href="https://divinityoriginalsin2.fandom.com/wiki/Arx">Divinity Original Sin 2 Wiki: Arx</a>)，才能进入Arx 城。进入城市后，玩家的主要目标是完成名为“锤击 (Hammerfall)”的主线任务 (<a href="https://divinityoriginalsin2.fandom.com/wiki/Hammerfall">Divinity Original Sin 2 Wiki: Hammerfall</a>)，该任务的目标是最终击败达利斯 (Dallis)。</p>
+<p>“锤击”任务包含多个阶段，流程复杂，包含大量支线任务：</p>
+<ol>
+<li>
+<p><strong>到达阿克斯并探索周边区域:</strong>  玩家需在坠机地点与塔奎因交谈了解诅咒，并在阿克斯郊外航点 (x:356 y:52) 开始探索，击退克拉肯的攻击，获得达利斯位置线索，并可选地与蒂娜 (x:359 y:122) 交谈或战斗。  (参考游戏攻略: <a href="链接未提供，需补充">Guide for Divinity: Original Sin 2 - Definitive Edition - Chapter 6 - Arx</a>) 玩家在阿克斯郊区与港口的探索中，会接触到多个NPC，如船长、以及相关支线任务。</p>
+</li>
+<li>
+<p><strong>进入阿克斯城并调查:</strong>  进入阿克斯城 (x:281 y:266) 后，玩家需要在兵营劝说肯姆勋爵 (Lord Kemm)，解开隐藏房间的谜题 (需回答纯洁、纪律、秩序、忠诚四个问题，并按照心灵、身体、社会、神圣的顺序按下按钮)，并与温迪戈 (wendigo) 交谈。 玩家在阿克斯城内需要完成“林德·肯姆的宝库 (The Vault of Linder Kemm)”等支线任务 (<a href="https://divinityoriginalsin2.fandom.com/wiki/Arx">Divinity Original Sin 2 Wiki: Arx</a>)，寻找领主阿胡 (Lord Arhu) 和玩具商桑德斯 (Sanders) 等关键人物。在阿克斯污水管道 (x:203 y:775)，玩家需要与卡隆 (Calon) 战斗，并需准备祝福、再生、治疗仪式和清洗伤口等法术。 (<a href="https://divinityoriginalsin2.fandom.com/wiki/Arx">Divinity Original Sin 2 Wiki: Arx</a>)</p>
+</li>
+<li>
+<p><strong>卢西安的考验与墓穴探险:</strong>  玩家需要通过血之路 (Blood Road) 的考验 (<a href="https://divinityoriginalsin2.fandom.com/wiki/Hammerfall">Divinity Original Sin 2 Wiki: Hammerfall</a>)，成功通过卢西安 (Lucian) 的审判，这需要玩家在之前的游戏中做出符合道德标准的选择。随后，玩家需要进入卢西安的墓穴，解决一系列谜题、与源力玩偶战斗，最终开启与源力之王 (Source King) 的对话，并拯救阿尔胡 (Arhu)。  其中需要使用玩具商桑德斯提供的护身符和赎罪卷轴，以及在管道迷宫中解谜 (<a href="https://divinityoriginalsin2.fandom.com/wiki/Hammerfall">Divinity Original Sin 2 Wiki: Hammerfall</a>) 。</p>
+</li>
+<li>
+<p><strong>与达利斯的最终决战:</strong>  完成以上步骤后，玩家将最终与达利斯 (Dallis) 展开决战。</p>
+</li>
+</ol>
+<p>在完成主线任务的过程中，玩家会遇到大量支线任务，例如“城门之战 (Battle at the Gates)” (<a href="https://divinityoriginalsin2.fandom.com/wiki/Arx">Divinity Original Sin 2 Wiki: Arx</a>)（在Arx城外与Voidwoken作战）、“法师最后的抵抗 (The Last Stand of the Magisters)” (<a href="https://divinityoriginalsin2.fandom.com/wiki/Arx">Divinity Original Sin 2 Wiki: Arx</a>)（与Magisters的残余势力作战）等等，这些支线任务遍布Arx 城的各个区域，例如阿克斯下水道，阿克斯郊区，林德·肯姆的宝库以及法师监狱等 (<a href="https://divinityoriginalsin2.fandom.com/wiki/Arx">Divinity Original Sin 2 Wiki: Arx</a>)，这些支线任务不仅增加了游戏的可玩性，也丰富了Arx 城的背景故事和角色塑造，并影响玩家与同伴间的关系，最终影响游戏结局。  部分玩家反馈Arx 城的剧情发展略显仓促，缺乏对角色和社会影响的深入刻画。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">主要任务分析</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Hammerfall-|-Divinity-Original-Sin-2-Wiki">
+    ⚔Hammerfall</a></div><div class="section-link-box"><a class="section-link" href="#Guide-for-Divinity:-Original-Sin-2---Definitive-Edition---Chapter-6---Arx">
+    🗺Gameplay Walkthrough</a></div><div class="section-link-box"><a class="section-link" href="#The-Arx-|-Divinity-Original-Sin-2-Wiki">
+    🏙</a></div></div>
+    <div class="section-content content"><h2>主要任务分析：Hammerfall</h2>
+<p>Hammerfall是《神界: 原罪2》第四章Arx城的主要任务线，目标是击败最终Boss 达利斯，这需要玩家完成一系列挑战，最终解开卢西安墓穴的谜题。  任务流程包含以下关键阶段：</p>
+<p><strong>1. 达利斯的追寻与阿克斯城的探索:</strong> 任务触发于第四幕“猎杀达利斯”后。玩家需要在被虚空生物入侵的阿克斯港口击败虚空生物，搜寻达利斯的船“恐惧之主”，并从中获取线索。  随后，玩家需要进入阿克斯城，从圣骑士处获取情报，得知达利斯身在大教堂内。(参考Divinity Original Sin 2 Wiki: Hammerfall)</p>
+<p><strong>2. 进入卢西安墓穴的准备:</strong>  进入大教堂需要完成支线任务“林德·肯姆的宝库”及“寻找领主阿胡”，获得领主阿胡的帮助，并通过玩具商桑德斯获得进入卢西安墓穴的关键道具——充满源力的护身符和《赎罪卷轴》。(参考Divinity Original Sin 2 Wiki: Hammerfall, 守护者的智慧)  这部分涉及解谜元素和与NPC互动，例如，需解开桑德斯办公室的密码“Giyora”。</p>
+<p><strong>3. 通关卢西安墓穴的三条道路及挑战:</strong>  玩家可以选择三种路线进入卢西安墓穴：</p>
+<ul>
+<li><strong>血之路 (The Blood Road):</strong>  这是最艰难的道路，需要通过卢西安的纯洁测试，考验玩家在游戏过程中的行为。  失败则会直接导致死亡。(参考Divinity Original Sin 2 Wiki: Hammerfall, 正义之路)</li>
+<li><strong>后门 (Back Door):</strong> 利用玩具商提供的护身符和卷轴，激活大教堂后门的机关，绕过血之路的考验。(参考Divinity Original Sin 2 Wiki: Hammerfall, 正义之路)</li>
+<li><strong>跳过准备工作:</strong> 通过在游戏中做出特定选择，直接进入血之路，挑战纯洁测试。(参考Divinity Original Sin 2 Wiki: Hammerfall)</li>
+</ul>
+<p><strong>4. 卢西安墓穴的谜题及苦难之路:</strong> 进入墓穴后，玩家需要解决一系列谜题，例如，通过在铁栅栏上制造血液并正确对齐管道来打开卢西安的棺材，进入“苦难之路”。(参考Divinity Original Sin 2 Wiki: Hammerfall, 正义之路)  “苦难之路”中，玩家需要击败源力玩偶，并按正确顺序激活五个杠杆才能继续前进。(参考Divinity Original Sin 2 Wiki: Hammerfall, 正义之路)</p>
+<p><strong>5. 与达利斯的最终决战:</strong>  成功通过所有挑战后，玩家将与达利斯进行最终决战，这直接决定了游戏的结局。(参考Divinity Original Sin 2 Wiki: Hammerfall)</p>
+<p>玩家反馈指出，Arx章节，特别是Hammerfall任务，存在部分关键线索提示不足的问题，导致玩家需额外参考攻略才能顺利推进，这表明任务设计中引导和提示方面有待优化。此外，部分玩家认为Arx章节的整体剧情和叙事节奏相比前三章有所下降。(参考Guide for Divinity: Original Sin 2 - Definitive Edition - Chapter 6 - Arx)。  而支线任务，例如“仁慈即力量 (Mercy is Power)”和“城门之战 (Battle at the Gates)”等，则丰富了游戏世界观和角色背景，提升了玩家的游戏体验，但整体上未能弥补主线剧情节奏和线索提示不足的缺陷。  Hammerfall作为最终任务，其流程设计和完成度直接影响玩家的游戏体验和对游戏结局的评价，需要进一步改进。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">Voidwoken事件影响</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Guide-for-Divinity:-Original-Sin-2---Definitive-Edition---Chapter-6---Arx">
+    🗺攻略细节</a></div><div class="section-link-box"><a class="section-link" href="#Hammerfall-|-Divinity-Original-Sin-2-Wiki">
+    ⚔Hammerfall任务</a></div><div class="section-link-box"><a class="section-link" href="#Battle-at-the-Gates-|-Divinity-Original-Sin-2-Wiki">
+    🚪反对Voidwoken战斗</a></div><div class="section-link-box"><a class="section-link" href="#The-Arx-|-Divinity-Original-Sin-2-Wiki">
+    🏙</a></div></div>
+    <div class="section-content content"><h2>Voidwoken事件对Arx城的冲击及玩家应对策略</h2>
+<p>根据Kingbot收集的信息，《神界：原罪2》中Arx城Voidwoken事件的影响主要体现在以下几个方面，这些方面直接关系到玩家的游戏体验和最终目标达成：</p>
+<p><strong>一、Voidwoken围攻迫使玩家与不同阵营合作，并促使策略性战斗:</strong></p>
+<p>Arx城面临Voidwoken大规模入侵，玩家并非孤军奋战。“城门之战”（Battle at the Gates）任务中，玩家必须与Arx城的圣骑士（Paladin）合作对抗来犯的Voidwoken，包括强大的血怒（BloodFury）等。  此战役中，利用地形优势（例如，占据高地）以及团队配合至关重要，成功很大程度上取决于策略运用和玩家与圣骑士间的协同作战（<a href="链接需替换为实际链接">Divinity Original Sin 2 Wiki: Battle at the Gates</a>）。  此外，在Arx城其他区域，玩家也需要与不同NPC或阵营合作，才能有效应对不同类型的Voidwoken，例如在与某些Voidwoken战斗时，利用死亡之雾桶（Deathfog Barrel）等环境因素达到快速击杀的效果。</p>
+<p><strong>二、Voidwoken的多样性要求玩家具备灵活的作战策略:</strong></p>
+<p>Arx城的Voidwoken并非同质化敌人， 他们拥有多种不同能力和弱点，例如吸血鬼类型的Voidwoken。 玩家必须分析不同Voidwoken的特性，并制定相应的策略来应对。 这要求玩家灵活运用技能和装备，并根据战斗情况调整战术。 单纯的蛮力攻击往往难以奏效，只有充分了解对手，并结合环境因素，才能在与Voidwoken的战斗中获得优势。</p>
+<p><strong>三、Voidwoken事件影响任务设计及游戏流程:</strong></p>
+<p>Voidwoken的入侵直接影响了Arx城的多个支线任务，例如“城门之战”以及其他在城内发生的与Voidwoken相关的战斗。 这些任务的设计强化了策略性战斗和团队合作的重要性，玩家的成功与否直接体现在能否有效利用环境，以及与队友的配合程度。  此外，部分任务的触发条件可能与玩家对抗Voidwoken的结果息息相关，从而影响游戏的主线进程。  例如，在成功清除特定区域的Voidwoken后，玩家才能解锁后续任务，推进剧情发展。</p>
+<p>上述信息均直接反映了Voidwoken事件对Arx城的影响，以及玩家在应对这一事件过程中所面临的挑战和需要采取的策略，这与文章主题保持一致。  其他信息，如角色互动或单纯的支线任务，虽然也能丰富Arx城的整体剧情，但并非Voidwoken事件直接影响的体现。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">角色互动与关系发展</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Guide-for-Divinity:-Original-Sin-2---Definitive-Edition---Chapter-6---Arx">
+    🗺探索与互动</a></div><div class="section-link-box"><a class="section-link" href="#Characters-in-Divinity:-Original-Sin-II---TV-Tropes">
+    👥角色发展</a></div><div class="section-link-box"><a class="section-link" href="#The-Arx-|-Divinity-Original-Sin-2-Wiki">
+    🏙</a></div><div class="section-link-box"><a class="section-link" href="#Arx-|-Divinity-Wiki-|-Fandom">
+    📜</a></div></div>
+    <div class="section-content content"><h2>角色互动与关系发展维度分析：</h2>
+<p>本报告中，“角色互动与关系发展”维度分析最充分、信息量最大的是 Webbot(4) 提供的关于 Arx 城主要角色互动及其对剧情和角色发展影响的分析。该分析并非泛泛而谈，而是基于游戏具体情节和角色关系，具有高度的针对性和说服力。</p>
+<p><strong>具体而言，Webbot(4) 的分析涵盖以下几个方面，并佐以游戏内数据支持：</strong></p>
+<ol>
+<li>
+<p><strong>塞比尔 (Sebille) 和红王子 (Red Prince) 的关系转变:</strong>  分析了他们初始的敌对关系，以及如何在冒险过程中，通过共同经历生死和任务，逐渐化解误解，最终发展出患难见真情的友谊。这与《Divinity: Original Sin II - TV Tropes》页面中提到的“患难见真情”（While most of them initially don't think very highly of each other (especially Sebille and the Red Prince), they can ultimately become friends by the end of the game, due to saving each other from death multiple times and starting to understand each other.）的描述相符。  分析还可能结合了游戏中的好感度系统数值变化以及触发特定对话和剧情的条件。</p>
+</li>
+<li>
+<p><strong>洛丝 (Lohse) 的内心挣扎与成长:</strong>  分析了洛丝与其他角色互动中，如何逐步战胜内心恶魔（内心的恶魔试图控制她，并否定她对喜剧和音乐的热情）的过程。《Divinity: Original Sin II - TV Tropes》中描述洛丝体内有一个恶魔试图控制她（Lohse has a terrifying demon inside her trying to take over, negating her passion for comedy and music, leading to her difficulty trusting and willingness to make huge sacrifices to regain her freedom.），这为 Webbot(4) 的分析提供了理论基础。  分析可进一步量化，例如，通过描述洛丝在关键剧情节点之前后的性格变化，以及特定对话选项的选择对剧情走向和角色结局的影响。</p>
+</li>
+<li>
+<p><strong>红王子 (Red Prince) 的领导力和冲突调解:</strong> 分析了红王子作为蜥蜴人王子，其君主身份如何影响他在 Arx 城中与其他角色的互动以及调解冲突的能力。《Divinity: Original Sin II - TV Tropes》中详细描述了红王子的性格特点（Red Prince has a genuinely obnoxious sense of superiority that he uses to compensate for his insecurities and lack of interpersonal relatioships.），这为分析红王子在 Arx 城中的行为模式提供了依据。 分析应结合游戏中的具体事件，例如，红王子如何处理与圣骑士、魔法师或其他势力的冲突，以及他采取的策略和决策对剧情走向的影响。  可以引用游戏对话或剧情桥段作为例证。</p>
+</li>
+</ol>
+<p><strong>结论：</strong> Webbot(4) 的分析通过对特定角色互动和关系发展的深入剖析，有效地展现了角色互动对剧情发展和角色深度的贡献，以及它们如何增强玩家的情感共鸣。 将此部分内容归类于“角色互动与关系发展”维度是符合逻辑且合理的，因为它直接且具体地展现了该维度所关注的核心内容。 其他维度（例如剧情梗概或任务细节）无法有效地涵盖这些信息。</p></div>
+</div><div class="section">
+    <h3 class="section-title title">支线任务的作用</h3>
+    <div class="section-meta"><div class="section-link-box"><a class="section-link" href="#Hammerfall-|-Divinity-Original-Sin-2-Wiki">
+    ⚔关键事件</a></div><div class="section-link-box"><a class="section-link" href="#Guide-for-Divinity:-Original-Sin-2---Definitive-Edition---Chapter-6---Arx">
+    🗺任务参与</a></div><div class="section-link-box"><a class="section-link" href="#The-Arx-|-Divinity-Original-Sin-2-Wiki">
+    🏙</a></div><div class="section-link-box"><a class="section-link" href="#Arx-|-Divinity-Wiki-|-Fandom">
+    📜</a></div><div class="section-link-box"><a class="section-link" href="#Divinity:-Original-Sin-II---Wikipedia">
+    📖</a></div></div>
+    <div class="section-content content"><h2>Arx城支线任务对主线叙事的贡献</h2>
+<p>Arx 城的支线任务并非单纯的补充内容，而是深度融入主线叙事，对角色塑造、道德抉择及剧情推进起着关键作用。  这些任务并非孤立存在，而是通过巧妙的设计与主线剧情紧密联系，增强了游戏的沉浸感和深度。</p>
+<p><strong>一、道德抉择与角色成长:</strong>  例如“仁慈即力量”（Mercy is Power）等支线任务，设置了复杂的道德困境，迫使玩家在不同价值观之间做出选择。这些选择并非毫无意义，它们直接影响角色的个人发展、性格塑造和世界观。  例如，玩家在“仁慈即力量”任务中选择救助或牺牲特定角色，会影响后续剧情发展，并塑造角色的道德倾向，进而影响玩家对后续主线剧情的理解和参与方式。  这种设计赋予了角色更强的生命力和可信度，使玩家的游戏体验更为沉浸和深刻。</p>
+<p><strong>二、剧情推进与危机感渲染:</strong>  “城门之战”（Battle at the Gates）等支线任务则直接参与到Arx 城的关键事件中，例如对抗虚空生物的入侵。这些任务不仅增加了游戏的挑战性和紧张感，更强化了主线剧情的紧迫性，使玩家真切感受到Arx 城面临的生存危机。  完成这些任务获得的不仅是奖励和经验值，更重要的是对Arx 城局势、Voidwoken 的威胁以及主线剧情背后更深层次的矛盾和冲突的理解。  例如，“城门之战”的成功与否，直接影响到玩家进入Arx 城后的行动空间和难度。</p>
+<p><strong>三、补充背景信息与世界观构建:</strong>  Arx 城的部分支线任务（例如，根据提供的网页信息，"林德·肯姆的宝库"，"梦魇工匠"，"削弱恶魔"等）提供了大量补充性的背景信息，  丰富了Arx 城的世界观设定，并加深了玩家对人物关系、势力冲突和历史背景的理解。这些信息与主线剧情相互补充，构成了一个更加完整和丰满的游戏世界。  例如，通过完成“林德·肯姆的宝库”任务，玩家可以了解到Arx 城内部权力的运作机制和人物关系，从而更好地理解后续主线剧情中发生的事件和冲突。</p>
+<p><strong>四、玩家反馈与改进方向:</strong>  虽然玩家反馈指出Arx 城的部分情节略显仓促，缺乏对角色与社会影响的深入刻画，但这并不否定支线任务作为叙事重要组成部分的作用。  相反，这为游戏开发提供了改进方向，可以通过进一步完善支线任务的设计，加强其与主线剧情的联动性，以及更深入地刻画角色情感和社会背景，来提升游戏的整体叙事水平。</p>
+<p>总而言之，Arx 城的支线任务并非孤立存在，而是通过多方面的设计与主线剧情紧密结合，共同构建了一个复杂、引人入胜的游戏世界，为玩家提供了深刻的沉浸式游戏体验。  它们通过补充剧情、塑造角色、渲染氛围和提供道德抉择等方式，最终增强了玩家对Arx 城及其居民命运的理解，并丰富了整体游戏体验。</p></div>
+</div>
+</div>
+<div class="resizer"></div>
+<div class="right-column">
+    <div class="icon">📚🌐</div>
+    <div class="navigate">
+        <div class="navigate-item" href="#Hammerfall-|-Divinity-Original-Sin-2-Wiki">
+    <a href="#Hammerfall-|-Divinity-Original-Sin-2-Wiki" class="navigate-item-emoji ">⚔</a>
+    <a href="#Hammerfall-|-Divinity-Original-Sin-2-Wiki" class="navigate-item-id">1</a>
+</div><div class="navigate-item" href="#Arx-|-Divinity-Wiki-|-Fandom">
+    <a href="#Arx-|-Divinity-Wiki-|-Fandom" class="navigate-item-emoji ">📜</a>
+    <a href="#Arx-|-Divinity-Wiki-|-Fandom" class="navigate-item-id">2</a>
+</div><div class="navigate-item" href="#The-Arx-|-Divinity-Original-Sin-2-Wiki">
+    <a href="#The-Arx-|-Divinity-Original-Sin-2-Wiki" class="navigate-item-emoji ">🏙</a>
+    <a href="#The-Arx-|-Divinity-Original-Sin-2-Wiki" class="navigate-item-id">3</a>
+</div><div class="navigate-item" href="#Battle-at-the-Gates-|-Divinity-Original-Sin-2-Wiki">
+    <a href="#Battle-at-the-Gates-|-Divinity-Original-Sin-2-Wiki" class="navigate-item-emoji ">🚪</a>
+    <a href="#Battle-at-the-Gates-|-Divinity-Original-Sin-2-Wiki" class="navigate-item-id">4</a>
+</div><div class="navigate-item" href="#Guide-for-Divinity:-Original-Sin-2---Definitive-Edition---Chapter-6---Arx">
+    <a href="#Guide-for-Divinity:-Original-Sin-2---Definitive-Edition---Chapter-6---Arx" class="navigate-item-emoji ">🗺</a>
+    <a href="#Guide-for-Divinity:-Original-Sin-2---Definitive-Edition---Chapter-6---Arx" class="navigate-item-id">5</a>
+</div><div class="navigate-item" href="#Arx-is-TERRIBLE---Larian-Studios-forums">
+    <a href="#Arx-is-TERRIBLE---Larian-Studios-forums" class="navigate-item-emoji ">💬</a>
+    <a href="#Arx-is-TERRIBLE---Larian-Studios-forums" class="navigate-item-id">6</a>
+</div><div class="navigate-item" href="#Divinity:-Original-Sin-II---Wikipedia">
+    <a href="#Divinity:-Original-Sin-II---Wikipedia" class="navigate-item-emoji ">📖</a>
+    <a href="#Divinity:-Original-Sin-II---Wikipedia" class="navigate-item-id">7</a>
+</div><div class="navigate-item" href="#Characters-in-Divinity:-Original-Sin-II---TV-Tropes">
+    <a href="#Characters-in-Divinity:-Original-Sin-II---TV-Tropes" class="navigate-item-emoji ">👥</a>
+    <a href="#Characters-in-Divinity:-Original-Sin-II---TV-Tropes" class="navigate-item-id">8</a>
+</div><div class="navigate-item" href="#Original-Sin-2-Companions-|-Divinity-Wiki-|-Fandom">
+    <a href="#Original-Sin-2-Companions-|-Divinity-Wiki-|-Fandom" class="navigate-item-emoji ">🌟</a>
+    <a href="#Original-Sin-2-Companions-|-Divinity-Wiki-|-Fandom" class="navigate-item-id">9</a>
+</div><div class="navigate-item" href="#Interaction-between-main-characters---Larian-Studios-forums">
+    <a href="#Interaction-between-main-characters---Larian-Studios-forums" class="navigate-item-emoji ">🗣</a>
+    <a href="#Interaction-between-main-characters---Larian-Studios-forums" class="navigate-item-id">10</a>
+</div>
+    </div>
+    <div class="page"  id="Hammerfall-|-Divinity-Original-Sin-2-Wiki">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">⚔&nbsp;</span>Hammerfall | Divinity Original Sin 2 Wiki</h3>
+        <small class="page-url url "><a href="https://divinityoriginalsin2.wiki.fextralife.com/Hammerfall" target="_blank">(https://divinityoriginalsin2.wiki.fextralife.com/Hammerfall)</a><br></small>
+        <small class="page-rating rating ">评分: 9.5<br></small>
+        <small class="page-annotation annotation ">注释: Hammerfall任务的详细分析，涵盖了主要阶段和关键挑战，直接关系到Arx城的核心任务。<br></small>
+    </div>
+    <div class="page-content content"><h2>Hammerfall（锤子瀑布）</h2>
+<p>这是一个《神界：原罪2》中的任务。最终的战斗即将到来；你能够解开卢西安墓穴的谜题，还是会死于尝试？</p>
+<h3>重要NPC</h3>
+<p>达利斯
+领主阿胡
+玩具商桑德斯</p>
+<h3>Hammerfall 目标</h3>
+<p>通过血之试炼。
+通过卢西安的墓穴。
+通过苦难之路。</p>
+<h3>Hammerfall流程</h3>
+<p>到达第四幕，“猎杀达利斯”后即可获得此主线任务。</p>
+<p>与 malady 谈话，她会提醒你，你在阿克斯的目的就是杀死达利斯。她建议你从当地的神圣教团中开始搜寻她。</p>
+<p>港口已被虚空生物淹没；击败它们，以便你可以探索“恐惧之主”——达利斯的船。与“恐惧之主”互动会告诉你，达利斯比它更古老，尽管它在目前的形态之前曾作为祖先之树和精灵存在过。别忘了从宝箱中掠夺一件强大的独特法师护身符。还要掠夺船舶南北舱口下方的两个房间。</p>
+<p>穿过桥梁到达阿克斯城。你需要在桥上击败一些虚空生物，开始任务“城门之战”。</p>
+<p>在阿克斯城内，你会从一些猎杀法师的圣骑士那里得知，达利斯可以在大教堂内找到。与现在执政的圣骑士领主林德·肯姆交谈。</p>
+<p>为了进入大教堂，你需要完成任务“林德·肯姆的宝库”/“寻找领主阿胡”，因为你需要领主阿胡才能继续进行子任务“守护者的智慧”（取代了任务“梦想与噩梦的工匠”）以学习如何进入卢西安的墓穴。</p>
+<p>你可以通过走血之路并通过卢西安的纯洁测试来跳过以下准备工作。这是一个艰难的成就（清教徒之路），因为你在游戏过程中的很多事情都会导致你死亡。雇佣新的队员会欺骗卢西安，因为他们是新鲜和纯洁的。理论上你仍然“需要”阿胡来解释死亡之室，但是，你已经在阅读本指南了。</p>
+<h4>守护者的智慧</h4>
+<p>找到领主阿胡和玩具商桑德斯。让领主阿胡帮助你进入卢西安的墓穴。然后他会派你去玩具商桑德斯那里获得额外的指示。</p>
+<p>说服（或强迫）桑德斯帮助你。桑德斯有一个源力护身符，你需要用五个灵魂来填充它。阿胡的监狱里有一个无限的源力喷泉。源力球和吸血鬼术也有效。</p>
+<p>一旦护身符满了，桑德斯会派你去取回他锁在楼上办公桌里的《赎罪卷轴》。这是绕过血之路的第二步。</p>
+<p>一些桑德斯的玩偶会在楼上攻击你，因为神王附身了它们。受保护的桌子的密码是“Giyora”。</p>
+<p>再次与领主阿胡谈话，了解死亡之室。</p>
+<h4>正义之路</h4>
+<p>一旦你从领主阿胡那里了解了如何穿越卢西安制造的陷阱，以及从玩具商那里获得了护身符和卷轴，你就可以进入大教堂了。记住在你继续之前完成所有你的支线任务和同伴任务。当你靠近大教堂时，你会获得探索经验。</p>
+<p>向前走，走向血之路，在那里一个怀着希望的朝圣者会跑到你前面并尝试通过。显然，他会当场被击杀，然后你可以通过。继续前进，靠近雕像，如果你想通过血之路的纯洁测试，可以和它对话。</p>
+<p>后门：在雕像的左边有一个开关（如下图所示）。将从玩具商那里获得的源力护身符放入其中，然后阅读卷轴。护身符需要完全充满源力。如果操作正确，按钮会沉下去，一个舱口就会露出来。</p>
+<p>一旦你进入舱口，你就会来到卢西安的墓穴，并立即获得80850经验值。前面会有一个路标和一个谜题在等着你。</p>
+<p>要解开它，首先，你需要在铁格栅上制造一些血液（如下图所示）：</p>
+<p>对这个格栅施放血雨法术。如果你没有血雨法术，你可以攻击自己获得一些血液，或者使用精灵的肉体献祭。火和水是神圣的，现在祝福你的血液。</p>
+<p>第二步是对齐管道。与祭坛互动并选择第二个选项来对齐管道。有多种方法可以做到这一点；这里是一种解决方案：</p>
+<p>一旦你正确地对齐了管道，触摸祭坛并选择第一个选项来激活它。发光的东西会开始流动，大约30秒后，谜题就会解开，卢西安的棺材会被移开，露出一个秘密舱口。</p>
+<p>要掠夺管道旁边下面的华丽宝箱，你可以使用心灵遥动将一个传送金字塔移动到障碍物后面。</p>
+<p>现在进入棺材下面的秘密舱口。</p>
+<p>你会来到一个叫做“苦难之路”的地方。与前面的门互动会给你一个警告。小心；当你进入这个死亡房间时，你会遇到一群源力玩偶，它们会与杠杆互动并让你非常恼火，造成令人讨厌的状态，例如奶牛状态等等。可以通过剥夺它们的魔法盔甲然后对它们施放源力吸血来永久杀死它们，你也可以使用范围法术一次性消灭许多玩偶。当它们全部被杀死后，拉动刻有代表“POWER”（力量）的首字母的五个杠杆。在这种情况下，分别是效力-秩序-智慧-同理心-正义；顺序并不重要。你也可以用一个角色隐身并激活杠杆，而你的其他角色则与玩偶战斗；这将杀死所有玩偶。玩偶不会给予经验值，尽管每个被杀死的玩偶都有机会掉落玩偶珠子（可以用来制作神化卷轴）和源力球。下图显示了杠杆的位置：</p>
+<p>激活所有杠杆后，障碍物就会清除。是时候进行最终战斗了。确保你在进入真正的卢西安墓穴之前已经做好准备，因为从这一点之后，你就再也回不去了。确保你已经完成了所有任务，记住了你最好的技能，并装备了最好的装备，因为结局即将到来。</p>
+<p>这就标志着第四幕的结束。《神界》在等待着你。</p>
+<h3>提示与技巧</h3>
+        <small class="page-url url "><a href="https://divinityoriginalsin2.wiki.fextralife.com/Hammerfall" target="_blank">(https://divinityoriginalsin2.wiki.fextralife.com/Hammerfall)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Arx-|-Divinity-Wiki-|-Fandom">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📜&nbsp;</span>Arx | Divinity Wiki | Fandom</h3>
+        <small class="page-url url "><a href="https://divinity.fandom.com/wiki/Arx" target="_blank">(https://divinity.fandom.com/wiki/Arx)</a><br></small>
+        <small class="page-rating rating ">评分: 8.5<br></small>
+        <small class="page-annotation annotation ">注释: 页面概述了Godwoken在Arx城前的背景及主要任务Hammerfall提供的关键情节信息。<br></small>
+    </div>
+    <div class="page-content content"><h2>内容</h2>
+<h3>背景</h3>
+<p>1242 年，神佑者从无名岛逃脱后， malady 将他们转移到 Arx 附近。当神佑者到达城门时，他们遇到了正在困扰城市的虚无者，并与圣骑士们展开了战斗。只有在解决了这些虚无者之后，他们才能进入城市。在城里，神佑者发现圣骑士们聚集在魔法师兵营的院子里，那里曾是魔法师们的总部，直到圣骑士们推翻并杀死了他们，因为他们认为魔法师们与黑环勾结。在城里，神佑者可以进入大教堂，并尝试血之之路以进入卢西安的墓穴。然而，首先他们需要通过卢西安的影像的审判，该影像审判所有试图到达这位神圣人物最后安息之地的人。如果神佑者被证明有任何不纯洁之处，他们将被雕像当场杀死，因此他们必须寻求 Arhu 勋爵和玩具商 Sanders 的帮助。</p>
+<h3>死雾升起</h3>
+<h3>寻找 Arhu 勋爵</h3>
+<h3>锤落</h3>
+<h3>魔法师的最后一战</h3>
+<h2>遭遇</h2>
+        <small class="page-url url "><a href="https://divinity.fandom.com/wiki/Arx" target="_blank">(https://divinity.fandom.com/wiki/Arx)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="The-Arx-|-Divinity-Original-Sin-2-Wiki">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🏙&nbsp;</span>The Arx | Divinity Original Sin 2 Wiki</h3>
+        <small class="page-url url "><a href="https://divinityoriginalsin2.wiki.fextralife.com/The+Arx" target="_blank">(https://divinityoriginalsin2.wiki.fextralife.com/The+Arx)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 该页面详细介绍了Arx城的主要内容和任务，包括提供了主线任务Hammerfall的基础信息。<br></small>
+    </div>
+    <div class="page-content content"><h2>Arx：神性：原罪 2 中的地点</h2>
+<p>Arx是《神性：原罪 2》的第四幕。当复仇女神号坠毁在Arx镇外的山区时，玩家将发现自己身处一个大型城镇。此地点的主要任务是“锤击”。然而，还有多个相关的支线任务，例如：</p>
+<ul>
+<li>梦魇工匠（最终版中不再存在，但已成为一个子任务）</li>
+<li>一位重生之王</li>
+<li>一件最紧急的事务</li>
+<li>城门之战</li>
+<li>血腥嫁妆</li>
+<li>削弱恶魔</li>
+<li>医嘱</li>
+<li>仁慈即力量</li>
+<li>旧方法出黄金</li>
+<li>力量的种子（瑞威隆的四大遗物）</li>
+<li>过去的错误</li>
+<li>学校放假了</li>
+<li>领事馆</li>
+<li>处决</li>
+<li>失踪的囚犯</li>
+<li>法师最后的抵抗</li>
+<li>矮人的秘密</li>
+<li>林德·肯姆的宝库</li>
+<li>真是大惊小怪</li>
+<li>来自远方的饥饿（瑞威隆的四大遗物）</li>
+</ul>
+<h2>Arx地图</h2>
+<h3>Arx区域速览</h3>
+<ul>
+<li>Arx下水道</li>
+<li>Arx郊区</li>
+<li>林德·肯姆的宝库</li>
+<li>法师监狱</li>
+<li>墓穴</li>
+</ul>
+<h2>Arx区域</h2>
+<h3>Arx下水道</h3>
+<p>推荐等级：17~19</p>
+<p>重要NPC：贾斯蒂娜女王，盗贼公会</p>
+<p>在下水道中可以找到多个NPC，例如女王的顾问伊斯贝尔和巨魔拉蒂夫及塔格。与该区域相关的任务包括“失踪的囚犯”、“过去的错误”、“矮人的秘密”、“林德·肯姆的宝库”。</p>
+<h3>Arx郊区</h3>
+<p>推荐等级：18~20</p>
+<p>重要NPC：达利斯</p>
+<p>该区域有多个NPC，但最值得注意的是达利斯。“锤击”主要任务以及“城门之战”都与该区域相关。</p>
+        <small class="page-url url "><a href="https://divinityoriginalsin2.wiki.fextralife.com/The+Arx" target="_blank">(https://divinityoriginalsin2.wiki.fextralife.com/The+Arx)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Battle-at-the-Gates-|-Divinity-Original-Sin-2-Wiki">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🚪&nbsp;</span>Battle at the Gates | Divinity Original Sin 2 Wiki</h3>
+        <small class="page-url url "><a href="https://divinityoriginalsin2.wiki.fextralife.com/Battle+at+the+Gates" target="_blank">(https://divinityoriginalsin2.wiki.fextralife.com/Battle+at+the+Gates)</a><br></small>
+        <small class="page-rating rating ">评分: 7.5<br></small>
+        <small class="page-annotation annotation ">注释: 提供了有关Battle at the Gates任务的具体信息，讨论了Voidwoken的影响。<br></small>
+    </div>
+    <div class="page-content content"><h2>协助圣骑士击败虚灵</h2>
+<h3>城门之战攻略</h3>
+<p>当你到达阿克斯的桥梁时，许多吸血虚灵会出现。击败他们并从圣骑士队长奥雷尔那里领取你的奖励。</p>
+<p>1 个虚灵领袖血怒（77,575 经验值）</p>
+<p>9 个杂项虚灵（吸血鬼、死灵法师等），每个价值 19,400 经验值</p>
+<p>3 个受伤/未武装的圣骑士，不会提供经验值，并且被设定为会死亡，但是你可以在脚本发生之前，通过传送一个死雾桶到他们身边来杀死他们（每个 38,800 经验值）。</p>
+<p>3 个提供 38,800 经验值的圣骑士</p>
+<h3>提示与技巧</h3>
+<p>在开始战斗之前，如果你走到西边小路的一角，你会看到一名受伤的法术大师。和他交谈，然后继续前进，你会找到一个可以攀爬的梯子。从较高的位置（那里没有虚灵）开始战斗，可以让你获得高度优势。</p>
+<p>任务容易出现错误，请参阅下面的评论。</p>
+<p>3 个受伤的圣骑士正在与 3 个虚灵战斗，并且有一个脚本会在你攻击、靠近、移动他们等情况下杀死他们。在脚本发生之前，你通常无法获得他们的经验值。但是，如果你将一个死雾桶传送到他们的队伍中，你可以在脚本发生之前杀死所有 3 个，从而获得 3 个受伤圣骑士的经验值。</p>
+        <small class="page-url url "><a href="https://divinityoriginalsin2.wiki.fextralife.com/Battle+at+the+Gates" target="_blank">(https://divinityoriginalsin2.wiki.fextralife.com/Battle+at+the+Gates)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Guide-for-Divinity:-Original-Sin-2---Definitive-Edition---Chapter-6---Arx">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🗺&nbsp;</span>Guide for Divinity: Original Sin 2 - Definitive Edition - Chapter 6 - Arx</h3>
+        <small class="page-url url "><a href="https://www.trueachievements.com/game/Divinity-Original-Sin-2/walkthrough/9" target="_blank">(https://www.trueachievements.com/game/Divinity-Original-Sin-2/walkthrough/9)</a><br></small>
+        <small class="page-rating rating ">评分: 7.0<br></small>
+        <small class="page-annotation annotation ">注释: 此页面提供了Arx的线性剧情及任务轻微的叙事细节，涉及角色互动和探索。<br></small>
+    </div>
+    <div class="page-content content"><h2>第六章 - 阿克斯</h2>
+<p>沿着坠机后的线性路径前进——确保与塔奎因谈论诅咒——直到你到达一个有贾汉的朝圣者营地。 如果你洛丝，和他谈谈，找到阿克斯郊外航路点 (x:356 y:52)，然后沿着东侧的北路前往港口。进入港口后，克拉肯会发起攻击，你必须通过杀死所有触手或对头部造成足够伤害来击退它。之后，沿着北路向东走到船上，洗劫一些尸体，找到一个装有信件的箱子，信中会告诉你达利斯在哪里。与船长交谈，了解一些关于达利斯和她的船员的信息。从港口沿着中间的路径向西走，你会遇到蒂娜 (x:359 y:122)，你可以和她谈谈即将到来的婚礼，然后杀掉她以获得更多经验值。继续一直向西走，然后向南走，你会遇到一些有敌人需要战斗的废墟 (x:248 y:72)。向东北方向走，然后穿过桥向北走，但在门口向西走，杀死地上的魔法师。爬上梯子，向北走，占据高地与一些虚空生物战斗，但是确保尽可能不要伤害任何圣骑士，否则他们会对你怀有敌意。你可能想传送一个上去，试图拯救他们以获得奖励，然后杀死他们获得经验值。</p>
+<p>洗劫完毕后，继续向北走，你就会进入阿克斯城，找到阿克斯城市广场航路点 (x:281 y:266)。请注意，如果你在这里施放灵魂视觉，你会发现许多你可以交谈的灵魂，以获得关于正在发生的事情的信息。接下来，你想要向东走，找到兵营，并劝说肯姆勋爵不要杀死圣骑士。继续向东走，进入兵营。向南走，然后向西走到最后一个房间——移动西南角的板条箱，找到一个锁着的舱口。要打开它，请回答以下问题：</p>
+<p>纯洁
+纪律
+秩序
+忠诚</p>
+<p>在下面的房间里，画后面隐藏着按钮，你需要取下画，然后按以下顺序按下按钮：</p>
+<p>心灵 (x:62 y:7)
+身体 (x:52 y:1)
+社会 (x:59 y:26)
+神圣 (x:71 y:-1)</p>
+<p>一些隐藏的墙壁会滑回去。进入南边有巨大金堆的房间，然后顺着舱口下去，你会与3个幽灵作战。战斗结束后，四处走动，阅读你能找到的每份报告、书籍、日记和简报，因为这个房间里有很多信息，还有经验值和任务可以开始。在西北角的楼梯上有一个你可以拉动的杠杆，可以放下梯子。拉动杠杆进入下一个房间，你会发现温迪戈被锁在一个源力笼子里。说服她的守卫让你处理这种情况，然后使用设备降低屏障并与她交谈。当你有机会时，不要杀死她。相反，对她表示怜悯，她会奖励你一本《魅惑虚空生物》技能书并逃跑。</p>
+<p>穿过另一个出口，在东南角的一个牢房里，你可以找到你之前救下的圣骑士。和她交谈以了解一些事情并开始一个新任务，然后与西北高地平台上的沃登·尤娜交谈以开始另一个任务。现在离开牢房到地面上，你会发现一个正在劳作的魔法师。使用灵魂视觉，要么说服灵魂离开她，要么用源力吸血来摆脱灵魂。圣骑士会给你一个巨大的符文作为感谢。继续向东回到兵营，并在 x:363 y:244 使用灵魂视觉找到温斯洛魔法师的灵魂。和他交谈，说服他给你一些关于另一个魔法师的信息，然后撬开他旁边的门，向南走到边缘。你会看到魔法师的尸体在下面。把自己传送到他那里，阅读他尸体上的书，然后进入附近的污水管道。</p>
+<p>进入后向北走，找到阿克斯污水管道航路点 (x:203 y:775)。前往回声大厅航路点，你可以与塔奎因交谈，并向他质问他与布拉库斯复活有关的事情——他会交给你诅咒，解锁：</p>
+<p>获得诅咒</p>
+<p>回到阿克斯污水管道航路点，然后一直向南走，直到你找到一个被困在笼子里的男孩。绕过这个区域，将尸体传送到五芒星中。使用灵魂视觉和源力吸血术对付灵魂，然后同时点燃所有灯盏，卡隆就会出现，选择与他战斗。卡隆可能会在战斗开始时将你其中一个人打倒，所以尽量寻找策略或解决方法。重生偶像在这方面非常有用。战斗结束后，回到阿克斯污水管道航路点，然后前往最西边的房间。顺着梯子下到下一层。</p>
+<p><strong>你需要祝福、再生、治疗仪式和清洗伤口才能进行下一场战斗。</strong></p>
+<p>向前走，你会再次遭到一些虚空生物的伏击，但你需要注意你的角色——如果他们获得了“感染”状态，那么你需要使用之前的法术来移除该状态，否则你的角色会在下一回合立即被杀死。我知道这很蠢。雾气弥漫的爬行者死后会产生死亡迷雾，所以也要注意这一点。</p>
+<p>战斗结束后，穿过东侧的北通道，你会发现一个死亡迷雾箱子房间。在东墙上 x:468 y:632，你应该会找到一个你可以打开的隐藏墙壁，在里面你必须说服某人不要释放巨魔攻击你（或者你可以故意失败并与3个巨魔战斗——我个人觉得太麻烦了）。完成后，再次与大托莫拉交谈，说服她卖给你这幅画，并询问她从哪里偷来的，以获得更多任务。</p>
+<p>请注意，从这里开始，如果你还没有被伏击，你可能会遭到“医生”的某些手下伏击，但你想回到阿克斯城市广场航路点并保存你的游戏。现在解雇一名队员（除非你只用孤狼二人组），然后前往回声大厅。在船的东侧，你可以从泽里拉军士那里雇佣一名雇佣兵，然后带着你的雇佣兵回到城市广场航路点。从航路点向北一直走到大教堂，在那里你可以与莱尔兄弟 (x:296 y:446) 谈论走血之道路。继续向北走，看着一个朝圣者试图走血之道路而死。门打开后，向前走，与卢西安的雕像交谈——提到你没有偷窃，没有杀害无辜者，你没有侍奉虚空，并且你尊重灵魂，你将解锁：</p>
+<p>成功走过血之道路</p>
+<p>现在重新加载你的存档，继续向西走。穿过桥后，向南走一点，你会找到亚当商人，和他交谈以获得另一个任务。继续向西进入肯姆府邸，进入南边的房间，那里应该有猫评估师。和她交谈，说服她告诉你她在这里做什么，以获得另一个任务，然后从房间向北走出去，然后向西进入花园。你也可以找到阿克斯肯姆花园航路点。航路点的正西边将有一个隐藏的杠杆 (x:148 y:306)，你可以使用它来显示航路点的西南边的一个舱口 (x:137 y:287)，撬开并下去。</p>
+<p>保险库里有一些自动机，你必须与它们战斗——并使用源力吸血术杀死它们——战斗结束后，永恒卷轴可以在地图的东北角找到。卷轴旁边东墙上有一个隐藏的门，下一个房间里还有一个隐藏的门就在箱子后面。在下一个房间里，你会找到神圣画像，国王圣杯可以在原房间西侧的王座旁边找到。走到房间的南侧，使用灵魂视觉查看丢失的灵魂画像，你已经有了——所以把它放进去，进入房间，然后与南墙上的西书柜互动，并使用《神王之书》来显示一个可以下去的舱口。和温迪戈谈谈，然后向前走，和源力之王谈谈。之后，将责任画像放在祭坛上，它会显示另一个可以下去的舱口。顺着楼梯下去，使用灵魂视觉查看3个灵魂正在折磨阿尔胡。在对话中对他们使用源力吸血术来释放阿尔胡并引发战斗。确保阿尔胡活下来，通过将他传送到远处并在必要时治疗他。林德·肯姆不久后会加入战斗。</p>
+<p>一旦你完成了战斗，假设阿尔胡活下来了，你将解锁：</p>
+<p>拯救阿尔胡</p>
+<p>和阿尔胡谈谈，然后一路回到地面，回到猫评估师那里，把那三件她正在寻找的物品卖给她，当你离开肯姆的庄园时，一个精灵会告诉你，你和医生有个约会，让他在地图上标出来。回到阿克斯城市广场航路点，向北走，进入玩具制造商的建筑 (x:282 y:301)，和他交谈以获得护身符并解锁：</p>
+<p>说服玩具商桑德斯给你他的护身符</p>
+<p>现在向北走，找到医生的庄园 (x:410 y:356)，如果你是洛丝，玛拉迪会带你走一条侧路来削弱阿德拉马利克。接受邀请，你将被传送到他的家乡，在那里你只需沿着路跑，熄灭你遇到的每一根蜡烛。当你被送回现实世界时，进入房子，<strong>进行硬存档</strong>，然后和洛丝一起与医生交谈，这一次与他签订契约，分享神性时刻。请注意，从这里开始我们将进入游戏后期，因此现在应该完成任何购物、杀戮狂潮或额外探索。据我所知，我当时是 20 级，我觉得游戏并不太难。还有很多事情要做，但我感觉 20 级已经足够了。回到阿克斯城市广场，向北回到我们之前去过的血之道路，以获得成就，当你站在卢西安雕像前时，向西走，找到一个可以使用按钮的地方。把护身符放在里面，大声朗读卷轴，将显示一个可以下去的舱口。向前走，你会发现墓穴航路点 (x:71 y:610)，并继续向北经过它，你会发现一个祭坛。在它正下方的南方将有一根管道——在管道上做一个血面，然后与祭坛互动并选择“将你的手沿着基座顶部移动一个手掌的宽度”以开始一个管道迷宫。</p>
+<p>以下是解决方案：（图片）</p>
+<p>深吸一口气，然后……宣称神性
+实现你作为神醒者的命运。成为新的神明
+升为神明
+深吸一口气，然后……宣称神性
+将源力归还给所有人。将神性释放到世界。当每个人都是神明时，没有人是神明。</p>
+        <small class="page-url url "><a href="https://www.trueachievements.com/game/Divinity-Original-Sin-2/walkthrough/9" target="_blank">(https://www.trueachievements.com/game/Divinity-Original-Sin-2/walkthrough/9)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Arx-is-TERRIBLE---Larian-Studios-forums">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">💬&nbsp;</span>Arx is TERRIBLE - Larian Studios forums</h3>
+        <small class="page-url url "><a href="https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=619666" target="_blank">(https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=619666)</a><br></small>
+        <small class="page-rating rating ">评分: 6.0<br></small>
+        <small class="page-annotation annotation ">注释: 讨论了玩家对于Arx城剧情的反响，表达了对任务设计及内容分布的担忧。<br></small>
+    </div>
+    <div class="page-content content"><h2>OP Churon127 的评论</h2>
+<p>Arx 太糟糕了！我抓到你了！你最后是不是真的时间不够了？^^  来吧！整个游戏做得非常好，直到你到达血月岛，我不喜欢它的外观和氛围，但嘿——这只是我的观点。然后是无名岛——再次精彩，但随后出现了 Arx §/($%/&amp;()。你写的这个任务线太糟糕了。步骤太多了，没有适当的提示，如果你不阅读论坛里救世主发布的“玩了 30 多个小时后我找到了这个和那个”（不想剧透，但让我说一下最后的阿鲁之门为例）。这完全没有必要，并且真的毁了我对这款游戏之前几乎完美的印象。请修复！哦——顺便说一下，让我用之前的角色创建一个新游戏。干杯！</p>
+<h2>Sil 的评论</h2>
+<p>我有同样的感觉，感觉像是游戏后期要么仓促完成，要么开发者黔驴技穷了。与披着斗篷的人物和达利斯的结局，真的感觉剧情虎头蛇尾了。Arx 并不差，但与游戏其余部分相比，令人失望。轻微剧透：总的来说，我同意它需要更清晰地说明你应该去哪里以及应该做什么才能继续游戏，它需要彻底的平衡调整。但总的来说？我认为至少还可以。它具备成为精彩章节的基础。它只需要更多细致的打磨才能达到游戏其余部分的水准！</p>
+<h2>Re: Arx is TERRIBLE  Sil 的回复</h2>
+<h2>vometia 的评论</h2>
+<p>最初由 Sil 发布：哦，我的天，通过开启上帝模式，VTM 血统得到了无限的提升，这样你可以在一定程度上忽略糟糕的战斗并专注于剧情。是的，这正是我所做的。游戏后半部分的许多场景看起来更适合更有趣的玩法，但到那时它几乎已经变成了一款尽管仍然相当注重叙事的射击游戏了。但它一开始并非如此。我应该真正用其他角色类型重新玩一遍（或者至少玩前半部分！）。我喜欢奶酪。</p>
+        <small class="page-url url "><a href="https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=619666" target="_blank">(https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=619666)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Divinity:-Original-Sin-II---Wikipedia">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">📖&nbsp;</span>Divinity: Original Sin II - Wikipedia</h3>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Divinity:_Original_Sin_II" target="_blank">(https://en.wikipedia.org/wiki/Divinity:_Original_Sin_II)</a><br></small>
+        <small class="page-rating rating ">评分: 6.0<br></small>
+        <small class="page-annotation annotation ">注释: 简要介绍了游戏背景及剧情发展，设置了Arx城的战斗环境及历史，信息更通用。<br></small>
+    </div>
+    <div class="page-content content"><h2>神界：原罪 2</h2>
+<p>与系列中的其他游戏一样，《神界：原罪 2》的背景设定在里维隆（Rivellon）这个中世纪奇幻世界，故事发生在《神界：原罪》几个世纪之后。故事开始于卢西安（Lucian）去世数年之后，卢西安是一位拥有无与伦比的力量的人类，被里维隆的人民尊为“神选者”，是里维隆主要宗教中“七神”的选民。里维隆目前正遭受虚空异种（Voidwoken）的侵害，这些神秘起源的怪物攻击所有其他生物，而它们的威胁在卢西安去世后大大增加了。</p>
+<p>在里维隆的人民中，源力术士（Sourcerers）是一些天生具有操纵一种被称为“源力”（Source）的能量天赋的个体，他们可以用它来施放强大的法术；然而，使用源力会吸引虚空异种，导致源力术士们遭到恐惧和憎恨。因此，由卢西安创建的神圣秩序（Divine Order）将其中的一个派系——法师团（Magisters）——专门用来抓捕或杀死所有源力术士；被俘获的人会被送往欢乐堡（Fort Joy），这是一个位于死神之眼（Reaper&#x27;s Eye）岛上的监狱城镇，这座岛屿以前是已故的“源力之王”（Source King）和里维隆前暴君统治者布莱克斯·雷克斯（Braccus Rex）[注释 1]的居住地。法师团由卢西安的儿子亚历山大主教（Bishop Alexandar）领导，他自称是新的神选者，以及他的顾问达利斯（Dallis）。</p>
+<p>玩家角色是一个源力术士，可以由玩家从头创建，也可以是六个预设角色之一，所有这些角色也可以作为玩家角色团队的一部分被招募：野兽（Beast），一个一心想要结束他表妹矮人女王贾斯蒂娜（Justinia）统治的雄性矮人；费恩（Fane），一个雄性，是早已被遗忘的不死种族中最后一位看起来像不死生物的成员，他被囚禁了数个纪元，现在试图找出他同族发生了什么；伊凡·本·梅兹德（Ifan ben-Mezd），一个雄性人类，是卢西安的前朋友和神圣秩序的前成员，现在是名为“孤狼”（Lone Wolves）的雇佣兵团的一员；洛希（Lohse），一个女性人类，试图摆脱体内一个每天都在增强控制权的神秘而强大的恶魔；红王子（Red Prince），一个雄性蜥蜴人，原本注定要成为他族群中的领导者，但由于与恶魔的交易而被放逐，现在他决心夺回自己的王位；塞比尔（Sebille），一个女性精灵和前奴隶，正在寻找对她前蜥蜴人主人的复仇。</p>
+<h3>故事情节</h3>
+<p>玩家角色，一个源力术士，被神圣秩序抓获，并被送往岛上监狱欢乐堡。这艘船被一只巨大的克拉肯虚空异种攻击并击沉；然而，玩家角色被一股神秘的力量从溺水中救了出来，这股力量的声音称他们为“神选之子”（Godwoken）。在欢乐堡，神选之子目睹了由亚历山大和达利斯领导的法官团的残酷统治，他们经常“清除”囚犯的源力，将他们变成他们用来作为战斗力量的没有意识的躯壳。逃离欢乐堡后，神选之子遇到了搜寻者（Seekers），这是一个寻找有潜力成为新神选之子的源力术士的团体。神选之子还参观了回声大厅（Hall of Echoes），在那里他们遇到七神之一。这位神，自称是之前救了神选之子的那位，解释说，将里维隆和虚空隔开的魔法屏障——面纱（Veil）——正在削弱，并允许虚空异种进入里维隆，消耗七神的源力。神敦促神选之子发挥他们的潜力，升为神，并在虚空杀死七神之前阻止它。在搜寻者和半恶魔玛拉迪（Malady）的帮助下，神选之子在击败亚历山大并偷走他的有感知的飞船——复仇女神号（Lady Vengeance）后逃离了死神之眼。</p>
+<p>复仇女神号遭到达利斯和她的得力助手弗雷德曼（Vredeman）的袭击；大多数搜寻者都被杀死了，但由于玛拉迪，这艘船勉强逃脱了。神选之子航行到死神海岸（Reaper&#x27;s Coast）岛，在那里他们解开了他们的源力。他们的神后来引导神选之子前往升天之井（Well of Ascension），在那里他们可以吸收足够的源力来成为神。他们还得知达利斯挖掘出了永恒物（Aeteran），这件神器能够清除里维隆所有的源力。神选之子遇到了艾特纳（Aeterna），一个自称是不死种族——永恒者（Eternals）——成员的生物，他们是里维隆的最初居民。神选之子得知七神实际上是渴望权力的永恒者，他们背叛了他们物种的其他成员，将他们放逐到虚空。然后，七神创造了里维隆的凡人种族，并假扮成神灵，通过从他们身上汲取源力来维持自己的权力。</p>
+<p>神选之子到达了无名岛（Nameless Isle），升天之井就位于那里。在那里，他们得知虚空异种就是被放逐到虚空的永恒者，而虚空之王（God King），也是虚空异种的领导者，是永恒者的前任国王。虚空之王和虚空异种打算返回里维隆，并将其夺回。在与亚历山大的最后一次遭遇后，神选之子到达了井边，但在他们能够成为神之前，达利斯出现并用永恒物摧毁了井。神选之子的失败激怒了他们的神，他们的神变得愤怒无比并攻击他们；神选之子在战斗中击败了他们，杀死了所有七神。</p>
+<p>神选之子前往阿克斯（Arx）市，该市已遭到虚空异种的围攻。他们跟踪达利斯和弗雷德曼来到卢西安的坟墓，在那里他们发现卢西安还活着，他透露他伪造了自己的死亡，而且是他，而不是虚空，一直在从七神那里汲取源力。卢西安打算清除里维隆所有的源力，并用它来永久性地封住面纱，永远地将虚空异种挡在外面，代价是世界上所有的源力。达利斯，暗地里是一个永恒者，一直在亚历山大的背后，在弗雷德曼的帮助下帮助卢西安，而弗雷德曼实际上是被达利斯变成不情愿的奴隶的复活的布莱克斯·雷克斯。</p>
+<p>布莱克斯·雷克斯摆脱了达利斯的控制，并召唤克拉肯攻击神选之子、卢西安和达利斯。在击败他们之后，玩家将面临四个最终选择：成为新的神选者和里维隆最强大的存在；实现卢西安的愿望，清除里维隆所有的源力，以永远将虚空异种封锁起来；释放源力和神的力量给世界，以便里维隆的所有生物都成为神；或者允许虚空之王返回里维隆，恢复永恒者的统治。</p>
+        <small class="page-url url "><a href="https://en.wikipedia.org/wiki/Divinity:_Original_Sin_II" target="_blank">(https://en.wikipedia.org/wiki/Divinity:_Original_Sin_II)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Characters-in-Divinity:-Original-Sin-II---TV-Tropes">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">👥&nbsp;</span>Characters in Divinity: Original Sin II - TV Tropes</h3>
+        <small class="page-url url "><a href="https://tvtropes.org/pmwiki/pmwiki.php/Characters/DivinityOriginalSinII" target="_blank">(https://tvtropes.org/pmwiki/pmwiki.php/Characters/DivinityOriginalSinII)</a><br></small>
+        <small class="page-rating rating ">评分: 5.0<br></small>
+        <small class="page-annotation annotation ">注释: 介绍了游戏的主要角色及角色构建的多种可能性，但较少与Arx城直接相关。<br></small>
+    </div>
+    <div class="page-content content"><h2>夜视# 神性：原罪 2</h2>
+<h3>角色</h3>
+<h4>一般情况</h4>
+<p>你扮演一名逃亡的源力法师，同时被虚空污秽和神圣教团追捕。因为你是源力法师，你被押送到欢乐堡，现在你必须逃离监禁。随着你继续生存，你开始更多地了解自己、和你一起旅行的人以及你神秘的力量，很快你就会意识到，你可能在瑞维隆的历史中扮演着比你想象中更大的角色。</p>
+<p>你可以创建一个自定义角色，或者你可以选择六个起源角色之一作为你的化身。你没有选择的起源角色可以招募为同伴。最多可以有三个其他人加入你的队伍。</p>
+<h4>游戏机制与设定</h4>
+<ul>
+<li><strong>死灵复生:</strong>  将死灵法术等级提升的角色。</li>
+<li><strong>反英雄团队:</strong> 他们都是相当有缺陷的个人，他们愿意做一些非常糟糕的事情来实现他们不可否认的自私目标，他们中的大多数甚至都是罪犯。但当涉及到对抗虚空污秽时，他们最终成为了世界上最好的希望。</li>
+<li><strong>穿甲攻击:</strong>  专注于恶棍或猎手技能树的角色可以获得这些技能，某些武器可以穿透盔甲。</li>
+<li><strong>任意人数限制:</strong>  某种程度上这是合理的，因为如果一群囚犯开始一起旅行，而且装备精良，法师们可能会起疑心。</li>
+<li><strong>死而复生:</strong> 你没有招募的任何起源角色都将在第一幕结束时被达利斯杀死。然后他们将在无名岛上以Boss角色出现。更传统的是，玩家控制的角色和潜在的所有其他同伴在教程结束时溺水身亡，但被众神复活。这包括那些在第一次与虚空生物战斗中被杀死的（甚至是被玩家角色本人杀死的）。</li>
+<li><strong>邪恶力量，邪恶的人:</strong>  施放诅咒和源力魔法通常不是一件好事，你可以扮演极其邪恶的角色。</li>
+<li><strong>邪恶力量，善良的人:</strong> 你可以施放源力魔法和诅咒，但仍然是一个好人。</li>
+<li><strong>黑魔法师:</strong>  神性的无职业系统使得有可能以这种方式扮演每一个角色。</li>
+<li><strong>血魔法:</strong>  专注于死灵法术会让你获得与血魔法相关的技能。</li>
+<li><strong>食人超能力:</strong> 精灵和不死族角色。</li>
+<li><strong>角色自定义:</strong> 即使你选择了一个起源角色，你仍然可以编辑他们的外观。当你打败第一幕后，你就可以重置你的整个队伍，包括他们的外观，但有一些小的限制（例如，你不能让红王子不再是红色）。游戏采用无职业系统，这让你有很大的自由度来构建你的整个团队，让你感觉任何你想要的方式。</li>
+<li><strong>游戏性和故事情节的整合:</strong> 你可以改变所有玩家角色的外观，但你不能改变红王子的肤色，因为他的红色鳞片是一个故事情节的关键点。此外，你无法让野兽刮干净胡子或给他设计没有胡子的面部毛发造型，因为他的胡子在对话中被多次提及，并且是他宇宙中形象的著名部分。甚至有人还为此写了一首海员号子！</li>
+<li><strong>游戏性和故事情节的分离:</strong>  尽管有上述情况，你可以为塞比尔选择任何你想要的面部模型……即使她默认拥有的那个是唯一一个拥有她主人用来控制她的活体伤疤的面部模型，而这正是她整个人物任务的关键。</li>
+<li><strong>万人迷:</strong> 如果你没有扮演一个彻头彻尾的恶棍，那么与起源角色发展浪漫关系非常容易。即使你与他们所有的互动都是柏拉图式的，在第三幕结束时，如果他们的好感度达到100，你可以与他们中的任何一个发生性关系。</li>
+<li><strong>天选之人:</strong> 所有玩家角色和同伴都是神选者，有可能成为新的神。更具体地说，他们是各自种族神祇的 chosen champions。</li>
+<li><strong>黑暗艺术:</strong> 源力魔法和死灵法术。</li>
+<li><strong>冷漠戏谑者:</strong> 可以扮演成这样。</li>
+<li><strong>功能失调的结合:</strong> 他们都被搞得一团糟，唯一团结他们的是他们成为神祇的共同目标。</li>
+<li>红王子有一种真正令人讨厌的优越感，他用它来弥补他的不安全感和缺乏人际关系。</li>
+<li>洛丝体内有一个可怕的恶魔试图控制她，并否定她对喜剧和音乐的热情，这导致她难以信任，并愿意做出巨大的牺牲来重新获得自由。</li>
+<li>野兽是一个友好的家伙，但他对自己过于苛刻，并且由于在可怕的迷雾岛上的流亡经历而遭受某种程度的发育迟缓。</li>
+<li>塞比尔完全疯了，因为她在作为奴隶期间经历了真正可怕的时光，在此期间她被迫杀死了她种族中许多重要人物，为一个想要让她的人民从地球表面消失的人服务。</li>
+<li>伊凡的道德准则已经非常松散，而且是一个相当冷漠的家伙，因为他未能将精灵从神圣教团的死亡雾中拯救出来而感到内疚。然后事实证明，他被骗了，通过交付一个他被告知可以拯救他们的装置而确保了精灵森林的毁灭。</li>
+<li>法恩是一位心胸狭窄的学者，他看不起所有凡人种族，并且间接地对瑞维隆发生的每一件坏事负责。</li>
+<li><strong>元素攻击:</strong> 他们一开始就拥有元素技能，或者可以在提升所需的技能属性后学习它们，尽管如果你招募他们并让他们选择不同的职业，这些技能显然会发生变化。</li>
+<li><strong>人人皆可恋爱:</strong> 所有同伴都可以被玩家角色浪漫，无论性别如何，并且如果玩家扮演他们，他们都可以反过来与任何人浪漫，无论性别如何。</li>
+<li><strong>邪恶术士:</strong> 可以扮演成好人、坏人或介于两者之间，并且可以作为源力法师使用黑暗艺术。</li>
+<li><strong>邪恶与邪恶:</strong> 邪恶角色仍然被迫与神圣教团和虚空污秽战斗。</li>
+<li><strong>经验丰富主角:</strong> 在游戏开始时，他们都拥有相当传奇的过去和一些值得注意的事迹和冒险经历。</li>
+<li><strong>反派角色转变:</strong> 你没有招募的任何角色不仅最终会死去，而且他们将在无名岛的尽头作为不死生物并为神王服务而回归。</li>
+<li><strong>患难见真情:</strong> 即使是那些乍一看就互相憎恨的队员（特别是塞比尔和红王子），最终也可以在游戏结束前成为朋友，因为他们多次互相救了彼此的命，并开始了解彼此。</li>
+<li><strong>四人乐队:</strong>  一次最多只能有四名成员加入你的队伍，而那些没有带你去与达利斯战斗的人将在第一幕结束时的战斗中死去。然而，《堕落英雄》暗示该队伍原本是完整的六人组，因为他们在那个游戏中都还活着而且很好。</li>
+<li><strong>强制睡眠:</strong>  氯仿，这是专注于恶棍技能树的角色的一项技能。</li>
+<li><strong>所有孩子的朋友:</strong>  潜在地。在一个支线任务中，你了解到一个男孩试图游到欢乐堡去找他的父亲，却被鲨鱼吃掉了。你可以撒谎，告诉他们他成功到达了欢乐堡的海滩，而不是残酷地向他的朋友们坦白孩子的命运。</li>
+<li><strong>所有生物的朋友:</strong> 可以这样扮演。</li>
+<li><strong>劫后余生之性:</strong> 在第三幕的激烈高潮之后，如果你与他们的关系足够好，你可以与起源角色这样做。</li>
+<li><strong>善良的力量，邪恶的人:</strong> 即使是最邪恶的玩家角色仍然能够施放祝福。</li>
+<li><strong>隐身:</strong>  变色龙皮肤是那些专注于变形技能树的人的一种选择。</li>
+<li><strong>地狱之火:</strong> 源力使用者能够施放的潜在技能。</li>
+<li><strong>声名狼藉的英雄:</strong> 由于源力法师被指责为虚空污秽袭击的罪魁祸首，主角不断地逃离法师们，并且必须隐藏他们真正的身份，即使他们是在执行众神的旨意。</li>
+<li><strong>我爱死者:</strong> 如果你扮演法恩（一个不死族角色）或与法恩发展浪漫关系，这个说法适用，因为上述角色是不死族，只不过是活动着的骨骼。</li>
+<li><strong>后期角色综合征:</strong> 源于起源角色的避免：首先，所有六个角色都可以在到达欢乐堡城墙之前（红王子和法恩）或之后不久（其余角色）被找到并招募；其次，无论是谁在达利斯试图登上复仇女神号之间与你在一起，都会在那次游戏过程中永久失去，最终先死去，然后被神王奴役。</li>
+<li><strong>主题音乐:</strong> 每个角色都有一个乐器，当他们在战斗中做一些重要的故事或令人印象深刻的事情时，这个乐器就会成为主角。尤其是洛丝，每当她头脑中的恶魔在故事中开始活动时，她的主题音乐就会响起。</li>
+<li><strong>可爱的恶棍:</strong>  拥有亡命之徒标签的角色可以以这种方式扮演。</li>
+<li><strong>魔法增强:</strong></li>
+<li><strong>魔法是吸引怪物的磁铁:</strong>  施放你的源力魔法有可能召唤虚空污秽。</li>
+<li><strong>魔法骑士:</strong> 任何角色都可以使用物理或魔法战斗，并且可以像玩家所希望的那样向任一方向移动。</li>
+<li><strong>军事法师:</strong>  拥有士兵起源标签的角色，并使用魔法。</li>
+<li><strong>物理之神:</strong> 所有潜在的可玩角色都是神选者，他们必须与虚空污秽战斗，这是一种即使是神也无法一起战胜的邪恶力量。</li>
+<li><strong>力量限制器:</strong> 你开始游戏时戴着源力项圈，这会阻止你施放源力魔法。你在第一幕的目标之一就是把它取下来。</li>
+<li><strong>心灵力量:</strong>  专注于心灵感应民用技能或气象学家技能树的角色。</li>
+<li><strong>扭转命运:</strong> 即使其中一个神选者注定要成为新的神，你也可以最终没有神，要么给予每个人源力魔法，要么消除所有源力魔法。</li>
+<li><strong>第二春:</strong> 任何起源角色，包括自定义起源，都可以成为法恩的第二春，他是一个已婚男人，很久以前就失去了他的家人和他的族人。</li>
+<li><strong>招牌动作:</strong>  每个起源角色都有一个独特的源力技能。所有自定义角色都具有相同的源力技能：保护圆顶，它可以恢复物理护甲、魔法护甲，并增加区域内盟友的抗性。</li>
+<li><strong>通晓动物语言:</strong>  拥有宠物伙伴能力的角色可以与动物交谈，动物通常会提供有用程度不同的信息，在某些情况下还会给你一些你本来永远不会知道的任务。</li>
+<li><strong>静态角色，可交换角色:</strong> 他们每个人都可以是玩家角色或同伴角色。</li>
+<li><strong>超强基因:</strong> 你必须天生就拥有源力魔法才能使用它，所有可玩角色都拥有它。</li>
+<li><strong>召唤魔法:</strong>  专注于死灵法术或召唤的角色可以获得这些技能。伊凡的源力技能是召唤一只狼。</li>
+<li><strong>强忍着合作:</strong> 他们大多数人一开始并不怎么看得起对方（尤其是塞比尔和红王子）。这甚至延伸到他们的个人任务，因为他们中的许多人在各种方面都相互冲突，例如一个角色需要杀死另一个角色需要保活的人。</li>
+<li><strong>善良升级:</strong>  如果你选择更不光彩的角色作为你的玩家角色，你可以这样扮演他们。例如，红王子是一个毫不掩饰的奴隶主，他几乎抓住每一个机会告诉别人他是最好的，其他人应该对他顶礼膜拜。如果他是你的化身，你可以让他对他人更加尊重，甚至对他同类的奴隶制行为表示极大的悔恨和厌恶。</li>
+<li><strong>龙卷风移动:</strong>  几个技能树有这种类型的攻击。</li>
+<li><strong>反派主角:</strong>  拥有反派标签的玩家角色仍然是世界上阻止虚空污秽的唯一机会。</li>
+<li><strong>自主变形:</strong> 专注于变形技能树会让你获得变形能力。</li>
+<li><strong>白魔法师:</strong>  角色可以这样扮演。</li>
+<li><strong>狂野魔法:</strong>  召唤技能树中的维度闪电。它会发射一道随机类型的闪电，并留下相应的表面。</li>
+<li><strong>在牢房里相遇:</strong>  你在前往欢乐堡的囚船上遇到了你所有潜在的团队成员。</li>
+<li><strong>你们都分享我的故事:</strong>  囚船上的陌生人最终在至少两个层面上有着深刻的联系：</li>
+<li>首先，所有六个（七个，如果你玩的是自定义PC）实际上都是神选者，是他们各自种族之神的化身，被他们选中以升为神，更新他们神祇的存在。</li>
+<li>值得注意的例外是洛丝，她实际上被人类之神拉利克拒绝了，而是被类似神灵的恶魔阿德拉姆利克附身。</li>
+<li>除此之外，每个人都直接参与到围绕神性的大戏中：红王子的爱人受制于神王，洛丝被对成为神感兴趣的恶魔附身，野兽是矮人女王的离经叛道的表兄，正被神王的仆人操纵，塞比尔是精灵的第一继承人，他们认为她的提升是恢复他们种族的一种方式，伊凡是卢西安的前副手，现在正在追杀他的儿子亚历山大，而法恩实际上是无意中煽动整个神性事件的人。</li>
+<li><strong>我的灵魂是我的！:</strong>  可以吞噬鬼魂的灵魂来为他们的源力魔法提供能量。</li>
+</ul>
+<h4>自定义起源</h4>
+<p>一名被法师们与其他起源角色一起发现并被押送到欢乐堡的源力法师。然而，是幸运还是命运，他们最终成为了一名神选者，并成为现在空缺的神位候选人。</p>
+<ul>
+<li><strong>屏障战士:</strong>  他们的特殊源力技能是一个保护性圆顶，它可以增强所有元素抗性，并为影响区域内的盟友再生护甲点。</li>
+<li><strong>天选之子:</strong>  与其他人一样，自定义起源是一个神选者，并获得了他们神的恩惠。矮人角色受到杜娜的青睐，蜥蜴人受到佐尔-斯蒂萨的青睐，精灵受到提尔-森德利乌斯的青睐，人类受到拉利克的青睐。同时，不死族角色受到阿玛迪亚的青睐。</li>
+<li><strong>角色自定义:</strong> 你角色的大多数方面都可以被修改，从他们的性别和种族到他们的起始职业。你甚至可以扮演任何种族的亡灵。</li>
+<li><strong>骷髅架:</strong> 如果扮演不死族角色，他们将是一个没有血肉的骷髅，尽管非蜥蜴人仍然可以以某种方式拥有头发。</li>
+<li><strong>奇幻种族歧视:</strong>  像法恩一样，如果你扮演不死族角色，你的角色会受到这种待遇，这意味着你必须始终保持隐藏，以免有人发现你的真实身份并攻击你。</li>
+<li><strong>经验丰富的主角:</strong>  无论背景如何，自定义起源都被暗示拥有丰富的经验，鉴于他们作为源力法师的名声和力量。拥有士兵标签的角色最直接地展现了这一点，因为他们可以告诉伊凡他们曾在各自国家的军队服役。</li>
+<li><strong>从零到英雄:</strong>  大多数背景标签都暗示着卑微的出身，例如野蛮人、小丑或亡命之徒，但他们可以提升为新的神。</li>
+<li><strong>最伟大的故事从未被讲述:</strong>  轻描淡写。如果你扮演的是不死族并且拥有士兵标签，伊凡会质疑你是否服役过。不死族选择会让你评论道，你服役过，但在没有人记得的战斗中战斗过。</li>
+<li><strong>多项选择过去:</strong>  虽然他们没有详细说明他们的过去，但他们的种族和标签提供了无数的背景可以选择，甚至包括不死族角色。</li>
+<li><strong>奇怪的友谊:</strong>  与伊凡和红王子等道德上不那么令人信服的角色。如果你扮演非蜥蜴人，后者尤其值得关注，因为他看不起人类等“低等种族”，同时又认为你是优秀的伙伴。如果你扮演蜥蜴人，这也适用于塞比尔，因为她以前是蜥蜴人拥有的奴隶，并理所当然地鄙视他们。如果你们发展浪漫关系，它可以直接升级为关系升级（尽管红王子将永远优先考虑萨达）。</li>
+<li><strong>唯一清醒的人:</strong>  与其他拥有黑暗和痛苦的过去以及个人恶魔要应对的起源角色相比，你的角色非常平淡，并且可能是除了洛丝和野兽之外唯一一个一开始就“道德良好”的角色。除非你扮演的是反派主角。</li>
+<li><strong>真正700岁:</strong>  不死族自定义起源被暗示比大多数角色都要年长，他们早期的对话选择之一就指出他们是如何在一场没有人记得的战争中战斗过的。</li>
+<li><strong>反派感兴趣:</strong>  尽管虚空污秽对待他们以及其他神选者（法恩除外）的方式一样，他们认为法恩是叛徒，但仍然有“救赎”的可能，但神王却为不死族自定义起源提供了一个在他身边的位置，并试图诱惑他们为他效力。</li>
+</ul>
+<h4>红王子</h4>
+<p>他的起源故事可以在这里查看。</p>
+<ul>
+<li><strong>亚当和夏娃的情节:</strong>  虽然蜥蜴人没有灭绝的危险，但他将创造一个新的物种。红王子和萨达注定要带回蜥蜴人曾经是的那样伟大的红龙。</li>
+<li><strong>并非所有闪光的东西都是金子:</strong>  如果你遵循他的个人任务，他最终会得出这个结论。</li>
+<li><strong>他仍然在游戏结束时成为皇帝，但他承认，他最终真正想要的是和他的爱人在一起，看着他的孩子飞翔。</strong></li>
+<li><strong>红王子:</strong> 我的一生都为这一刻而准备，成为万王之王，诸神之神。我不会说这是徒劳的，但我可以说这是虚荣的。如果我现在有机会登上我的王位，我会坐在它旁边，把目光投向地平线，思考更值得的事情。我会想到萨达，我的挚爱。我会想到我的孩子们，在火热的空中快乐地跳舞。当然，我还想起了你，我们一起经历的冒险，我们不可思议但发自内心的友谊。是的，我会坐在那里，心满意足，让你登上王位。</li>
+<li><strong>贵族皆邪恶:</strong> 他许多独特的对话选择将他描绘成对自己视为不如他的人漠不关心，即：所有人。他甚至可以卑鄙到将塞比尔卖作奴隶作为送给影子的礼物。然而，他也可以被塑造为认识到自己的错误并努力成为善良的王子。</li>
+<li><strong>纸上谈兵:</strong>  字面意思。他是一位非常成功的将军和战略大师，他曾获得无数次胜利……所有这些都是在他舒适的沙发和，是的，扶手椅上完成的，因为他太重要了，不能冒险在战场上失败。然而，他仍然在战斗中训练自己，并且他绝对不是一个混混。</li>
+<li><strong>刺客淘汰赛:</strong>  他一直是许多想要暗杀他的刺客的目标，以至于他已经厌倦了不断地企图暗杀他的行为。</li>
+<li><strong>化身:</strong>  <em>所以，那些试图杀死红王子的刺客……他担心吗？</em> 红王子：当然不。尽管他们是讨厌的东西。</li>
+<li><strong>赎罪者:</strong>  扮演好人红王子很可能会引发这个说法，因为他在他控制你之前在战争之家已经做过一些可疑的事情，例如拥有和虐待奴隶，也许最可怕的是，他提出了用死亡雾攻击精灵家园以击败黑环的计划。你有许多机会表达对你的行为的后悔，承诺你会尽你所能弥补，甚至在复仇女神号上谴责奴隶制。</li>
+<li><strong>孩子让一切都变得更好:</strong>  当他遇到他的孩子时，他最脆弱的时刻之一；如果让你和萨达在第二幕中发生性关系，那他可能是一条小龙。想到成为父亲，他几乎要流泪了。</li>
+<li><strong>超级学霸:</strong>  是一位学者，而且绝对是一位超级坏蛋。</li>
+<li><strong>芭比娃娃解剖学:</strong>  与其他种族不同，像他这样的蜥蜴在没有装备的情况下不穿内衣，但他的腹股沟区域无论如何看起来都是完全光滑的。</li>
+<li><strong>大块头:</strong>  就体型和战斗能力而言。他是所有可用队员中最大的一个（注意，塞比尔比他高一点，但她与王子英勇的体型相比显得又瘦又刻薄），并且是填补物理伤害使用者“骑士”原型的那个人。即使你让他专注于力量以外的东西，叙述者也会多次评论他的力量，而且他仍然足够强壮，可以将塞比尔抬起，并用一只胳膊将你从地上提起来。</li>
+<li><strong>双性恋三角恋:</strong>  在这个故事中，他是唯一一个可能与男性和女性伴侣发生浪漫关系的队员。由于萨达，他爱上一个女人是肯定的，所以如果他是玩家角色并试图与男性队员发生浪漫关系，或者如果你的玩家角色是男性并试图与他发生浪漫关系，那么这个说法就生效了。然而，无论哪种方式，虽然他不否认自己的感情，但他会优先考虑他对萨达的爱。</li>
+<li><strong>蓝色血液:</strong>  蜥蜴人总的来说已经认为自己比其他人更伟大。红王子更是如此，因为他出身皇家。</li>
+<li><strong>吐息武器:</strong>  龙焰，蜥蜴人的种族技能，让他可以用火攻击并创造相应的表面。</li>
+<li><strong>角色发展:</strong>  虽然他从未完全失去他皇室的风范（或轻浮的态度），但完成他的任务使他成为一个更加开明的人，以及一个仁慈、睿智和进步的父亲，为新一代的龙和蜥蜴帝国的皇帝。</li>
+<li><strong>天选之子:</strong>  除了像其他英雄一样是神选者之外，根据蜥蜴人的传说，他就是这个。如果你问他为什么是红色的，他会向你讲述一个华丽的故事，讲述他如何是太阳的字面上的孩子，注定要带领古代帝国进入一个新的伟大时代。在立即将这个故事斥为完全无稽之谈并与玩家一起大笑之前。虽然事实证明他变红确实使他成为某种意义上的 chosen one；他和萨达是注定要将龙重新带入现代世界的人。</li>
+<li><strong>对比续集主角:</strong>  与第一款《神性：原罪》游戏的主角卢西安以及最后一位神在看似死亡之前的形成鲜明对比。他们都共享相同的默认职业（战士），并开始了一段成为神的旅程，但卢西安出身卑微，对拯救世界有着既得利益，并且拥有“理想”英雄的典型外貌，而红王子则出身于特权的贵族家庭，其自私的动机是夺回他的王位和贵族地位，并且是一条蜥蜴，而不是该类型游戏中典型的人类主角。尽管卢西安拥有更“典型”的角色扮演游戏英雄背景，但他后来犯下了一些令人震惊的行为，这使卢西安扮演了反派角色。红王子虽然有着严重的缺陷，但他最终可以自我救赎成为真正的英雄，能够设法拯救瑞维隆而不采取极端措施，这无意中会让他与（并强迫他对抗）卢西安本人发生冲突。</li>
+<li><strong>冷漠戏谑者:</strong>  这名男子散发的轻浮程度是超人的。红王子：当你显然对酱汁一无所知时，不要对我轻浮。</li>
+<li><strong>冰雪女王融化:</strong>  当你第一次见到他时，他把你视为仅仅是一个潜在的奴隶。当你和他一起旅行并改善他对你的态度时，他会开始变暖。当你点击他开始对话时，请注意他从第一幕到第二幕的问候是如何变化的。在第二幕达到高潮，当他开始对你给予真诚的赞美时。红王子：在那场令人振奋的战斗之后，我的心情相当不错，所以我认为我会回报你的赞美：有你真好。</li>
+<li><strong>龙族血统:</strong>  可能吧。蜥蜴人认为他们曾经是龙的一种，在与瑞维隆的“低等”种族混杂后变得堕落。蜥蜴人的种族技能加强了这一想法。他们唯一承认比蜥蜴人更伟大的生物是龙。事实证明这是真的。蜥蜴人曾经是伟大的红龙，但有些事情导致它们缩小并失去了翅膀。现在红王子和萨达将再次向世界介绍伟大的红龙。</li>
+<li><strong>龙骑士:</strong>  几乎是字面意思，因为他默认是一位战士，而且所有蜥蜴人都有龙族血统，而红王子是注定要再次生育龙的人。</li>
+<li><strong>皇帝:</strong>  他的目标是夺回他的王位。在游戏进行到中途时，它变成了实现他与萨达的命运，尽管完成这个目标最终还是让他成为皇帝。</li>
+<li>**人人都叫他“酒保”: ** 人们只称呼他为“红王子”或仅仅是“王子”。他的名字很可能是红王子。</li>
+<li><strong>确立人物的时刻:</strong>  向船上的厨师抱怨说，他习惯了12道菜的晚餐，吃不惯她试图为他服务的船上的食物。如果你自己和他说话，他会评估你的角色，并试图把你变成他的奴隶之一。</li>
+<li><strong>邪恶的英国人:</strong>  他有一个听起来很讲究的口音，如果你把他扮演成一个混蛋，你可以用这个说法。</li>
+<li><strong>邪恶王子:</strong>  可以这样扮演，但作为追随者，他大多是一个相反的情况。他当然有一些坏品质，最突出的是他的傲慢，但他有一颗善良的心，并不需要花费太多就能挖掘出来。</li>
+<li><strong>流亡者:</strong>  由于神秘的原因，他被逐出家乡，流亡到古代帝国。如果被问到，他会解释说这是因为他一直在睡觉的女妖决定试图杀了他，当他杀了她时，她发出了一声尖叫，这声尖叫可以在整个城市听到，揭示了他与恶魔勾结的事实。</li>
+<li><strong>替代品:</strong>  埃德蒙。两者都是有天赋的蜥蜴将军，他们认为自己优于周围的每个人。他们甚至拥有相同的配音演员！</li>
+<li><strong>奇幻种族主义:</strong>  像大多数蜥蜴人一样。尽管作为一名队员，很难判断有多少是由于真正的种族主义、他的势利，或者这仅仅是他应对机制的一部分。作为玩家角色，这可以被反驳或痛苦地直截了当；你可以对塞比尔做一件特别糟糕的事情，而这只有红王子才能做到：把她还给影子王子，因为塞比尔是精灵，因此对王子“没有用处”。即使是影子王子也对这件事有多糟糕感到震惊！</li>
+<li><strong>格格不入:</strong>  在伟大绝大多数的一生中被养育和禁锢在宫殿里，使他难以在路上生存或与普通百姓互动。幸运的是，当你和他一起旅行时，他会开始表达舒适感。红王子：……但自从我们决定不惜一切代价告别欢乐堡以来，一切都很……有趣。</li>
+<li><strong>文武双全:</strong>  与通常的蜥蜴人民间传说相反，红王子除了战士之外还是一位精明的学者。总的来说，蜥蜴人的战斗动画比其他种族更有优雅的风范，但它们在红王子身上最明显，因为他是你与之互动最多的一个。</li>
+<li><strong>金笼子:</strong>  他非常重要，他从未被允许离开家乡的宫殿。在第二幕与他交谈时，你的化身可以逐字逐句地提及这个说法。化身：<em>这么说来，他患有金笼子综合症。</em>红王子：没错。我没有像一些被宠坏的暴发户那样感到无聊：我的确是绝对缺乏挑战——渴望的不仅仅是眺望地平线，而是向它前进。</li>
+<li><strong>神皇:</strong>  他是一位神选者，如果给他机会，他会乐意接受七神的地位。</li>
+<li><strong>善良的国王:</strong>  作为玩家角色，他可以非常友善地对待他的臣民和亲属……或者像对待垃圾一样对待他们，这取决于你。根据你的选择，当他重新获得王位时，他最终可能会成为其中之一，在不利用他们进行征服的情况下生育新一代的龙，并比古代帝国习惯的更进步的统治者。</li>
+<li><strong>讨厌普通食物:</strong>  红王子的确立人物时刻让他向船上的厨师抱怨说，作为一个蜥蜴人的贵族，他习惯了吃12道菜的皇室晚餐，无法忍受她试图为他服务的船上的食物。</li>
+<li><strong>隐藏的深度:</strong>  虽然通常相当泰然自若（读作：混蛋），但对他表现出深情可以引发一些暗示在他所有傲慢之下的善良之心的回应，预示着他内心的孤独和自我厌恶。</li>
+<li>特别是在萨达被绑架后用拥抱安慰他，这使他特别脆弱。</li>
+<li>他原来是一个相当浪漫的人，你的角色可能会注意到从他那里来的很令人惊讶。</li>
+<li>在一次可选的谈话中，他声称自己是这一说法的支持者。红王子：我喜欢相信我们所有人一开始看起来都不止于此。</li>
+<li><strong>隐藏的善良之心:</strong>  比他表现出来的要脚踏实地得多。如果你让他在寻觅者营地的阿玛迪亚神龛前祈祷，一个只有他才有的对话选项让他悄悄地承认，他实际上并没有像他表现出来的那样自信，实际上他害怕让自己变得脆弱。</li>
+<li><strong>我做了我必须做的事:</strong>  这是他对制定部署死亡雾攻击精灵的计划的唯一借口。他被要求制定一个计划，所以他制定了一个计划，他不希望这个计划被使用。</li>
+<li><strong>我只想交朋友:</strong>  由于他的孤独的成长经历，他开始召唤恶魔来陪伴自己。这最终导致了他的失败，因为他对他们过于依赖。</li>
+<li><strong>贫穷的贵族:</strong>  在他控制游戏开始时，他从王室变成了衣衫褴褛的囚犯，脖子上戴着奴隶项圈。</li>
+<li><strong>自卑自大情结:</strong>  一开始很微妙，但稍微读懂一些话，你就会注意到他并没有像他表现出来的那样自信。在前往恐惧之眠的旅程中，这一点达到了顶峰，他潜意识中的恶魔经常告诉他他“不够好”，永远也不会好，最终与他自己（更确切地说，是他如何看待自己的心理投射）展开战斗。他想象自己的极其令人不快的方式暗示了比最初暗示的更大的自我意识程度。简而言之，红王子有一些严重的自我厌恶问题，他用势利的优越感来掩盖。</li>
+<li><strong>以信息为基础的吸引力:</strong>  在宇宙中，他被认为非常英俊。因为他是一条蜥蜴，所以很难判断这个说法有多真实。</li>
+<li><strong>令人难以忍受的天才:</strong>  不如法恩那么厉害，但他喜欢炫耀他优越的教育和特权背景。</li>
+<li><strong>异族恋:</strong>  虽然这适用于塞比尔和野兽等角色，但红王子却脱颖而出，因为他看起来是最不像人的。虽然他的个人任务让他与萨达有着浪漫的联系，但他可以与其他可玩角色发展浪漫关系。</li>
+<li><strong>混蛋:</strong>  当他觉得合适的时候，他可能是一个真正的混蛋。作为主角，他有很多独特的、极其卑鄙的对话选项。他无法与普通人产生共鸣（最初）以及他内在的自我厌恶是造成这种情况的主要原因。</li>
+<li><strong>混蛋有道理:</strong>  他是个混蛋，但通常情况下会在群体决策中充当理性的声音。例如，他不赞成杀死极其可疑的塔克温，因为他没有自愿做出任何邪恶的行为，而且即使他尝试过一些事情，他也没有办法独自制服你的队伍。事实证明这是正确的选择，因为塔克温的帮助在游戏后期是一个巨大的好处。</li>
+<li><strong>有颗金子般的心的大混蛋:</strong>  角色发展后。他可能是一个傲慢的混蛋，但最终他是一个非常关心朋友的好人。</li>
+<li><strong>蜥蜴人:</strong>  像他这样的蜥蜴人以他们的文化和力量为荣。其他种族认为他们因为虚荣而傲慢。</li>
+<li><strong>高处不胜寒:</strong>  他如此冷漠的主要原因是，他在富丽堂皇的宫殿中受保护的成长经历使他几乎没有几个人可以与之产生共鸣。影子之家利用了这一点，用承诺友谊的恶魔诱惑他。他如此脆弱，以至于最终与女妖厮混，导致了他被放逐。更微妙一点的是，事实上，他甚至没有名字，应该给你提示他成长的环境。即使是红公主萨达，也有名字，尽管同样重要且被世人隐瞒。</li>
+<li><strong>一见钟情之前:</strong>  与萨达。显然，他们在梦中相见过，在见面之前就知道他们是天生一对。事实证明，他们的爱情是预言的一部分，可以导致龙的重生，从而使之完全合理。</li>
+<li><strong>爱能救赎:</strong>  可以是直白的，也可以是强烈的反驳：他对萨达的爱可以给他带来新的目标和幸福……或者他可以因为她发誓效忠神王而认为自己受到了背叛而把她杀掉。没有一个追随者，甚至塞比尔，提倡后一种选择。</li>
+<li><strong>三角恋:</strong>  任何试图与他发生浪漫关系都会创造出这样的关系。在他开始自己的任务之前，他一生都爱着一个从未见过面的女人，当你们最终见面时，她也同样爱着他。他们的爱情注定让他们更有可能拥有成为消失在瑞维隆的新一代红龙的孩子。如果你试图与他发生浪漫关系，他最终会承认他也爱你，但对他对红公主的爱永远是第一位的。即使你扮演红王子作为你的角色，他的对话中也包含了他对红公主的爱，但你可以像往常一样与你的任何队员发生浪漫关系。</li>
+<li><strong>平凡的用途:</strong>  与所有蜥蜴人一样，他可以用爪子挖掘。节省了寻找和携带铲子的必要。</li>
+<li><strong>高贵的偏执狂:</strong>  经常发表偏见的言论，但他最终拥有善良的心。</li>
+<li><strong>没有名字:</strong>  对于主角来说很不寻常。人们只称呼他为红王子，有时也只叫“王子”。他可能实际上没有名字，因为他被孤立了，但这很引人注目，因为红公主萨达也同样被孤立，却有名字。</li>
+<li><strong>父母忽视:</strong>  告诉玩家他的母亲更像保镖而不是母亲。在他还是婴儿的时候，影子之家就已经企图暗杀他，所以可以说这是必要的，但即便如此，它可能也没有对他的人格发展有太大帮助。</li>
+<li><strong>玩火:</strong>  作为一条蜥蜴，他默认拥有龙焰。</li>
+<li><strong>没魅力的王子:</strong>  反转。他是一个混蛋，肤浅，而且极其自恋，但这主要用于搞笑，而且他内心深处总是有一个好人。</li>
+<li><strong>自豪的学者种族人:</strong>  他拥有学者标签，并为自己的遗产感到非常自豪。</li>
+<li><strong>自豪的武士种族人:</strong>  蜥蜴人是学者和战士。</li>
+<li><strong>到处留情:</strong>  在与一家客栈老板的对话中，他说他是瑞维隆最伟大的情人，并且有相当多的情债。这也不是简单的吹嘘，正如影子王子所说，“他的性欲是传奇性的”。</li>
+<li><strong>救赎之旅:</strong>  他作为玩家角色的个人任务标题简单地称为“救赎”。它开始是为了重新获得你失去的皇室地位，但根据你的扮演方式，它可以演变成完全的赎罪。</li>
+<li><strong>胆大妄为的避难所:</strong>  如果他活到最后，红王子会提议你成为他的奴隶。即使你已经成为神，他也会这样做。你可以向他指出这一点（这会让他回应说他只配得上最好的，作为未来的皇帝），拒绝他，或者使用这个说法并沉溺于他的提议。</li>
+<li><strong>从富裕到贫穷:</strong>  从一个强大的帝国的未来统治者变成一个逃亡的流亡者。这反映在他的角色艺术中：华丽的金甲象征着他的贵族地位和权力，但就像他的地位一样，它也在衰败。他已经在路上待了这么久，其中一些破烂不堪。</li>
+<li><strong>皇室小混蛋:</strong>  经常对每个人都很粗鲁，并且会乐意提醒20英里半径内的人，他比他们好多少。这种行为很可能是为了掩盖他令人难以置信的不安全感。</li>
+<li><strong>真正有所作为的皇室成员:</strong>  在他属于战争之家时已经取得了相当大的成就，如果他是主角或你的同伴，他可能会成为一股强大的正义力量。</li>
+<li><strong>打破顺序:</strong>  只有他才能让“用分叉的舌头说话”的任务更容易。在赖克的宅邸里有一只红色的蝾螈，它只愿意与红王子聊天，立即透露打开附近一个紧锁的箱子的方法。通常情况下，打开这个棘手的箱子的唯一其他方法是以精灵的身份吃掉其前主人的遗骸（藏在赖克的地下室里），并以这种方式欺骗箱子的安全系统。</li>
+<li><strong>受保护的贵族:</strong>  参见格格不入，他显然并不真的知道如何在社会上以可接受的方式行事，因为他习惯了奢侈的皇室生活。</li>
+<li><strong>招牌动作:</strong>  恶魔凝视，它会从目标身上吸收魔法护甲，并将其赋予红王子。</li>
+<li><strong>高档美食:</strong>  他被介绍拒绝一顿饭，因为他期望享用一顿适合皇室的十二道菜晚餐……而他却身陷外国囚船。幸运的是，对于他的同伴们来说，他的角色发展使他不再是一个皇室小混蛋。</li>
+<li><strong>召唤魔法:</strong>  在第四幕中，如果红王子成为龙的父亲，孵化出一枚龙蛋，并选择带着他的孩子一起，他将获得一项独特的技能，让他可以召唤他的小龙来帮助他在战斗中。</li>
+<li><strong>还有另一个:</strong>  还有一条红色的蜥蜴：红公主萨达。</li>
+<li><strong>像爱情小说一样思考:</strong>  也许适合他的皇室风范，王子是一位痴情的浪漫主义者，他喜欢夸张</li>
+</ul>
+        <small class="page-url url "><a href="https://tvtropes.org/pmwiki/pmwiki.php/Characters/DivinityOriginalSinII" target="_blank">(https://tvtropes.org/pmwiki/pmwiki.php/Characters/DivinityOriginalSinII)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Original-Sin-2-Companions-|-Divinity-Wiki-|-Fandom">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🌟&nbsp;</span>Original Sin 2 Companions | Divinity Wiki | Fandom</h3>
+        <small class="page-url url "><a href="https://divinity.fandom.com/wiki/Original_Sin_2_Companions" target="_blank">(https://divinity.fandom.com/wiki/Original_Sin_2_Companions)</a><br></small>
+        <small class="page-rating rating ">评分: 5.0<br></small>
+        <small class="page-annotation annotation ">注释: 概述了八位主角的背景及可玩性，适用性较广但与Arx城关联不如其他页面明确。<br></small>
+    </div>
+    <div class="page-content content"><h2>起源人物</h2>
+<p>所有起源同伴最初都在迷途号上相遇，主角到达欢乐堡后可以招募他们。主角逃离欢乐堡后，可以在复仇女神号上最后一次招募他们。然而，在复仇女神号离开后，那些不属于主角队伍的神选者将被杀死并作为亡灵复活，效忠于七神学院里的神王，并在独一无二的竞技场与主角对抗。那些在离开欢乐堡后被逐出队伍的神选者，可以在复仇女神号上再次被招募。</p>
+<h3>范</h3>
+<p>范是一位永恒学者，第一次遇到他时，他正以精灵的伪装在迷途号上看书（x: 60, y: -233）。在欢乐堡，他可以在隐藏的壁龛中找到，在那里他试图雕刻一具尸体的脸来制作面具（x: 273, y: 274）。在离开欢乐堡之前的复仇女神号上，他站在船舱里（X: 279, Y: 596）。范的起源任务是《往昔的学者》。选择范作为她冠军的神是阿玛迪亚。他的默认职业是巫师。</p>
+<p>欢乐堡属性</p>
+<p>| 属性             | 能力             | 技能             | 天赋             | 标签             |
+| ---------------- | ---------------- | ---------------- | ---------------- | ---------------- |
+| 主要：智力 12     | 次要：体质 11     | 其他：力量 10     | 敏捷 10         | 记忆 10         |
+|                  |                   |                   |                  | 机智 10         |
+| 文明能力：        |                  |                  |                  |                  |
+| 知识大师 1       | 偷窃 1           |                  |                  |                  |
+| 战斗能力：        |                  |                  |                  |                  |
+| 地质魔法师 1     | 火焰魔法师 1     |                  |                  |                  |
+| 战斗：           |                  |                  |                  |                  |
+| 化石打击         | 点燃             | 灼热匕首         | 死亡假装         | 时间扭曲         |
+| 种族：           |                  |                  |                  |                  |
+| 职业：           |                  |                  |                  |                  |
+| 遥远的人         |                  |                  |                  |                  |
+| 种族：           |                  |                  |                  |                  |
+| 聪明的           | 亡灵             |                  |                  |                  |
+| 起源：范         | 种族：人类         | 性别：男           | 职业：神秘学者    |                  |</p>
+<h3>伊凡·本·梅兹德</h3>
+<p>伊凡·本·梅兹德是一位前圣骑士，现为独狼雇佣兵，他因偷走了德鲁达奈并召唤出一只狼进入地下酒馆而被魔法师们抓获。在迷途号上，他站在魔法师维克塔尔附近。在欢乐堡，他可以在欢乐堡贫民窟入口附近找到（X: 204，Y: 136），在那里他保护精灵女子艾洛迪免受格里夫的暴徒的袭击。在离开欢乐堡之前的复仇女神号上，伊凡可以在通往甲板上的楼梯后面的船舱里找到（X: 329，Y: 579）。他的默认职业是行路人，他的起源任务是《独狼》。他也是拉里克的现任冠军。</p>
+<p>欢乐堡属性</p>
+<p>| 属性             | 能力             | 技能             | 天赋             | 标签             |
+| ---------------- | ---------------- | ---------------- | ---------------- | ---------------- |
+| 主要：敏捷 12     | 次要：智力 11     | 其他：力量 10     | 体质 10         | 记忆 10         |
+|                  |                   |                   |                  | 机智 10         |
+| 文明能力：        |                  |                  |                  |                  |
+| 讨价还价 2       |                  |                  |                  |                  |
+| 战斗能力：        |                  |                  |                  |                  |
+| 地质魔法师 1     | 猎人 1           |                  |                  |                  |
+| 战斗：           |                  |                  |                  |                  |
+| 元素箭头         | 化石打击         | 压制             | 鼓励             | 召唤伊凡的灵魂狼 |
+| 种族：           |                  |                  |                  |                  |
+| 职业：           |                  |                  |                  |                  |
+| 宠物伙伴         |                  |                  |                  |                  |
+| 种族：           |                  |                  |                  |                  |
+| 聪明的           | 节俭的           |                  |                  |                  |
+| 起源：伊凡         | 种族：人类         | 性别：男           | 职业：亡命之徒    | 士兵             |</p>
+<h3>洛丝</h3>
+<p>洛丝是一位人类音乐家，她在阿克斯的阿格里德山失败的音乐会后被送往欢乐堡。在迷途号上，她被三个要求她唱歌的孩子包围着(x: 41, y: -234)。船沉没后，她可以在欢乐堡贫民窟卢西安雕像前找到（X: 203，Y: 166）。她原本是拉里克的冠军，但在离开欢乐堡的路上被迫遵从恶魔的影响。她的默认职业是魅惑师。她的起源任务是《内在之物》。</p>
+<p>欢乐堡属性</p>
+<p>| 属性             | 能力             | 技能             | 天赋             | 标签             |
+| ---------------- | ---------------- | ---------------- | ---------------- | ---------------- |
+| 主要：智力 12     | 次要：体质 11     | 其他：力量 10     | 敏捷 10         | 记忆 10         |
+|                  |                   |                   |                  | 机智 10         |
+| 文明能力：        |                  |                  |                  |                  |
+| 讨价还价 1       | 知识大师 1       |                  |                  |                  |
+| 战斗能力：        |                  |                  |                  |                  |
+| 气象魔法师 1     | 水文魔法师 1     |                  |                  |                  |
+| 战斗：           |                  |                  |                  |                  |
+| 电击             | 冰雹打击         | 降雨             | 鼓励             | 令人发狂的歌曲 |
+| 种族：           |                  |                  |                  |                  |
+| 职业：           |                  |                  |                  |                  |
+| 遥远的人         |                  |                  |                  |                  |
+| 种族：           |                  |                  |                  |                  |
+| 聪明的           | 节俭的           |                  |                  |                  |
+| 起源：洛丝         | 种族：人类         | 性别：女           | 职业：弄臣         | 神秘学家         |</p>
+<h3>玛哈利亚和拉希穆斯</h3>
+<p>玛哈利亚（女性名字）和拉希穆斯（男性名字）是由玩家创建的自定义法术师。他们的职业专精、标签、性别、种族和整体外观仅在角色创建期间确定（整体外观已由拉瑞安工作室通过发行第一个礼品包：美容院而得到扩展）。除了外观选择外，玩家还可以选择两个标签来决定角色的特征（例如：学者、贵族等）。与其他同伴不同，自定义神选者没有自己的任务或标签。他们的神祇由他们的种族决定，除了亡灵，他们总是被阿玛迪亚选择。与其他同伴不同，所有自定义创建的法术师都共享一个源技能：保护穹顶。</p>
+<p>暗影刃职业预设属性</p>
+<p>| 属性             | 能力             | 技能             | 天赋             | 标签             |
+| ---------------- | ---------------- | ---------------- | ---------------- | ---------------- |
+| 主要：敏捷 12     | 次要：机智 11     | 其他：力量 10     | 体质 10         | 智力 10         |
+|                  |                   |                   |                  | 记忆 10         |
+| 文明能力：        |                  |                  |                  |                  |
+| 劝说 1           | 偷窃 1           |                  |                  |                  |
+| 战斗能力：        |                  |                  |                  |                  |
+| 变形术 1         | 流氓 1           |                  |                  |                  |
+| 战斗：           |                  |                  |                  |                  |
+| 反冲             | 变色龙斗篷       | 鸡爪             | 死亡假装         | 保护穹顶         |
+| 种族：           |                  |                  |                  |                  |
+| 职业：           |                  |                  |                  |                  |
+| 游击队员         |                  |                  |                  |                  |
+| 种族：           |                  |                  |                  |                  |
+| 老练的           | 亡灵             |                  |                  |                  |
+| 种族：蜥蜴         | 亡灵             | 性别：女           | 职业：弄臣         | 亡命之徒         |</p>
+<h3>马库斯·迈尔斯</h3>
+<p>马库斯·迈尔斯，也被称为野兽，是一位矮人贵族，在公海上被魔法师抓获。在迷途号上，他坐在矮人中间（x: 51, y: -244）。在欢乐堡，他可以在他试图从那里取木板的残骸附近找到。在离开欢乐堡之前的复仇女神号上，野兽可以在船舱中央的弩炮附近找到（X: 306，Y: 584）。他的默认职业是战斗法师，他的起源任务是《海兽》。他是杜娜的 chosen champion。</p>
+<p>欢乐堡属性</p>
+<p>| 属性             | 能力             | 技能             | 天赋             | 标签             |
+| ---------------- | ---------------- | ---------------- | ---------------- | ---------------- |
+| 主要：智力 11     | 体质 11         | 力量 11         | 其他：敏捷 10     | 记忆 10         |
+|                  |                   |                   |                  | 机智 10         |
+| 文明能力：        |                  |                  |                  |                  |
+| 劝说 1           | 潜行 1           |                  |                  |                  |
+| 战斗能力：        |                  |                  |                  |                  |
+| 气象魔法师 1     | 战争 1           |                  |                  |                  |
+| 战斗：           |                  |                  |                  |                  |
+| 猛击             | 耀眼光芒         | 电击             | 石化触碰         | 耀眼风暴         |
+| 种族：           |                  |                  |                  |                  |
+| 职业：           |                  |                  |                  |                  |
+| 绝地反击         |                  |                  |                  |                  |
+| 种族：           |                  |                  |                  |                  |
+| 矮人诡计         | 坚固的           |                  |                  |                  |
+| 起源：野兽         | 种族：矮人         | 性别：男           | 职业：野蛮人       | 贵族             |</p>
+<h3>赛比尔·卡莱兰</h3>
+<p>赛比尔是一位精灵刺客，为了寻找大师而让自己被魔法师抓获。在迷途号上，她可以在角落里玩骰子（x: 45, y: -249）。在欢乐堡，她最初可以在欢乐堡贫民窟的厨房里监视毒尾，后来她跟着毒尾来到他的营地（X: 180，Y: 102）。在离开欢乐堡之前的复仇女神号上，她坐在下层甲板上（X: 299，Y: 507）。她的默认职业是恶棍，她的起源任务是《猎杀大师》。她是提尔·森德利乌斯的 chosen champion。如果她被蜥蜴，尤其是红王子说过话，她会非常敌对，需要被劝说才能加入队伍。</p>
+<p>欢乐堡属性</p>
+<p>| 属性             | 能力             | 技能             | 天赋             | 标签             |
+| ---------------- | ---------------- | ---------------- | ---------------- | ---------------- |
+| 主要：敏捷 12     | 次要：体质 11     | 其他：力量 10     | 智力 10         | 记忆 10         |
+|                  |                   |                   |                  | 机智 10         |
+| 文明能力：        |                  |                  |                  |                  |
+| 知识大师 1       | 潜行 1           |                  |                  |                  |
+| 战斗能力：        |                  |                  |                  |                  |
+| 双持武器 1       | 流氓 1           |                  |                  |                  |
+| 战斗：           |                  |                  |                  |                  |
+| 肾上腺素         | 反冲             | 投掷刀           | 血肉祭祀         | 打破枷锁         |
+| 种族：           |                  |                  |                  |                  |
+| 职业：           |                  |                  |                  |                  |
+| 棋子             |                  |                  |                  |                  |
+| 种族：           |                  |                  |                  |                  |
+| 祖传知识         | 食尸鬼           |                  |                  |                  |
+| 起源：赛比尔       | 种族：精灵         | 性别：女           | 职业：亡命之徒    | 学者             |</p>
+<h3>红王子</h3>
+<p>红王子是一位被放逐的沃特豪斯蜥蜴王子，可以在迷途号的厨房里找到，在蜥蜴纳米亚旁边（x: 58, y: -243）。在欢乐堡，他站在俯瞰大海的岩石上（X: 165，Y: 282）。在离开欢乐堡之前的复仇女神号上，他站在上层甲板的西蒙附近（X: 621，Y: 544）。他的默认职业是战士，他的起源任务是《救赎》。他是佐尔-斯提萨女神的 chosen champion。</p>
+        <small class="page-url url "><a href="https://divinity.fandom.com/wiki/Original_Sin_2_Companions" target="_blank">(https://divinity.fandom.com/wiki/Original_Sin_2_Companions)</a><br></small>
+    </div>
+
+</div><hr><div class="page"  id="Interaction-between-main-characters---Larian-Studios-forums">
+    <div class="page-meta">
+        <h3 class="page-name title"><span class="page-emoji ">🗣&nbsp;</span>Interaction between main characters - Larian Studios forums</h3>
+        <small class="page-url url "><a href="https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=478646" target="_blank">(https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=478646)</a><br></small>
+        <small class="page-rating rating ">评分: 4.0<br></small>
+        <small class="page-annotation annotation ">注释: 反映了玩家对对话系统的反馈，涉及角色互动，但对Arx城的直接影响略显薄弱。<br></small>
+    </div>
+    <div class="page-content content"><h3>OP Ravenhoff journeyman R  加入时间：2013年7月</h3>
+<p>作为开场白，我只玩了大约15分钟的阿尔法测试版，虽然我想支持开发者，但我更喜欢等待RPG游戏的最终版本。虽然我已经看到两个角色之间的一些对话系统，但它似乎有点……不足。我最喜欢老式RPG的一件事就是丰富的角色互动，角色关系由玩家的行为决定，他们经常在中立区域聊天。也许这是因为我对游戏看得太少，但对话会变得更深入吗？例如，如果他们成为对立面，他们是否会有对话，让你看到他们互相对抗，看到他们的关系恶化，或者反过来，如果他们成为恋人，我们会看到他们的关系慢慢发展，还是游戏中的对话仅限于讨论决定并说服对方做一些事情，他们的关系完全由游戏中的状态点和语气决定？</p>
+<h3>Raze Support 加入时间：2003年3月  所在地：加拿大</h3>
+<p>角色之间的关系应该有一些影响（对角色和其他队员），但我不知道它是否以及如何改变游戏后期的对话等等。大概任何故事或对话的改变都会相对较小（考虑到工作量与相对较小的收益相比，因为大多数人不会多次重玩游戏）。如果冲突过多，爪牙或同伴可能会离开你的队伍（在Kickstarter上记得有人提议过这个例子），但两个主要角色大概会一起走到游戏结束。</p>
+<h3>OP Ravenhoff journeyman R 加入时间：2013年7月</h3>
+<p>游戏不必线性才能有良好的角色发展。诚然，它比Larian似乎计划的要线性一些，但旧的博德之门游戏有不错的角色互动。旧的辐射（1 &amp; 2）也有不错的角色互动，而且相当非线性。</p>
+        <small class="page-url url "><a href="https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=478646" target="_blank">(https://forums.larian.com/ubbthreads.php?ubb=showflat&Number=478646)</a><br></small>
+    </div>
+
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // 获取所有导航链接
+        const navLinks = document.querySelectorAll(".navigate-item");
+        // 将导航链接与目标元素建立映射关系
+        const connections = Array.from(navLinks).map(link => {
+            const targetId = link.getAttribute("href").substring(1); // 去掉 #
+            const targetElement = document.getElementById(targetId);
+            return { link, targetElement };
+        });
+        // 使用 IntersectionObserver 观察目标元素
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    const { target, isIntersecting } = entry;
+                    const matchingLink = connections.find(connection => connection.targetElement === target).link;
+                    if (isIntersecting) {
+                        // 目标元素在视野中，添加高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.add("active");
+                    } else {
+                        // 目标元素离开视野，移除高亮
+                        console.log(matchingLink.className)
+                        matchingLink.classList.remove("active");
+                    }
+                });
+            },
+            {
+                root: null, // 默认视口
+                threshold: 0.02
+            }
+        );
+
+        // 开始观察所有目标元素
+        connections.forEach(({ targetElement }) => observer.observe(targetElement));
+    });
+</script>
+<script>
+    // 获取元素
+    const resizer = document.querySelector('.resizer');
+    const leftColumn = document.querySelector('.left-column');
+    const rightColumn = document.querySelector('.right-column');
+    const navigate = document.querySelector('.navigate')
+
+    let isDragging = false;
+
+    // 鼠标按下事件
+    resizer.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        document.body.style.cursor = 'col-resize';
+        document.body.style.userSelect = 'none';
+    });
+
+    // 鼠标移动事件
+    document.addEventListener('mousemove', (event) => {
+        if (!isDragging) return;
+
+        // 计算新的宽度
+        const newLeftWidth = event.clientX / window.innerWidth * 100; // 转换为百分比
+
+        // 限制宽度范围
+        if (newLeftWidth > 15 && newLeftWidth < 70) {
+            leftColumn.style.flexBasis = `${newLeftWidth}%`;
+            rightColumn.style.flexBasis = `${100 - newLeftWidth}%`;
+            navigate.style.left = `${newLeftWidth + 0.15 * (100 - newLeftWidth)}%`
+            navigate.style.maxWidth = `${0.7 * (100 - newLeftWidth)}%`
+
+            const navigateRect = navigate.getBoundingClientRect();
+            const screenWidth = window.innerWidth;
+
+            // 获取右侧部分宽度
+            const rightColumnWidth = rightColumn.getBoundingClientRect().width;
+
+            // 计算 navigate 的占屏幕宽度比例
+            const navigateWidthPercentage = (navigateRect.width / screenWidth) * 100;
+
+            // 计算 navigate 居中所需的 left 值
+            const rightColumnLeft = rightColumn.getBoundingClientRect().left;
+            const navigateLeft = rightColumnLeft + (rightColumnWidth - navigateRect.width) / 2;
+
+            // 设置 navigate 的宽度和位置
+            navigate.style.left = `${navigateLeft}px`;
+        }
+    });
+
+    // 鼠标松开事件
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        document.body.style.cursor = 'default';
+        document.body.style.userSelect = 'auto';
+    });
+</script>
+</html>
